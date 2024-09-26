@@ -1,0 +1,32 @@
+[user]
+	name = AhmedOsman101
+	email = trollingosman101@outlook.com
+[core]
+	editor = code
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  # navigate = true   # use n and N to move between diff sections
+  # side-by-side = true
+  dark = true
+	line-numbers = true
+	syntax-theme = "OneHalfDark"
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = main
+[credential]
+	helper = store
