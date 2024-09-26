@@ -120,3 +120,8 @@ fi
 if [ -t 1 ]; then
     exec zsh
 fi
+
+. "$HOME/.atuin/bin/env"
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"
