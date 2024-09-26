@@ -142,17 +142,18 @@ gendiff() {
   done
 
   # Generate the diff output
-  git diff --staged --diff-filter=d > "$outputFile" | bat | awk '
-    /^diff --git/ {
-      # Extract and print the filename with "File: " prefix
-      file = substr($3, 3)
-      print "\nFile: " file
-    }
-    !/^diff --git|^index|^---|^\+\+\+|^@@/ {
-      # Print lines that are part of the actual changes, excluding non-diff lines
-      print
-    }
-  ' | sed '/^File: /{x;d}; x' >"$outputFile"
+  git diff --staged --diff-filter=d > "$outputFile" | bat
+  # | awk '
+  #   /^diff --git/ {
+  #     # Extract and print the filename with "File: " prefix
+  #     file = substr($3, 3)
+  #     print "\nFile: " file
+  #   }
+  #   !/^diff --git|^index|^---|^\+\+\+|^@@/ {
+  #     # Print lines that are part of the actual changes, excluding non-diff lines
+  #     print
+  #   }
+  # ' | sed '/^File: /{x;d}; x' >"$outputFile"
 
     echo "Diff output saved to $outputFile"
 }
@@ -188,8 +189,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
 # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
-# - The first argument to the function ($1) is the base path to start traversal
-# - See the source code (completion.{bash,zsh}) for the details.
 _fzf_compgen_path() {
   fd --hidden --exclude .git . "$1"
 }
