@@ -128,41 +128,10 @@ function loadFonts() {
   command sudo fc-cache -fv
 }
 
-gendiff() {
-
-  local outputFile="diff.txt"
-
-  for arg in "$@"; do
-    case $arg in
-    --output=*)
-      outputFile="${arg#*=}"
-      shift
-      ;;
-    esac
-  done
-
+getdiff() {
   # Generate the diff output
-  git diff --staged --diff-filter=d > "$outputFile" | bat
-  # | awk '
-  #   /^diff --git/ {
-  #     # Extract and print the filename with "File: " prefix
-  #     file = substr($3, 3)
-  #     print "\nFile: " file
-  #   }
-  #   !/^diff --git|^index|^---|^\+\+\+|^@@/ {
-  #     # Print lines that are part of the actual changes, excluding non-diff lines
-  #     print
-  #   }
-  # ' | sed '/^File: /{x;d}; x' >"$outputFile"
-
-    echo "Diff output saved to $outputFile"
+  git diff --staged --diff-filter=d | xargs bat --diff
 }
-
-# preexec() {
-  # clear
-  # print -s "${history[-1]}" # Print the last command from history
-  # fastfetch
-# }
 
 # pnpm
 export PNPM_HOME="/home/othman/.local/share/pnpm"
@@ -176,6 +145,9 @@ export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts"
 
 . "$HOME/.atuin/bin/env"
 
+. "$HOME/.cargo/env"
+
+eval "$(atuin init bash)"
 eval "$(atuin init zsh)"
 
 export TERM=xterm-256color
