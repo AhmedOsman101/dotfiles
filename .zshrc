@@ -147,7 +147,6 @@ export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts"
 
 . "$HOME/.cargo/env"
 
-eval "$(atuin init bash)"
 eval "$(atuin init zsh)"
 
 export TERM=xterm-256color
