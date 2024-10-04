@@ -38,6 +38,7 @@ zinit snippet OMZP::composer
 zinit snippet OMZP::laravel
 zinit snippet OMZP::sublime
 zinit snippet OMZP::colorize
+zinit snippet OMZP::asdf
 
 # ---- Load completions ----- #
 autoload -Uz compinit && compinit
@@ -146,6 +147,8 @@ export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts"
 . "$HOME/.atuin/bin/env"
 
 . "$HOME/.cargo/env"
+
+. "$HOME/.asdf/asdf.sh"
 
 eval "$(atuin init zsh)"
 
