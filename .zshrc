@@ -1,5 +1,5 @@
 # ---- Increase the FUNCNEST limit ----- #
-export FUNCNEST=200
+export FUNCNEST=9999
 
 # ---- Zinit ----- #
 
@@ -85,6 +85,7 @@ alias rm="rmtrash"
 alias rmdir="rmdirtrash"
 # ---- Fastfetch (better neofetch) ----- #
 alias neofetch="fastfetch"
+alias gitsync="git commit -am 'Updated Files'; git push origin main"
 
 # Global variables:
 # MRT="C:\\Users\\Othman Enterprises\\Documents\\MarkdownReportTemplate.dotx"
