@@ -86,6 +86,7 @@ alias rmdir="rmdirtrash"
 # ---- Fastfetch (better neofetch) ----- #
 alias neofetch="fastfetch"
 alias gitsync="git add *; git commit -am 'Updated Files'; git push origin main"
+alias syu="sudo apt update; sudo apt upgrade -y; brew update; brew upgrade; flatpak update -y"
 
 # Global variables:
 # MRT="C:\\Users\\Othman Enterprises\\Documents\\MarkdownReportTemplate.dotx"
