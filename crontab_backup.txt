@@ -1,25 +1,29 @@
 # Edit this file to introduce tasks to be run by cron.
-# 
+#
 # Each task to run has to be defined through a single line
 # indicating with different fields when the task will be run
 # and what command to run for the task
-# 
+#
 # To define the time you can provide concrete values for
 # minute (m), hour (h), day of month (dom), month (mon),
 # and day of week (dow) or use '*' in these fields (for 'any').
-# 
+#
 # Notice that tasks will be started based on the cron's system
 # daemon's notion of time and timezones.
-# 
+#
 # Output of the crontab jobs (including errors) is sent through
 # email to the user the crontab file belongs to (unless redirected).
-# 
+#
 # For example, you can run a backup of all your user accounts
 # at 5 a.m every week with:
 # 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
-# 
+#
 # For more information see the manual pages of crontab(5) and cron(8)
-# 
+#
 # m h  dom mon dow   command
 
-0 2 * * * apt-mark showmanual > installed_packages.txt
+0 16,20,22 * * * apt-mark showmanual > ~/.dotfiles/installed_packages.txt
+0 16,20,22 * * * rm ~/.dotfiles/Brewfile
+0 16,20,22 * * * brew bundle dump --file=~/.dotfiles/Brewfile --no-vscode
+0 16,20,22 * * * pnpm list -g --depth 0 > ~/.dotfiles/pnpm_global_packages.txt
+0 16,20,22 * * * flatpak list --columns=application | awk '{print $1}' > flatpak_apps.txt
