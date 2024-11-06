@@ -2,7 +2,7 @@
 	name = AhmedOsman101
 	email = trollingosman101@outlook.com
 [core]
-	editor = code
+	editor = nano
   pager = delta
 
 [interactive]
@@ -21,12 +21,10 @@
 [diff]
   colorMoved = default
 [credential "https://github.com"]
-	helper =
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper =
 	helper = !/usr/bin/gh auth git-credential
 [init]
 	defaultBranch = main
-[credential]
-	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+[safe]
+	directory = /home/othman/work/projects/AhmedOsman101
