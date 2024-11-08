@@ -129,6 +129,7 @@ function yy() {
 
 function loadFonts() {
   command sudo cp ~/fonts/*.ttf /usr/share/fonts/truetype/
+  command sudo cp ~/fonts/*.otf /usr/share/fonts/opentype/
   command sudo fc-cache -fv
 }
 
