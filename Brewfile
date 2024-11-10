@@ -1,5 +1,5 @@
 tap "homebrew/bundle"
-brew "python@3.12"
+brew "python@3.13"
 brew "bat"
 brew "cmake"
 brew "entr"
