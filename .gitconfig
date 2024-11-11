@@ -28,3 +28,5 @@
 	defaultBranch = main
 [safe]
 	directory = /home/othman/work/projects/AhmedOsman101
+[push]
+	autoSetupRemote = true
