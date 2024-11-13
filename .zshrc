@@ -135,7 +135,7 @@ function loadFonts() {
 
 getdiff() {
   # Generate the diff output
-  git diff --staged --diff-filter=d | xargs bat --diff
+  git diff --diff-filter=d | xargs bat --diff
 }
 
 # pnpm
