@@ -15,11 +15,11 @@ fi
 # ---- Source/Load zinit ----- #
 source "${ZINIT_HOME}/zinit.zsh"
 
-# ---- Add in zsh prompt (pure) ----- #
+# ---- Add in zsh prompt ----- #
 autoload -Uz promptinit
 promptinit
-# prompt pure
 
+# ---- Prompt Pure ----- #
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
@@ -29,7 +29,6 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
-# zinit light Aloxaf/fzf-tab
 
 # ---- Add in snippets ----- #
 zinit snippet OMZP::git
@@ -92,9 +91,26 @@ alias python="python3"
 # Global variables:
 # MRT="C:\\Users\\Othman Enterprises\\Documents\\MarkdownReportTemplate.dotx"
 
-# ---- Misc ----- #
+# ---- Homebrew ----- #
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
+
+# ---- On-demand rehash ----- #
+zshcache_time="$(date +%s%N)"
+
+autoload -Uz add-zsh-hook
+
+rehash_precmd() {
+  if [[ -a /var/cache/zsh/pacman ]]; then
+    local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
+    if (( zshcache_time < paccache_time )); then
+      rehash
+      zshcache_time="$paccache_time"
+    fi
+  fi
+}
+
+add-zsh-hook -Uz precmd rehash_precmd
 
 # ---- Ensure no alias for apt exists before defining the function ----- #
 unalias apt 2>/dev/null
@@ -135,7 +151,7 @@ function loadFonts() {
 
 getdiff() {
   # Generate the diff output
-  git diff --diff-filter=d | xargs bat --diff
+  git diff --staged --diff-filter=d | xargs bat --diff
 }
 
 # pnpm
