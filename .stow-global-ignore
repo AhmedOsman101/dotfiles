@@ -1,0 +1,15 @@
+\.cvsignore
+\.svn
+\.hg
+\.git
+\.gitignore
+\.gitmodules
+^README\..*
+^LICENSE\..*
+^COPYING$
+Brewfile
+^.*\.txt$
+^.*\.md$
+^.*\.sql$
+^bootstrap-arch\.sh$
+^bootstrap-ubuntu\.sh$
