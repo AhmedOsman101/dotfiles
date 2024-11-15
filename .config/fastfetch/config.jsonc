@@ -1,35 +1,25 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "modules": [
-    "title",
-    "separator",
-    "os",
-    "host",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
+    "title", // Title (matching neofetch's title)
+    "separator", // Separator for neatness
+    "os", // OS (matching neofetch's OS)
+    "host", // Hostname
+    "kernel", // Kernel (matching neofetch's kernel)
+    "uptime", // Uptime (matching neofetch's uptime)
+    "packages", // Packages (matching neofetch's packages)
+    "shell", // Shell (matching neofetch's shell)
+    "terminal", // Terminal (matching neofetch's terminal)
+    "wm", // Window manager (matching neofetch's wm)
+    "de", // Desktop environment (matching neofetch's de)
+    "gpu", // GPU (matching neofetch's gpu)
     "monitor",
-    "de",
-    "wmtheme",
-    "theme",
-    "icons",
-    "font",
-    // "cursor",
-    "terminal",
-    // "terminalfont",
-    "cpu",
-    "cpuusage",
-    "gpu",
-    "memory",
-    "swap",
-    "disk",
-    "localip",
-    "weather",
-    // "battery",
-    // "poweradapter",
-    // "locale",
-    "break",
-    "colors"
+    "cpu", // CPU (matching neofetch's cpu)
+    "memory", // Memory (matching neofetch's memory)
+    "swap", // Swap (matching neofetch's swap)
+    "disk", // Disk (matching neofetch's disk)
+    "localip", // Local IP (matching neofetch's IP)
+    "weather", // Weather (optional)
+    "colors" // Color settings (matching neofetch's color scheme)
   ]
 }
