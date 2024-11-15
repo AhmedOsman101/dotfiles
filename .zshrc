@@ -217,22 +217,12 @@ eval "$(zoxide init zsh)"
 
 # ---- Key Bindings ---- #
 # ---- Bind Home and End keys ---- #
-bindkey "\e[1~" beginning-of-line   # Home
-bindkey "\e[4~" end-of-line         # End
-bindkey "\eOH" beginning-of-line    # Alternate Home
-bindkey "\eOF" end-of-line          # Alternate End
+bindkey "^[[H" beginning-of-line     # Home
+bindkey "^[[F" end-of-line           # End
 
 # ---- Bind Delete key ---- #
-bindkey "\e[3~" delete-char
+bindkey "^[[3~" delete-char          # Delete
 
 # ---- Bind Ctrl+Arrow for moving by words ---- #
-bindkey "\e[1;5C" forward-word      # Ctrl+Right Arrow
-bindkey "\e[1;5D" backward-word     # Ctrl+Left Arrow
-
-# ---- Bind Shift+Arrow for text selection ---- #
-bindkey -s "\e[1;2C" ""             # Shift+Right Arrow (Handled by terminal)
-bindkey -s "\e[1;2D" ""             # Shift+Left Arrow (Handled by terminal)
-
-# ---- Bind Ctrl+Shift+Arrow for selection by word ---- #
-bindkey -s "\e[1;6C" ""             # Ctrl+Shift+Right Arrow (Handled by terminal)
-bindkey -s "\e[1;6D" ""             # Ctrl+Shift+Left Arrow (Handled by terminal)
+bindkey "^[[1;5C" forward-word       # Ctrl+Right
+bindkey "^[[1;5D" backward-word      # Ctrl+Left
