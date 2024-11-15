@@ -88,9 +88,6 @@ alias gitsync='git add "*"; git commit -am "Updated Files"; git push origin main
 alias syu="sudo apt update; sudo apt upgrade -y; brew update; brew upgrade; flatpak update -y"
 alias python="python3"
 
-# Global variables:
-# MRT="C:\\Users\\Othman Enterprises\\Documents\\MarkdownReportTemplate.dotx"
-
 # ---- Homebrew ----- #
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
@@ -131,7 +128,7 @@ sudo() {
 
 customvscode() {
   sudo chown -R $(whoami) "$(which code)"
-  sudo chown -R $(whoami) /usr/share/code
+  sudo chown -R $(whoami) /opt/visual-studio-code
 }
 
 function yy() {
@@ -217,3 +214,25 @@ eval $(thefuck --alias)
 
 # ---- Zoxide (better cd) ---- #
 eval "$(zoxide init zsh)"
+
+# ---- Key Bindings ---- #
+# ---- Bind Home and End keys ---- #
+bindkey "\e[1~" beginning-of-line   # Home
+bindkey "\e[4~" end-of-line         # End
+bindkey "\eOH" beginning-of-line    # Alternate Home
+bindkey "\eOF" end-of-line          # Alternate End
+
+# ---- Bind Delete key ---- #
+bindkey "\e[3~" delete-char
+
+# ---- Bind Ctrl+Arrow for moving by words ---- #
+bindkey "\e[1;5C" forward-word      # Ctrl+Right Arrow
+bindkey "\e[1;5D" backward-word     # Ctrl+Left Arrow
+
+# ---- Bind Shift+Arrow for text selection ---- #
+bindkey -s "\e[1;2C" ""             # Shift+Right Arrow (Handled by terminal)
+bindkey -s "\e[1;2D" ""             # Shift+Left Arrow (Handled by terminal)
+
+# ---- Bind Ctrl+Shift+Arrow for selection by word ---- #
+bindkey -s "\e[1;6C" ""             # Ctrl+Shift+Right Arrow (Handled by terminal)
+bindkey -s "\e[1;6D" ""             # Ctrl+Shift+Left Arrow (Handled by terminal)
