@@ -43,6 +43,9 @@ zinit snippet OMZP::asdf
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
+# ---- Start Copyq ----- #
+copyq &
+
 # ---- History ----- #
 HISTSIZE=99999
 HISTFILE=~/.zsh_history
