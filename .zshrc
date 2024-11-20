@@ -68,7 +68,7 @@ alias zshrc="code ~/.zshrc"
 alias bashrc="code ~/.bashrc"
 alias art="php artisan"
 alias cls="clear"
-alias reload="source ~/.zshrc; cls; fastfetch"
+alias reload="source ~/.zshrc; cls; neofetch"
 alias pnp="pnpm"
 alias npm="pnpm"
 alias vim="nvim"
@@ -83,7 +83,7 @@ alias ls="eza --color=always --long --git --icons=always --no-time --no-user --a
 alias rm="rmtrash"
 alias rmdir="rmdirtrash"
 # ---- Fastfetch (better neofetch) ----- #
-alias neofetch="fastfetch"
+# alias neofetch="fastfetch"
 alias gitsync='git add "*"; git commit -am "Updated Files"; git push origin main'
 alias syu="sudo apt update; sudo apt upgrade -y; brew update; brew upgrade; flatpak update -y"
 alias python="python3"
