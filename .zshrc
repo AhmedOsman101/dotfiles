@@ -171,6 +171,7 @@ export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts"
 eval "$(atuin init zsh)"
 
 export TERM=xterm-256color
+export COLORTERM=truecolor
 
 # ---- FZF ----- #
 source <(fzf --zsh)
