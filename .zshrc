@@ -1,5 +1,5 @@
 # ---- Increase the FUNCNEST limit ----- #
-
+FUNCSET=9999
 
 # ---- Zinit ----- #
 
