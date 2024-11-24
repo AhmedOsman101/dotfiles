@@ -1,5 +1,5 @@
 # ---- Increase the FUNCNEST limit ----- #
-export FUNCNEST=9999
+
 
 # ---- Zinit ----- #
 
