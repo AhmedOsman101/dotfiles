@@ -2,7 +2,7 @@
 
 -- Cheatsheets are copyrighted by their original authors
 
--- Cheatsheets from Devhints.io are copyright 2021 
+-- Cheatsheets from Devhints.io are copyright 2021
 -- Rico Sta. Cruz and contributors, received under the MIT license
 
 local micro = import("micro")
@@ -23,7 +23,7 @@ function cheatCommand(bp)
 	if "Vagrantfile" == filename or "Dockerfile" == filename then
 		filetype = filename:lower()
 		micro.InfoBar():Message("Cheatsheet by file name: "..filename)
-	elseif string.find(filename, "\.org$") then -- not detected by micro
+	elseif string.find(filename, "\\.org$") then -- not detected by micro
 		filetype = "org"
 		micro.InfoBar():Message("Cheatsheet by file suffix: "..filename)
 	elseif "unknown" ~= filetype then
@@ -33,7 +33,7 @@ function cheatCommand(bp)
 		micro.InfoBar():Message("Cheatsheet not found for type '"..filetype.."', filename '"..filename.."'")
 		return
 	end
-	
+
 	local cmd = "tab " .. cheatdir .. filetype .. ".md"
 	bp:HandleCommand(cmd)
 
