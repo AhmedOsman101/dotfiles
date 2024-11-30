@@ -1,3 +1,5 @@
+# shellcheck disable=SC2034,SC2153,SC2086,SC2155
+# Above line is because shellcheck doesn't support zsh, per
 # ---- Increase the FUNCNEST limit ----- #
 FUNCSET=9999
 
@@ -180,8 +182,6 @@ export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts"
 
 . "$HOME/.asdf/asdf.sh"
 
-eval "$(atuin init zsh)"
-
 export TERM=xterm-256color
 export COLORTERM=truecolor
 
@@ -244,3 +244,5 @@ bindkey "^[[1;5D" backward-word      # Ctrl+Left
 export EDITOR="micro"
 
 export STARSHIP_CONFIG=~/.config/starship.toml
+
+eval "$(atuin init zsh)"
