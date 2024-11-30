@@ -4,7 +4,8 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
-scan_timeout = 120
+scan_timeout = 360
+command_timeout = 3600
 
 format = """$directory$git_branch$git_status
 $os$character"""
