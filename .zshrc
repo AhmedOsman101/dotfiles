@@ -16,8 +16,8 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # ---- Add in zsh prompt ----- #
-autoload -Uz promptinit
-promptinit
+# autoload -Uz promptinit
+# promptinit
 
 # ---- Prompt Pure ----- #
 # zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
@@ -98,7 +98,7 @@ alias pip="pip3"
 
 # ---- Homebrew ----- #
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
+# fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
 # ---- On-demand rehash ----- #
 zshcache_time="$(date +%s%N)"
