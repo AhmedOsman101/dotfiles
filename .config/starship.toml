@@ -68,7 +68,7 @@ diverged = '⇕'
 up_to_date = ''
 untracked = '?'
 stashed = ''
-modified = '*'
+modified = ''
 staged = '[++\($count\)](green)'
 renamed = '»'
 deleted = '✘'
@@ -121,6 +121,9 @@ symbol = " "
 [ocaml]
 symbol = " "
 
+[os]
+disabled = false
+
 [os.symbols]
 Alpaquita = " "
 Alpine = " "
@@ -128,6 +131,7 @@ AlmaLinux = " "
 Amazon = " "
 Android = " "
 Arch = " "
+# Archcraft = " "
 Artix = " "
 CentOS = " "
 Debian = " "
@@ -173,7 +177,8 @@ symbol = "󰏗 "
 symbol = " "
 
 [php]
-symbol = " "
+symbol = "󰌟 "
+format = "[$symbol($version )]($style)"
 
 [pijul_channel]
 symbol = " "
