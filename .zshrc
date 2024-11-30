@@ -51,12 +51,13 @@ zinit cdreplay -q
 # copyq &
 
 # ---- History ----- #
-HISTSIZE=99999
+HISTSIZE=9999999
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
+unsetopt extended_history
 HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
+setopt share_history
+setopt inc_append_history
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
