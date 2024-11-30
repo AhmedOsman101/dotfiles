@@ -87,7 +87,7 @@ alias rm="rmtrash"
 alias rmdir="rmdirtrash"
 # ---- Micro (better Nano) ----- #
 alias nano="micro"
-alias gitsync='git add "*"; git commit -am "Updated Files"; git push origin main'
+alias gitsync='git add "*" && git commit -am "Updated Files" && git push origin main'
 alias syu="sudo apt update; sudo apt upgrade -y; brew update; brew upgrade; flatpak update -y"
 alias python="python3"
 alias pip="pip3"
