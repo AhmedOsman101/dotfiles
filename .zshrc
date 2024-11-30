@@ -1,7 +1,7 @@
 # shellcheck disable=SC2034,SC2153,SC2086,SC2155
 # Above line is because shellcheck doesn't support zsh, per
 # ---- Increase the FUNCNEST limit ----- #
-FUNCSET=9999
+FUNCSET=99999
 
 # ---- Zinit ----- #
 
@@ -18,8 +18,8 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # ---- Add in zsh prompt ----- #
-# autoload -Uz promptinit
-# promptinit
+autoload -Uz promptinit
+promptinit
 
 # ---- Prompt Pure ----- #
 # zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
@@ -53,8 +53,8 @@ zinit cdreplay -q
 # copyq &
 
 # ---- History ----- #
-HISTSIZE=9999999
-HISTFILE=~/.zsh_history
+HISTSIZE=999999
+export HISTFILE="~/.zsh_history"
 SAVEHIST=$HISTSIZE
 unsetopt extended_history
 HISTDUP=erase
@@ -101,7 +101,7 @@ alias pip="pip3"
 
 # ---- Homebrew ----- #
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# fpath+=("$(brew --prefix)/share/zsh/site-functions")
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
 # ---- On-demand rehash ----- #
 zshcache_time="$(date +%s%N)"
@@ -174,6 +174,21 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# atuin
+case ":${PATH}:" in
+    *:"$HOME/.atuin/bin":*)
+        ;;
+    *)
+        # Prepending path in case a system-installed binary needs to be overridden
+        export PATH="$HOME/.atuin/bin:$PATH"
+        ;;
+esac
+
+eval "$(atuin init zsh)"
+
+source ~/atuin.sh
+# end atuin
+
 export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts"
 
 . "$HOME/.atuin/bin/env"
@@ -244,5 +259,3 @@ bindkey "^[[1;5D" backward-word      # Ctrl+Left
 export EDITOR="micro"
 
 export STARSHIP_CONFIG=~/.config/starship.toml
-
-eval "$(atuin init zsh)"
