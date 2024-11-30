@@ -2,33 +2,50 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Inserts a blank line between shell prompts
-add_newline = false
+add_newline = true
 
 scan_timeout = 120
+
+format = """$directory$git_branch$git_status
+$os$character"""
+right_format = """$all"""
 
 [character]
 success_symbol = '[❯](bold green)'
 error_symbol = '[✗](bold red)'
 
+[time]
+disabled = false
+use_12hr = true
+format = " [$time]($style) "
+time_format = "%I:%M%P"
+
+
 # Nerd Fonts preset
 [aws]
 symbol = "  "
+format = "on [$symbol($profile )(\\($region\\) )(\\[$duration\\] )]($style)"
 
 [buf]
 symbol = " "
+format = "with [$symbol($version )]($style)"
 
 [c]
-format = '[$symbol($version](-$name) )]($style)'
 symbol = "  "
+format = ' [$symbol($version](-$name) )]($style)'
+detect_extensions = [ "c", "h" ]
 
 [conda]
 symbol = " "
+format = " [$symbol$environment]($style) "
 
 [crystal]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [dart]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [directory]
 read_only = " 󰌾"
@@ -38,27 +55,30 @@ style = "blue bold"
 
 [docker_context]
 symbol = " "
+format = " [$symbol$context]($style) "
 
 [elixir]
 symbol = " "
+format = " [$symbol($version \\(OTP $otp_version\\) )]($style)"
 
 [elm]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [fennel]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [fossil_branch]
-symbol = " "
+symbol = ""
 
 [git_branch]
 symbol = " "
+format = "[$symbol$branch(:$remote_branch)]($style) "
 
 [git_commit]
 tag_symbol = '  '
 tag_disabled = false
-
-# ~/.config/starship.toml
 
 [git_status]
 conflicted = '='
@@ -75,51 +95,68 @@ deleted = '✘'
 
 [golang]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [guix_shell]
 symbol = " "
+format = " [$symbol]($style) "
 
 [haskell]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [haxe]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [hg_branch]
 symbol = " "
 
 [hostname]
 ssh_symbol = " "
+format = " [$ssh_symbol$hostname]($style) in "
 
 [java]
 symbol = " "
+format = " [${symbol}(${version} )]($style)"
 
 [julia]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [kotlin]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [lua]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [memory_usage]
-symbol = "󰍛 "
+symbol = " "
+format = " $symbol [${ram}( | ${swap})]($style) "
+threshold = 50
+disabled = false
 
 [meson]
 symbol = "󰔷 "
+format = " [$symbol$project]($style) "
 
 [nim]
 symbol = "󰆥 "
+format = " [$symbol($version )]($style)"
 
 [nix_shell]
 symbol = " "
+format = " [$symbol$state( \\($name\\))]($style) "
 
 [nodejs]
-symbol = " "
+symbol = " "
+format = " [$symbol($version)]($style)"
 
 [ocaml]
 symbol = " "
+format = " [$symbol($version )(\\($switch_indicator$switch_name\\) )]($style)"
 
 [os]
 disabled = false
@@ -172,37 +209,47 @@ Windows = "󰍲 "
 
 [package]
 symbol = "󰏗 "
+format = " [$symbol$version]($style) "
 
 [perl]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [php]
 symbol = "󰌟 "
-format = "[$symbol($version )]($style)"
+format = " [$symbol($version )]($style)"
 
 [pijul_channel]
 symbol = " "
 
 [python]
 symbol = " "
+format = " [${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\) )]($style)"
 
 [rlang]
 symbol = "󰟔 "
+format = " [$symbol($version )]($style)"
 
 [ruby]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [rust]
 symbol = "󱘗 "
+format = " [$symbol($version )]($style)"
 
 [scala]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [swift]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [zig]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [gradle]
 symbol = " "
+format = " [$symbol($version )]($style)"

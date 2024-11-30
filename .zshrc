@@ -53,8 +53,9 @@ zinit cdreplay -q
 # copyq &
 
 # ---- History ----- #
+export HISTFILE=~/.zsh_history
 HISTSIZE=999999
-export HISTFILE="~/.zsh_history"
+HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 unsetopt extended_history
 HISTDUP=erase
