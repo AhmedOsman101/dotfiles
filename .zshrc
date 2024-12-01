@@ -186,8 +186,6 @@ case ":${PATH}:" in
 esac
 
 eval "$(atuin init zsh)"
-
-source ~/atuin.sh
 # end atuin
 
 export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts"
