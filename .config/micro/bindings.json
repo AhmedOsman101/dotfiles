@@ -9,5 +9,6 @@
     "F1": "command:cheat",
     "F12": "command:makeup",
     "F5": "command:runit",
+    "F6": "lua:wc.wordCount",
     "F9": "command:makeupbg"
 }

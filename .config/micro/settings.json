@@ -6,6 +6,5 @@
     "scrollbar": true,
     "tabsize": 2,
     "tabstospaces": true,
-    "xterm": true,
-    "wc": true
+    "xterm": true
 }
