@@ -138,8 +138,12 @@ sudo() {
   fi
 }
 
-function cdw(){
-	cd $(wslpath "$1")
+cdw(){
+  if grep -q "microsoft" /proc/version &>/dev/null; then
+    cd $(wslpath "$1")
+  else
+    cd "$1"
+  fi
 }
 
 customvscode() {
@@ -147,7 +151,7 @@ customvscode() {
   sudo chown -R $(whoami) /opt/visual-studio-code
 }
 
-function yy() {
+yy() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
   yazi "$@" --cwd-file="$tmp"
   if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
@@ -156,7 +160,7 @@ function yy() {
   rm -f -- "$tmp"
 }
 
-function loadFonts() {
+loadFonts() {
   command sudo cp ~/fonts/*.ttf /usr/share/fonts/truetype/
   command sudo cp ~/fonts/*.otf /usr/share/fonts/opentype/
   command sudo fc-cache -fv
