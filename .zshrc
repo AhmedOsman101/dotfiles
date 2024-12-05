@@ -174,8 +174,8 @@ getdiff() {
 # pnpm
 export PNPM_HOME="/home/othman/.local/share/pnpm"
 case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
@@ -192,7 +192,7 @@ esac
 eval "$(atuin init zsh)"
 # end atuin
 
-export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts"
+export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:/home/linuxbrew/.linuxbrew/bin"
 
 . "$HOME/.atuin/bin/env"
 
