@@ -1,5 +1,5 @@
 {
-  "editor.fontSize": 18,
+  "editor.fontSize": 16,
   "editor.cursorStyle": "block",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -1538,8 +1538,8 @@
   "codesnap.roundedCorners": true,
   "editor.padding.top": 16,
   "vscode_custom_css.imports": [
-    "file:///home/othman/.vscode/custom/custom-vscode.css",
-    "file:///home/othman/.vscode/custom/custom-vscode.js"
+    "file:///home/othman/.dotfiles/.config/Code/User/custom/custom-vscode.css",
+    "file:///home/othman/.dotfiles/.config/Code/User/custom/custom-vscode.js"
   ],
   "cody.chat.defaultLocation": "editor",
   "[sass]": {
