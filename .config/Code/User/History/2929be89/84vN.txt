@@ -1,0 +1,4 @@
+adw-gtk-theme
+archcraft-bspwm
+atuin
+bibata-cursor-theme-bin

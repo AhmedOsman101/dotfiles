@@ -58,6 +58,16 @@
     "key": "shift+alt+down",
     "command": "-editor.action.insertCursorBelow",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
   }
   // {
   //   "key": "ctrl+r",

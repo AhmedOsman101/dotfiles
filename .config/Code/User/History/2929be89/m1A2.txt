@@ -1,0 +1,3 @@
+adw-gtk-theme
+archcraft-bspwm
+atuin
