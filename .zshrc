@@ -192,7 +192,13 @@ esac
 eval "$(atuin init zsh)"
 # end atuin
 
-export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:/home/linuxbrew/.linuxbrew/bin"
+# bun completions
+[ -s "/home/othman/.bun/_bun" ] && source "/home/othman/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+
+export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:/home/linuxbrew/.linuxbrew/bin:$BUN_INSTALL/bin"
 
 . "$HOME/.atuin/bin/env"
 
@@ -262,3 +268,4 @@ bindkey "^[[1;5D" backward-word      # Ctrl+Left
 export EDITOR="micro"
 
 export STARSHIP_CONFIG=~/.config/starship.toml
+
