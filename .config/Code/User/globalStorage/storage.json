@@ -9,11 +9,7 @@
                 "folderUri": "file:///home/othman/.dotfiles"
             }
         ],
-        "emptyWindows": [
-            {
-                "backupFolder": "1733485108052"
-            }
-        ]
+        "emptyWindows": []
     },
     "profileAssociations": {
         "workspaces": {
@@ -23,9 +19,7 @@
             "file:///mnt/windows/Users/Hp/work/C%2B%2B": "__default__profile__",
             "file:///home/othman/programs/llmchat": "__default__profile__"
         },
-        "emptyWindows": {
-            "1733485108052": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -188,13 +182,11 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save",
-                        "enabled": false
+                        "label": "&&Save"
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As...",
-                        "enabled": false
+                        "label": "Save &&As..."
                     },
                     {
                         "id": "saveAll",
@@ -303,13 +295,11 @@
                     },
                     {
                         "id": "workbench.action.files.revert",
-                        "label": "Re&&vert File",
-                        "enabled": false
+                        "label": "Re&&vert File"
                     },
                     {
                         "id": "workbench.action.closeActiveEditor",
-                        "label": "&&Close Editor",
-                        "enabled": false
+                        "label": "&&Close Editor"
                     },
                     {
                         "id": "workbench.action.closeFolder",
@@ -358,13 +348,11 @@
                     },
                     {
                         "id": "actions.find",
-                        "label": "&&Find",
-                        "enabled": false
+                        "label": "&&Find"
                     },
                     {
                         "id": "editor.action.startFindReplaceAction",
-                        "label": "&&Replace",
-                        "enabled": false
+                        "label": "&&Replace"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -824,8 +812,7 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap",
-                        "enabled": false
+                        "label": "&&Word Wrap"
                     }
                 ]
             },
@@ -833,7 +820,8 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back"
+                        "label": "&&Back",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -842,7 +830,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -852,6 +841,17 @@
                         "label": "Switch &&Editor",
                         "submenu": {
                             "items": [
+                                {
+                                    "id": "workbench.action.focusFirstSideEditor",
+                                    "label": "&&First Side in Editor"
+                                },
+                                {
+                                    "id": "workbench.action.focusSecondSideEditor",
+                                    "label": "&&Second Side in Editor"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
                                 {
                                     "id": "workbench.action.nextEditor",
                                     "label": "&&Next Editor"
