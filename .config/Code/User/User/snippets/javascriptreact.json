@@ -1,0 +1,29 @@
+{
+	"rfc": {
+		"prefix": "rfc",
+		"body": [
+			"export default function $1 () {",
+			"    return (",
+			"        <>",
+			"            <div>$1</div>",
+			"        </>",
+			"    );",
+			"}"
+		]
+	},
+	"rafc": {
+		"prefix": "rafc",
+		"body": [
+			"const $1 = () => {",
+			"  return (",
+			"    <>",
+			"      <div>$1</div>",
+			"    </>",
+			"  )",
+			"}",
+			"",
+			"export default $1",
+			"$0"
+		]
+	}
+}

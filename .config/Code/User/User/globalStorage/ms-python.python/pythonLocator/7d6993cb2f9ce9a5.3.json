@@ -1,0 +1,13 @@
+{
+  "environment": {
+    "executable": "/home/linuxbrew/.linuxbrew/opt/python@3.13/bin/python3.13",
+    "prefix": "/home/linuxbrew/.linuxbrew/Cellar/python@3.13/3.13.0_1",
+    "version": "3.13.0.final.0",
+    "is64Bit": true,
+    "symlinks": [
+      "/home/linuxbrew/.linuxbrew/bin/python3",
+      "/home/linuxbrew/.linuxbrew/opt/python@3.13/bin/python3.13"
+    ]
+  },
+  "symlinks": []
+}
