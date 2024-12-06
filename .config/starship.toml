@@ -35,7 +35,7 @@ format = "with [$symbol($version )]($style)"
 
 [c]
 symbol = "  "
-format = ' [$symbol($version](-$name) )]($style)'
+format = ' [$symbol($version)(-$name )]($style)'
 detect_extensions = [ "c", "h"]
 
 [conda]
