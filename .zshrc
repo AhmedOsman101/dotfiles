@@ -268,4 +268,3 @@ bindkey "^[[1;5D" backward-word      # Ctrl+Left
 export EDITOR="micro"
 
 export STARSHIP_CONFIG=~/.config/starship.toml
-
