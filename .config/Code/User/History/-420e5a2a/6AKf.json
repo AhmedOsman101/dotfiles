@@ -1,8 +1,0 @@
-{
-  "files.associations": {
-    "*.css": "css",
-    ".php_cs": "php",
-    ".php_cs.dist": "php",
-    "ostream": "cpp"
-  }
-}
