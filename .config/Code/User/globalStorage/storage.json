@@ -7,6 +7,9 @@
         "folders": [
             {
                 "folderUri": "file:///home/othman/programs/github-vscode-theme"
+            },
+            {
+                "folderUri": "file:///home/othman/.dotfiles/.config/micro/plug/gotham-colors"
             }
         ],
         "emptyWindows": []
@@ -18,7 +21,8 @@
             "file:///home/othman/.dotfiles": "__default__profile__",
             "file:///mnt/windows/Users/Hp/work/C%2B%2B": "__default__profile__",
             "file:///home/othman/programs/llmchat": "__default__profile__",
-            "file:///home/othman/programs/github-vscode-theme": "__default__profile__"
+            "file:///home/othman/programs/github-vscode-theme": "__default__profile__",
+            "file:///home/othman/.dotfiles/.config/micro/plug/gotham-colors": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -76,6 +80,17 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/.dotfiles/.config/micro/plug/gotham-colors",
+                                        "path": "/home/othman/.dotfiles/.config/micro/plug/gotham-colors",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.dotfiles/.config/micro/plug/gotham-colors"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -525,7 +540,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel"
+                                    "label": "&&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "toggle.toggleCustomTitleBar",
@@ -1754,7 +1770,7 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 363,
+            "sideBarWidth": 266,
             "statusBarHeight": 22,
             "windowBorder": false
         }
