@@ -6,7 +6,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///mnt/main/Projects/C%2B%2B/ICPC"
+                "folderUri": "file:///home/othman/.dotfiles"
             }
         ],
         "emptyWindows": []
@@ -83,23 +83,23 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///mnt/main/Projects/C%2B%2B/ICPC",
-                                        "path": "/mnt/main/Projects/C++/ICPC",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/mnt/main/Projects/C++/ICPC"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
                                         "external": "file:///home/othman/.dotfiles",
                                         "path": "/home/othman/.dotfiles",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
                                     "label": "~/.dotfiles"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///mnt/main/Projects/C%2B%2B/ICPC",
+                                        "path": "/mnt/main/Projects/C++/ICPC",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/mnt/main/Projects/C++/ICPC"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -387,6 +387,22 @@
                         "label": "&&Copy"
                     },
                     {
+                        "id": "submenuitem.MenubarCopy",
+                        "label": "Copy As",
+                        "submenu": {
+                            "items": [
+                                {
+                                    "id": "gitlens.copyRemoteFileUrlToClipboard",
+                                    "label": "Copy Remote File URL"
+                                },
+                                {
+                                    "id": "gitlens.copyRemoteFileUrlFrom",
+                                    "label": "Copy Remote File URL From..."
+                                }
+                            ]
+                        }
+                    },
+                    {
                         "id": "editor.action.clipboardPasteAction",
                         "label": "&&Paste"
                     },
@@ -395,13 +411,11 @@
                     },
                     {
                         "id": "actions.find",
-                        "label": "&&Find",
-                        "enabled": false
+                        "label": "&&Find"
                     },
                     {
                         "id": "editor.action.startFindReplaceAction",
-                        "label": "&&Replace",
-                        "enabled": false
+                        "label": "&&Replace"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -861,8 +875,7 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap",
-                        "enabled": false
+                        "label": "&&Word Wrap"
                     }
                 ]
             },
@@ -889,6 +902,17 @@
                         "label": "Switch &&Editor",
                         "submenu": {
                             "items": [
+                                {
+                                    "id": "workbench.action.focusFirstSideEditor",
+                                    "label": "&&First Side in Editor"
+                                },
+                                {
+                                    "id": "workbench.action.focusSecondSideEditor",
+                                    "label": "&&Second Side in Editor"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
                                 {
                                     "id": "workbench.action.nextEditor",
                                     "label": "&&Next Editor"
@@ -1781,15 +1805,15 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 266,
+            "sideBarWidth": 318,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///mnt/main/Projects/C%2B%2B/ICPC",
-            "backupPath": "/home/othman/.config/Code/Backups/ab23708a4df10f7a4481a1cad709a971",
+            "folder": "file:///home/othman/.dotfiles",
+            "backupPath": "/home/othman/.config/Code/Backups/2df83c8449bc3efce0a9d404e141a3e0",
             "uiState": {
                 "mode": 1,
                 "x": 2,
