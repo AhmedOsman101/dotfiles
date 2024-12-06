@@ -125,18 +125,18 @@ add-zsh-hook -Uz precmd rehash_precmd
 unalias apt 2>/dev/null
 unalias sudo 2>/dev/null
 
-apt() {
-  command nala "$@"
-}
+# apt() {
+#   command nala "$@"
+# }
 
-sudo() {
-  if [[ "$1" == "apt" ]]; then
-    shift
-    command sudo nala "$@"
-  else
-    command sudo "$@"
-  fi
-}
+# sudo() {
+#   if [[ "$1" == "apt" ]]; then
+#     shift
+#     command sudo nala "$@"
+#   else
+#     command sudo "$@"
+#   fi
+# }
 
 cdw(){
   if grep -q "microsoft" /proc/version &>/dev/null; then
@@ -190,7 +190,6 @@ case ":${PATH}:" in
 esac
 
 eval "$(atuin init zsh)"
-# end atuin
 
 # bun completions
 [ -s "/home/othman/.bun/_bun" ] && source "/home/othman/.bun/_bun"
@@ -199,10 +198,6 @@ eval "$(atuin init zsh)"
 export BUN_INSTALL="$HOME/.bun"
 
 export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:/home/linuxbrew/.linuxbrew/bin:$BUN_INSTALL/bin"
-
-. "$HOME/.atuin/bin/env"
-
-. "$HOME/.cargo/env"
 
 . "$HOME/.asdf/asdf.sh"
 
