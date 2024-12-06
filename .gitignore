@@ -1,1 +1,4 @@
 .config/micro/buffers
+.config/Code/globalStorage
+.config/Code/workspaceStorage
+.config/Code/History
