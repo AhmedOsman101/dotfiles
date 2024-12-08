@@ -6,7 +6,10 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///mnt/main/Projects/C%2B%2B/ICPC"
+                "folderUri": "file:///home/othman/work/C%2B%2B/ICPC"
+            },
+            {
+                "folderUri": "file:///home/othman/work/Projects/PHP"
             }
         ],
         "emptyWindows": []
@@ -16,7 +19,8 @@
             "file:///home/othman/work/C%2B%2B/ICPC/level-1": "__default__profile__",
             "file:///home/othman/work/C%2B%2B/ICPC": "__default__profile__",
             "file:///home/othman/.dotfiles": "__default__profile__",
-            "file:///mnt/main/Projects/C%2B%2B/ICPC": "__default__profile__"
+            "file:///mnt/main/Projects/C%2B%2B/ICPC": "__default__profile__",
+            "file:///home/othman/work/Projects/PHP": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -79,6 +83,28 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///home/othman/work/Projects/PHP",
+                                        "path": "/home/othman/work/Projects/PHP",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/work/Projects/PHP"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/work/C%2B%2B/ICPC",
+                                        "path": "/home/othman/work/C++/ICPC",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/work/C++/ICPC"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///mnt/main/Projects/C%2B%2B/ICPC",
                                         "path": "/mnt/main/Projects/C++/ICPC",
                                         "scheme": "file"
@@ -118,17 +144,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/scripts"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/work/C%2B%2B/ICPC",
-                                        "path": "/home/othman/work/C++/ICPC",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/work/C++/ICPC"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -507,7 +522,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel"
+                                    "label": "&&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "toggle.toggleCustomTitleBar",
@@ -788,6 +804,10 @@
                     {
                         "id": "workbench.view.extensions",
                         "label": "E&&xtensions"
+                    },
+                    {
+                        "id": "workbench.view.extension.test",
+                        "label": "T&&esting"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1742,8 +1762,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///mnt/main/Projects/C%2B%2B/ICPC",
-            "backupPath": "/home/othman/.config/Code/Backups/ab23708a4df10f7a4481a1cad709a971",
+            "folder": "file:///home/othman/work/Projects/PHP",
+            "backupPath": "/home/othman/.config/Code/Backups/e9fcc6b36155a699994ee09543fff4f0",
             "uiState": {
                 "mode": 0,
                 "x": 448,
