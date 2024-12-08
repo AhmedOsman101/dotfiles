@@ -1,0 +1,373 @@
+!SESSION 2024-12-04 16:44:41.943 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.13
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --pipe=/run/user/1000/lsp-4a5126957b38e1597df37a923c22af40.sock
+Command-line arguments:  -data /home/othman/.config/Code/User/workspaceStorage/99dc166e00ed67684b7ce396d19873bb/redhat.java/jdt_ws --pipe=/run/user/1000/lsp-4a5126957b38e1597df37a923c22af40.sock
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:46.180
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:46.869
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:47.000
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:47.008
+!MESSAGE Initializing Java Language Server 1.42.0.202411280416
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:47.009
+!MESSAGE Started org.eclipse.m2e.core 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:48.776
+!MESSAGE ProjectRegistryRefreshJob finished 1765ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:48.827
+!MESSAGE Started org.eclipse.buildship.core 51ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:49.063
+!MESSAGE Setting /usr/lib/jvm/java-23-openjdk as 'JavaSE-23' environment (id:1733323489013)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:49.068
+!MESSAGE Setting java.home /usr/lib/jvm/java-23-openjdk as default global VM
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:49.080
+!MESSAGE Default VM Install changed from  1733323488978-/home/othman/.vscode/extensions/redhat.java-1.37.0-linux-x64/jre/17.0.13-linux-x86_64 to 1733323489013-/usr/lib/jvm/java-23-openjdk
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:49.102
+!MESSAGE JVM Runtimes changed, saving new configuration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:49.118
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:49.120
+!MESSAGE Non-Static Commands: [java.project.import, java.project.changeImportedProjects, java.navigate.openTypeHierarchy, java.project.resolveStackTraceLocation, java.edit.handlePasteEvent, java.edit.stringFormatting, java.project.getSettings, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.createModuleInfo, java.vm.getAllInstalls, java.edit.organizeImports, java.project.refreshDiagnostics, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.updateSettings, java.project.getAll, java.reloadBundles, java.project.isTestFile, java.project.resolveText, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.smartSemicolonDetection, java.project.updateSourceAttachment, java.project.updateClassPaths, java.decompile, java.protobuf.generateSources, java.project.resolveSourceAttachment, java.project.updateJdk, java.project.addToSourcePath, java.completion.onDidSelect]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:49.149
+!MESSAGE RepositoryRegistryUpdateJob finished 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:49.182
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:49.222
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:49.362
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:50.989
+!MESSAGE Try to create an invisible project for the workspace /home/othman/work
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:50.990
+!MESSAGE Creating the Java project work_983053c8
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:51.019
+!MESSAGE Finished creating the Java project work_983053c8
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:51.027
+!MESSAGE Successfully created a workspace invisible project work_983053c8
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:51.056
+!MESSAGE Workspace initialized in 1908ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:51.064
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:51.601
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:51.655
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:51.787
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:51.972
+!MESSAGE >> Updating classpath for project work_983053c8
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:52.012
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:52.013
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:52.021
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:52.428
+!MESSAGE begin problem for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:52.433
+!MESSAGE 0 problems reported for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:52.436
+!MESSAGE Validated 1. Took 46 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:53.132
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:53.615
+!MESSAGE begin problem for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:53.616
+!MESSAGE 0 problems reported for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:44:53.617
+!MESSAGE Validated 1. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:13.430
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:13.899
+!MESSAGE begin problem for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:13.900
+!MESSAGE 0 problems reported for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:13.901
+!MESSAGE Validated 1. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:14.658
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:14.667
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:14.928
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:15.087
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:15.197
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:15.253
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:15.486
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:15.513
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:15.611
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:15.647
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:15.806
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:15.846
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:16.033
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:16.073
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:16.540
+!MESSAGE begin problem for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:16.541
+!MESSAGE 1 problems reported for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:16.542
+!MESSAGE Validated 1. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:17.069
+!MESSAGE Reconciled 1. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:17.256
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:17.719
+!MESSAGE begin problem for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:17.719
+!MESSAGE 1 problems reported for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:17.720
+!MESSAGE Validated 1. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:18.324
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:18.743
+!MESSAGE begin problem for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:18.743
+!MESSAGE 1 problems reported for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:18.744
+!MESSAGE Validated 1. Took 19 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:19.440
+!MESSAGE Reconciled 1. Took 24 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:19.917
+!MESSAGE begin problem for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:19.918
+!MESSAGE 1 problems reported for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:19.920
+!MESSAGE Validated 1. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:20.141
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:20.619
+!MESSAGE begin problem for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:20.620
+!MESSAGE 1 problems reported for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:20.621
+!MESSAGE Validated 1. Took 29 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:21.286
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:21.750
+!MESSAGE begin problem for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:21.750
+!MESSAGE 1 problems reported for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:21.751
+!MESSAGE Validated 1. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:23.647
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:24.106
+!MESSAGE begin problem for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:24.106
+!MESSAGE 0 problems reported for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:24.107
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:24.840
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:25.026
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:25.063
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:25.152
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:25.318
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:25.785
+!MESSAGE begin problem for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:25.785
+!MESSAGE 3 problems reported for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:25.787
+!MESSAGE Validated 1. Took 17 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:26.271
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:26.357
+!MESSAGE Reconciled 1. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:26.817
+!MESSAGE begin problem for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:26.817
+!MESSAGE 0 problems reported for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:26.817
+!MESSAGE Validated 1. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:29.310
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:29.342
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:29.417
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:29.424
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:29.551
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:29.583
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:29.780
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:29.817
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:30.284
+!MESSAGE begin problem for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:30.285
+!MESSAGE 1 problems reported for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:30.286
+!MESSAGE Validated 1. Took 19 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:30.788
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:31.010
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:31.012
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:31.275
+!MESSAGE Clearing problems for /file.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:31.423
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:31.424
+!MESSAGE 0 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:31.424
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:35.097
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:35.554
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:35.555
+!MESSAGE 0 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 16:53:35.556
+!MESSAGE Validated 1. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 20:22:18.392
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 20:22:18.436
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 20:22:18.557
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-12-04 20:22:18.613
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
