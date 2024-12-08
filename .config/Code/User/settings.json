@@ -1760,5 +1760,6 @@
   "editor.unicodeHighlight.invisibleCharacters": false,
   "C_Cpp.intelliSenseEngine": "disabled",
   "database-client.autoSync": true,
-  "window.newWindowProfile": "Default"
+  "window.newWindowProfile": "Default",
+  "vsicons.dontShowNewVersionMessage": true
 }
