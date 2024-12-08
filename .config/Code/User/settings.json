@@ -1166,7 +1166,7 @@
     "cpp": "clear; cd $dirWithoutTrailingSlash; g++ $fileName -o $fileNameWithoutExt; ./$fileNameWithoutExt; rm -f ./$fileNameWithoutExt",
     "zig": "zig run",
     "objective-c": "cd $dir; gcc -framework Cocoa $fileName -o $fileNameWithoutExt ; $dir$fileNameWithoutExt",
-    "php": "clear; php $fileName",
+    "php": "cd $dir; clear; php $fileName",
     "python": "cd $dirWithoutTrailingSlash; clear; python3 -u $fileName",
     "perl": "perl",
     "perl6": "perl6",
