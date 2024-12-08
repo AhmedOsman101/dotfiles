@@ -1772,5 +1772,6 @@
     "**/.zshrc": true
   },
   "shellcheck.useWorkspaceRootAsCwd": true,
-  "shellcheck.exclude": ["1071"]
+  "shellcheck.exclude": ["1071"],
+  "geminiCommit.commitMessageLength": "short"
 }
