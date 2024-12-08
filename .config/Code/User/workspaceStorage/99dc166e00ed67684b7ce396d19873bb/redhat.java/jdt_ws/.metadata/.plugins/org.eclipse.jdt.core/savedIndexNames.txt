@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+/home/othman/.config/Code/User/workspaceStorage/99dc166e00ed67684b7ce396d19873bb/redhat.java/jdt_ws/.metadata/.plugins/org.eclipse.jdt.core
+1348672280.index
+3842426239.index
+1865797976.index
