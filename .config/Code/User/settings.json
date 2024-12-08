@@ -1758,5 +1758,7 @@
   "gemmy.settings.modelName": "gemini-1.5-flash",
   "gemmy.settings.apiKey": "AIzaSyBEett9Y2GTvjnFX9CBK_r866A8rffjPOQ",
   "editor.unicodeHighlight.invisibleCharacters": false,
-  "C_Cpp.intelliSenseEngine": "disabled"
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "database-client.autoSync": true,
+  "window.newWindowProfile": "Default"
 }
