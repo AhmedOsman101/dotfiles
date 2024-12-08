@@ -1,5 +1,5 @@
-# shellcheck disable=SC2034,SC2153,SC2086,SC2155
-# Above line is because shellcheck doesn't support zsh, per
+# shellcheck disable=SC2034,SC2153,SC2086,SC2155,SC2016,SC1091,SC2296
+# Above line is because shellcheck doesn't support zsh
 # ---- Increase the FUNCNEST limit ----- #
 FUNCSET=99999
 
@@ -21,14 +21,11 @@ source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz promptinit
 promptinit
 
-# ---- Prompt Pure ----- #
-# zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
-# zinit light sindresorhus/pure
+# ---- Prompt Starship ----- #
 zinit ice as"command" from"gh-r" \
           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
           atpull"%atclone" src"init.zsh"
 zinit light starship/starship
-
 
 # ---- Add in zsh plugins ----- #
 zinit light zsh-users/zsh-syntax-highlighting
@@ -48,6 +45,10 @@ zinit snippet OMZP::asdf
 # ---- Load completions ----- #
 autoload -Uz compinit && compinit
 zinit cdreplay -q
+
+# ---- zsh options ----- #
+setopt extendedglob
+setopt ksh_arrays
 
 # ---- Start Copyq ----- #
 # copyq &
@@ -84,7 +85,6 @@ alias pnp="pnpm"
 alias npm="pnpm"
 alias vim="nvim"
 alias apt="nala"
-alias load-fonts="loadFonts"
 alias vimconfig="cd ~/.config/nvim"
 # ---- Zoxide (better cd) ----- #
 alias cd="z"
@@ -95,7 +95,6 @@ alias rm="rmtrash"
 alias rmdir="rmdirtrash"
 # ---- Micro (better Nano) ----- #
 alias nano="micro"
-# alias gitsync='git add "*" && git commit -am "Updated Files" && git push origin main'
 alias python="python3"
 alias pip="pip3"
 
@@ -123,52 +122,6 @@ add-zsh-hook -Uz precmd rehash_precmd
 # ---- Ensure no alias for apt exists before defining the function ----- #
 unalias apt 2>/dev/null
 unalias sudo 2>/dev/null
-
-# apt() {
-#   command nala "$@"
-# }
-
-# sudo() {
-#   if [[ "$1" == "apt" ]]; then
-#     shift
-#     command sudo nala "$@"
-#   else
-#     command sudo "$@"
-#   fi
-# }
-
-cdw(){
-  if grep -q "microsoft" /proc/version &>/dev/null; then
-    cd $(wslpath "$1")
-  else
-    cd "$1"
-  fi
-}
-
-customvscode() {
-  sudo chown -R $(whoami) "$(which code)"
-  sudo chown -R $(whoami) /opt/visual-studio-code
-}
-
-yy() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-  yazi "$@" --cwd-file="$tmp"
-  if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-    builtin cd -- "$cwd"
-  fi
-  rm -f -- "$tmp"
-}
-
-loadFonts() {
-  command sudo cp ~/fonts/*.ttf /usr/share/fonts/truetype/
-  command sudo cp ~/fonts/*.otf /usr/share/fonts/opentype/
-  command sudo fc-cache -fv
-}
-
-getdiff() {
-  # Generate the diff output
-  git diff --staged --diff-filter=d | xargs bat --diff
-}
 
 # pnpm
 export PNPM_HOME="/home/othman/.local/share/pnpm"
@@ -198,12 +151,14 @@ export BUN_INSTALL="$HOME/.bun"
 
 export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:/home/linuxbrew/.linuxbrew/bin:$BUN_INSTALL/bin"
 
+# shellcheck disable=SC1091
 . "$HOME/.asdf/asdf.sh"
 
 export TERM=xterm-256color
 export COLORTERM=truecolor
 
 # ---- FZF ----- #
+# shellcheck disable=SC1090
 source <(fzf --zsh)
 
 # --- Use fd instead of fzf --- #
@@ -242,7 +197,7 @@ _fzf_comprun() {
 }
 
 # ---- The fuck alias ----- #
-eval $(thefuck --alias)
+eval "$(thefuck --alias)"
 
 # ---- Zoxide (better cd) ---- #
 eval "$(zoxide init zsh)"
