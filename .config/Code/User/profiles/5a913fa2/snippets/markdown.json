@@ -1,0 +1,54 @@
+{
+	"CenterTagImage": {
+		"prefix": "ceni",
+		"body": [
+			"<center style='padding: 1rem; padding-bottom: 0.1rem;'>",
+			"",
+			"<img src='${1:images/contact.png}' alt='${2:description}' style='width: 100%; border-radius: 10px;' />",
+			"",
+			"</center>",
+			"$3"
+		],
+		"description": "Insert an image that's horizontally centered"
+	},
+	"CenterTagImageLogo": {
+		"prefix": "cenl",
+		"body": [
+			"<center style='padding: 1rem; padding-bottom: 0.1rem;'>",
+			"",
+			"<img src='${1:images/contact.png}' alt='${2:description}' style='width: 100%; border-radius: 10px; border-bottom-right-radius: 0px;' />",
+			"",
+			"</center>",
+			"$3"
+		],
+		"description": "Insert an image that's horizontally centered with no border radius at bottom right corner"
+	},
+	"CenterImage": {
+		"prefix": "ice",
+		"body": [
+			"<center style='padding: 1rem; padding-bottom: 0.1rem;'>",
+			"",
+			"![${1:description}](${2:./images/})",
+			"",
+			"</center>",
+			"$3"
+		],
+		"description": "Insert an image that's horizontally centered"
+	},
+	"New Code Section": {
+		"prefix": "nsc",
+		"body": [
+			"",
+			"---",
+			"",
+			"### $1:",
+			"",
+			"```$2",
+			"$3",
+			"",
+			"```",
+			""
+		],
+		"description": "New section with code block"
+	},
+}
