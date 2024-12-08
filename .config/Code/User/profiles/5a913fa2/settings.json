@@ -1758,7 +1758,6 @@
   "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.regenerateStdLibIndices": true,
   "python.analysis.typeEvaluation.enableExperimentalFeatures": true,
-  "python.defaultInterpreterPath": "/usr/bin/python3",
   "python.languageServer": "Jedi",
   "geminiCommit.onlyStagedChanges": true,
   "gemmy.settings.modelName": "gemini-1.5-flash",
@@ -1766,7 +1765,7 @@
   "editor.unicodeHighlight.invisibleCharacters": false,
   "C_Cpp.intelliSenseEngine": "disabled",
   "database-client.autoSync": true,
-  "window.newWindowProfile": "othman",
+  "window.newWindowProfile": "Default",
   "vsicons.dontShowNewVersionMessage": true,
   "shellcheck.ignorePatterns": {
     "**/.zshrc": true
