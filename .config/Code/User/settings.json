@@ -1766,7 +1766,7 @@
   "editor.unicodeHighlight.invisibleCharacters": false,
   "C_Cpp.intelliSenseEngine": "disabled",
   "database-client.autoSync": true,
-  "window.newWindowProfile": "othman",
+  "window.newWindowProfile": "Default",
   "vsicons.dontShowNewVersionMessage": true,
   "shellcheck.ignorePatterns": {
     "**/.zshrc": true
