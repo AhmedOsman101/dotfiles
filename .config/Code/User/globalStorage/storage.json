@@ -6,7 +6,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/othman/.dotfiles"
+                "folderUri": "file:///mnt/main/Projects/C%2B%2B/ICPC"
             }
         ],
         "emptyWindows": []
@@ -15,7 +15,8 @@
         "workspaces": {
             "file:///home/othman/work/C%2B%2B/ICPC/level-1": "__default__profile__",
             "file:///home/othman/work/C%2B%2B/ICPC": "__default__profile__",
-            "file:///home/othman/.dotfiles": "__default__profile__"
+            "file:///home/othman/.dotfiles": "__default__profile__",
+            "file:///mnt/main/Projects/C%2B%2B/ICPC": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -69,11 +70,21 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///mnt/main/Projects/C%2B%2B/ICPC",
+                                        "path": "/mnt/main/Projects/C++/ICPC",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/mnt/main/Projects/C++/ICPC"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -195,7 +206,7 @@
                                 },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
-                                    "label": "Export Profile (othman)..."
+                                    "label": "Export Profile (Default)..."
                                 }
                             ]
                         }
@@ -483,8 +494,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar",
-                                    "checked": true
+                                    "label": "&&Primary Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -811,8 +821,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1141,8 +1150,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1727,15 +1735,15 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 256,
+            "sideBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/.dotfiles",
-            "backupPath": "/home/othman/.config/Code/Backups/2df83c8449bc3efce0a9d404e141a3e0",
+            "folder": "file:///mnt/main/Projects/C%2B%2B/ICPC",
+            "backupPath": "/home/othman/.config/Code/Backups/ab23708a4df10f7a4481a1cad709a971",
             "uiState": {
                 "mode": 0,
                 "x": 448,
