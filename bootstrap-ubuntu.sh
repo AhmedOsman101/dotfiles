@@ -7,7 +7,7 @@ sudo apt install nala -y
 
 # Install nala packages
 while IFS= read -r line; do
-  sudo nala install "$line" -y
+	sudo nala install "${line}" -y
 done <"installed_packages.txt"
 
 # Install homebrew
@@ -21,11 +21,11 @@ curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 # Install pnpm packages
 while IFS= read -r line; do
-  pnpm add -g "$line"
+	pnpm add -g "${line}"
 done <"pnpm_global_packages.txt"
 
 # Insatll flatpak apps
 while IFS= read -r line; do
-  # Install nala packages
-  flatpak install "$line" -y
+	# Install nala packages
+	flatpak install "${line}" -y
 done <"flatpak_apps.txt"

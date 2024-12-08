@@ -14,7 +14,6 @@
 	"Include logs": {
 		"prefix": "logs",
 		"body": [
-			"# shellcheck source=/dev/null",
 			"source logs.sh",
 			""
 		],
