@@ -1,5 +1,5 @@
 {
-  "editor.fontSize": 16,
+  "editor.fontSize": 20,
   "editor.cursorStyle": "block",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -1265,7 +1265,12 @@
     ".phpunit.result.cache": false,
     "vendor": false,
     "node_modules": false,
-    "dist": false
+    "dist": false,
+    "**/.trunk/*actions/": true,
+    "**/.trunk/*logs/": true,
+    "**/.trunk/*notifications/": true,
+    "**/.trunk/*out/": true,
+    "**/.trunk/*plugins/": true
   },
   "files.watcherExclude": {
     "**/.trunk/*actions/": true,
@@ -1278,7 +1283,7 @@
   "C_Cpp.vcFormat.indent.braces": true,
   "editor.autoClosingComments": "always",
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.mouseWheelZoom": false,
+  "terminal.integrated.mouseWheelZoom": true,
   "terminal.integrated.fontWeightBold": "800",
   "terminal.integrated.fontSize": 17,
   "[php]": {
@@ -1482,7 +1487,7 @@
   "php.validate.enable": false,
   "php.suggest.basic": false,
   "explorer.autoReveal": false,
-  "editor.mouseWheelZoom": false,
+  "editor.mouseWheelZoom": true,
   "editor.quickSuggestions": {
     "other": "on",
     "comments": "on",
@@ -1674,7 +1679,8 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+    "editor.defaultFormatter": "trunk.io",
+    "files.autoSave": "afterDelay"
   },
   "terminal.external.linuxExec": "kitty",
   "diffEditor.maxComputationTime": 0,
@@ -1761,5 +1767,9 @@
   "C_Cpp.intelliSenseEngine": "disabled",
   "database-client.autoSync": true,
   "window.newWindowProfile": "Default",
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "shellcheck.ignorePatterns": {
+    "**/.zshrc": true
+  },
+  "shellcheck.useWorkspaceRootAsCwd": true
 }

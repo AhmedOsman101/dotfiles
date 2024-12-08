@@ -10,5 +10,14 @@
 			"# ---- $1 ----- #",
 		],
 		"description": "Adds a nicely formatted comment"
+	},
+	"Include logs": {
+		"prefix": "logs",
+		"body": [
+			"# shellcheck source=/dev/null",
+			"source logs.sh",
+			""
+		],
+		"description": "Includes my custom logger"
 	}
 }
