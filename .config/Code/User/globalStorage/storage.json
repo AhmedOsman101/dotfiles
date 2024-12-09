@@ -7,12 +7,13 @@
         "folders": [
             {
                 "folderUri": "file:///home/othman/work/C%2B%2B/ICPC"
-            },
-            {
-                "folderUri": "file:///home/othman/work/Projects/PHP"
             }
         ],
-        "emptyWindows": []
+        "emptyWindows": [
+            {
+                "backupFolder": "1733778066728"
+            }
+        ]
     },
     "profileAssociations": {
         "workspaces": {
@@ -83,23 +84,23 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/othman/work/Projects/PHP",
-                                        "path": "/home/othman/work/Projects/PHP",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/work/Projects/PHP"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
                                         "external": "file:///home/othman/work/C%2B%2B/ICPC",
                                         "path": "/home/othman/work/C++/ICPC",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
                                     "label": "~/work/C++/ICPC"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/work/Projects/PHP",
+                                        "path": "/home/othman/work/Projects/PHP",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/work/Projects/PHP"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -155,6 +156,20 @@
                                     },
                                     "enabled": true,
                                     "label": "~/work/C++/ICPC/level-1"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/.config/kitty/kitty.conf",
+                                        "path": "/home/othman/.config/kitty/kitty.conf",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/kitty/kitty.conf"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -522,8 +537,7 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel",
-                                    "checked": true
+                                    "label": "&&Panel"
                                 },
                                 {
                                     "id": "toggle.toggleCustomTitleBar",
@@ -1170,7 +1184,8 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal"
+                        "label": "&&Split Terminal",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1762,14 +1777,15 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/work/Projects/PHP",
-            "backupPath": "/home/othman/.config/Code/Backups/e9fcc6b36155a699994ee09543fff4f0",
+            "folder": "file:///home/othman/work/C%2B%2B/ICPC",
+            "backupPath": "/home/othman/.config/Code/Backups/bbada90029f0a8f28b02baa42c315606",
             "uiState": {
                 "mode": 0,
                 "x": 448,
                 "y": 156,
                 "width": 1024,
-                "height": 768
+                "height": 768,
+                "zoomLevel": 1
             }
         },
         "openedWindows": []

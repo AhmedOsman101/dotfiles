@@ -11,7 +11,6 @@
   "editor.smoothScrolling": true,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
-  "editor.formatOnSave": true,
   "editor.minimap.autohide": true,
   "workbench.commandPalette.experimental.suggestCommands": true,
   "window.openFilesInNewWindow": "on",
@@ -1300,7 +1299,6 @@
     "editor.defaultFormatter": "ms-python.autopep8"
   },
   "git.openRepositoryInParentFolders": "always",
-  "editor.formatOnPaste": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -1773,5 +1771,14 @@
   },
   "shellcheck.useWorkspaceRootAsCwd": true,
   "shellcheck.exclude": ["1071"],
-  "geminiCommit.commitMessageLength": "short"
+  "geminiCommit.commitMessageLength": "short",
+  "php.completion.showParameters": true,
+  "php.inlayHints.parameters.suppressNameMatchingValue": true,
+  "php.format.rules.callParametersWrap": "onEveryItem",
+  "php.hover.parametersFullName": true,
+  "php.inlayHints.parameters.enabled": false,
+  "clangd.checkUpdates": true,
+  "clangd.onConfigChanged": "restart",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true
 }
