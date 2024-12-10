@@ -14,7 +14,7 @@ use = ""
 # : Manager {{{
 
 [manager]
-cwd = { fg = "cyan" }
+cwd = { fg = "blue"}
 
 # Hovered
 hovered         = { reversed = true }
