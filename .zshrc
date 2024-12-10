@@ -217,3 +217,5 @@ bindkey "^[[1;5D" backward-word      # Ctrl+Left
 export EDITOR="micro"
 
 export STARSHIP_CONFIG=~/.config/starship.toml
+
+# export HSA_OVERRIDE_GFX_VERSION=9.0.0
