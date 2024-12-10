@@ -6,17 +6,10 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/othman/work/C%2B%2B/ICPC"
-            },
-            {
-                "folderUri": "file:///home/othman/.dotfiles"
+                "folderUri": "file:///home/othman/Documents/obsidian"
             }
         ],
-        "emptyWindows": [
-            {
-                "backupFolder": "1733870192346"
-            }
-        ]
+        "emptyWindows": []
     },
     "profileAssociations": {
         "workspaces": {
@@ -24,11 +17,10 @@
             "file:///home/othman/work/C%2B%2B/ICPC": "__default__profile__",
             "file:///home/othman/.dotfiles": "__default__profile__",
             "file:///mnt/main/Projects/C%2B%2B/ICPC": "__default__profile__",
-            "file:///home/othman/work/Projects/PHP": "__default__profile__"
+            "file:///home/othman/work/Projects/PHP": "__default__profile__",
+            "file:///home/othman/Documents/obsidian": "__default__profile__"
         },
-        "emptyWindows": {
-            "1733870192346": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -90,6 +82,17 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///home/othman/Documents/obsidian",
+                                        "path": "/home/othman/Documents/obsidian",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/obsidian"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/othman/.dotfiles",
                                         "path": "/home/othman/.dotfiles",
                                         "scheme": "file"
@@ -129,17 +132,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/mnt/main/Projects/C++/ICPC"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/Documents/obsidian",
-                                        "path": "/home/othman/Documents/obsidian",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/obsidian"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -344,6 +336,10 @@
                         "label": "&&Close Editor"
                     },
                     {
+                        "id": "workbench.action.closeFolder",
+                        "label": "Close &&Folder"
+                    },
+                    {
                         "id": "workbench.action.closeWindow",
                         "label": "Clos&&e Window"
                     },
@@ -537,7 +533,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar"
+                                    "label": "&&Primary Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -864,8 +861,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1391,6 +1387,11 @@
                 "label": "Ctrl+W",
                 "userSettingsLabel": "ctrl+w"
             },
+            "workbench.action.closeFolder": {
+                "label": "Ctrl+K F",
+                "isNative": false,
+                "userSettingsLabel": "ctrl+k f"
+            },
             "workbench.action.closeWindow": {
                 "label": "Alt+F4",
                 "userSettingsLabel": "alt+f4"
@@ -1769,45 +1770,30 @@
             "statusBarBackground": "#24292e",
             "statusBarBorder": "#1b1f23",
             "statusBarNoFolderBackground": "#24292e"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 0,
+            "activityBarWidth": 48,
+            "sideBarWidth": 256,
+            "statusBarHeight": 22,
+            "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/othman/.config/Code/Backups/1733870192346",
+            "folder": "file:///home/othman/Documents/obsidian",
+            "backupPath": "/home/othman/.config/Code/Backups/3ac1572685e8ac4441905c07f35794f3",
             "uiState": {
-                "mode": 3,
-                "display": 2785062953156690,
+                "mode": 0,
+                "x": 448,
+                "y": 156,
                 "width": 1024,
                 "height": 768,
-                "x": 448,
-                "y": 156
+                "zoomLevel": 1
             }
         },
-        "openedWindows": [
-            {
-                "folder": "file:///home/othman/work/C%2B%2B/ICPC",
-                "backupPath": "/home/othman/.config/Code/Backups/bbada90029f0a8f28b02baa42c315606",
-                "uiState": {
-                    "mode": 3,
-                    "display": 2785062953156690,
-                    "width": 1024,
-                    "height": 768,
-                    "x": 448,
-                    "y": 156,
-                    "zoomLevel": 1
-                }
-            },
-            {
-                "backupPath": "/home/othman/.config/Code/Backups/1733870192346",
-                "uiState": {
-                    "mode": 3,
-                    "display": 2785062953156690,
-                    "width": 1024,
-                    "height": 768,
-                    "x": 448,
-                    "y": 156
-                }
-            }
-        ]
+        "openedWindows": []
     }
 }
