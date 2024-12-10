@@ -10,28 +10,43 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # ---- Download Zinit, if it's not there yet ----- #
 if [ ! -d "$ZINIT_HOME" ]; then
-  mkdir -p "$(dirname $ZINIT_HOME)"
-  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+  bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 fi
-
-# ---- Source/Load zinit ----- #
-source "${ZINIT_HOME}/zinit.zsh"
 
 # ---- Add in zsh prompt ----- #
 autoload -Uz promptinit
 promptinit
 
+# ---- Load completions ----- #
+autoload -Uz compinit && compinit
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# ---- Source/Load zinit ----- #
+source "${ZINIT_HOME}/zinit.zsh"
+zinit cdreplay -q
+
 # ---- Prompt Starship ----- #
 zinit ice as"command" from"gh-r" \
           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
           atpull"%atclone" src"init.zsh"
-zinit light starship/starship
+zinit light "starship/starship"
 
 # ---- Add in zsh plugins ----- #
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light zdharma-continuum/fast-syntax-highlighting
+zinit load zsh-users/zsh-syntax-highlighting
+zinit load zsh-users/zsh-completions
+zinit load zsh-users/zsh-autosuggestions
+zinit load zdharma-continuum/fast-syntax-highlighting
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+### End of Zinit's installer chunk
 
 # ---- Add in snippets ----- #
 zinit snippet OMZP::git
@@ -41,10 +56,6 @@ zinit snippet OMZP::laravel
 zinit snippet OMZP::sublime
 zinit snippet OMZP::colorize
 zinit snippet OMZP::asdf
-
-# ---- Load completions ----- #
-autoload -Uz compinit && compinit
-zinit cdreplay -q
 
 # ---- zsh options ----- #
 setopt extendedglob
@@ -80,7 +91,7 @@ alias zshrc="micro ~/.zshrc"
 alias bashrc="micro ~/.bashrc"
 alias art="php artisan"
 alias cls="clear"
-# alias reload="source ~/.zshrc; cls; neofetch"
+alias reload="source ~/.zshrc && clear; neofetch"
 alias pnp="pnpm"
 alias npm="pnpm"
 alias vim="nvim"
@@ -142,6 +153,17 @@ case ":${PATH}:" in
 esac
 
 eval "$(atuin init zsh)"
+
+# Yazi
+
+yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # bun completions
 [ -s "/home/othman/.bun/_bun" ] && source "/home/othman/.bun/_bun"

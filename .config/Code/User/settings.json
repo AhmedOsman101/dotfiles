@@ -1677,7 +1677,7 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[shellscript]": {
-    "editor.defaultFormatter": "trunk.io",
+    "editor.defaultFormatter": "foxundermoon.shell-format",
     "files.autoSave": "afterDelay"
   },
   "terminal.external.linuxExec": "kitty",
