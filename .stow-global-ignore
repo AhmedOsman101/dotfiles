@@ -11,5 +11,6 @@ Brewfile
 ^.*\.txt$
 ^.*\.md$
 ^.*\.sql$
+^.*\.astylerc$
 ^bootstrap-arch\.sh$
 ^bootstrap-ubuntu\.sh$
