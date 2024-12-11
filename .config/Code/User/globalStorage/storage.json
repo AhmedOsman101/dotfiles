@@ -6,7 +6,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/othman/Documents/obsidian"
+                "folderUri": "file:///home/othman/work/C%2B%2B/ICPC"
             }
         ],
         "emptyWindows": []
@@ -72,11 +72,32 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/work/C%2B%2B/ICPC",
+                                        "path": "/home/othman/work/C++/ICPC",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/work/C++/ICPC"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/work/C%2B%2B/ICPC/level-1",
+                                        "path": "/home/othman/work/C++/ICPC/level-1",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/work/C++/ICPC/level-1"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -99,17 +120,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/.dotfiles"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/work/C%2B%2B/ICPC",
-                                        "path": "/home/othman/work/C++/ICPC",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/work/C++/ICPC"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -143,17 +153,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/scripts"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/work/C%2B%2B/ICPC/level-1",
-                                        "path": "/home/othman/work/C++/ICPC/level-1",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/work/C++/ICPC/level-1"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -513,7 +512,8 @@
                             "items": [
                                 {
                                     "id": "workbench.action.toggleFullScreen",
-                                    "label": "&&Full Screen"
+                                    "label": "&&Full Screen",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleZenMode",
@@ -533,8 +533,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar",
-                                    "checked": true
+                                    "label": "&&Primary Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -828,6 +827,10 @@
                     {
                         "id": "workbench.view.extensions",
                         "label": "E&&xtensions"
+                    },
+                    {
+                        "id": "workbench.view.extension.test",
+                        "label": "T&&esting"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1440,10 +1443,6 @@
                 "label": "Ctrl+/",
                 "userSettingsLabel": "ctrl+/"
             },
-            "editor.action.blockComment": {
-                "label": "Ctrl+Shift+A",
-                "userSettingsLabel": "ctrl+shift+a"
-            },
             "editor.emmet.action.expandAbbreviation": {
                 "label": "Tab",
                 "userSettingsLabel": "tab"
@@ -1770,27 +1769,19 @@
             "statusBarBackground": "#24292e",
             "statusBarBorder": "#1b1f23",
             "statusBarNoFolderBackground": "#24292e"
-        },
-        "layoutInfo": {
-            "sideBarSide": "left",
-            "editorPartMinWidth": 220,
-            "titleBarHeight": 0,
-            "activityBarWidth": 48,
-            "sideBarWidth": 256,
-            "statusBarHeight": 22,
-            "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/Documents/obsidian",
-            "backupPath": "/home/othman/.config/Code/Backups/3ac1572685e8ac4441905c07f35794f3",
+            "folder": "file:///home/othman/work/C%2B%2B/ICPC",
+            "backupPath": "/home/othman/.config/Code/Backups/bbada90029f0a8f28b02baa42c315606",
             "uiState": {
-                "mode": 0,
-                "x": 448,
-                "y": 156,
-                "width": 1024,
-                "height": 768,
+                "mode": 3,
+                "display": 2785062953156690,
+                "width": 1920,
+                "height": 1008,
+                "x": 0,
+                "y": 72,
                 "zoomLevel": 1
             }
         },

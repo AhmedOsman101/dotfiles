@@ -1252,10 +1252,10 @@
   "code-runner.saveAllFilesBeforeRun": true,
   "code-runner.saveFileBeforeRun": true,
   "[cpp]": {
-    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    "editor.defaultFormatter": "chiehyu.vscode-astyle"
   },
   "[c]": {
-    "editor.defaultFormatter": "ms-vscode.cpptools"
+    "editor.defaultFormatter": "chiehyu.vscode-astyle"
   },
   "files.exclude": {
     "**/vendor/": false,
@@ -1742,8 +1742,6 @@
   "gitlens.heatmap.locations": ["overview"],
   "gitlens.heatmap.fadeLines": false,
   "markdown-preview-enhanced.enablePreviewZenMode": false,
-  "clang-format.executable.linux": "/home/othman/.local/share/pnpm/clang-format",
-  "clang-format.executable": "/home/othman/.local/share/pnpm/clang-format",
   "autopep8.args": ["--indent-size", "2"],
   "editor.wordWrapColumn": 120,
   "diffEditor.wordWrap": "off",
@@ -1780,5 +1778,15 @@
   "clangd.checkUpdates": true,
   "clangd.onConfigChanged": "restart",
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "editor.pasteAs.preferences": [
+    "text.plain",
+    "text.updateImports",
+    "html",
+    "uri.path.relative",
+    "uri.path.absolute"
+  ],
+  "terminal.integrated.fontLigatures": true,
+  "clang-format.executable": "/usr/bin/clang-format",
+  "astyle.astylerc": "/home/othman/.dotfiles/astyle.astylerc"
 }

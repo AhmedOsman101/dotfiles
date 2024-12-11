@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-fileName=$1
-fileNameWithoutExtension="$(echo "${fileName}" | cut -d'.' -f1)"
-
-g++ "${fileName}" -o "${fileNameWithoutExtension}.out"
-
-./"${fileNameWithoutExtension}.out"
