@@ -1788,5 +1788,6 @@
   ],
   "terminal.integrated.fontLigatures": true,
   "clang-format.executable": "/usr/bin/clang-format",
-  "astyle.astylerc": "/home/othman/.dotfiles/astyle.astylerc"
+  "astyle.astylerc": "/home/othman/.dotfiles/astyle.astylerc",
+  "window.menuBarVisibility": "hidden"
 }
