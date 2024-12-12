@@ -10,9 +10,19 @@
             },
             {
                 "folderUri": "file:///home/othman/work/college"
+            },
+            {
+                "folderUri": "file:///home/othman/.config/openbox"
             }
         ],
-        "emptyWindows": []
+        "emptyWindows": [
+            {
+                "backupFolder": "1734031277383"
+            },
+            {
+                "backupFolder": "1734031377801"
+            }
+        ]
     },
     "profileAssociations": {
         "workspaces": {
@@ -23,9 +33,13 @@
             "file:///home/othman/work/Projects/PHP": "__default__profile__",
             "file:///home/othman/Documents/obsidian": "__default__profile__",
             "file:///home/othman/work/pdf-reader": "__default__profile__",
-            "file:///home/othman/work/college": "__default__profile__"
+            "file:///home/othman/work/college": "__default__profile__",
+            "file:///home/othman/.config/openbox": "__default__profile__"
         },
-        "emptyWindows": {}
+        "emptyWindows": {
+            "1734031277383": "__default__profile__",
+            "1734031377801": "__default__profile__"
+        }
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -77,11 +91,21 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/.config/openbox",
+                                        "path": "/home/othman/.config/openbox",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/openbox"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -189,23 +213,23 @@
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/othman/scripts/yy.zsh",
-                                        "path": "/home/othman/scripts/yy.zsh",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/scripts/yy.zsh"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
                                         "external": "file:///home/othman/.config/kitty/kitty.conf",
                                         "path": "/home/othman/.config/kitty/kitty.conf",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
                                     "label": "~/.config/kitty/kitty.conf"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/scripts/yy.zsh",
+                                        "path": "/home/othman/scripts/yy.zsh",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/scripts/yy.zsh"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -244,11 +268,13 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save"
+                        "label": "&&Save",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As..."
+                        "label": "Save &&As...",
+                        "enabled": false
                     },
                     {
                         "id": "saveAll",
@@ -349,11 +375,13 @@
                     },
                     {
                         "id": "workbench.action.files.revert",
-                        "label": "Re&&vert File"
+                        "label": "Re&&vert File",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeActiveEditor",
-                        "label": "&&Close Editor"
+                        "label": "&&Close Editor",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeFolder",
@@ -548,8 +576,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleMenuBar",
-                                    "label": "Menu &&Bar",
-                                    "checked": true
+                                    "label": "Menu &&Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
@@ -767,13 +794,6 @@
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
-                                    "id": "workbench.action.splitEditorInGroup",
-                                    "label": "Split in &&Group"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
                                     "id": "workbench.action.moveEditorToNewWindow",
                                     "label": "&&Move Editor into New Window"
                                 },
@@ -850,10 +870,6 @@
                         "label": "E&&xtensions"
                     },
                     {
-                        "id": "workbench.view.extension.test",
-                        "label": "T&&esting"
-                    },
-                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -877,7 +893,8 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap"
+                        "label": "&&Word Wrap",
+                        "enabled": false
                     }
                 ]
             },
@@ -885,8 +902,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -895,8 +911,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -965,54 +980,45 @@
                                 },
                                 {
                                     "id": "workbench.action.focusThirdEditorGroup",
-                                    "label": "Group &&3",
-                                    "enabled": false
+                                    "label": "Group &&3"
                                 },
                                 {
                                     "id": "workbench.action.focusFourthEditorGroup",
-                                    "label": "Group &&4",
-                                    "enabled": false
+                                    "label": "Group &&4"
                                 },
                                 {
                                     "id": "workbench.action.focusFifthEditorGroup",
-                                    "label": "Group &&5",
-                                    "enabled": false
+                                    "label": "Group &&5"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusNextGroup",
-                                    "label": "&&Next Group",
-                                    "enabled": false
+                                    "label": "&&Next Group"
                                 },
                                 {
                                     "id": "workbench.action.focusPreviousGroup",
-                                    "label": "&&Previous Group",
-                                    "enabled": false
+                                    "label": "&&Previous Group"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusLeftGroup",
-                                    "label": "Group &&Left",
-                                    "enabled": false
+                                    "label": "Group &&Left"
                                 },
                                 {
                                     "id": "workbench.action.focusRightGroup",
-                                    "label": "Group &&Right",
-                                    "enabled": false
+                                    "label": "Group &&Right"
                                 },
                                 {
                                     "id": "workbench.action.focusAboveGroup",
-                                    "label": "Group &&Above",
-                                    "enabled": false
+                                    "label": "Group &&Above"
                                 },
                                 {
                                     "id": "workbench.action.focusBelowGroup",
-                                    "label": "Group &&Below",
-                                    "enabled": false
+                                    "label": "Group &&Below"
                                 }
                             ]
                         }
@@ -1553,11 +1559,6 @@
                 "isNative": false,
                 "userSettingsLabel": "ctrl+k ctrl+\\"
             },
-            "workbench.action.splitEditorInGroup": {
-                "label": "Ctrl+K Ctrl+Shift+\\",
-                "isNative": false,
-                "userSettingsLabel": "ctrl+k ctrl+shift+\\"
-            },
             "workbench.action.copyEditorToNewWindow": {
                 "label": "Ctrl+K O",
                 "isNative": false,
@@ -1794,23 +1795,47 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 253,
+            "sideBarWidth": 266,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/work/college",
-            "backupPath": "/home/othman/.config/Code/Backups/af26e8df40f4405bd2a335af2b771785",
+            "folder": "file:///home/othman/.config/openbox",
+            "backupPath": "/home/othman/.config/Code/Backups/e0aeb1043ebc9911e884a42ee366cc37",
             "uiState": {
-                "mode": 1,
-                "x": 2,
-                "y": 72,
-                "width": 1436,
-                "height": 826
+                "mode": 0,
+                "x": 0,
+                "y": 70,
+                "width": 1440,
+                "height": 830
             }
         },
-        "openedWindows": []
+        "openedWindows": [
+            {
+                "folder": "file:///home/othman/work/college",
+                "backupPath": "/home/othman/.config/Code/Backups/af26e8df40f4405bd2a335af2b771785",
+                "uiState": {
+                    "mode": 3,
+                    "display": 2,
+                    "width": 1436,
+                    "height": 826,
+                    "x": 2,
+                    "y": 72
+                }
+            },
+            {
+                "folder": "file:///home/othman/.config/openbox",
+                "backupPath": "/home/othman/.config/Code/Backups/e0aeb1043ebc9911e884a42ee366cc37",
+                "uiState": {
+                    "mode": 0,
+                    "x": 0,
+                    "y": 70,
+                    "width": 1440,
+                    "height": 830
+                }
+            }
+        ]
     }
 }
