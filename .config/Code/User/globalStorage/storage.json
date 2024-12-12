@@ -1,7 +1,7 @@
 {
     "telemetry.sqmId": "",
     "telemetry.machineId": "c8ef2265f8676388228e7ac7ce8a2784b875527121944799733b3131c90a5142",
-    "telemetry.devDeviceId": "a17787ca-aafc-4aed-ac9c-05ed271d02a7",
+    "telemetry.devDeviceId": "61e3feb5-efdd-4a4b-86e1-5196f9ebc967",
     "backupWorkspaces": {
         "workspaces": [],
         "folders": [
@@ -72,7 +72,8 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -216,11 +217,13 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save"
+                        "label": "&&Save",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As..."
+                        "label": "Save &&As...",
+                        "enabled": false
                     },
                     {
                         "id": "saveAll",
@@ -328,11 +331,13 @@
                     },
                     {
                         "id": "workbench.action.files.revert",
-                        "label": "Re&&vert File"
+                        "label": "Re&&vert File",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeActiveEditor",
-                        "label": "&&Close Editor"
+                        "label": "&&Close Editor",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeFolder",
@@ -381,11 +386,13 @@
                     },
                     {
                         "id": "actions.find",
-                        "label": "&&Find"
+                        "label": "&&Find",
+                        "enabled": false
                     },
                     {
                         "id": "editor.action.startFindReplaceAction",
-                        "label": "&&Replace"
+                        "label": "&&Replace",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -512,8 +519,7 @@
                             "items": [
                                 {
                                     "id": "workbench.action.toggleFullScreen",
-                                    "label": "&&Full Screen",
-                                    "checked": true
+                                    "label": "&&Full Screen"
                                 },
                                 {
                                     "id": "workbench.action.toggleZenMode",
@@ -533,7 +539,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar"
+                                    "label": "&&Primary Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -856,7 +863,8 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap"
+                        "label": "&&Word Wrap",
+                        "enabled": false
                     }
                 ]
             },
@@ -864,7 +872,8 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back"
+                        "label": "&&Back",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -873,7 +882,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1443,6 +1453,10 @@
                 "label": "Ctrl+/",
                 "userSettingsLabel": "ctrl+/"
             },
+            "editor.action.blockComment": {
+                "label": "Ctrl+Shift+A",
+                "userSettingsLabel": "ctrl+shift+a"
+            },
             "editor.emmet.action.expandAbbreviation": {
                 "label": "Tab",
                 "userSettingsLabel": "tab"
@@ -1769,6 +1783,15 @@
             "statusBarBackground": "#24292e",
             "statusBarBorder": "#1b1f23",
             "statusBarNoFolderBackground": "#24292e"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 0,
+            "activityBarWidth": 48,
+            "sideBarWidth": 256,
+            "statusBarHeight": 22,
+            "windowBorder": false
         }
     },
     "windowsState": {
@@ -1776,13 +1799,11 @@
             "folder": "file:///home/othman/work/C%2B%2B/ICPC",
             "backupPath": "/home/othman/.config/Code/Backups/bbada90029f0a8f28b02baa42c315606",
             "uiState": {
-                "mode": 3,
-                "display": 2785062953156690,
-                "width": 1920,
-                "height": 1008,
-                "x": 0,
+                "mode": 1,
+                "x": 2,
                 "y": 72,
-                "zoomLevel": 1
+                "width": 1436,
+                "height": 826
             }
         },
         "openedWindows": []
