@@ -68,6 +68,15 @@
     "key": "ctrl+shift+k",
     "command": "-editor.action.deleteLines",
     "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+a",
+    "command": "-continue.applyCodeFromChat"
+  },
+  {
+    "key": "alt+a",
+    "command": "-editor.action.accessibilityHelpConfigureAssignedKeybindings",
+    "when": "accessibilityHelpIsShown && accessibleViewHasAssignedKeybindings"
   }
   // {
   //   "key": "ctrl+r",
