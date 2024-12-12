@@ -6,32 +6,10 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/othman/work/pdf-reader"
-            },
-            {
-                "folderUri": "file:///home/othman/work/college"
-            },
-            {
-                "folderUri": "file:///home/othman/.config/openbox"
-            },
-            {
-                "folderUri": "file:///home/othman/Documents/obsidian"
+                "folderUri": "file:///mnt/main/Projects/college"
             }
         ],
-        "emptyWindows": [
-            {
-                "backupFolder": "1734031277383"
-            },
-            {
-                "backupFolder": "1734031377801"
-            },
-            {
-                "backupFolder": "1734035358935"
-            },
-            {
-                "backupFolder": "1734038831342"
-            }
-        ]
+        "emptyWindows": []
     },
     "profileAssociations": {
         "workspaces": {
@@ -43,14 +21,10 @@
             "file:///home/othman/Documents/obsidian": "__default__profile__",
             "file:///home/othman/work/pdf-reader": "__default__profile__",
             "file:///home/othman/work/college": "__default__profile__",
-            "file:///home/othman/.config/openbox": "__default__profile__"
+            "file:///home/othman/.config/openbox": "__default__profile__",
+            "file:///mnt/main/Projects/college": "__default__profile__"
         },
-        "emptyWindows": {
-            "1734031277383": "__default__profile__",
-            "1734031377801": "__default__profile__",
-            "1734035358935": "__default__profile__",
-            "1734038831342": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -102,10 +76,22 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///mnt/main/Projects/college",
+                                        "path": "/mnt/main/Projects/college",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/mnt/main/Projects/college"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -207,17 +193,6 @@
                                     "label": "/mnt/main/Projects/C++/ICPC"
                                 },
                                 {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/scripts",
-                                        "path": "/home/othman/scripts",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/scripts"
-                                },
-                                {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
@@ -298,13 +273,6 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
-                                {
-                                    "id": "github.copyVscodeDevLinkFile",
-                                    "label": "Copy vscode.dev Link"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
@@ -594,7 +562,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar"
+                                    "label": "&&Primary Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -1254,7 +1223,8 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal"
+                        "label": "&&Split Terminal",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1838,8 +1808,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/work/college",
-            "backupPath": "/home/othman/.config/Code/Backups/af26e8df40f4405bd2a335af2b771785",
+            "folder": "file:///mnt/main/Projects/college",
+            "backupPath": "/home/othman/.config/Code/Backups/6b1f6e09ff59e9006e6ed902cb1b499f",
             "uiState": {
                 "mode": 0,
                 "x": 2,
