@@ -1731,7 +1731,6 @@
   "codesnap.showWindowControls": false,
   "codesnap.transparentBackground": true,
   "redhat.telemetry.enabled": false,
-  "codesnap.shutterAction": "copy",
   "files.autoSave": "afterDelay",
   "markdown-preview-enhanced.enableScriptExecution": true,
   "gitlens.hovers.currentLine.over": "line",
@@ -1789,5 +1788,6 @@
   "terminal.integrated.fontLigatures": true,
   "clang-format.executable": "/usr/bin/clang-format",
   "astyle.astylerc": "/home/othman/.dotfiles/astyle.astylerc",
-  "window.menuBarVisibility": "hidden"
+  "window.menuBarVisibility": "toggle",
+  "markdown-preview-enhanced.chromePath": "/usr/bin/google-chrome-stable"
 }
