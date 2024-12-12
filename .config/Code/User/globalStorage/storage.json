@@ -74,8 +74,7 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -219,11 +218,13 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save"
+                        "label": "&&Save",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As..."
+                        "label": "Save &&As...",
+                        "enabled": false
                     },
                     {
                         "id": "saveAll",
@@ -331,11 +332,13 @@
                     },
                     {
                         "id": "workbench.action.files.revert",
-                        "label": "Re&&vert File"
+                        "label": "Re&&vert File",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeActiveEditor",
-                        "label": "&&Close Editor"
+                        "label": "&&Close Editor",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -380,11 +383,13 @@
                     },
                     {
                         "id": "actions.find",
-                        "label": "&&Find"
+                        "label": "&&Find",
+                        "enabled": false
                     },
                     {
                         "id": "editor.action.startFindReplaceAction",
-                        "label": "&&Replace"
+                        "label": "&&Replace",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -511,7 +516,8 @@
                             "items": [
                                 {
                                     "id": "workbench.action.toggleFullScreen",
-                                    "label": "&&Full Screen"
+                                    "label": "&&Full Screen",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleZenMode",
@@ -844,7 +850,8 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap"
+                        "label": "&&Word Wrap",
+                        "enabled": false
                     }
                 ]
             },
@@ -852,7 +859,8 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back"
+                        "label": "&&Back",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1438,10 +1446,6 @@
                 "label": "Ctrl+/",
                 "userSettingsLabel": "ctrl+/"
             },
-            "editor.action.blockComment": {
-                "label": "Ctrl+Shift+A",
-                "userSettingsLabel": "ctrl+shift+a"
-            },
             "editor.emmet.action.expandAbbreviation": {
                 "label": "Tab",
                 "userSettingsLabel": "tab"
@@ -1763,26 +1767,18 @@
             "statusBarBackground": "#24292e",
             "statusBarBorder": "#1b1f23",
             "statusBarNoFolderBackground": "#24292e"
-        },
-        "layoutInfo": {
-            "sideBarSide": "left",
-            "editorPartMinWidth": 220,
-            "titleBarHeight": 0,
-            "activityBarWidth": 48,
-            "sideBarWidth": 256,
-            "statusBarHeight": 22,
-            "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
             "backupPath": "/home/othman/.config/Code/Backups/1734025339721",
             "uiState": {
-                "mode": 1,
-                "x": 2,
-                "y": 72,
+                "mode": 3,
+                "display": 2,
                 "width": 1436,
-                "height": 826
+                "height": 826,
+                "x": 2,
+                "y": 72
             }
         },
         "openedWindows": []
