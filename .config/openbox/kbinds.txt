@@ -1,24 +1,24 @@
 2024-12-12	rc.xml KEYBINDS
 -------------------------------
 
-0	W-space       				  root-menu
-1	A-space       				  client-menu
-2	A-S-space     				  client-list-combined-menu
-3	C-A-space     				  app-menu
-4	W-Tab         				  NextWindow
-5	A-Tab         				  NextWindow
-6	C-A-Right     				  GoToDesktop
-7	C-A-Left      				  GoToDesktop
-8	W-1           				  GoToDesktop
-9	W-2           				  GoToDesktop
+ 0	W-space       				root-menu
+ 1	A-space       				client-menu
+ 2	A-S-space     				client-list-combined-menu
+ 3	C-A-space     				app-menu
+ 4	W-Tab         				NextWindow
+ 5	A-Tab         				NextWindow
+ 6	C-A-Right     				GoToDesktop
+ 7	C-A-Left      				GoToDesktop
+ 8	W-1           				GoToDesktop
+ 9	W-2           				GoToDesktop
 10	W-3           				GoToDesktop
 11	W-4           				GoToDesktop
 12	W-5           				GoToDesktop
 13	W-equal       				AddDesktop
 14	W-minus       				RemoveDesktop
 15	W-d           				ToggleShowDesktop
-16	C-S-BackSpace  			  Restart
-17	C-A-Delete     			  Exit
+16	C-S-BackSpace  			Restart
+17	C-A-Delete     			Exit
 18	W-S-Right     				SendToDesktop
 19	W-S-Left      				SendToDesktop
 20	S-W-1         				SendToDesktop
@@ -75,18 +75,18 @@
 71	S-Print       				ob-screenshot --in10
 72	C-Print       				ob-screenshot --win
 73	W-Print       				ob-screenshot --area
-74	XF86MonBrightnessUp	  ob-brightness --inc
+74	XF86MonBrightnessUp	ob-brightness --inc
 75	XF86MonBrightnessDown	ob-brightness --dec
 76	XF86AudioRaiseVolume	ob-volume --inc
 77	XF86AudioLowerVolume	ob-volume --dec
-78	XF86AudioMute  			  ob-volume --toggle
-79	XF86AudioMicMute	    ob-volume --toggle-mic
-80	XF86AudioStop  			  mpc stop
-81	XF86AudioPlay  			  mpc toggle
-82	XF86AudioPrev  			  mpc prev
-83	XF86AudioNext  			  mpc next
+78	XF86AudioMute  			ob-volume --toggle
+79	XF86AudioMicMute	ob-volume --toggle-mic
+80	XF86AudioStop  			mpc stop
+81	XF86AudioPlay  			mpc toggle
+82	XF86AudioPrev  			mpc prev
+83	XF86AudioNext  			mpc next
 84	W-Return      				kitty
-85	W-S-Return     			  alacritty
+85	W-S-Return     			alacritty
 86	W-f           				thunar
 87	W-w           				zen-browser
 88	W-e           				geany
@@ -99,7 +99,7 @@
 95	W-r           				rofi-runner
 96	C-A-t         				kitty
 97	C-A-v         				kitty -e vim
-98	C-A-r         				kitty -e ranger
+98	C-A-y         				kitty -e yazi
 99	C-A-h         				kitty -e htop
 100	C-A-l         				betterlockscreen --lock
 101	W-t           				ob-furminal
