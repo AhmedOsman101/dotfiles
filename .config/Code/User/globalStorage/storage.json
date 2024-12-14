@@ -1,15 +1,15 @@
 {
     "telemetry.sqmId": "",
     "telemetry.machineId": "c8ef2265f8676388228e7ac7ce8a2784b875527121944799733b3131c90a5142",
-    "telemetry.devDeviceId": "61e3feb5-efdd-4a4b-86e1-5196f9ebc967",
+    "telemetry.devDeviceId": "a17787ca-aafc-4aed-ac9c-05ed271d02a7",
     "backupWorkspaces": {
         "workspaces": [],
-        "folders": [
+        "folders": [],
+        "emptyWindows": [
             {
-                "folderUri": "file:///mnt/main/Projects/college"
+                "backupFolder": "1734215962325"
             }
-        ],
-        "emptyWindows": []
+        ]
     },
     "profileAssociations": {
         "workspaces": {
@@ -24,7 +24,9 @@
             "file:///home/othman/.config/openbox": "__default__profile__",
             "file:///mnt/main/Projects/college": "__default__profile__"
         },
-        "emptyWindows": {}
+        "emptyWindows": {
+            "1734215962325": "__default__profile__"
+        }
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -199,6 +201,17 @@
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///etc/polybar/config.ini",
+                                        "path": "/etc/polybar/config.ini",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/etc/polybar/config.ini"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/othman/.config/kitty/kitty.conf",
                                         "path": "/home/othman/.config/kitty/kitty.conf",
                                         "scheme": "file"
@@ -364,10 +377,6 @@
                     {
                         "id": "workbench.action.closeActiveEditor",
                         "label": "&&Close Editor"
-                    },
-                    {
-                        "id": "workbench.action.closeFolder",
-                        "label": "Close &&Folder"
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -562,8 +571,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar",
-                                    "checked": true
+                                    "label": "&&Primary Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -857,10 +865,6 @@
                     {
                         "id": "workbench.view.extensions",
                         "label": "E&&xtensions"
-                    },
-                    {
-                        "id": "workbench.view.extension.test",
-                        "label": "T&&esting"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1420,11 +1424,6 @@
                 "label": "Ctrl+W",
                 "userSettingsLabel": "ctrl+w"
             },
-            "workbench.action.closeFolder": {
-                "label": "Ctrl+K F",
-                "isNative": false,
-                "userSettingsLabel": "ctrl+k f"
-            },
             "workbench.action.closeWindow": {
                 "label": "Alt+F4",
                 "userSettingsLabel": "alt+f4"
@@ -1801,15 +1800,14 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 268,
+            "sideBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///mnt/main/Projects/college",
-            "backupPath": "/home/othman/.config/Code/Backups/6b1f6e09ff59e9006e6ed902cb1b499f",
+            "backupPath": "/home/othman/.config/Code/Backups/1734215962325",
             "uiState": {
                 "mode": 0,
                 "x": 2,
