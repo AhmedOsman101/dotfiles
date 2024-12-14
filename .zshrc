@@ -86,6 +86,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # ---- Aliases ----- #
 alias zshrc="micro ~/.zshrc"
 alias bashrc="micro ~/.bashrc"
+alias microsettings="micro ~/.config/micro/settings.json"
 alias art="php artisan"
 alias cls="clear"
 alias reload="source ~/.zshrc && clear; neofetch"
