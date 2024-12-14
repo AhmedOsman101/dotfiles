@@ -30,39 +30,36 @@ zinit cdreplay -q
 zinit ice as"command" from"gh-r" \
           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
           atpull"%atclone" src"init.zsh"
-zinit light "starship/starship"
+zinit light 'starship/starship'
 
 # ---- Add in zsh plugins ----- #
-zinit load zsh-users/zsh-syntax-highlighting
-zinit load zsh-users/zsh-completions
-zinit load zsh-users/zsh-autosuggestions
-zinit load zdharma-continuum/fast-syntax-highlighting
+# zinit load zsh-users/zsh-syntax-highlighting
+# zinit load zsh-users/zsh-completions
+# zinit load zsh-users/zsh-autosuggestions
+# zinit load zdharma-continuum/fast-syntax-highlighting
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
+# zinit light-mode for \
+#     zdharma-continuum/zinit-annex-as-monitor \
+#     zdharma-continuum/zinit-annex-bin-gem-node \
+#     zdharma-continuum/zinit-annex-patch-dl \
+#     zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
 
 # ---- Add in snippets ----- #
-zinit snippet OMZP::git
-zinit snippet OMZP::aliases
-zinit snippet OMZP::composer
-zinit snippet OMZP::laravel
-zinit snippet OMZP::sublime
-zinit snippet OMZP::colorize
-zinit snippet OMZP::asdf
+# zinit snippet OMZP::git
+# zinit snippet OMZP::aliases
+# zinit snippet OMZP::composer
+# zinit snippet OMZP::laravel
+# zinit snippet OMZP::sublime
+# zinit snippet OMZP::colorize
+# zinit snippet OMZP::asdf
 
 # ---- zsh options ----- #
 setopt extendedglob
 setopt ksh_arrays
-
-# ---- Start Copyq ----- #
-# copyq &
 
 # ---- History ----- #
 export HISTFILE=~/.zsh_history

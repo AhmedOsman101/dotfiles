@@ -31,37 +31,37 @@
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>JetBrains Mono</name>
-      <size>9</size>
+      <size>11</size>
       <weight>Bold</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
       <name>JetBrains Mono</name>
-      <size>9</size>
+      <size>11</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
       <name>JetBrains Mono</name>
-      <size>9</size>
+      <size>11</size>
       <weight>Bold</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
       <name>JetBrains Mono</name>
-      <size>9</size>
+      <size>11</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
       <name>JetBrains Mono</name>
-      <size>9</size>
+      <size>11</size>
       <weight>Bold</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
       <name>JetBrains Mono</name>
-      <size>9</size>
+      <size>11</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
@@ -70,7 +70,7 @@
   <desktops>
     <number>2</number>
     <firstdesk>0</firstdesk>
-    <popupTime>0</popupTime>
+    <popupTime>600</popupTime>
     <names>
       <name>1</name>
       <name>2</name>
@@ -778,7 +778,7 @@
   </keyboard>
   <!-- ################################ Mouse Settings ################################ -->
   <mouse>
-    <dragThreshold>4</dragThreshold>
+    <dragThreshold>5</dragThreshold>
     <doubleClickTime>200</doubleClickTime>
     <screenEdgeWarpTime>400</screenEdgeWarpTime>
     <screenEdgeWarpMouse>false</screenEdgeWarpMouse>
