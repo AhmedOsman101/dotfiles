@@ -7,7 +7,7 @@
         "folders": [],
         "emptyWindows": [
             {
-                "backupFolder": "1734220925300"
+                "backupFolder": "1734221672640"
             }
         ]
     },
@@ -25,7 +25,8 @@
             "file:///mnt/main/Projects/college": "__default__profile__"
         },
         "emptyWindows": {
-            "1734220925300": "__default__profile__"
+            "1734220925300": "__default__profile__",
+            "1734221672640": "__default__profile__"
         }
     },
     "lastKnownMenubarData": {
@@ -201,6 +202,17 @@
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///home/othman/.config/kitty/kitty.conf",
+                                        "path": "/home/othman/.config/kitty/kitty.conf",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/kitty/kitty.conf"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/othman/.dotfiles/pc_packages.txt",
                                         "path": "/home/othman/.dotfiles/pc_packages.txt",
                                         "scheme": "file"
@@ -218,17 +230,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/etc/polybar/config.ini"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/.config/kitty/kitty.conf",
-                                        "path": "/home/othman/.config/kitty/kitty.conf",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/.config/kitty/kitty.conf"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -297,13 +298,6 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
-                                {
-                                    "id": "github.copyVscodeDevLinkFile",
-                                    "label": "Copy vscode.dev Link"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
@@ -925,7 +919,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1829,13 +1824,13 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/othman/.config/Code/Backups/1734220925300",
+            "backupPath": "/home/othman/.config/Code/Backups/1734221672640",
             "uiState": {
                 "mode": 0,
-                "x": 1,
-                "y": 71,
-                "width": 1440,
-                "height": 830
+                "x": 0,
+                "y": 70,
+                "width": 1444,
+                "height": 835
             }
         },
         "openedWindows": []
