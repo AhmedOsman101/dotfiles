@@ -1,0 +1,10 @@
+[Configuration]
+LastActiveMode=THUNAR_RENAMER_MODE_NAME
+LastActiveRenamer=ThunarSbrReplaceRenamer
+
+[ThunarSbrReplaceRenamer]
+CaseSensitive=FALSE
+Replacement=taskSix
+Pattern=Screenshot_2024_12_15-
+Regexp=TRUE
+

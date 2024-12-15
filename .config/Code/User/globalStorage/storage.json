@@ -1,15 +1,15 @@
 {
     "telemetry.sqmId": "",
     "telemetry.machineId": "c8ef2265f8676388228e7ac7ce8a2784b875527121944799733b3131c90a5142",
-    "telemetry.devDeviceId": "61e3feb5-efdd-4a4b-86e1-5196f9ebc967",
+    "telemetry.devDeviceId": "a17787ca-aafc-4aed-ac9c-05ed271d02a7",
     "backupWorkspaces": {
         "workspaces": [],
-        "folders": [],
-        "emptyWindows": [
+        "folders": [
             {
-                "backupFolder": "1734221672640"
+                "folderUri": "file:///home/othman/Documents/obsidian"
             }
-        ]
+        ],
+        "emptyWindows": []
     },
     "profileAssociations": {
         "workspaces": {
@@ -24,10 +24,7 @@
             "file:///home/othman/.config/openbox": "__default__profile__",
             "file:///mnt/main/Projects/college": "__default__profile__"
         },
-        "emptyWindows": {
-            "1734220925300": "__default__profile__",
-            "1734221672640": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -89,6 +86,17 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///home/othman/Documents/obsidian",
+                                        "path": "/home/othman/Documents/obsidian",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/obsidian"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/othman/.dotfiles",
                                         "path": "/home/othman/.dotfiles",
                                         "scheme": "file"
@@ -106,17 +114,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/mnt/main/Projects/college"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/Documents/obsidian",
-                                        "path": "/home/othman/Documents/obsidian",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/obsidian"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -299,6 +296,13 @@
                         "submenu": {
                             "items": [
                                 {
+                                    "id": "github.copyVscodeDevLinkFile",
+                                    "label": "Copy vscode.dev Link"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
                                 }
@@ -389,6 +393,10 @@
                     {
                         "id": "workbench.action.closeActiveEditor",
                         "label": "&&Close Editor"
+                    },
+                    {
+                        "id": "workbench.action.closeFolder",
+                        "label": "Close &&Folder"
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -583,7 +591,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar"
+                                    "label": "&&Primary Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -919,8 +928,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1437,6 +1445,11 @@
                 "label": "Ctrl+W",
                 "userSettingsLabel": "ctrl+w"
             },
+            "workbench.action.closeFolder": {
+                "label": "Ctrl+K F",
+                "isNative": false,
+                "userSettingsLabel": "ctrl+k f"
+            },
             "workbench.action.closeWindow": {
                 "label": "Alt+F4",
                 "userSettingsLabel": "alt+f4"
@@ -1817,14 +1830,15 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 0,
+            "sideBarWidth": 268,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/othman/.config/Code/Backups/1734221672640",
+            "folder": "file:///home/othman/Documents/obsidian",
+            "backupPath": "/home/othman/.config/Code/Backups/3ac1572685e8ac4441905c07f35794f3",
             "uiState": {
                 "mode": 0,
                 "x": 0,
