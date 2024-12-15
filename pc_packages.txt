@@ -1,502 +1,519 @@
-acpi 1.7-4
-adw-gtk-theme 5.5-1
-alacritty 0.14.0-1
-apparmor 4.0.3-1
-archcraft-about 2.0-0
-archcraft-arandr 0.1.11-3
-archcraft-artworks 1.0-5
-archcraft-backgrounds 1.0-7
-archcraft-backgrounds-branding 1.0-6
-archcraft-bspwm 6.0-7
-archcraft-config-geany 1.0-2
-archcraft-config-music 1.0-2
-archcraft-config-qt 1.0-2
-archcraft-cursor-bibata 1.0-0
-archcraft-cursor-breezex 1.0-0
-archcraft-cursor-colloid 1.0-0
-archcraft-cursor-fluent 1.0-6
-archcraft-cursor-future 1.0-6
-archcraft-cursor-layan 1.0-6
-archcraft-cursor-lyra 1.0-6
-archcraft-cursor-material 1.0-6
-archcraft-cursor-nordic 1.0-0
-archcraft-cursor-pear 1.0-6
-archcraft-cursor-qogirr 1.0-6
-archcraft-cursor-simple 1.0-0
-archcraft-cursor-sweet 1.0-6
-archcraft-cursor-vimix 1.0-6
-archcraft-cursor-windows 1.0-0
-archcraft-dunst-icons 1.0-3
-archcraft-fonts 2.0-0
-archcraft-funscripts 1.0-1
-archcraft-grub-theme 1.0-7
-archcraft-gtk-theme-adapta 1.0-7
-archcraft-gtk-theme-arc 1.0-7
-archcraft-gtk-theme-blade 1.0-7
-archcraft-gtk-theme-catppuccin 1.0-7
-archcraft-gtk-theme-cyberpunk 1.0-7
-archcraft-gtk-theme-dracula 1.0-7
-archcraft-gtk-theme-easy 1.0-7
-archcraft-gtk-theme-everforest 1.0-7
-archcraft-gtk-theme-fluent 1.0-0
-archcraft-gtk-theme-groot 1.0-7
-archcraft-gtk-theme-gruvbox 1.0-7
-archcraft-gtk-theme-hack 1.0-7
-archcraft-gtk-theme-juno 1.0-7
-archcraft-gtk-theme-kanagawa 1.0-0
-archcraft-gtk-theme-kripton 1.0-7
-archcraft-gtk-theme-manhattan 1.0-7
-archcraft-gtk-theme-material 1.0-0
-archcraft-gtk-theme-nightfox 1.0-0
-archcraft-gtk-theme-nordic 1.0-7
-archcraft-gtk-theme-orchis 1.0-0
-archcraft-gtk-theme-qogir 1.0-0
-archcraft-gtk-theme-rick 1.0-7
-archcraft-gtk-theme-slime 1.0-7
-archcraft-gtk-theme-spark 1.0-7
-archcraft-gtk-theme-sweet 1.0-7
-archcraft-gtk-theme-tokyonight 1.0-0
-archcraft-gtk-theme-valyrian 1.0-0
-archcraft-gtk-theme-wave 1.0-7
-archcraft-gtk-theme-white 1.0-7
-archcraft-gtk-theme-windows 1.0-7
-archcraft-help 3.0-0
-archcraft-hooks 2.0-3
-archcraft-hooks-extra 2.0-7
-archcraft-hooks-grub 1.0-0
-archcraft-hooks-zsh 1.0-2
-archcraft-icons-arc 1.0-8
-archcraft-icons-ars 1.0-0
-archcraft-icons-azure 1.0-0
-archcraft-icons-beautyline 1.0-1
-archcraft-icons-breeze 1.0-8
-archcraft-icons-candy 1.0-0
-archcraft-icons-colloid 1.0-0
-archcraft-icons-fluent 1.0-0
-archcraft-icons-glassy 1.0-0
-archcraft-icons-hack 1.0-8
-archcraft-icons-luna 1.0-8
-archcraft-icons-luv 1.0-8
-archcraft-icons-mojavecircle 1.0-0
-archcraft-icons-nordic 1.0-8
-archcraft-icons-numix 1.0-8
-archcraft-icons-papirus 1.0-9
-archcraft-icons-qogir 1.0-8
-archcraft-icons-sweetfolders 1.0-0
-archcraft-icons-tela 1.0-0
-archcraft-icons-vimix 1.0-0
-archcraft-icons-white 1.0-8
-archcraft-icons-win11 1.0-8
-archcraft-icons-zafiro 1.0-8
-archcraft-icons-zafironord 1.0-0
-archcraft-mirrorlist 2.0-2
-archcraft-music 1.0-5
-archcraft-neofetch 2.0-0
-archcraft-omz 2.0-6
-archcraft-openbox 7.0-2
-archcraft-openbox-themes 1.0-0
-archcraft-plymouth-theme 1.0-5
-archcraft-randr 1.0-5
-archcraft-ranger 1.0-4
-archcraft-scripts 1.0-6
-archcraft-sddm-theme 1.0-6
-archcraft-skeleton 1.0-0
-archcraft-vim 2.0-2
-atril 1.28.0-3
-atuin 18.3.0-1
-autoconf 2.72-1
-automake 1.17-1
-b43-fwcutter 019-5
-base 3-2
-base-devel 1-2
-bat 0.24.0-2
-bcachefs-tools 3:1.13.0-1
-betterlockscreen 4.4.0-1
-bibata-cursor-theme-bin 2.0.7-1
-bind 9.20.3-2
-bison 3.8.2-8
-blueman 2.4.3-1
-bluez 5.79-1
-bluez-utils 5.79-1
-bolt 0.9.8-1
-brltty 6.7-1
-broadcom-wl 6.30.223.271-589
-btrfs-progs 6.12-1
-bzip2 1.0.8-6
-catppuccin-gtk-theme-mocha 0.5.0-1
-clang 18.1.8-4
-clonezilla 5.6.13-1
-cloud-init 24.3.1-2
-cmake 3.31.2-1
-copyq 9.1.0-1
-cppcheck 2.16.0-1
-cryptsetup 2.7.5-1
-cups 2:2.4.11-1
-cups-filters 2.0.1-1
-cups-pdf 3.0.1-8
-dbus-broker-units 36-4
-dhclient 4.4.3.P1-3
-dhcpcd 10.1.0-1
-dialog 1:1.3_20240619-2
-diffutils 3.10-1
-discord 0.0.76-1
-discover 6.2.4-1
-distrobox 1.8.0-1
-dmenu 5.3-3
-dmidecode 3.6-1
-dmraid 1.0.0.rc16.3-15
-dnsmasq 2.90-1
-docker 1:27.3.1-1
-docker-desktop 4.36.0-1
-dosfstools 4.2-5
-downgrade 11.4.2-1
-dunst 1.11.0-1
-e2fsprogs 1.47.1-4
-edk2-shell 202411-1
-efibootmgr 18-3
-entr 5.6-1
-espeak-ng 1.51.1-4
-ethtool 1:6.9-1
-exfatprogs 1.2.6-1
-eza 0.20.11-1
-f2fs-tools 1.16.0-3
-fakeroot 1.36-1
-fastfetch 2.31.0-1
-fatresize 1.1.0-2
-fd 10.2.0-1
-ffmpeg 2:7.1-3
-ffmpegthumbnailer 2.2.3-3
-firefox 133.0-1
-flatpak 1:1.15.12-1
-flatpak-kcm 6.2.4-1
-flex 2.6.4-5
-foomatic-db 3:20240209-1
-foomatic-db-engine 5:20200131-1
-foot-terminfo 1.19.0-2
-fsarchiver 0.8.7-2
-galculator 2.1.4-10
-gcc 14.2.1+r134+gab884fffe3fc-1
-geany 2.0-1
-geany-plugins 2.0-3
-ghostscript 10.04.0-1
-git-delta 0.18.2-1
-github-cli 2.63.2-1
-global 6.6.12-1
-gnome-keyring 1:46.2-1
-gnome-software 47.2-1
-gpart 0.3-5
-gparted 1.6.0-2
-gpm 1.20.7.r38.ge82d1a6-6
-gptfdisk 1.0.10-1
-grub 2:2.12-3
-gsfonts 20200910-4
-gst-libav 1.24.10-1
-gst-plugin-pipewire 1:1.2.7-1
-gst-plugins-bad 1.24.10-1
-gst-plugins-good 1.24.10-1
-gst-plugins-ugly 1.24.10-1
-gstreamer 1.24.10-1
-gtk-engine-murrine 0.98.2-4
-gtk3-nocsd-git r82.512c2bd-1
-gufw 24.04-2
-gutenprint 5.3.4-3
-gvfs 1.56.1-1
-gvfs-afc 1.56.1-1
-gvfs-google 1.56.1-1
-gvfs-gphoto2 1.56.1-1
-gvfs-mtp 1.56.1-1
-gvfs-smb 1.56.1-1
-gzip 1.13-4
-hdparm 9.65-2
-highlight 4.14-1
-htop 3.3.0-3
-hyperv 6.12-1
-i3lock-color 2.13.c.5-3
-inetutils 2.5-1
-inotify-tools 4.23.9.0-2
-intel-ucode 20241112-1
-inter-font 4.1-1
-iw 6.9-1
-iwd 3.2-1
-jasper 4.2.4-2
-jfsutils 1.1.15-9
-jq 1.7.1-2
-kitty 0.37.0-1
-kitty-terminfo 0.37.0-1
-ksuperkey 0.4-2
-kvantum 1.1.3-1
-kvantum-qt5 1.1.3-1
-ldns 1.8.4-1
-less 1:668-1
-libavif 1.1.1-2
-libc++ 18.1.8-4
-libde265 1.0.15-3
-libdv 1.0.0-11
-libfido2 1.15.0-1
-libheif 1.19.5-1
-libmpeg2 0.5.1-10
-libreoffice-fresh 24.8.3-1
-libtheora 1.1.1-6
-libusb-compat 0.1.8-2
-libvirt 1:10.10.0-1
-libvpx 1.14.1-1
-libwebp 1.4.0-3
-light 1.2.2-5
-linux 6.12.1.arch1-1
-linux-atm 2.5.2-9
-linux-firmware 20241111.b5885ec5-1
-linux-firmware-marvell 20241111.b5885ec5-1
-linux-headers 6.12.1.arch1-1
-linux-lts 6.6.63-1
-linux-lts-headers 6.6.63-1
-lrzip 0.651-3
-lsb-release 2.0.r53.a86f885-2
-lsscsi 0.32-2
-luarocks 3.11.1-2
-lvm2 2.03.28-1
-lz4 1:1.10.0-2
-lzip 1.24.1-1
-lzop 1.04-4
-maim 5.8.0-2
-make 4.4.1-2
-man-db 2.13.0-1
-man-pages 6.9.1-1
-mdadm 4.3-2
-meld 3.22.2-3
-memtest86+ 7.00-1
-memtest86+-efi 7.00-1
-mesa 1:24.3.1-1
-mesa-utils 9.0.0-5
-micro 2.0.14-1
-mkinitcpio 39.2-2
-mkinitcpio-firmware 1.4.0-1
-mkinitcpio-nfs-utils 0.3-8
-modemmanager 1.22.0-1
-mpc 0.35-1
-mpd 0.23.16-1
-mplayer 38542-4
-mtools 1:4.0.46-1
-nano 8.2-1
-nbd 3.26.1-1
-ncdu 2.7-1
-ncmpcpp 0.10.1-1
-ndisc6 1.0.8-1
-neovim 0.10.2-2
-nerd-fonts-inter 4.1_3.3.0-1
-nethogs 0.8.8-1
-network-manager-applet 1.36.0-1
-network-manager-sstp 1.3.2-2
-networkmanager 1.50.0-1
-networkmanager-dmenu-git r205.33deba5-1
-networkmanager-openconnect 1.2.10-2
-networkmanager-openvpn 1.12.0-1
-networkmanager-pptp 1.2.12-4
-networkmanager-strongswan 1.6.0-2
-networkmanager-vpnc 1.4.0-1
-nfs-utils 2.8.1-1
-nilfs-utils 2.2.11-1
-nitrogen 1.6.1-6
-nm-connection-editor 1.36.0-1
-nmap 7.95-1
-nodejs 23.1.0-1
-noto-fonts 1:2024.12.01-1
-noto-fonts-cjk 20230817-2
-noto-fonts-emoji 1:2.047-1
-ntfs-3g 2022.10.3-1
-nvidia-470xx-dkms 470.256.02-7
-nvidia-settings 565.57.01-1
-nvme-cli 2.11-1
-obmenu-generator 0.93-1
-obsidian 1.7.7-1
-open-iscsi 2.1.10-1
-openconnect 1:9.12-2
-openpgp-card-tools 0.11.7-1
-openssh 9.9p1-2
-openvpn 2.6.12-1
-os-prober 1.81-2
-p7zip 1:17.05-2
-pandoc-cli 3.1.11.1-9
-partclone 0.3.32-1
-parted 3.6-2
-partimage 0.6.9-15
-paru 2.0.4-1
-paru-debug 2.0.4-1
-pastel 0.10.0-1
-patch 2.7.6-10
-pavucontrol 1:6.1-1
-pcsclite 2.3.0-1
-perl-linux-desktopfiles 0.26-1
-php 8.3.14-1
-picom 12.5-1
-pipewire 1:1.2.7-1
-pipewire-alsa 1:1.2.7-1
-pipewire-jack 1:1.2.7-1
-pipewire-pulse 1:1.2.7-1
-pkgconf 2.3.0-1
-plank 0.11.89-5
-playerctl 2.4.1-4
-plymouth 22.02.122-6
-polkit 125-1
-polybar 3.7.2-2
-powertop 2.15-2
-ppp 2.5.1-1
-pptpclient 1.10.0-3
-pulsemixer 1.5.1-6
-pv 1.9.7-1
-python-dbus 1.3.2-4
-python-pip 24.3.1-1
-python-pipx 1.7.1-1
-python-pywal 3.3.0-9
-qt5ct 1.8-2
-qt5gtk2 1.0-3
-qt6ct 0.9-12
-qt6gtk2 0.3-1
-ranger 1.9.4-1
-refind 0.14.2-1
-reflector 2023-2
-ripgrep 14.1.1-1
-rmtrash 1.15-2
-rofi-lbonn-wayland-git 1.7.5.wayland3.r27.g142e7807-1
-rp-pppoe 4.0-2
-rsync 3.3.0-2
-rust 1:1.83.0-1
-rxvt-unicode-terminfo 9.31-6
-samba 2:4.21.2-1
-schroedinger 1.0.11-7
-screen 5.0.0-1
-sddm-git 0.21.0.29.g4a9aa2e-1
-sdparm 1.12-1
-sequoia-sq 0.39.0-1
-sg3_utils 1.48-1
-shellcheck-bin 0.10.0-1
-signal-desktop 7.35.0-1
-simplescreenrecorder 0.4.4-3
-slop 7.6-5
-smartmontools 7.4-2
-sof-firmware 2024.09.2-1
-speedtest-cli 2.1.3-8
-spotify 1:1.2.50.335-1
-squashfs-tools 4.6.1-2
-stow 2.4.1-1
-sudo 1.9.16.p2-1
-supabase 2.0.0-1
-systemd-resolvconf 256.9-1
-tcpdump 4.99.5-1
-terminus-font 4.49.1-7
-thefuck 3.32-10
-thunar 4.18.11-3
-thunar-archive-plugin 0.5.2-3
-thunar-media-tags-plugin 0.4.0-4
-thunar-volman 4.18.0-4
-timeshift 24.06.5-1
-tlrc 1.9.3-1
-tmux 3.5_a-1
-tpm2-tools 5.7-1
-tpm2-tss 4.1.3-1
-trash-cli 0.24.5.26-1
-ttf-amiri 1.001-1
-tumbler 4.18.2-3
-udftools 2.3-2
-udisks2 2.10.1-5
-ueberzug 18.3.1-3
-ufw 0.36.2-4
-unarchiver 1.10.8-3
-uno-calculator-bin 1.2.9_uno.339-2
-unrar 1:7.1.2-1
-unzip 6.0-21
-usb_modeswitch 2.6.1-4
-usbmuxd 1.1.1-4
-usbutils 018-1
-viewnior 1.8-5
-vim 9.1.0866-1
-virt-manager 4.1.0-3
-visual-studio-code-bin 1.95.3-1
-vpnc 1:0.5.3.r539.r239-1
-wget 1.25.0-1
-wireless-regdb 2024.10.07-1
-wireless_tools 30.pre9-4
-wireplumber 0.5.7-1
-wmctrl 1.07-6
-wmname 0.1-6
-wpa_supplicant 2:2.11-2
-wvdial 1.61-9
-x264 3:0.164.r3108.31e19f9-2
-x265 4.0-1
-xarchiver 0.5.4.23-1
-xclip 0.13-6
-xcolor 0.5.1-4
-xdg-desktop-portal-gtk 1.15.1-2
-xdg-desktop-portal-hyprland 1.3.8-1
-xdg-desktop-portal-kde 6.2.4-1
-xdg-user-dirs 0.18-2
-xdg-user-dirs-gtk 0.11-3
-xdotool 3.20211022.1-2
-xf86-input-libinput 1.5.0-1
-xf86-video-fbdev 0.5.1-1
-xf86-video-nouveau 1.0.18-1
-xf86-video-vesa 2.6.0-2
-xfce-polkit 0.3-1
-xfce4-power-manager 4.18.4-3
-xfce4-settings 4.18.6-4
-xfce4-terminal 1.1.3-3
-xfsprogs 6.11.0-1
-xl2tpd 1.3.18-2
-xmlstarlet 1.6.1-4
-xorg-bdftopcf 1.1.2-1
-xorg-docs 1.7.3-2
-xorg-font-util 1.4.1-2
-xorg-fonts-100dpi 1.0.4-3
-xorg-fonts-75dpi 1.0.4-2
-xorg-fonts-encodings 1.1.0-1
-xorg-iceauth 1.0.10-1
-xorg-mkfontscale 1.2.3-1
-xorg-server 21.1.14-1
-xorg-server-common 21.1.14-1
-xorg-server-devel 21.1.14-1
-xorg-server-xephyr 21.1.14-1
-xorg-server-xnest 21.1.14-1
-xorg-server-xvfb 21.1.14-1
-xorg-sessreg 1.1.3-2
-xorg-setxkbmap 1.3.4-2
-xorg-smproxy 1.0.7-2
-xorg-x11perf 1.7.0-1
-xorg-xauth 1.1.3-1
-xorg-xbacklight 1.2.4-1
-xorg-xcmsdb 1.0.7-1
-xorg-xcursorgen 1.0.8-2
-xorg-xdpyinfo 1.3.4-2
-xorg-xdriinfo 1.0.7-2
-xorg-xev 1.2.6-1
-xorg-xgamma 1.0.7-2
-xorg-xhost 1.0.9-2
-xorg-xinput 1.6.4-2
-xorg-xkbcomp 1.4.7-1
-xorg-xkbevd 1.1.6-1
-xorg-xkbutils 1.0.6-1
-xorg-xkill 1.0.6-2
-xorg-xlsatoms 1.1.4-2
-xorg-xlsclients 1.1.5-2
-xorg-xmodmap 1.0.11-2
-xorg-xpr 1.2.0-1
-xorg-xprop 1.2.8-1
-xorg-xrandr 1.5.3-1
-xorg-xrdb 1.2.2-2
-xorg-xrefresh 1.1.0-1
-xorg-xset 1.2.5-2
-xorg-xsetroot 1.1.3-2
-xorg-xvinfo 1.1.5-2
-xorg-xwayland 24.1.4-1
-xorg-xwd 1.0.9-2
-xorg-xwininfo 1.1.6-2
-xorg-xwud 1.0.7-1
-xsettingsd 1.0.2-2
-xvidcore 1.3.7-3
-xz 5.6.3-1
-yad 14.1-2
-yay 12.4.2-1
-yazi 0.3.3-1
-zen-browser-bin 1.0.1.a.22-1
-zip 3.0-11
-zoxide 0.9.6-1
-zsh 5.9-5
-zstd 1.5.6-1
+acpi
+adw-gtk-theme
+alacritty
+apparmor
+archcraft-about
+archcraft-arandr
+archcraft-artworks
+archcraft-backgrounds
+archcraft-backgrounds-branding
+archcraft-bspwm
+archcraft-config-geany
+archcraft-config-music
+archcraft-config-qt
+archcraft-cursor-bibata
+archcraft-cursor-breezex
+archcraft-cursor-colloid
+archcraft-cursor-fluent
+archcraft-cursor-future
+archcraft-cursor-layan
+archcraft-cursor-lyra
+archcraft-cursor-material
+archcraft-cursor-nordic
+archcraft-cursor-pear
+archcraft-cursor-qogirr
+archcraft-cursor-simple
+archcraft-cursor-sweet
+archcraft-cursor-vimix
+archcraft-cursor-windows
+archcraft-dunst-icons
+archcraft-fonts
+archcraft-funscripts
+archcraft-grub-theme
+archcraft-gtk-theme-adapta
+archcraft-gtk-theme-arc
+archcraft-gtk-theme-blade
+archcraft-gtk-theme-catppuccin
+archcraft-gtk-theme-cyberpunk
+archcraft-gtk-theme-dracula
+archcraft-gtk-theme-easy
+archcraft-gtk-theme-everforest
+archcraft-gtk-theme-fluent
+archcraft-gtk-theme-groot
+archcraft-gtk-theme-gruvbox
+archcraft-gtk-theme-hack
+archcraft-gtk-theme-juno
+archcraft-gtk-theme-kanagawa
+archcraft-gtk-theme-kripton
+archcraft-gtk-theme-manhattan
+archcraft-gtk-theme-material
+archcraft-gtk-theme-nightfox
+archcraft-gtk-theme-nordic
+archcraft-gtk-theme-orchis
+archcraft-gtk-theme-qogir
+archcraft-gtk-theme-rick
+archcraft-gtk-theme-slime
+archcraft-gtk-theme-spark
+archcraft-gtk-theme-sweet
+archcraft-gtk-theme-tokyonight
+archcraft-gtk-theme-valyrian
+archcraft-gtk-theme-wave
+archcraft-gtk-theme-white
+archcraft-gtk-theme-windows
+archcraft-help
+archcraft-hooks
+archcraft-hooks-extra
+archcraft-hooks-grub
+archcraft-hooks-zsh
+archcraft-icons-arc
+archcraft-icons-ars
+archcraft-icons-azure
+archcraft-icons-beautyline
+archcraft-icons-breeze
+archcraft-icons-candy
+archcraft-icons-colloid
+archcraft-icons-fluent
+archcraft-icons-glassy
+archcraft-icons-hack
+archcraft-icons-luna
+archcraft-icons-luv
+archcraft-icons-mojavecircle
+archcraft-icons-nordic
+archcraft-icons-numix
+archcraft-icons-papirus
+archcraft-icons-qogir
+archcraft-icons-sweetfolders
+archcraft-icons-tela
+archcraft-icons-vimix
+archcraft-icons-white
+archcraft-icons-win11
+archcraft-icons-zafiro
+archcraft-icons-zafironord
+archcraft-mirrorlist
+archcraft-music
+archcraft-neofetch
+archcraft-omz
+archcraft-openbox
+archcraft-openbox-themes
+archcraft-plymouth-theme
+archcraft-randr
+archcraft-ranger
+archcraft-scripts
+archcraft-sddm-theme
+archcraft-skeleton
+archcraft-vim
+aria2
+atril
+atuin
+autoconf
+automake
+axel
+b43-fwcutter
+base
+base-devel
+bat
+bauh
+bcachefs-tools
+betterlockscreen
+bibata-cursor-theme-bin
+bind
+bison
+blueman
+bluez
+bluez-utils
+bolt
+brltty
+broadcom-wl
+btrfs-progs
+bzip2
+catppuccin-gtk-theme-mocha
+clang
+clonezilla
+cloud-init
+cmake
+copyq
+cppcheck
+cryptsetup
+cups
+cups-filters
+cups-pdf
+dbus-broker-units
+dhclient
+dhcpcd
+dialog
+diffutils
+discord
+discover
+distrobox
+dmenu
+dmidecode
+dmraid
+dnsmasq
+docker
+dosfstools
+downgrade
+dunst
+e2fsprogs
+edk2-shell
+efibootmgr
+entr
+espeak-ng
+ethtool
+exfatprogs
+eza
+f2fs-tools
+fakeroot
+fastfetch
+fatresize
+fd
+ffmpeg
+ffmpegthumbnailer
+firefox
+flatpak
+flatpak-kcm
+flex
+foomatic-db
+foomatic-db-engine
+foot-terminfo
+freedownloadmanager
+fsarchiver
+galculator
+gcc
+geany
+geany-plugins
+ghostscript
+git-delta
+github-cli
+global
+gnome-boxes
+gnome-keyring
+gnome-software
+google-chrome
+gpart
+gparted
+gpm
+gptfdisk
+grub
+gsfonts
+gst-libav
+gst-plugin-pipewire
+gst-plugins-bad
+gst-plugins-good
+gst-plugins-ugly
+gstreamer
+gtk-engine-murrine
+gtk3-nocsd-git
+guestfs-tools
+gufw
+gutenprint
+gvfs
+gvfs-afc
+gvfs-google
+gvfs-gphoto2
+gvfs-mtp
+gvfs-smb
+gzip
+hdparm
+highlight
+htop
+hyperv
+i3lock-color
+inetutils
+inotify-tools
+intel-ucode
+inter-font
+iw
+iwd
+jasper
+jfsutils
+jq
+kitty
+kitty-terminfo
+ksuperkey
+kvantum
+kvantum-qt5
+ldns
+less
+libappindicator-gtk2
+libavif
+libc++
+libde265
+libdv
+libfido2
+libheif
+libmpeg2
+libreoffice-fresh
+libtheora
+libusb-compat
+libvirt
+libvpx
+libwebp
+light
+linux
+linux-atm
+linux-firmware
+linux-firmware-marvell
+linux-headers
+linux-lts
+linux-lts-headers
+localsend-bin
+lrzip
+lsb-release
+lsscsi
+luarocks
+lvm2
+lxc
+lz4
+lzip
+lzop
+maim
+make
+man-db
+man-pages
+mdadm
+meld
+memtest86+
+memtest86+-efi
+mesa
+mesa-utils
+micro
+mkinitcpio
+mkinitcpio-firmware
+mkinitcpio-nfs-utils
+modemmanager
+mpc
+mpd
+mplayer
+mtools
+nano
+nbd
+ncdu
+ncmpcpp
+ndisc6
+neovim
+nerd-fonts-inter
+nethogs
+network-manager-applet
+network-manager-sstp
+networkmanager
+networkmanager-dmenu-git
+networkmanager-openconnect
+networkmanager-openvpn
+networkmanager-pptp
+networkmanager-strongswan
+networkmanager-vpnc
+nfs-utils
+nilfs-utils
+nitrogen
+nm-connection-editor
+nmap
+nodejs
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+ntfs-3g
+nvidia-470xx-dkms
+nvidia-settings
+nvme-cli
+obmenu-generator
+obsidian
+open-iscsi
+openconnect
+openpgp-card-tools
+openssh
+openvpn
+os-prober
+p7zip
+pandoc-cli
+partclone
+parted
+partimage
+paru
+paru-debug
+pastel
+patch
+pavucontrol
+pcsclite
+perl-linux-desktopfiles
+php
+picom
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+pkgconf
+plank
+playerctl
+plymouth
+polkit
+polybar
+powertop
+ppp
+pptpclient
+prince-bin
+pulsemixer
+pv
+python-beautifulsoup4
+python-dbus
+python-pip
+python-pipx
+python-pywal
+qt5ct
+qt5gtk2
+qt6ct
+qt6gtk2
+ranger
+refind
+reflector
+ripgrep
+rmtrash
+rofi-lbonn-wayland-git
+rp-pppoe
+rsync
+rust
+rxvt-unicode-terminfo
+samba
+schroedinger
+screen
+sddm-git
+sdparm
+sequoia-sq
+sg3_utils
+shellcheck-bin
+signal-desktop
+simplescreenrecorder
+slop
+smartmontools
+sof-firmware
+speedtest-cli
+spotify
+squashfs-tools
+stow
+sudo
+supabase
+swtpm
+systemd-resolvconf
+tcpdump
+telegram-desktop
+terminus-font
+thefuck
+thunar
+thunar-archive-plugin
+thunar-media-tags-plugin
+thunar-volman
+timeshift
+tlrc
+tmux
+tpm2-tools
+tpm2-tss
+traceroute
+trash-cli
+tree
+ttf-amiri
+tumbler
+tuned
+udftools
+udisks2
+ueberzug
+ufw
+unarchiver
+uno-calculator-bin
+unrar
+unzip
+usb_modeswitch
+usbmuxd
+usbutils
+viewnior
+vim
+virt-bootstrap-git
+virt-manager
+virt-viewer
+visual-studio-code-bin
+vpnc
+wget
+wireless-regdb
+wireless_tools
+wireplumber
+wmctrl
+wmname
+wpa_supplicant
+wvdial
+x264
+x265
+xarchiver
+xclip
+xcolor
+xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
+xdg-user-dirs
+xdg-user-dirs-gtk
+xdotool
+xf86-input-libinput
+xf86-video-fbdev
+xf86-video-nouveau
+xf86-video-vesa
+xfce-polkit
+xfce4-power-manager
+xfce4-settings
+xfce4-terminal
+xfsprogs
+xl2tpd
+xmlstarlet
+xorg-bdftopcf
+xorg-docs
+xorg-font-util
+xorg-fonts-100dpi
+xorg-fonts-75dpi
+xorg-fonts-encodings
+xorg-iceauth
+xorg-mkfontscale
+xorg-server
+xorg-server-common
+xorg-server-devel
+xorg-server-xephyr
+xorg-server-xnest
+xorg-server-xvfb
+xorg-sessreg
+xorg-setxkbmap
+xorg-smproxy
+xorg-x11perf
+xorg-xauth
+xorg-xbacklight
+xorg-xcmsdb
+xorg-xcursorgen
+xorg-xdpyinfo
+xorg-xdriinfo
+xorg-xev
+xorg-xgamma
+xorg-xhost
+xorg-xinput
+xorg-xkbcomp
+xorg-xkbevd
+xorg-xkbutils
+xorg-xkill
+xorg-xlsatoms
+xorg-xlsclients
+xorg-xmodmap
+xorg-xpr
+xorg-xprop
+xorg-xrandr
+xorg-xrdb
+xorg-xrefresh
+xorg-xset
+xorg-xsetroot
+xorg-xvinfo
+xorg-xwayland
+xorg-xwd
+xorg-xwininfo
+xorg-xwud
+xsettingsd
+xvidcore
+xz
+yad
+yay
+yazi
+zen-browser-bin
+zip
+zoxide
+zsh
+zstd
