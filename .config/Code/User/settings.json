@@ -1731,7 +1731,6 @@
   "codesnap.transparentBackground": true,
   "redhat.telemetry.enabled": false,
   "files.autoSave": "afterDelay",
-  "markdown-preview-enhanced.enableScriptExecution": true,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.currentLine.format": "${authorNotYou}${agoOrDate} ${message}",
   "gitlens.currentLine.uncommittedChangesFormat": "✏️ ${ago}",
@@ -1793,5 +1792,6 @@
   "editor.emptySelectionClipboard": false,
   "[txt]": {
     "editor.defaultFormatter": "trunk.io"
-  }
+  },
+  "markdown-preview-enhanced.scrollSync": false
 }
