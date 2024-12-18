@@ -4,7 +4,7 @@
 ##
 ## Network Executor For Tint2
 
-ESSID=`iwgetid | awk -F '"' '{ print $2 }'`
+ESSID="$(ip route get 1.1.1.1 | awk '{print $5;exit}')"
 
 if [[ ! -z "$ESSID" ]]; then
 	echo " $ESSID"

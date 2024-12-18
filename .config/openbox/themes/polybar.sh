@@ -13,18 +13,21 @@ get_values() {
 	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
 	BATTERY=$(upower -i "$(upower -e | grep 'BAT')" | grep 'native-path' | cut -d':' -f2 | tr -d '[:blank:]')
 	ADAPTER=$(upower -i "$(upower -e | grep 'AC')" | grep 'native-path' | cut -d':' -f2 | tr -d '[:blank:]')
-	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
+	INTERFACE="$(ip route get 1.1.1.1 | awk '{print $5;exit}')"
 }
 
 ## Write values to `system.ini` file
 set_values() {
-	if [[ -n "$ADAPTER" ]]; then
-		sed -i -e "s/sys_adapter = .*/sys_adapter = $ADAPTER/g" "${SFILE}"
+	if [[ -n "$(upower -i)" ]]; then
+		if [[ -n "$ADAPTER" ]]; then
+			sed -i -e "s/sys_adapter = .*/sys_adapter = $ADAPTER/g" "${SFILE}"
+		fi
+		if [[ -n "$BATTERY" ]]; then
+			sed -i -e "s/sys_battery = .*/sys_battery = $BATTERY/g" "${SFILE}"
+		fi
 	fi
-	if [[ -n "$BATTERY" ]]; then
-		sed -i -e "s/sys_battery = .*/sys_battery = $BATTERY/g" "${SFILE}"
-	fi
-	if [[ -n "$CARD" ]]; then
+
+	if [[ -n "$CARD" && "$CARD" != "No backlight controller was found"* ]]; then
 		sed -i -e "s/sys_graphics_card = .*/sys_graphics_card = $CARD/g" "${SFILE}"
 	fi
 	if [[ -n "$INTERFACE" ]]; then
