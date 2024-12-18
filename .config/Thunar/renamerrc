@@ -4,7 +4,7 @@ LastActiveRenamer=ThunarSbrReplaceRenamer
 
 [ThunarSbrReplaceRenamer]
 CaseSensitive=FALSE
-Replacement=taskSix
-Pattern=Screenshot_2024_12_15-
+Replacement=2024-12-18
+Pattern=18-12-2024
 Regexp=TRUE
 
