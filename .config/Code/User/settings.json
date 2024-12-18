@@ -1790,5 +1790,8 @@
   "markdown-preview-enhanced.chromePath": "/usr/bin/google-chrome-stable",
   "codesnap.showWindowControls": false,
   "codesnap.shutterAction": "copy",
-  "editor.emptySelectionClipboard": false
+  "editor.emptySelectionClipboard": false,
+  "[txt]": {
+    "editor.defaultFormatter": "trunk.io"
+  }
 }

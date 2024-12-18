@@ -25,7 +25,7 @@ function runitCommand(bp) -- bp BufPane
 
 	local filename = bp.Buf.GetName(bp.Buf)
 	local filetype = bp.Buf:FileType()
-	local cmd = string.format("./%s", filename) -- does not support spaces in filename
+	local cmd = string.format("%s", filename) -- does not support spaces in filename
 	if filetype == "go" then
 		if string.match(filename, "_test.go$") then
 			cmd = "go test"

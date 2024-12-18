@@ -106,6 +106,7 @@ alias rmdir="rmdirtrash"
 alias nano="micro"
 alias python="python3"
 alias pip="pip3"
+alias getinterface="echo "$(ip route get 1.1.1.1 | awk '{print $5;exit}')""
 
 # ---- Homebrew ----- #
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

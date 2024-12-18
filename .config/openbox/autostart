@@ -29,7 +29,7 @@ bash ~/.config/openbox/themes/launch-bar.sh
 exec dunst &
 
 ## Start Music Player Daemon
-exec mpd &
+# exec mpd &
 
 ## Launch Plank
 exec plank &
