@@ -106,7 +106,7 @@ alias rmdir="rmdirtrash"
 alias nano="micro"
 alias python="python3"
 alias pip="pip3"
-alias getinterface="echo "$(ip route get 1.1.1.1 | awk '{print $5;exit}')""
+alias getgpu="lspci -k -d ::03xx"
 
 # ---- Homebrew ----- #
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -172,14 +172,15 @@ export BUN_INSTALL="$HOME/.bun"
 
 export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:/home/linuxbrew/.linuxbrew/bin:$BUN_INSTALL/bin"
 
-# shellcheck disable=SC1091
 . "$HOME/.asdf/asdf.sh"
+
+# Standard template for pandoc for converting to docx
+export MRT="$HOME/Templates/Standard.dotx" 
 
 export TERM=xterm-256color
 export COLORTERM=truecolor
 
 # ---- FZF ----- #
-# shellcheck disable=SC1090
 source <(fzf --zsh)
 
 # --- Use fd instead of fzf --- #
@@ -240,4 +241,4 @@ export EDITOR="micro"
 export STARSHIP_CONFIG=~/.config/starship.toml
 
 export LIBVIRT_DEFAULT_URI='qemu:///system'
-export "MICRO_TRUECOLOR=1"
+export MICRO_TRUECOLOR=1
