@@ -3,7 +3,6 @@
   "editor.cursorStyle": "block",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.foldingImportsByDefault": true,
   "editor.wordWrap": "off",
   "editor.wrappingIndent": "none",
   "editor.wrappingStrategy": "simple",
@@ -1359,9 +1358,6 @@
   "markdown-preview-enhanced.revealjsTheme": "black.css",
   "markdown-preview-enhanced.HTML5EmbedUseLinkSyntax": true,
   "window.commandCenter": false,
-
-  // Breadcrumbs
-  "breadcrumbs.enabled": true,
   "breadcrumbs.filePath": "on",
   "breadcrumbs.icons": true,
   "breadcrumbs.showClasses": true,
@@ -1795,5 +1791,6 @@
   "[txt]": {
     "editor.defaultFormatter": "trunk.io"
   },
-  "markdown-preview-enhanced.scrollSync": false
+  "markdown-preview-enhanced.scrollSync": false,
+  "editor.stickyScroll.enabled": false
 }
