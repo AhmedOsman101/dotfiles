@@ -248,6 +248,7 @@
     "d'Ivoire",
     "DANVOUY",
     "DATAFILE",
+    "Datagram",
     "datetime",
     "dbconn",
     "dbus",
@@ -1147,8 +1148,10 @@
     "zruog",
     "ZSTD",
     "Русский",
+    "أحمد",
     "العشرية",
     "العلامة",
+    "عثمان",
     "منغير"
   ],
   "javascript.updateImportsOnFileMove.enabled": "always",
