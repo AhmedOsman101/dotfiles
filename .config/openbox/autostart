@@ -22,6 +22,8 @@ xfce4-power-manager &
 ## Start Compositing Manager
 exec picom &
 
+systemctl --user start spotify-listener &
+
 ## Launch Polybar or Tint2
 bash ~/.config/openbox/themes/launch-bar.sh
 
