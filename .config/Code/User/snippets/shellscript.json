@@ -4,13 +4,6 @@
 	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
 	// same ids are connected.
 	// Example:
-	"Add comment": {
-		"prefix": "com",
-		"body": [
-			"# ---- $1 ----- #",
-		],
-		"description": "Adds a nicely formatted comment"
-	},
 	"Include logs": {
 		"prefix": "logs",
 		"body": [

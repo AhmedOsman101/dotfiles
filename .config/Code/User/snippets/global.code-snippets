@@ -1,4 +1,12 @@
 {
+	"Add comment": {
+		"scope": "bash,shell,python,php",
+		"prefix": "com",
+		"body": [
+			"# ---- $1 ----- #",
+		],
+		"description": "Adds a nicely formatted comment"
+	},
 	"arrow function": {
 		"scope": "javascript,typescript,jsx,tsx",
 		"prefix": "arrow",
@@ -35,7 +43,7 @@
 			"}"
 		]
 	},
-	"export deafult const arrow function": {
+	"export default const arrow function": {
 		"scope": "javascript,typescript,jsx,tsx",
 		"prefix": "darrow",
 		"body": [
@@ -47,7 +55,7 @@
 			""
 		]
 	},
-	"export deafult const async arrow function": {
+	"export default const async arrow function": {
 		"scope": "javascript,typescript,jsx,tsx",
 		"prefix": "dsarrow",
 		"body": [
@@ -69,19 +77,7 @@
 			"",
 		]
 	},
-	"export default const async arrow function": {
-		"scope": "javascript,typescript,jsx,tsx",
-		"prefix": "dsarrow",
-		"body": [
-			"export const $method = async ($param) => {",
-			"  // $body",
-			"}",
-			"",
-			"export default $method",
-			""
-		]
-	},
-	"export deafult constant": {
+	"export default constant": {
 		"scope": "javascript,typescript,jsx,tsx",
 		"prefix": "dcon",
 		"body": [
