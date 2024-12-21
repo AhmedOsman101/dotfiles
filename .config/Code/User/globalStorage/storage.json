@@ -6,7 +6,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///mnt/main/Documents/obsidian"
+                "folderUri": "file:///mnt/main/Projects/college/python"
             }
         ],
         "emptyWindows": []
@@ -24,7 +24,8 @@
             "file:///home/othman/.config/openbox": "__default__profile__",
             "file:///mnt/main/Projects/college": "__default__profile__",
             "file:///mnt/main/Documents/obsidian": "__default__profile__",
-            "file:///mnt/main/Documents/obsidian/src": "__default__profile__"
+            "file:///mnt/main/Documents/obsidian/src": "__default__profile__",
+            "file:///mnt/main/Projects/college/python": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -78,10 +79,22 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///mnt/main/Projects/college/python",
+                                        "path": "/mnt/main/Projects/college/python",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/mnt/main/Projects/college/python"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -181,17 +194,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/work/C++/ICPC"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/work/C%2B%2B/ICPC/level-1",
-                                        "path": "/home/othman/work/C++/ICPC/level-1",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/work/C++/ICPC/level-1"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -307,13 +309,6 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
-                                {
-                                    "id": "github.copyVscodeDevLinkFile",
-                                    "label": "Copy vscode.dev Link"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
@@ -898,6 +893,10 @@
                         "label": "E&&xtensions"
                     },
                     {
+                        "id": "workbench.view.extension.test",
+                        "label": "T&&esting"
+                    },
+                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -929,7 +928,8 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back"
+                        "label": "&&Back",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -938,7 +938,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1258,8 +1259,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1847,14 +1847,14 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///mnt/main/Documents/obsidian",
-            "backupPath": "/home/othman/.config/Code/Backups/6adc1b5baf62cc93f9d47441a3c61c7c",
+            "folder": "file:///mnt/main/Projects/college/python",
+            "backupPath": "/home/othman/.config/Code/Backups/b90850b34ab6004403dc3ecfa041dc75",
             "uiState": {
                 "mode": 0,
                 "x": 0,
-                "y": 69,
-                "width": 1453,
-                "height": 850
+                "y": 74,
+                "width": 1440,
+                "height": 826
             }
         },
         "openedWindows": []
