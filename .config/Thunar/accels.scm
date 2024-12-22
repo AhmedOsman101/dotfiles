@@ -3,8 +3,8 @@
 ;
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-by-type" "")
 ; (gtk_accel_path "<Actions>/ThunarStatusBar/toggle-last-modified" "")
-; (gtk_accel_path "<Actions>/ThunarBookmarks/e8d3a29472179f94bdf0a7747154a087" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/cut" "<Primary>x")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/e8d3a29472179f94bdf0a7747154a087" "")
 (gtk_accel_path "<Actions>/ThunarActions/uca-action-1622790717174452-1" "F3")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-by-size" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/file-menu" "")

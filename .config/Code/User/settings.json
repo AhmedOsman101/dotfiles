@@ -316,6 +316,7 @@
     "EHLO",
     "eius",
     "Elasto",
+    "elif",
     "eligendi",
     "elit",
     "Elzero",
@@ -1809,7 +1810,6 @@
   "window.menuBarVisibility": "toggle",
   "markdown-preview-enhanced.chromePath": "/usr/bin/google-chrome-stable",
   "codesnap.showWindowControls": false,
-  "codesnap.shutterAction": "copy",
   "editor.emptySelectionClipboard": false,
   "[txt]": {
     "editor.defaultFormatter": "trunk.io"
@@ -1823,5 +1823,8 @@
   "continue.enableTabAutocomplete": true,
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
-  }
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "codesnap.shutterAction": "copy"
 }
