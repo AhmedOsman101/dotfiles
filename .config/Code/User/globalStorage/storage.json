@@ -10,12 +10,13 @@
             },
             {
                 "folderUri": "file:///mnt/main/Projects/college/python"
-            },
-            {
-                "folderUri": "file:///home/othman/work/C%2B%2B/Shahyn"
             }
         ],
-        "emptyWindows": []
+        "emptyWindows": [
+            {
+                "backupFolder": "1734861063028"
+            }
+        ]
     },
     "profileAssociations": {
         "workspaces": {
@@ -34,7 +35,9 @@
             "file:///mnt/main/Projects/college/python": "__default__profile__",
             "file:///home/othman/work/C%2B%2B/Shahyn": "__default__profile__"
         },
-        "emptyWindows": {}
+        "emptyWindows": {
+            "1734861063028": "__default__profile__"
+        }
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -86,7 +89,8 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -95,12 +99,12 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/othman/work/C%2B%2B/Shahyn",
-                                        "path": "/home/othman/work/C++/Shahyn",
+                                        "external": "file:///mnt/main/Projects/college/python",
+                                        "path": "/mnt/main/Projects/college/python",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/work/C++/Shahyn"
+                                    "label": "/mnt/main/Projects/college/python"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -117,12 +121,12 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///mnt/main/Projects/college/python",
-                                        "path": "/mnt/main/Projects/college/python",
+                                        "external": "file:///home/othman/work/C%2B%2B/Shahyn",
+                                        "path": "/home/othman/work/C++/Shahyn",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/mnt/main/Projects/college/python"
+                                    "label": "~/work/C++/Shahyn"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -304,8 +308,7 @@
                     },
                     {
                         "id": "saveAll",
-                        "label": "Save A&&ll",
-                        "enabled": false
+                        "label": "Save A&&ll"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -611,7 +614,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar"
+                                    "label": "&&Primary Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -906,6 +910,10 @@
                         "label": "E&&xtensions"
                     },
                     {
+                        "id": "workbench.view.extension.test",
+                        "label": "T&&esting"
+                    },
+                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -1015,54 +1023,45 @@
                                 },
                                 {
                                     "id": "workbench.action.focusThirdEditorGroup",
-                                    "label": "Group &&3",
-                                    "enabled": false
+                                    "label": "Group &&3"
                                 },
                                 {
                                     "id": "workbench.action.focusFourthEditorGroup",
-                                    "label": "Group &&4",
-                                    "enabled": false
+                                    "label": "Group &&4"
                                 },
                                 {
                                     "id": "workbench.action.focusFifthEditorGroup",
-                                    "label": "Group &&5",
-                                    "enabled": false
+                                    "label": "Group &&5"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusNextGroup",
-                                    "label": "&&Next Group",
-                                    "enabled": false
+                                    "label": "&&Next Group"
                                 },
                                 {
                                     "id": "workbench.action.focusPreviousGroup",
-                                    "label": "&&Previous Group",
-                                    "enabled": false
+                                    "label": "&&Previous Group"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusLeftGroup",
-                                    "label": "Group &&Left",
-                                    "enabled": false
+                                    "label": "Group &&Left"
                                 },
                                 {
                                     "id": "workbench.action.focusRightGroup",
-                                    "label": "Group &&Right",
-                                    "enabled": false
+                                    "label": "Group &&Right"
                                 },
                                 {
                                     "id": "workbench.action.focusAboveGroup",
-                                    "label": "Group &&Above",
-                                    "enabled": false
+                                    "label": "Group &&Above"
                                 },
                                 {
                                     "id": "workbench.action.focusBelowGroup",
-                                    "label": "Group &&Below",
-                                    "enabled": false
+                                    "label": "Group &&Below"
                                 }
                             ]
                         }
@@ -1848,7 +1847,7 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 0,
+            "sideBarWidth": 268,
             "statusBarHeight": 22,
             "windowBorder": false
         }
@@ -1860,9 +1859,9 @@
             "uiState": {
                 "mode": 0,
                 "x": 0,
-                "y": 78,
-                "width": 1617,
-                "height": 933
+                "y": 69,
+                "width": 1442,
+                "height": 834
             }
         },
         "openedWindows": []
