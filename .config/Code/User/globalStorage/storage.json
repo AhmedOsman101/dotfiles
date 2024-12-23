@@ -9,14 +9,10 @@
                 "folderUri": "file:///mnt/main/Documents/obsidian/src"
             },
             {
-                "folderUri": "file:///mnt/main/Projects/college/python"
+                "folderUri": "file:///mnt/main/Projects/C%2B%2B/Shahyn"
             }
         ],
-        "emptyWindows": [
-            {
-                "backupFolder": "1734861063028"
-            }
-        ]
+        "emptyWindows": []
     },
     "profileAssociations": {
         "workspaces": {
@@ -33,11 +29,10 @@
             "file:///mnt/main/Documents/obsidian": "__default__profile__",
             "file:///mnt/main/Documents/obsidian/src": "__default__profile__",
             "file:///mnt/main/Projects/college/python": "__default__profile__",
-            "file:///home/othman/work/C%2B%2B/Shahyn": "__default__profile__"
+            "file:///home/othman/work/C%2B%2B/Shahyn": "__default__profile__",
+            "file:///mnt/main/Projects/C%2B%2B/Shahyn": "__default__profile__"
         },
-        "emptyWindows": {
-            "1734861063028": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -89,11 +84,21 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///mnt/main/Projects/C%2B%2B/Shahyn",
+                                        "path": "/mnt/main/Projects/C++/Shahyn",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/mnt/main/Projects/C++/Shahyn"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -193,17 +198,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/work/college"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/work/pdf-reader",
-                                        "path": "/home/othman/work/pdf-reader",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/work/pdf-reader"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -308,7 +302,8 @@
                     },
                     {
                         "id": "saveAll",
-                        "label": "Save A&&ll"
+                        "label": "Save A&&ll",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -318,13 +313,6 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
-                                {
-                                    "id": "github.copyVscodeDevLinkFile",
-                                    "label": "Copy vscode.dev Link"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
@@ -614,8 +602,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar",
-                                    "checked": true
+                                    "label": "&&Primary Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -1023,45 +1010,54 @@
                                 },
                                 {
                                     "id": "workbench.action.focusThirdEditorGroup",
-                                    "label": "Group &&3"
+                                    "label": "Group &&3",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusFourthEditorGroup",
-                                    "label": "Group &&4"
+                                    "label": "Group &&4",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusFifthEditorGroup",
-                                    "label": "Group &&5"
+                                    "label": "Group &&5",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusNextGroup",
-                                    "label": "&&Next Group"
+                                    "label": "&&Next Group",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusPreviousGroup",
-                                    "label": "&&Previous Group"
+                                    "label": "&&Previous Group",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusLeftGroup",
-                                    "label": "Group &&Left"
+                                    "label": "Group &&Left",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusRightGroup",
-                                    "label": "Group &&Right"
+                                    "label": "Group &&Right",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusAboveGroup",
-                                    "label": "Group &&Above"
+                                    "label": "Group &&Above",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusBelowGroup",
-                                    "label": "Group &&Below"
+                                    "label": "Group &&Below",
+                                    "enabled": false
                                 }
                             ]
                         }
@@ -1847,21 +1843,21 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 268,
+            "sideBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///mnt/main/Documents/obsidian/src",
-            "backupPath": "/home/othman/.config/Code/Backups/bf72c5311e336ab6a31c4de0831a5990",
+            "folder": "file:///mnt/main/Projects/C%2B%2B/Shahyn",
+            "backupPath": "/home/othman/.config/Code/Backups/4b57e6e0e6d3f81f97535811a4bd2b34",
             "uiState": {
                 "mode": 0,
                 "x": 0,
-                "y": 69,
-                "width": 1442,
-                "height": 834
+                "y": 68,
+                "width": 1446,
+                "height": 839
             }
         },
         "openedWindows": []

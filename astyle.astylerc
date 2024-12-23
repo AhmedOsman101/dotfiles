@@ -17,7 +17,7 @@ style=java                     # Braces on the same line as function/class defin
 # Other options (adjust as needed)
 pad-oper                     # Pad operators with spaces
 #pad-paren-in                 # Pad inside parentheses
-pad-paren-out                # Pad outside parentheses
+#pad-paren-out                # Pad outside parentheses
 unpad-paren                  # Remove unnecessary padding inside parentheses
 align-pointer=type           # Align pointers to the type
 align-reference=type         # Align references to the type
