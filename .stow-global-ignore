@@ -1,16 +1,25 @@
-\.cvsignore
-\.svn
-\.hg
-\.git
-\.gitignore
-\.gitmodules
+# .stow-global-ignore
+
+# Ignore all Git-related files and directories
+.git
+.gitignore
+.gitmodules
+
+# Ignore all Subversion-related files and directories
+.svn/
+
+# Ignore all Mercurial-related files and directories
+.hg/
+
 ^README\..*
 ^LICENSE\..*
-^COPYING$
-Brewfile
-^.*\.txt$
-^.*\.md$
-^.*\.sql$
-^.*\.astylerc$
-^bootstrap-arch\.sh$
-^bootstrap-ubuntu\.sh$
+^COPYING
+
+# Ignore specific text, markdown, SQL, and configuration files
+^[^.]*.txt
+^[^.]*.md
+^[^.]*.sql
+
+# Ignore shell scripts for bootstrap
+bootstrap-arch\.sh
+bootstrap-ubuntu\.sh
