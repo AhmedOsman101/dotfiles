@@ -9,7 +9,7 @@
                 "folderUri": "file:///mnt/main/Documents/obsidian/src"
             },
             {
-                "folderUri": "file:///home/othman/.dotfiles"
+                "folderUri": "file:///home/othman/scripts"
             }
         ],
         "emptyWindows": []
@@ -31,7 +31,8 @@
             "file:///mnt/main/Projects/college/python": "__default__profile__",
             "file:///home/othman/work/C%2B%2B/Shahyn": "__default__profile__",
             "file:///mnt/main/Projects/C%2B%2B/Shahyn": "__default__profile__",
-            "file:///mnt/main/Projects/college/math": "__default__profile__"
+            "file:///mnt/main/Projects/college/math": "__default__profile__",
+            "file:///home/othman/scripts": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -89,6 +90,17 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/scripts",
+                                        "path": "/home/othman/scripts",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/scripts"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -188,17 +200,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Documents/obsidian"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///mnt/main/Projects/college",
-                                        "path": "/mnt/main/Projects/college",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/mnt/main/Projects/college"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -610,8 +611,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar",
-                                    "checked": true
+                                    "label": "&&Primary Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -904,10 +904,6 @@
                     {
                         "id": "workbench.view.extensions",
                         "label": "E&&xtensions"
-                    },
-                    {
-                        "id": "workbench.view.extension.test",
-                        "label": "T&&esting"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1852,21 +1848,21 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 268,
+            "sideBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/.dotfiles",
-            "backupPath": "/home/othman/.config/Code/Backups/2df83c8449bc3efce0a9d404e141a3e0",
+            "folder": "file:///home/othman/scripts",
+            "backupPath": "/home/othman/.config/Code/Backups/6cd0b8d506c05d712f0f209d6bc009d1",
             "uiState": {
                 "mode": 0,
                 "x": 0,
-                "y": 75,
+                "y": 74,
                 "width": 1620,
-                "height": 947
+                "height": 950
             }
         },
         "openedWindows": []
