@@ -7,11 +7,9 @@
   "tabsize": 2,
   "tabstospaces": true,
   "xterm": true,
-  // "lsp.server": "python=pylsp,go=gopls,typescript=deno lsp={\"importMap\": \"./import_map.json\"}",
-  // set lsp.server "typescript=typescript-language-server --stdio,javascript=typescript-language-server --stdio"
   "lsp.server": "python=pylsp,go=gopls,typescript=deno lsp,javascript=deno lsp,markdown=deno lsp,json=deno lsp,jsonc=deno lsp,rust=rls,lua=lua-lsp,c++=clangd",
-  "lsp.formatOnSave": false,
+  "lsp.formatOnSave": true,
   "lsp.tabcompletion": true,
-  "lsp.autocompleteDetails": true
+  "lsp.autocompleteDetails": false
 }
 
