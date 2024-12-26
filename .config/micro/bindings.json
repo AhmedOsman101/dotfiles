@@ -4,7 +4,7 @@
     "Alt-f": "command:format",
     "Alt-k": "command:hover",
     "Alt-r": "command:references",
-    "CtrlSpace": "command:lspcompletion",
+    "CtrlP": "command:palettero",
     "CtrlUnderscore": "lua:comment.comment",
     "F1": "command:cheat",
     "F12": "command:makeup",
