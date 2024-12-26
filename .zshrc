@@ -107,6 +107,7 @@ alias nano="micro"
 alias python="python3"
 alias pip="pip3"
 alias getgpu="lspci -k -d ::03xx"
+alias ocr="tesseract"
 
 # ---- Homebrew ----- #
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
