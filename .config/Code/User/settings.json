@@ -378,6 +378,7 @@
     "flatpak",
     "flowbite",
     "flowchartgenrator",
+    "flylint",
     "Flysystem",
     "Foldsack",
     "fontawesome",
@@ -1841,5 +1842,7 @@
   },
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "codesnap.shutterAction": "copy"
+  "codesnap.shutterAction": "copy",
+  "c-cpp-flylint.cppcheck.verbose": true,
+  "c-cpp-flylint.debug": true
 }
