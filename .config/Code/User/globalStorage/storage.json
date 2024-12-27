@@ -6,15 +6,15 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/othman/work/playground"
+                "folderUri": "file:///mnt/main/Projects/playground"
+            },
+            {
+                "folderUri": "file:///mnt/main/Documents/obsidian/src"
             }
         ],
         "emptyWindows": [
             {
-                "backupFolder": "1735319383933"
-            },
-            {
-                "backupFolder": "1735320953298"
+                "backupFolder": "1735321119004"
             }
         ]
     },
@@ -39,12 +39,10 @@
             "file:///home/othman/scripts": "__default__profile__",
             "file:///mnt/main/Documents/backup": "__default__profile__",
             "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1": "__default__profile__",
-            "file:///home/othman/work/playground": "__default__profile__"
+            "file:///home/othman/work/playground": "__default__profile__",
+            "file:///mnt/main/Projects/playground": "__default__profile__"
         },
-        "emptyWindows": {
-            "1735319383933": "__default__profile__",
-            "1735320953298": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -105,6 +103,28 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///mnt/main/Documents/obsidian/src",
+                                        "path": "/mnt/main/Documents/obsidian/src",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/mnt/main/Documents/obsidian/src"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///mnt/main/Projects/playground",
+                                        "path": "/mnt/main/Projects/playground",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/mnt/main/Projects/playground"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/othman/work/playground",
                                         "path": "/home/othman/work/playground",
                                         "scheme": "file"
@@ -122,17 +142,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/mnt/main/Projects/C++/Shahyn"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///mnt/main/Documents/obsidian/src",
-                                        "path": "/mnt/main/Documents/obsidian/src",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/mnt/main/Documents/obsidian/src"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -201,18 +210,18 @@
                                     "label": "/mnt/main/Projects/C++/ICPC"
                                 },
                                 {
-                                    "id": "openRecentFolder",
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///mnt/main/Projects/college/math",
-                                        "path": "/mnt/main/Projects/college/math",
+                                        "external": "file:///mnt/main/Projects/playground/file.py",
+                                        "path": "/mnt/main/Projects/playground/file.py",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/mnt/main/Projects/college/math"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
+                                    "label": "/mnt/main/Projects/playground/file.py"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -347,6 +356,13 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
+                                {
+                                    "id": "github.copyVscodeDevLinkFile",
+                                    "label": "Copy vscode.dev Link"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
@@ -486,11 +502,13 @@
                     },
                     {
                         "id": "actions.find",
-                        "label": "&&Find"
+                        "label": "&&Find",
+                        "enabled": false
                     },
                     {
                         "id": "editor.action.startFindReplaceAction",
-                        "label": "&&Replace"
+                        "label": "&&Replace",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -650,8 +668,7 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel",
-                                    "checked": true
+                                    "label": "&&Panel"
                                 },
                                 {
                                     "id": "toggle.toggleCustomTitleBar",
@@ -850,13 +867,6 @@
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
-                                    "id": "workbench.action.splitEditorInGroup",
-                                    "label": "Split in &&Group"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
                                     "id": "workbench.action.moveEditorToNewWindow",
                                     "label": "&&Move Editor into New Window"
                                 },
@@ -933,10 +943,6 @@
                         "label": "E&&xtensions"
                     },
                     {
-                        "id": "workbench.view.extension.test",
-                        "label": "T&&esting"
-                    },
-                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -960,7 +966,8 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap"
+                        "label": "&&Word Wrap",
+                        "enabled": false
                     }
                 ]
             },
@@ -1297,7 +1304,8 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal"
+                        "label": "&&Split Terminal",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1637,11 +1645,6 @@
                 "isNative": false,
                 "userSettingsLabel": "ctrl+k ctrl+\\"
             },
-            "workbench.action.splitEditorInGroup": {
-                "label": "Ctrl+K Ctrl+Shift+\\",
-                "isNative": false,
-                "userSettingsLabel": "ctrl+k ctrl+shift+\\"
-            },
             "workbench.action.copyEditorToNewWindow": {
                 "label": "Ctrl+K O",
                 "isNative": false,
@@ -1885,8 +1888,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/work/playground",
-            "backupPath": "/home/othman/.config/Code/Backups/3f1791586abe1e1b5677ab7bad07e751",
+            "folder": "file:///mnt/main/Documents/obsidian/src",
+            "backupPath": "/home/othman/.config/Code/Backups/bf72c5311e336ab6a31c4de0831a5990",
             "uiState": {
                 "mode": 0,
                 "x": 0,
