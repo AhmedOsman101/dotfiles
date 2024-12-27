@@ -6,10 +6,17 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///mnt/main/Projects/C%2B%2B/Shahyn"
+                "folderUri": "file:///home/othman/work/playground"
             }
         ],
-        "emptyWindows": []
+        "emptyWindows": [
+            {
+                "backupFolder": "1735319383933"
+            },
+            {
+                "backupFolder": "1735320953298"
+            }
+        ]
     },
     "profileAssociations": {
         "workspaces": {
@@ -31,9 +38,13 @@
             "file:///mnt/main/Projects/college/math": "__default__profile__",
             "file:///home/othman/scripts": "__default__profile__",
             "file:///mnt/main/Documents/backup": "__default__profile__",
-            "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1": "__default__profile__"
+            "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1": "__default__profile__",
+            "file:///home/othman/work/playground": "__default__profile__"
         },
-        "emptyWindows": {}
+        "emptyWindows": {
+            "1735319383933": "__default__profile__",
+            "1735320953298": "__default__profile__"
+        }
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -89,6 +100,17 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/work/playground",
+                                        "path": "/home/othman/work/playground",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/work/playground"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -190,18 +212,18 @@
                                     "label": "/mnt/main/Projects/college/math"
                                 },
                                 {
-                                    "id": "openRecentFolder",
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///mnt/main/Projects/college/python",
-                                        "path": "/mnt/main/Projects/college/python",
+                                        "external": "file:///home/othman/.dotfiles/.config/starship.toml",
+                                        "path": "/home/othman/.dotfiles/.config/starship.toml",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/mnt/main/Projects/college/python"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
+                                    "label": "~/.dotfiles/.config/starship.toml"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -614,7 +636,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar"
+                                    "label": "&&Primary Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -627,7 +650,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel"
+                                    "label": "&&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "toggle.toggleCustomTitleBar",
@@ -907,6 +931,10 @@
                     {
                         "id": "workbench.view.extensions",
                         "label": "E&&xtensions"
+                    },
+                    {
+                        "id": "workbench.view.extension.test",
+                        "label": "T&&esting"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1850,21 +1878,21 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 0,
+            "sideBarWidth": 268,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///mnt/main/Projects/C%2B%2B/Shahyn",
-            "backupPath": "/home/othman/.config/Code/Backups/4b57e6e0e6d3f81f97535811a4bd2b34",
+            "folder": "file:///home/othman/work/playground",
+            "backupPath": "/home/othman/.config/Code/Backups/3f1791586abe1e1b5677ab7bad07e751",
             "uiState": {
                 "mode": 0,
                 "x": 0,
-                "y": 65,
+                "y": 64,
                 "width": 1620,
-                "height": 973
+                "height": 972
             }
         },
         "openedWindows": []
