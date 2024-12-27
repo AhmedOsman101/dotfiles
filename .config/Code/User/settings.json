@@ -172,6 +172,7 @@
     "BTEC",
     "Btns",
     "builtins",
+    "bunfig",
     "Burkina",
     "Bynder",
     "Cabo",
@@ -201,6 +202,7 @@
     "cierra",
     "cipchk",
     "CIPHERSUITES",
+    "clangc",
     "clangd",
     "cmus",
     "codegen",
@@ -228,6 +230,7 @@
     "Côte",
     "Coursera",
     "Cpath",
+    "cppc",
     "cpptools",
     "crandmck",
     "Crect",
@@ -1203,8 +1206,10 @@
   "code-runner.executorMap": {
     "javascript": "clear && node",
     "java": "cd $dir; javac $fileName ; java $fileNameWithoutExt",
-    "c": "cd $dirWithoutTrailingSlash; gcc $fileName -o $fileNameWithoutExt; clear; ./$fileNameWithoutExt; rm -f ./$fileNameWithoutExt",
-    "cpp": "clear; cd $dirWithoutTrailingSlash; g++ $fileName -o $fileNameWithoutExt; ./$fileNameWithoutExt; rm -f ./$fileNameWithoutExt",
+    "c": "cd $dirWithoutTrailingSlash; clear; clangc $fileName",
+    "cpp": "cd $dirWithoutTrailingSlash; clear; cppc $fileName",
+    // "c": "cd $dirWithoutTrailingSlash; gcc $fileName -o $fileNameWithoutExt; clear; ./$fileNameWithoutExt; rm -f ./$fileNameWithoutExt",
+    // "cpp": "clear; cd $dirWithoutTrailingSlash; g++ $fileName -o $fileNameWithoutExt; ./$fileNameWithoutExt; rm -f ./$fileNameWithoutExt",
     "zig": "zig run",
     "objective-c": "cd $dir; gcc -framework Cocoa $fileName -o $fileNameWithoutExt ; $dir$fileNameWithoutExt",
     "php": "cd $dir; clear; php $fileName",
@@ -1338,7 +1343,10 @@
     "editor.defaultFormatter": "ms-vscode.powershell"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.autopep8"
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordBasedSuggestions": "off",
+    "editor.snippetSuggestions": "bottom"
   },
   "git.openRepositoryInParentFolders": "always",
   "[javascript]": {
@@ -1790,7 +1798,7 @@
   "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.regenerateStdLibIndices": true,
   "python.analysis.typeEvaluation.enableExperimentalFeatures": true,
-  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "python.defaultInterpreterPath": "/usr/sbin/python",
   "python.languageServer": "Jedi",
   "geminiCommit.onlyStagedChanges": true,
   "gemmy.settings.modelName": "gemini-1.5-flash",
@@ -1844,5 +1852,8 @@
   "editor.formatOnPaste": true,
   "codesnap.shutterAction": "copy",
   "c-cpp-flylint.cppcheck.verbose": true,
-  "c-cpp-flylint.debug": true
+  "c-cpp-flylint.debug": true,
+  "autopep8.interpreter": ["python"],
+  "autopep8.showNotifications": "always",
+  "autopep8.importStrategy": "fromEnvironment"
 }
