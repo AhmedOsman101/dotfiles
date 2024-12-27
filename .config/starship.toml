@@ -42,6 +42,7 @@ detect_files = [ "bun.lockb", "bunfig.toml" ]
 symbol = "  "
 format = ' [$symbol($version)(-$name )]($style)'
 detect_extensions = [ "c", "h"]
+commands = [ [ "clang", "--version" ], [ "gcc", "--version" ], [ "cc", "--version" ] ]
 
 [conda]
 symbol = " "
