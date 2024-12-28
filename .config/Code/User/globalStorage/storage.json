@@ -13,6 +13,9 @@
             },
             {
                 "folderUri": "file:///mnt/main/Documents/obsidian/src"
+            },
+            {
+                "folderUri": "file:///mnt/main/Projects/playground/python"
             }
         ],
         "emptyWindows": []
@@ -39,7 +42,8 @@
             "file:///mnt/main/Documents/backup": "__default__profile__",
             "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1": "__default__profile__",
             "file:///home/othman/work/playground": "__default__profile__",
-            "file:///mnt/main/Projects/playground": "__default__profile__"
+            "file:///mnt/main/Projects/playground": "__default__profile__",
+            "file:///mnt/main/Projects/playground/python": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -93,11 +97,21 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///mnt/main/Projects/playground/python",
+                                        "path": "/mnt/main/Projects/playground/python",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/mnt/main/Projects/playground/python"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -199,18 +213,18 @@
                                     "label": "~/.dotfiles"
                                 },
                                 {
-                                    "id": "openRecentFolder",
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///mnt/main/Projects/C%2B%2B/ICPC",
-                                        "path": "/mnt/main/Projects/C++/ICPC",
+                                        "external": "file:///tmp/file.cpp",
+                                        "path": "/tmp/file.cpp",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/mnt/main/Projects/C++/ICPC"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
+                                    "label": "/tmp/file.cpp"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -652,8 +666,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar",
-                                    "checked": true
+                                    "label": "&&Primary Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -1308,8 +1321,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1902,34 +1914,11 @@
             "uiState": {
                 "mode": 0,
                 "x": 0,
-                "y": 78,
+                "y": 80,
                 "width": 1617,
-                "height": 933
+                "height": 931
             }
         },
-        "openedWindows": [
-            {
-                "folder": "file:///mnt/main/Projects/playground",
-                "backupPath": "/home/othman/.config/Code/Backups/9a7db1707bd54c96d8c86887c4261c9d",
-                "uiState": {
-                    "mode": 1,
-                    "x": 0,
-                    "y": 80,
-                    "width": 1617,
-                    "height": 931
-                }
-            },
-            {
-                "folder": "file:///mnt/main/Documents/obsidian",
-                "backupPath": "/home/othman/.config/Code/Backups/6adc1b5baf62cc93f9d47441a3c61c7c",
-                "uiState": {
-                    "mode": 0,
-                    "x": 0,
-                    "y": 78,
-                    "width": 1617,
-                    "height": 933
-                }
-            }
-        ]
+        "openedWindows": []
     }
 }
