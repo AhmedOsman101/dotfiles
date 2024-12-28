@@ -607,7 +607,7 @@
         <command>ob-screenshot --win</command>
       </action>
     </keybind>
-    <keybind key="W-Print">
+    <keybind key="W-S-s">
       <action name="Execute">
         <command>ob-screenshot --area</command>
       </action>
@@ -647,22 +647,22 @@
     <!-- Media Controls -->
     <keybind key="XF86AudioStop">
       <action name="Execute">
-        <command>mpc stop</command>
+        <command>spotifyctl playpause</command>
       </action>
     </keybind>
     <keybind key="XF86AudioPlay">
       <action name="Execute">
-        <command>mpc toggle</command>
+        <command>spotifyctl playpause</command>
       </action>
     </keybind>
     <keybind key="XF86AudioPrev">
       <action name="Execute">
-        <command>mpc prev</command>
+        <command>spotifyctl previous</command>
       </action>
     </keybind>
     <keybind key="XF86AudioNext">
       <action name="Execute">
-        <command>mpc next</command>
+        <command>spotifyctl next</command>
       </action>
     </keybind>
     <!-- ################################ Launch Applications ################################ -->
@@ -753,6 +753,11 @@
     <keybind key="C-A-l">
       <action name="Execute">
         <command>betterlockscreen --lock</command>
+      </action>
+    </keybind>
+    <keybind key="W-period">
+      <action name="Execute">
+        <command>rofi-emoji</command>
       </action>
     </keybind>
     <keybind key="W-t">

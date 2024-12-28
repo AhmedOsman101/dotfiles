@@ -7,6 +7,12 @@
         "folders": [
             {
                 "folderUri": "file:///mnt/main/Documents/obsidian"
+            },
+            {
+                "folderUri": "file:///mnt/main/Projects/playground"
+            },
+            {
+                "folderUri": "file:///mnt/main/Documents/obsidian/src"
             }
         ],
         "emptyWindows": []
@@ -331,13 +337,11 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save",
-                        "enabled": false
+                        "label": "&&Save"
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As...",
-                        "enabled": false
+                        "label": "Save &&As..."
                     },
                     {
                         "id": "saveAll",
@@ -352,6 +356,13 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
+                                {
+                                    "id": "github.copyVscodeDevLinkFile",
+                                    "label": "Copy vscode.dev Link"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
@@ -438,13 +449,11 @@
                     },
                     {
                         "id": "workbench.action.files.revert",
-                        "label": "Re&&vert File",
-                        "enabled": false
+                        "label": "Re&&vert File"
                     },
                     {
                         "id": "workbench.action.closeActiveEditor",
-                        "label": "&&Close Editor",
-                        "enabled": false
+                        "label": "&&Close Editor"
                     },
                     {
                         "id": "workbench.action.closeFolder",
@@ -493,13 +502,11 @@
                     },
                     {
                         "id": "actions.find",
-                        "label": "&&Find",
-                        "enabled": false
+                        "label": "&&Find"
                     },
                     {
                         "id": "editor.action.startFindReplaceAction",
-                        "label": "&&Replace",
-                        "enabled": false
+                        "label": "&&Replace"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -964,8 +971,7 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap",
-                        "enabled": false
+                        "label": "&&Word Wrap"
                     }
                 ]
             },
@@ -973,8 +979,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -983,8 +988,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1898,11 +1902,34 @@
             "uiState": {
                 "mode": 0,
                 "x": 0,
-                "y": 64,
-                "width": 1620,
-                "height": 972
+                "y": 78,
+                "width": 1617,
+                "height": 933
             }
         },
-        "openedWindows": []
+        "openedWindows": [
+            {
+                "folder": "file:///mnt/main/Projects/playground",
+                "backupPath": "/home/othman/.config/Code/Backups/9a7db1707bd54c96d8c86887c4261c9d",
+                "uiState": {
+                    "mode": 1,
+                    "x": 0,
+                    "y": 80,
+                    "width": 1617,
+                    "height": 931
+                }
+            },
+            {
+                "folder": "file:///mnt/main/Documents/obsidian",
+                "backupPath": "/home/othman/.config/Code/Backups/6adc1b5baf62cc93f9d47441a3c61c7c",
+                "uiState": {
+                    "mode": 0,
+                    "x": 0,
+                    "y": 78,
+                    "width": 1617,
+                    "height": 933
+                }
+            }
+        ]
     }
 }

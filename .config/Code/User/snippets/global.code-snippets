@@ -171,10 +171,10 @@
 		"description": "Defines a prop with typescript"
 	},
 	"watercss cdn": {
-		"scope": "javascript,typescript,vue, html, blade",
+		"scope": "javascript,typescript,vue,html,blade",
 		"prefix": "water",
 		"body": [
-			"<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/water.css@2/out/$dark.css' />"
+			"<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/water.css@2/out/$dark.css\" />"
 		],
 		"description": "watercss cdn, options water, dark, light"
 	},
