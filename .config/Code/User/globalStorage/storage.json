@@ -6,16 +6,10 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///mnt/main/Documents/obsidian"
-            },
-            {
-                "folderUri": "file:///mnt/main/Projects/playground"
-            },
-            {
                 "folderUri": "file:///mnt/main/Documents/obsidian/src"
             },
             {
-                "folderUri": "file:///mnt/main/Projects/playground/python"
+                "folderUri": "file:///mnt/main/Documents/obsidian"
             }
         ],
         "emptyWindows": []
@@ -106,17 +100,6 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///mnt/main/Projects/playground/python",
-                                        "path": "/mnt/main/Projects/playground/python",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/mnt/main/Projects/playground/python"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
                                         "external": "file:///mnt/main/Documents/obsidian",
                                         "path": "/mnt/main/Documents/obsidian",
                                         "scheme": "file"
@@ -134,6 +117,17 @@
                                     },
                                     "enabled": true,
                                     "label": "/mnt/main/Documents/obsidian/src"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///mnt/main/Projects/playground/python",
+                                        "path": "/mnt/main/Projects/playground/python",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/mnt/main/Projects/playground/python"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -359,8 +353,7 @@
                     },
                     {
                         "id": "saveAll",
-                        "label": "Save A&&ll",
-                        "enabled": false
+                        "label": "Save A&&ll"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -666,7 +659,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar"
+                                    "label": "&&Primary Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -1914,9 +1908,9 @@
             "uiState": {
                 "mode": 0,
                 "x": 0,
-                "y": 80,
-                "width": 1617,
-                "height": 931
+                "y": 79,
+                "width": 1620,
+                "height": 935
             }
         },
         "openedWindows": []
