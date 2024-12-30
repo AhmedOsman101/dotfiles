@@ -759,7 +759,7 @@
       <action name="Execute">
         <command>rofi-emoji</command>
       </action>
-    </keybind>    
+    </keybind>
     <keybind key="W-S-f">
       <action name="Execute">
         <command>xfce4-appfinder</command>

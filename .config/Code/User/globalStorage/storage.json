@@ -6,23 +6,10 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///mnt/main/Documents/obsidian/src"
-            },
-            {
                 "folderUri": "file:///mnt/main/Documents/obsidian"
             }
         ],
-        "emptyWindows": [
-            {
-                "backupFolder": "1735499784761"
-            },
-            {
-                "backupFolder": "1735506547355"
-            },
-            {
-                "backupFolder": "1735508996971"
-            }
-        ]
+        "emptyWindows": []
     },
     "profileAssociations": {
         "workspaces": {
@@ -49,11 +36,7 @@
             "file:///mnt/main/Projects/playground": "__default__profile__",
             "file:///mnt/main/Projects/playground/python": "__default__profile__"
         },
-        "emptyWindows": {
-            "1735499784761": "__default__profile__",
-            "1735506547355": "__default__profile__",
-            "1735508996971": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -1934,9 +1917,9 @@
             "uiState": {
                 "mode": 0,
                 "x": 0,
-                "y": 42,
-                "width": 809,
-                "height": 969
+                "y": 41,
+                "width": 813,
+                "height": 973
             }
         },
         "openedWindows": []
