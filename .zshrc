@@ -176,6 +176,8 @@ export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:/home/linuxbr
 
 . "$HOME/.asdf/asdf.sh"
 
+. "$HOME/.cargo/env"
+
 # Standard template for pandoc for converting to docx
 export MRT="$HOME/Documents/backup/WordTemplates/Standard.dotx"
 

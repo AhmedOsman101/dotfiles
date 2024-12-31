@@ -13,3 +13,4 @@ chsh -s "$(which zsh)"
 if command -v zsh &>/dev/null; then
     zsh
 fi
+. "$HOME/.cargo/env"
