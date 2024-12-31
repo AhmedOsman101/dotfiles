@@ -14,11 +14,11 @@
 		]
 	},
 	"function": {
-		"prefix": "fn",
+		"prefix": "fun",
 		"body": [
 			"",
-			"$void $1($2) {",
-			"  $3",
+			"$void $func($1) {",
+			"  $0",
 			"}",
 		]
 	},
