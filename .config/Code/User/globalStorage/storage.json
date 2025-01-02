@@ -6,15 +6,18 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///mnt/main/Projects/C%2B%2B/Shahyn"
+                "folderUri": "file:///mnt/main/Documents/obsidian"
             },
             {
-                "folderUri": "file:///mnt/main/Documents/obsidian"
+                "folderUri": "file:///home/othman/scripts"
+            },
+            {
+                "folderUri": "file:///home/othman/scripts/python/YoutubeDownloader"
             }
         ],
         "emptyWindows": [
             {
-                "backupFolder": "1735607196404"
+                "backupFolder": "1735839299716"
             }
         ]
     },
@@ -41,10 +44,11 @@
             "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1": "__default__profile__",
             "file:///home/othman/work/playground": "__default__profile__",
             "file:///mnt/main/Projects/playground": "__default__profile__",
-            "file:///mnt/main/Projects/playground/python": "__default__profile__"
+            "file:///mnt/main/Projects/playground/python": "__default__profile__",
+            "file:///home/othman/scripts/python/YoutubeDownloader": "__default__profile__"
         },
         "emptyWindows": {
-            "1735607196404": "__default__profile__"
+            "1735839299716": "__default__profile__"
         }
     },
     "lastKnownMenubarData": {
@@ -97,10 +101,33 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/scripts/python/YoutubeDownloader",
+                                        "path": "/home/othman/scripts/python/YoutubeDownloader",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/scripts/python/YoutubeDownloader"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/scripts",
+                                        "path": "/home/othman/scripts",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/scripts"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -191,29 +218,18 @@
                                     "label": "/mnt/main/Documents/backup"
                                 },
                                 {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/scripts",
-                                        "path": "/home/othman/scripts",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/scripts"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/.dotfiles",
-                                        "path": "/home/othman/.dotfiles",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/.dotfiles"
-                                },
-                                {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///tmp/fonts.txt",
+                                        "path": "/tmp/fonts.txt",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/tmp/fonts.txt"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -315,17 +331,6 @@
                                     "label": "/mnt/main/Documents/obsidian/src/College/IT-Essentials/Exams/draft.md"
                                 },
                                 {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/.config/kitty/kitty.conf",
-                                        "path": "/home/othman/.config/kitty/kitty.conf",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/.config/kitty/kitty.conf"
-                                },
-                                {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
@@ -370,8 +375,7 @@
                     },
                     {
                         "id": "saveAll",
-                        "label": "Save A&&ll",
-                        "enabled": false
+                        "label": "Save A&&ll"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -381,6 +385,13 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
+                                {
+                                    "id": "github.copyVscodeDevLinkFile",
+                                    "label": "Copy vscode.dev Link"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
@@ -670,7 +681,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar"
+                                    "label": "&&Primary Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -963,6 +975,10 @@
                     {
                         "id": "workbench.view.extensions",
                         "label": "E&&xtensions"
+                    },
+                    {
+                        "id": "workbench.view.extension.test",
+                        "label": "T&&esting"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1906,21 +1922,21 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 0,
+            "sideBarWidth": 293,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///mnt/main/Projects/C%2B%2B/Shahyn",
-            "backupPath": "/home/othman/.config/Code/Backups/4b57e6e0e6d3f81f97535811a4bd2b34",
+            "folder": "file:///home/othman/scripts/python/YoutubeDownloader",
+            "backupPath": "/home/othman/.config/Code/Backups/0d2ff93fdd97e0abb62808b8c783bb43",
             "uiState": {
                 "mode": 0,
                 "x": 0,
-                "y": 41,
-                "width": 819,
-                "height": 973
+                "y": 37,
+                "width": 749,
+                "height": 881
             }
         },
         "openedWindows": []
