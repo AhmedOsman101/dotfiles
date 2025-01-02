@@ -7,7 +7,8 @@
     "symlinks": [
       "/bin/python",
       "/bin/python3",
-      "/bin/python3.12"
+      "/bin/python3.12",
+      "/bin/python3.13"
     ]
   },
   "symlinks": []

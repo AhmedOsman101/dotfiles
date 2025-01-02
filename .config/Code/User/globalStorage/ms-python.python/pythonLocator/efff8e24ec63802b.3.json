@@ -1,0 +1,14 @@
+{
+  "environment": {
+    "executable": "/home/othman/scripts/python/YoutubeDownloader/.venv/bin/python",
+    "prefix": "/home/othman/scripts/python/YoutubeDownloader/.venv",
+    "version": "3.13.1.final.0",
+    "is64Bit": true,
+    "symlinks": [
+      "/home/othman/scripts/python/YoutubeDownloader/.venv/bin/python",
+      "/home/othman/scripts/python/YoutubeDownloader/.venv/bin/python3",
+      "/home/othman/scripts/python/YoutubeDownloader/.venv/bin/python3.13"
+    ]
+  },
+  "symlinks": []
+}
