@@ -6,18 +6,12 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///mnt/main/Documents/obsidian"
-            },
-            {
-                "folderUri": "file:///home/othman/scripts"
-            },
-            {
-                "folderUri": "file:///home/othman/scripts/python/YoutubeDownloader"
+                "folderUri": "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1"
             }
         ],
         "emptyWindows": [
             {
-                "backupFolder": "1735839299716"
+                "backupFolder": "1735848422682"
             }
         ]
     },
@@ -47,9 +41,7 @@
             "file:///mnt/main/Projects/playground/python": "__default__profile__",
             "file:///home/othman/scripts/python/YoutubeDownloader": "__default__profile__"
         },
-        "emptyWindows": {
-            "1735839299716": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -106,6 +98,17 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1",
+                                        "path": "/mnt/main/Projects/C++/ICPC/level-1",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/mnt/main/Projects/C++/ICPC/level-1"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -194,17 +197,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/work/playground"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1",
-                                        "path": "/mnt/main/Projects/C++/ICPC/level-1",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/mnt/main/Projects/C++/ICPC/level-1"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -375,7 +367,8 @@
                     },
                     {
                         "id": "saveAll",
-                        "label": "Save A&&ll"
+                        "label": "Save A&&ll",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -681,8 +674,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar",
-                                    "checked": true
+                                    "label": "&&Primary Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -975,10 +967,6 @@
                     {
                         "id": "workbench.view.extensions",
                         "label": "E&&xtensions"
-                    },
-                    {
-                        "id": "workbench.view.extension.test",
-                        "label": "T&&esting"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1341,7 +1329,8 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal"
+                        "label": "&&Split Terminal",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1922,20 +1911,20 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 293,
+            "sideBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/scripts/python/YoutubeDownloader",
-            "backupPath": "/home/othman/.config/Code/Backups/0d2ff93fdd97e0abb62808b8c783bb43",
+            "folder": "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1",
+            "backupPath": "/home/othman/.config/Code/Backups/a7c24b0cc187a6c6a4de40377d2d6011",
             "uiState": {
                 "mode": 0,
                 "x": 0,
                 "y": 37,
-                "width": 749,
+                "width": 752,
                 "height": 881
             }
         },
