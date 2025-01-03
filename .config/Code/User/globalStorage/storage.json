@@ -6,10 +6,17 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/othman/Documents/backup"
+                "folderUri": "file:///home/othman/work/C"
+            },
+            {
+                "folderUri": "file:///home/othman/Documents/obsidian"
             }
         ],
-        "emptyWindows": []
+        "emptyWindows": [
+            {
+                "backupFolder": "1735938385631"
+            }
+        ]
     },
     "profileAssociations": {
         "workspaces": {
@@ -36,9 +43,12 @@
             "file:///mnt/main/Projects/playground": "__default__profile__",
             "file:///mnt/main/Projects/playground/python": "__default__profile__",
             "file:///home/othman/scripts/python/YoutubeDownloader": "__default__profile__",
-            "file:///home/othman/Documents/backup": "__default__profile__"
+            "file:///home/othman/Documents/backup": "__default__profile__",
+            "file:///home/othman/work/C": "__default__profile__"
         },
-        "emptyWindows": {}
+        "emptyWindows": {
+            "1735938385631": "__default__profile__"
+        }
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -100,6 +110,28 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///home/othman/Documents/obsidian",
+                                        "path": "/home/othman/Documents/obsidian",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/obsidian"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/work/C",
+                                        "path": "/home/othman/work/C",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/work/C"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/othman/Documents/backup",
                                         "path": "/home/othman/Documents/backup",
                                         "scheme": "file"
@@ -144,17 +176,6 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///mnt/main/Documents/obsidian",
-                                        "path": "/mnt/main/Documents/obsidian",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/mnt/main/Documents/obsidian"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
                                         "external": "file:///mnt/main/Projects/C%2B%2B/Shahyn",
                                         "path": "/mnt/main/Projects/C++/Shahyn",
                                         "scheme": "file"
@@ -194,17 +215,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/mnt/main/Projects/playground"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/work/playground",
-                                        "path": "/home/othman/work/playground",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/work/playground"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -375,13 +385,6 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
-                                {
-                                    "id": "github.copyVscodeDevLinkFile",
-                                    "label": "Copy vscode.dev Link"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
@@ -671,8 +674,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar",
-                                    "checked": true
+                                    "label": "&&Primary Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -685,7 +687,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel"
+                                    "label": "&&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "toggle.toggleCustomTitleBar",
@@ -884,6 +887,13 @@
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
+                                    "id": "workbench.action.splitEditorInGroup",
+                                    "label": "Split in &&Group"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
                                     "id": "workbench.action.moveEditorToNewWindow",
                                     "label": "&&Move Editor into New Window"
                                 },
@@ -983,8 +993,7 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap",
-                        "enabled": false
+                        "label": "&&Word Wrap"
                     }
                 ]
             },
@@ -992,8 +1001,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1002,8 +1010,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1323,8 +1330,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1664,6 +1670,11 @@
                 "isNative": false,
                 "userSettingsLabel": "ctrl+k ctrl+\\"
             },
+            "workbench.action.splitEditorInGroup": {
+                "label": "Ctrl+K Ctrl+Shift+\\",
+                "isNative": false,
+                "userSettingsLabel": "ctrl+k ctrl+shift+\\"
+            },
             "workbench.action.copyEditorToNewWindow": {
                 "label": "Ctrl+K O",
                 "isNative": false,
@@ -1900,23 +1911,48 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 324,
+            "sideBarWidth": 254,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/Documents/backup",
-            "backupPath": "/home/othman/.config/Code/Backups/09d6b6e7d4d4a0acd0a9c945d2c34605",
+            "folder": "file:///home/othman/Documents/obsidian",
+            "backupPath": "/home/othman/.config/Code/Backups/3ac1572685e8ac4441905c07f35794f3",
             "uiState": {
                 "mode": 0,
-                "x": 0,
-                "y": 38,
-                "width": 752,
-                "height": 881
+                "x": 2,
+                "y": 74,
+                "width": 956,
+                "height": 1004,
+                "zoomLevel": 2
             }
         },
-        "openedWindows": []
+        "openedWindows": [
+            {
+                "folder": "file:///home/othman/work/C",
+                "backupPath": "/home/othman/.config/Code/Backups/c950bc01aff2cc1b21e2931861a9b2bb",
+                "uiState": {
+                    "mode": 0,
+                    "x": 0,
+                    "y": 38,
+                    "width": 752,
+                    "height": 881
+                }
+            },
+            {
+                "folder": "file:///home/othman/Documents/obsidian",
+                "backupPath": "/home/othman/.config/Code/Backups/3ac1572685e8ac4441905c07f35794f3",
+                "uiState": {
+                    "mode": 0,
+                    "x": 2,
+                    "y": 74,
+                    "width": 956,
+                    "height": 1004,
+                    "zoomLevel": 2
+                }
+            }
+        ]
     }
 }
