@@ -7,7 +7,7 @@
     "tabsize": 2,
     "tabstospaces": true,
     "xterm": true,
-    "lsp.server": "python=pylsp,typescript=typescript-language-server --stdio,javascript=typescript-language-server --stdio,markdown=deno lsp,json=deno lsp,jsonc=deno lsp,c++=clangd",
+    "lsp.server": "python=pylsp,typescript=typescript-language-server --stdio,javascript=typescript-language-server --stdio,markdown=deno lsp,json=deno lsp,jsonc=deno lsp,c++=clangd,c=clangd",
     "lsp.formatOnSave": true,
     "lsp.tabcompletion": true,
     "lsp.autocompleteDetails": true

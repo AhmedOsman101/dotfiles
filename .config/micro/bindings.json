@@ -1,5 +1,9 @@
 {
     "Alt-/": "lua:comment.comment",
+    "Alt-Left": "PreviousTab",
+    "Alt-Right": "NextTab",
+    "Alt-Shift-Left": "SelectWordLeft",
+    "Alt-Shift-Right": "SelectWordRight",
     "Alt-d": "command:definition",
     "Alt-f": "command:format",
     "Alt-k": "command:hover",
@@ -11,5 +15,6 @@
     "F12": "command:makeup",
     "F5": "command:runit",
     "F6": "lua:wc.wordCount",
-    "F9": "command:makeupbg"
+    "F9": "command:makeupbg",
+    "Tab": "command:lspcompletion|Autocomplete|IndentSelection|InsertTab"
 }

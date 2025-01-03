@@ -1,5 +1,12 @@
 /* Code comment style */
-.mtk3 {
+/* comment with catppuccin */
+/* .mtk3 { */
+/*   color: #008c7d !important; */
+/*   font-style: italic; */
+/* } */
+
+/* uncomment with catppuccin */
+.mtk4 {
   color: #008c7d !important;
   font-style: italic;
 }
