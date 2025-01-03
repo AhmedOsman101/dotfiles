@@ -1,15 +1,15 @@
 /* Code comment style */
 /* comment with catppuccin */
-/* .mtk3 { */
-/*   color: #008c7d !important; */
-/*   font-style: italic; */
-/* } */
-
-/* uncomment with catppuccin */
-.mtk4 {
+.mtk3 {
   color: #008c7d !important;
   font-style: italic;
 }
+
+/* uncomment with catppuccin */
+/* .mtk4 { */
+/*   color: #008c7d !important; */
+/*   font-style: italic; */
+/* } */
 
 .line-numbers {
   position: relative !important;

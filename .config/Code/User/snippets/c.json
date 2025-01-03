@@ -1,0 +1,32 @@
+{
+	"init": {
+		"prefix": "init",
+		"body": [
+			"#include <stdio.h>",
+			"",
+			"int main() {",
+			"  $1",
+			"",
+			"  return 0;",
+			"}",
+		]
+	},
+	"function": {
+		"prefix": "fun",
+		"body": [
+			"",
+			"$void $func($1) {",
+			"  $0",
+			"}",
+		]
+	},
+	"for": {
+		"prefix": "for",
+		"body": [
+			"",
+			"for($int $i = $start; $i < $count; $i++) {",
+			"  $0",
+			"}",
+		]
+	}
+}

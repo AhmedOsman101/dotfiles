@@ -26,8 +26,8 @@
 		"prefix": "for",
 		"body": [
 			"",
-			"for($int $i = $0; $i < $n; $i++) {",
-			"  //code",
+			"for($int $i = $start; $i < $count; $i++) {",
+			"  $0",
 			"}",
 		]
 	}

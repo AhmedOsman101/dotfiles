@@ -1755,7 +1755,7 @@
   "cody.autocomplete.enabled": true,
   "prettier.useEditorConfig": false,
   "indentColorizer.ignoreErrorLanguages": ["*"],
-  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "GitHub Dark",
   "workbench.startupEditor": "none",
   // "editor.suggest.preview": true,
   "terminal.integrated.suggest.enabled": true,
@@ -1865,5 +1865,9 @@
   "c-cpp-flylint.debug": true,
   "autopep8.interpreter": ["python"],
   "autopep8.showNotifications": "always",
-  "autopep8.importStrategy": "fromEnvironment"
+  "autopep8.importStrategy": "fromEnvironment",
+  "c-cpp-flylint.ignoreParseErrors": true,
+  "c-cpp-flylint.standard": ["c11", "c++11"],
+  "c-cpp-flylint.enable": false,
+  "c-cpp-flylint.language": "c"
 }
