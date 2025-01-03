@@ -1,19 +1,15 @@
 {
     "telemetry.sqmId": "",
     "telemetry.machineId": "c8ef2265f8676388228e7ac7ce8a2784b875527121944799733b3131c90a5142",
-    "telemetry.devDeviceId": "61e3feb5-efdd-4a4b-86e1-5196f9ebc967",
+    "telemetry.devDeviceId": "a17787ca-aafc-4aed-ac9c-05ed271d02a7",
     "backupWorkspaces": {
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1"
+                "folderUri": "file:///home/othman/Documents/backup"
             }
         ],
-        "emptyWindows": [
-            {
-                "backupFolder": "1735848422682"
-            }
-        ]
+        "emptyWindows": []
     },
     "profileAssociations": {
         "workspaces": {
@@ -39,7 +35,8 @@
             "file:///home/othman/work/playground": "__default__profile__",
             "file:///mnt/main/Projects/playground": "__default__profile__",
             "file:///mnt/main/Projects/playground/python": "__default__profile__",
-            "file:///home/othman/scripts/python/YoutubeDownloader": "__default__profile__"
+            "file:///home/othman/scripts/python/YoutubeDownloader": "__default__profile__",
+            "file:///home/othman/Documents/backup": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -98,6 +95,17 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/Documents/backup",
+                                        "path": "/home/othman/Documents/backup",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/backup"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -197,17 +205,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/work/playground"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///mnt/main/Documents/backup",
-                                        "path": "/mnt/main/Documents/backup",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/mnt/main/Documents/backup"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -674,7 +671,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar"
+                                    "label": "&&Primary Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -886,13 +884,6 @@
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
-                                    "id": "workbench.action.splitEditorInGroup",
-                                    "label": "Split in &&Group"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
                                     "id": "workbench.action.moveEditorToNewWindow",
                                     "label": "&&Move Editor into New Window"
                                 },
@@ -992,7 +983,8 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap"
+                        "label": "&&Word Wrap",
+                        "enabled": false
                     }
                 ]
             },
@@ -1000,7 +992,8 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back"
+                        "label": "&&Back",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1009,7 +1002,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1670,11 +1664,6 @@
                 "isNative": false,
                 "userSettingsLabel": "ctrl+k ctrl+\\"
             },
-            "workbench.action.splitEditorInGroup": {
-                "label": "Ctrl+K Ctrl+Shift+\\",
-                "isNative": false,
-                "userSettingsLabel": "ctrl+k ctrl+shift+\\"
-            },
             "workbench.action.copyEditorToNewWindow": {
                 "label": "Ctrl+K O",
                 "isNative": false,
@@ -1911,19 +1900,19 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 0,
+            "sideBarWidth": 324,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1",
-            "backupPath": "/home/othman/.config/Code/Backups/a7c24b0cc187a6c6a4de40377d2d6011",
+            "folder": "file:///home/othman/Documents/backup",
+            "backupPath": "/home/othman/.config/Code/Backups/09d6b6e7d4d4a0acd0a9c945d2c34605",
             "uiState": {
                 "mode": 0,
                 "x": 0,
-                "y": 37,
+                "y": 38,
                 "width": 752,
                 "height": 881
             }
