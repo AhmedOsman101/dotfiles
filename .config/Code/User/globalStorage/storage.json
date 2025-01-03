@@ -100,8 +100,7 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -374,8 +373,7 @@
                     },
                     {
                         "id": "saveAll",
-                        "label": "Save A&&ll",
-                        "enabled": false
+                        "label": "Save A&&ll"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -385,6 +383,13 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
+                                {
+                                    "id": "github.copyVscodeDevLinkFile",
+                                    "label": "Copy vscode.dev Link"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
@@ -674,7 +679,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar"
+                                    "label": "&&Primary Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -687,8 +693,7 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel",
-                                    "checked": true
+                                    "label": "&&Panel"
                                 },
                                 {
                                     "id": "toggle.toggleCustomTitleBar",
@@ -1330,7 +1335,8 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal"
+                        "label": "&&Split Terminal",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1925,34 +1931,9 @@
                 "x": 2,
                 "y": 74,
                 "width": 956,
-                "height": 1004,
-                "zoomLevel": 2
+                "height": 1004
             }
         },
-        "openedWindows": [
-            {
-                "folder": "file:///home/othman/work/C",
-                "backupPath": "/home/othman/.config/Code/Backups/c950bc01aff2cc1b21e2931861a9b2bb",
-                "uiState": {
-                    "mode": 0,
-                    "x": 0,
-                    "y": 38,
-                    "width": 752,
-                    "height": 881
-                }
-            },
-            {
-                "folder": "file:///home/othman/Documents/obsidian",
-                "backupPath": "/home/othman/.config/Code/Backups/3ac1572685e8ac4441905c07f35794f3",
-                "uiState": {
-                    "mode": 0,
-                    "x": 2,
-                    "y": 74,
-                    "width": 956,
-                    "height": 1004,
-                    "zoomLevel": 2
-                }
-            }
-        ]
+        "openedWindows": []
     }
 }
