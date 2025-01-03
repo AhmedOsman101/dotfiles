@@ -1755,7 +1755,7 @@
   "cody.autocomplete.enabled": true,
   "prettier.useEditorConfig": false,
   "indentColorizer.ignoreErrorLanguages": ["*"],
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.startupEditor": "none",
   // "editor.suggest.preview": true,
   "terminal.integrated.suggest.enabled": true,
@@ -1770,7 +1770,7 @@
     "editor.wordBreak": "normal",
     "editor.wrappingIndent": "none"
   },
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "catppuccin-macchiato",
   "cSpell.enableFiletypes": ["lua"],
   "security.allowedUNCHosts": ["wsl.localhost"],
   // vim related setup
@@ -1829,7 +1829,7 @@
   "php.format.rules.callParametersWrap": "onEveryItem",
   "php.hover.parametersFullName": true,
   "php.inlayHints.parameters.enabled": false,
-  "clangd.checkUpdates": true,
+  "clangd.checkUpdates": false,
   "clangd.onConfigChanged": "restart",
   "editor.pasteAs.preferences": [
     "text.plain",
