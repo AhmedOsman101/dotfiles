@@ -6,17 +6,13 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/othman/work/C"
+                "folderUri": "file:///home/othman/Documents/obsidian"
             },
             {
-                "folderUri": "file:///home/othman/Documents/obsidian"
+                "folderUri": "file:///home/othman/work/C%2B%2B/Shahyn"
             }
         ],
-        "emptyWindows": [
-            {
-                "backupFolder": "1735938385631"
-            }
-        ]
+        "emptyWindows": []
     },
     "profileAssociations": {
         "workspaces": {
@@ -46,9 +42,7 @@
             "file:///home/othman/Documents/backup": "__default__profile__",
             "file:///home/othman/work/C": "__default__profile__"
         },
-        "emptyWindows": {
-            "1735938385631": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -100,10 +94,22 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/work/C%2B%2B/Shahyn",
+                                        "path": "/home/othman/work/C++/Shahyn",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/work/C++/Shahyn"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -170,17 +176,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/scripts"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///mnt/main/Projects/C%2B%2B/Shahyn",
-                                        "path": "/mnt/main/Projects/C++/Shahyn",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/mnt/main/Projects/C++/Shahyn"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -373,7 +368,8 @@
                     },
                     {
                         "id": "saveAll",
-                        "label": "Save A&&ll"
+                        "label": "Save A&&ll",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -383,13 +379,6 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
-                                {
-                                    "id": "github.copyVscodeDevLinkFile",
-                                    "label": "Copy vscode.dev Link"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
@@ -476,7 +465,8 @@
                     },
                     {
                         "id": "workbench.action.files.revert",
-                        "label": "Re&&vert File"
+                        "label": "Re&&vert File",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeActiveEditor",
@@ -679,8 +669,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar",
-                                    "checked": true
+                                    "label": "&&Primary Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -1335,8 +1324,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1917,21 +1905,22 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 254,
+            "sideBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/Documents/obsidian",
-            "backupPath": "/home/othman/.config/Code/Backups/3ac1572685e8ac4441905c07f35794f3",
+            "folder": "file:///home/othman/work/C%2B%2B/Shahyn",
+            "backupPath": "/home/othman/.config/Code/Backups/d4e3521ad8d0015833d3a63de60f9f4f",
             "uiState": {
                 "mode": 0,
                 "x": 2,
                 "y": 74,
                 "width": 956,
-                "height": 1004
+                "height": 1004,
+                "zoomLevel": 2
             }
         },
         "openedWindows": []
