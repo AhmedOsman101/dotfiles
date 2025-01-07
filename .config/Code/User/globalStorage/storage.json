@@ -6,10 +6,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/othman/Documents/obsidian"
-            },
-            {
-                "folderUri": "file:///home/othman/work/C%2B%2B/Shahyn"
+                "folderUri": "file:///home/othman/work/C%2B%2B/ICPC/level-1"
             }
         ],
         "emptyWindows": []
@@ -99,6 +96,17 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/work/C%2B%2B/ICPC/level-1",
+                                        "path": "/home/othman/work/C++/ICPC/level-1",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/work/C++/ICPC/level-1"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -198,17 +206,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/mnt/main/Projects/playground/python"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///mnt/main/Projects/playground",
-                                        "path": "/mnt/main/Projects/playground",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/mnt/main/Projects/playground"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -380,6 +377,13 @@
                         "submenu": {
                             "items": [
                                 {
+                                    "id": "github.copyVscodeDevLinkFile",
+                                    "label": "Copy vscode.dev Link"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
                                 }
@@ -465,8 +469,7 @@
                     },
                     {
                         "id": "workbench.action.files.revert",
-                        "label": "Re&&vert File",
-                        "enabled": false
+                        "label": "Re&&vert File"
                     },
                     {
                         "id": "workbench.action.closeActiveEditor",
@@ -669,7 +672,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar"
+                                    "label": "&&Primary Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -682,7 +686,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel"
+                                    "label": "&&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "toggle.toggleCustomTitleBar",
@@ -1905,22 +1910,21 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 0,
+            "sideBarWidth": 254,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/work/C%2B%2B/Shahyn",
-            "backupPath": "/home/othman/.config/Code/Backups/d4e3521ad8d0015833d3a63de60f9f4f",
+            "folder": "file:///home/othman/work/C%2B%2B/ICPC/level-1",
+            "backupPath": "/home/othman/.config/Code/Backups/bfc43d0bcba8d1aa0c4cdf0205025f71",
             "uiState": {
                 "mode": 0,
                 "x": 2,
                 "y": 74,
                 "width": 956,
-                "height": 1004,
-                "zoomLevel": 2
+                "height": 1004
             }
         },
         "openedWindows": []
