@@ -16,5 +16,5 @@
     "F5": "command:runit",
     "F6": "lua:wc.wordCount",
     "F9": "command:makeupbg",
-    "Tab": "command:lspcompletion|Autocomplete|IndentSelection|InsertTab"
+    "Tab": "Autocomplete|IndentSelection|InsertTab"
 }
