@@ -1071,6 +1071,7 @@
     <application class="*">
       <focus>yes</focus>
       <decor>yes</decor>
+      <cursor>Bibata</cursor>
     </application>
     <application name="obconf">
       <position force="yes">
