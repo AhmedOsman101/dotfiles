@@ -247,3 +247,7 @@ export STARSHIP_CONFIG=~/.config/starship.toml
 export LIBVIRT_DEFAULT_URI='qemu:///system'
 
 export MICRO_TRUECOLOR=1
+
+export XCURSOR_THEME="Bibata"
+export XCURSOR_SIZE="24"
+
