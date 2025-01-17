@@ -1770,7 +1770,7 @@
     "editor.wordBreak": "normal",
     "editor.wrappingIndent": "none"
   },
-  "workbench.iconTheme": "catppuccin-macchiato",
+  "workbench.iconTheme": "vscode-icons",
   "cSpell.enableFiletypes": ["lua"],
   "security.allowedUNCHosts": ["wsl.localhost"],
   // vim related setup
