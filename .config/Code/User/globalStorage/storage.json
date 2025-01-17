@@ -6,7 +6,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/othman/scripts"
+                "folderUri": "file:///home/othman/Documents/obsidian"
             }
         ],
         "emptyWindows": []
@@ -101,6 +101,17 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///home/othman/Documents/obsidian",
+                                        "path": "/home/othman/Documents/obsidian",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/obsidian"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/othman/scripts",
                                         "path": "/home/othman/scripts",
                                         "scheme": "file"
@@ -140,17 +151,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/work/C++/Shahyn"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/Documents/obsidian",
-                                        "path": "/home/othman/Documents/obsidian",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/obsidian"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -999,7 +999,8 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back"
+                        "label": "&&Back",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1008,7 +1009,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1917,14 +1919,14 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/scripts",
-            "backupPath": "/home/othman/.config/Code/Backups/6cd0b8d506c05d712f0f209d6bc009d1",
+            "folder": "file:///home/othman/Documents/obsidian",
+            "backupPath": "/home/othman/.config/Code/Backups/3ac1572685e8ac4441905c07f35794f3",
             "uiState": {
                 "mode": 0,
-                "x": 0,
-                "y": 69,
-                "width": 1620,
-                "height": 973
+                "x": 806,
+                "y": 80,
+                "width": 809,
+                "height": 974
             }
         },
         "openedWindows": []
