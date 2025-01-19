@@ -6,7 +6,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/othman/Documents/obsidian"
+                "folderUri": "file:///home/othman/.dotfiles/.config/kitty"
             }
         ],
         "emptyWindows": []
@@ -37,7 +37,8 @@
             "file:///mnt/main/Projects/playground/python": "__default__profile__",
             "file:///home/othman/scripts/python/YoutubeDownloader": "__default__profile__",
             "file:///home/othman/Documents/backup": "__default__profile__",
-            "file:///home/othman/work/C": "__default__profile__"
+            "file:///home/othman/work/C": "__default__profile__",
+            "file:///home/othman/.dotfiles/.config/kitty": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -91,11 +92,21 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/.dotfiles/.config/kitty",
+                                        "path": "/home/othman/.dotfiles/.config/kitty",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.dotfiles/.config/kitty"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -195,17 +206,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/scripts/python/YoutubeDownloader"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///mnt/main/Documents/obsidian/src",
-                                        "path": "/mnt/main/Documents/obsidian/src",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/mnt/main/Documents/obsidian/src"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -999,8 +999,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1009,8 +1008,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1912,20 +1910,20 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 254,
+            "sideBarWidth": 373,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/Documents/obsidian",
-            "backupPath": "/home/othman/.config/Code/Backups/3ac1572685e8ac4441905c07f35794f3",
+            "folder": "file:///home/othman/.dotfiles/.config/kitty",
+            "backupPath": "/home/othman/.config/Code/Backups/3a26c0fe47785c4f7839d6f154cd1ddb",
             "uiState": {
                 "mode": 0,
-                "x": 806,
-                "y": 80,
-                "width": 809,
+                "x": 805,
+                "y": 79,
+                "width": 815,
                 "height": 974
             }
         },
