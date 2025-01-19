@@ -111,6 +111,7 @@ alias pip="pip3"
 alias getgpu="lspci -k -d ::03xx"
 alias ocr="tesseract"
 alias mc="micro"
+alias lzg="lazygit"
 
 # ---- Homebrew ----- #
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -174,7 +175,7 @@ yy() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 
-export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:/home/linuxbrew/.linuxbrew/bin:$BUN_INSTALL/bin"
+export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:$HOME/scripts/python:/home/linuxbrew/.linuxbrew/bin:$BUN_INSTALL/bin"
 
 . "$HOME/.asdf/asdf.sh"
 
