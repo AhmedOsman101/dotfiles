@@ -1869,5 +1869,6 @@
   "c-cpp-flylint.ignoreParseErrors": true,
   "c-cpp-flylint.standard": ["c11", "c++11"],
   "c-cpp-flylint.enable": false,
-  "c-cpp-flylint.language": "c"
+  "c-cpp-flylint.language": "c",
+  "geminiCommit.commit.onlyStagedChanges": true
 }
