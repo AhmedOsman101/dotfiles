@@ -6,17 +6,10 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/othman/.dotfiles/.config/kitty"
-            },
-            {
-                "folderUri": "file:///home/othman/scripts"
+                "folderUri": "file:///mnt/main/Projects/vue-chess"
             }
         ],
-        "emptyWindows": [
-            {
-                "backupFolder": "1737286643095"
-            }
-        ]
+        "emptyWindows": []
     },
     "profileAssociations": {
         "workspaces": {
@@ -45,11 +38,10 @@
             "file:///home/othman/scripts/python/YoutubeDownloader": "__default__profile__",
             "file:///home/othman/Documents/backup": "__default__profile__",
             "file:///home/othman/work/C": "__default__profile__",
-            "file:///home/othman/.dotfiles/.config/kitty": "__default__profile__"
+            "file:///home/othman/.dotfiles/.config/kitty": "__default__profile__",
+            "file:///mnt/main/Projects/vue-chess": "__default__profile__"
         },
-        "emptyWindows": {
-            "1737286643095": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -110,12 +102,12 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/othman/.dotfiles/.config/kitty",
-                                        "path": "/home/othman/.dotfiles/.config/kitty",
+                                        "external": "file:///mnt/main/Projects/vue-chess",
+                                        "path": "/mnt/main/Projects/vue-chess",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/.dotfiles/.config/kitty"
+                                    "label": "/mnt/main/Projects/vue-chess"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -127,6 +119,17 @@
                                     },
                                     "enabled": true,
                                     "label": "~/scripts"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/.dotfiles/.config/kitty",
+                                        "path": "/home/othman/.dotfiles/.config/kitty",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.dotfiles/.config/kitty"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -204,17 +207,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/mnt/main/Projects/C++/ICPC/level-1"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/scripts/python/YoutubeDownloader",
-                                        "path": "/home/othman/scripts/python/YoutubeDownloader",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/scripts/python/YoutubeDownloader"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -366,11 +358,13 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save"
+                        "label": "&&Save",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As..."
+                        "label": "Save &&As...",
+                        "enabled": false
                     },
                     {
                         "id": "saveAll",
@@ -478,11 +472,13 @@
                     },
                     {
                         "id": "workbench.action.files.revert",
-                        "label": "Re&&vert File"
+                        "label": "Re&&vert File",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeActiveEditor",
-                        "label": "&&Close Editor"
+                        "label": "&&Close Editor",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeFolder",
@@ -531,11 +527,13 @@
                     },
                     {
                         "id": "actions.find",
-                        "label": "&&Find"
+                        "label": "&&Find",
+                        "enabled": false
                     },
                     {
                         "id": "editor.action.startFindReplaceAction",
-                        "label": "&&Replace"
+                        "label": "&&Replace",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -894,13 +892,6 @@
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
-                                    "id": "workbench.action.splitEditorInGroup",
-                                    "label": "Split in &&Group"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
                                     "id": "workbench.action.moveEditorToNewWindow",
                                     "label": "&&Move Editor into New Window"
                                 },
@@ -977,10 +968,6 @@
                         "label": "E&&xtensions"
                     },
                     {
-                        "id": "workbench.view.extension.test",
-                        "label": "T&&esting"
-                    },
-                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -1004,7 +991,8 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap"
+                        "label": "&&Word Wrap",
+                        "enabled": false
                     }
                 ]
             },
@@ -1021,7 +1009,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1341,7 +1330,8 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal"
+                        "label": "&&Split Terminal",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1681,11 +1671,6 @@
                 "isNative": false,
                 "userSettingsLabel": "ctrl+k ctrl+\\"
             },
-            "workbench.action.splitEditorInGroup": {
-                "label": "Ctrl+K Ctrl+Shift+\\",
-                "isNative": false,
-                "userSettingsLabel": "ctrl+k ctrl+shift+\\"
-            },
             "workbench.action.copyEditorToNewWindow": {
                 "label": "Ctrl+K O",
                 "isNative": false,
@@ -1929,13 +1914,13 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/scripts",
-            "backupPath": "/home/othman/.config/Code/Backups/6cd0b8d506c05d712f0f209d6bc009d1",
+            "folder": "file:///mnt/main/Projects/vue-chess",
+            "backupPath": "/home/othman/.config/Code/Backups/d304363c17651ac60c24e0dd8033b3e9",
             "uiState": {
                 "mode": 0,
-                "x": 803,
-                "y": 78,
-                "width": 820,
+                "x": 806,
+                "y": 41,
+                "width": 818,
                 "height": 973
             }
         },
