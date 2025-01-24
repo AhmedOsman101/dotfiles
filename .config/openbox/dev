@@ -1,0 +1,8 @@
+No backlight controller was found, so we could not decide an automatic target. The current command will have no effect. Please use -L to find a target and then specify it with -s.
+
+No backlight controller was found, so we could not decide an automatic target. The current command will have no effect. Please use -L to find a target and then specify it with -s.
+
+No support for device type: power_supply
+No support for device type: power_supply
+polybar|error: Disabling module "ethernet" (reason: Invalid network interface "enp0s20f0u2")
+polybar|error: Disabling module "ethernet" (reason: Invalid network interface "enp0s20f0u2")

@@ -750,11 +750,11 @@
       </action>
     </keybind>
     <!-- Misc -->
-    <keybind key="C-A-l">
-      <action name="Execute">
-        <command>betterlockscreen --lock</command>
-      </action>
-    </keybind>
+    <!-- <keybind key="C-A-l"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <command>betterlockscreen lock</command> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
     <keybind key="W-period">
       <action name="Execute">
         <command>rofi-emoji</command>
