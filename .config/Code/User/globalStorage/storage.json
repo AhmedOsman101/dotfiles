@@ -93,7 +93,8 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -1922,10 +1923,10 @@
             "backupPath": "/home/othman/.config/Code/Backups/d304363c17651ac60c24e0dd8033b3e9",
             "uiState": {
                 "mode": 0,
-                "x": 808,
-                "y": 526,
-                "width": 809,
-                "height": 485
+                "x": 807,
+                "y": 525,
+                "width": 814,
+                "height": 489
             }
         },
         "openedWindows": []
