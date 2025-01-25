@@ -28,3 +28,7 @@
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
+[http]
+	retry = 10
+	lowSpeedLimit = 0
+	lowSpeedTime = 999
