@@ -444,3 +444,33 @@ Caused by: java.io.IOException: error=2, No such file or directory
 
 Jan 27, 2025 12:01:49 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 WARNING: Unmatched cancel notification for request id 12
+Jan 27, 2025 12:02:24 AM org.eclipse.lemminx.commons.ParentProcessWatcher parentProcessStillRunning
+WARNING: Cannot run program "kill": error=2, No such file or directory
+java.io.IOException: Cannot run program "kill": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at java.base/java.lang.Runtime.exec(Runtime.java:681)
+	at java.base/java.lang.Runtime.exec(Runtime.java:491)
+	at java.base/java.lang.Runtime.exec(Runtime.java:366)
+	at org.eclipse.lemminx.commons.ParentProcessWatcher.parentProcessStillRunning(ParentProcessWatcher.java:96)
+	at org.eclipse.lemminx.commons.ParentProcessWatcher.run(ParentProcessWatcher.java:68)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:295)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:225)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 12 more
+
+Jan 27, 2025 12:02:41 AM org.eclipse.lemminx.XMLLanguageServer initialize
+INFO: Initializing XML Language server
+LemMinX Server info:
+ - Version : 0.29.0
+ - Native Image
+ - VM Version : 17.0.9
+ - Git acacf75 - [maven-release-plugin] prepare release 0.29.0
