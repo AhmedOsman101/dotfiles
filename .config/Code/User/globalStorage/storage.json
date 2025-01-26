@@ -6,10 +6,10 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///mnt/main/Projects/chess-engine-ts"
+                "folderUri": "file:///mnt/main/Projects/qaderoon-project"
             },
             {
-                "folderUri": "file:///mnt/main/Documents/obsidian"
+                "folderUri": "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1"
             }
         ],
         "emptyWindows": []
@@ -44,7 +44,8 @@
             "file:///home/othman/.dotfiles/.config/kitty": "__default__profile__",
             "file:///mnt/main/Projects/vue-chess": "__default__profile__",
             "file:///mnt/main/Projects/C/chess-engine": "__default__profile__",
-            "file:///mnt/main/Projects/chess-engine-ts": "__default__profile__"
+            "file:///mnt/main/Projects/chess-engine-ts": "__default__profile__",
+            "file:///mnt/main/Projects/qaderoon-project": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -98,7 +99,8 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -107,12 +109,23 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///mnt/main/Documents/obsidian",
-                                        "path": "/mnt/main/Documents/obsidian",
+                                        "external": "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1",
+                                        "path": "/mnt/main/Projects/C++/ICPC/level-1",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/mnt/main/Documents/obsidian"
+                                    "label": "/mnt/main/Projects/C++/ICPC/level-1"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///mnt/main/Projects/qaderoon-project",
+                                        "path": "/mnt/main/Projects/qaderoon-project",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/mnt/main/Projects/qaderoon-project"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -124,6 +137,17 @@
                                     },
                                     "enabled": true,
                                     "label": "/mnt/main/Projects/chess-engine-ts"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///mnt/main/Documents/obsidian",
+                                        "path": "/mnt/main/Documents/obsidian",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/mnt/main/Documents/obsidian"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -190,28 +214,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/work/C++/ICPC"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/work/C%2B%2B/ICPC/level-1",
-                                        "path": "/home/othman/work/C++/ICPC/level-1",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/work/C++/ICPC/level-1"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/work/C%2B%2B/Shahyn",
-                                        "path": "/home/othman/work/C++/Shahyn",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/work/C++/Shahyn"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -382,6 +384,13 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
+                                {
+                                    "id": "github.copyVscodeDevLinkFile",
+                                    "label": "Copy vscode.dev Link"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
@@ -1007,8 +1016,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1328,8 +1336,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1910,46 +1917,23 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 300,
+            "sideBarWidth": 306,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///mnt/main/Documents/obsidian",
-            "backupPath": "/home/othman/.config/Code/Backups/6adc1b5baf62cc93f9d47441a3c61c7c",
+            "folder": "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1",
+            "backupPath": "/home/othman/.config/Code/Backups/a7c24b0cc187a6c6a4de40377d2d6011",
             "uiState": {
                 "mode": 0,
-                "x": 784,
-                "y": 503,
-                "width": 831,
-                "height": 506
+                "x": 0,
+                "y": 78,
+                "width": 839,
+                "height": 515
             }
         },
-        "openedWindows": [
-            {
-                "folder": "file:///mnt/main/Projects/chess-engine-ts",
-                "backupPath": "/home/othman/.config/Code/Backups/b1cfe24cfa436385f751750ab8d84c4f",
-                "uiState": {
-                    "mode": 0,
-                    "x": 803,
-                    "y": 522,
-                    "width": 826,
-                    "height": 501
-                }
-            },
-            {
-                "folder": "file:///mnt/main/Documents/obsidian",
-                "backupPath": "/home/othman/.config/Code/Backups/6adc1b5baf62cc93f9d47441a3c61c7c",
-                "uiState": {
-                    "mode": 0,
-                    "x": 784,
-                    "y": 503,
-                    "width": 831,
-                    "height": 506
-                }
-            }
-        ]
+        "openedWindows": []
     }
 }
