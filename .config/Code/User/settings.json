@@ -1236,7 +1236,7 @@
     "fsharp": "fsi",
     "csharp": "scriptcs",
     "vbscript": "cscript //Nologo",
-    "typescript": "clear; ts-node",
+    "typescript": "clear; deno --unstable-sloppy-imports",
     "coffeescript": "coffee",
     "scala": "scala",
     "swift": "swift",
@@ -1428,11 +1428,9 @@
   "breadcrumbs.showEnums": false,
   "breadcrumbs.showEvents": false,
   "breadcrumbs.showFields": false,
-  "breadcrumbs.showInterfaces": false,
   "breadcrumbs.showKeys": false,
   "breadcrumbs.showMethods": false,
   "breadcrumbs.showModules": false,
-  "breadcrumbs.showNamespaces": false,
   "breadcrumbs.showNull": false,
   "breadcrumbs.showNumbers": false,
   "breadcrumbs.showObjects": false,
@@ -1502,7 +1500,6 @@
   "phpParameterHint.changeDelay": 20,
   "phpParameterHint.collapseHintsWhenEqual": true,
   "prettier.singleAttributePerLine": true,
-  "prettier.vueIndentScriptAndStyle": true,
   "js/ts.implicitProjectConfig.target": "ESNext",
   "cody.autocomplete.advanced.provider": "default",
   "cody.autocomplete.formatOnAccept": true,
@@ -1770,7 +1767,7 @@
     "editor.wordBreak": "normal",
     "editor.wrappingIndent": "none"
   },
-  "workbench.iconTheme": "catppuccin-macchiato",
+  "workbench.iconTheme": "vscode-icons",
   "cSpell.enableFiletypes": ["lua"],
   "security.allowedUNCHosts": ["wsl.localhost"],
   // vim related setup
@@ -1869,5 +1866,14 @@
   "c-cpp-flylint.ignoreParseErrors": true,
   "c-cpp-flylint.standard": ["c11", "c++11"],
   "c-cpp-flylint.enable": false,
-  "c-cpp-flylint.language": "c"
+  "c-cpp-flylint.language": "c",
+  "geminiCommit.commit.onlyStagedChanges": true,
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "files.readonlyFromPermissions": true,
+  "prettier.endOfLine": "auto",
+  "prettier.resolveGlobalModules": true,
+  "clangd.fallbackFlags": ["-Iinclude"],
+  "clangd.arguments": ["--header-insertion=iwyu"],
+  "c-cpp-flylint.clang.includePaths": ["*/inlcude/*"],
+  "c-cpp-flylint.includePaths": ["inlcude"]
 }

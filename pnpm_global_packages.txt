@@ -1,11 +1,16 @@
-@vue/cli 5.0.8
-cowsay 1.6.0
-create-vite 5.5.5
-marked 14.1.3
-nodemon 3.1.7
-puppeteer 23.2.1
-pure-prompt 1.23.0
-ts-node 10.9.2
-tsx 4.19.2
-typescript 5.6.2
-vitepress 1.4.3
+@vue/cli
+clang-format
+cowsay
+create-vite
+intelephense
+json-server
+marked
+nodemon
+puppeteer
+pure-prompt
+ts-node
+tsx
+typescript
+typescript-language-server
+vitepress
+vue

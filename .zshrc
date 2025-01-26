@@ -76,6 +76,8 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+noDuplicates .zsh_history 2>/dev/null
+
 # ---- Completion styling ----- #
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
@@ -98,7 +100,7 @@ alias vimconfig="cd ~/.config/nvim"
 # ---- Zoxide (better cd) ----- #
 alias cd="z"
 # ---- Eza (better ls) ----- #
-alias ls="eza --color=always --long --git --icons=always --no-time --no-user --all"
+alias ls="eza  --all --color=always --long --git --icons=always --no-time --no-user --sort name"
 # ---- Trash-cli (better rm & rmdir) ----- #
 alias rm="rmtrash"
 alias rmdir="rmdirtrash"
@@ -109,6 +111,7 @@ alias pip="pip3"
 alias getgpu="lspci -k -d ::03xx"
 alias ocr="tesseract"
 alias mc="micro"
+alias lzg="lazygit"
 
 # ---- Homebrew ----- #
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -172,7 +175,7 @@ yy() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 
-export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:/home/linuxbrew/.linuxbrew/bin:$BUN_INSTALL/bin"
+export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:$HOME/scripts/python:/home/linuxbrew/.linuxbrew/bin:$BUN_INSTALL/bin"
 
 . "$HOME/.asdf/asdf.sh"
 
