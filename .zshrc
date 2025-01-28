@@ -112,6 +112,7 @@ alias getgpu="lspci -k -d ::03xx"
 alias ocr="tesseract"
 alias mc="micro"
 alias lzg="lazygit"
+alias npx="pnpm dlx"
 
 # ---- Homebrew ----- #
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

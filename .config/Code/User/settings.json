@@ -1214,7 +1214,7 @@
   "C_Cpp.default.cStandard": "c23",
   "debug.onTaskErrors": "showErrors",
   "code-runner.executorMap": {
-    "javascript": "clear && node",
+    "javascript": "clear && deno",
     "java": "cd $dir; javac $fileName ; java $fileNameWithoutExt",
     "c": "cd $dirWithoutTrailingSlash; clear; clangc $fileName",
     "cpp": "cd $dirWithoutTrailingSlash; clear; cppc $fileName",
@@ -1315,13 +1315,13 @@
     "editor.defaultFormatter": "chiehyu.vscode-astyle"
   },
   "files.exclude": {
-    "**/vendor/": false,
-    "**/node_modules": false,
-    "**/dist": false,
+    "**/vendor/": true,
+    "**/node_modules": true,
+    "**/dist": true,
     ".phpunit.result.cache": false,
-    "vendor": false,
-    "node_modules": false,
-    "dist": false,
+    "vendor": true,
+    "node_modules": true,
+    "dist": true,
     "**/.trunk/*actions/": true,
     "**/.trunk/*logs/": true,
     "**/.trunk/*notifications/": true,
