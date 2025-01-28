@@ -4,7 +4,7 @@ LastActiveRenamer=ThunarSbrReplaceRenamer
 
 [ThunarSbrReplaceRenamer]
 CaseSensitive=FALSE
-Replacement=2024-12-18
-Pattern=18-12-2024
+Replacement=sponsor
+Pattern=sponser
 Regexp=TRUE
 

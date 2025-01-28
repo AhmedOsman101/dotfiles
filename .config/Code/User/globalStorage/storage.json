@@ -6,7 +6,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/othman/.dotfiles"
+                "folderUri": "file:///home/othman/work/qaderoon-project"
             }
         ],
         "emptyWindows": []
@@ -37,7 +37,9 @@
             "file:///mnt/main/Projects/playground/python": "__default__profile__",
             "file:///home/othman/scripts/python/YoutubeDownloader": "__default__profile__",
             "file:///home/othman/Documents/backup": "__default__profile__",
-            "file:///home/othman/work/C": "__default__profile__"
+            "file:///home/othman/work/C": "__default__profile__",
+            "file:///home/othman/work/qaderoon-project/client": "__default__profile__",
+            "file:///home/othman/work/qaderoon-project": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -100,6 +102,39 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///home/othman/work/qaderoon-project",
+                                        "path": "/home/othman/work/qaderoon-project",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/work/qaderoon-project"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/work/C%2B%2B/ICPC/level-1",
+                                        "path": "/home/othman/work/C++/ICPC/level-1",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/work/C++/ICPC/level-1"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/othman/work/qaderoon-project/client",
+                                        "path": "/home/othman/work/qaderoon-project/client",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/work/qaderoon-project/client"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/othman/.dotfiles",
                                         "path": "/home/othman/.dotfiles",
                                         "scheme": "file"
@@ -128,17 +163,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/work/C++/ICPC"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/work/C%2B%2B/ICPC/level-1",
-                                        "path": "/home/othman/work/C++/ICPC/level-1",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/work/C++/ICPC/level-1"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -183,28 +207,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Documents/backup"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///mnt/main/Projects/C%2B%2B/ICPC/level-1",
-                                        "path": "/mnt/main/Projects/C++/ICPC/level-1",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/mnt/main/Projects/C++/ICPC/level-1"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/scripts/python/YoutubeDownloader",
-                                        "path": "/home/othman/scripts/python/YoutubeDownloader",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/scripts/python/YoutubeDownloader"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -1686,8 +1688,9 @@
                 "userSettingsLabel": "ctrl+shift+f"
             },
             "workbench.view.scm": {
-                "label": "Ctrl+Shift+G",
-                "userSettingsLabel": "ctrl+shift+g"
+                "label": "Ctrl+Shift+G G",
+                "isNative": false,
+                "userSettingsLabel": "ctrl+shift+g g"
             },
             "workbench.view.debug": {
                 "label": "Ctrl+Shift+D",
@@ -1904,15 +1907,15 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 392,
+            "sideBarWidth": 366,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/.dotfiles",
-            "backupPath": "/home/othman/.config/Code/Backups/2df83c8449bc3efce0a9d404e141a3e0",
+            "folder": "file:///home/othman/work/qaderoon-project",
+            "backupPath": "/home/othman/.config/Code/Backups/8c67c7b0a6f53db6621a88c5051af62f",
             "uiState": {
                 "mode": 0,
                 "x": 0,
