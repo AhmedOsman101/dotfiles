@@ -1876,5 +1876,6 @@
   "clangd.arguments": ["--header-insertion=iwyu"],
   "c-cpp-flylint.clang.includePaths": ["*/inlcude/*"],
   "c-cpp-flylint.includePaths": ["inlcude"],
-  "vscord.behaviour.prioritizeLanguagesOverExtensions": true
+  "vscord.behaviour.prioritizeLanguagesOverExtensions": true,
+  "security.workspace.trust.enabled": true
 }

@@ -6,7 +6,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/othman/work/qaderoon-project"
+                "folderUri": "file:///home/othman/work/qaderoon-project/client"
             }
         ],
         "emptyWindows": []
@@ -102,6 +102,17 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///home/othman/work/qaderoon-project/client",
+                                        "path": "/home/othman/work/qaderoon-project/client",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/work/qaderoon-project/client"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/othman/work/qaderoon-project",
                                         "path": "/home/othman/work/qaderoon-project",
                                         "scheme": "file"
@@ -119,17 +130,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/work/C++/ICPC/level-1"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/othman/work/qaderoon-project/client",
-                                        "path": "/home/othman/work/qaderoon-project/client",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/work/qaderoon-project/client"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -358,13 +358,11 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save",
-                        "enabled": false
+                        "label": "&&Save"
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As...",
-                        "enabled": false
+                        "label": "Save &&As..."
                     },
                     {
                         "id": "saveAll",
@@ -472,13 +470,11 @@
                     },
                     {
                         "id": "workbench.action.files.revert",
-                        "label": "Re&&vert File",
-                        "enabled": false
+                        "label": "Re&&vert File"
                     },
                     {
                         "id": "workbench.action.closeActiveEditor",
-                        "label": "&&Close Editor",
-                        "enabled": false
+                        "label": "&&Close Editor"
                     },
                     {
                         "id": "workbench.action.closeFolder",
@@ -527,13 +523,11 @@
                     },
                     {
                         "id": "actions.find",
-                        "label": "&&Find",
-                        "enabled": false
+                        "label": "&&Find"
                     },
                     {
                         "id": "editor.action.startFindReplaceAction",
-                        "label": "&&Replace",
-                        "enabled": false
+                        "label": "&&Replace"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -892,6 +886,13 @@
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
+                                    "id": "workbench.action.splitEditorInGroup",
+                                    "label": "Split in &&Group"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
                                     "id": "workbench.action.moveEditorToNewWindow",
                                     "label": "&&Move Editor into New Window"
                                 },
@@ -991,8 +992,7 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap",
-                        "enabled": false
+                        "label": "&&Word Wrap"
                     }
                 ]
             },
@@ -1329,8 +1329,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1670,6 +1669,11 @@
                 "isNative": false,
                 "userSettingsLabel": "ctrl+k ctrl+\\"
             },
+            "workbench.action.splitEditorInGroup": {
+                "label": "Ctrl+K Ctrl+Shift+\\",
+                "isNative": false,
+                "userSettingsLabel": "ctrl+k ctrl+shift+\\"
+            },
             "workbench.action.copyEditorToNewWindow": {
                 "label": "Ctrl+K O",
                 "isNative": false,
@@ -1914,14 +1918,14 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/othman/work/qaderoon-project",
-            "backupPath": "/home/othman/.config/Code/Backups/8c67c7b0a6f53db6621a88c5051af62f",
+            "folder": "file:///home/othman/work/qaderoon-project/client",
+            "backupPath": "/home/othman/.config/Code/Backups/c365962c9a24707d56924ee0eb264c7a",
             "uiState": {
                 "mode": 0,
                 "x": 0,
-                "y": 73,
-                "width": 1953,
-                "height": 1045
+                "y": 74,
+                "width": 1951,
+                "height": 1059
             }
         },
         "openedWindows": []
