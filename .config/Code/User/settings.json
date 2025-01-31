@@ -1877,5 +1877,6 @@
   "c-cpp-flylint.clang.includePaths": ["*/inlcude/*"],
   "c-cpp-flylint.includePaths": ["inlcude"],
   "vscord.behaviour.prioritizeLanguagesOverExtensions": true,
-  "security.workspace.trust.enabled": true
+  "security.workspace.trust.enabled": true,
+  "vscord.behaviour.suppressNotifications": true
 }

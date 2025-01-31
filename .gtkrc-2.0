@@ -1,9 +1,13 @@
-gtk-theme-name=Arc-Dark
-gtk-icon-theme-name=Zafiro
-gtk-font-name=Inter Medium 12
-gtk-cursor-theme-name=Bibata-Modern-Ice
+# DO NOT EDIT! This file will be overwritten by LXAppearance.
+# Any customization should be done in ~/.gtkrc-2.0.mine instead.
+
+include "/home/othman/.gtkrc-2.0.mine"
+gtk-theme-name="Tokyonight-Dark-Moon"
+gtk-icon-theme-name="Zafiro-Nord-Black"
+gtk-font-name="Inter Medium 14"
+gtk-cursor-theme-name="Bibata"
 gtk-cursor-theme-size=20
-gtk-toolbar-style=GTK_TOOLBAR_ICONS
+gtk-toolbar-style=GTK_TOOLBAR_BOTH
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
 gtk-button-images=0
 gtk-menu-images=1
@@ -11,8 +15,5 @@ gtk-enable-event-sounds=0
 gtk-enable-input-feedback-sounds=0
 gtk-xft-antialias=1
 gtk-xft-hinting=1
-gtk-xft-hintstyle=hintslight
-gtk-xft-rgba=rgb
-
-gtk-application-prefer-dark-theme=true
-gtk-enable-animations=true
+gtk-xft-hintstyle="hintfull"
+gtk-xft-rgba="none"
