@@ -1,1 +1,0 @@
-{"expires_by":[2024,345,21,4,45,291000000,0,0,0],"url":"https://yazi-rs.github.io/schemas/types/u16.json","value":{"$id":"https://yazi-rs.github.io/schemas/types/u16.json","$schema":"https://json-schema.org/draft/2020-12/schema","type":"integer","minimum":0,"maximum":65535}}

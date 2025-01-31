@@ -1,1 +1,0 @@
-INDEX VERSION 1.134+/home/othman/.config/Code/User/workspaceStorage/99dc166e00ed67684b7ce396d19873bb/redhat.java/ss_ws/.metadata/.plugins/org.eclipse.jdt.core
