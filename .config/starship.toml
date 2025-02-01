@@ -36,13 +36,22 @@ format = "with [$symbol($version )]($style)"
 [bun]
 format = " [$symbol($version )]($style)"
 symbol = " "
-detect_files = [ "bun.lockb", "bunfig.toml" ]
+detect_files = ["bun.lockb", "bunfig.toml"]
 
 [c]
 symbol = "  "
-format = ' [$symbol($version)(-$name )]($style)'
-detect_extensions = [ "c", "h"]
-commands = [ [ "clang", "--version" ], [ "gcc", "--version" ], [ "cc", "--version" ] ]
+format = ' [$symbol($name )($version)]($style)'
+detect_extensions = ["c", "h"]
+commands = [["clang", "--version"], ["gcc", "--version"], ["cc", "--version"]]
+style = "149 bold"
+
+[custom.cpp]
+disabled = false
+command = "which-cpp"
+style = 'bold blue'
+symbol = "  "
+detect_extensions = ["cpp", "cc", "cxx", "hpp", "hxx", "hh", "ipp"]
+format = '[$symbol($output )]($style)'
 
 [conda]
 symbol = " "
@@ -54,6 +63,21 @@ format = " [$symbol($version )]($style)"
 
 [dart]
 symbol = " "
+format = " [$symbol($version )]($style)"
+
+[deno]
+symbol = "🦖 "
+detect_extensions = ['js', 'ts']
+detect_files = [
+  "deno.json",
+  "deno.jsonc",
+  "deno.lock",
+  "mod.ts",
+  "deps.ts",
+  "mod.js",
+  "deps.js",
+]
+version_format = "v${raw}"
 format = " [$symbol($version )]($style)"
 
 [directory]
@@ -162,6 +186,9 @@ format = " [$symbol$state( \\($name\\))]($style) "
 [nodejs]
 symbol = " "
 format = " [$symbol($version)]($style) "
+detect_extensions = ["mjs", "cjs", "mts", "cts"]
+detect_files = ["package.json", ".node-version", ".nvmrc"]
+detect_folders = ["node_modules"]
 
 [ocaml]
 symbol = " "
@@ -261,3 +288,42 @@ format = " [$symbol($version )]($style)"
 [gradle]
 symbol = " "
 format = " [$symbol($version )]($style)"
+
+[shell]
+disabled = true
+bash_indicator = " "
+zsh_indicator = " "
+format = "[$indicator]($style) "
+
+[status]
+disabled = false
+symbol = '🔴 '
+success_symbol = ''
+format = '[\[$symbol$common_meaning$signal_name$maybe_int\]]($style) '
+map_symbol = true
+pipestatus = false
+
+[git_metrics]
+disabled = true
+added_style = 'bold green'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+deleted_style = "bold red"
+only_nonzero_diffs = true
+ignore_submodules = false
+
+[dotnet]
+disabled = true
+detect_extensions = ["csproj", "fsproj", "xproj"]
+detect_files = [
+  "global.json",
+  "project.json",
+  "Directory.Build.props",
+  "Directory.Build.targets",
+  "Packages.props",
+  "Program.cs",
+]
+detect_folders = []
+format = "via [( )(🎯  )]()"
+heuristic = true
+symbol = ".NET "
+version_format = "v"
