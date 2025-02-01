@@ -1878,5 +1878,8 @@
   "c-cpp-flylint.includePaths": ["inlcude"],
   "vscord.behaviour.prioritizeLanguagesOverExtensions": true,
   "security.workspace.trust.enabled": true,
-  "vscord.behaviour.suppressNotifications": true
+  "vscord.behaviour.suppressNotifications": true,
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  }
 }
