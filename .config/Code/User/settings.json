@@ -1847,11 +1847,10 @@
   },
   "markdown-preview-enhanced.scrollSync": false,
   "editor.stickyScroll.enabled": false,
-  "continue.enableQuickActions": true,
   "continue.telemetryEnabled": false,
   "cSpell.autoFormatConfigFile": true,
   "cSpell.textDecorationColorSuggestion": "#FFF",
-  "continue.enableTabAutocomplete": true,
+  "continue.enableTabAutocomplete": false,
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
@@ -1875,5 +1874,6 @@
   "clangd.fallbackFlags": ["-Iinclude"],
   "clangd.arguments": ["--header-insertion=iwyu"],
   "c-cpp-flylint.clang.includePaths": ["*/inlcude/*"],
-  "c-cpp-flylint.includePaths": ["inlcude"]
+  "c-cpp-flylint.includePaths": ["inlcude"],
+  "continue.enableDebugLogs": true
 }
