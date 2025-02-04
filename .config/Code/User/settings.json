@@ -1214,7 +1214,7 @@
   "C_Cpp.default.cStandard": "c23",
   "debug.onTaskErrors": "showErrors",
   "code-runner.executorMap": {
-    "javascript": "clear && node",
+    "javascript": "clear && deno",
     "java": "cd $dir; javac $fileName ; java $fileNameWithoutExt",
     "c": "cd $dirWithoutTrailingSlash; clear; clangc $fileName",
     "cpp": "cd $dirWithoutTrailingSlash; clear; cppc $fileName",
@@ -1315,13 +1315,13 @@
     "editor.defaultFormatter": "chiehyu.vscode-astyle"
   },
   "files.exclude": {
-    "**/vendor/": false,
-    "**/node_modules": false,
-    "**/dist": false,
+    "**/vendor/": true,
+    "**/node_modules": true,
+    "**/dist": true,
     ".phpunit.result.cache": false,
-    "vendor": false,
-    "node_modules": false,
-    "dist": false,
+    "vendor": true,
+    "node_modules": true,
+    "dist": true,
     "**/.trunk/*actions/": true,
     "**/.trunk/*logs/": true,
     "**/.trunk/*notifications/": true,
@@ -1581,8 +1581,7 @@
   "emmet.includeLanguages": {
     "blade": "html",
     "vue-html": "html",
-    "react": "html",
-    "javascript": "html"
+    "react": "html"
   },
   "emmet.excludeLanguages": ["php"],
   "explorer.sortOrder": "type",
@@ -1847,10 +1846,11 @@
   },
   "markdown-preview-enhanced.scrollSync": false,
   "editor.stickyScroll.enabled": false,
+  "continue.enableQuickActions": true,
   "continue.telemetryEnabled": false,
   "cSpell.autoFormatConfigFile": true,
   "cSpell.textDecorationColorSuggestion": "#FFF",
-  "continue.enableTabAutocomplete": false,
+  "continue.enableTabAutocomplete": true,
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
@@ -1875,5 +1875,10 @@
   "clangd.arguments": ["--header-insertion=iwyu"],
   "c-cpp-flylint.clang.includePaths": ["*/inlcude/*"],
   "c-cpp-flylint.includePaths": ["inlcude"],
-  "continue.enableDebugLogs": true
+  "vscord.behaviour.prioritizeLanguagesOverExtensions": true,
+  "security.workspace.trust.enabled": true,
+  "vscord.behaviour.suppressNotifications": true,
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  }
 }

@@ -1,0 +1,32 @@
+{
+  "rfc": {
+    "prefix": "rfc",
+    "scope": "jsx,tsx",
+    "body": [
+      "export default function $1 () {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t<div>$1</div>",
+      "\t\t</>",
+      "\t);",
+      "}",
+      "$0"
+    ]
+  },
+  "rafc": {
+    "prefix": "rafc",
+    "scope": "jsx,tsx",
+    "body": [
+      "const $1 = () => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t<div>$1</div>",
+      "\t\t</>",
+      "\t);",
+      "}",
+      "",
+      "export default $1;",
+      "$0"
+    ]
+  }
+}

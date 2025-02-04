@@ -1,0 +1,22 @@
+{
+  "comment": {
+    "scope": "bash,shell,python,php",
+    "prefix": "com",
+    "body": [
+      "# ---- ${1:comment} ---- #",
+      ""
+    ],
+    "description": "Adds a nicely formatted comment"
+  },
+  "Multiline Comment": {
+    "scope": "javascript,jsx,typescript,tsx,c,cpp,cs,php",
+    "prefix": "com",
+    "body": [
+      "/*",
+      "\t${0:comment}",
+      "*/",
+      ""
+    ],
+    "description": "Adds a nicely formatted multiline comment"
+  },
+}
