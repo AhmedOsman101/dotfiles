@@ -1,7 +1,7 @@
 {
 	"Try ... catch": {
 		"prefix": "tryc",
-		"scope": "javascript,jsx,typescript,tsx,c,cpp",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp",
 		"body": [
 			"try {",
 			"\t${1:// code...}",
@@ -13,7 +13,7 @@
 	},
 	"Try ... catch ... finally": {
 		"prefix": "tryf",
-		"scope": "javascript,jsx,typescript,tsx,c,cpp",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp",
 		"body": [
 			"try {",
 			"\t${1:// code...}",
@@ -27,7 +27,7 @@
 	},
 	"Catch": {
 		"prefix": "cat",
-		"scope": "javascript,jsx,typescript,tsx,c,cpp",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp",
 		"body": [
 			"catch (${2:e}) {",
 			"\t${3:// code...}",
@@ -37,7 +37,7 @@
 	},
 	"Finally": {
 		"prefix": "fy",
-		"scope": "javascript,jsx,typescript,tsx,c,cpp",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp",
 		"body": [
 			"finally {",
 			"\t${0:// code...}",
@@ -47,7 +47,7 @@
 	},
 	"Throw new Exception": {
 		"prefix": "thr",
-		"scope": "javascript,jsx,typescript,tsx,c,cpp",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp",
 		"body": [
 			"throw new ${1:Exception}(\"${2:Error statement}\");"
 		],

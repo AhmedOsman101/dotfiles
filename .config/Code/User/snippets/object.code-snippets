@@ -1,7 +1,7 @@
 {
 	"Object key ... value": {
 		"prefix": "obj",
-		"scope": "javascript,jsx,typescript,tsx,python",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact,python",
 		"body": [
 			"{",
 			"\t\"${1:key}\": ${2:value},",
@@ -12,7 +12,7 @@
 	},
 	"Key ... value": {
 		"prefix": "kv",
-		"scope": "javascript,jsx,typescript,tsx,python",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact,python",
 		"body": [
 			"\"${1:key}\": ${2:value},"
 		],

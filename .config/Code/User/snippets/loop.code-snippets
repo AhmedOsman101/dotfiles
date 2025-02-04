@@ -11,7 +11,7 @@
 	},
 	"For Loop": {
 		"prefix": "for",
-		"scope": "javascript,jsx,typescript,tsx",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"for (let ${2:i} = ${3:0}; ${2:i} < ${4:n}; ${2:i}++) {",
 			"\t${0:// code...}",
@@ -21,7 +21,7 @@
 	},
 	"While loop": {
 		"prefix": "while",
-		"scope": "javascript,jsx,typescript,tsx,c,cpp,cs",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
 		"body": [
 			"while (${1:variable} ${2:<} ${3:n}) {",
 			"\t${0:// code...}",
@@ -31,7 +31,7 @@
 	},
 	"Do ... while": {
 		"prefix": "dowl",
-		"scope": "javascript,jsx,typescript,tsx,c,cpp,cs",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
 		"body": [
 			"do {",
 			"\t${0:// code...}",

@@ -11,7 +11,7 @@
 	},
 	"arrow function": {
 		"prefix": "arrow",
-		"scope": "javascript,jsx,typescript,tsx",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"($param) => {",
 			"\t${0:body}",
@@ -20,7 +20,7 @@
 	},
 	"const arrow function": {
 		"prefix": "carrow",
-		"scope": "javascript,jsx,typescript,tsx",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"const $method = ($param) => {",
 			"\t${0:body}",
@@ -29,7 +29,7 @@
 	},
 	"const async arrow function": {
 		"prefix": "csarrow",
-		"scope": "javascript,jsx,typescript,tsx",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"const $method = async ($param) => {",
 			"\t${0:body}",
@@ -38,7 +38,7 @@
 	},
 	"export const arrow function": {
 		"prefix": "xarrow",
-		"scope": "javascript,jsx,typescript,tsx",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"export const $method = ($param) => {",
 			"\t${0:body}",
@@ -47,7 +47,7 @@
 	},
 	"export deafult const arrow function": {
 		"prefix": "darrow",
-		"scope": "javascript,jsx,typescript,tsx",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"const $method = ($param) => {",
 			"\t$body",
@@ -59,7 +59,7 @@
 	},
 	"export deafult const async arrow function": {
 		"prefix": "dsarrow",
-		"scope": "javascript,jsx,typescript,tsx",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"const $method = async ($param) => {",
 			"\t$body",
@@ -71,7 +71,7 @@
 	},
 	"export const async arrow function": {
 		"prefix": "xsarrow",
-		"scope": "javascript,jsx,typescript,tsx",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"export const $method = async ($param) => {",
 			"\t$body",
@@ -83,7 +83,7 @@
 	},
 	"export deafult constant": {
 		"prefix": "dcon",
-		"scope": "javascript,jsx,typescript,tsx",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"const $1 = $2;",
 			"",
@@ -93,7 +93,7 @@
 	},
 	"export constant": {
 		"prefix": "xcon",
-		"scope": "javascript,jsx,typescript,tsx",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"export const $1 = $2;",
 			"",

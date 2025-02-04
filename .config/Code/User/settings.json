@@ -1214,7 +1214,7 @@
   "C_Cpp.default.cStandard": "c23",
   "debug.onTaskErrors": "showErrors",
   "code-runner.executorMap": {
-    "javascript": "clear && deno",
+    "javascript": "clear && deno -A",
     "java": "cd $dir; javac $fileName ; java $fileNameWithoutExt",
     "c": "cd $dirWithoutTrailingSlash; clear; clangc $fileName",
     "cpp": "cd $dirWithoutTrailingSlash; clear; cppc $fileName",
@@ -1236,7 +1236,7 @@
     "fsharp": "fsi",
     "csharp": "scriptcs",
     "vbscript": "cscript //Nologo",
-    "typescript": "clear; deno --unstable-sloppy-imports",
+    "typescript": "clear; deno --unstable-sloppy-imports -A",
     "coffeescript": "coffee",
     "scala": "scala",
     "swift": "swift",
@@ -1880,5 +1880,6 @@
   "vscord.behaviour.suppressNotifications": true,
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
-  }
+  },
+  "git.defaultBranchName": "main"
 }

@@ -1,7 +1,7 @@
 {
 	"Array": {
 		"prefix": "arr",
-		"scope": "javascript,jsx,typescript,tsx,python",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact,python",
 		"body": [
 			"[${1:value}, ${2:value}, $3];"
 		],
@@ -9,7 +9,7 @@
 	},
 	"Array ... value": {
 		"prefix": "va",
-		"scope": "javascript,jsx,typescript,tsx,python,c,cpp,cs",
+		"scope": "javascript,javascriptreact,typescript,typescriptreact,python,c,cpp,cs",
 		"body": [
 			"${1:value}, "
 		],
