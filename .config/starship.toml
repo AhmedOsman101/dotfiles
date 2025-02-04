@@ -67,15 +67,17 @@ format = " [$symbol($version )]($style)"
 
 [deno]
 symbol = "🦖 "
-detect_extensions = ['js', 'ts']
+detect_extensions = ['ts']
 detect_files = [
   "deno.json",
   "deno.jsonc",
   "deno.lock",
   "mod.ts",
   "deps.ts",
+  "main.ts",
   "mod.js",
   "deps.js",
+  "main.js"
 ]
 version_format = "v${raw}"
 format = " [$symbol($version )]($style)"
