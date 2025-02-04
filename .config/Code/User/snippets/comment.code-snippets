@@ -9,7 +9,7 @@
     "description": "Adds a nicely formatted comment"
   },
   "Multiline Comment": {
-    "scope": "javascript,jsx,typescript,tsx,c,cpp,cs,php",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs,php",
     "prefix": "com",
     "body": [
       "/*",

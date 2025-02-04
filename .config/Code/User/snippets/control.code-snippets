@@ -1,7 +1,7 @@
 {
   "If block": {
     "prefix": "if",
-    "scope": "javascript,jsx,typescript,tsx,c,cpp,cs",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
     "body": [
       "if (${1:condition}) {",
       "\t${0:// code...}",
@@ -11,7 +11,7 @@
   },
   "If single line": {
     "prefix": "if",
-    "scope": "javascript,jsx,typescript,tsx,c,cpp,cs",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
     "body": [
       "if (${1:condition}) ${2:code}",
     ],
@@ -19,7 +19,7 @@
   },
   "If ... else": {
     "prefix": "ifel",
-    "scope": "javascript,jsx,typescript,tsx,c,cpp,cs",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
     "body": [
       "if (${1:condition}) {",
       "\t${2:// code...}",
@@ -31,7 +31,7 @@
   },
   "If ... else single line": {
     "prefix": "if",
-    "scope": "javascript,jsx,typescript,tsx,c,cpp,cs",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
     "body": [
       "if (${1:condition}) ${2:code}",
       "else (${3:condition}) ${4:code}",
@@ -40,7 +40,7 @@
   },
   "If ... elseif ... else": {
     "prefix": "ifelif",
-    "scope": "javascript,jsx,typescript,tsx,c,cpp,cs",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
     "body": [
       "if (${1:condition}) {",
       "\t${2:// code...}",
@@ -54,7 +54,7 @@
   },
   "If ... elseif ... else single line": {
     "prefix": "if",
-    "scope": "javascript,jsx,typescript,tsx,c,cpp,cs",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
     "body": [
       "if (${1:condition}) ${2:code}",
       "else if (${3:condition}) ${4:code}",
@@ -64,7 +64,7 @@
   },
   "Switch block": {
     "prefix": "sw",
-    "scope": "javascript,jsx,typescript,tsx,c,cpp,cs",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
     "body": [
       "switch ($${1:variable}) {",
       "\tcase ${2:label}:",
@@ -82,7 +82,7 @@
   },
   "Case statement": {
     "prefix": "cs",
-    "scope": "javascript,jsx,typescript,tsx,c,cpp,cs",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
     "body": [
       "case ${1:label}:",
       "\t${2:// code...}",
@@ -92,7 +92,7 @@
   },
   "Ternary operator": {
     "prefix": "tern",
-    "scope": "javascript,jsx,typescript,tsx,c,cpp,cs",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
     "body": [
       "${1:condition} ? ${2:if_true} : ${3:if_false};"
     ],
