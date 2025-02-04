@@ -1581,8 +1581,7 @@
   "emmet.includeLanguages": {
     "blade": "html",
     "vue-html": "html",
-    "react": "html",
-    "javascript": "html"
+    "react": "html"
   },
   "emmet.excludeLanguages": ["php"],
   "explorer.sortOrder": "type",
