@@ -1,0 +1,18 @@
+{
+	"Array": {
+		"prefix": "arr",
+		"scope": "javascript,jsx,typescript,tsx,python",
+		"body": [
+			"[${1:value}, ${2:value}, $3];"
+		],
+		"description": "Array [] block"
+	},
+	"Array ... value": {
+		"prefix": "va",
+		"scope": "javascript,jsx,typescript,tsx,python,c,cpp,cs",
+		"body": [
+			"${1:value}, "
+		],
+		"description": "Array value statement"
+	}
+}

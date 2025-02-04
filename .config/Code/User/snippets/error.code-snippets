@@ -1,0 +1,56 @@
+{
+	"Try ... catch": {
+		"prefix": "tryc",
+		"scope": "javascript,jsx,typescript,tsx,c,cpp",
+		"body": [
+			"try {",
+			"\t${1:// code...}",
+			"} catch (${2:e}) {",
+			"\t${3:// code...}",
+			"}"
+		],
+		"description": "Try catch block"
+	},
+	"Try ... catch ... finally": {
+		"prefix": "tryf",
+		"scope": "javascript,jsx,typescript,tsx,c,cpp",
+		"body": [
+			"try {",
+			"\t${1:// code...}",
+			"} catch (${2:e}) {",
+			"\t${3:// code...}",
+			"}$5 finally {",
+			"\t${0:// code...}",
+			"}"
+		],
+		"description": "Try catch finally block"
+	},
+	"Catch": {
+		"prefix": "cat",
+		"scope": "javascript,jsx,typescript,tsx,c,cpp",
+		"body": [
+			"catch (${2:e}) {",
+			"\t${3:// code...}",
+			"}"
+		],
+		"description": "Catch block"
+	},
+	"Finally": {
+		"prefix": "fy",
+		"scope": "javascript,jsx,typescript,tsx,c,cpp",
+		"body": [
+			"finally {",
+			"\t${0:// code...}",
+			"}"
+		],
+		"description": "Finally block"
+	},
+	"Throw new Exception": {
+		"prefix": "thr",
+		"scope": "javascript,jsx,typescript,tsx,c,cpp",
+		"body": [
+			"throw new ${1:Exception}(\"${2:Error statement}\");"
+		],
+		"description": "Throw new exception statement"
+	}
+}
