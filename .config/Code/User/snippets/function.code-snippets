@@ -1,80 +1,99 @@
 {
+	"function": {
+		"prefix": "fun",
+		"scope": "c,cpp,cs",
+		"body": [
+			"",
+			"${1:void} ${2:functionName}($3) {",
+			"\t$0",
+			"}",
+		]
+	},
 	"arrow function": {
 		"prefix": "arrow",
+		"scope": "javascript,jsx,typescript,tsx",
 		"body": [
 			"($param) => {",
-			"  $0",
+			"\t${0:body}",
 			"}"
 		]
 	},
 	"const arrow function": {
 		"prefix": "carrow",
+		"scope": "javascript,jsx,typescript,tsx",
 		"body": [
 			"const $method = ($param) => {",
-			"  $0",
+			"\t${0:body}",
 			"}"
 		]
 	},
 	"const async arrow function": {
 		"prefix": "csarrow",
+		"scope": "javascript,jsx,typescript,tsx",
 		"body": [
 			"const $method = async ($param) => {",
-			"  $0",
+			"\t${0:body}",
 			"}"
 		]
 	},
 	"export const arrow function": {
 		"prefix": "xarrow",
+		"scope": "javascript,jsx,typescript,tsx",
 		"body": [
 			"export const $method = ($param) => {",
-			"  $0",
+			"\t${0:body}",
 			"}"
 		]
 	},
 	"export deafult const arrow function": {
 		"prefix": "darrow",
+		"scope": "javascript,jsx,typescript,tsx",
 		"body": [
 			"const $method = ($param) => {",
-			"  $body",
+			"\t$body",
 			"}",
 			"",
-			"export default $method",
+			"export default $method;",
 			""
 		]
 	},
 	"export deafult const async arrow function": {
 		"prefix": "dsarrow",
+		"scope": "javascript,jsx,typescript,tsx",
 		"body": [
-			"const $method = ($param) => {",
-			"  $body",
+			"const $method = async ($param) => {",
+			"\t$body",
 			"}",
 			"",
-			"export default $method",
+			"export default $method;",
 			""
 		]
 	},
 	"export const async arrow function": {
 		"prefix": "xsarrow",
+		"scope": "javascript,jsx,typescript,tsx",
 		"body": [
 			"export const $method = async ($param) => {",
-			"  $body",
+			"\t$body",
 			"}",
 			"",
-			"export default $method",
+			"export default $method;",
 			""
 		]
 	},
 	"export deafult constant": {
 		"prefix": "dcon",
+		"scope": "javascript,jsx,typescript,tsx",
 		"body": [
 			"const $1 = $2;",
 			"",
-			"export default $1",
+			"export default $1;",
 			""
 		]
 	},
 	"export constant": {
 		"prefix": "xcon",
+		"scope": "javascript,jsx,typescript,tsx",
 		"body": [
 			"export const $1 = $2;",
 			"",
