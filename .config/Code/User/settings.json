@@ -29,18 +29,11 @@
   "css.lint.emptyRules": "ignore",
   "cssrem.vw": true,
   "emmet.showSuggestionsAsSnippets": true,
-  "errorLens.fontStyleItalic": true,
-  "errorLens.gutterIconsEnabled": true,
-  "errorLens.gutterIconSet": "emoji",
   "git.fetchOnPull": true,
   "gitlens.ai.experimental.provider": "openai",
   "gitlens.ai.experimental.openai.model": "gpt-3.5-turbo",
   "liveServer.settings.host": "localhost",
   "merge-conflict.autoNavigateNextConflict.enabled": true,
-  "npm-intellisense.scanDevDependencies": true,
-  "path-intellisense.autoSlashAfterDirectory": true,
-  "path-intellisense.autoTriggerNextSuggestion": true,
-  "path-intellisense.showHiddenFiles": true,
   "php.format.rules.addCommaAfterLastArrayElement": true,
   "prettier.bracketSameLine": true,
   "prettier.withNodeModules": true,
@@ -1206,7 +1199,6 @@
   "editor.fontLigatures": true,
   "editor.minimap.enabled": false,
   "rapidapi.terminalLink.enabled": false,
-  "typescript.suggest.paths": false,
   "editor.inlineSuggest.suppressSuggestions": true,
   "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\g++.exe",
   "C_Cpp.autocompleteAddParentheses": true,
@@ -1678,7 +1670,6 @@
   "commit-message-editor.view.visibleLines": 23,
   "commitgroq.custom.summaryTemperature": 0,
   "commitgroq.custom.commitTemperature": 0.5,
-  "iridium.npm.packageManager": "pnpm",
   "commit-message-editor.view.fullWidth": true,
   "git.verboseCommit": true,
   "commit-message-editor.view.showRecentCommits": false,
@@ -1724,7 +1715,6 @@
   "[xml]": {
     "editor.defaultFormatter": "DotJoshJohnson.xml"
   },
-  "workbench.colorCustomizations": {},
   "prettier.experimentalTernaries": true,
   "[properties]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
@@ -1742,9 +1732,8 @@
 
   "editor.codeActionsOnSave": {
     "source.fixAll": "always",
-    // "source.organizeImports": "always",
-    "quickfix.biome": "explicit",
-    "source.organizeImports.biome": "explicit"
+    "source.organizeImports": "always",
+    "source.removeUnusedImports": "explicit"
   },
   "livePreview.notifyOnOpenLooseFile": false,
   "editor.tabSize": 2,
@@ -1867,7 +1856,6 @@
   "c-cpp-flylint.enable": false,
   "c-cpp-flylint.language": "c",
   "geminiCommit.commit.onlyStagedChanges": true,
-  "npm-intellisense.packageSubfoldersIntellisense": true,
   "files.readonlyFromPermissions": true,
   "prettier.endOfLine": "auto",
   "prettier.resolveGlobalModules": true,
@@ -1881,5 +1869,87 @@
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
-  "git.defaultBranchName": "main"
+  "git.defaultBranchName": "main",
+  "errorLens.gutterIconSize": "",
+  "errorLens.enabledInMergeConflict": false,
+  "errorLens.fontStyleItalic": false,
+  "errorLens.messageBackgroundMode": "message",
+  "errorLens.padding": "2px 0.5ch",
+  "errorLens.margin": "2.5ch",
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info", "hint"],
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.gutterIconSet": "squareRounded",
+  "errorLens.messageTemplate": "[$count] $severity $message",
+  // "errorLens.severityText": ["■", "■", "■", "■"],
+  "errorLens.severityText": ["■", "◈", "◉", "■"],
+  "errorLens.codeLensEnabled": false,
+  "errorLens.messageEnabled": true, // the message alongside code,
+  "errorLens.problemRangeDecorationEnabled": true,
+  "errorLens.decorations": {
+    "errorRange": {
+      "color": "#FF6464",
+      "borderRadius": "5px"
+    },
+    "warningRange": {
+      "borderRadius": "5px",
+      "color": "#FF942F"
+    },
+    "infoRange": {
+      "backgroundColor": "transparent"
+    },
+    "hintRange": {
+      "backgroundColor": "transparent"
+    },
+    "hintMessage": {
+      "backgroundColor": "transparent"
+      // "color": "transparent"
+    }
+  },
+  "errorLens.replace": [
+    {
+      "matcher": "Missing semicolon",
+      "message": ";"
+    }
+  ],
+  "errorLens.enableOnDiffView": true,
+  "errorLens.removeLinebreaks": true,
+  "errorLens.replaceLinebreaksSymbol": "⏎",
+  "cssVariables.languages": ["vue-postcss", "scss", "postcss", "less", "css"],
+  "highlight-matching-tag.highlightSelfClosing": true,
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "left": {
+        "highlight": "rgba(255, 255, 255, 0.1)"
+      },
+      "right": {
+        "highlight": "rgba(255, 255, 255, 0.1)"
+      }
+    }
+  },
+  "css.enabledLanguages": [
+    "html",
+    "javascriptreact",
+    "typescriptreact",
+    "vue-html"
+  ],
+  "inlineFold.maskChar": "...",
+  "iridium.npm.packageManager": "pnpm",
+  "iridium.npm.runAudit": true,
+  "iridium.npm.showResultDescription": true,
+  "iridium.npm.showSupportIcon": false,
+  "npm-intellisense.importES6": true,
+  "npm-intellisense.importQuotes": "\"",
+  "npm-intellisense.importLinebreak": ";\n",
+  "npm-intellisense.importDeclarationType": "const",
+  "npm-intellisense.scanDevDependencies": true,
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "npm-intellisense.recursivePackageJsonLookup": true,
+  "npm-intellisense.showBuildInLibs": true,
+  "javascript.suggest.paths": false,
+  "typescript.suggest.paths": false,
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.autoTriggerNextSuggestion": true,
+  "path-intellisense.showHiddenFiles": true,
+  "prettify-ts.maxDepth": 2,
+  "prettify-ts.unwrapArrays": true
 }
