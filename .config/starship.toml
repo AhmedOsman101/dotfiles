@@ -245,6 +245,7 @@ Windows = "󰍲 "
 [package]
 symbol = "󰏗 "
 format = " [$symbol$version]($style) "
+disabled = true
 
 [perl]
 symbol = " "
