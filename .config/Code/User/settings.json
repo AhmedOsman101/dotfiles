@@ -1361,9 +1361,6 @@
     "stashes",
     "remoteBranches"
   ],
-  "[sql]": {
-    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
-  },
   "php.version": "8.3",
   "terminal.integrated.defaultProfile.windows": "Ubuntu-24.04 (WSL)",
   "terminal.integrated.enableImages": true,
@@ -1600,7 +1597,7 @@
     "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
   },
   "liveSassCompile.settings.showOutputWindowOn": "None",
-  "formatSelectionAsHtml.formatter": "prettier",
+  // "formatSelectionAsHtml.formatter": "prettier",
   "[dotenv]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
@@ -1951,5 +1948,6 @@
   "path-intellisense.autoTriggerNextSuggestion": true,
   "path-intellisense.showHiddenFiles": true,
   "prettify-ts.maxDepth": 2,
-  "prettify-ts.unwrapArrays": true
+  "prettify-ts.unwrapArrays": true,
+  "biome_lsp.trace.server": "messages",
 }
