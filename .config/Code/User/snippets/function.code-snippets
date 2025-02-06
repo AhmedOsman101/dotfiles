@@ -5,7 +5,7 @@
 		"body": [
 			"",
 			"${1:void} ${2:functionName}($3) {",
-			"\t$0",
+			"\t${0://body}",
 			"}",
 		]
 	},
@@ -14,7 +14,7 @@
 		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"($param) => {",
-			"\t${0:body}",
+			"\t${0://body}",
 			"}"
 		]
 	},
@@ -23,7 +23,7 @@
 		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"const $method = ($param) => {",
-			"\t${0:body}",
+			"\t${0://body}",
 			"}"
 		]
 	},
@@ -32,7 +32,7 @@
 		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"const $method = async ($param) => {",
-			"\t${0:body}",
+			"\t${0://body}",
 			"}"
 		]
 	},
@@ -41,7 +41,7 @@
 		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"export const $method = ($param) => {",
-			"\t${0:body}",
+			"\t${0://body}",
 			"}"
 		]
 	},
@@ -50,7 +50,7 @@
 		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"const $method = ($param) => {",
-			"\t$body",
+			"\t${0://body}",
 			"}",
 			"",
 			"export default $method;",
@@ -62,7 +62,7 @@
 		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"const $method = async ($param) => {",
-			"\t$body",
+			"\t${0://body}",
 			"}",
 			"",
 			"export default $method;",
@@ -74,7 +74,7 @@
 		"scope": "javascript,javascriptreact,typescript,typescriptreact",
 		"body": [
 			"export const $method = async ($param) => {",
-			"\t$body",
+			"\t${0://body}",
 			"}",
 			"",
 			"export default $method;",

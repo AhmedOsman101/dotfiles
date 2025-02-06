@@ -1884,7 +1884,8 @@
   "errorLens.problemRangeDecorationEnabled": true,
   "errorLens.decorations": {
     "errorRange": {
-      "color": "#FF6464",
+      // "color": "#aaa",
+      // "color": "#FF6464",
       "borderRadius": "5px"
     },
     "warningRange": {
@@ -1949,5 +1950,5 @@
   "path-intellisense.showHiddenFiles": true,
   "prettify-ts.maxDepth": 2,
   "prettify-ts.unwrapArrays": true,
-  "biome_lsp.trace.server": "messages",
+  "biome_lsp.trace.server": "messages"
 }
