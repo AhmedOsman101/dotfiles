@@ -25,7 +25,7 @@
       "bracketSameLine": false,
       "quoteStyle": "double",
       "attributePosition": "auto",
-      "bracketSpacing": false
+      "bracketSpacing": true
     }
   },
   "json": {
