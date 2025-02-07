@@ -4,7 +4,7 @@
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 CARD="$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)"
-INTERFACE="$(ip route get 1.1.1.1 | awk '{print $5;exit}')"
+INTERFACE="$(net-interface)"
 BAT="$(acpi -b)"
 RFILE="$DIR/.module"
 
