@@ -1321,12 +1321,20 @@
     "**/.trunk/*plugins/": false
   },
   "files.watcherExclude": {
+    "**/vendor/": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    ".phpunit.result.cache": true,
+    "vendor": true,
+    "node_modules": true,
+    "dist": true,
     "**/.trunk/*actions/": true,
     "**/.trunk/*logs/": true,
     "**/.trunk/*notifications/": true,
     "**/.trunk/*out/": true,
     "**/.trunk/*plugins/": true
   },
+  "toggleexcludedfiles.explorer.enabled": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "C_Cpp.vcFormat.indent.braces": true,
   "editor.autoClosingComments": "always",
@@ -1351,9 +1359,6 @@
     "editor.snippetSuggestions": "bottom"
   },
   "git.openRepositoryInParentFolders": "always",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "scm.showIncomingChanges": "always",
   "scm.showOutgoingChanges": "always",
   "gitlens.graph.minimap.additionalTypes": [
@@ -1494,9 +1499,6 @@
     "editor.defaultFormatter": "Prisma.prisma"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "css.lint.unknownAtRules": "ignore",
   "scss.lint.unknownAtRules": "ignore",
   "less.lint.unknownAtRules": "ignore",
@@ -1726,9 +1728,15 @@
   "sortJSON.orderUnderride": ["dependencies", "devDependencies"],
 
   "editor.codeActionsOnSave": {
-    "source.fixAll": "always",
-    "source.organizeImports": "always",
-    "source.removeUnusedImports": "explicit"
+    "source.fixAll": "explicit",
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports": "explicit",
+    "source.removeUnusedImports": "never",
+    "source.addMissingImports.ts": "explicit",
+    "source.fixAll.ts": "explicit",
+    "source.organizeImports.biome": "explicit",
+    "source.sortImports": "explicit",
+    "source.removeUnused.ts": "never"
   },
   "livePreview.notifyOnOpenLooseFile": false,
   "editor.tabSize": 2,
@@ -1835,8 +1843,6 @@
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
   "codesnap.shutterAction": "copy",
   "c-cpp-flylint.cppcheck.verbose": true,
   "c-cpp-flylint.debug": true,
@@ -1953,5 +1959,58 @@
   // },
   "cody.autocomplete.formatOnAccept": true,
   "cody.telemetry.level": "off",
-  "prettier.configPath": "/home/othman/.dotfiles/.config/.prettierrc"
+  // "prettier.configPath": "/home/othman/.dotfiles/.config/.prettierrc",
+  "dotnetAcquisitionExtension.enableTelemetry": false,
+  "dotnetAcquisitionExtension.existingDotnetPath": ["/usr/bin/dotnet"],
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "togglequotes.chars": ["\"", "'", "`"],
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "togglequotes.chars": ["\"", "'", "`"],
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascriptreact]": {
+    "togglequotes.chars": ["\"", "'", "`"],
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascript]": {
+    "editor.maxTokenizationLineLength": 2500,
+    "togglequotes.chars": ["\"", "'", "`"],
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[vue]": {
+    "togglequotes.chars": ["\"", "'", "`"],
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "biome.enabled": true,
+  "biome.lspBin": "/usr/bin/biome",
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  "javascript.inlayHints.parameterNames.enabled": "literals",
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+  "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
+  "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
+  "php.inlayHints.insertOnDoubleClick": true,
+  "vue.inlayHints.destructuredProps": true,
+  "vue.inlayHints.missingProps": true,
+  "vue.inlayHints.vBindShorthand": true
 }

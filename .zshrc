@@ -254,3 +254,6 @@ export MICRO_TRUECOLOR=1
 export XCURSOR_THEME="Bibata"
 export XCURSOR_SIZE="24"
 
+export BIOME_CONFIG_PATH="/home/othman/.dotfiles/.config/biome.jsonc"
+export NODE_PACKAGE_MANAGER="pnpm"
+export BIOME_BINARY="/usr/bin/biome"
