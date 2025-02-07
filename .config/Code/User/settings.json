@@ -1307,18 +1307,18 @@
     "editor.defaultFormatter": "chiehyu.vscode-astyle"
   },
   "files.exclude": {
-    "**/vendor/": true,
-    "**/node_modules": true,
-    "**/dist": true,
+    "**/vendor/": false,
+    "**/node_modules": false,
+    "**/dist": false,
     ".phpunit.result.cache": false,
-    "vendor": true,
-    "node_modules": true,
-    "dist": true,
-    "**/.trunk/*actions/": true,
-    "**/.trunk/*logs/": true,
-    "**/.trunk/*notifications/": true,
-    "**/.trunk/*out/": true,
-    "**/.trunk/*plugins/": true
+    "vendor": false,
+    "node_modules": false,
+    "dist": false,
+    "**/.trunk/*actions/": false,
+    "**/.trunk/*logs/": false,
+    "**/.trunk/*notifications/": false,
+    "**/.trunk/*out/": false,
+    "**/.trunk/*plugins/": false
   },
   "files.watcherExclude": {
     "**/.trunk/*actions/": true,
