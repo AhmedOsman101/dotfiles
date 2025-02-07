@@ -1825,9 +1825,6 @@
   "markdown-preview-enhanced.chromePath": "/usr/bin/google-chrome-stable",
   "codesnap.showWindowControls": false,
   "editor.emptySelectionClipboard": false,
-  "[txt]": {
-    "editor.defaultFormatter": "trunk.io"
-  },
   "markdown-preview-enhanced.scrollSync": false,
   "editor.stickyScroll.enabled": false,
   "continue.enableQuickActions": true,
@@ -1948,13 +1945,13 @@
   "path-intellisense.showHiddenFiles": true,
   "prettify-ts.maxDepth": 2,
   "prettify-ts.unwrapArrays": true,
-  // "cody.autocomplete.advanced.provider": "experimental-ollama",
   "cody.autocomplete.advanced.provider": "default",
+  // "cody.autocomplete.advanced.provider": "experimental-ollama",
   // "cody.autocomplete.experimental.ollamaOptions": {
   //   "url": "http://localhost:11434",
   //   "model": "qwen2.5-coder:0.5b"
   // },
   "cody.autocomplete.formatOnAccept": true,
   "cody.telemetry.level": "off",
-  "prettier.configPath": ""
+  "prettier.configPath": "/home/othman/.dotfiles/.config/.prettierrc"
 }
