@@ -1367,7 +1367,6 @@
     "remoteBranches"
   ],
   "php.version": "8.3",
-  "terminal.integrated.defaultProfile.windows": "Ubuntu-24.04 (WSL)",
   "terminal.integrated.enableImages": true,
   "oneDarkPro.bold": true,
   "security.promptForLocalFileProtocolHandling": false,
@@ -1442,6 +1441,7 @@
   "vue.format.script.initialIndent": true,
   "terminal.explorerKind": "external",
   "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.defaultProfile.windows": "Ubuntu-24.04 (WSL)",
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
@@ -1799,7 +1799,7 @@
   "python.defaultInterpreterPath": "/usr/sbin/python",
   "python.languageServer": "Jedi",
   "geminiCommit.onlyStagedChanges": true,
-  "gemmy.settings.modelName": "gemini-1.5-flash",
+  "gemmy.settings.modelName": "gemini-2.0-flash",
   "gemmy.settings.apiKey": "AIzaSyBEett9Y2GTvjnFX9CBK_r866A8rffjPOQ",
   "editor.unicodeHighlight.invisibleCharacters": false,
   "C_Cpp.intelliSenseEngine": "disabled",
@@ -2012,5 +2012,6 @@
   "php.inlayHints.insertOnDoubleClick": true,
   "vue.inlayHints.destructuredProps": true,
   "vue.inlayHints.missingProps": true,
-  "vue.inlayHints.vBindShorthand": true
+  "vue.inlayHints.vBindShorthand": true,
+  "commitSage.gemini.model": "gemini-2.0-flash-exp"
 }
