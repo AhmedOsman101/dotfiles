@@ -2013,5 +2013,6 @@
   "vue.inlayHints.destructuredProps": true,
   "vue.inlayHints.missingProps": true,
   "vue.inlayHints.vBindShorthand": true,
-  "commitSage.gemini.model": "gemini-2.0-flash-exp"
+  "commitSage.gemini.model": "gemini-2.0-flash-exp",
+  "cody.suggestions.mode": "off"
 }
