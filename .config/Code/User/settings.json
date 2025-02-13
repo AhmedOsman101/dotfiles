@@ -1828,7 +1828,7 @@
   ],
   "terminal.integrated.fontLigatures": true,
   "clang-format.executable": "/usr/bin/clang-format",
-  "astyle.astylerc": "/home/othman/.config/astyle.astylerc",
+  "astyle.astylerc": "/home/othman/.config/.astylerc",
   "window.menuBarVisibility": "toggle",
   "markdown-preview-enhanced.chromePath": "/usr/bin/google-chrome-stable",
   "codesnap.showWindowControls": false,
@@ -2014,5 +2014,8 @@
   "vue.inlayHints.missingProps": true,
   "vue.inlayHints.vBindShorthand": true,
   "commitSage.gemini.model": "gemini-2.0-flash-exp",
-  "cody.suggestions.mode": "off"
+  "cody.suggestions.mode": "off",
+  "astyle.csharp.enable": true,
+  "astyle.java.enable": true,
+  "makefile.configureOnOpen": true
 }

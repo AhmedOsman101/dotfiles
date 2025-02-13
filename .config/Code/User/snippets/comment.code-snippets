@@ -1,6 +1,6 @@
 {
   "comment": {
-    "scope": "bash,shell,python,php",
+    "scope": "bash,shell,python,php,dotenv",
     "prefix": "com",
     "body": [
       "# ---- ${1:comment} ---- #",
