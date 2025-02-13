@@ -254,6 +254,14 @@ export MICRO_TRUECOLOR=1
 export XCURSOR_THEME="Bibata"
 export XCURSOR_SIZE="24"
 
+# Biome Config
 export BIOME_CONFIG_PATH="/home/othman/.dotfiles/.config/biome.jsonc"
 export NODE_PACKAGE_MANAGER="pnpm"
 export BIOME_BINARY="/usr/bin/biome"
+
+# node version manager nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export ARTISTIC_STYLE_OPTIONS="$HOME/.config/.astylerc"
