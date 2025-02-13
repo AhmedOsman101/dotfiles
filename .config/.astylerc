@@ -1,0 +1,66 @@
+# ---- Options for Artistic Style (AStyle) ---- #
+
+# ---- Brace Style Options ---- #
+#style=java                     # Braces on the same line as function/class definitions
+#style=allman                   # Braces on new lines for function/class definitions
+#style=kr                       # K&R style
+#style=stroustrup               # Stroustrup style
+#style=whitesmith               # Whitesmith style
+#style=gnu                      # GNU style
+style=google # Braces on the same line as function/class definitions
+
+# ---- Tab Options ---- #
+indent=spaces=2 # Use 2 spaces for indentation
+
+# ---- Brace Modify Options ---- #
+attach-namespaces
+attach-classes       # Indent 'class' and 'struct' blocks so that the entire block is indented.
+attach-closing-while # Attach closing while of do-while to the closing brace.
+
+# ---- Indentation Options ---- #
+indent-classes
+
+# Indent 'class ' and 'struct' access modifiers, 'public:', 'protected:' and 'private:', one half indent.
+indent-modifiers
+indent-switches   # Indent 'switch' blocks
+indent-cases      # Indent 'case' statements
+indent-namespaces # Indent namespaces
+
+# Indent, instead of align, continuation lines following lines that contain an opening paren '(' or an assignment '='.
+indent-after-parens
+indent-continuation=1
+
+# Add extra indentation to labels so they appear 1 indent less than the current indentation, rather than being flushed to the left (the default).
+indent-labels
+
+# Indent preprocessor blocks at brace level zero and immediately within a namespace.
+indent-preproc-block
+
+# Indent C++ comments beginning in column one. This option will allow the comments to be indented with the code.
+indent-col1-comments
+
+# ---- Padding Options ---- #
+break-blocks # Break blocks after header lines
+pad-oper     # Pad operators with spaces
+pad-comma    # Insert space padding after commas.
+pad-include
+pad-header           # Insert space padding between a header (e.g. 'if', 'for', 'while'...) and the following paren.
+unpad-paren          # Remove unnecessary padding inside parentheses
+squeeze-lines=2      # Remove extra empty lines exceeding the given number.
+squeeze-ws           # Remove extra whitespaces.
+align-pointer=type   # Align pointers to the type
+align-reference=name # Align references to the variable name
+
+# ---- Formatting Options ---- #
+# keep-one-line-blocks # Keep one-line blocks on the same line
+# keep-one-line-statements   # Keep one-line statements on the same line
+remove-braces # Remove braces from conditional statements (e.g. 'if', 'for', 'while'...). The statement must be a single statement on a single line.
+# break-one-line-headers
+attach-return-type      # Attach the return type to the function name.
+attach-return-type-decl # Attach the return type to the function name.
+attach-inlines          # Attach braces to class inline function definitions.
+convert-tabs            # Convert tabs to spaces
+remove-braces           # Remove unnecessary braces from single-line statements
+close-templates         # Closes whitespace between the ending angle brackets of template definitions.
+#max-code-length=0      # No maximum code length
+break-after-logical
