@@ -1,4 +1,4 @@
-# shellcheck disable=SC2034,SC2153,SC2086,SC2155,SC2016,SC1091,SC2296
+# shellcheck disable=SC1090,SC1091,SC2001,SC2002,SC2016,SC2034,SC2086,SC2153,SC2154,SC2155,SC2181,SC2230,SC2296,SC2312
 # Above line is because shellcheck doesn't support zsh
 # ---- Increase the FUNCNEST limit ----- #
 FUNCSET=99999
@@ -9,9 +9,9 @@ FUNCSET=99999
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # ---- Download Zinit, if it's not there yet ----- #
-if [ ! -d "$ZINIT_HOME" ]; then
-  bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-fi
+[ ! -d "$ZINIT_HOME" ] && mkdir -p "$(dirname "$ZINIT_HOME")"
+[ ! -d "$ZINIT_HOME"/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
 # ---- Add in zsh prompt ----- #
 autoload -Uz promptinit
@@ -30,13 +30,13 @@ zinit cdreplay -q
 zinit ice as"command" from"gh-r" \
           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
           atpull"%atclone" src"init.zsh"
-zinit light 'starship/starship'
+zinit light "starship/starship"
 
 # ---- Add in zsh plugins ----- #
-zinit load zsh-users/zsh-syntax-highlighting
-zinit load zsh-users/zsh-completions
-zinit load zsh-users/zsh-autosuggestions
-zinit load zdharma-continuum/fast-syntax-highlighting
+# zinit load "zsh-users/zsh-autosuggestions"
+# zinit load "zsh-users/zsh-completions"
+zinit load "zdharma-continuum/fast-syntax-highlighting"
+# zinit load "zsh-users/zsh-syntax-highlighting"
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
@@ -49,13 +49,15 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 # ---- Add in snippets ----- #
-zinit snippet OMZP::git
-zinit snippet OMZP::aliases
+zinit snippet "OMZP::git"
 zinit snippet OMZP::composer
-zinit snippet OMZP::laravel
-zinit snippet OMZP::sublime
-zinit snippet OMZP::colorize
-zinit snippet OMZP::asdf
+# zinit snippet OMZP::laravel
+zinit snippet OMZP::command-not-found
+zinit snippet OMZP::copybuffer
+zinit snippet OMZP::copyfile
+zinit snippet OMZP::copypath
+zinit snippet OMZP::dirhistory
+zinit snippet OMZP::extract
 
 # ---- zsh options ----- #
 setopt extendedglob
@@ -64,7 +66,6 @@ setopt ksh_arrays
 # ---- History ----- #
 export HISTFILE=~/.zsh_history
 HISTSIZE=999999
-HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 unsetopt extended_history
 HISTDUP=erase
@@ -88,15 +89,13 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # ---- Aliases ----- #
 alias zshrc="micro ~/.zshrc"
 alias bashrc="micro ~/.bashrc"
-alias microsettings="micro ~/.config/micro/settings.json"
 alias art="php artisan"
 alias cls="clear"
-alias reload="source ~/.zshrc && clear; neofetch"
+alias reload="source ~/.zshrc && clear && neofetch"
 alias pnp="pnpm"
 alias npm="pnpm"
 alias vim="nvim"
 alias apt="nala"
-alias vimconfig="cd ~/.config/nvim"
 # ---- Zoxide (better cd) ----- #
 alias cd="z"
 # ---- Eza (better ls) ----- #
@@ -104,18 +103,16 @@ alias ls="eza  --all --color=always --long --git --icons=always --no-time --no-u
 # ---- Trash-cli (better rm & rmdir) ----- #
 alias rm="rmtrash"
 alias rmdir="rmdirtrash"
-# ---- Micro (better Nano) ----- #
+# ---- Micro (better nano) ----- #
 alias nano="micro"
+# ---- ripgrep (better grep) ----- #
+alias grep="rg"
 alias python="python3"
 alias pip="pip3"
 alias getgpu="lspci -k -d ::03xx"
 alias ocr="tesseract"
 alias mc="micro"
 alias lzg="lazygit"
-
-# ---- Homebrew ----- #
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
 # ---- On-demand rehash ----- #
 zshcache_time="$(date +%s%N)"
@@ -134,37 +131,31 @@ rehash_precmd() {
 
 add-zsh-hook -Uz precmd rehash_precmd
 
-# ---- Ensure no alias for apt exists before defining the function ----- #
-unalias apt 2>/dev/null
-unalias sudo 2>/dev/null
-
-# pnpm
+# ---- pnpm ---- #
 export PNPM_HOME="/home/othman/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
 
-# atuin
+# ---- Atuin ---- #
 case ":${PATH}:" in
-    *:"$HOME/.atuin/bin":*)
-        ;;
-    *)
-        # Prepending path in case a system-installed binary needs to be overridden
-        export PATH="$HOME/.atuin/bin:$PATH"
-        ;;
+  *:"$HOME/.atuin/bin":*)
+    ;;
+  *)
+    # Prepending path in case a system-installed binary needs to be overridden
+    export PATH="$HOME/.atuin/bin:$PATH"
+    ;;
 esac
 
 eval "$(atuin init zsh)"
 
-# Yazi
-
+# ---- Yazi ---- #
 yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
+		builtin cd -- "$cwd" || exit
 	fi
 	rm -f -- "$tmp"
 }
@@ -175,7 +166,7 @@ yy() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 
-export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:$HOME/scripts/python:/home/linuxbrew/.linuxbrew/bin:$BUN_INSTALL/bin"
+export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:$HOME/scripts/python:$BUN_INSTALL/bin"
 
 . "$HOME/.asdf/asdf.sh"
 
@@ -228,9 +219,6 @@ _fzf_comprun() {
 # ---- The fuck alias ----- #
 eval "$(thefuck --alias)"
 
-# ---- Zoxide (better cd) ---- #
-eval "$(zoxide init zsh)"
-
 # ---- Key Bindings ---- #
 # ---- Bind Home and End keys ---- #
 bindkey "^[[H" beginning-of-line     # Home
@@ -245,7 +233,7 @@ bindkey "^[[1;5D" backward-word      # Ctrl+Left
 
 export EDITOR="micro"
 
-export STARSHIP_CONFIG=~/.config/starship.toml
+export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 
 export LIBVIRT_DEFAULT_URI='qemu:///system'
 
@@ -255,8 +243,8 @@ export XCURSOR_THEME="Bibata"
 export XCURSOR_SIZE="24"
 
 # Biome Config
-export BIOME_CONFIG_PATH="/home/othman/.dotfiles/.config/biome.jsonc"
 export NODE_PACKAGE_MANAGER="pnpm"
+export BIOME_CONFIG_PATH="/home/othman/.dotfiles/.config/biome.jsonc"
 export BIOME_BINARY="/usr/bin/biome"
 
 # node version manager nvm
@@ -265,3 +253,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export ARTISTIC_STYLE_OPTIONS="$HOME/.config/.astylerc"
+
+# ---- Zoxide (better cd) ---- #
+eval "$(zoxide init zsh)"
