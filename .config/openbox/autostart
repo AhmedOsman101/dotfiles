@@ -18,6 +18,7 @@ fi
 
 ## Enable power management
 # xfce4-power-manager &
+(sleep 1 && xset s off && xset s noblank && xset -dpms) &
 
 ## Start Compositing Manager
 exec picom &
