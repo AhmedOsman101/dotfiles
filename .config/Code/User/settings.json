@@ -1371,12 +1371,6 @@
   "oneDarkPro.bold": true,
   "security.promptForLocalFileProtocolHandling": false,
   "explorer.confirmDragAndDrop": false,
-  "json.schemas": [
-    {
-      "fileMatch": ["/.docx.json"],
-      "url": "https://raw.githubusercontent.com/Mehdi-Verfaillie/docx/main/src/config/.docx.schema.json"
-    }
-  ],
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua"
   },
@@ -1435,7 +1429,6 @@
   "breadcrumbs.showTypeParameters": false,
   "breadcrumbs.showVariables": false,
   "breadcrumbs.symbolPath": "off",
-
   "explorer.confirmPasteNative": false,
   "vue.format.style.initialIndent": true,
   "vue.format.script.initialIndent": true,
@@ -1547,14 +1540,12 @@
     "storage": true,
     ".phpunit.result.cache": true
   },
-
   // Custom Settings
   "workbench.editor.enablePreview": true,
   "window.newWindowDimensions": "inherit",
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-
   // Silence the Noise
   "editor.hover.enabled": true,
   "editor.gotoLocation.multipleReferences": "goto",
@@ -1562,7 +1553,6 @@
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
-
   // Typography
   "editor.suggestLineHeight": 30,
   "terminal.integrated.lineHeight": 1.5,
@@ -1572,7 +1562,9 @@
     "vue-html": "html",
     "react": "html"
   },
-  "emmet.excludeLanguages": ["php"],
+  "emmet.excludeLanguages": [
+    "php"
+  ],
   "explorer.sortOrder": "type",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.minimap.maxColumn": 250,
@@ -1597,7 +1589,6 @@
     "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
   },
   "liveSassCompile.settings.showOutputWindowOn": "None",
-  // "formatSelectionAsHtml.formatter": "prettier",
   "[dotenv]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
@@ -1724,12 +1715,19 @@
   "diffEditor.maxComputationTime": 0,
   "vue.server.hybridMode": false,
   "extensions.autoUpdate": "onlyEnabledExtensions",
-  "sortJSON.orderOverride": ["name", "version", "description"],
-  "sortJSON.orderUnderride": ["dependencies", "devDependencies"],
-
+  "sortJSON.orderOverride": [
+    "name",
+    "version",
+    "description"
+  ],
+  "sortJSON.orderUnderride": [
+    "dependencies",
+    "devDependencies"
+  ],
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
     "source.fixAll.biome": "explicit",
+    "source.fixAll.shellcheck": "explicit",
     "source.organizeImports": "explicit",
     "source.removeUnusedImports": "never",
     "source.addMissingImports.ts": "explicit",
@@ -1742,7 +1740,9 @@
   "editor.tabSize": 2,
   "cody.autocomplete.enabled": true,
   "prettier.useEditorConfig": false,
-  "indentColorizer.ignoreErrorLanguages": ["*"],
+  "indentColorizer.ignoreErrorLanguages": [
+    "*"
+  ],
   "workbench.colorTheme": "GitHub Dark",
   "workbench.startupEditor": "none",
   // "editor.suggest.preview": true,
@@ -1759,8 +1759,12 @@
     "editor.wrappingIndent": "none"
   },
   "workbench.iconTheme": "vscode-icons",
-  "cSpell.enableFiletypes": ["lua"],
-  "security.allowedUNCHosts": ["wsl.localhost"],
+  "cSpell.enableFiletypes": [
+    "lua"
+  ],
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
   // vim related setup
   // "editor.lineNumbers": "relative",
   "vim.hlsearch": true,
@@ -1768,8 +1772,22 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     // NAVIGATION
     // switch b/w buffers
-    { "before": ["<S-h>"], "commands": [":bprevious"] },
-    { "before": ["<S-l>"], "commands": [":bnext"] }
+    {
+      "before": [
+        "<S-h>"
+      ],
+      "commands": [
+        ":bprevious"
+      ]
+    },
+    {
+      "before": [
+        "<S-l>"
+      ],
+      "commands": [
+        ":bnext"
+      ]
+    }
   ],
   "php.format.codeStyle": "K&R",
   "editor.unicodeHighlight.nonBasicASCII": false,
@@ -1780,11 +1798,20 @@
   "gitlens.currentLine.format": "${authorNotYou}${agoOrDate} ${message}",
   "gitlens.currentLine.uncommittedChangesFormat": "✏️ ${ago}",
   "gitlens.statusBar.enabled": false,
-  "gitlens.changes.locations": ["gutter", "line", "overview"],
-  "gitlens.heatmap.locations": ["overview"],
+  "gitlens.changes.locations": [
+    "gutter",
+    "line",
+    "overview"
+  ],
+  "gitlens.heatmap.locations": [
+    "overview"
+  ],
   "gitlens.heatmap.fadeLines": false,
   "markdown-preview-enhanced.enablePreviewZenMode": false,
-  "autopep8.args": ["--indent-size", "2"],
+  "autopep8.args": [
+    "--indent-size",
+    "2"
+  ],
   "editor.wordWrapColumn": 120,
   "diffEditor.wordWrap": "off",
   "editor.inlineSuggest.syntaxHighlightingEnabled": true,
@@ -1810,7 +1837,6 @@
     "**/.zshrc": true
   },
   "shellcheck.useWorkspaceRootAsCwd": true,
-  "shellcheck.exclude": ["1071"],
   "geminiCommit.commitMessageLength": "short",
   "php.completion.showParameters": true,
   "php.inlayHints.parameters.suppressNameMatchingValue": true,
@@ -1846,21 +1872,34 @@
   "codesnap.shutterAction": "copy",
   "c-cpp-flylint.cppcheck.verbose": true,
   "c-cpp-flylint.debug": true,
-  "autopep8.interpreter": ["python"],
+  "autopep8.interpreter": [
+    "python"
+  ],
   "autopep8.showNotifications": "always",
   "autopep8.importStrategy": "fromEnvironment",
   "c-cpp-flylint.ignoreParseErrors": true,
-  "c-cpp-flylint.standard": ["c11", "c++11"],
+  "c-cpp-flylint.standard": [
+    "c11",
+    "c++11"
+  ],
   "c-cpp-flylint.enable": false,
   "c-cpp-flylint.language": "c",
   "geminiCommit.commit.onlyStagedChanges": true,
   "files.readonlyFromPermissions": true,
   "prettier.endOfLine": "auto",
   "prettier.resolveGlobalModules": true,
-  "clangd.fallbackFlags": ["-Iinclude"],
-  "clangd.arguments": ["--header-insertion=iwyu"],
-  "c-cpp-flylint.clang.includePaths": ["*/inlcude/*"],
-  "c-cpp-flylint.includePaths": ["inlcude"],
+  "clangd.fallbackFlags": [
+    "-Iinclude"
+  ],
+  "clangd.arguments": [
+    "--header-insertion=iwyu"
+  ],
+  "c-cpp-flylint.clang.includePaths": [
+    "*/inlcude/*"
+  ],
+  "c-cpp-flylint.includePaths": [
+    "inlcude"
+  ],
   "vscord.behaviour.prioritizeLanguagesOverExtensions": true,
   "security.workspace.trust.enabled": true,
   "vscord.behaviour.suppressNotifications": true,
@@ -1874,12 +1913,22 @@
   "errorLens.messageBackgroundMode": "message",
   "errorLens.padding": "2px 0.5ch",
   "errorLens.margin": "2.5ch",
-  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info", "hint"],
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+    "warning",
+    "info",
+    "hint"
+  ],
   "errorLens.gutterIconsEnabled": true,
   "errorLens.gutterIconSet": "squareRounded",
   "errorLens.messageTemplate": "[$count] $severity $message",
   // "errorLens.severityText": ["■", "■", "■", "■"],
-  "errorLens.severityText": ["■", "◈", "◉", "■"],
+  "errorLens.severityText": [
+    "■",
+    "◈",
+    "◉",
+    "■"
+  ],
   "errorLens.codeLensEnabled": false,
   "errorLens.messageEnabled": true, // the message alongside code,
   "errorLens.problemRangeDecorationEnabled": true,
@@ -1913,7 +1962,13 @@
   "errorLens.enableOnDiffView": true,
   "errorLens.removeLinebreaks": true,
   "errorLens.replaceLinebreaksSymbol": "⏎",
-  "cssVariables.languages": ["vue-postcss", "scss", "postcss", "less", "css"],
+  "cssVariables.languages": [
+    "vue-postcss",
+    "scss",
+    "postcss",
+    "less",
+    "css"
+  ],
   "highlight-matching-tag.highlightSelfClosing": true,
   "highlight-matching-tag.styles": {
     "opening": {
@@ -1961,40 +2016,63 @@
   "cody.telemetry.level": "off",
   // "prettier.configPath": "/home/othman/.dotfiles/.config/.prettierrc",
   "dotnetAcquisitionExtension.enableTelemetry": false,
-  "dotnetAcquisitionExtension.existingDotnetPath": ["/usr/bin/dotnet"],
+  "dotnetAcquisitionExtension.existingDotnetPath": [
+    "/usr/bin/dotnet"
+  ],
   "[json]": {
     "editor.quickSuggestions": {
       "strings": true
     },
     "editor.suggest.insertMode": "replace",
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
     "editor.quickSuggestions": {
       "strings": true
     },
     "editor.suggest.insertMode": "replace",
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "togglequotes.chars": ["\"", "'", "`"],
+    "togglequotes.chars": [
+      "\"",
+      "'",
+      "`"
+    ],
     "editor.defaultFormatter": "biomejs.biome"
   },
   "[typescriptreact]": {
-    "togglequotes.chars": ["\"", "'", "`"],
+    "togglequotes.chars": [
+      "\"",
+      "'",
+      "`"
+    ],
     "editor.defaultFormatter": "biomejs.biome"
   },
   "[javascriptreact]": {
-    "togglequotes.chars": ["\"", "'", "`"],
+    "togglequotes.chars": [
+      "\"",
+      "'",
+      "`"
+    ],
     "editor.defaultFormatter": "biomejs.biome"
   },
   "[javascript]": {
     "editor.maxTokenizationLineLength": 2500,
-    "togglequotes.chars": ["\"", "'", "`"],
+    "togglequotes.chars": [
+      "\"",
+      "'",
+      "`"
+    ],
     "editor.defaultFormatter": "biomejs.biome"
   },
   "[vue]": {
-    "togglequotes.chars": ["\"", "'", "`"],
+    "togglequotes.chars": [
+      "\"",
+      "'",
+      "`"
+    ],
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnType": false,
@@ -2017,5 +2095,32 @@
   "cody.suggestions.mode": "off",
   "astyle.csharp.enable": true,
   "astyle.java.enable": true,
-  "makefile.configureOnOpen": true
+  "makefile.configureOnOpen": true,
+  "shellcheck.run": "onSave",
+  "shellcheck.customArgs": [
+    "--external-sources"
+  ],
+  "shellcheck.exclude": [
+    "1017",
+    "1090",
+    "1091",
+    "2001",
+    "2002",
+    "2016",
+    "2034",
+    "2086",
+    "2153",
+    "2154",
+    "2155",
+    "2181",
+    "2230",
+    "2296",
+    "2312"
+  ],
+  "bashIde.enableSourceErrorDiagnostics": true,
+  "bashIde.includeAllWorkspaceSymbols": true,
+  "bashIde.shfmt.caseIndent": true,
+  "bashIde.shfmt.ignoreEditorconfig": true,
+  "bashIde.shfmt.simplifyCode": true,
+  "bashIde.shfmt.spaceRedirects": true
 }

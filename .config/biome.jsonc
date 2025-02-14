@@ -4,7 +4,7 @@
     "enabled": true,
     "clientKind": "git",
     "useIgnoreFile": true,
-    "defaultBranch": "main"
+    "defaultBranch": "main",
   },
   "files": {
     "ignoreUnknown": false,
@@ -13,8 +13,8 @@
       "dist/**",
       ".git/**",
       ".vscode/**",
-      "**/*.vue"
-    ]
+      "**/*.vue",
+    ],
   },
   "organizeImports": { "enabled": true },
   "formatter": {
@@ -27,7 +27,7 @@
     "lineWidth": 80,
     "attributePosition": "multiline",
     "ignore": ["*.vue"],
-    "bracketSpacing": true
+    "bracketSpacing": true,
   },
   "linter": {
     "enabled": true,
@@ -37,16 +37,16 @@
         "noUselessCatch": "warn",
         "noUselessConstructor": "warn",
         "noUselessStringConcat": "error",
-        "useDateNow": "info"
+        "useDateNow": "warn",
       },
       "correctness": {
         "noUnusedFunctionParameters": "warn",
         "noUnusedImports": "warn",
-        "noUnusedVariables": "warn"
+        "noUnusedVariables": "warn",
       },
       "style": {
         "noParameterAssign": "info",
-        "noNonNullAssertion": "info"
+        "noNonNullAssertion": "info",
       },
       "suspicious": {
         "noImplicitAnyLet": "warn",
@@ -54,11 +54,11 @@
           "level": "warn",
           "fix": "safe",
           "options": {
-            "ignoreNull": false
-          }
-        }
-      }
-    }
+            "ignoreNull": false,
+          },
+        },
+      },
+    },
   },
   "javascript": {
     "formatter": {
@@ -70,8 +70,8 @@
       "bracketSameLine": false,
       "quoteStyle": "double",
       "attributePosition": "auto",
-      "bracketSpacing": true
-    }
+      "bracketSpacing": true,
+    },
   },
   "json": {
     "formatter": {
@@ -79,11 +79,11 @@
       "indentStyle": "space",
       "indentWidth": 2,
       "lineEnding": "lf",
-      "trailingCommas": "none"
+      "trailingCommas": "none",
     },
     "parser": {
       "allowComments": true,
-      "allowTrailingCommas": true
-    }
-  }
+      "allowTrailingCommas": true,
+    },
+  },
 }
