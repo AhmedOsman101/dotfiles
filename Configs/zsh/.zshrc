@@ -1,4 +1,4 @@
-# shellcheck disable=SC1090,SC1091,SC2001,SC2002,SC2016,SC2034,SC2086,SC2153,SC2154,SC2155,SC2181,SC2230,SC2296,SC2312
+# shellcheck disable=SC1090,SC1091,SC2001,SC2002,SC2016,SC2034,SC2086,SC2153,SC2154,SC2155,SC2181,SC2230,SC2250,SC2296,SC2312
 # Above line is because shellcheck doesn't support zsh
 # ---- Increase the FUNCNEST limit ----- #
 FUNCNEST=99999
@@ -9,8 +9,8 @@ FUNCNEST=99999
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # ---- Download Zinit, if it's not there yet ----- #
-[ ! -d "$ZINIT_HOME" ] && mkdir -p "$(dirname "$ZINIT_HOME")"
-[ ! -d "$ZINIT_HOME"/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+[[ ! -d "$ZINIT_HOME" ]] && mkdir -p "$(dirname "$ZINIT_HOME")"
+[[ ! -d "$ZINIT_HOME"/.git ]] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 
 # ---- Source/Load zinit ----- #
 source "${ZINIT_HOME}/zinit.zsh"
@@ -145,14 +145,14 @@ eval "$(atuin init zsh)"
 yy() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   yazi "$@" --cwd-file="$tmp"
-  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+  if cwd="$(command cat -- "$tmp")" && [[ -n "$cwd" ]] && [[ "$cwd" != "$PWD" ]]; then
     builtin cd -- "$cwd" || exit
   fi
   rm -f -- "$tmp"
 }
 
 # bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+[[ -s "$HOME/.bun/_bun" ]] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -236,8 +236,8 @@ export BIOME_BINARY="/usr/bin/biome"
 
 # node version manager nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+[[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 export ARTISTIC_STYLE_OPTIONS="$HOME/.config/.astylerc"
 
