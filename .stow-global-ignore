@@ -19,7 +19,3 @@
 ^[^.]*.txt
 ^[^.]*.md
 ^[^.]*.sql
-
-# Ignore shell scripts for bootstrap
-bootstrap-arch\.sh
-bootstrap-ubuntu\.sh
