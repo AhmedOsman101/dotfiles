@@ -2096,7 +2096,6 @@
   "astyle.csharp.enable": true,
   "astyle.java.enable": true,
   "makefile.configureOnOpen": true,
-  "shellcheck.run": "onSave",
   "shellcheck.customArgs": [
     "--external-sources"
   ],
