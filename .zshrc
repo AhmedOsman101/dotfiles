@@ -26,11 +26,11 @@ zinit light "starship/starship"
 # ---- Add in zsh plugins ----- #
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light "marlonrichert/zsh-autocomplete"
+zinit light "MichaelAquilina/zsh-you-should-use"
 zinit light "MichaelAquilina/zsh-auto-notify"
 zinit light zsh-users/zsh-completions
 zinit light hlissner/zsh-autopair
 zinit light zsh-users/zsh-autosuggestions
-# Syntax highlighter comes AFTER plugins defining widgets
 zinit light Aloxaf/fzf-tab
 
 # Load a few important annexes, without Turbo
@@ -256,3 +256,8 @@ autoload -Uz compinit
 compinit
 zinit cdreplay -q
 # End of lines added by compinstall
+
+export YSU_MESSAGE_POSITION="after"
+
+# ---- find the command plugin ---- #
+. /usr/share/doc/find-the-command/ftc.zsh
