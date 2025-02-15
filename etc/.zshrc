@@ -25,10 +25,10 @@ zinit light "starship/starship"
 
 # ---- Add in zsh plugins ----- #
 zinit light zdharma-continuum/fast-syntax-highlighting
-zinit light "marlonrichert/zsh-autocomplete"
 zinit light "MichaelAquilina/zsh-you-should-use"
 zinit light "MichaelAquilina/zsh-auto-notify"
 zinit light zsh-users/zsh-completions
+zinit light "marlonrichert/zsh-autocomplete"
 zinit light hlissner/zsh-autopair
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
@@ -36,10 +36,10 @@ zinit light Aloxaf/fzf-tab
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
+  zdharma-continuum/zinit-annex-as-monitor \
+  zdharma-continuum/zinit-annex-bin-gem-node \
+  zdharma-continuum/zinit-annex-patch-dl \
+  zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
 
@@ -71,7 +71,7 @@ setopt hist_find_no_dups
 
 # ---- Completion styling ----- #
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' list-colors "${LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
@@ -110,9 +110,9 @@ zshcache_time="$(date +%s%N)"
 autoload -Uz add-zsh-hook
 
 rehash_precmd() {
-  if [[ -a /var/cache/zsh/pacman ]]; then
+  if [[ -e /var/cache/zsh/pacman ]]; then
     local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
-    if (( zshcache_time < paccache_time )); then
+    if ((zshcache_time < paccache_time)); then
       rehash
       zshcache_time="$paccache_time"
     fi
@@ -124,30 +124,29 @@ add-zsh-hook -Uz precmd rehash_precmd
 # ---- pnpm ---- #
 export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
 # ---- Atuin ---- #
 case ":${PATH}:" in
-  *:"$HOME/.atuin/bin":*)
-    ;;
-  *)
-    # Prepending path in case a system-installed binary needs to be overridden
-    export PATH="$HOME/.atuin/bin:$PATH"
-    ;;
+*:"$HOME/.atuin/bin":*) ;;
+*)
+  # Prepending path in case a system-installed binary needs to be overridden
+  export PATH="$HOME/.atuin/bin:$PATH"
+  ;;
 esac
 
 eval "$(atuin init zsh)"
 
 # ---- Yazi ---- #
 yy() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd" || exit
-	fi
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd" || exit
+  fi
+  rm -f -- "$tmp"
 }
 
 # bun completions
@@ -199,10 +198,18 @@ _fzf_comprun() {
   shift
 
   case "$command" in
-    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
-    export|unset) fzf --preview "eval 'echo ${}'"         "$@" ;;
-    ssh)          fzf --preview 'dig {}'                   "$@" ;;
-    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+  cd)
+    fzf --preview 'eza --tree --color=always {} | head -200' "$@"
+    ;;
+  export | unset)
+    fzf --preview "eval 'echo {}'" "$@"
+    ;;
+  ssh)
+    fzf --preview 'dig {}' "$@"
+    ;;
+  *)
+    fzf --preview "$show_file_or_dir_preview" "$@"
+    ;;
   esac
 }
 
@@ -227,8 +234,8 @@ export BIOME_BINARY="/usr/bin/biome"
 
 # node version manager nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 export ARTISTIC_STYLE_OPTIONS="$HOME/.config/.astylerc"
 
@@ -239,15 +246,15 @@ noDuplicates ~/.zsh_history 2>/dev/null
 
 # ---- Key Bindings ---- #
 # ---- Bind Home and End keys ---- #
-bindkey "^[[H" beginning-of-line     # Home
-bindkey "^[[F" end-of-line           # End
+bindkey "^[[H" beginning-of-line # Home
+bindkey "^[[F" end-of-line       # End
 
 # ---- Bind Delete key ---- #
-bindkey "^[[3~" delete-char          # Delete
+bindkey "^[[3~" delete-char # Delete
 
 # ---- Bind Ctrl+Arrow for moving by words ---- #
-bindkey "^[[1;5C" forward-word       # Ctrl+Right
-bindkey "^[[1;5D" backward-word      # Ctrl+Left
+bindkey "^[[1;5C" forward-word  # Ctrl+Right
+bindkey "^[[1;5D" backward-word # Ctrl+Left
 
 # ---- Load completions ----- #
 zstyle :compinstall filename '/home/othman/.zshrc'
