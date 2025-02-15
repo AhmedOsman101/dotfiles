@@ -1,2 +1,3 @@
 *.sql
 */micro/buffers/*
+Configs/micro/.config/micro/buffers
