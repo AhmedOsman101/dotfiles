@@ -1,7 +1,7 @@
 # shellcheck disable=SC1090,SC1091,SC2001,SC2002,SC2016,SC2034,SC2086,SC2153,SC2154,SC2155,SC2181,SC2230,SC2296,SC2312
 # Above line is because shellcheck doesn't support zsh
 # ---- Increase the FUNCNEST limit ----- #
-FUNCSET=99999
+FUNCNEST=99999
 
 # ---- Zinit ----- #
 
@@ -11,32 +11,27 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 # ---- Download Zinit, if it's not there yet ----- #
 [ ! -d "$ZINIT_HOME" ] && mkdir -p "$(dirname "$ZINIT_HOME")"
 [ ! -d "$ZINIT_HOME"/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+
+# ---- Source/Load zinit ----- #
 source "${ZINIT_HOME}/zinit.zsh"
 
 # ---- Add in zsh prompt ----- #
 autoload -Uz promptinit
 promptinit
 
-# ---- Load completions ----- #
-autoload -Uz compinit && compinit
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-# ---- Source/Load zinit ----- #
-source "${ZINIT_HOME}/zinit.zsh"
-zinit cdreplay -q
-
 # ---- Prompt Starship ----- #
-zinit ice as"command" from"gh-r" \
-          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
-          atpull"%atclone" src"init.zsh"
+zinit ice as"command" from"gh-r" atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" atpull"%atclone" src"init.zsh"
 zinit light "starship/starship"
 
 # ---- Add in zsh plugins ----- #
-# zinit load "zsh-users/zsh-autosuggestions"
-# zinit load "zsh-users/zsh-completions"
-zinit load "zdharma-continuum/fast-syntax-highlighting"
-# zinit load "zsh-users/zsh-syntax-highlighting"
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light "marlonrichert/zsh-autocomplete"
+zinit light "MichaelAquilina/zsh-auto-notify"
+zinit light zsh-users/zsh-completions
+zinit light hlissner/zsh-autopair
+zinit light zsh-users/zsh-autosuggestions
+# Syntax highlighter comes AFTER plugins defining widgets
+zinit light Aloxaf/fzf-tab
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
@@ -49,11 +44,8 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 # ---- Add in snippets ----- #
-zinit snippet "OMZP::git"
-zinit snippet OMZP::composer
-# zinit snippet OMZP::laravel
+zinit snippet OMZP::git
 zinit snippet OMZP::command-not-found
-zinit snippet OMZP::copybuffer
 zinit snippet OMZP::copyfile
 zinit snippet OMZP::copypath
 zinit snippet OMZP::dirhistory
@@ -61,7 +53,7 @@ zinit snippet OMZP::extract
 
 # ---- zsh options ----- #
 setopt extendedglob
-setopt ksh_arrays
+unsetopt nomatch
 
 # ---- History ----- #
 export HISTFILE=~/.zsh_history
@@ -76,8 +68,6 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
-
-noDuplicates .zsh_history 2>/dev/null
 
 # ---- Completion styling ----- #
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -132,7 +122,7 @@ rehash_precmd() {
 add-zsh-hook -Uz precmd rehash_precmd
 
 # ---- pnpm ---- #
-export PNPM_HOME="/home/othman/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -161,7 +151,7 @@ yy() {
 }
 
 # bun completions
-[ -s "/home/othman/.bun/_bun" ] && source "/home/othman/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -219,18 +209,6 @@ _fzf_comprun() {
 # ---- The fuck alias ----- #
 eval "$(thefuck --alias)"
 
-# ---- Key Bindings ---- #
-# ---- Bind Home and End keys ---- #
-bindkey "^[[H" beginning-of-line     # Home
-bindkey "^[[F" end-of-line           # End
-
-# ---- Bind Delete key ---- #
-bindkey "^[[3~" delete-char          # Delete
-
-# ---- Bind Ctrl+Arrow for moving by words ---- #
-bindkey "^[[1;5C" forward-word       # Ctrl+Right
-bindkey "^[[1;5D" backward-word      # Ctrl+Left
-
 export EDITOR="micro"
 
 export STARSHIP_CONFIG="$HOME/.config/starship.toml"
@@ -244,7 +222,7 @@ export XCURSOR_SIZE="24"
 
 # Biome Config
 export NODE_PACKAGE_MANAGER="pnpm"
-export BIOME_CONFIG_PATH="/home/othman/.dotfiles/.config/biome.jsonc"
+export BIOME_CONFIG_PATH="$HOME/.dotfiles/.config/biome.jsonc"
 export BIOME_BINARY="/usr/bin/biome"
 
 # node version manager nvm
@@ -256,3 +234,25 @@ export ARTISTIC_STYLE_OPTIONS="$HOME/.config/.astylerc"
 
 # ---- Zoxide (better cd) ---- #
 eval "$(zoxide init zsh)"
+
+noDuplicates ~/.zsh_history 2>/dev/null
+
+# ---- Key Bindings ---- #
+# ---- Bind Home and End keys ---- #
+bindkey "^[[H" beginning-of-line     # Home
+bindkey "^[[F" end-of-line           # End
+
+# ---- Bind Delete key ---- #
+bindkey "^[[3~" delete-char          # Delete
+
+# ---- Bind Ctrl+Arrow for moving by words ---- #
+bindkey "^[[1;5C" forward-word       # Ctrl+Right
+bindkey "^[[1;5D" backward-word      # Ctrl+Left
+
+# ---- Load completions ----- #
+zstyle :compinstall filename '/home/othman/.zshrc'
+
+autoload -Uz compinit
+compinit
+zinit cdreplay -q
+# End of lines added by compinstall
