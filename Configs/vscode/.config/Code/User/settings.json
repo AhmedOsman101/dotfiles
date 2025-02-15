@@ -2121,5 +2121,6 @@
   "bashIde.shfmt.caseIndent": true,
   "bashIde.shfmt.ignoreEditorconfig": true,
   "bashIde.shfmt.simplifyCode": true,
-  "bashIde.shfmt.spaceRedirects": true
+  "bashIde.shfmt.spaceRedirects": true,
+  "git-graph.enhancedAccessibility": true
 }
