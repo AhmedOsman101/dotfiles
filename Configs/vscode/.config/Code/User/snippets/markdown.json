@@ -1,13 +1,30 @@
 {
+	"index": {
+		"prefix": "index",
+		"description": "create a skeleton for index files vitepress",
+		"body": [
+			"---",
+			"prev: false",
+			"next: false",
+			"lastUpdated: false",
+			"title: ${1:${TM_DIRECTORY/.*[\\\/]([^\\\/]+)/$1/}}",
+			"---",
+			"",
+			"# ${1:${TM_DIRECTORY/.*[\\\/]([^\\\/]+)/$1/}}",
+			"",
+			"- [${2:title}](${3:link.md})",
+			""
+		]
+	},
 	"CenterTagImage": {
 		"prefix": "ceni",
 		"body": [
 			"<center style='padding: 1rem; padding-bottom: 0.1rem;'>",
 			"",
-			"<img src='${1:images/contact.png}' alt='${2:description}' style='width: 100%; border-radius: 10px;' />",
+			"<img src='${1|images,imgs|}/${2:image.png}' alt='${3:description}' style='width: 100%; border-radius: 10px;' />",
 			"",
 			"</center>",
-			"$3"
+			"$0"
 		],
 		"description": "Insert an image that's horizontally centered"
 	},
@@ -16,10 +33,10 @@
 		"body": [
 			"<center style='padding: 1rem; padding-bottom: 0.1rem;'>",
 			"",
-			"<img src='${1:images/contact.png}' alt='${2:description}' style='width: 100%; border-radius: 10px; border-bottom-right-radius: 0px;' />",
+			"<img src='${1|images,imgs|}/${2:image.png}' alt='${3:description}' style='width: 100%; border-radius: 10px; border-bottom-right-radius: 0px;' />",
 			"",
 			"</center>",
-			"$3"
+			"$0"
 		],
 		"description": "Insert an image that's horizontally centered with no border radius at bottom right corner"
 	},
@@ -28,10 +45,10 @@
 		"body": [
 			"<center style='padding: 1rem; padding-bottom: 0.1rem;'>",
 			"",
-			"![${1:description}](${2:./images/})",
+			"![${1:description}](${2|images,imgs|}/${3:image.png})",
 			"",
 			"</center>",
-			"$3"
+			"$0"
 		],
 		"description": "Insert an image that's horizontally centered"
 	},
