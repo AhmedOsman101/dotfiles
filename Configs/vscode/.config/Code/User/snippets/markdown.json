@@ -4,10 +4,10 @@
 		"description": "create a skeleton for index files vitepress",
 		"body": [
 			"---",
+			"title: ${1:${TM_DIRECTORY/.*[\\\/]([^\\\/]+)/$1/}}",
 			"prev: false",
 			"next: false",
 			"lastUpdated: false",
-			"title: ${1:${TM_DIRECTORY/.*[\\\/]([^\\\/]+)/$1/}}",
 			"---",
 			"",
 			"# ${1:${TM_DIRECTORY/.*[\\\/]([^\\\/]+)/$1/}}",
