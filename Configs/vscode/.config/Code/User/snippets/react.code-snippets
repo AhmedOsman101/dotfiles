@@ -3,10 +3,10 @@
     "prefix": "rfc",
     "scope": "javascriptreact,typescriptreact",
     "body": [
-      "export default function $1 () {",
+      "export default function ${1:${TM_FILENAME_BASE}} () {",
       "\treturn (",
       "\t\t<>",
-      "\t\t\t<div>$1</div>",
+      "\t\t\t<div>${1:${TM_FILENAME_BASE}}</div>",
       "\t\t</>",
       "\t);",
       "}",
@@ -17,15 +17,15 @@
     "prefix": "rafc",
     "scope": "javascriptreact,typescriptreact",
     "body": [
-      "const $1 = () => {",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
       "\treturn (",
       "\t\t<>",
-      "\t\t\t<div>$1</div>",
+      "\t\t\t<div>${1:${TM_FILENAME_BASE}}</div>",
       "\t\t</>",
       "\t);",
       "}",
       "",
-      "export default $1;",
+      "export default ${1:${TM_FILENAME_BASE}};",
       "$0"
     ]
   }

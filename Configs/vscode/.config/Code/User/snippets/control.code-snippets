@@ -86,7 +86,7 @@
     "body": [
       "case ${1:label}:",
       "\t${2:// code...}",
-      "\tbreak;"
+      "\t${3|break,return|};"
     ],
     "description": "Case addon block"
   },
