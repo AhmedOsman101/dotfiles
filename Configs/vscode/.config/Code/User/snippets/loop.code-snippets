@@ -23,7 +23,7 @@
 		"prefix": "while",
 		"scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
 		"body": [
-			"while (${1:variable} ${2:<} ${3:n}) {",
+			"while (${1:variable} ${2|<,<=,>,>=,==,!=|} ${3:n}) {",
 			"\t${0:// code...}",
 			"}"
 		],
@@ -35,7 +35,7 @@
 		"body": [
 			"do {",
 			"\t${0:// code...}",
-			"} while (${1:variable} ${2:<} ${3:n});"
+			"} while (${1:variable} ${2|<,<=,>,>=,==,!=|} ${3:n});"
 		],
 		"description": "Do while loop"
 	}

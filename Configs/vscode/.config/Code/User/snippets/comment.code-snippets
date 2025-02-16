@@ -1,21 +1,17 @@
 {
   "comment": {
-    "scope": "bash,shellscript,python,php,dotenv",
     "prefix": "com",
     "body": [
-      "# ---- ${1:comment} ---- #",
-      ""
+      "$LINE_COMMENT ---- ${1:comment} ---- $LINE_COMMENT",
     ],
     "description": "Adds a nicely formatted comment"
   },
   "Multiline Comment": {
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs,php",
-    "prefix": "com",
+    "prefix": "mcom",
     "body": [
-      "/*",
+      "$BLOCK_COMMENT_START",
       "\t${0:comment}",
-      "*/",
-      ""
+      "$BLOCK_COMMENT_END",
     ],
     "description": "Adds a nicely formatted multiline comment"
   },

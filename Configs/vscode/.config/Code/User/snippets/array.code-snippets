@@ -5,7 +5,15 @@
 		"body": [
 			"[${1:value}, ${2:value}, $3];"
 		],
-		"description": "Array [] block"
+		"description": "Array []"
+	},
+	"array": {
+		"prefix": "arr",
+		"scope": "c,cpp",
+		"body": [
+			"{${1:value}, ${2:value}, $3};"
+		],
+		"description": "Array {}"
 	},
 	"Array ... value": {
 		"prefix": "va",

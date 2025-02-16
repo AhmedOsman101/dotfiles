@@ -5,7 +5,7 @@
     "body": [
       "<link",
       "\trel=\"stylesheet\"",
-      "\thref=\"https://cdn.jsdelivr.net/npm/water.css@2/out/${1:dark}.css\"",
+      "\thref=\"https://cdn.jsdelivr.net/npm/water.css@2/out/${1|dark,light,water|}.css\"",
       "/>"
     ],
     "description": "watercss cdn, options water, dark, light"
