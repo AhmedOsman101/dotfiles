@@ -37,7 +37,7 @@ alias cp="cp -i"
 alias mv="mv -i"
 # ---- Trash-cli (better rm & rmdir) ----- #
 alias rm="rmtrash -i"
-alias rmdir="rmdirtrash -i"
+alias rmdir="rmdirtrash --ignore-fail-on-non-empty"
 
 # ---- easier to read disk ---- #
 alias df='df -h'     # human-readable sizes
