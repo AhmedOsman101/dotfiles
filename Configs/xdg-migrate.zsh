@@ -1,0 +1,25 @@
+#!/bin/sh
+mv /home/othman/.android $ANDROID_USER_HOME
+mv /home/othman/.asdf $ASDF_DATA_DIR
+mv /home/othman/.bash_history "${XDG_STATE_HOME}/bash/history"
+mv /home/othman/.cargo $CARGO_HOME
+mv /home/othman/.nv "$XDG_CACHE_HOME"/nv
+mv /home/othman/.zcompdump-OTHMAN-PC-5.9 "$XDG_CACHE_HOME/zsh/zcompdump-5.9"
+mv /home/othman/.wget-hsts "$XDG_DATA_HOME/wget-hsts"
+mv /home/othman/.w3m $W3M_DIR
+mv /home/othman/.subversion $XDG_CONFIG_HOME/subversion
+mv /home/othman/.rustup "$XDG_DATA_HOME"/rustup
+mv /home/othman/.python_history $PYTHONSTARTUP
+mv /home/othman/.password-store "$XDG_DATA_HOME"/pass
+mv /home/othman/.parallel "$XDG_CONFIG_HOME"/parallel
+mv /home/othman/.oh-my-zsh ${ZSH:-/home/othman/.oh-my-zsh}
+mv /home/othman/.nvm $NVM_DIR
+mv /home/othman/.nvidia-settings-rc "$XDG_CONFIG_HOME"/nvidia/settings
+mv /home/othman/.nuget/packages "$XDG_CACHE_HOME"/NuGetPackages
+mv /home/othman/.npm ${XDG_DATA_HOME}/npm
+mv /home/othman/.node_repl_history "$XDG_DATA_HOME"/node_repl_history
+mv /home/othman/.mplayer "$XDG_CONFIG_HOME"/mplayer
+mv /home/othman/go "$XDG_DATA_HOME"/go
+mv /home/othman/.gnupg/* "$XDG_DATA_HOME"/gnupg/
+mv /home/othman/.dotnet "$XDG_DATA_HOME"/dotnet
+mv /home/othman/.docker "$XDG_CONFIG_HOME"/dockerk

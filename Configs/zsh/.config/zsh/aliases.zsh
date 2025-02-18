@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # ---- Aliases ----- #
-alias zshrc="micro $ZDOTDIR/.zshrc"
+alias zshrc="micro $ZSHRC"
 alias bashrc="micro ~/.bashrc"
 alias art="php artisan"
 alias cls="clear"
-alias reload="source $ZDOTDIR/.zshrc && clear && neofetch"
+alias reload="source $ZSHRC && clear && neofetch"
 alias npm="pnpm"
 alias vim="nvim"
 alias apt="nala"
