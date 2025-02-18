@@ -1452,7 +1452,6 @@
       "source": "Git Bash"
     }
   },
-  "terminal.integrated.stickyScroll.enabled": true,
   "git.terminalGitEditor": true,
   "workbench.cloudChanges.autoResume": "off",
   "workbench.productIconTheme": "fluent-icons",
@@ -1470,8 +1469,9 @@
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
     "*.jsx": "${capture}.js",
     "*.tsx": "${capture}.ts",
-    "tsconfig.json": "tsconfig.*.json",
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "tsconfig.json": "tsconfig.*.json, env.d.ts",
+    "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*",
+    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .prettier*, prettier*, .editorconfig, biome*",
     "*.sqlite": "${capture}.${extname}-*",
     "*.db": "${capture}.${extname}-*",
     "*.sqlite3": "${capture}.${extname}-*",
@@ -1644,7 +1644,7 @@
     },
     {
       "tag": "fixme",
-      "color": "#FF8C00",
+      "color": "#FF757F",
       "strikethrough": false,
       "underline": false,
       "backgroundColor": "transparent",
@@ -1886,7 +1886,7 @@
   "c-cpp-flylint.language": "c",
   "geminiCommit.commit.onlyStagedChanges": true,
   "files.readonlyFromPermissions": true,
-  "prettier.endOfLine": "auto",
+  "prettier.endOfLine": "lf",
   "prettier.resolveGlobalModules": true,
   "clangd.fallbackFlags": [
     "-Iinclude"
@@ -2032,7 +2032,7 @@
       "strings": true
     },
     "editor.suggest.insertMode": "replace",
-    // "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features",
   },
   "[typescript]": {
     "togglequotes.chars": [
@@ -2122,5 +2122,7 @@
   "bashIde.shfmt.ignoreEditorconfig": true,
   "bashIde.shfmt.simplifyCode": true,
   "bashIde.shfmt.spaceRedirects": true,
-  "git-graph.enhancedAccessibility": true
+  "git-graph.enhancedAccessibility": true,
+  "explorer.fileNesting.enabled": true,
+  "biome.rename": true,
 }
