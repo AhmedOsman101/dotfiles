@@ -8,6 +8,7 @@ config_files=(
   "$ZDOTDIR/variables.zsh"
   "$ZDOTDIR/functions.zsh"
   "$ZDOTDIR/aliases.zsh"
+  "$ZDOTDIR/keybinds.zsh"
 )
 
 for file in "${config_files[@]}"; do
@@ -88,27 +89,16 @@ autoload -Uz add-zsh-hook
 add-zsh-hook -Uz precmd rehash_precmd
 
 # ---- pnpm ---- #
-case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+[[ ":$PATH:" != *":$PNPM_HOME:"* ]] && export PATH="$PNPM_HOME:$PATH"
 
 # ---- Atuin ---- #
-case ":${PATH}:" in
-*:"$HOME/.atuin/bin":*) ;;
-*)
-  # Prepending path in case a system-installed binary needs to be overridden
-  export PATH="$HOME/.atuin/bin:$PATH"
-  ;;
-esac
-
+[[ ":$PATH:" != *":$HOME/.atuin/bin:"* ]] && export PATH="$HOME/.atuin/bin:$PATH"
 eval "$(atuin init zsh)"
 
 # bun completions
 [[ -s "$HOME/.bun/_bun" ]] && source "$HOME/.bun/_bun"
 
-# TODO: correct path
-source "$ASDF_DATA_DIR/asdf.sh"
+source "$ASDF_DIR/asdf.sh"
 source "$CARGO_HOME/env"
 
 # ---- FZF ----- #
@@ -126,28 +116,23 @@ eval "$(thefuck --alias)"
 # ---- Zoxide (better cd) ---- #
 eval "$(zoxide init zsh)"
 
-noDuplicates ~/.zsh_history 2>/dev/null
-
-# ---- Key Bindings ---- #
-# ---- Bind Home and End keys ---- #
-bindkey "^[[H" beginning-of-line # Home
-bindkey "^[[F" end-of-line       # End
-
-# ---- Bind Delete key ---- #
-bindkey "^[[3~" delete-char # Delete
-
-# ---- Bind Ctrl+Arrow for moving by words ---- #
-bindkey "^[[1;5C" forward-word  # Ctrl+Right
-bindkey "^[[1;5D" backward-word # Ctrl+Left
+noDuplicates $HISTFILE 2>/dev/null
 
 # ---- Load completions ----- #
-zstyle :compinstall filename '/home/othman/.zshrc'
+zstyle :compinstall filename $ZSHRC
 
 autoload -Uz compinit
-compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 zinit cdreplay -q
-
 # End of lines added by compinstall
 
 # ---- find the command plugin ---- #
-. /usr/share/doc/find-the-command/ftc.zsh
+source /usr/share/doc/find-the-command/ftc.zsh noupdate
+
+# ---- Enable better selection support ---- #
+autoload -Uz select-word-style
+select-word-style bash
+# region highlight style
+zstyle ':zle:*' region-highlight \
+  'fg=none' \
+  'bg=#7287FD66'

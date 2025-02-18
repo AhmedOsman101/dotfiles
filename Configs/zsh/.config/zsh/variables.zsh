@@ -49,6 +49,11 @@ export DOTNET_CLI_HOME="${XDG_DATA_HOME}/dotnet"
 # ---- FZF ----- #
 # Use fd instead of fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_DEFAULT_OPTS=" \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--color=selected-bg:#45475a \
+--multi"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
@@ -88,9 +93,6 @@ export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
 # ---- NVM ---- #
 NVM_DIR="$XDG_DATA_HOME"/nvm
 
-# ---- PATH ---- #
-export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:$HOME/scripts/python:$BUN_INSTALL/bin"
-
 # ---- Parallel ---- #
 export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel
 
@@ -124,5 +126,12 @@ export YSU_MESSAGE_POSITION="after"
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
+# ---- Zsh ---- #
+export ZDOTDIR="$HOME/.config/zsh"
+export ZSHRC="$ZDOTDIR/.zshrc"
+
 # Standard template for pandoc md to docx conversion
 export MRT="$HOME/Documents/backup/WordTemplates/Standard.dotx"
+
+# ---- PATH ---- #
+export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:$HOME/scripts/python:$BUN_INSTALL/bin"
