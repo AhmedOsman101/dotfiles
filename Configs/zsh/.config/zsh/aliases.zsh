@@ -48,3 +48,4 @@ alias psmem='ps aux | sort -nr -k 4 | head -5 | fzf'
 
 # ---- get top process eating cpu ---- #
 alias pscpu='ps aux | sort -nr -k 3 | head -5 | fzf'
+alias git_current_branch='git rev-parse --abbrev-ref HEAD'
