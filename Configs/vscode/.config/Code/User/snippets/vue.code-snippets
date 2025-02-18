@@ -1,4 +1,23 @@
 {
+	"init": {
+		"scope": "vue",
+		"isFileTemplate": true,
+		"prefix": "init",
+		"description": "Vue component skeleton",
+		"body": [
+			"<script lang=\"${1|ts,tsx,js,jsx|}\">",
+			"// code",
+			"</script>",
+			"",
+			"<template>",
+			"\t<div>${2:${TM_FILENAME_BASE}}</div>",
+			"</template>",
+			"",
+			"<style>",
+			"/* code */",
+			"</style>"
+		]
+	},
 	"Pinia Options Store Boilerplate": {
 		"scope": "javascript,typescript",
 		"prefix": "pinia-options",
