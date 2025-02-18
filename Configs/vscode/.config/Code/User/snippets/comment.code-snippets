@@ -15,4 +15,46 @@
     ],
     "description": "Adds a nicely formatted multiline comment"
   },
+  "Todo Comment": {
+    "prefix": "todo",
+    "body": [
+      "$LINE_COMMENT TODO: $0"
+    ],
+    "description": "Adds a nicely formatted todo comment"
+  },
+  "Fixme Comment": {
+    "prefix": "fixme",
+    "body": [
+      "$LINE_COMMENT FIXME: $0"
+    ],
+    "description": "Adds a nicely formatted fixme comment"
+  },
+  "Alert Comment": {
+    "prefix": "alert",
+    "body": [
+      "$LINE_COMMENT!: $0"
+    ],
+    "description": "Adds a nicely formatted alert comment"
+  },
+  "Note Comment": {
+    "prefix": "note",
+    "body": [
+      "$LINE_COMMENT*: $0"
+    ],
+    "description": "Adds a nicely formatted note comment"
+  },
+  "Query Comment": {
+    "prefix": "query",
+    "body": [
+      "$LINE_COMMENT?: $0"
+    ],
+    "description": "Adds a nicely formatted query comment"
+  },
+  "Cancelled Comment": {
+    "prefix": "cancelled",
+    "body": [
+      "$LINE_COMMENT$LINE_COMMENT: $0"
+    ],
+    "description": "Adds a nicely formatted cancelled comment"
+  },
 }
