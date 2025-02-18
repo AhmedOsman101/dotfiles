@@ -10,6 +10,7 @@ command_timeout = 3600
 format = """$directory$git_branch$git_status
 $os$character"""
 right_format = """$all"""
+continuation_prompt = '❯❯'
 
 [character]
 success_symbol = '[❯](bold green)'
