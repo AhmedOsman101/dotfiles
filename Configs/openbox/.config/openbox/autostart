@@ -12,8 +12,8 @@ nitrogen --restore
 xfsettingsd &
 
 ## polkit agent
-if [[ ! $(pidof xfce-polkit) ]]; then
-	/usr/lib/xfce-polkit/xfce-polkit &
+if [[ -z $(pidof xfce-polkit) ]]; then
+  /usr/lib/xfce-polkit/xfce-polkit &
 fi
 
 ## Enable power management
@@ -58,3 +58,10 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 
 ## User Friendly Bluetooth Menu
 #blueman-applet &
+
+# Start DBus if not already running
+if [[ -z "${DBUS_SESSION_BUS_ADDRESS}" ]]; then
+  eval "$(dbus-launch --sh-syntax)"
+  export DBUS_SESSION_BUS_ADDRESS
+  export DBUS_SESSION_BUS_PID
+fi
