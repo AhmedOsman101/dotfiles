@@ -12,7 +12,8 @@ alias apt="nala"
 alias python="python3"
 alias pip="pip3"
 alias getgpu="lspci -k -d ::03xx"
-alias ocr="tesseract"
+# ---- Bat (better cat) ----- #
+alias cat="bat --pager never --style plain"
 # ---- Zoxide (better cd) ----- #
 alias cd="z"
 # ---- Eza (better ls) ----- #
@@ -50,8 +51,11 @@ alias psmem='ps aux | sort -nr -k 4 | head -5 | fzf'
 alias pscpu='ps aux | sort -nr -k 3 | head -5 | fzf'
 alias git_current_branch='git rev-parse --abbrev-ref HEAD'
 
-# ---- quickly navigate to my dotfiles ---- #
-alias dotfiles="cd $TUCKR_DIR"
+# ---- copy to clipboard ----#
+[[ $(command -v copyclip) ]] || alias copyclip="clipcopy"
 
 # ---- markdown previewer ---- #
-# alias glow="glow -p" # pagination mode
+alias glow="glow -p" # pagination mode
+
+# ---- Qalculate ---- #
+alias calc='qalc'

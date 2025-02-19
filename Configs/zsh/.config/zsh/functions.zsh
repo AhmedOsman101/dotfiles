@@ -54,3 +54,9 @@ yy() {
   fi
   rmtrash -f -- "$tmp"
 }
+
+# ---- quickly navigate to my dotfiles ---- #
+dotfiles() {
+  yy "$(dotfiles.sh $1)"
+  log-info "Changed directory!"
+}
