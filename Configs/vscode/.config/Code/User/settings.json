@@ -2085,9 +2085,7 @@
     "editor.formatOnType": false,
   },
   "editor.formatOnType": false,
-  "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "file",
   "biome.enabled": true,
   "biome.lspBin": "/usr/bin/biome",
   "javascript.suggest.autoImports": true,
@@ -2134,4 +2132,6 @@
   "git-graph.enhancedAccessibility": true,
   "explorer.fileNesting.enabled": true,
   "biome.rename": true,
+  "typescript.format.semicolons": "insert",
+  "editor.detectIndentation": false,
 }
