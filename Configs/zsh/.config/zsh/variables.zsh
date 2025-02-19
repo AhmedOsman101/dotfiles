@@ -68,6 +68,9 @@ export GOPATH="${XDG_DATA_HOME}/go"
 # ---- Gtk-2 ---- #
 export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc"
 
+# ---- Gum ---- #
+export GUM_FILTER_PROMPT="❯ "
+
 # ---- History ----- #
 HISTSIZE=999999
 SAVEHIST=$HISTSIZE
@@ -107,6 +110,9 @@ export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 
 # ---- Rustup ---- #
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+
+# ---- Scripts ---- #
+export SCRIPTS_DIR="$HOME/scripts"
 
 # ---- Starship ---- #
 export STARSHIP_CONFIG="$HOME/.config/starship.toml"
