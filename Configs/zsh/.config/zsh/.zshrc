@@ -30,8 +30,7 @@ autoload -Uz promptinit
 promptinit
 
 # ---- Prompt Starship ----- #
-zinit ice as"command" from"gh-r" atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" atpull"%atclone" src"init.zsh"
-zinit light "starship/starship"
+eval "$(starship init zsh)"
 
 # ---- Add in zsh plugins ----- #
 zinit light zdharma-continuum/fast-syntax-highlighting
@@ -95,10 +94,13 @@ add-zsh-hook -Uz precmd rehash_precmd
 [[ ":$PATH:" != *":$HOME/.atuin/bin:"* ]] && export PATH="$HOME/.atuin/bin:$PATH"
 eval "$(atuin init zsh)"
 
-# bun completions
+# ---- bun completions ---- #
 [[ -s "$HOME/.bun/_bun" ]] && source "$HOME/.bun/_bun"
 
+# ---- Asdf ---- #
 source "$ASDF_DIR/asdf.sh"
+
+# ---- Cargo ---- #
 source "$CARGO_HOME/env"
 
 # ---- FZF ----- #
@@ -132,7 +134,6 @@ source /usr/share/doc/find-the-command/ftc.zsh noupdate
 # ---- Enable better selection support ---- #
 autoload -Uz select-word-style
 select-word-style bash
-# region highlight style
-zstyle ':zle:*' region-highlight \
-  'fg=none' \
-  'bg=#7287FD66'
+
+# ---- region highlight style ---- #
+zstyle ':zle:*' region-highlight 'fg=none' 'bg=#7287FD66'
