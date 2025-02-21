@@ -72,9 +72,10 @@ export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc"
 export GUM_FILTER_PROMPT="❯ "
 
 # ---- History ----- #
-HISTSIZE=999999
-SAVEHIST=$HISTSIZE
-HISTDUP=erase
+export HISTSIZE=999999
+export SAVEHIST=$HISTSIZE
+export HISTDUP=erase
+export HISTCONTROL="ignoreboth"
 
 # ---- Libvirt ---- #
 export LIBVIRT_DEFAULT_URI='qemu:///system'
