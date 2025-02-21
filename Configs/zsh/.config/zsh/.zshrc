@@ -64,17 +64,17 @@ zinit snippet OMZP::extract
 # ---- zsh options ----- #
 setopt extendedglob
 unsetopt nomatch
+setopt AUTO_CD  # Type directory name to cd into it
 
 # ---- History ----- #
 HISTFILE="$HOME/.zsh_history"
-unsetopt extended_history
-setopt share_history
-setopt inc_append_history
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
+unsetopt extended_history     # Disable timestamps in history
+setopt share_history          # Share history across shells
+setopt inc_append_history     # Add commands to history immediately
+setopt hist_ignore_space      # Ignore commands starting with space
+setopt hist_ignore_all_dups   # Remove older duplicate entries
+setopt hist_save_no_dups      # Don't save duplicates to history file
+setopt hist_find_no_dups      # Skip duplicates when searching history
 
 # ---- Completion styling ----- #
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
