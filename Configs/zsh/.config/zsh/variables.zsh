@@ -80,6 +80,14 @@ export HISTCONTROL="ignoreboth"
 # ---- Libvirt ---- #
 export LIBVIRT_DEFAULT_URI='qemu:///system'
 
+# ---- Man ---- #
+# export MANPAGER="less -R"
+export MANROFFOPT="-c"
+export MANPAGER="sh -c 'col -bx | bat --paging=always --language=man -p'"
+export LESS_TERMCAP_md=$'\e[01;32m' # Green for bold
+export LESS_TERMCAP_me=$'\e[0m'
+
+
 # ---- Mplayer ---- #
 export MPLAYER_HOME="$XDG_CONFIG_HOME/mplayer"
 
