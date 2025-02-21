@@ -17,13 +17,16 @@ success_symbol = '[❯](bold green)'
 error_symbol = '[✗](bold red)'
 
 [time]
-disabled = false
+disabled = true
 use_12hr = true
 format = " [$time]($style) "
 time_format = "%I:%M%P"
 
 [cmd_duration]
-format = " took [$duration]($style) "
+format = "  [$duration]($style) "
+min_time = 5_000
+show_notifications = false
+min_time_to_notify = 30_000
 
 # Nerd Fonts preset
 [aws]
