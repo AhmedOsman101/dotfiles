@@ -58,4 +58,6 @@ alias git_current_branch='git rev-parse --abbrev-ref HEAD'
 alias glow="glow -p" # pagination mode
 
 # ---- Qalculate ---- #
-alias calc="qalc"
+alias qalc="qalc --color" # return only the output and colorize output
+alias calc="qalc --terse" # return only the output and colorize output
+
