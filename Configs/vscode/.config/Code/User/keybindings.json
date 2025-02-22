@@ -95,6 +95,19 @@
   {
     "key": "ctrl+shift+l",
     "command": "-continue.focusContinueInputWithoutClear"
+  },
+  {
+    "key": "ctrl+'",
+    "command": "-locateThisDocument.locateActiveDocument"
+  },
+  {
+    "key": "ctrl+shift+'",
+    "command": "-locateThisDocument.openActiveDocumentInFileExplorer"
+  },
+  {
+    "key": "ctrl+shift+alt+'",
+    "command": "-locateThisDocument.openWorkspaceRootFolderInFileExplorer",
+    "when": "workspaceFolderCount == '1'"
   }
   // {
   //   "key": "ctrl+r",

@@ -2134,4 +2134,10 @@
   "biome.rename": true,
   "typescript.format.semicolons": "insert",
   "editor.detectIndentation": false,
+  "locateThisDocument.explorerIcons.openWorkspaceRootFolderInFileExplorer": false,
+  "locateThisDocument.explorerIcons.openActiveDocumentInFileExplorer": false,
+  "locateThisDocument.editorTitleIcons.show": false,
+  "locateThisDocument.editorTitleIcons.openActiveDocumentInFileExplorer": false,
+  "locateThisDocument.editorTitleIcons.locateActiveDocument": false,
+  "locateThisDocument.editorTitleContext": false,
 }
