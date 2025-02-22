@@ -1,1 +1,0 @@
-autopep8 iftop klavaro knights ktouch lxc p7zip python-dbus python-pylint qt5gtk2 qt6gtk2 rofi-emoji-git rofi-spotify-git spofi-git tipp10 7zip aircrack-ng ascii debtap gimp gnome-chess gnuchess gpick lxappearance macchanger outlook-for-linux-bin polybar-spotify-module protobuf-c scrcpy thonny
