@@ -1,0 +1,68 @@
+{
+  "bash skeleton": {
+    "prefix": "bash",
+    "body": [
+      "#!/usr/bin/env bash",
+      "",
+      "set -euo pipefail",
+      "",
+      "trap 'exit 1' SIGUSR1",
+      "",
+      "# ----  Main script logic ---- #",
+      "",
+      "$0",
+    ]
+  },
+  "argparse": {
+    "prefix": "argparse",
+    "scope": "shellscript",
+    "body": "source argparse.sh",
+    "description": "source argparse library"
+  },
+  "description": {
+    "prefix": "desc",
+    "scope": "shellscript",
+    "body": "set_description ${1:description}",
+    "description": "add description"
+  },
+  "defarg": {
+    "prefix": "defarg",
+    "scope": "shellscript",
+    "body": "define_arg \"${1:name}\" \"${2|\"\",default|}\" \"${3|\"\",description|}\" \"${4|string,bool|}\" \"${5|optional,required|}\"",
+    "description": "define an argument"
+  },
+  "help": {
+    "prefix": "help",
+    "scope": "shellscript",
+    "body": "check_for_help \"$@\"",
+    "description": "check for help"
+  },
+  "parseargs": {
+    "prefix": "help",
+    "scope": "shellscript",
+    "body": "parse_args \"$@\"",
+    "description": "parse the args"
+  },
+  "full argparse": {
+    "prefix": "fargparse",
+    "scope": "shellscript",
+    "body": [
+      "# ---- Source the argparse script ---- #",
+      "source argparse.sh",
+      "",
+      "set_description \"This is a simple script that greets the user.\"",
+      "",
+      "# ----  Define an argument ---- #",
+      "define_arg \"name\" \"\" \"Name of the user\" \"string\" \"required\"",
+      "",
+      "# ----  Check for help (-h, --help) ---- #",
+      "check_for_help \"$@\"",
+      "",
+      "# ----  Parse the arguments ---- #",
+      "parse_args \"$@\"",
+      "",
+      "# ----  Main script logic ---- #",
+      ""
+    ]
+  }
+}
