@@ -149,4 +149,4 @@ export ZSHRC="$ZDOTDIR/.zshrc"
 export MRT="$HOME/Documents/backup/WordTemplates/Standard.dotx"
 
 # ---- PATH ---- #
-export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:$HOME/scripts/python:$BUN_INSTALL/bin"
+export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:$HOME/scripts/python:$HOME/scripts/dmscripts/scripts:$BUN_INSTALL/bin"
