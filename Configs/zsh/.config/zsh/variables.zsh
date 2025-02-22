@@ -149,4 +149,10 @@ export ZSHRC="$ZDOTDIR/.zshrc"
 export MRT="$HOME/Documents/backup/WordTemplates/Standard.dotx"
 
 # ---- PATH ---- #
-export PATH="$PATH:$HOME/.spicetify:$HOME/.local/bin:$HOME/scripts:$HOME/scripts/python:$HOME/scripts/dmscripts/scripts:$BUN_INSTALL/bin"
+export PATH="$PATH:$HOME/.local/bin"
+PATH="$PATH:$HOME/.spicetify" # spicetify for spotify mods
+PATH="$PATH:$HOME/scripts" # my custom scripts
+PATH="$PATH:$HOME/scripts/python" # my custom python scripts
+PATH="$PATH:$HOME/scripts/dmscripts/scripts" # my custom dmenu/rofi/fzf scripts
+PATH="$PATH:$BUN_INSTALL/bin" # BUN js runtime
+PATH="$PATH:$HOME/.local/share/gem/ruby/3.3.0/bin" # Ruby gems
