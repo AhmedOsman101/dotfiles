@@ -37,7 +37,7 @@ alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias cp="cp -i"
 alias mv="mv -i"
 # ---- Trash-cli (better rm & rmdir) ----- #
-alias rm="rmtrash -i"
+alias rm="rmtrash"
 alias rmdir="rmdirtrash --ignore-fail-on-non-empty"
 
 # ---- easier to read disk ---- #
@@ -58,4 +58,4 @@ alias git_current_branch='git rev-parse --abbrev-ref HEAD'
 alias glow="glow -p" # pagination mode
 
 # ---- Qalculate ---- #
-alias calc='qalc'
+alias calc="qalc"
