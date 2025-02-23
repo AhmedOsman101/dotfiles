@@ -2,4 +2,4 @@
 */micro/buffers/*
 Configs/micro/.config/micro/buffers
 Configs/git/.config/git/credentials
-.zcompdump
+Configs/zsh/.config/zsh/.zcompdump
