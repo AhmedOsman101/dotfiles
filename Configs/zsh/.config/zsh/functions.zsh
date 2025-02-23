@@ -59,5 +59,5 @@ yy() {
 dotfiles() {
   oldDir="$PWD"
   yy "$(dotfiles.sh $1)"
-  [ "$oldDir" != "$PWD" ] && log-info "Changed directory!"
+  [ "$oldDir" != "$PWD" ] && log-info "Changed directory!" || printf ""
 }
