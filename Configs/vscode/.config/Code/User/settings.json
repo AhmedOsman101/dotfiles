@@ -2140,4 +2140,6 @@
   "locateThisDocument.editorTitleIcons.openActiveDocumentInFileExplorer": false,
   "locateThisDocument.editorTitleIcons.locateActiveDocument": false,
   "locateThisDocument.editorTitleContext": false,
+  "commitSage.ollama.model": "qwen2.5-coder:7b",
+  "commitSage.telemetry.enabled": false
 }
