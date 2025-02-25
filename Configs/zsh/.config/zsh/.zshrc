@@ -30,9 +30,14 @@ autoload -Uz promptinit
 promptinit
 
 # ---- Prompt Starship ----- #
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+zinit ice as"command" from"gh-r" \
+          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+          atpull"%atclone" src"init.zsh"
+zinit light starship/starship
 
 # ---- Add in zsh plugins ----- #
+zinit light Aloxaf/fzf-tab
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light "MichaelAquilina/zsh-you-should-use"
 zinit light "MichaelAquilina/zsh-auto-notify"
@@ -40,7 +45,6 @@ zinit light zsh-users/zsh-completions
 # zinit light "marlonrichert/zsh-autocomplete"
 zinit light hlissner/zsh-autopair
 zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
@@ -76,11 +80,17 @@ setopt hist_save_no_dups      # Don't save duplicates to history file
 setopt hist_find_no_dups      # Skip duplicates when searching history
 
 # ---- Completion styling ----- #
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --color=always --long --no-time --no-user --sort name --no-permissions --no-filesize --all --only-dirs $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color=always --long --no-time --no-user --sort name --no-permissions --no-filesize --all --only-dirs $realpath'
+zstyle ':fzf-tab:complete:_files:*' fzf-preview 'eza --color=always --long --no-time --no-user --sort name --no-permissions --no-filesize --all $realpath'
+zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2 --bind=tab:accept
 
 # ---- On-demand rehash ----- #
 zshcache_time="$(date +%s%N)"
@@ -105,8 +115,6 @@ source "$CARGO_HOME/env"
 
 # ---- FZF ----- #
 source <(fzf --zsh)
-
-show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 
 # ---- The fuck alias ----- #
 eval "$(thefuck --alias)"
