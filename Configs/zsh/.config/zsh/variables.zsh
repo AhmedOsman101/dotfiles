@@ -50,6 +50,8 @@ export DOTNET_CLI_HOME="${XDG_DATA_HOME}/dotnet"
 export EDITOR="hx" # helix
 
 # ---- FZF ----- #
+show_file_or_dir_preview="if [ -d {} ]; then eza --all --tree --color=always {} | head -200; else if [[ {} =~ \.(md|markdown)$ ]]; then mdcat {}; else bat -n --color=always --line-range :500 {}; fi; fi"
+
 # Use fd instead of fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_DEFAULT_OPTS=" \
@@ -89,9 +91,6 @@ export MANROFFOPT="-c"
 export MANPAGER="sh -c 'col -bx | bat --paging=always --language=man -p'"
 export LESS_TERMCAP_md=$'\e[01;32m' # Green for bold
 export LESS_TERMCAP_me=$'\e[0m'
-
-# ---- Texfm ---- #
-export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 
 # ---- Mplayer ---- #
 export MPLAYER_HOME="$XDG_CONFIG_HOME/mplayer"
@@ -134,6 +133,9 @@ export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 export TERMINAL="kitty"
 export TERM=xterm-256color
 export COLORTERM=truecolor
+
+# ---- Texfm ---- #
+export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 
 # ---- w3m ---- #
 export W3M_DIR="$XDG_DATA_HOME"/w3m
