@@ -46,6 +46,9 @@ export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
 # ---- Dotnet ---- #
 export DOTNET_CLI_HOME="${XDG_DATA_HOME}/dotnet"
 
+#---- Editor ---- #
+export EDITOR="hx" # helix
+
 # ---- FZF ----- #
 # Use fd instead of fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
@@ -87,12 +90,13 @@ export MANPAGER="sh -c 'col -bx | bat --paging=always --language=man -p'"
 export LESS_TERMCAP_md=$'\e[01;32m' # Green for bold
 export LESS_TERMCAP_me=$'\e[0m'
 
+# ---- Texfm ---- #
+export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 
 # ---- Mplayer ---- #
 export MPLAYER_HOME="$XDG_CONFIG_HOME/mplayer"
 
 # ---- Micro ---- #
-export EDITOR="micro"
 export MICRO_TRUECOLOR=1
 
 # ---- Node ---- #
