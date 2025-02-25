@@ -45,7 +45,6 @@ _fzf_comprun() {
 }
 
 # ---- Yazi ---- #
-# TODO: move to functions
 yy() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   yazi "$@" --cwd-file="$tmp"

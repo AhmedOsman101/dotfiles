@@ -54,9 +54,6 @@ alias git_current_branch='git rev-parse --abbrev-ref HEAD'
 # ---- copy to clipboard ----#
 [[ $(command -v copyclip) ]] || alias copyclip="clipcopy"
 
-# ---- markdown previewer ---- #
-alias glow="glow -p" # pagination mode
-
 # ---- Qalculate ---- #
 alias qalc="qalc --color" # return only the output and colorize output
 alias calc="qalc --terse" # return only the output and colorize output
