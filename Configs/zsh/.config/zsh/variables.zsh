@@ -98,6 +98,10 @@ export MPLAYER_HOME="$XDG_CONFIG_HOME/mplayer"
 # ---- Micro ---- #
 export MICRO_TRUECOLOR=1
 
+# ---- Misc ---- #
+export AUTHOR="Othman"
+export AUTHOR_EMAIL="ahmad.ali.othman@outlook.com"
+
 # ---- Node ---- #
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export NODE_PACKAGE_MANAGER="pnpm"
@@ -156,9 +160,9 @@ export MRT="$HOME/Documents/backup/WordTemplates/Standard.dotx"
 
 # ---- PATH ---- #
 export PATH="$PATH:$HOME/.local/bin"
-PATH="$PATH:$HOME/.spicetify" # spicetify for spotify mods
-PATH="$PATH:$HOME/scripts" # my custom scripts
-PATH="$PATH:$HOME/scripts/python" # my custom python scripts
-PATH="$PATH:$HOME/scripts/dmscripts/scripts" # my custom dmenu/rofi/fzf scripts
-PATH="$PATH:$BUN_INSTALL/bin" # BUN js runtime
+PATH="$PATH:$HOME/.spicetify"                      # spicetify for spotify mods
+PATH="$PATH:$HOME/scripts"                         # my custom scripts
+PATH="$PATH:$HOME/scripts/python"                  # my custom python scripts
+PATH="$PATH:$HOME/scripts/dmscripts/scripts"       # my custom dmenu/rofi/fzf scripts
+PATH="$PATH:$BUN_INSTALL/bin"                      # BUN js runtime
 PATH="$PATH:$HOME/.local/share/gem/ruby/3.3.0/bin" # Ruby gems
