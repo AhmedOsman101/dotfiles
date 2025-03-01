@@ -2,6 +2,7 @@ theme = "github_dark"
 
 [editor]
 line-number = "relative"
+auto-format = true
 mouse = true
 continue-comments = false
 completion-replace = true
@@ -61,13 +62,42 @@ character = "┆" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
 
 [editor.inline-diagnostics]
-cursor-line = "warning"
-other-lines = "warning"
+cursor-line = "info"
+other-lines = "info"
 prefix-len = 2
 max-diagnostics = 4
 
 [keys.normal]
-A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-A-down = ["extend_to_line_bounds", "delete_selection", "move_line_down", "paste_after"]
-A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-A-j = ["extend_to_line_bounds", "delete_selection", "move_line_down", "paste_after"]
+A-up = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+A-down = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before",
+]
+A-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+A-j = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before",
+]
+C-s = [":format", ":write"] # format and save
+
+[keys.insert]
+j = { k = "normal_mode" }   # Maps `jk` to enter normal mode
+k = { j = "select_mode" }   # Maps `kj` to enter visual mode
+C-s = [":format", ":write"] # format and save
+
+[keys.select]
+C-s = [":format", ":write"] # format and save
