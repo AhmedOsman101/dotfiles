@@ -1394,7 +1394,9 @@
   "files.associations": {
     "*.css": "css",
     ".php_cs": "php",
-    ".php_cs.dist": "php"
+    ".php_cs.dist": "php",
+    "mkconfig": "shellscript",
+    "mkconf": "shellscript"
   },
   "markdown.preview.typographer": true,
   "markdown-preview-enhanced.mathRenderingOnlineService": "https://latex.codecogs.com/png.latex",
@@ -2098,11 +2100,9 @@
   "vue.inlayHints.destructuredProps": true,
   "vue.inlayHints.missingProps": true,
   "vue.inlayHints.vBindShorthand": true,
-  "commitSage.gemini.model": "gemini-2.0-flash-exp",
   "cody.suggestions.mode": "off",
   "astyle.csharp.enable": true,
   "astyle.java.enable": true,
-  "makefile.configureOnOpen": true,
   "shellcheck.customArgs": [
     "--external-sources"
   ],
@@ -2140,6 +2140,7 @@
   "locateThisDocument.editorTitleIcons.openActiveDocumentInFileExplorer": false,
   "locateThisDocument.editorTitleIcons.locateActiveDocument": false,
   "locateThisDocument.editorTitleContext": false,
+  "commitSage.gemini.model": "gemini-2.0-flash-exp",
   "commitSage.ollama.model": "qwen2.5-coder:7b",
   "commitSage.telemetry.enabled": false
 }
