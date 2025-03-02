@@ -60,3 +60,8 @@ dotfiles() {
   yy "$(dotfiles.sh $1)"
   [ "$oldDir" != "$PWD" ] && log-info "Changed directory!" || printf ""
 }
+
+#---- Bat ---- #
+help() {
+  "$@" --help 2>&1 | bathelp
+}
