@@ -12,15 +12,29 @@ export XDG_CACHE_HOME="$HOME/.cache"
 # ---- Tuckr ---- #
 export TUCKR_DIR="$XDG_CONFIG_HOME/dotfiles/Configs"
 
+# ---- Auto Notify ---- #
+export AUTO_NOTIFY_IGNORE=(
+  "vim" "nvim" "micro" "hx"
+  "helix" "nano" "less" "more"
+  "man" "bat" "tig" "watch"
+  "git commit" "top" "htop" "ssh"
+  "yazi" "yy" "dotfiles" "dm"
+  "watchexec" "biome-watch"
+)
+export AUTO_NOTIFY_THRESHOLD=30
+
 # ---- Android ---- #
 export ANDROID_USER_HOME="${XDG_DATA_HOME}/android"
 
-# ---- asdf ---- #
+# ---- Asdf ---- #
 export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
 export ASDF_DIR="${ASDF_DATA_DIR}"
 
 # ---- Astyle ---- #
 export ARTISTIC_STYLE_OPTIONS="$XDG_CONFIG_HOME/.astylerc"
+
+# ---- Bat ---- #
+export BATDIFF_USE_DELTA=true
 
 # ---- Bun ---- #
 export BUN_INSTALL="$HOME/.bun"
@@ -40,6 +54,19 @@ export XCURSOR_PATH="/usr/share/icons:${XDG_DATA_HOME}/icons"
 export XCURSOR_THEME="Bibata"
 export XCURSOR_SIZE="24"
 
+# ---- Colors ---- #
+export BLACK="#14141E"
+export RED="#F7768E"
+export GREEN="#35BF88"
+export YELLOW="#DBAC66"
+export BLUE="#4CA6E8"
+export MAGENTA="#BB9AF7"
+export CYAN="#7DCFFF"
+export WHITE="#E6E6E8"
+export GRAY="#B5BCC9"
+export ORANGE="#EFCA84"
+export PURPLE="#7AA2F7"
+
 # ---- Docker ---- #
 export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
 
@@ -50,7 +77,7 @@ export DOTNET_CLI_HOME="${XDG_DATA_HOME}/dotnet"
 export EDITOR="hx" # helix
 
 # ---- FZF ----- #
-show_file_or_dir_preview="if [ -d {} ]; then eza --all --tree --color=always {} | head -200; else if [[ {} =~ \.(md|markdown)$ ]]; then mdcat {}; else bat -n --color=always --line-range :500 {}; fi; fi"
+show_file_or_dir_preview="if [ -d {} ]; then eza --all --tree --color=always {} | head -200; else if [[ {} =~ \.(md|markdown)$ ]]; then mdcat {}; else bat --color=always --line-range :500 {}; fi; fi"
 
 # Use fd instead of fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
@@ -74,7 +101,34 @@ export GOPATH="${XDG_DATA_HOME}/go"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc"
 
 # ---- Gum ---- #
+# ---- Filter ---- #
 export GUM_FILTER_PROMPT="❯ "
+export GUM_FILTER_INDICATOR_FOREGROUND="${CYAN}"
+export GUM_FILTER_MATCH_FOREGROUND="${CYAN}"
+export GUM_FILTER_PROMPT_FOREGROUND="${CYAN}"
+export GUM_FILTER_HEADER_FOREGROUND="${BLUE}"
+#---- Choose ---- #
+export GUM_CHOOSE_CURSOR="❯ "
+export GUM_CHOOSE_CURSOR_FOREGROUND="${CYAN}"
+export GUM_CHOOSE_SELECTED_FOREGROUND="${CYAN}"
+export GUM_CHOOSE_HEADER_FOREGROUND="${BLUE}"
+#---- Input ---- #
+export GUM_INPUT_PROMPT="❯ "
+export GUM_INPUT_PROMPT_FOREGROUND="${CYAN}"
+export GUM_INPUT_HEADER_FOREGROUND="${GRAY}"
+export GUM_INPUT_CURSOR_FOREGROUND="${CYAN}"
+#---- Spinner ---- #
+export GUM_SPIN_SPINNER_FOREGROUND="${GREEN}"
+#---- Write ---- #
+export GUM_WRITE_CURSOR_FOREGROUND="${GRAY}"
+#---- File ---- #
+export GUM_FILE_CURSOR="❯ "
+export GUM_FILE_HEIGHT=20
+export GUM_FILE_SYMLINK_FOREGROUND="${GREEN}"
+export GUM_FILE_DIRECTORY_FOREGROUND="${PURPLE}"
+export GUM_FILE_CURSOR_FOREGROUND="${ORANGE}"
+export GUM_FILE_SELECTED_FOREGROUND="${ORANGE}"
+export GUM_FILE_HEADER_FOREGROUND="${CYAN}"
 
 # ---- History ----- #
 export HISTSIZE=999999
@@ -163,6 +217,7 @@ export PATH="$PATH:$HOME/.local/bin"
 PATH="$PATH:$HOME/.spicetify"                      # spicetify for spotify mods
 PATH="$PATH:$HOME/scripts"                         # my custom scripts
 PATH="$PATH:$HOME/scripts/python"                  # my custom python scripts
+PATH="$PATH:$HOME/scripts/bin"                  # my custom scripts' binaries
 PATH="$PATH:$HOME/scripts/dmscripts/scripts"       # my custom dmenu/rofi/fzf scripts
 PATH="$PATH:$BUN_INSTALL/bin"                      # BUN js runtime
 PATH="$PATH:$HOME/.local/share/gem/ruby/3.3.0/bin" # Ruby gems
