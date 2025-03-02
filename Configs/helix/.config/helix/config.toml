@@ -26,7 +26,7 @@ enable = true
 '"' = '"'
 "'" = "'"
 '`' = '`'
-'<' = '>'
+# '<' = '>'
 
 [editor.cursor-shape]
 insert = "block"
@@ -68,6 +68,11 @@ prefix-len = 2
 max-diagnostics = 4
 
 [keys.normal]
+C-d = [
+  "extend_to_line_bounds",
+  "yank",
+  "paste_before",
+]
 A-up = [
   "extend_to_line_bounds",
   "delete_selection",
@@ -95,9 +100,20 @@ A-j = [
 C-s = [":format", ":write"] # format and save
 
 [keys.insert]
+C-d = [
+  "extend_to_line_bounds",
+  "yank",
+  "paste_before",
+]
 j = { k = "normal_mode" }   # Maps `jk` to enter normal mode
 k = { j = "select_mode" }   # Maps `kj` to enter visual mode
 C-s = [":format", ":write"] # format and save
 
 [keys.select]
 C-s = [":format", ":write"] # format and save
+C-d = [
+  "extend_to_line_bounds",
+  "yank",
+  "paste_before",
+]
+
