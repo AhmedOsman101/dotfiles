@@ -4,14 +4,14 @@
 
 # Specify desired highlighting theme (e.g. "TwoDark"). Run `bat --list-themes`
 # for a list of all available themes
---theme="TwoDark"
+--theme="Coldark-Dark"
 
 # Enable this to use italic text on the terminal. This is not supported on all
 # terminal emulators (like tmux, by default):
 #--italic-text=always
 
 # Uncomment the following line to disable automatic paging:
-#--paging=never
+# --paging=never
 
 # Uncomment the following line if you are using less version >= 551 and want to
 # enable mouse scrolling support in `bat` when running inside tmux. This might
@@ -21,5 +21,46 @@
 # Syntax mappings: map a certain filename pattern to a language.
 #   Example 1: use the C++ syntax for Arduino .ino files
 #   Example 2: Use ".gitignore"-style highlighting for ".ignore" files
-#--map-syntax "*.ino:C++"
-#--map-syntax ".ignore:Git Ignore"
+--map-syntax "*.ino:C++"
+--map-syntax ".ignore:Git Ignore"
+--map-syntax='*.conf:INI'
+--map-syntax='/etc/apache2/**/*.conf:Apache Conf'
+
+# --tabs <T>
+# Set the tab width to T spaces. Use a width of 0 to pass tabs through directly
+--tabs 2
+
+# --color <when>
+# Specify when to use colored output. The automatic mode only enables colors if an
+# interactive terminal is detected - colors are automatically disabled if the output goes to
+# a pipe.
+# Possible values: *auto*, never, always.
+--color always
+
+# --ignored-suffix <ignored-suffix>
+# Ignore extension. For example:
+# 'bat --ignored-suffix ".dev" my_file.json.dev' will use JSON syntax, and ignore '.dev'
+--ignored-suffix "bak"
+
+# -s, --squeeze-blank
+# Squeeze consecutive empty lines into a single empty line.
+--squeeze-blank
+--squeeze-limit 2
+
+# By default, the following components are enabled:
+# changes, grid, header-filename, numbers, snip
+
+# Possible values:
+# * default: enables recommended style components (default).
+# * full: enables all available components.
+# * auto: same as 'default', unless the output is piped.
+# * plain: disables all available components.
+# * changes: show Git modification markers.
+# * header: alias for 'header-filename'.
+# * header-filename: show filenames before the content.
+# * header-filesize: show file sizes before the content.
+# * grid: vertical/horizontal lines to separate side bar and the header from the content.
+# * rule: horizontal lines to delimit files.
+# * numbers: show line numbers in the side bar.
+# * snip: draw separation lines between distinct line ranges.
+--style="auto,-header-filename"
