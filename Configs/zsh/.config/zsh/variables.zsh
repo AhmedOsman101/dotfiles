@@ -22,6 +22,8 @@ export AUTO_NOTIFY_IGNORE=(
   "watchexec" "biome-watch"
 )
 export AUTO_NOTIFY_THRESHOLD=30
+export AUTO_NOTIFY_ICON_SUCCESS="/usr/share/icons/auto-notify-zsh/success.png"
+export AUTO_NOTIFY_ICON_FAILURE="/usr/share/icons/auto-notify-zsh/fail.png"
 
 # ---- Android ---- #
 export ANDROID_USER_HOME="${XDG_DATA_HOME}/android"
@@ -32,6 +34,7 @@ export ASDF_DIR="${ASDF_DATA_DIR}"
 
 # ---- Astyle ---- #
 export ARTISTIC_STYLE_OPTIONS="$XDG_CONFIG_HOME/.astylerc"
+export ARTISTIC_STYLE_PROJECT_OPTIONS="$XDG_CONFIG_HOME/.astylerc"
 
 # ---- Bat ---- #
 export BATDIFF_USE_DELTA=true
@@ -51,7 +54,7 @@ export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
 
 # ---- Cursor ---- #
 export XCURSOR_PATH="/usr/share/icons:${XDG_DATA_HOME}/icons"
-export XCURSOR_THEME="Bibata"
+export XCURSOR_THEME="Bibata-Modern-Ice"
 export XCURSOR_SIZE="24"
 
 # ---- Colors ---- #
@@ -157,20 +160,20 @@ export AUTHOR="Othman"
 export AUTHOR_EMAIL="ahmad.ali.othman@outlook.com"
 
 # ---- Node ---- #
-export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 export NODE_PACKAGE_MANAGER="pnpm"
 
 # ---- Nuget ---- #
-export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
+export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
 
 # ---- NVM ---- #
-NVM_DIR="$XDG_DATA_HOME"/nvm
+export NVM_DIR="$XDG_DATA_HOME/nvm"
 
 # ---- Parallel ---- #
-export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel
+export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
 
 # ---- Pass ---- #
-export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
 
 # ---- Pnpm ---- #
 export PNPM_HOME="$XDG_DATA_HOME/pnpm"
@@ -179,7 +182,7 @@ export PNPM_HOME="$XDG_DATA_HOME/pnpm"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 
 # ---- Rustup ---- #
-export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 
 # ---- Scripts ---- #
 export SCRIPTS_DIR="$HOME/scripts"
@@ -196,7 +199,7 @@ export COLORTERM=truecolor
 export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 
 # ---- w3m ---- #
-export W3M_DIR="$XDG_DATA_HOME"/w3m
+export W3M_DIR="$XDG_DATA_HOME/w3m"
 
 # ---- YouShouldUse utility ---- #
 export YSU_MESSAGE_POSITION="after"
