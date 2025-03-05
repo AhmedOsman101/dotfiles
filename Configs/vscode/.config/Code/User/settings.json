@@ -1396,7 +1396,9 @@
     ".php_cs": "php",
     ".php_cs.dist": "php",
     "mkconfig": "shellscript",
-    "mkconf": "shellscript"
+    "mkconf": "shellscript",
+    "*.desktop": "ini",
+    "dunstrc": "ini"
   },
   "markdown.preview.typographer": true,
   "markdown-preview-enhanced.mathRenderingOnlineService": "https://latex.codecogs.com/png.latex",
@@ -1577,8 +1579,8 @@
   "codesnap.roundedCorners": true,
   "editor.padding.top": 16,
   "vscode_custom_css.imports": [
-    "file:///home/othman/.dotfiles/.config/Code/User/custom/custom-vscode.css",
-    "file:///home/othman/.dotfiles/.config/Code/User/custom/custom-vscode.js"
+    "file:///home/othman/.config/Code/User/custom/custom-vscode.css",
+    "file:///home/othman/.config/Code/User/custom/custom-vscode.js"
   ],
   "cody.chat.defaultLocation": "editor",
   "[sass]": {
