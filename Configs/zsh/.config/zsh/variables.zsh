@@ -156,7 +156,7 @@ export MPLAYER_HOME="$XDG_CONFIG_HOME/mplayer"
 export MICRO_TRUECOLOR=1
 
 # ---- Misc ---- #
-export AUTHOR="Othman"
+export AUTHOR="Ahmad Othman"
 export AUTHOR_EMAIL="ahmad.ali.othman@outlook.com"
 
 # ---- Node ---- #
