@@ -1,14 +1,18 @@
-VteTerminal, vte-terminal {
+@import 'colors.css';
+
+VteTerminal,
+vte-terminal {
 	padding: 12px;
 }
 
-.window-frame, .window-frame:backdrop {
+.window-frame,
+.window-frame:backdrop {
 	box-shadow: 0 0 0 black;
 	border-style: none;
 	margin: 0;
 	border-radius: 0;
 }
-    
+
 .titlebar {
 	border-radius: 0;
 }
@@ -16,6 +20,14 @@ VteTerminal, vte-terminal {
 undershoot.top,
 undershoot.right,
 undershoot.bottom,
-undershoot.left { 
-	background-image: none; 
+undershoot.left {
+	background-image: none;
+}
+
+.xfce4-notifyd-notification {
+	min-width: 300px;
+	/* Adjust width */
+	max-width: 600px;
+	/* Prevent excessive stretching */
+	padding: 10px;
 }
