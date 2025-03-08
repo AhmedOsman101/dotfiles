@@ -13,16 +13,16 @@ position = "None"
 dynamic_padding = true
 decorations = "full"
 opacity = 1.0
-blur = false
-startup_mode = "Windowed"
+blur = true
+startup_mode = "Fullscreen"
 dynamic_title = true
 class = { instance = "Alacritty", general = "Alacritty" }
 decorations_theme_variant = "None"
 
 ## Number of lines/columns (not pixels) in the terminal.
 [window.dimensions]
-columns = 150
-lines = 40
+columns = 110
+lines = 25
 
 ## Blank space added around the window in pixels.
 [window.padding]
