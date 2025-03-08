@@ -17,7 +17,9 @@
       "*.vue",
     ]
   },
-  "organizeImports": { "enabled": true },
+  "organizeImports": {
+    "enabled": true
+  },
   "formatter": {
     "enabled": true,
     "useEditorconfig": true,
@@ -27,7 +29,9 @@
     "lineEnding": "lf",
     "lineWidth": 80,
     "attributePosition": "multiline",
-    "ignore": ["*.vue"],
+    "ignore": [
+      "*.vue"
+    ],
     "bracketSpacing": true
   },
   "linter": {
@@ -57,7 +61,8 @@
           "options": {
             "ignoreNull": false
           }
-        }
+        },
+        "noAssignInExpressions": "off"
       }
     }
   },
