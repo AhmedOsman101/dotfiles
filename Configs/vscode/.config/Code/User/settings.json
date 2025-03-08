@@ -1366,7 +1366,7 @@
     "stashes",
     "remoteBranches"
   ],
-  "php.version": "8.3",
+  "php.version": "8.4",
   "terminal.integrated.enableImages": true,
   "oneDarkPro.bold": true,
   "security.promptForLocalFileProtocolHandling": false,
@@ -1582,6 +1582,9 @@
     "file:///home/othman/.config/Code/User/custom/custom-vscode.css",
     "file:///home/othman/.config/Code/User/custom/custom-vscode.js"
   ],
+  "css.customData": [
+    "/home/othman/.config/Code/User/custom/tailwindcss.json"
+  ],
   "cody.chat.defaultLocation": "editor",
   "[sass]": {
     "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
@@ -1730,13 +1733,13 @@
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
-    "source.fixAll.biome": "explicit",
+    "source.fixAll.biome": "always",
     "source.fixAll.shellcheck": "explicit",
     "source.organizeImports": "explicit",
     "source.removeUnusedImports": "never",
     "source.addMissingImports.ts": "explicit",
     "source.fixAll.ts": "explicit",
-    "source.organizeImports.biome": "explicit",
+    "source.organizeImports.biome": "always",
     "source.sortImports": "explicit",
     "source.removeUnused.ts": "never"
   },
@@ -2043,8 +2046,9 @@
       "`"
     ],
     "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
-    "editor.formatOnType": false
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.defaultFormatter": "biomejs.biome",
   },
   "[typescriptreact]": {
     "togglequotes.chars": [
@@ -2053,8 +2057,9 @@
       "`"
     ],
     "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
-    "editor.formatOnType": false
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.defaultFormatter": "biomejs.biome",
   },
   "[javascriptreact]": {
     "togglequotes.chars": [
@@ -2063,8 +2068,9 @@
       "`"
     ],
     "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
-    "editor.formatOnType": false
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.defaultFormatter": "biomejs.biome",
   },
   "[javascript]": {
     "editor.maxTokenizationLineLength": 2500,
@@ -2074,8 +2080,9 @@
       "`"
     ],
     "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
-    "editor.formatOnType": false
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.defaultFormatter": "biomejs.biome",
   },
   "[vue]": {
     "togglequotes.chars": [
@@ -2144,5 +2151,12 @@
   "locateThisDocument.editorTitleContext": false,
   "commitSage.gemini.model": "gemini-2.0-flash-exp",
   "commitSage.ollama.model": "qwen2.5-coder:7b",
-  "commitSage.telemetry.enabled": false
+  "commitSage.telemetry.enabled": false,
+  "[slint]": {
+    "editor.defaultFormatter": "Slint.slint"
+  },
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
 }
