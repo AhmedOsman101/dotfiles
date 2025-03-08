@@ -40,7 +40,7 @@ zinit light starship/starship
 zinit light Aloxaf/fzf-tab
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light "MichaelAquilina/zsh-you-should-use"
-zinit light "MichaelAquilina/zsh-auto-notify"
+zinit light "AhmedOsman101/zsh-auto-notify-fork"
 zinit light zsh-users/zsh-completions
 # zinit light "marlonrichert/zsh-autocomplete"
 zinit light hlissner/zsh-autopair
@@ -145,3 +145,7 @@ select-word-style bash
 
 # ---- region highlight style ---- #
 zstyle ':zle:*' region-highlight 'fg=none' 'bg=#7287FD66'
+
+# ---- Curlie ---- #
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+. "$HOME/.local/share/../bin/env"
