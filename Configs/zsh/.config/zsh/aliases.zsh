@@ -15,7 +15,7 @@ alias getgpu="lspci -k -d ::03xx"
 
 # ---- Bat (better cat) ----- #
 alias cat="bat --pager never --style plain"
-alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+# alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # ---- Zoxide (better cd) ----- #
@@ -67,7 +67,6 @@ alias pscpu='ps aux | sort -nr -k 3 | head -5 | fzf'
 
 #---- Git ---- #
 alias git_current_branch='git branch --show-current 2>/dev/null'
-alias gits="git status --short"
 
 # ---- Copy to Clipboard ----#
 [[ $(command -v copyclip) ]] || alias copyclip="clipcopy"
@@ -78,3 +77,9 @@ alias calc="qalc --terse" # Return only the output and colorize output
 
 # ---- Helix ---- #
 alias hlx="helix"
+
+# ---- Pacman ---- #
+alias freepacman="sudo rm /var/lib/pacman/db.lck &>/dev/null || printf ''" # Resolve 'pacman in use' error
+
+# ---- Paru ---- #
+alias no-orphans='paru -Rns $(paru -Qtdq)'
