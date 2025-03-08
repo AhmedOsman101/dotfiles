@@ -1,8 +1,12 @@
 // Place your key bindings in this file to override the defaults
 [
+  // {
+  //   "key": "ctrl+n",
+  //   "command": "workbench.action.files.newUntitledFile"
+  // },
   {
     "key": "ctrl+n",
-    "command": "workbench.action.files.newUntitledFile"
+    "command": "extension.advancedNewFile",
   },
   {
     "key": "ctrl+g",
@@ -109,9 +113,4 @@
     "command": "-locateThisDocument.openWorkspaceRootFolderInFileExplorer",
     "when": "workspaceFolderCount == '1'"
   }
-  // {
-  //   "key": "ctrl+r",
-  //   "command": "phptools.debug.runScript",
-  //   "when": "editorLangId == php"
-  // }
 ]
