@@ -17,9 +17,10 @@ export AUTO_NOTIFY_IGNORE=(
   "vim" "nvim" "micro" "hx"
   "helix" "nano" "less" "more"
   "man" "bat" "tig" "watch"
-  "git commit" "top" "htop" "ssh"
+  "git commit" "top" "htop" "btop"
   "yazi" "yy" "dotfiles" "dm"
-  "watchexec" "biome-watch"
+  "watchexec" "biome-watch" "lzg" "lazygit"
+  "ssh" "fzf" "deno"
 )
 export AUTO_NOTIFY_THRESHOLD=30
 export AUTO_NOTIFY_ICON_SUCCESS="/usr/share/icons/auto-notify-zsh/success.png"
@@ -55,7 +56,7 @@ export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
 # ---- Cursor ---- #
 export XCURSOR_PATH="/usr/share/icons:${XDG_DATA_HOME}/icons"
 export XCURSOR_THEME="Bibata-Modern-Ice"
-export XCURSOR_SIZE="24"
+export XCURSOR_SIZE="26"
 
 # ---- Colors ---- #
 export U_BLACK="#14141E"
@@ -143,7 +144,6 @@ export HISTCONTROL="ignoreboth"
 export LIBVIRT_DEFAULT_URI='qemu:///system'
 
 # ---- Man ---- #
-# export MANPAGER="less -R"
 export MANROFFOPT="-c"
 export MANPAGER="sh -c 'col -bx | bat --paging=always --language=man -p'"
 export LESS_TERMCAP_md=$'\e[01;32m' # Green for bold
@@ -201,6 +201,9 @@ export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 # ---- w3m ---- #
 export W3M_DIR="$XDG_DATA_HOME/w3m"
 
+# ---- X11 ---- #
+export XINITRC="$XDG_CONFIG_HOME/X11/.Xinitrc"
+
 # ---- YouShouldUse utility ---- #
 export YSU_MESSAGE_POSITION="after"
 
@@ -220,7 +223,8 @@ export PATH="$PATH:$HOME/.local/bin"
 PATH="$PATH:$HOME/.spicetify"                      # spicetify for spotify mods
 PATH="$PATH:$HOME/scripts"                         # my custom scripts
 PATH="$PATH:$HOME/scripts/python"                  # my custom python scripts
-PATH="$PATH:$HOME/scripts/bin"                  # my custom scripts' binaries
+PATH="$PATH:$HOME/scripts/bin"                     # my custom scripts' binaries
 PATH="$PATH:$HOME/scripts/dmscripts/scripts"       # my custom dmenu/rofi/fzf scripts
 PATH="$PATH:$BUN_INSTALL/bin"                      # BUN js runtime
 PATH="$PATH:$HOME/.local/share/gem/ruby/3.3.0/bin" # Ruby gems
+PATH="$PATH:$HOME/.config/composer/vendor/bin"     # Composer packages
