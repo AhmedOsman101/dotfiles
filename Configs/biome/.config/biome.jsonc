@@ -15,6 +15,8 @@
       ".vscode/**",
       "**/*.vue",
       "*.vue",
+      "deno.json",
+      "fresh.gen.ts"
     ]
   },
   "organizeImports": {
@@ -29,9 +31,7 @@
     "lineEnding": "lf",
     "lineWidth": 80,
     "attributePosition": "multiline",
-    "ignore": [
-      "*.vue"
-    ],
+    "ignore": ["*.vue"],
     "bracketSpacing": true
   },
   "linter": {
@@ -63,6 +63,9 @@
           }
         },
         "noAssignInExpressions": "off"
+      },
+      "a11y": {
+        "useButtonType": "off"
       }
     }
   },
@@ -85,11 +88,11 @@
       "indentStyle": "space",
       "indentWidth": 2,
       "lineEnding": "lf",
-      "trailingCommas": "none",
+      "trailingCommas": "none"
     },
     "parser": {
       "allowComments": true,
-      "allowTrailingCommas": true,
+      "allowTrailingCommas": true
     }
   }
 }
