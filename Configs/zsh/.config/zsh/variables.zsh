@@ -20,7 +20,8 @@ export AUTO_NOTIFY_IGNORE=(
   "git commit" "top" "htop" "btop"
   "yazi" "yy" "dotfiles" "dm"
   "watchexec" "biome-watch" "lzg" "lazygit"
-  "ssh" "fzf" "deno"
+  "ssh" "fzf" "deno" "posting"
+  "scrcpy" "wavemon"
 )
 export AUTO_NOTIFY_THRESHOLD=30
 export AUTO_NOTIFY_ICON_SUCCESS="/usr/share/icons/auto-notify-zsh/success.png"
