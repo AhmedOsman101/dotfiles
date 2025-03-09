@@ -1,22 +1,9 @@
+# ---- C++ ---- #
 [[language]]
 name = "cpp"
-scope = "source.cpp"
-injection-regex = "cpp"
-file-types = ["cc", "hh", "c++", "cpp", "hpp", "h", "ipp", "tpp", "cxx", "hxx", "ixx", "txx", "ino", "C", "H", "cu", "cuh", "cppm", "h++", "ii", "inl", { glob = ".hpp.in" }, { glob = ".h.in" }]
-comment-token = "//"
-block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "clangd" ]
-indent = { tab-width = 2, unit = "  " }
-formatter = { command = "astyle" , args = ["--options=$ARTISTIC_STYLE_OPTIONS"] }
+formatter = { command = "astyle", args = ["--options=$ARTISTIC_STYLE_OPTIONS"] }
 
+# ---- C ---- #
 [[language]]
 name = "c"
-scope = "source.c"
-injection-regex = "c"
-file-types = ["c"] # TODO: ["h"]
-comment-token = "//"
-block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "clangd" ]
-indent = { tab-width = 2, unit = "  " }
-formatter = { command = "astyle" , args = ["--options=$ARTISTIC_STYLE_OPTIONS"] }
-
+formatter = { command = "astyle", args = ["--options=$ARTISTIC_STYLE_OPTIONS"] }
