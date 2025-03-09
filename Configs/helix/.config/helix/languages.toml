@@ -7,3 +7,73 @@ formatter = { command = "astyle", args = ["--options=$ARTISTIC_STYLE_OPTIONS"] }
 [[language]]
 name = "c"
 formatter = { command = "astyle", args = ["--options=$ARTISTIC_STYLE_OPTIONS"] }
+
+# ---- Typescript ---- #
+[[language]]
+name = "typescript"
+formatter = { command = "biome", args = [
+  "check",
+  "--fix",
+  "--stdin-file-path",
+  "file.ts",
+] }
+
+# ---- Javascript ---- #
+[[language]]
+name = "javascript"
+formatter = { command = "biome", args = [
+  "check",
+  "--fix",
+  "--stdin-file-path",
+  "file.js",
+] }
+
+# ---- Tsx ---- #
+[[language]]
+name = "tsx"
+formatter = { command = "biome", args = [
+  "check",
+  "--fix",
+  "--stdin-file-path",
+  "file.tsx",
+] }
+
+# ---- Jsx ---- #
+[[language]]
+name = "jsx"
+formatter = { command = "biome", args = [
+  "check",
+  "--fix",
+  "--stdin-file-path",
+  "file.jsx",
+] }
+
+# ---- Deno ---- #
+[[language]]
+name = "typescript"
+roots = ["deno.json", "deno.jsonc"] # Optionally add "package.json" if needed.
+auto-format = true
+language-servers = ["deno-lsp"]
+
+[[language]]
+name = "javascript"
+roots = ["deno.json", "deno.jsonc"] # Optionally add "package.json" if needed.
+auto-format = true
+language-servers = ["deno-lsp"]
+
+[[language]]
+name = "jsx"
+roots = ["deno.json", "deno.jsonc"]
+auto-format = true
+language-servers = ["deno-lsp"]
+
+[[language]]
+name = "tsx"
+roots = ["deno.json", "deno.jsonc"]
+auto-format = true
+language-servers = ["deno-lsp"]
+
+[language-server.deno-lsp]
+command = "deno"
+args = ["lsp"]
+config.deno.enable = true
