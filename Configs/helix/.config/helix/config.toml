@@ -5,11 +5,14 @@ line-number = "relative"
 auto-format = true
 mouse = true
 continue-comments = false
+color-modes = true
 completion-replace = true
 true-color = true
 bufferline = "always"
 end-of-line-diagnostics = "hint"
 clipboard-provider = "x-clip"
+insert-final-newline = true
+indent-heuristic = "tree-sitter"
 
 [editor.statusline]
 mode.normal = "NORMAL"
