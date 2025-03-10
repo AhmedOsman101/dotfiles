@@ -30,5 +30,12 @@
 	autoSetupRemote = true
 [http]
 	retry = 10
-	lowSpeedLimit = 0
-	lowSpeedTime = 999
+	lowSpeedLimit = 1
+	lowSpeedTime = 999999
+	postBuffer = 524288000
+	version = HTTP/1.1
+[http "curl"]
+	connecttimeout = 999999
+	speedtime = 999999
+	speedlimit = 1
+	buffer-size = 524288000
