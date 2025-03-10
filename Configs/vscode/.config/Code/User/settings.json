@@ -1874,7 +1874,8 @@
   "cSpell.textDecorationColorSuggestion": "#FFF",
   "continue.enableTabAutocomplete": true,
   "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.semanticHighlighting.enabled": true
   },
   "codesnap.shutterAction": "copy",
   "c-cpp-flylint.cppcheck.verbose": true,
