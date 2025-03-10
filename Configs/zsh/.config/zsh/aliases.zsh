@@ -67,10 +67,11 @@ alias psmem='ps aux | sort -nr -k 4 | head -5 | fzf'
 alias pscpu='ps aux | sort -nr -k 3 | head -5 | fzf'
 
 #---- Git ---- #
-alias git_current_branch='git branch --show-current 2>/dev/null'
+[[ -n $(command -v git_current_branch) ]] ||
+  alias git_current_branch='git branch --show-current 2>/dev/null'
 
 # ---- Copy to Clipboard ----#
-[[ $(command -v copyclip) ]] || alias copyclip="clipcopy"
+[[ -n $(command -v copyclip) ]] || alias copyclip="clipcopy"
 
 # ---- Qalculate ---- #
 alias qalc="qalc --color" # Colorize output
