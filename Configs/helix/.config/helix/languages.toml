@@ -1,12 +1,14 @@
+indent = { tab-width = 2, unit = "  " }
+
 # ---- C++ ---- #
 [[language]]
 name = "cpp"
-formatter = { command = "astyle", args = ["--options=$ARTISTIC_STYLE_OPTIONS"] }
+formatter = { command = "astyle" }
 
 # ---- C ---- #
 [[language]]
 name = "c"
-formatter = { command = "astyle", args = ["--options=$ARTISTIC_STYLE_OPTIONS"] }
+formatter = { command = "astyle" }
 
 # ---- Typescript ---- #
 [[language]]
@@ -14,6 +16,8 @@ name = "typescript"
 formatter = { command = "biome", args = [
   "check",
   "--fix",
+  "--config-path",
+  "/home/othman/.config/biome.jsonc",
   "--stdin-file-path",
   "file.ts",
 ] }
@@ -24,6 +28,8 @@ name = "javascript"
 formatter = { command = "biome", args = [
   "check",
   "--fix",
+  "--config-path",
+  "/home/othman/.config/biome.jsonc",
   "--stdin-file-path",
   "file.js",
 ] }
@@ -34,6 +40,8 @@ name = "tsx"
 formatter = { command = "biome", args = [
   "check",
   "--fix",
+  "--config-path",
+  "/home/othman/.config/biome.jsonc",
   "--stdin-file-path",
   "file.tsx",
 ] }
@@ -44,6 +52,8 @@ name = "jsx"
 formatter = { command = "biome", args = [
   "check",
   "--fix",
+  "--config-path",
+  "/home/othman/.config/biome.jsonc",
   "--stdin-file-path",
   "file.jsx",
 ] }
@@ -52,28 +62,87 @@ formatter = { command = "biome", args = [
 [[language]]
 name = "typescript"
 roots = ["deno.json", "deno.jsonc"] # Optionally add "package.json" if needed.
-auto-format = true
+auto-format = false
 language-servers = ["deno-lsp"]
 
 [[language]]
 name = "javascript"
 roots = ["deno.json", "deno.jsonc"] # Optionally add "package.json" if needed.
-auto-format = true
+auto-format = false
 language-servers = ["deno-lsp"]
 
 [[language]]
 name = "jsx"
 roots = ["deno.json", "deno.jsonc"]
-auto-format = true
-language-servers = ["deno-lsp"]
+auto-format = false
+language-servers = [
+  "deno-lsp",
+  "typescript-language-server",
+  "vscode-html-language-server",
+  "superhtml",
+]
 
 [[language]]
 name = "tsx"
 roots = ["deno.json", "deno.jsonc"]
-auto-format = true
-language-servers = ["deno-lsp"]
+auto-format = false
+language-servers = [
+  "deno-lsp",
+  "typescript-language-server",
+  "vscode-html-language-server",
+  "superhtml",
+]
 
 [language-server.deno-lsp]
 command = "deno"
 args = ["lsp"]
 config.deno.enable = true
+
+# ---- Indentation ---- #
+[[language]]
+name = "rust"
+formatter = { command = "rustfmt", args = [
+  "--config-path",
+  "/home/othman/.config/rustfmt.toml",
+] }
+indent = { tab-width = 2, unit = "  " }
+
+# [[language]]
+# name = "c-sharp"
+# indent = { tab-width = 2, unit = "  " }
+
+# [[language]]
+# name = "go"
+# indent = { tab-width = 2, unit = "  " }
+
+# [[language]]
+# name = "python"
+# indent = { tab-width = 2, unit = "  " }
+
+# [[language]]
+# name = "php"
+# indent = { tab-width = 2, unit = "  " }
+
+# [[language]]
+# name = "slint"
+# indent = { tab-width = 2, unit = "  " }
+
+# [[language]]
+# name = "env"
+# indent = { tab-width = 2, unit = "  " }
+
+# [[language]]
+# name = "ini"
+# indent = { tab-width = 2, unit = "  " }
+
+# [[language]]
+# name = "mermaid"
+# indent = { tab-width = 2, unit = "  " }
+
+# [[language]]
+# name = "powershell"
+# indent = { tab-width = 2, unit = "  " }
+
+# [[language]]
+# name = "git-config"
+# indent = { tab-width = 2, unit = "  " }
