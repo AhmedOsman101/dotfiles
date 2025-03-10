@@ -31,7 +31,9 @@
     "lineEnding": "lf",
     "lineWidth": 80,
     "attributePosition": "multiline",
-    "ignore": ["*.vue"],
+    "ignore": [
+      "*.vue"
+    ],
     "bracketSpacing": true
   },
   "linter": {
@@ -79,7 +81,9 @@
       "bracketSameLine": false,
       "quoteStyle": "double",
       "attributePosition": "auto",
-      "bracketSpacing": true
+      "bracketSpacing": true,
+      "indentStyle": "space",
+      "indentWidth": 2
     }
   },
   "json": {
