@@ -229,3 +229,4 @@ PATH="$PATH:$HOME/scripts/dmscripts/scripts"       # my custom dmenu/rofi/fzf sc
 PATH="$PATH:$BUN_INSTALL/bin"                      # BUN js runtime
 PATH="$PATH:$HOME/.local/share/gem/ruby/3.3.0/bin" # Ruby gems
 PATH="$PATH:$HOME/.config/composer/vendor/bin"     # Composer packages
+PATH="$PATH:$CARGO_HOME/bin"                       # Cargo packages
