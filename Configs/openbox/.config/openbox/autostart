@@ -3,7 +3,7 @@
 ## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
 
 ## Kill if already running
-killall -9 xfsettingsd picom polybar dunst ksuperkey copyq ollama mpd xfce-polkit
+killall -9 xfsettingsd picom polybar dunst ksuperkey copyq ollama mpd xfce-polkit blueman-applet edges skippy-xd
 
 ## Restore Wallpaper
 nitrogen --restore
@@ -65,3 +65,6 @@ if [[ -z "${DBUS_SESSION_BUS_ADDRESS}" ]]; then
   export DBUS_SESSION_BUS_ADDRESS
   export DBUS_SESSION_BUS_PID
 fi
+
+# ---- Enable hotcorners using edges ---- #
+edges --topleft "skippy-xd --toggle" &
