@@ -44,7 +44,12 @@
         "noUselessCatch": "warn",
         "noUselessConstructor": "warn",
         "noUselessStringConcat": "error",
-        "useDateNow": "warn"
+        "useDateNow": "warn",
+        "noStaticOnlyClass": "off",
+        "noThisInStatic": {
+          "fix": "safe",
+          "level": "off"
+        }
       },
       "correctness": {
         "noUnusedFunctionParameters": "warn",
@@ -53,7 +58,8 @@
       },
       "style": {
         "noParameterAssign": "info",
-        "noNonNullAssertion": "info"
+        "noNonNullAssertion": "info",
+        "useEnumInitializers": "off"
       },
       "suspicious": {
         "noImplicitAnyLet": "warn",
