@@ -1,65 +1,65 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
+# ---- Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com> ---- #
 
-## Kill if already running
+# ---- Kill if already running ---- #
 killall -9 xfsettingsd picom polybar dunst ksuperkey copyq ollama mpd xfce-polkit blueman-applet edges skippy-xd
 
-## Restore Wallpaper
+# ---- Restore Wallpaper ---- #
 nitrogen --restore
 
-## xfce4-settings daemon
+# ---- xfce4-settings daemon ---- #
 xfsettingsd &
 
-## polkit agent
+# ---- polkit agent ---- #
 if [[ -z $(pidof xfce-polkit) ]]; then
   /usr/lib/xfce-polkit/xfce-polkit &
 fi
 
-## Enable power management
+# ---- Enable power management ---- #
 # xfce4-power-manager &
 (sleep 1 && xset s off && xset s noblank && xset -dpms) &
 
-## Start Compositing Manager
+# ---- Start Compositing Manager ---- #
 exec picom &
 
 systemctl --user start spotify-listener &
 
-## Launch Polybar or Tint2
+# ---- Launch Polybar or Tint2 ---- #
 bash ~/.config/openbox/themes/launch-bar.sh
 
-## Notification Daemon
+# ---- Notification Daemon ---- #
 exec dunst &
 
-## Start Music Player Daemon
+# ---- Start Music Player Daemon ---- #
 # exec mpd &
 
-## Launch Plank
+# ---- Launch Plank ---- #
 exec plank &
 
-## Thunar Daemon
+# ---- Thunar Daemon ---- #
 exec thunar --daemon &
 
-## Start copyq server
+# ---- Start copyq server ---- #
 exec copyq &
 
-## Start the ollama server
+# ---- Start the ollama server ---- #
 exec ollama serve &
 
-## Enable Super Keys For Menu
+# ---- Enable Super Keys For Menu ---- #
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 
-## These applets are specifically for tint2 panel.
-## If you're using tint2 as panel, Uncomment these applets.
+# ---- These applets are specifically for tint2 panel. ---- #
+# ---- If you're using tint2 as panel, Uncomment these applets. ---- #
 
-## User Friendly Network Menu
-#nm-applet --indicator &
+# ---- User Friendly Network Menu ---- #
+# nm-applet --indicator &
 
-## User Friendly Bluetooth Menu
-#blueman-applet &
+# ---- User Friendly Bluetooth Menu ---- #
+# blueman-applet &
 
-# Start DBus if not already running
+# Start DBus if not already running ---- #
 if [[ -z "${DBUS_SESSION_BUS_ADDRESS}" ]]; then
   eval "$(dbus-launch --sh-syntax)"
   export DBUS_SESSION_BUS_ADDRESS
