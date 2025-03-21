@@ -65,12 +65,14 @@ character = "┆" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
 
 [editor.inline-diagnostics]
-cursor-line = "info"
-other-lines = "info"
+cursor-line = "error"
+other-lines = "error"
 prefix-len = 2
-max-diagnostics = 4
+max-diagnostics = 2
 
 [keys.normal]
+C-s = [":format", ":write"] # format and save
+"space" = { v = ":clipboard-paste-replace" }
 C-d = [
   "extend_to_line_bounds",
   "yank",
@@ -100,23 +102,46 @@ A-j = [
   "move_line_down",
   "paste_before",
 ]
-C-s = [":format", ":write"] # format and save
 
 [keys.insert]
-C-d = [
-  "extend_to_line_bounds",
-  "yank",
-  "paste_before",
-]
 j = { k = "normal_mode" }   # Maps `jk` to enter normal mode
 k = { j = "select_mode" }   # Maps `kj` to enter visual mode
 C-s = [":format", ":write"] # format and save
-
-[keys.select]
-C-s = [":format", ":write"] # format and save
 C-d = [
   "extend_to_line_bounds",
   "yank",
   "paste_before",
 ]
 
+[keys.select]
+C-s = [":format", ":write"] # format and save
+"space" = { v = ":clipboard-paste-replace" }
+C-d = [
+  "extend_to_line_bounds",
+  "yank",
+  "paste_before",
+]
+A-up = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+A-down = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before",
+]
+A-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+A-j = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before",
+]
