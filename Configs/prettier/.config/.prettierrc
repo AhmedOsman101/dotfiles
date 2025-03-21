@@ -7,7 +7,6 @@
   "htmlWhitespaceSensitivity": "css",
   "insertPragma": false,
   "experimentalTernaries": true,
-  "parser": "typescript",
   "printWidth": 90,
   "proseWrap": "preserve",
   "semi": true,
