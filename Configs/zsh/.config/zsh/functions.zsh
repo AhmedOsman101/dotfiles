@@ -65,3 +65,10 @@ dotfiles() {
 help() {
   "$@" --help 2>&1 | bathelp
 }
+
+which() {
+  (
+    alias
+    declare -f
+  ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
+}
