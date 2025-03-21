@@ -1,21 +1,32 @@
+/* ---- Helix modes highlight ---- */
+a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR"] {
+  background-color: #388bfd;
+}
+
+a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="INS"] {
+  background-color: #ff942f;
+}
+
+a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V)"] {
+  background-color: #ff757f;
+}
+
 /* Code comment style */
-/* comment with catppuccin */
-.mtk3 {
+/* .mtk3 {
+  color: #008c7d !important;
+  font-style: italic;
+} */
+
+.mtk22 {
   color: #008c7d !important;
   font-style: italic;
 }
-
-/* uncomment with catppuccin */
-/* .mtk4 { */
-/*   color: #008c7d !important; */
-/*   font-style: italic; */
-/* } */
 
 .line-numbers {
   position: relative !important;
   width: 35px !important;
   font-size: 16px !important;
-  font-family: "JetBrainsMono Nerd Font", "Fira Code" !important;
+  font-family: "Fira Code", "JetBrainsMono Nerd Font", monospace !important;
 }
 
 /* Code canvas top shadow */
@@ -48,7 +59,7 @@
 /* File Explorer Item Label */
 .monaco-tree .monaco-tree-row .label-name,
 .monaco-list .monaco-list-row .monaco-icon-label .label-name {
-  font-family: "Fira Code", "JetBrainsMono Nerd Font" !important;
+  font-family: "Fira Code", "JetBrainsMono Nerd Font", monospace !important;
   font-size: 15px !important;
   font-weight: 500 !important;
   color: #ececec !important;
@@ -67,6 +78,7 @@
   align-items: center !important;
   justify-items: center !important;
 }
+
 .composite.title h2 {
   font-weight: bold !important;
   font-size: 12px !important;
@@ -127,7 +139,7 @@
 
 /* Search Label */
 .search-label {
-  font-family: "JetBrainsMono Nerd Font", "Fira Code" !important;
+  font-family: "JetBrainsMono Nerd Font", "Fira Code", monospace !important;
   font-size: 14px !important;
   color: #fff;
   display: block;
@@ -194,7 +206,7 @@
   padding: 8px !important;
   border: none !important;
   background-color: rgba(34, 34, 34, 0.4) !important;
-  font-family: "JetBrainsMono Nerd Font", "Fira Code" !important;
+  font-family: "JetBrainsMono Nerd Font", "Fira Code", monospace !important;
   font-size: 14px !important;
   margin-bottom: 16px !important;
 }
