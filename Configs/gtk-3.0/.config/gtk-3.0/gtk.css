@@ -25,9 +25,7 @@ undershoot.left {
 }
 
 .xfce4-notifyd-notification {
-	min-width: 300px;
 	/* Adjust width */
-	max-width: 600px;
-	/* Prevent excessive stretching */
+	min-width: 300px;
 	padding: 10px;
 }
