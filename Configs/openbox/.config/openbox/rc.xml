@@ -589,7 +589,7 @@
     <!-- Screenshot Keys -->
     <keybind key="Print">
       <action name="Execute">
-        <command>ob-screenshot --now</command>
+        <command>flameshot screen</command>
       </action>
     </keybind>
     <keybind key="A-Print">
@@ -609,7 +609,7 @@
     </keybind>
     <keybind key="W-S-s">
       <action name="Execute">
-        <command>ob-screenshot --area</command>
+        <command>flameshot gui</command>
       </action>
     </keybind>
     <!-- Brightness Control -->
