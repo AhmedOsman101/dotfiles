@@ -2,7 +2,7 @@
 	name = AhmedOsman101
 	email = trollingosman101@outlook.com
 [core]
-	editor = micro
+	editor = hx
   pager = delta
 
 [interactive]
