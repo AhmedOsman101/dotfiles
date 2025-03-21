@@ -1750,7 +1750,7 @@
   "indentColorizer.ignoreErrorLanguages": [
     "*"
   ],
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "GitHub Dark Default",
   "workbench.startupEditor": "none",
   // "editor.suggest.preview": true,
   "terminal.integrated.suggest.enabled": true,
@@ -2100,6 +2100,7 @@
   "editor.formatOnSave": true,
   "biome.enabled": true,
   "biome.lspBin": "/usr/bin/biome",
+  "biome.searchInPath": true,
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true,
   "javascript.inlayHints.parameterNames.enabled": "literals",
@@ -2150,9 +2151,6 @@
   "locateThisDocument.editorTitleIcons.openActiveDocumentInFileExplorer": false,
   "locateThisDocument.editorTitleIcons.locateActiveDocument": false,
   "locateThisDocument.editorTitleContext": false,
-  "commitSage.gemini.model": "gemini-2.0-flash-exp",
-  "commitSage.ollama.model": "qwen2.5-coder:7b",
-  "commitSage.telemetry.enabled": false,
   "[slint]": {
     "editor.defaultFormatter": "Slint.slint"
   },
@@ -2160,4 +2158,27 @@
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
   ],
+  "biome_lsp.trace.server": "messages",
+  "extensions.experimental.affinity": {
+    "jasew.vscode-helix-emulation": 1
+  },
+  "helixKeymap.yankHighlightBackgroundColor": "#F8F3AB",
+  "editor.lineNumbers": "relative",
+  "commitSage.gemini.model": "gemini-2.0-flash-exp",
+  "commitSage.ollama.model": "qwen2.5-coder:7b",
+  "commitSage.telemetry.enabled": false,
+  "commitSage.codestral.model": "codestral-2405", // codestral-latest
+  "commitSage.commit.autoCommit": false,
+  "commitSage.commit.autoPush": false,
+  "commitSage.commit.commitFormat": "conventional",
+  "commitSage.commit.commitLanguage": "english",
+  "commitSage.commit.customInstructions": "",
+  "commitSage.commit.onlyStagedChanges": false,
+  "commitSage.commit.promptForRefs": false,
+  "commitSage.commit.useCustomInstructions": false,
+  "commitSage.ollama.baseUrl": "http://localhost:11434",
+  "commitSage.openai.baseUrl": "https://api.openai.com/v1",
+  "commitSage.openai.model": "gpt-3.5-turbo",
+  "commitSage.provider.type": "gemini",
+  "prettify-ts.enabled": false
 }
