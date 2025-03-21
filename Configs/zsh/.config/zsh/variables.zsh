@@ -227,10 +227,27 @@ export MRT="$HOME/Documents/backup/WordTemplates/Standard.dotx"
 export PATH="$PATH:$HOME/.local/bin"
 PATH="$PATH:$HOME/.spicetify"                      # spicetify for spotify mods
 PATH="$PATH:$HOME/scripts"                         # my custom scripts
-PATH="$PATH:$HOME/scripts/python"                  # my custom python scripts
-PATH="$PATH:$HOME/scripts/bin"                     # my custom scripts' binaries
-PATH="$PATH:$HOME/scripts/dmscripts/scripts"       # my custom dmenu/rofi/fzf scripts
 PATH="$PATH:$BUN_INSTALL/bin"                      # BUN js runtime
 PATH="$PATH:$HOME/.local/share/gem/ruby/3.3.0/bin" # Ruby gems
 PATH="$PATH:$HOME/.config/composer/vendor/bin"     # Composer packages
 PATH="$PATH:$CARGO_HOME/bin"                       # Cargo packages
+
+# Define directories to exclude
+EXCLUDE_DIRS=("$HOME/scripts/.git" "$HOME/scripts/python/.venv")
+
+# Dynamically add subdirectories of $HOME/scripts containing executables to PATH
+# excluding specified directories and their subdirectories
+if [ -d "$HOME/scripts" ]; then
+  for dir in $(find "$HOME/scripts" -type f -executable -exec dirname {} \; | sort -u); do
+    exclude=false
+    for excluded in "${EXCLUDE_DIRS[@]}"; do
+      if [[ "$dir" == "$excluded"* ]]; then
+        exclude=true
+        break
+      fi
+    done
+    if ! $exclude && [[ ":$PATH:" != *":$dir:"* ]]; then
+      PATH="$PATH:$dir"
+    fi
+  done
+fi
