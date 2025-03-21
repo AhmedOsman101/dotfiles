@@ -10,9 +10,24 @@ formatter = { command = "astyle" }
 name = "c"
 formatter = { command = "astyle" }
 
+# ---- Json ---- #
+[[language]]
+name = "json"
+formatter = { command = "biome", args = [
+  "check",
+  "--fix",
+  "--config-path",
+  "/home/othman/.config/biome.jsonc",
+  "--stdin-file-path",
+  "file.json",
+] }
+language-servers = ["biome"]
+
+
 # ---- Typescript ---- #
 [[language]]
 name = "typescript"
+roots = ["package.json", "package-lock.json"]
 formatter = { command = "biome", args = [
   "check",
   "--fix",
@@ -21,10 +36,18 @@ formatter = { command = "biome", args = [
   "--stdin-file-path",
   "file.ts",
 ] }
+language-servers = [
+  "biome",
+  # { name = "typescript-language-server", except-features = [
+  #   "format",
+  # ] },
+
+]
 
 # ---- Javascript ---- #
 [[language]]
 name = "javascript"
+roots = ["package.json", "package-lock.json"]
 formatter = { command = "biome", args = [
   "check",
   "--fix",
@@ -33,6 +56,12 @@ formatter = { command = "biome", args = [
   "--stdin-file-path",
   "file.js",
 ] }
+language-servers = [
+  "biome",
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+]
 
 # ---- Tsx ---- #
 [[language]]
@@ -61,15 +90,27 @@ formatter = { command = "biome", args = [
 # ---- Deno ---- #
 [[language]]
 name = "typescript"
-roots = ["deno.json", "deno.jsonc"] # Optionally add "package.json" if needed.
+roots = ["deno.json", "deno.jsonc"]
 auto-format = false
-language-servers = ["deno-lsp"]
+language-servers = [
+  "deno-lsp",
+  "biome",
+  # { name = "typescript-language-server", except-features = [
+  #   "format",
+  # ] },
+]
 
 [[language]]
 name = "javascript"
-roots = ["deno.json", "deno.jsonc"] # Optionally add "package.json" if needed.
+roots = ["deno.json", "deno.jsonc"]
 auto-format = false
-language-servers = ["deno-lsp"]
+language-servers = [
+  "deno-lsp",
+  "biome",
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+]
 
 [[language]]
 name = "jsx"
@@ -77,9 +118,12 @@ roots = ["deno.json", "deno.jsonc"]
 auto-format = false
 language-servers = [
   "deno-lsp",
-  "typescript-language-server",
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
   "vscode-html-language-server",
   "superhtml",
+  "biome",
 ]
 
 [[language]]
@@ -88,17 +132,25 @@ roots = ["deno.json", "deno.jsonc"]
 auto-format = false
 language-servers = [
   "deno-lsp",
-  "typescript-language-server",
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
   "vscode-html-language-server",
   "superhtml",
+  "biome",
 ]
 
+# ---- Deno LSP ---- #
 [language-server.deno-lsp]
 command = "deno"
 args = ["lsp"]
 config.deno.enable = true
 
-# ---- Indentation ---- #
+# ---- Biome LSP ---- #
+[language-server]
+biome = { command = "biome", args = ["lsp-proxy"] }
+
+# ---- Rust---- #
 [[language]]
 name = "rust"
 formatter = { command = "rustfmt", args = [
@@ -107,6 +159,17 @@ formatter = { command = "rustfmt", args = [
 ] }
 indent = { tab-width = 2, unit = "  " }
 
+# ---- JSON ---- #
+[[language]]
+name = "json"
+language-servers = [
+  { name = "vscode-json-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
+
+# ---- Indentation ---- #
 # [[language]]
 # name = "c-sharp"
 # indent = { tab-width = 2, unit = "  " }
