@@ -11,11 +11,6 @@ nitrogen --restore
 # ---- xfce4-settings daemon ---- #
 xfsettingsd &
 
-# ---- polkit agent ---- #
-if [[ -z $(pidof xfce-polkit) ]]; then
-  /usr/lib/xfce-polkit/xfce-polkit &
-fi
-
 # ---- Enable power management ---- #
 # xfce4-power-manager &
 (sleep 1 && xset s off && xset s noblank && xset -dpms) &
@@ -64,6 +59,11 @@ if [[ -z "${DBUS_SESSION_BUS_ADDRESS}" ]]; then
   eval "$(dbus-launch --sh-syntax)"
   export DBUS_SESSION_BUS_ADDRESS
   export DBUS_SESSION_BUS_PID
+fi
+
+# ---- polkit agent ---- #
+if [[ -z $(pidof xfce-polkit) ]]; then
+  /usr/lib/xfce-polkit/xfce-polkit &
 fi
 
 # ---- Enable hotcorners using edges ---- #
