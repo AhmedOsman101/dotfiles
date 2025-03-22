@@ -10,7 +10,8 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # ---- Tuckr ---- #
-export TUCKR_DIR="$XDG_CONFIG_HOME/dotfiles/Configs"
+export TUCKR_HOME="$HOME"
+export TUCKR_DIR="$TUCKR_HOME/dotfiles/Configs"
 
 # ---- Auto Notify ---- #
 export AUTO_NOTIFY_IGNORE=(
