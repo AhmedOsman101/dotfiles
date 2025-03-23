@@ -2,10 +2,8 @@
 acpi
 adw-gtk-theme
 alacritty
-ansible-language-server
 apparmor
 arch-wiki-docs
-archcraft-about
 archcraft-arandr
 archcraft-artworks
 archcraft-backgrounds
@@ -48,7 +46,6 @@ archcraft-gtk-theme-valyrian
 archcraft-gtk-theme-wave
 archcraft-gtk-theme-white
 archcraft-gtk-theme-windows
-archcraft-help
 archcraft-hooks
 archcraft-hooks-extra
 archcraft-hooks-grub
@@ -119,7 +116,6 @@ blueman
 bluez
 bluez-utils
 bolt
-bpytop
 breeze-gtk
 brltty
 bruno-bin
@@ -539,7 +535,9 @@ usb_modeswitch
 usbmuxd
 usbutils
 vdpauinfo
+ventoy-bin
 vhs
+vi
 viewnior
 vim
 virt-bootstrap-git
