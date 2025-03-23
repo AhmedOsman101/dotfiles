@@ -23,7 +23,7 @@ export AUTO_NOTIFY_IGNORE=(
   "watchexec" "biome-watch" "lzg" "lazygit"
   "ssh" "fzf" "deno" "posting"
   "scrcpy" "wavemon" "mkscript" "toipe"
-  "flameshot"
+  "flameshot" "frogmouth" "vi" "ncdu"
 )
 export AUTO_NOTIFY_THRESHOLD=30
 export AUTO_NOTIFY_ICON_SUCCESS="/usr/share/icons/auto-notify-zsh/success.png"
@@ -185,7 +185,7 @@ export PNPM_HOME="$XDG_DATA_HOME/pnpm"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 
 # ---- Prettier ---- #
-export PRETTIERRC="${XDG_CONFIG_HOME}/.prettierrc"
+export PRETTIERRC="${XDG_CONFIG_HOME}/.prettierrc.json"
 
 # ---- Rustup ---- #
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
