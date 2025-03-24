@@ -88,3 +88,9 @@ alias no-orphans='paru -Rns $(paru -Qtdq)'
 
 # --- Frogmouth Markdown Preview ---- #
 alias frg="frogmouth"
+
+# ---- Doas ---- #
+alias doas="doas --"
+
+# ---- Mirrorlist ---- #
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" # Fastest mirrors
