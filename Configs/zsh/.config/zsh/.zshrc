@@ -70,7 +70,7 @@ unsetopt nomatch
 setopt AUTO_CD  # Type directory name to cd into it
 
 # ---- History ----- #
-HISTFILE="$HOME/.zsh_history"
+export HISTFILE="$HOME/.zsh_history"
 unsetopt extended_history     # Disable timestamps in history
 setopt share_history          # Share history across shells
 setopt inc_append_history     # Add commands to history immediately
