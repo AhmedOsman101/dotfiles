@@ -85,3 +85,6 @@ alias freepacman="sudo rm /var/lib/pacman/db.lck &>/dev/null || printf ''" # Res
 
 # ---- Paru ---- #
 alias no-orphans='paru -Rns $(paru -Qtdq)'
+
+# --- Frogmouth Markdown Preview ---- #
+alias frg="frogmouth"
