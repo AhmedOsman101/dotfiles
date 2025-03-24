@@ -148,4 +148,4 @@ zstyle ':zle:*' region-highlight 'fg=none' 'bg=#7287FD66'
 
 # ---- Curlie ---- #
 [[ -s "$HOME/.config/envman/load.sh" ]] && source "$HOME/.config/envman/load.sh"
-. "$HOME/.local/share/../bin/env"
+# . "$HOME/.local/share/../bin/env"
