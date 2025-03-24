@@ -1487,7 +1487,7 @@
   "phpParameterHint.collapseTypeWhenEqual": true,
   "phpParameterHint.fontStyle": "normal",
   "phpParameterHint.verticalPadding": 2,
-  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontFamily": "JetBrainsMonoNF Nerd Font",
   "phpParameterHint.changeDelay": 20,
   "phpParameterHint.collapseHintsWhenEqual": true,
   "prettier.singleAttributePerLine": true,

@@ -70,7 +70,7 @@ symbol = " "
 format = " [$symbol($version )]($style)"
 
 [deno]
-symbol = "🦖 "
+symbol = " "
 detect_extensions = ['js', 'ts']
 detect_files = [
   "deno.json",
@@ -329,7 +329,7 @@ detect_files = [
   "Program.cs",
 ]
 detect_folders = []
-format = "via [( )(🎯  )]()"
+format = "[( )(  )]()"
 heuristic = true
 symbol = ".NET "
 version_format = "v"
