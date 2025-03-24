@@ -29,23 +29,23 @@ light_value='0.05'
 dark_value='0.30'
 
 # Wallpaper
-wdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+wdir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 wallpaper="$wdir/wallpaper"
 
 # Polybar
 polybar_font='JetBrains Mono:bold:size=10;3'
 
 # Rofi
-rofi_font='JetBrainsMono Nerd Font 10'
+rofi_font='JetBrainsMonoNF Nerd Font 10'
 rofi_icon='Luv-Folders-Dark'
 
 # Terminal
-terminal_font_name='JetBrainsMono Nerd Font'
+terminal_font_name='JetBrainsMonoNF Nerd Font'
 terminal_font_size='10'
 
 # Geany
 geany_colors='manhattan.conf'
-geany_font='JetBrainsMono Nerd Font 10'
+geany_font='JetBrainsMonoNF Nerd Font 10'
 
 # Appearance
 gtk_font='Noto Sans 9'
@@ -69,7 +69,7 @@ dunst_width='300'
 dunst_height='80'
 dunst_offset='10x48'
 dunst_origin='top-right'
-dunst_font='JetBrainsMono Nerd Font 10'
+dunst_font='JetBrainsMonoNF Nerd Font 10'
 dunst_border='2'
 dunst_separator='2'
 

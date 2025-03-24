@@ -29,7 +29,7 @@ light_value='0.05'
 dark_value='0.30'
 
 # Wallpaper
-wdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+wdir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 wallpaper="$wdir/wallpaper"
 
 # Polybar
@@ -40,12 +40,12 @@ rofi_font='Iosevka 10'
 rofi_icon='Zafiro'
 
 # Terminal
-terminal_font_name='JetBrainsMono Nerd Font'
+terminal_font_name='JetBrainsMonoNF Nerd Font'
 terminal_font_size='10'
 
 # Geany
 geany_colors='arc.conf'
-geany_font='JetBrainsMono Nerd Font 10'
+geany_font='JetBrainsMonoNF Nerd Font 10'
 
 # Appearance
 gtk_font='Noto Sans 9'
