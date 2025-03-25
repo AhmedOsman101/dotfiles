@@ -193,6 +193,7 @@ foomatic-db
 foomatic-db-engine
 foot-terminfo
 freedownloadmanager
+frogmouth
 fsarchiver
 galculator
 gcc
