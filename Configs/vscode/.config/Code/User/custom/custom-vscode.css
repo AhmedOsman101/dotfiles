@@ -1,14 +1,17 @@
 /* ---- Helix modes highlight ---- */
 a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR"] {
   background-color: #388bfd;
+  color: aliceblue;
 }
 
 a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="INS"] {
   background-color: #ff942f;
+  color: aliceblue;
 }
 
 a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V)"] {
   background-color: #ff757f;
+  color: aliceblue;
 }
 
 /* Code comment style */
