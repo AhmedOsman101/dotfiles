@@ -138,6 +138,8 @@ bruno-bin
 btrfs-progs
 bzip2
 catppuccin-gtk-theme-mocha
+chaotic-keyring
+chaotic-mirrorlist
 clang
 clang-format-all-git
 clonezilla
