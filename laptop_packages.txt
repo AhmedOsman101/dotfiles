@@ -1,35 +1,17 @@
 7zip
 acpi
 adw-gtk-theme
-aircrack-ng
 alacritty
 amd-ucode
-android-sdk-platform-tools
 apparmor
-archcraft-about
 archcraft-arandr
 archcraft-artworks
 archcraft-backgrounds
 archcraft-backgrounds-branding
-archcraft-bspwm
 archcraft-config-geany
 archcraft-config-music
 archcraft-config-qt
 archcraft-cursor-bibata
-archcraft-cursor-breezex
-archcraft-cursor-colloid
-archcraft-cursor-fluent
-archcraft-cursor-future
-archcraft-cursor-layan
-archcraft-cursor-lyra
-archcraft-cursor-material
-archcraft-cursor-nordic
-archcraft-cursor-pear
-archcraft-cursor-qogirr
-archcraft-cursor-simple
-archcraft-cursor-sweet
-archcraft-cursor-vimix
-archcraft-cursor-windows
 archcraft-dunst-icons
 archcraft-fonts
 archcraft-funscripts
@@ -64,7 +46,6 @@ archcraft-gtk-theme-valyrian
 archcraft-gtk-theme-wave
 archcraft-gtk-theme-white
 archcraft-gtk-theme-windows
-archcraft-help
 archcraft-hooks
 archcraft-hooks-extra
 archcraft-hooks-grub
@@ -107,7 +88,6 @@ archcraft-sddm-theme
 archcraft-skeleton
 archcraft-vim
 aria2
-ark
 ascii
 aspell
 aspell-en
@@ -126,7 +106,6 @@ bcachefs-tools
 betterlockscreen
 bibata-cursor-theme-bin
 bind
-binder_linux-dkms
 bison
 blueman
 bluez
@@ -161,7 +140,6 @@ dialog
 diffuse
 diffutils
 discord
-discover
 dmenu
 dmidecode
 dmraid
@@ -189,7 +167,6 @@ ffmpegthumbnailer
 find-the-command
 firefox
 flatpak
-flatpak-kcm
 flex
 foomatic-db
 foomatic-db-engine
@@ -197,7 +174,6 @@ foot-terminfo
 freedownloadmanager
 frogmouth
 fsarchiver
-galculator
 gcc
 geany
 geany-plugins
@@ -207,7 +183,6 @@ git-delta
 github-cli
 global
 glow
-gnome-boxes
 gnome-chess
 gnome-keyring
 gnuchess
@@ -252,8 +227,6 @@ iwd
 jasper
 jfsutils
 jq
-kate
-kdeconnect
 kitty
 kitty-terminfo
 klavaro
@@ -261,7 +234,6 @@ kmines
 knights
 kolourpaint
 ksuperkey
-ktouch
 kvantum
 kvantum-qt5
 lazygit
@@ -274,11 +246,9 @@ libde265
 libdv
 libfido2
 libheif
-libmcrypt
 libmpeg2
 libpfm
 libreoffice-fresh
-libreoffice-fresh-ar
 libtheora
 libusb-compat
 libvpx
@@ -289,7 +259,7 @@ linux-atm
 linux-firmware
 linux-firmware-marvell
 linux-headers
-localsend-bin
+localsend
 lrzip
 lsb-release
 lsscsi
@@ -305,7 +275,6 @@ maim
 make
 man-db
 man-pages
-masterpdfeditor-free
 mdadm
 mdcat
 meld
@@ -393,12 +362,10 @@ plocate
 plymouth
 polkit
 polybar
-polybar-spotify-module
 powertop
 ppp
 pptpclient
 prince-bin
-protobuf-c
 pulsemixer
 pv
 python-beautifulsoup4
@@ -410,7 +377,6 @@ qt5gtk2
 qt6ct
 qt6gtk2
 ranger
-rar
 re2c
 refind
 reflector
@@ -454,7 +420,6 @@ terminus-font
 tesseract
 tesseract-data-eng
 thefuck
-thonny
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
@@ -480,7 +445,6 @@ udisks2
 ueberzug
 ufw
 unarchiver
-uno-calculator-bin
 unzip
 usb_modeswitch
 usbmuxd
@@ -491,11 +455,7 @@ virtualbox
 visual-studio-code-bin
 vpnc
 vulkan-radeon
-waydroid
-webstorm
-webstorm-jre
 wget
-windscribe
 wireless-regdb
 wireless_tools
 wireplumber
@@ -510,7 +470,6 @@ xclip
 xcolor
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
-xdg-desktop-portal-kde
 xdg-ninja
 xdg-user-dirs
 xdg-user-dirs-gtk
@@ -580,8 +539,6 @@ xvidcore
 xz
 yad
 yapf
-yarn
-yay
 yazi
 zen-browser-bin
 zip
