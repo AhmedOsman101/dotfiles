@@ -20,7 +20,7 @@ fi
 # Options
 layout=$(cat "${RASI}" | grep 'USE_ICON' | cut -d'=' -f2)
 if [[ "${layout}" == 'NO' ]]; then
-  if [[ ${status} == *"[playing]"* ]]; then
+  if [[ ${status} == *"playing"* ]]; then
     option_1=" Pause"
   else
     option_1="  Play"
@@ -31,7 +31,7 @@ if [[ "${layout}" == 'NO' ]]; then
   option_5="  Repeat"
   option_6="  Random"
 else
-  if [[ ${status} == *"[playing]"* ]]; then
+  if [[ ${status} == *"playing"* ]]; then
     option_1="  "
   else
     option_1="  "
