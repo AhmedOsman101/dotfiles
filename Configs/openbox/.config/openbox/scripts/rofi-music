@@ -1,26 +1,24 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-
 # Import Current Theme
 DIR="${HOME}/.config/openbox"
 STYLE="default"
 RASI="${DIR}/themes/${STYLE}/rofi/music.rasi"
 
 # Theme Elements
-status="$(spotifyctl status)"
-if [[ -z "${status}" ]]; then
-  prompt='Offline'
+status="$(spotifyctl current)"
+if [[ "${status}" == "Offline" ]]; then
+  prompt="${status}"
   mesg="Spotify is Offline"
 else
-  prompt="$(spotifyctl status --format '%artist%')"
-  mesg="$(spotifyctl status --format "%artist%") :: $(spotifyctl status --format "%title%")"
+  prompt="$(spotifyctl status --format '{artist}')"
+  mesg="$(spotifyctl status --format '{artist} :: {title}')"
 fi
 
 # Options
 layout=$(cat "${RASI}" | grep 'USE_ICON' | cut -d'=' -f2)
 if [[ "${layout}" == 'NO' ]]; then
-  if [[ ${status} == *"playing"* ]]; then
+  if [[ ${status} == "playing" ]]; then
     option_1=" Pause"
   else
     option_1="  Play"
@@ -28,10 +26,8 @@ if [[ "${layout}" == 'NO' ]]; then
   option_2="  Stop"
   option_3="  Previous"
   option_4="  Next"
-  option_5="  Repeat"
-  option_6="  Random"
 else
-  if [[ ${status} == *"playing"* ]]; then
+  if [[ ${status} == "playing" ]]; then
     option_1="  "
   else
     option_1="  "
@@ -39,8 +35,6 @@ else
   option_2="  "
   option_3="  "
   option_4="  "
-  option_5="  "
-  option_6="  "
 fi
 
 # Rofi CMD
@@ -48,7 +42,6 @@ rofi_cmd() {
   rofi -dmenu \
     -p "${prompt}" \
     -mesg "${mesg}" \
-    "${active}" "${urgent}" \
     -markup-rows \
     -theme "${RASI}"
 }
@@ -61,9 +54,9 @@ run_rofi() {
 # Execute Command
 run_cmd() {
   if [[ "$1" == '--opt1' ]]; then
-    spotifyctl playpause
+    spotifyctl play-pause
   elif [[ "$1" == '--opt2' ]]; then
-    spotifyctl pause
+    spotifyctl stop
   elif [[ "$1" == '--opt3' ]]; then
     spotifyctl previous
   elif [[ "$1" == '--opt4' ]]; then
@@ -86,4 +79,5 @@ case ${chosen} in
 "${option_4}")
   run_cmd --opt4
   ;;
+*) exit 0 ;;
 esac
