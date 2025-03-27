@@ -1720,7 +1720,6 @@
   },
   "terminal.external.linuxExec": "kitty",
   "diffEditor.maxComputationTime": 0,
-  "vue.server.hybridMode": false,
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "sortJSON.orderOverride": [
     "name",
@@ -2180,5 +2179,6 @@
   "commitSage.openai.baseUrl": "https://api.openai.com/v1",
   "commitSage.openai.model": "gpt-3.5-turbo",
   "commitSage.provider.type": "gemini",
-  "prettify-ts.enabled": false
+  "prettify-ts.enabled": true,
+  "vue.server.hybridMode": false
 }
