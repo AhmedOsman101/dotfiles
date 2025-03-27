@@ -462,6 +462,7 @@ speedtest-cli
 spofi-git
 spotify
 squashfs-tools
+stacer-bin
 starship
 stockfish
 stow
