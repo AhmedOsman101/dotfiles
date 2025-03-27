@@ -94,3 +94,7 @@ alias doas="doas --"
 
 # ---- Mirrorlist ---- #
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" # Fastest mirrors
+
+# ---- Cargo ---- #
+alias cr="cargo run"
+alias cb="cargo build"
