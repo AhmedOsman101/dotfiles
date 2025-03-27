@@ -148,4 +148,12 @@ zstyle ':zle:*' region-highlight 'fg=none' 'bg=#7287FD66'
 
 # ---- Curlie ---- #
 [[ -s "$HOME/.config/envman/load.sh" ]] && source "$HOME/.config/envman/load.sh"
-# . "$HOME/.local/share/../bin/env"
+
+# ---- Posting ---- #
+. "$HOME/.local/share/../bin/env"
+
+# ---- Deno ---- #
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/othman/.config/zsh/completions:"* ]]; then export FPATH="/home/othman/.config/zsh/completions:$FPATH"; fi
+
+. "/home/othman/.deno/env"
