@@ -33,10 +33,10 @@ wdir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 wallpaper="$wdir/wallpaper"
 
 # Polybar
-polybar_font='JetBrains Mono:size=10;3'
+polybar_font='JetBrainsMonoNF Nerd Font:size=10;3'
 
 # Rofi
-rofi_font='Iosevka 10'
+rofi_font='JetBrainsMonoNF Nerd Font 10'
 rofi_icon='Zafiro'
 
 # Terminal
@@ -56,7 +56,7 @@ cursor_theme='Bibata'
 # Openbox
 ob_theme='OB-Arc-Dark'
 ob_layout='DLIMC'
-ob_font='JetBrains Mono'
+ob_font='JetBrainsMonoNF Nerd Font'
 ob_font_size='9'
 ob_menu='menu-icons.xml'
 ob_margin_t='48'
@@ -69,7 +69,7 @@ dunst_width='300'
 dunst_height='80'
 dunst_offset='10x48'
 dunst_origin='top-right'
-dunst_font='JetBrains Mono 10'
+dunst_font='JetBrainsMonoNF Nerd Font 10'
 dunst_border='4'
 dunst_separator='4'
 
