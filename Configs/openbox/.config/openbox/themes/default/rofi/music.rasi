@@ -36,7 +36,7 @@ window {
 /*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
-    spacing:                     10px;
+    spacing:                     20px;
     margin:                      0px;
     padding:                     30px;
     background-color:            transparent;
@@ -59,11 +59,11 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
-    padding:                     10px 12px;
-    border-radius:               100%;
+    str:                         " ";
+    padding:                     10px 10px;
+    border-radius:               50%;
     background-color:            @active;
-    text-color:                  @background;
+    text-color:                  aliceblue;
 }
 prompt {
     enabled:                     true;
@@ -130,18 +130,7 @@ element alternate.normal {
     background-color:            var(background-alt);
     text-color:                  var(foreground);
 }
-element normal.urgent,
-element alternate.urgent,
-element selected.active {
-    background-color:            var(urgent);
-    text-color:                  var(background);
-}
-element normal.active,
-element alternate.active,
-element selected.urgent {
-    background-color:            var(active);
-    text-color:                  var(background);
-}
+
 element selected.normal {
     background-color:            var(selected);
     text-color:                  var(background);
