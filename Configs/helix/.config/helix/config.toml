@@ -70,9 +70,48 @@ other-lines = "error"
 prefix-len = 2
 max-diagnostics = 2
 
+[keys.normal."space"]
+v = ":clipboard-paste-replace"
+i = ":pipe shellharden --transform ''"
+
+[keys.select."space"]
+v = ":clipboard-paste-replace"
+i = ":pipe shellharden --transform ''"
+
 [keys.normal]
 C-s = [":format", ":write"] # format and save
-"space" = { v = ":clipboard-paste-replace" }
+C-d = [
+  "extend_to_line_bounds",
+  "yank",
+  "paste_before",
+]
+A-up = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+A-down = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before",
+]
+A-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+A-j = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before",
+]
+
+[keys.select]
+C-s = [":format", ":write"] # format and save
 C-d = [
   "extend_to_line_bounds",
   "yank",
@@ -113,35 +152,3 @@ C-d = [
   "paste_before",
 ]
 
-[keys.select]
-C-s = [":format", ":write"] # format and save
-"space" = { v = ":clipboard-paste-replace" }
-C-d = [
-  "extend_to_line_bounds",
-  "yank",
-  "paste_before",
-]
-A-up = [
-  "extend_to_line_bounds",
-  "delete_selection",
-  "move_line_up",
-  "paste_before",
-]
-A-down = [
-  "extend_to_line_bounds",
-  "delete_selection",
-  "move_line_down",
-  "paste_before",
-]
-A-k = [
-  "extend_to_line_bounds",
-  "delete_selection",
-  "move_line_up",
-  "paste_before",
-]
-A-j = [
-  "extend_to_line_bounds",
-  "delete_selection",
-  "move_line_down",
-  "paste_before",
-]
