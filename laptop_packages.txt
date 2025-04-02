@@ -207,6 +207,7 @@ gnuchess
 gopls
 gpart
 gparted
+gphoto2
 gpick
 gpm
 gptfdisk
@@ -401,6 +402,7 @@ plocate
 plymouth
 polkit
 polybar
+polybar-spotify-module
 powertop
 ppp
 pptpclient
@@ -436,6 +438,7 @@ rp-pppoe
 rsync
 ruby
 ruff
+rust-analyzer
 rxvt-unicode-terminfo
 samba
 sassc
@@ -457,6 +460,7 @@ slint-lsp-bin
 slock
 slop
 smartmontools
+snapshot
 sof-firmware
 speedtest-cli
 spofi-git
@@ -616,6 +620,7 @@ xorg-xwininfo
 xorg-xwud
 xsel
 xsettingsd
+xsv
 xvidcore
 xwallpaper
 xz
