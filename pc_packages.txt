@@ -141,7 +141,6 @@ cups-filters
 cups-pdf
 dbus-broker-units
 debtap
-deno
 dhclient
 dhcpcd
 dialog
@@ -413,7 +412,6 @@ playerctl
 plocate
 plymouth
 polkit
-polkit-kde-agent
 polybar
 powertop
 ppp
