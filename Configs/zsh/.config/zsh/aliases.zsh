@@ -98,3 +98,6 @@ alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacma
 # ---- Cargo ---- #
 alias cr="cargo run"
 alias cb="cargo build"
+
+# ---- Nushell ---- #
+alias n="nu -c"
