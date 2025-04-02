@@ -21,8 +21,12 @@ formatter = { command = "biome", args = [
   "--stdin-file-path",
   "file.json",
 ] }
-language-servers = ["biome"]
-
+language-servers = [
+  { name = "vscode-json-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
 
 # ---- Typescript ---- #
 [[language]]
@@ -168,44 +172,3 @@ language-servers = [
   ] },
   "biome",
 ]
-
-# ---- Indentation ---- #
-# [[language]]
-# name = "c-sharp"
-# indent = { tab-width = 2, unit = "  " }
-
-# [[language]]
-# name = "go"
-# indent = { tab-width = 2, unit = "  " }
-
-# [[language]]
-# name = "python"
-# indent = { tab-width = 2, unit = "  " }
-
-# [[language]]
-# name = "php"
-# indent = { tab-width = 2, unit = "  " }
-
-# [[language]]
-# name = "slint"
-# indent = { tab-width = 2, unit = "  " }
-
-# [[language]]
-# name = "env"
-# indent = { tab-width = 2, unit = "  " }
-
-# [[language]]
-# name = "ini"
-# indent = { tab-width = 2, unit = "  " }
-
-# [[language]]
-# name = "mermaid"
-# indent = { tab-width = 2, unit = "  " }
-
-# [[language]]
-# name = "powershell"
-# indent = { tab-width = 2, unit = "  " }
-
-# [[language]]
-# name = "git-config"
-# indent = { tab-width = 2, unit = "  " }
