@@ -363,6 +363,7 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 ntfs-3g
+nushell
 nvidia-470xx-dkms
 nvidia-settings
 nvme-cli
@@ -465,6 +466,7 @@ sequoia-sq
 sg3_utils
 shc
 shellcheck-bin
+shellharden
 shfmt
 shlorem
 simplescreenrecorder
@@ -544,6 +546,7 @@ virt-viewer
 virtualbox
 virtualbox-guest-utils
 virtualbox-host-dkms
+visidata
 visual-studio-code-bin
 vlc
 vpnc
@@ -639,6 +642,7 @@ xorg-xwininfo
 xorg-xwud
 xsel
 xsettingsd
+xsv
 xvidcore
 xwallpaper
 xxkb
