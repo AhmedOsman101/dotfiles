@@ -54,13 +54,12 @@ align-reference=name # Align references to the variable name
 # ---- Formatting Options ---- #
 # keep-one-line-blocks # Keep one-line blocks on the same line
 # keep-one-line-statements   # Keep one-line statements on the same line
-remove-braces # Remove braces from conditional statements (e.g. 'if', 'for', 'while'...). The statement must be a single statement on a single line.
+# remove-braces # Remove braces from conditional statements (e.g. 'if', 'for', 'while'...). The statement must be a single statement on a single line.
 # break-one-line-headers
 attach-return-type      # Attach the return type to the function name.
 attach-return-type-decl # Attach the return type to the function name.
 attach-inlines          # Attach braces to class inline function definitions.
 convert-tabs            # Convert tabs to spaces
-remove-braces           # Remove unnecessary braces from single-line statements
 close-templates         # Closes whitespace between the ending angle brackets of template definitions.
 #max-code-length=0      # No maximum code length
 break-after-logical
