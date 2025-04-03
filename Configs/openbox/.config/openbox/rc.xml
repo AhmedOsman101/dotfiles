@@ -708,11 +708,11 @@
         <command>rofi-bluetooth</command>
       </action>
     </keybind>
-    <keybind key="W-m">
-      <action name="Execute">
-        <command>rofi-music</command>
-      </action>
-    </keybind>
+    <!-- <keybind key="W-m"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <command>rofi-music</command> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
     <keybind key="W-x">
       <action name="Execute">
         <command>rofi-powermenu</command>
