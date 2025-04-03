@@ -24,7 +24,7 @@ export AUTO_NOTIFY_IGNORE=(
   "ssh" "fzf" "deno" "posting"
   "scrcpy" "wavemon" "mkscript" "toipe"
   "flameshot" "frogmouth" "vi" "ncdu"
-  "nu"
+  "nu" "pnpm dev" "npm dev"
 )
 export AUTO_NOTIFY_THRESHOLD=30
 export AUTO_NOTIFY_ICON_SUCCESS="/usr/share/icons/auto-notify-zsh/success.png"
@@ -227,29 +227,9 @@ export MRT="$HOME/Documents/backup/WordTemplates/Standard.dotx"
 
 # ---- PATH ---- #
 export PATH="$PATH:$HOME/.local/bin"
+PATH="$PATH:$HOME/.local/bin/scripts"              # my custom scripts
 PATH="$PATH:$HOME/.spicetify"                      # spicetify for spotify mods
-PATH="$PATH:$HOME/scripts"                         # my custom scripts
 PATH="$PATH:$BUN_INSTALL/bin"                      # BUN js runtime
 PATH="$PATH:$HOME/.local/share/gem/ruby/3.3.0/bin" # Ruby gems
 PATH="$PATH:$HOME/.config/composer/vendor/bin"     # Composer packages
 PATH="$PATH:$CARGO_HOME/bin"                       # Cargo packages
-
-# Define directories to exclude
-EXCLUDE_DIRS=("$HOME/scripts/.git" "$HOME/scripts/python/.venv")
-
-# Dynamically add subdirectories of $HOME/scripts containing executables to PATH
-# excluding specified directories and their subdirectories
-if [ -d "$HOME/scripts" ]; then
-  for dir in $(find "$HOME/scripts" -type f -executable -exec dirname {} \; | sort -u); do
-    exclude=false
-    for excluded in "${EXCLUDE_DIRS[@]}"; do
-      if [[ "$dir" == "$excluded"* ]]; then
-        exclude=true
-        break
-      fi
-    done
-    if ! $exclude && [[ ":$PATH:" != *":$dir:"* ]]; then
-      PATH="$PATH:$dir"
-    fi
-  done
-fi
