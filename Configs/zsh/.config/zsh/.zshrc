@@ -154,6 +154,8 @@ zstyle ':zle:*' region-highlight 'fg=none' 'bg=#7287FD66'
 
 # ---- Deno ---- #
 # Add deno completions to search path
-if [[ ":$FPATH:" != *":/home/othman/.config/zsh/completions:"* ]]; then export FPATH="/home/othman/.config/zsh/completions:$FPATH"; fi
+if [[ ":$FPATH:" != *":$HOME/.config/zsh/completions:"* ]]; then
+  export FPATH="$HOME/.config/zsh/completions:$FPATH"
+fi
 
 . "/home/othman/.deno/env"
