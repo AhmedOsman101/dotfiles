@@ -172,3 +172,14 @@ language-servers = [
   ] },
   "biome",
 ]
+
+# ---- Markdown ---- #
+[[language]]
+name = "markdown"
+formatter = { command = "prettier", args = [
+  "--write",
+  "--config",
+  "/home/othman/.config/.prettierrc.json",
+  "--stdin-filepath",
+  "file.md",
+] }
