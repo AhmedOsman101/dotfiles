@@ -1,1 +1,1 @@
-*secret* filter=git-crypt diff=git-crypt
+Configs/zsh/.config/zsh/secrets.zsh filter=git-crypt diff=git-crypt
