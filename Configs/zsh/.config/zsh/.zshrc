@@ -5,6 +5,7 @@ export ZDOTDIR="$HOME/.config/zsh"
 
 # Load modules safely
 config_files=(
+  "$ZDOTDIR/secrets.zsh"
   "$ZDOTDIR/variables.zsh"
   "$ZDOTDIR/functions.zsh"
   "$ZDOTDIR/aliases.zsh"
