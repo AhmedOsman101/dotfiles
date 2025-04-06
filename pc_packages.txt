@@ -196,6 +196,7 @@ geany-plugins
 gearlever
 ghostscript
 gimp
+git-crypt
 git-delta
 github-cli
 glfw
@@ -419,6 +420,7 @@ ppp
 pptpclient
 prettier
 prince-bin
+proton-pass-bin
 pulsemixer
 pv
 python-beautifulsoup4
