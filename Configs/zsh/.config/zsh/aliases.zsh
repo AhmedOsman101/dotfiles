@@ -100,4 +100,4 @@ alias cr="cargo run"
 alias cb="cargo build"
 
 # ---- Nushell ---- #
-alias n="nu -c"
+alias n="nu --config $NU_CONFIG -c"
