@@ -1,4 +1,5 @@
 *.sql
 Configs/micro/.config/micro/buffers
 Configs/zsh/.config/zsh/.zcompdump
+Configs/nushell/.config/nushell/history.txt
 *.log
