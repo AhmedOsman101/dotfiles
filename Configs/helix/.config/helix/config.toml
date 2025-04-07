@@ -65,7 +65,7 @@ character = "┆" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
 
 [editor.inline-diagnostics]
-cursor-line = "error"
+cursor-line = "info"
 other-lines = "disable"
 prefix-len = 2
 max-diagnostics = 2
@@ -151,4 +151,3 @@ C-d = [
   "yank",
   "paste_before",
 ]
-
