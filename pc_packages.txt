@@ -139,6 +139,7 @@ cryptsetup
 cups
 cups-filters
 cups-pdf
+curlie
 dbus-broker-units
 debtap
 dhclient
@@ -240,6 +241,7 @@ hdparm
 helix
 highlight
 htop
+httpie
 hyperv
 i3lock-color
 iftop
@@ -251,6 +253,7 @@ inter-font
 inxi
 iw
 iwd
+jaq
 jasper
 jedi-language-server
 jfsutils
@@ -294,8 +297,7 @@ linux
 linux-atm
 linux-firmware
 linux-firmware-marvell
-linux-lts
-linux-lts-headers
+linux-headers
 llvm
 localsend
 lrzip
@@ -415,6 +417,7 @@ plocate
 plymouth
 polkit
 polybar
+posting
 powertop
 ppp
 pptpclient
@@ -485,6 +488,7 @@ spotify
 squashfs-tools
 stacer-bin
 starship
+sticky-git
 stockfish
 stow
 sublime-text-4
@@ -515,6 +519,7 @@ timeshift
 tipp10
 tlrc
 tmux
+toilet
 toipe
 tpm2-tools
 tpm2-tss
@@ -524,7 +529,6 @@ trash-cli
 tree
 ttf-amiri
 ttyper
-tuckr-git
 tumbler
 tuned
 udftools
