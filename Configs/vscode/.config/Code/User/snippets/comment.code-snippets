@@ -2,7 +2,7 @@
   "comment": {
     "prefix": "com",
     "body": [
-      "$LINE_COMMENT ---- ${1:comment} ---- $LINE_COMMENT",
+      "$LINE_COMMENT --- ${1:comment} --- $LINE_COMMENT",
     ],
     "description": "Adds a nicely formatted comment"
   },
