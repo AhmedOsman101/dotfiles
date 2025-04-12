@@ -9,14 +9,12 @@ alias reload="source $ZSHRC && clear && neofetch"
 alias npm="pnpm"
 alias vim="nvim"
 alias pwdcp='clipcopy ${PWD}'
-alias cppwd='clipcopy ${PWD}'
 alias python="python3"
 alias pip="pip3"
 alias getgpu="lspci -k -d ::03xx"
 
 # ---- Bat (better cat) ----- #
 alias cat="bat --pager never --style plain"
-# alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # ---- Zoxide (better cd) ----- #
@@ -61,10 +59,10 @@ alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
 # ---- Get top process eating memory ---- #
-alias psmem='ps aux | sort -nr -k 4 | head -5 | fzf'
+alias psmem='n "ps | sort-by mem | last 5"'
 
 # ---- Get top process eating cpu ---- #
-alias pscpu='ps aux | sort -nr -k 3 | head -5 | fzf'
+alias pscpu='n "ps | sort-by cpu | last 5"'
 
 #---- Git ---- #
 [[ -n $(command -v git_current_branch) ]] ||
@@ -81,7 +79,8 @@ alias calc="qalc --terse" # Return only the output and colorize output
 alias hlx="helix"
 
 # ---- Pacman ---- #
-alias freepacman="sudo rm /var/lib/pacman/db.lck &>/dev/null || printf ''" # Resolve 'pacman in use' error
+# Resolve 'pacman in use' error
+alias freepacman="sudo rm /var/lib/pacman/db.lck &>/dev/null || printf ''"
 
 # ---- Paru ---- #
 alias no-orphans='paru -Rns $(paru -Qtdq)'
