@@ -100,3 +100,6 @@ alias cb="cargo build"
 
 # ---- Nushell ---- #
 alias n="nu --config $NU_CONFIG -c"
+
+# ---- Capslock ---- #
+alias caps="xdotool key Caps_Lock"
