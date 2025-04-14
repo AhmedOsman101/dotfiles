@@ -236,6 +236,7 @@ gvfs-gphoto2
 gvfs-mtp
 gvfs-smb
 gzip
+has
 haskell-djot
 hdparm
 helix
@@ -521,6 +522,7 @@ tlrc
 tmux
 toilet
 toipe
+tokei
 tpm2-tools
 tpm2-tss
 traceroute
