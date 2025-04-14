@@ -103,3 +103,4 @@ alias n="nu --config $NU_CONFIG -c"
 
 # ---- Capslock ---- #
 alias caps="xdotool key Caps_Lock"
+alias CAPS="xdotool key Caps_Lock"
