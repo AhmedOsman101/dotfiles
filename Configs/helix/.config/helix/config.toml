@@ -38,6 +38,7 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+git-ignore = false
 
 [editor.auto-save]
 focus-lost = true
@@ -72,19 +73,14 @@ max-diagnostics = 2
 
 [keys.normal."space"]
 v = ":clipboard-paste-replace"
-i = ":pipe shellharden --transform ''"
 
 [keys.select."space"]
 v = ":clipboard-paste-replace"
-i = ":pipe shellharden --transform ''"
 
 [keys.normal]
+X = ["extend_line_above"]
 C-s = [":format", ":write"] # format and save
-C-d = [
-  "extend_to_line_bounds",
-  "yank",
-  "paste_before",
-]
+C-d = ["extend_to_line_bounds", "yank", "paste_before"]
 A-up = [
   "extend_to_line_bounds",
   "delete_selection",
@@ -111,12 +107,9 @@ A-j = [
 ]
 
 [keys.select]
+X = ["extend_line_above"]
 C-s = [":format", ":write"] # format and save
-C-d = [
-  "extend_to_line_bounds",
-  "yank",
-  "paste_before",
-]
+C-d = ["extend_to_line_bounds", "yank", "paste_before"]
 A-up = [
   "extend_to_line_bounds",
   "delete_selection",
@@ -143,11 +136,7 @@ A-j = [
 ]
 
 [keys.insert]
-j = { k = "normal_mode" }   # Maps `jk` to enter normal mode
-k = { j = "select_mode" }   # Maps `kj` to enter visual mode
-C-s = [":format", ":write"] # format and save
-C-d = [
-  "extend_to_line_bounds",
-  "yank",
-  "paste_before",
-]
+j = { k = "normal_mode" }                               # Maps `jk` to enter normal mode
+k = { j = "select_mode" }                               # Maps `kj` to enter visual mode
+C-s = [":format", ":write"]                             # format and save
+C-d = ["extend_to_line_bounds", "yank", "paste_before"]
