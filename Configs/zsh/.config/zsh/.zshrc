@@ -127,7 +127,7 @@ eval "$(thefuck --alias)"
 # ---- Zoxide (better cd) ---- #
 eval "$(zoxide init zsh)"
 
-noDuplicates $HISTFILE 2>/dev/null
+no-dups -q $HISTFILE 2>/dev/null
 
 # ---- Load completions ----- #
 zstyle :compinstall filename $ZSHRC
@@ -164,3 +164,6 @@ fi
 # ---- uv ---- #
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
+
+# --- git aliases (override) --- #
+alias gca='git-commit --ai'
