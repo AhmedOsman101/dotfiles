@@ -99,9 +99,9 @@ auto-format = false
 language-servers = [
   "deno-lsp",
   "biome",
-  # { name = "typescript-language-server", except-features = [
-  #   "format",
-  # ] },
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
 ]
 
 [[language]]
