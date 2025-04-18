@@ -29,7 +29,7 @@ alias mc="micro"
 
 # ---- Ripgrep (better grep) ----- #
 alias grep="rg"
-alias rg="rg -i"
+alias rg="rg -iN"
 
 # ---- Lazygit ---- #
 alias lzg="lazygit"
