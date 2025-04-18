@@ -25,7 +25,7 @@ export AUTO_NOTIFY_IGNORE=(
   "scrcpy" "wavemon" "mkscript" "toipe"
   "flameshot" "frogmouth" "vi" "ncdu"
   "nu" "pnpm dev" "npm dev" "editwhich"
-  "n"
+  "n" "tempedit"
 )
 export AUTO_NOTIFY_THRESHOLD=30
 export AUTO_NOTIFY_ICON_SUCCESS="/usr/share/icons/auto-notify-zsh/success.png"
@@ -116,6 +116,11 @@ export GUM_FILTER_INDICATOR_FOREGROUND="${U_CYAN}"
 export GUM_FILTER_MATCH_FOREGROUND="${U_CYAN}"
 export GUM_FILTER_PROMPT_FOREGROUND="${U_CYAN}"
 export GUM_FILTER_HEADER_FOREGROUND="${U_BLUE}"
+#---- Choose ---- #
+export GUM_CONFIRM_PROMPT_FOREGROUND="${U_PURPLE}"
+export GUM_CONFIRM_SELECTED_FOREGROUND="${U_BLACK}"
+export GUM_CONFIRM_SELECTED_BACKGROUND="${U_PURPLE}"
+# export GUM_CONFIRM_SELECTED_BACKGROUND="${U_GREEN}"
 #---- Choose ---- #
 export GUM_CHOOSE_CURSOR="❯ "
 export GUM_CHOOSE_CURSOR_FOREGROUND="${U_CYAN}"
