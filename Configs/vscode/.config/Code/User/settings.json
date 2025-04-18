@@ -1585,7 +1585,7 @@
   "css.customData": [
     "/home/othman/.config/Code/User/custom/tailwindcss.json"
   ],
-  "cody.chat.defaultLocation": "editor",
+  "cody.chat.defaultLocation": "sidebar",
   "[sass]": {
     "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
   },
@@ -2110,7 +2110,6 @@
   "vue.inlayHints.destructuredProps": true,
   "vue.inlayHints.missingProps": true,
   "vue.inlayHints.vBindShorthand": true,
-  "cody.suggestions.mode": "off",
   "astyle.csharp.enable": true,
   "astyle.java.enable": true,
   "shellcheck.customArgs": [
