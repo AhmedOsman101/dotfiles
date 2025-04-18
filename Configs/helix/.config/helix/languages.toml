@@ -99,9 +99,9 @@ auto-format = false
 language-servers = [
   "deno-lsp",
   "biome",
-  { name = "typescript-language-server", except-features = [
-    "format",
-  ] },
+  # { name = "typescript-language-server", except-features = [
+  #   "format",
+  # ] },
 ]
 
 [[language]]
@@ -135,13 +135,13 @@ name = "tsx"
 roots = ["deno.json", "deno.jsonc"]
 auto-format = false
 language-servers = [
-  "deno-lsp",
   # { name = "typescript-language-server", except-features = [
   #   "format",
   # ] },
   "vscode-html-language-server",
   "superhtml",
   "biome",
+  "deno-lsp",
 ]
 
 # ---- Deno LSP ---- #
