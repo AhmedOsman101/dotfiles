@@ -40,7 +40,7 @@ indent-preproc-block
 indent-col1-comments
 
 # ---- Padding Options ---- #
-break-blocks # Break blocks after header lines
+break-blocks # Break blocks after header lines, add new line before loops and if statements
 pad-oper     # Pad operators with spaces
 pad-comma    # Insert space padding after commas.
 pad-include
@@ -53,7 +53,7 @@ align-reference=name # Align references to the variable name
 
 # ---- Formatting Options ---- #
 # keep-one-line-blocks # Keep one-line blocks on the same line
-# keep-one-line-statements   # Keep one-line statements on the same line
+keep-one-line-statements   # Keep one-line statements on the same line
 # remove-braces # Remove braces from conditional statements (e.g. 'if', 'for', 'while'...). The statement must be a single statement on a single line.
 # break-one-line-headers
 attach-return-type      # Attach the return type to the function name.
@@ -62,4 +62,4 @@ attach-inlines          # Attach braces to class inline function definitions.
 convert-tabs            # Convert tabs to spaces
 close-templates         # Closes whitespace between the ending angle brackets of template definitions.
 #max-code-length=0      # No maximum code length
-break-after-logical
+# break-after-logical

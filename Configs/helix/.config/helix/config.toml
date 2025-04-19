@@ -105,6 +105,8 @@ u = ["undo", "collapse_selection"]
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "keep_primary_selection"]
 
+Y = ["yank"]
+
 [keys.normal.y]
 y = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "normal_mode"]
 
