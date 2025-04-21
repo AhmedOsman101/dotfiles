@@ -72,8 +72,8 @@ alias pscpu='n "ps | sort-by cpu | last 5"'
 [[ -n $(command -v copyclip) ]] || alias copyclip="clipcopy"
 
 # ---- Qalculate ---- #
-alias qalc="qalc --color" # Colorize output
-alias calc="qalc --terse" # Return only the output and colorize output
+alias calc="qalc --base 10 --color --terse" # Return only the output and colorize output
+alias qalc="qalc --base 10 --color"         # Colorize output
 
 # ---- Helix ---- #
 alias hlx="helix"
