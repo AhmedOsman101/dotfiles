@@ -155,6 +155,7 @@ dmidecode
 dmraid
 dnsmasq
 docker
+dos2unix
 dosfstools
 downgrade
 dunst
