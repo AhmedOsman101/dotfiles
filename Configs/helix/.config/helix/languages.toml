@@ -183,3 +183,13 @@ formatter = { command = "prettier", args = [
   "--stdin-filepath",
   "file.md",
 ] }
+
+# ---- Svelte ---- #
+[[language]]
+name = "svelte"
+language-servers = [
+  "biome",
+  { name = "svelteserver", except-features = [
+    "format",
+  ] },
+]
