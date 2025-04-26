@@ -120,9 +120,9 @@ source <(fzf --zsh)
 # ---- The fuck alias ----- #
 eval "$(thefuck --alias)"
 
-# node version manager nvm
-[[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+# ---- NVM ---- #
+# [[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+# [[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # ---- Zoxide (better cd) ---- #
 eval "$(zoxide init zsh)"
