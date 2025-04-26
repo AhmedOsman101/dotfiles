@@ -40,7 +40,8 @@ format = "with [$symbol($version )]($style)"
 [bun]
 format = " [$symbol($version )]($style)"
 symbol = " "
-detect_files = ["bun.lockb", "bunfig.toml"]
+detect_files = [ "bun.lock", "bun.lockb", "bunfig.toml" ]
+style = "bold white"
 
 [c]
 symbol = "  "
@@ -191,7 +192,7 @@ format = " [$symbol$state( \\($name\\))]($style) "
 symbol = " "
 format = " [$symbol($version)]($style) "
 detect_extensions = ["mjs", "cjs", "mts", "cts"]
-detect_files = ["package.json", ".node-version", ".nvmrc"]
+detect_files = [".node-version", ".nvmrc"]
 detect_folders = []
 
 [ocaml]
