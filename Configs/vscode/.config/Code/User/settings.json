@@ -2179,5 +2179,6 @@
   "commitSage.openai.model": "gpt-3.5-turbo",
   "commitSage.provider.type": "gemini",
   "prettify-ts.enabled": true,
-  "vue.server.hybridMode": false
+  "vue.server.hybridMode": false,
+  "svelte.enable-ts-plugin": true
 }
