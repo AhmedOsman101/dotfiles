@@ -2180,5 +2180,9 @@
   "commitSage.provider.type": "gemini",
   "prettify-ts.enabled": true,
   "vue.server.hybridMode": false,
-  "svelte.enable-ts-plugin": true
+  "svelte.enable-ts-plugin": true,
+  "[svelte]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "cody.suggestions.mode": "off"
 }
