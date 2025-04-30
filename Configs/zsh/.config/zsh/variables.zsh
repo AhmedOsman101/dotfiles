@@ -2,7 +2,7 @@
 
 # ---- Increase the FUNCNEST limit ----- #
 FUNCNEST=99999
-
+export SHLVL=10
 # ---- XDG Standard ---- #
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -133,6 +133,7 @@ export GUM_INPUT_HEADER_FOREGROUND="${U_GRAY}"
 export GUM_INPUT_CURSOR_FOREGROUND="${U_CYAN}"
 #---- Spinner ---- #
 export GUM_SPIN_SPINNER_FOREGROUND="${U_GREEN}"
+export GUM_SPIN_TITLE_FOREGROUND="${U_GREEN}"
 #---- Write ---- #
 export GUM_WRITE_CURSOR_FOREGROUND="${U_GRAY}"
 #---- File ---- #
