@@ -319,7 +319,6 @@ make
 man-db
 man-pages
 markdown-oxide-git
-markdown-oxide-git-debug
 marksman
 mdadm
 mdcat
@@ -391,7 +390,6 @@ partclone
 parted
 partimage
 paru
-paru-debug
 pastel
 patch
 pavucontrol
@@ -478,7 +476,6 @@ shfmt
 shlorem
 simplescreenrecorder
 skippy-xd-git
-skippy-xd-git-debug
 slint-lsp-bin
 slock
 slop
@@ -502,7 +499,6 @@ sxiv
 syncthing
 systemd-resolvconf
 tableplus
-tableplus-debug
 taplo-cli
 tcpdump
 telegram-desktop
@@ -564,7 +560,6 @@ vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 vue-language-server
-warp-terminal-pacman-repo
 watchexec
 wavemon
 wayland-protocols
