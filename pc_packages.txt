@@ -222,7 +222,6 @@ gst-plugins-bad
 gst-plugins-good
 gst-plugins-ugly
 gstreamer
-gthumb
 gtk-engine-murrine
 gtk3-nocsd-git
 gucharmap
@@ -255,7 +254,6 @@ inter-font
 inxi
 iw
 iwd
-jaq
 jasper
 jedi-language-server
 jfsutils
@@ -269,7 +267,6 @@ klavaro
 kmines
 knights
 kolourpaint
-kora-icon-theme
 ksuperkey
 kvantum
 kvantum-qt5
@@ -300,6 +297,8 @@ linux-atm
 linux-firmware
 linux-firmware-marvell
 linux-headers
+linux-lts
+linux-lts-headers
 llvm
 localsend
 lrzip
@@ -333,6 +332,7 @@ mkinitcpio
 mkinitcpio-firmware
 mkinitcpio-nfs-utils
 modemmanager
+moreutils
 mpc
 mpd
 mplayer
@@ -362,7 +362,6 @@ nitrogen
 nload
 nm-connection-editor
 nmap
-nodejs
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -390,6 +389,7 @@ partclone
 parted
 partimage
 paru
+paru-debug
 pastel
 patch
 pavucontrol
@@ -423,7 +423,6 @@ ppp
 pptpclient
 prettier
 prince-bin
-proton-pass-bin
 pulsemixer
 pv
 python-beautifulsoup4
@@ -440,7 +439,6 @@ qt5ct
 qt5gtk2
 qt6ct
 qt6gtk2
-qtxdg-tools
 ranger
 re2c
 reddio
@@ -459,7 +457,6 @@ rubygems
 ruff
 rxvt-unicode-terminfo
 samba
-sassc
 schroedinger
 scid_vs_pc
 scrcpy
@@ -469,14 +466,10 @@ sddm-git
 sdparm
 sequoia-sq
 sg3_utils
-shc
 shellcheck-bin
-shellharden
 shfmt
 shlorem
 simplescreenrecorder
-skippy-xd-git
-slint-lsp-bin
 slock
 slop
 smartmontools
@@ -485,16 +478,14 @@ speedtest-cli
 spofi-git
 spotify
 squashfs-tools
-stacer-bin
 starship
-sticky-git
 stockfish
 stow
 sublime-text-4
 sudo
+svelte-language-server
 swaybg
 swtpm
-sx
 sxiv
 syncthing
 systemd-resolvconf
@@ -542,7 +533,6 @@ usb_modeswitch
 usbmuxd
 usbutils
 vdpauinfo
-ventoy-bin
 vhs
 vi
 viewnior
@@ -567,6 +557,7 @@ wget
 wireless-regdb
 wireless_tools
 wireplumber
+wl-clipboard
 wmctrl
 wmname
 wpa_supplicant
