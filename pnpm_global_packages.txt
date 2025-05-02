@@ -20,3 +20,4 @@ vue-eslint-parser
 yaml-language-server
 yo
 vercel
+quicktype
