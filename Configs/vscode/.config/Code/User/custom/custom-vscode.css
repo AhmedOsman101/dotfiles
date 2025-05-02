@@ -29,8 +29,7 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
   position: relative !important;
   width: 35px !important;
   font-size: 16px !important;
-  font-family:
-    "FiraCode Nerd Font", "JetBrainsMonoNF Nerd Font", monospace !important;
+  font-family: "FiraCode Nerd Font", "JetBrainsMonoNF Nerd Font", monospace !important;
 }
 
 /* Code canvas top shadow */
@@ -63,8 +62,7 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
 /* File Explorer Item Label */
 .monaco-tree .monaco-tree-row .label-name,
 .monaco-list .monaco-list-row .monaco-icon-label .label-name {
-  font-family:
-    "FiraCode Nerd Font", "JetBrainsMonoNF Nerd Font", monospace !important;
+  font-family: "FiraCode Nerd Font", "JetBrainsMonoNF Nerd Font", monospace !important;
   font-size: 15px !important;
   font-weight: 500 !important;
   color: #ececec !important;
@@ -116,11 +114,18 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
 .monaco-editor-hover,
 .monaco-hover {
   box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.45) !important;
-  padding: 10px !important;
-  background-image: linear-gradient(#24292e 0%, #1f2428 100%) !important;
-  backdrop-filter: blur(3px) !important;
-  border-radius: 15px !important;
+  padding: 15px !important;
+  border-radius: 10px !important;
   border: none !important;
+  height: auto !important;
+  max-width: none !important;
+  width: auto !important;
+  max-height: none !important;
+}
+
+.monaco-resizable-hover {
+  border: none !important;
+  padding: 15px !important;
 }
 
 /* Project title's style at the top. */
@@ -144,8 +149,7 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
 
 /* Search Label */
 .search-label {
-  font-family:
-    "JetBrainsMonoNF Nerd Font", "FiraCode Nerd Font", monospace !important;
+  font-family: "JetBrainsMonoNF Nerd Font", "FiraCode Nerd Font", monospace !important;
   font-size: 14px !important;
   color: #fff;
   display: block;
@@ -212,8 +216,7 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
   padding: 8px !important;
   border: none !important;
   background-color: rgba(34, 34, 34, 0.4) !important;
-  font-family:
-    "JetBrainsMonoNF Nerd Font", "FiraCode Nerd Font", monospace !important;
+  font-family: "JetBrainsMonoNF Nerd Font", "FiraCode Nerd Font", monospace !important;
   font-size: 14px !important;
   margin-bottom: 16px !important;
 }
