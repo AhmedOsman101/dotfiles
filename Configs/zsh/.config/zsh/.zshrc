@@ -127,7 +127,7 @@ eval "$(thefuck --alias)"
 # ---- Zoxide (better cd) ---- #
 eval "$(zoxide init zsh)"
 
-no-dups -q $HISTFILE 2>/dev/null
+no-dups -f -q $HISTFILE 2>/dev/null
 
 # ---- Load completions ----- #
 zstyle :compinstall filename $ZSHRC
