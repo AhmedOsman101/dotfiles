@@ -1,0 +1,14 @@
+{
+  "init": {
+    "prefix": "init",
+    "body": [
+      "#include <stdio.h>",
+      "",
+      "int main() {",
+      "\tprintf(\"${TM_FILENAME_BASE}\\n\");",
+      "",
+      "\treturn 0;",
+      "}"
+    ]
+  }
+}

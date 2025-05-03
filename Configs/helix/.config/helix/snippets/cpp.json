@@ -1,0 +1,16 @@
+{
+  "init": {
+    "prefix": "init",
+    "body": [
+      "#include <iostream>",
+      "",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "\tcout << 'Ballz Deep' << endl;",
+      "",
+      "  return 0;",
+      "}"
+    ]
+  }
+}
