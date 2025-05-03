@@ -119,6 +119,7 @@ bolt
 breeze-gtk
 brltty
 bruno-bin
+btop
 btrfs-progs
 bzip2
 catppuccin-gtk-theme-mocha
@@ -417,6 +418,7 @@ plocate
 plymouth
 polkit
 polybar
+postgresql
 posting
 powertop
 ppp
@@ -571,7 +573,6 @@ xcolor
 xcursor-viewer-git
 xdg-desktop-portal-gtk
 xdg-desktop-portal-gtk4-git
-xdg-desktop-portal-hyprland
 xdg-ninja
 xdg-user-dirs
 xdg-user-dirs-gtk
