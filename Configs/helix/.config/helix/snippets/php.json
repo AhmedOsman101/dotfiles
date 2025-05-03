@@ -1,0 +1,7 @@
+{
+  "Basic input": {
+    "prefix": "input",
+    "body": ["trim(fgets(STDIN));"],
+    "description": "basic input"
+  }
+}
