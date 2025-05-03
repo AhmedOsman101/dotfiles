@@ -2098,8 +2098,8 @@
   "editor.formatOnType": false,
   "editor.formatOnSave": true,
   "biome.enabled": true,
-  "biome.lspBin": "/usr/bin/biome",
-  "biome.searchInPath": true,
+  "biome.lsp.bin": "/usr/bin/biome",
+  "biome.requireConfigFile": true,
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true,
   "javascript.inlayHints.parameterNames.enabled": "literals",
@@ -2140,7 +2140,6 @@
   "bashIde.shfmt.spaceRedirects": true,
   "git-graph.enhancedAccessibility": true,
   "explorer.fileNesting.enabled": true,
-  "biome.rename": true,
   "typescript.format.semicolons": "insert",
   "editor.detectIndentation": false,
   "locateThisDocument.explorerIcons.openWorkspaceRootFolderInFileExplorer": false,
@@ -2156,7 +2155,6 @@
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
   ],
-  "biome_lsp.trace.server": "messages",
   "extensions.experimental.affinity": {
     "jasew.vscode-helix-emulation": 1
   },
