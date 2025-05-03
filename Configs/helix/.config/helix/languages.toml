@@ -1,13 +1,21 @@
 indent = { tab-width = 2, unit = "  " }
 
-# ---- C++ ---- #
-[[language]]
-name = "cpp"
-formatter = { command = "astyle" }
-
 # ---- C ---- #
 [[language]]
 name = "c"
+language-servers = [ "clangd", "scls" ]
+formatter = { command = "astyle" }
+
+# ---- C++ ---- #
+[[language]]
+name = "cpp"
+language-servers = [ "clangd", "scls" ]
+formatter = { command = "astyle" }
+
+# ---- Bash ---- #
+[[language]]
+name = "bash"
+language-servers = [ "bash-language-server", "scls" ]
 formatter = { command = "astyle" }
 
 # ---- Json ---- #
@@ -26,12 +34,18 @@ language-servers = [
     "format",
   ] },
   "biome",
+  "scls",
 ]
+
+
+
+
 
 # ---- Typescript ---- #
 [[language]]
 name = "typescript"
-roots = ["package.json", "package-lock.json"]
+roots = ["deno.json", "deno.jsonc", "package.json"]
+auto-format = false
 formatter = { command = "biome", args = [
   "check",
   "--fix",
@@ -41,17 +55,19 @@ formatter = { command = "biome", args = [
   "file.ts",
 ] }
 language-servers = [
+  "deno-lsp",
   "biome",
+  "scls",
   # { name = "typescript-language-server", except-features = [
   #   "format",
   # ] },
-
 ]
 
 # ---- Javascript ---- #
 [[language]]
 name = "javascript"
-roots = ["package.json", "package-lock.json"]
+roots = ["deno.json", "deno.jsonc", "package.json"]
+auto-format = false
 formatter = { command = "biome", args = [
   "check",
   "--fix",
@@ -61,27 +77,20 @@ formatter = { command = "biome", args = [
   "file.js",
 ] }
 language-servers = [
+  "deno-lsp",
   "biome",
   { name = "typescript-language-server", except-features = [
     "format",
   ] },
+  "scls",
 ]
 
-# ---- Tsx ---- #
-[[language]]
-name = "tsx"
-formatter = { command = "biome", args = [
-  "check",
-  "--fix",
-  "--config-path",
-  "/home/othman/.config/biome.jsonc",
-  "--stdin-file-path",
-  "file.tsx",
-] }
 
 # ---- Jsx ---- #
 [[language]]
 name = "jsx"
+roots = ["deno.json", "deno.jsonc"]
+auto-format = false
 formatter = { command = "biome", args = [
   "check",
   "--fix",
@@ -90,36 +99,6 @@ formatter = { command = "biome", args = [
   "--stdin-file-path",
   "file.jsx",
 ] }
-
-# ---- Deno ---- #
-[[language]]
-name = "typescript"
-roots = ["deno.json", "deno.jsonc"]
-auto-format = false
-language-servers = [
-  "deno-lsp",
-  "biome",
-  # { name = "typescript-language-server", except-features = [
-  #   "format",
-  # ] },
-]
-
-[[language]]
-name = "javascript"
-roots = ["deno.json", "deno.jsonc"]
-auto-format = false
-language-servers = [
-  "deno-lsp",
-  "biome",
-  { name = "typescript-language-server", except-features = [
-    "format",
-  ] },
-]
-
-[[language]]
-name = "jsx"
-roots = ["deno.json", "deno.jsonc"]
-auto-format = false
 language-servers = [
   "deno-lsp",
   { name = "typescript-language-server", except-features = [
@@ -128,12 +107,22 @@ language-servers = [
   "vscode-html-language-server",
   "superhtml",
   "biome",
+  "scls",
 ]
 
+# ---- Tsx ---- #
 [[language]]
 name = "tsx"
 roots = ["deno.json", "deno.jsonc"]
 auto-format = false
+formatter = { command = "biome", args = [
+  "check",
+  "--fix",
+  "--config-path",
+  "/home/othman/.config/biome.jsonc",
+  "--stdin-file-path",
+  "file.tsx",
+] }
 language-servers = [
   # { name = "typescript-language-server", except-features = [
   #   "format",
@@ -142,6 +131,7 @@ language-servers = [
   "superhtml",
   "biome",
   "deno-lsp",
+  "scls",
 ]
 
 # ---- Deno LSP ---- #
@@ -161,6 +151,7 @@ formatter = { command = "rustfmt", args = [
   "--config-path",
   "/home/othman/.config/rustfmt.toml",
 ] }
+language-servers = [ "rust-analyzer", "scls" ]
 indent = { tab-width = 2, unit = "  " }
 
 # ---- JSON ---- #
@@ -171,6 +162,7 @@ language-servers = [
     "format",
   ] },
   "biome",
+  "scls",
 ]
 
 # ---- Markdown ---- #
@@ -183,6 +175,8 @@ formatter = { command = "prettier", args = [
   "--stdin-filepath",
   "file.md",
 ] }
+language-servers = ["marksman", "markdown-oxide", "scls"]
+
 
 # ---- Svelte ---- #
 [[language]]
@@ -192,4 +186,45 @@ language-servers = [
   { name = "svelteserver", except-features = [
     "format",
   ] },
+  "scls",
 ]
+
+# ---- SCLS ---- #
+# introduce new language server
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[language-server.scls.config]
+max_completion_items = 100           # set max completion results len for each group: words, snippets, unicode-input
+feature_words = true                 # enable completion by word
+feature_snippets = true              # enable snippets
+snippets_first = true                # completions will return before snippets by default
+snippets_inline_by_word_tail = false # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
+feature_unicode_input = false        # enable "unicode input"
+feature_paths = false                # enable path completion
+feature_citations = false            # enable citation completion (only on `citation` feature enabled)
+
+
+# write logs to /tmp/completion.log
+[language-server.scls.environment]
+RUST_LOG = "info,simple-completion-language-server=info"
+LOG_FILE = "/tmp/completion.log"
+
+# append language server to existed languages
+[[language]]
+name = "rust"
+language-servers = ["scls", "rust-analyzer"]
+
+[[language]]
+name = "git-commit"
+language-servers = ["scls"]
+
+# introduce a new language to enable completion on any doc by forcing set language with :set-language stub
+[[language]]
+name = "stub"
+scope = "text.stub"
+file-types = []
+shebangs = []
+roots = []
+auto-format = false
+language-servers = ["scls"]
