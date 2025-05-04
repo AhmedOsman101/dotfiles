@@ -3,20 +3,19 @@ indent = { tab-width = 2, unit = "  " }
 # ---- C ---- #
 [[language]]
 name = "c"
-language-servers = [ "clangd", "scls" ]
+language-servers = ["clangd", "scls"]
 formatter = { command = "astyle" }
 
 # ---- C++ ---- #
 [[language]]
 name = "cpp"
-language-servers = [ "clangd", "scls" ]
+language-servers = ["clangd", "scls"]
 formatter = { command = "astyle" }
 
 # ---- Bash ---- #
 [[language]]
 name = "bash"
-language-servers = [ "bash-language-server", "scls" ]
-formatter = { command = "astyle" }
+language-servers = ["bash-language-server", "scls"]
 
 # ---- Json ---- #
 [[language]]
@@ -36,10 +35,6 @@ language-servers = [
   "biome",
   "scls",
 ]
-
-
-
-
 
 # ---- Typescript ---- #
 [[language]]
@@ -151,7 +146,7 @@ formatter = { command = "rustfmt", args = [
   "--config-path",
   "/home/othman/.config/rustfmt.toml",
 ] }
-language-servers = [ "rust-analyzer", "scls" ]
+language-servers = ["rust-analyzer", "scls"]
 indent = { tab-width = 2, unit = "  " }
 
 # ---- JSON ---- #
