@@ -1,5 +1,6 @@
 7zip
 acpi
+adduser
 adw-gtk-theme
 alacritty
 apparmor
@@ -189,6 +190,7 @@ fontforge
 foomatic-db
 foomatic-db-engine
 foot-terminfo
+fortune-mod
 freedownloadmanager
 frogmouth
 fsarchiver
@@ -258,6 +260,7 @@ iwd
 jasper
 jedi-language-server
 jfsutils
+jp2a
 jq
 jq-lsp
 kde-gtk-config
@@ -346,6 +349,7 @@ ncmpcpp
 ndisc6
 neovim
 nerd-fonts-inter
+nerdfetch
 nethogs
 network-manager-applet
 network-manager-sstp
@@ -376,6 +380,7 @@ obs-plugin-input-overlay-bin
 obs-studio
 obsidian
 open-iscsi
+open-vm-tools
 openconnect
 opendoas
 openpgp-card-tools
@@ -383,7 +388,6 @@ openssh
 openvpn
 os-prober
 ouch
-outlook-for-linux-bin
 pamac-all
 pandoc-bin
 partclone
@@ -459,6 +463,7 @@ rubygems
 ruff
 rxvt-unicode-terminfo
 samba
+sassc
 schroedinger
 scid_vs_pc
 scrcpy
@@ -471,7 +476,9 @@ sg3_utils
 shellcheck-bin
 shfmt
 shlorem
+simple-completion-language-server-git
 simplescreenrecorder
+skippy-xd-git
 slock
 slop
 smartmontools
@@ -480,7 +487,9 @@ speedtest-cli
 spofi-git
 spotify
 squashfs-tools
+stacer-git
 starship
+sticky-git
 stockfish
 stow
 sublime-text-4
@@ -516,6 +525,7 @@ tokei
 tpm2-tools
 tpm2-tss
 traceroute
+trackma-git
 translate-shell
 trash-cli
 tree
@@ -547,6 +557,7 @@ virtualbox-host-dkms
 visidata
 visual-studio-code-bin
 vlc
+vmware-workstation
 vpnc
 vscode-css-languageserver
 vscode-html-languageserver
@@ -555,6 +566,8 @@ vue-language-server
 watchexec
 wavemon
 wayland-protocols
+webstorm
+webstorm-jre
 wget
 wireless-regdb
 wireless_tools
@@ -578,6 +591,7 @@ xdg-user-dirs
 xdg-user-dirs-gtk
 xdotool
 xf86-input-libinput
+xf86-input-vmmouse
 xf86-video-fbdev
 xf86-video-nouveau
 xf86-video-vesa
