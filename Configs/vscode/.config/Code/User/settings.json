@@ -1304,7 +1304,9 @@
     "editor.defaultFormatter": "chiehyu.vscode-astyle"
   },
   "[c]": {
-    "editor.defaultFormatter": "chiehyu.vscode-astyle"
+    "editor.defaultFormatter": "chiehyu.vscode-astyle",
+    "editor.inlayHints.padding": true,
+    "editor.inlayHints.enabled": "on"
   },
   "files.exclude": {
     "**/vendor/": false,
