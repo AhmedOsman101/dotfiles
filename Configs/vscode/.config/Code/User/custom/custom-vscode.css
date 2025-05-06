@@ -14,13 +14,8 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
   color: aliceblue;
 }
 
-/* Code comment style */
-/* .mtk3 {
-  color: #008c7d !important;
-  font-style: italic;
-} */
-
-.mtk22 {
+/* Code comment style (try mtk22 if this didn't work) */
+.mtk3 {
   color: #008c7d !important;
   font-style: italic;
 }
