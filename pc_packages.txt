@@ -1,6 +1,5 @@
 7zip
 acpi
-adduser
 adw-gtk-theme
 alacritty
 apparmor
@@ -151,6 +150,7 @@ didyoumean-bin
 diffuse
 diffutils
 discord
+discover
 distrobox
 dmenu
 dmidecode
@@ -207,6 +207,7 @@ github-cli
 glfw
 global
 glow
+gnome-boxes
 gnome-chess
 gnome-keyring
 gnuchess
@@ -286,6 +287,7 @@ libdv
 libfido2
 libheif
 libmpeg2
+libnma-gtk4
 libpfm
 libqalculate
 libqtxdg
@@ -346,6 +348,7 @@ nano
 nbd
 ncdu
 ncmpcpp
+ncurses5-compat-libs
 ndisc6
 neovim
 nerd-fonts-inter
@@ -358,6 +361,7 @@ networkmanager-dmenu-git
 networkmanager-openconnect
 networkmanager-openvpn
 networkmanager-pptp
+networkmanager-qt
 networkmanager-strongswan
 networkmanager-vpnc
 nfs-utils
@@ -380,7 +384,7 @@ obs-plugin-input-overlay-bin
 obs-studio
 obsidian
 open-iscsi
-open-vm-tools
+openarena
 openconnect
 opendoas
 openpgp-card-tools
@@ -388,6 +392,7 @@ openssh
 openvpn
 os-prober
 ouch
+outlook-for-linux-bin
 pamac-all
 pandoc-bin
 partclone
@@ -550,6 +555,7 @@ vi
 viewnior
 vim
 virt-bootstrap-git
+virt-manager
 virt-viewer
 virtualbox
 virtualbox-guest-utils
@@ -557,7 +563,6 @@ virtualbox-host-dkms
 visidata
 visual-studio-code-bin
 vlc
-vmware-workstation
 vpnc
 vscode-css-languageserver
 vscode-html-languageserver
@@ -584,6 +589,7 @@ xarchiver
 xclip
 xcolor
 xcursor-viewer-git
+xdg-autostart
 xdg-desktop-portal-gtk
 xdg-desktop-portal-gtk4-git
 xdg-ninja
@@ -591,7 +597,6 @@ xdg-user-dirs
 xdg-user-dirs-gtk
 xdotool
 xf86-input-libinput
-xf86-input-vmmouse
 xf86-video-fbdev
 xf86-video-nouveau
 xf86-video-vesa
