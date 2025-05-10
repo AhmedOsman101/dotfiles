@@ -6,7 +6,7 @@ alias bashrc="$EDITOR ~/.bashrc"
 alias art="php artisan"
 alias cls="clear"
 alias reload="source $ZSHRC && clear && neofetch"
-alias npm="pnpm"
+# alias npm="pnpm"
 alias vim="nvim"
 alias pwdcp='clipcopy ${PWD}'
 alias python="python3"
@@ -28,7 +28,7 @@ alias nano="micro"
 alias mc="micro"
 
 # ---- Ripgrep (better grep) ----- #
-alias grep="rg"
+alias grep="rg -iN"
 alias rg="rg -iN"
 
 # ---- Lazygit ---- #
@@ -74,9 +74,6 @@ alias pscpu='n "ps | sort-by cpu | last 5"'
 # ---- Qalculate ---- #
 alias calc="qalc --base 10 --color --terse" # Return only the output and colorize output
 alias qalc="qalc --base 10 --color"         # Colorize output
-
-# ---- Helix ---- #
-alias hlx="helix"
 
 # ---- Pacman ---- #
 # Resolve 'pacman in use' error
