@@ -1,0 +1,10 @@
+<application>
+  <component name="TerminalFontOptions">
+    <option name="VERSION" value="1" />
+    <option name="FONT_SIZE" value="16" />
+    <option name="FONT_SIZE_2D" value="16.0" />
+    <option name="FONT_FAMILY" value="JetBrainsMonoNF Nerd Font" />
+    <option name="USE_LIGATURES" value="true" />
+    <option name="SECONDARY_FONT_FAMILY" value="FiraCode Nerd Font" />
+  </component>
+</application>

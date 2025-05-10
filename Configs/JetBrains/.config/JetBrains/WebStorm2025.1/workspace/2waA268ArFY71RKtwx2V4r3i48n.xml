@@ -1,0 +1,836 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="easyblog" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf ideFingerprint="1jr5z3j1mptk7" SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]/+page.server.ts">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="405">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            </state>
+          </provider>
+        </entry>
+        <tab><![CDATA[{"tabTitle":"+page.server.ts","foregroundColor":-3550759,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,99,10,34,105,99,111,110,115,47,102,105,108,101,84,121,112,101,115,47,84,121,112,101,83,99,114,105,112,116,70,105,108,101,46,115,118,103,18,36,105,99,111,110,115,47,101,120,112,117,105,47,102,105,108,101,84,121,112,101,115,47,116,121,112,101,83,99,114,105,112,116,46,115,118,103,26,10,74,97,118,97,83,99,114,105,112,116,40,-23,-107,-64,-58,-8,-1,-1,-1,-1,1,48,0]}]]></tab>
+      </file>
+      <file>
+        <entry file="file://$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]/+page.svelte">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="783">
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+        <tab><![CDATA[{"tabTitle":"+page.svelte","foregroundColor":-3550759,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,61,10,21,105,99,111,110,115,47,100,101,115,97,116,117,114,97,116,101,100,46,115,118,103,26,23,100,101,118,46,98,108,97,99,104,117,116,46,115,118,101,108,116,101,46,108,97,110,103,40,-93,-63,-32,-125,-4,-1,-1,-1,-1,1,48,0]}]]></tab>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary"><![CDATA[{
+  "data": {
+    "TypeScript": {
+      "usageCount": 9,
+      "lastUsed": 1746903052089
+    },
+    "Markdown": {
+      "usageCount": 1,
+      "lastUsed": 1746269104396
+    },
+    "WebPreview": {
+      "usageCount": 1,
+      "lastUsed": 1746899302802
+    },
+    "Svelte": {
+      "usageCount": 2,
+      "lastUsed": 1746903052316
+    }
+  }
+}]]></component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find />
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="GitSEFilterConfiguration">{}</component>
+  <component name="IdeDocumentHistory"><![CDATA[{
+  "changedPaths": [
+    "/mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/blog/[slug]/+page.server.ts",
+    "/mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/blog/[slug]/+page.svelte"
+  ]
+}]]></component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LanguageUsageStatistics">
+    <language id="Markdown">
+      <summary usageCount="1" lastUsage="1746269104399" />
+    </language>
+    <language id="SvelteHTML">
+      <summary usageCount="2" lastUsage="1746903052316" />
+    </language>
+    <language id="TypeScript">
+      <summary usageCount="9" lastUsage="1746903052092" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="easyblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/blog}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/blog}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/blog/[slug]}" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+          <presentation>
+            <attributes />
+            <data iconPath="expui/toolwindows/project.svg" iconPlugin="com.intellij" isLeaf="false" text="easyblog" />
+            <item name="easyblog" type="b2602c69:ProjectViewProjectNode" />
+            <presentation>
+              <attributes>
+                <map>
+                  <entry key="filePath" value="$PROJECT_DIR$" />
+                </map>
+              </attributes>
+              <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="easyblog" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog}" type="462c0819:PsiDirectoryNode" />
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.cursor" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text=".cursor" />
+                <item name="dir{file:///mnt/main/Projects/TS/easyblog/.cursor}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.helix" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text=".helix" />
+                <item name="dir{file:///mnt/main/Projects/TS/easyblog/.helix}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.idea" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text=".idea" />
+                <item name="dir{file:///mnt/main/Projects/TS/easyblog/.idea}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.vscode" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text=".vscode" />
+                <item name="dir{file:///mnt/main/Projects/TS/easyblog/.vscode}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/node_modules" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/excludeRoot.svg" iconPlugin="com.intellij" isLeaf="false" text="node_modules" />
+                <item name="dir{file:///mnt/main/Projects/TS/easyblog/node_modules}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/packages" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="packages" />
+                <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages}" type="462c0819:PsiDirectoryNode" />
+                <presentation>
+                  <attributes>
+                    <map>
+                      <entry key="filePath" value="$PROJECT_DIR$/packages/frontend" />
+                    </map>
+                  </attributes>
+                  <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="frontend" />
+                  <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend}" type="462c0819:PsiDirectoryNode" />
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/.svelte-kit" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text=".svelte-kit" />
+                    <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/.svelte-kit}" type="462c0819:PsiDirectoryNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/api-test" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="api-test" />
+                    <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/api-test}" type="462c0819:PsiDirectoryNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/messages" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="messages" />
+                    <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/messages}" type="462c0819:PsiDirectoryNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/node_modules" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/nodes/excludeRoot.svg" iconPlugin="com.intellij" isLeaf="false" text="node_modules" />
+                    <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/node_modules}" type="462c0819:PsiDirectoryNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/project.inlang" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="project.inlang" />
+                    <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/project.inlang}" type="462c0819:PsiDirectoryNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="src" />
+                    <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src}" type="462c0819:PsiDirectoryNode" />
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/lib" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="lib" />
+                      <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/lib}" type="462c0819:PsiDirectoryNode" />
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="routes" />
+                      <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes}" type="462c0819:PsiDirectoryNode" />
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/admin" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="admin" />
+                        <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/admin}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/blog" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="blog" />
+                        <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/blog}" type="462c0819:PsiDirectoryNode" />
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="[slug]" />
+                          <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/blog/[slug]}" type="462c0819:PsiDirectoryNode" />
+                          <presentation>
+                            <attributes>
+                              <map>
+                                <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]/+page.server.ts" />
+                              </map>
+                            </attributes>
+                            <data iconPath="icons/expui/fileTypes/typeScript.svg" iconPlugin="JavaScript" isLeaf="true" text="+page.server.ts" />
+                            <item name="+page.server.ts" type="ab9368bb:PsiFileNode" />
+                          </presentation>
+                          <presentation>
+                            <attributes>
+                              <map>
+                                <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]/+page.svelte" />
+                              </map>
+                            </attributes>
+                            <data iconPath="expui/fileTypes/unknown.svg" iconPlugin="com.intellij" isLeaf="true" text="+page.svelte" />
+                            <item name="+page.svelte" type="ab9368bb:PsiFileNode" />
+                          </presentation>
+                          <presentation>
+                            <attributes>
+                              <map>
+                                <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]/page.css" />
+                              </map>
+                            </attributes>
+                            <data iconPath="expui/fileTypes/css.svg" iconPlugin="com.intellij" isLeaf="true" text="page.css" />
+                            <item name="page.css" type="ab9368bb:PsiFileNode" />
+                          </presentation>
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/blog/+page.server.ts" />
+                            </map>
+                          </attributes>
+                          <data iconPath="icons/expui/fileTypes/typeScript.svg" iconPlugin="JavaScript" isLeaf="true" text="+page.server.ts" />
+                          <item name="+page.server.ts" type="ab9368bb:PsiFileNode" />
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/blog/+page.svelte" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/fileTypes/unknown.svg" iconPlugin="com.intellij" isLeaf="true" text="+page.svelte" />
+                          <item name="+page.svelte" type="ab9368bb:PsiFileNode" />
+                        </presentation>
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/demo" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="demo" />
+                        <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/demo}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/login" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="login" />
+                        <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/login}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/logout" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="logout" />
+                        <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/logout}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/protected" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="protected" />
+                        <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/protected}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/register" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="register" />
+                        <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/register}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/+layout.server.ts" />
+                          </map>
+                        </attributes>
+                        <data iconPath="icons/expui/fileTypes/typeScript.svg" iconPlugin="JavaScript" isLeaf="true" text="+layout.server.ts" />
+                        <item name="+layout.server.ts" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/+layout.svelte" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/fileTypes/unknown.svg" iconPlugin="com.intellij" isLeaf="true" text="+layout.svelte" />
+                        <item name="+layout.svelte" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/+page.server.ts" />
+                          </map>
+                        </attributes>
+                        <data iconPath="icons/expui/fileTypes/typeScript.svg" iconPlugin="JavaScript" isLeaf="true" text="+page.server.ts" />
+                        <item name="+page.server.ts" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/+page.svelte" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/fileTypes/unknown.svg" iconPlugin="com.intellij" isLeaf="true" text="+page.svelte" />
+                        <item name="+page.svelte" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/app.css" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/fileTypes/css.svg" iconPlugin="com.intellij" isLeaf="true" text="app.css" />
+                      <item name="app.css" type="ab9368bb:PsiFileNode" />
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/app.d.ts" />
+                        </map>
+                      </attributes>
+                      <data iconPath="icons/expui/fileTypes/typeScript.svg" iconPlugin="JavaScript" isLeaf="true" text="app.d.ts" />
+                      <item name="app.d.ts" type="ab9368bb:PsiFileNode" />
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/app.html" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/fileTypes/html.svg" iconPlugin="com.intellij" isLeaf="true" text="app.html" />
+                      <item name="app.html" type="ab9368bb:PsiFileNode" />
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/hooks.server.ts" />
+                        </map>
+                      </attributes>
+                      <data iconPath="icons/expui/fileTypes/typeScript.svg" iconPlugin="JavaScript" isLeaf="true" text="hooks.server.ts" />
+                      <item name="hooks.server.ts" type="ab9368bb:PsiFileNode" />
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/hooks.ts" />
+                        </map>
+                      </attributes>
+                      <data iconPath="icons/expui/fileTypes/typeScript.svg" iconPlugin="JavaScript" isLeaf="true" text="hooks.ts" />
+                      <item name="hooks.ts" type="ab9368bb:PsiFileNode" />
+                    </presentation>
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/static" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="static" />
+                    <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/static}" type="462c0819:PsiDirectoryNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/.gitignore" />
+                      </map>
+                    </attributes>
+                    <data iconPath="vcs/ignore_file.svg" iconPlugin="com.intellij" isLeaf="true" text=".gitignore" />
+                    <item name=".gitignore" type="ab9368bb:PsiFileNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/.npmrc" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/fileTypes/unknown.svg" iconPlugin="com.intellij" isLeaf="true" text=".npmrc" />
+                    <item name=".npmrc" type="ab9368bb:PsiFileNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/.prettierignore" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/fileTypes/unknown.svg" iconPlugin="com.intellij" isLeaf="true" text=".prettierignore" />
+                    <item name=".prettierignore" type="ab9368bb:PsiFileNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/.prettierrc" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/fileTypes/json.svg" iconPlugin="com.intellij" isLeaf="true" text=".prettierrc" />
+                    <item name=".prettierrc" type="ab9368bb:PsiFileNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/biome.jsonc" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/nodes/symlink.svg" iconPlugin="com.intellij" isLeaf="true" text="biome.jsonc" />
+                    <item name="biome.jsonc" type="ab9368bb:PsiFileNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/easygo-blog-api.json" />
+                      </map>
+                    </attributes>
+                    <data iconPath="webreferences/openapi.svg" iconPlugin="com.intellij" isLeaf="true" text="easygo-blog-api.json" />
+                    <item name="easygo-blog-api.json" type="ab9368bb:PsiFileNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/eslint.config.js" />
+                      </map>
+                    </attributes>
+                    <data iconPath="icons/fileTypes/eslint.svg" iconPlugin="JavaScript" isLeaf="true" text="eslint.config.js" />
+                    <item name="eslint.config.js" type="ab9368bb:PsiFileNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/package.json" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/fileTypes/json.svg" iconPlugin="com.intellij" isLeaf="true" text="package.json" />
+                    <item name="package.json" type="ab9368bb:PsiFileNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/README.md" />
+                      </map>
+                    </attributes>
+                    <data iconPath="icons/MarkdownPlugin.svg" iconPlugin="org.intellij.plugins.markdown" isLeaf="true" text="README.md" />
+                    <item name="README.md" type="ab9368bb:PsiFileNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/svelte.config.js" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/fileTypes/javaScript.svg" iconPlugin="com.intellij" isLeaf="true" text="svelte.config.js" />
+                    <item name="svelte.config.js" type="ab9368bb:PsiFileNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/tsconfig.json" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/fileTypes/json.svg" iconPlugin="com.intellij" isLeaf="true" text="tsconfig.json" />
+                    <item name="tsconfig.json" type="ab9368bb:PsiFileNode" />
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/vite.config.ts" />
+                      </map>
+                    </attributes>
+                    <data iconPath="icons/expui/fileTypes/typeScript.svg" iconPlugin="JavaScript" isLeaf="true" text="vite.config.ts" />
+                    <item name="vite.config.ts" type="ab9368bb:PsiFileNode" />
+                  </presentation>
+                </presentation>
+                <presentation>
+                  <attributes>
+                    <map>
+                      <entry key="filePath" value="$PROJECT_DIR$/packages/markdown-processor" />
+                    </map>
+                  </attributes>
+                  <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="markdown-processor" />
+                  <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/markdown-processor}" type="462c0819:PsiDirectoryNode" />
+                </presentation>
+                <presentation>
+                  <attributes>
+                    <map>
+                      <entry key="filePath" value="$PROJECT_DIR$/packages/validation" />
+                    </map>
+                  </attributes>
+                  <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="validation" />
+                  <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/validation}" type="462c0819:PsiDirectoryNode" />
+                </presentation>
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/src" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="src" />
+                <item name="dir{file:///mnt/main/Projects/TS/easyblog/src}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/storage" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="storage" />
+                <item name="dir{file:///mnt/main/Projects/TS/easyblog/storage}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.editorconfig" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/editorConfig.svg" iconPlugin="com.intellij" isLeaf="true" text=".editorconfig" />
+                <item name=".editorconfig" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.env" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/text.svg" iconPlugin="com.intellij" isLeaf="true" text=".env" />
+                <item name=".env" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.env.example" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/text.svg" iconPlugin="com.intellij" isLeaf="true" text=".env.example" />
+                <item name=".env.example" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.gitignore" />
+                  </map>
+                </attributes>
+                <data iconPath="vcs/ignore_file.svg" iconPlugin="com.intellij" isLeaf="true" text=".gitignore" />
+                <item name=".gitignore" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/biome.jsonc" />
+                  </map>
+                </attributes>
+                <data isLeaf="true" text="biome.jsonc" />
+                <item name="biome.jsonc" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/blog-plan.md" />
+                  </map>
+                </attributes>
+                <data iconPath="icons/MarkdownPlugin.svg" iconPlugin="org.intellij.plugins.markdown" isLeaf="true" text="blog-plan.md" />
+                <item name="blog-plan.md" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/bun.lock" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/unknown.svg" iconPlugin="com.intellij" isLeaf="true" text="bun.lock" />
+                <item name="bun.lock" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/package.json" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/json.svg" iconPlugin="com.intellij" isLeaf="true" text="package.json" />
+                <item name="package.json" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/README.md" />
+                  </map>
+                </attributes>
+                <data iconPath="icons/MarkdownPlugin.svg" iconPlugin="org.intellij.plugins.markdown" isLeaf="true" text="README.md" />
+                <item name="README.md" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/tsconfig.json" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/json.svg" iconPlugin="com.intellij" isLeaf="true" text="tsconfig.json" />
+                <item name="tsconfig.json" type="ab9368bb:PsiFileNode" />
+              </presentation>
+            </presentation>
+            <presentation>
+              <attributes />
+              <data iconPath="nodes/ppLib.svg" iconPlugin="com.intellij" isLeaf="false" text="External Libraries" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </presentation>
+            <presentation>
+              <attributes />
+              <data iconPath="scope/scratches.svg" iconPlugin="com.intellij" isLeaf="false" text="Scratches and Consoles" />
+              <item name="Scratches and Consoles" type="b85a3e1f:ScratchTreeStructureProvider$MyProjectNode" />
+            </presentation>
+          </presentation>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4202000" />
+  </component>
+  <component name="ToolWindowManager">
+    <layoutV2>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.23854166" />
+      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Problems" order="1" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.33004642" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="bottom" id="GraphQL" order="5" />
+      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
+      <window_info anchor="right" id="Database" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.25" />
+      <window_info anchor="right" id="ElectroJunToolWindow" order="5" />
+      <unified_weights bottom="0.33004642" left="0.23854166" />
+    </layoutV2>
+    <recentWindows>
+      <value>Problems View</value>
+      <value>Project</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="453" y="252" width="528" height="440" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1746902159744">
+      <screen x="0" y="38" width="1440" height="862" />
+    </state>
+    <state x="453" y="252" width="528" height="440" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.38.1440.862@0.38.1440.862" timestamp="1746902159744" />
+    <state x="315" y="154" width="804" height="636" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1746902958932">
+      <screen x="0" y="38" width="1440" height="862" />
+    </state>
+    <state x="315" y="154" width="804" height="636" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.38.1440.862@0.38.1440.862" timestamp="1746902958932" />
+    <state x="503" y="227" width="428" height="490" key="FileChooserDialogImpl" timestamp="1746902931479">
+      <screen x="0" y="38" width="1440" height="862" />
+    </state>
+    <state x="503" y="227" width="428" height="490" key="FileChooserDialogImpl/0.38.1440.862@0.38.1440.862" timestamp="1746902931479" />
+    <state x="0" y="38" width="1440" height="862" key="SettingsEditor" timestamp="1746903099420">
+      <screen x="0" y="38" width="1440" height="862" />
+    </state>
+    <state x="0" y="38" width="1440" height="862" key="SettingsEditor/0.38.1440.862@0.38.1440.862" timestamp="1746903099420" />
+    <state x="383" y="217" width="687" height="681" key="search.everywhere.popup" timestamp="1746902848490">
+      <screen x="0" y="38" width="1440" height="862" />
+    </state>
+    <state x="383" y="217" width="687" height="681" key="search.everywhere.popup/0.38.1440.862@0.38.1440.862" timestamp="1746902848490" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/packages/frontend/.svelte-kit/types/src/routes/blog/[slug]/proxy+page.server.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]/+page.svelte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]/+page.server.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

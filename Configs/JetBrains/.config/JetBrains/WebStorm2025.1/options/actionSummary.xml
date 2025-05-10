@@ -1,0 +1,121 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="Documentation.EditSource">
+      <i c="1" l="1746903139689" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="23" l="1746903121915" />
+    </e>
+    <e n="EditorCopy">
+      <i c="1" l="1746901870388" />
+    </e>
+    <e n="EditorDeleteToWordStart">
+      <i c="5" l="1746899439049" />
+    </e>
+    <e n="EditorDown">
+      <i c="24" l="1746903055050" />
+    </e>
+    <e n="EditorEscape">
+      <i c="2" l="1746899777102" />
+    </e>
+    <e n="EditorLeft">
+      <i c="1" l="1746902813289" />
+    </e>
+    <e n="EditorLineEnd">
+      <i c="2" l="1746902826509" />
+    </e>
+    <e n="EditorLineStart">
+      <i c="2" l="1746902827285" />
+    </e>
+    <e n="EditorPaste">
+      <i c="2" l="1746902485927" />
+    </e>
+    <e n="EditorUp">
+      <i c="37" l="1746902947533" />
+    </e>
+    <e n="FileChooser.GotoHome">
+      <i c="1" l="1746902902251" />
+    </e>
+    <e n="GotoFile">
+      <i c="1" l="1746902833741" />
+    </e>
+    <e n="MTGithubDarkTheme">
+      <i c="4" l="1746899528031" />
+    </e>
+    <e n="MTGithubDarkThemeCompact">
+      <i c="3" l="1746899524199" />
+    </e>
+    <e n="MTGithubDarkThemeContrast">
+      <i c="2" l="1746899518480" />
+    </e>
+    <e n="MTGithubDarkThemeContrastCompact">
+      <i c="1" l="1746899515871" />
+    </e>
+    <e n="MaterialLiteTheme.Menu">
+      <i c="1" l="1746899503111" />
+    </e>
+    <e n="MoreRunToolbarActions">
+      <i c="1" l="1746902876788" />
+    </e>
+    <e n="SaveDocument">
+      <i c="2" l="1746902948956" />
+    </e>
+    <e n="SettingsEntryPoint">
+      <i c="17" l="1746903076579" />
+    </e>
+    <e n="ShowSettings">
+      <i c="7" l="1746903078411" />
+    </e>
+    <e n="WelcomeScreen.Plugins">
+      <i c="5" l="1746902880974" />
+    </e>
+    <e n="com.intellij.application.options.TabbedLanguageCodeStylePanel$2">
+      <i c="6" l="1746901555778" />
+    </e>
+    <e n="com.intellij.application.options.schemes.AbstractSchemesPanel$ShowSchemesActionsListAction">
+      <i c="2" l="1746900738635" />
+    </e>
+    <e n="com.intellij.codeInsight.daemon.impl.DaemonTooltipWithActionRenderer$SettingsActionGroup">
+      <i c="2" l="1746901605521" />
+    </e>
+    <e n="com.intellij.codeInsight.daemon.impl.DaemonTooltipWithActionRenderer$ShowDocAction">
+      <i c="1" l="1746901609352" />
+    </e>
+    <e n="com.intellij.ide.plugins.PluginManagerMain$3">
+      <i c="1" l="1746903043027" />
+    </e>
+    <e n="com.intellij.ide.plugins.newui.PluginsTab$3$1">
+      <i c="1" l="1746899394454" />
+    </e>
+    <e n="com.intellij.ide.startup.importSettings.chooser.productChooser.ExpChooserAction">
+      <i c="1" l="1746269057142" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.impl.MoreActionGroup">
+      <i c="2" l="1746903137417" />
+    </e>
+    <e n="com.intellij.openapi.editor.impl.EditorMarkupModelImpl$TrafficLightAction">
+      <i c="1" l="1746903157265" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="3" l="1746899580183" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="2" l="1746902848486" />
+    </e>
+    <e n="com.intellij.openapi.updateSettings.impl.UpdateSettingsEntryPointActionProvider$3">
+      <i c="2" l="1746902954612" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
+      <i c="3" l="1746902808140" />
+    </e>
+    <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
+      <i c="1" l="1746903169777" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$ListMoveDownAction">
+      <i c="8" l="1746902847764" />
+    </e>
+    <e n="com.intellij.ui.components.BasicOptionButtonUI$ActionDelegate">
+      <i c="1" l="1746899606257" />
+    </e>
+  </component>
+</application>

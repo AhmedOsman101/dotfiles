@@ -1,0 +1,70 @@
+<application>
+  <component name="CodeFoldingSettings">
+    <option name="COLLAPSE_DOC_COMMENTS" value="true" />
+  </component>
+  <component name="CodeInsightSettings">
+    <option name="AUTO_POPUP_JAVADOC_INFO" value="true" />
+  </component>
+  <component name="CodeVisionSettings">
+    <option name="codeVisionGroupToPosition">
+      <map>
+        <entry key="component.usage" value="Default" />
+        <entry key="inheritors" value="Default" />
+        <entry key="references" value="Default" />
+        <entry key="vcs.code.vision" value="Default" />
+      </map>
+    </option>
+    <option name="defaultPosition" value="Right" />
+  </component>
+  <component name="DeclarativeInlayHintsSettings">
+    <option name="enabledOptions">
+      <map>
+        <entry key="js.type.hints#function.returns" value="true" />
+        <entry key="js.type.hints#non.paren.single.param" value="true" />
+        <entry key="js.type.hints#parameters.in.parens" value="true" />
+        <entry key="js.type.hints#variables.and.fields" value="true" />
+        <entry key="sql.column.names.inlay.hints#sql.show.column.names.for.asterisk" value="true" />
+        <entry key="sql.column.names.inlay.hints#sql.show.column.names.for.set.operations" value="true" />
+        <entry key="sql.column.names.inlay.hints#sql.show.column.names.in.insert.values" value="true" />
+        <entry key="sql.column.names.inlay.hints#sql.show.column.names.in.select" value="true" />
+        <entry key="sql.join.cardinality.hints#full.join" value="true" />
+        <entry key="sql.join.cardinality.hints#inner.join" value="true" />
+        <entry key="sql.join.cardinality.hints#left.join" value="true" />
+        <entry key="sql.join.cardinality.hints#right.join" value="true" />
+        <entry key="ts.type.hints#function.returns" value="true" />
+        <entry key="ts.type.hints#non.paren.single.param" value="true" />
+        <entry key="ts.type.hints#parameters.in.parens" value="true" />
+        <entry key="ts.type.hints#variables.and.fields" value="true" />
+      </map>
+    </option>
+    <option name="providerIdToEnabled">
+      <map>
+        <entry key="js.chain.hints" value="true" />
+        <entry key="js.type.hints" value="true" />
+        <entry key="qodana.yaml.inspection.descriptions" value="true" />
+        <entry key="sql.column.names.inlay.hints" value="true" />
+        <entry key="sql.join.cardinality.hints" value="true" />
+        <entry key="ts.chain.hints" value="true" />
+        <entry key="ts.enum.hints" value="true" />
+        <entry key="ts.type.hints" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="EditorSettings">
+    <option name="IS_ENSURE_NEWLINE_AT_EOF" value="true" />
+    <option name="REMOVE_TRAILING_BLANK_LINES" value="true" />
+    <option name="LINE_NUMERATION" value="RELATIVE" />
+    <option name="USE_EDITOR_FONT_IN_INLAYS" value="true" />
+    <option name="IS_BLOCK_CURSOR" value="true" />
+    <option name="IS_FULL_LINE_HEIGHT_CURSOR" value="true" />
+    <option name="ADDITIONAL_PAGE_AT_BOTTOM" value="true" />
+    <option name="IS_WHEEL_FONTCHANGE_ENABLED" value="true" />
+    <option name="IS_WHEEL_FONTCHANGE_PERSISTENT" value="true" />
+  </component>
+  <component name="InlayHintsSettings">
+    <option name="lastViewedProviderKeyId" value="yaml.qodana.yaml.inspection.descriptions" />
+  </component>
+  <component name="XmlEditorOptions">
+    <option name="showCssInlineColorPreview" value="true" />
+  </component>
+</application>

@@ -1,0 +1,82 @@
+<application>
+  <component name="FileEditorProviderManager">{}</component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontFace" value="JetBrainsMonoNF Nerd Font Medium" />
+    <option name="fontSize" value="13.0" />
+    <option name="presentationModeIdeScale" value="1.75" />
+    <option name="overrideLafFonts" value="true" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "FileColorsEnabled": "false",
+    "FileTemplates.CurrentTab": "Code",
+    "FileTemplates.SelectedTemplate": "TypeScript Implemented Method Body",
+    "GeneralSettings.initiallyConfigured": "true",
+    "InstalledPluginsSearchHistory": "spaces\ntheme\nbiome\nbio\nbi",
+    "JSHintOptionsTreeView.TREE_SCROLL_BAR_HORIZONTAL": "22",
+    "JSHintOptionsTreeView.TREE_SCROLL_BAR_VERTICAL": "0",
+    "JSHintOptionsTreeView.TREE_SELECTED_NODE_ID": "1",
+    "LAST_CALCULATED_COLOR_INDEX_KEY": "8",
+    "LAST_EXTRACTOR_SCRIPTS_CLEANUP_VERSION/data/aggregators": "WS-251.25410.117",
+    "MarketplacePluginsSearchHistory": "github theme\n/tag:Theme\ntheme\ngithub\nةشفثقه",
+    "PluginConfigurable.selectionTab": "1",
+    "RunOnceActivity.TerminalOptionsProvider.migration.2025.1.1": "true",
+    "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
+    "RunOnceActivity.git.modal.commit.deprecation.notification": "true",
+    "RunOnceActivity.git.modal.commit.toggle": "true",
+    "RunOnceActivity.svelte.init.key": "true",
+    "RunOnceActivity.webstorm.auto-popup.quick-doc.initialized": "true",
+    "SettingsSearchHistory": "spaces",
+    "ask.about.ctrl.y.shortcut.v2": "true",
+    "evlsprt3.251": "7",
+    "experimental.ui.on.first.startup": "true",
+    "experimental.ui.used.version": "251.25410.117",
+    "fileTypeChangedCounter": "7",
+    "fontSizeToResetConsole": "13.0",
+    "fontSizeToResetEditor": "13.0",
+    "got.it.tooltip.Plugins Auto-Update": "1",
+    "got.it.tooltip.settings.sync.in.settings": "1",
+    "input.method.disabler.muted": "true",
+    "js.field.names.completion": "true",
+    "js.only.type.based.completion": "true",
+    "js.var.names.completion": "true",
+    "js.var.names.completion.kind": "TYPES_FOR_PARAMS",
+    "llm.installer.auto.activation.executed": "true",
+    "llm.installer.last.toolwindow.state": "LLM_INSTALLER",
+    "migrated.non.roamable.values.from.general.settings": "true",
+    "previousColorScheme": "_@user_GitHub Dark High Contrast",
+    "registry.to.advanced.settings.migration.build": "WS-251.25410.117",
+    "settings.code.style.selected.tab.CSS": "Arrangement",
+    "settings.code.style.selected.tab.EditorConfig": "Wrapping and Braces",
+    "settings.code.style.selected.tab.HTML": "Code Generation",
+    "settings.code.style.selected.tab.JSON": "Spaces",
+    "settings.code.style.selected.tab.JavaScript": "Spaces",
+    "settings.code.style.selected.tab.LESS": "Other",
+    "settings.code.style.selected.tab.Markdown": "Spaces",
+    "settings.code.style.selected.tab.Prisma": "Other",
+    "settings.code.style.selected.tab.SASS": "Other",
+    "settings.code.style.selected.tab.SCSS": "Arrangement",
+    "settings.code.style.selected.tab.TypeScript": "Arrangement",
+    "settings.code.style.selected.tab.Vue": "Arrangement",
+    "settings.code.style.selected.tab.XML": "Code Generation",
+    "settings.code.style.selected.tab.yaml": "Code Generation",
+    "terminal.gen.one.option.visible": "false",
+    "ts.lib.d.ts.version": "5.6.3"
+  },
+  "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/home/othman/.config/biome.jsonc",
+      "/home/othman/.local/share/pnpm/pnpm"
+    ],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.docker.dockerFile.DockerFileTypeDetector",
+      "com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector",
+      "com.intellij.database.vfs.DbStorageFileType$Detector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+</application>
