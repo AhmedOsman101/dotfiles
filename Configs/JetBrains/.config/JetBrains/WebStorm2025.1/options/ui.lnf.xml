@@ -1,0 +1,9 @@
+<application>
+  <component name="UISettings">
+    <option name="ACTIVATE_MRU_EDITOR_ON_CLOSE" value="true" />
+    <option name="EDITOR_TAB_LIMIT" value="10" />
+    <option name="OPEN_TABS_AT_THE_END" value="true" />
+    <option name="showTreeIndentGuides" value="true" />
+    <option name="UI_DENSITY" value="COMPACT" />
+  </component>
+</application>

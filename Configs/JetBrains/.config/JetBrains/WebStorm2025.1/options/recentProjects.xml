@@ -1,0 +1,69 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="/mnt/main/Projects/TS/easyblog/packages/frontend">
+          <value>
+            <RecentProjectMetaInfo displayName="frontend">
+              <option name="buildTimestamp" value="1746223352698" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <option name="projectOpenTimestamp" value="1746223352698" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dotfiles">
+          <value>
+            <RecentProjectMetaInfo displayName="dotfiles">
+              <option name="buildTimestamp" value="1746267705717" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="6" />
+              </option>
+              <option name="projectOpenTimestamp" value="1746267705717" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/mnt/main/Projects/test">
+          <value>
+            <RecentProjectMetaInfo displayName="test">
+              <option name="buildTimestamp" value="1746268885580" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <option name="projectOpenTimestamp" value="1746268885580" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dotfiles/Configs/helix/.config/helix">
+          <value>
+            <RecentProjectMetaInfo displayName="helix">
+              <option name="buildTimestamp" value="1746268963755" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="4" />
+              </option>
+              <option name="projectOpenTimestamp" value="1746268963755" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/mnt/main/Projects/TS/easyblog">
+          <value>
+            <RecentProjectMetaInfo frameTitle="easyblog – +page.server.ts" opened="true" projectWorkspaceId="2waA268ArFY71RKtwx2V4r3i48n">
+              <option name="activationTimestamp" value="1746903099522" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-251.25410.117" />
+              <option name="buildTimestamp" value="1746610620000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="7" />
+              </option>
+              <frame x="0" y="38" width="1440" height="862" extendedState="6" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1746903052205" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastOpenedProject" value="/mnt/main/Projects/TS/easyblog" />
+  </component>
+</application>

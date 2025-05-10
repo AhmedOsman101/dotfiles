@@ -1,0 +1,9 @@
+<application>
+  <component name="LafManager">
+    <laf themeId="0f04721d-319a-4046-acf8-64d81069d3f5" />
+    <lafs-to-previous-schemes>
+      <laf-to-scheme laf="ExperimentalDark" scheme="_@user_Github" />
+      <laf-to-scheme laf="e73dac03-3ae2-4ad3-ae63-a9d2beb93056" scheme="_@user_GitHub Dark Dimmed" />
+    </lafs-to-previous-schemes>
+  </component>
+</application>
