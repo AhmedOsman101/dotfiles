@@ -99,7 +99,7 @@ listview {
     cycle:                       true;
     scrollbar:                   false;
     layout:                      vertical;
-    
+
     spacing:                     10px;
     background-color:            transparent;
     cursor:                      "default";
@@ -108,7 +108,7 @@ listview {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    padding:                     22px 10px;
+    padding:                     26px 10px;
     border:                      0px solid;
     border-radius:               12px;
     border-color:                @selected;
