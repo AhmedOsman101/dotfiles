@@ -601,7 +601,6 @@
   ],
   "workbench.colorTheme": "GitHub Dark Default",
   "workbench.startupEditor": "none",
-  "editor.suggest.preview": true,
   "terminal.integrated.suggest.enabled": true,
   "[markdown]": {
     "editor.quickSuggestions": {
@@ -1011,5 +1010,12 @@
   "cody.suggestions.mode": "off",
   "[kotlin]": {
     "editor.defaultFormatter": "esafirm.kotlin-formatter"
-  }
+  },
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "editor.suggest.preview": false,
 }
