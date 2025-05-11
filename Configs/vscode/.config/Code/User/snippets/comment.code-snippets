@@ -39,22 +39,22 @@
   "Note Comment": {
     "prefix": "note",
     "body": [
-      "$LINE_COMMENT*: $0"
+      "$LINE_COMMENT NOTE: $0"
     ],
     "description": "Adds a nicely formatted note comment"
   },
   "Query Comment": {
     "prefix": "query",
     "body": [
-      "$LINE_COMMENT?: $0"
+      "$LINE_COMMENT ?: $0"
     ],
     "description": "Adds a nicely formatted query comment"
   },
-  "Cancelled Comment": {
-    "prefix": "cancelled",
+  "Deprecated Comment": {
+    "prefix": "deprecated",
     "body": [
-      "$LINE_COMMENT$LINE_COMMENT: $0"
+      "$LINE_COMMENT DEPRECATED: $0"
     ],
-    "description": "Adds a nicely formatted cancelled comment"
+    "description": "Adds a nicely formatted deprecated comment"
   },
 }
