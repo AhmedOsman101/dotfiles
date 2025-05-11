@@ -4,10 +4,10 @@
 ##
 ## Network Executor For Tint2
 
-ESSID="$(ip route get 1.1.1.1 | awk '{print $5;exit}')"
+ESSID=$(iwgetid | awk -F '"' '{ print $2 }')
 
-if [[ ! -z "$ESSID" ]]; then
-	echo " $ESSID"
+if [[ -n "$ESSID" ]]; then
+  echo " $ESSID"
 else
-	echo ' Disconnected'
+  echo ' Disconnected'
 fi

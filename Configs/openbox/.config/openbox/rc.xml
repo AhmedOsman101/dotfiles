@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <!-- Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com> -->
 <!-- ################################ General Settings ################################ -->
-<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+<openbox_config xmlns="http://openbox.org/3.4/rc"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
   <!-- Resistance -->
   <resistance>
     <strength>10</strength>
@@ -18,49 +19,49 @@
   </focus>
   <!-- Placement -->
   <placement>
-    <policy>Smart</policy>
+    <policy>UnderMouse</policy>
     <center>yes</center>
     <monitor>Mouse</monitor>
     <primaryMonitor>Mouse</primaryMonitor>
   </placement>
   <!-- Theme -->
   <theme>
-    <name>OB-Catppuccin-Mocha</name>
+    <name>OB-Tokyonight-Dark</name>
     <titleLayout>NLIMC</titleLayout>
     <keepBorder>no</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Inter Variable</name>
+      <name>Inter Display</name>
       <size>10</size>
       <weight>Bold</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>Inter Variable</name>
+      <name>Inter Display</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>Inter Variable</name>
+      <name>Inter Display</name>
       <size>10</size>
       <weight>Bold</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>Inter Variable</name>
+      <name>Inter Display</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Inter Variable</name>
+      <name>Inter Display</name>
       <size>10</size>
       <weight>Bold</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Inter Variable</name>
+      <name>Inter Display</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
@@ -70,7 +71,7 @@
   <desktops>
     <number>2</number>
     <firstdesk>0</firstdesk>
-    <popupTime>600</popupTime>
+    <popupTime>0</popupTime>
     <names>
       <name>1</name>
       <name>2</name>
@@ -230,12 +231,6 @@
       <action name="ToggleShowDesktop"/>
     </keybind>
     <!-- Action : Session -->
-    <!-- <keybind key="C-S-R"> -->
-    <!--   <action name="Execute"> -->
-    <!--     <command>dunstify -u low -h string:x-dunst-stack-tag:obaction "Configuration Reloaded!"</command> -->
-    <!--   </action> -->
-    <!--   <action name="Reconfigure"/> -->
-    <!-- </keybind> -->
     <keybind key="C-S-BackSpace">
       <action name="Restart"/>
     </keybind>
@@ -708,11 +703,11 @@
         <command>rofi-bluetooth</command>
       </action>
     </keybind>
-    <!-- <keybind key="W-m"> -->
-    <!--   <action name="Execute"> -->
-    <!--     <command>rofi-music</command> -->
-    <!--   </action> -->
-    <!-- </keybind> -->
+    <keybind key="W-m">
+      <action name="Execute">
+        <command>rofi-music</command>
+      </action>
+    </keybind>
     <keybind key="W-x">
       <action name="Execute">
         <command>rofi-powermenu</command>
@@ -732,21 +727,6 @@
     <keybind key="C-A-t">
       <action name="Execute">
         <command>kitty</command>
-      </action>
-    </keybind>
-    <keybind key="C-A-v">
-      <action name="Execute">
-        <command>kitty -e vim</command>
-      </action>
-    </keybind>
-    <keybind key="C-A-y">
-      <action name="Execute">
-        <command>kitty -e yazi</command>
-      </action>
-    </keybind>
-    <keybind key="C-A-h">
-      <action name="Execute">
-        <command>kitty -e htop</command>
       </action>
     </keybind>
     <!-- Misc -->

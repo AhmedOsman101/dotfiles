@@ -10,57 +10,38 @@ RFILE="$DIR/.module"
 
 # Fix backlight and network modules
 fix_modules() {
-	local patterns=("dot" "dot-alt" "LD" "RD") # Define patterns to be removed around target words
-	local pattern_regex=""
+  if [[ -z "$CARD" ]]; then
+    sed -i -e 's/backlight/bna/g' "$DIR"/config.ini
+  elif [[ "$CARD" != *"intel_"* ]]; then
+    sed -i -e 's/backlight/brightness/g' "$DIR"/config.ini
+  fi
 
-	if [[ ${#patterns[@]} -gt 0 ]]; then
-		pattern_regex="(\\.?|$(
-			IFS="|"
-			echo "${patterns[*]}"
-		))"
-	fi
+  if [[ -z "$BAT" ]]; then
+    sed -i -e 's/battery/btna/g' "$DIR"/config.ini
+  fi
 
-	if [[ -z "$CARD" || "$CARD" != "No backlight controller was found"* ]]; then
-		# sed -i -e 's/backlight/bna/g' "$DIR"/config.ini
-		sed -i -E "s/${pattern_regex}(backlight)${pattern_regex}/bna/g" "$DIR"/config.ini
-	elif [[ "$CARD" != *"intel_"* ]]; then
-		# sed -i -e 's/backlight/brightness/g' "$DIR"/config.ini
-		sed -i -E "s/${pattern_regex}(brightness)${pattern_regex}/brightness/g" "$DIR"/config.ini
-	fi
-
-	if [[ -z "$BAT" ]]; then
-		# sed -i -e 's/battery/btna/g' "$DIR"/config.ini
-		sed -i -E "s/${pattern_regex}(battery)${pattern_regex}/btna/g" "$DIR"/config.ini
-	fi
-
-	if [[ "$INTERFACE" == e* ]]; then
-		# sed -i -e 's/ethernet/g' "$DIR"/config.ini
-		sed -i -E "s/${pattern_regex}(ethernet)${pattern_regex}//g" "$DIR"/config.ini
-	fi
-
-	if [[ "$INTERFACE" == w* ]]; then
-		# sed -i -e 's/network/g' "$DIR"/config.ini
-		sed -i -E "s/${pattern_regex}(network)${pattern_regex}//g" "$DIR"/config.ini
-	fi
+  if [[ "$INTERFACE" == e* ]]; then
+    sed -i -e 's/network/ethernet/g' "$DIR"/config.ini
+  fi
 }
 
 # Launch the bar
 launch_bar() {
-	# Terminate already running bar instances
-	killall -q polybar
+  # Terminate already running bar instances
+  killall -q polybar
 
-	# Wait until the processes have been shut down
-	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+  # Wait until the processes have been shut down
+  while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-	# Launch the bar
-	for mon in $(polybar --list-monitors | cut -d":" -f1); do
-		MONITOR=$mon polybar -q main -c "$DIR"/config.ini &
-	done
+  # Launch the bar
+  for mon in $(polybar --list-monitors | cut -d":" -f1); do
+    MONITOR=$mon polybar -q main -c "$DIR"/config.ini &
+  done
 }
 
 # Execute functions
 if [[ ! -f "$RFILE" ]]; then
-	fix_modules
-	touch "$RFILE"
+  fix_modules
+  touch "$RFILE"
 fi
 launch_bar

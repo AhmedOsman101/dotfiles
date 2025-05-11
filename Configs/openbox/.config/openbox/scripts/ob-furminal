@@ -5,5 +5,5 @@
 ## Fullscreen terminal
 
 alacritty --class 'alacritty_fullscreen,alacritty_fullscreen' \
-		  -o window.startup_mode="'Fullscreen'" window.padding.x=45 \
-		  window.padding.y=45 window.opacity=1.0 font.size=18
+  -o window.startup_mode="'Fullscreen'" window.padding.x=45 \
+  window.padding.y=45 window.opacity=1.0 font.size=14
