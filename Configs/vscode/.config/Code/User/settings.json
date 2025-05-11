@@ -1008,5 +1008,8 @@
   "[svelte]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "cody.suggestions.mode": "off"
+  "cody.suggestions.mode": "off",
+  "[kotlin]": {
+    "editor.defaultFormatter": "esafirm.kotlin-formatter"
+  }
 }
