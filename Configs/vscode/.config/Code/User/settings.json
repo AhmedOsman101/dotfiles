@@ -455,58 +455,67 @@
   "remoteHub.commitDirectlyWarning": "off",
   "better-comments.tags": [
     {
-      "tag": "!",
-      "color": "#FF2D00",
+      "tag": "",
+      "color": "#008C7D", // dark green
       "strikethrough": false,
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,
-      "italic": false
+      "italic": true
+    },
+    {
+      "tag": "DEPRECATED:",
+      "color": "#474747", // deprecated -> gray
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
+    },
+    {
+      "tag": "!",
+      "color": "#FF2D00", // alert -> red
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
     },
     {
       "tag": "?",
+      "color": "cyan", // query -> blue
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
+    },
+    {
+      "tag": "NOTE:",
       "color": "#3498DB",
       "strikethrough": false,
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,
-      "italic": false
+      "italic": true
     },
     {
-      "tag": "//",
-      "color": "#474747",
-      "strikethrough": true,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": false,
-      "italic": false
-    },
-    {
-      "tag": "todo",
+      "tag": "TODO:", // yellow
       "color": "#FF8C00",
       "strikethrough": false,
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,
-      "italic": false
+      "italic": true
     },
     {
-      "tag": "*",
-      "color": "#98C379",
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": false,
-      "italic": false
-    },
-    {
-      "tag": "fixme",
+      "tag": "FIXME:",
       "color": "#FF757F",
       "strikethrough": false,
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,
-      "italic": false
+      "italic": true
     }
   ],
   "phpParameterHint.hintOnlyVisibleRanges": true,
