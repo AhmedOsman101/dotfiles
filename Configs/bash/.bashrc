@@ -10,13 +10,6 @@ PS1='[\u \W]\$ '
 # ---- Prompt Starship ----- #
 eval "$(starship init bash)"
 
-chsh -s "$(which zsh)"
-
-# Check for Zsh installation
- if command -v zsh &>/dev/null; then
-   zsh
- fi
-
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
@@ -26,3 +19,13 @@ chsh -s "$(which zsh)"
 source /home/othman/.local/share/bash-completion/completions/deno.bash
 
 export PATH="$PATH:$HOME/.local/bin/scripts"
+
+complete -cf doas
+complete -F _command doas
+
+chsh -s "$(which zsh)"
+
+# Check for Zsh installation
+if command -v zsh &>/dev/null; then
+  zsh
+fi
