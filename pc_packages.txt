@@ -103,6 +103,7 @@ axel
 b43-fwcutter
 base
 base-devel
+bash-completion
 bash-language-server
 bat
 bat-extras
@@ -156,11 +157,13 @@ dmenu
 dmidecode
 dmraid
 dnsmasq
+doasedit
 docker
 dos2unix
 dosfstools
 downgrade
 dunst
+dysk
 e2fsprogs
 edges
 edk2-shell
@@ -210,6 +213,7 @@ glow
 gnome-boxes
 gnome-chess
 gnome-keyring
+gnome-software
 gnuchess
 go
 gopls
@@ -259,6 +263,7 @@ inxi
 iw
 iwd
 jasper
+jdk17-openjdk
 jedi-language-server
 jfsutils
 jp2a
@@ -272,7 +277,10 @@ klavaro
 kmines
 knights
 kolourpaint
+kotlin
+kotlin-language-server
 ksuperkey
+ktlint
 kvantum
 kvantum-qt5
 lazygit
@@ -314,6 +322,8 @@ lua-language-server
 lua51-metalua-compiler
 luarocks
 lvm2
+lxappearance
+lxappearance-obconf
 lxc
 lz4
 lzip
@@ -586,6 +596,7 @@ wvdial
 x264
 x265
 xarchiver
+xbindkeys
 xclip
 xcolor
 xcursor-viewer-git
