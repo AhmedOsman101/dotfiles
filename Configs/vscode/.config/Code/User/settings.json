@@ -1027,4 +1027,5 @@
     "scminput": false
   },
   "editor.suggest.preview": false,
+  "inlineFold.unfoldOnLineSelect": true,
 }
