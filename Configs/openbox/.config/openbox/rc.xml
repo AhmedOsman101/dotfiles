@@ -1058,7 +1058,7 @@
       <decor>yes</decor>
       <cursor>Bibata</cursor>
     </application>
-    <application name="obconf">
+    <application name="obconf-qt">
       <position force="yes">
         <x>center</x>
         <y>center</y>

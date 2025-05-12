@@ -33,7 +33,7 @@
 				<menu id="ac-ob-menu" execute="&pipes;/ac-ob-menu" label="Menu Style"/>
 				<item label="Settings">
 					<action name="Execute">
-						<command>obconf</command>
+						<command>obconf-qt</command>
 					</action>
 				</item>
 				<separator/>
