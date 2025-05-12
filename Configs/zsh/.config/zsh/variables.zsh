@@ -83,6 +83,9 @@ export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
 # ---- Dotnet ---- #
 export DOTNET_CLI_HOME="${XDG_DATA_HOME}/dotnet"
 
+# ---- Doas ---- #
+export DOAS_NOPASS="${XDG_CONFIG_HOME}/doas/doas.conf"
+
 #---- Editor ---- #
 export EDITOR="hx" # helix
 
