@@ -8,15 +8,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf ideFingerprint="1jr5z3j1mptk7" SIDE_TABS_SIZE_LIMIT_KEY="-1">
-      <file current-in-tab="true">
+      <file>
         <entry file="file://$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]/+page.server.ts">
           <provider editor-type-id="text-editor" selected="true">
             <state relative-caret-position="405">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
-        <tab><![CDATA[{"tabTitle":"+page.server.ts","foregroundColor":-3550759,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,99,10,34,105,99,111,110,115,47,102,105,108,101,84,121,112,101,115,47,84,121,112,101,83,99,114,105,112,116,70,105,108,101,46,115,118,103,18,36,105,99,111,110,115,47,101,120,112,117,105,47,102,105,108,101,84,121,112,101,115,47,116,121,112,101,83,99,114,105,112,116,46,115,118,103,26,10,74,97,118,97,83,99,114,105,112,116,40,-23,-107,-64,-58,-8,-1,-1,-1,-1,1,48,0]}]]></tab>
+        <tab><![CDATA[{"tabTitle":"+page.server.ts","foregroundColor":-9922629,"textAttributes":{"name":"a","children":[{"name":"option","attributes":{"name":"FOREGROUND","value":"6897bb"}}]},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,99,10,34,105,99,111,110,115,47,102,105,108,101,84,121,112,101,115,47,84,121,112,101,83,99,114,105,112,116,70,105,108,101,46,115,118,103,18,36,105,99,111,110,115,47,101,120,112,117,105,47,102,105,108,101,84,121,112,101,115,47,116,121,112,101,83,99,114,105,112,116,46,115,118,103,26,10,74,97,118,97,83,99,114,105,112,116,40,-23,-107,-64,-58,-8,-1,-1,-1,-1,1,48,0]}]]></tab>
       </file>
       <file>
         <entry file="file://$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]/+page.svelte">
@@ -28,13 +28,23 @@
         </entry>
         <tab><![CDATA[{"tabTitle":"+page.svelte","foregroundColor":-3550759,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,61,10,21,105,99,111,110,115,47,100,101,115,97,116,117,114,97,116,101,100,46,115,118,103,26,23,100,101,118,46,98,108,97,99,104,117,116,46,115,118,101,108,116,101,46,108,97,110,103,40,-93,-63,-32,-125,-4,-1,-1,-1,-1,1,48,0]}]]></tab>
       </file>
+      <file current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages/frontend/src/lib/frontend.d.ts">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="108">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+        <tab><![CDATA[{"tabTitle":"frontend.d.ts","foregroundColor":-9922629,"textAttributes":{"name":"a","children":[{"name":"option","attributes":{"name":"FOREGROUND","value":"6897bb"}}]},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,99,10,34,105,99,111,110,115,47,102,105,108,101,84,121,112,101,115,47,84,121,112,101,83,99,114,105,112,116,70,105,108,101,46,115,118,103,18,36,105,99,111,110,115,47,101,120,112,117,105,47,102,105,108,101,84,121,112,101,115,47,116,121,112,101,83,99,114,105,112,116,46,115,118,103,26,10,74,97,118,97,83,99,114,105,112,116,40,-23,-107,-64,-58,-8,-1,-1,-1,-1,1,48,0]}]]></tab>
+      </file>
     </leaf>
   </component>
   <component name="FileTypeUsageLocalSummary"><![CDATA[{
   "data": {
     "TypeScript": {
-      "usageCount": 9,
-      "lastUsed": 1746903052089
+      "usageCount": 11,
+      "lastUsed": 1747103209817
     },
     "Markdown": {
       "usageCount": 1,
@@ -45,8 +55,8 @@
       "lastUsed": 1746899302802
     },
     "Svelte": {
-      "usageCount": 2,
-      "lastUsed": 1746903052316
+      "usageCount": 3,
+      "lastUsed": 1747103188280
     }
   }
 }]]></component>
@@ -62,7 +72,8 @@
   <component name="IdeDocumentHistory"><![CDATA[{
   "changedPaths": [
     "/mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/blog/[slug]/+page.server.ts",
-    "/mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/blog/[slug]/+page.svelte"
+    "/mnt/main/Projects/TS/easyblog/packages/frontend/src/routes/blog/[slug]/+page.svelte",
+    "/mnt/main/Projects/TS/easyblog/packages/frontend/src/lib/frontend.d.ts"
   ]
 }]]></component>
   <component name="IgnoredFileRootStore">
@@ -77,10 +88,10 @@
       <summary usageCount="1" lastUsage="1746269104399" />
     </language>
     <language id="SvelteHTML">
-      <summary usageCount="2" lastUsage="1746903052316" />
+      <summary usageCount="3" lastUsage="1747103188280" />
     </language>
     <language id="TypeScript">
-      <summary usageCount="9" lastUsage="1746903052092" />
+      <summary usageCount="11" lastUsage="1747103209817" />
     </language>
   </component>
   <component name="ProjectView">
@@ -110,6 +121,14 @@
               <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages}" type="462c0819:PsiDirectoryNode" />
               <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend}" type="462c0819:PsiDirectoryNode" />
               <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/lib}" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easyblog" type="b2602c69:ProjectViewProjectNode" />
@@ -274,6 +293,69 @@
                       </attributes>
                       <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="lib" />
                       <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/lib}" type="462c0819:PsiDirectoryNode" />
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/lib/api" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="api" />
+                        <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/lib/api}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/lib/components" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="components" />
+                        <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/lib/components}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/lib/errors" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="errors" />
+                        <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/lib/errors}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/lib/paraglide" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="paraglide" />
+                        <item name="dir{file:///mnt/main/Projects/TS/easyblog/packages/frontend/src/lib/paraglide}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/lib/frontend.d.ts" />
+                          </map>
+                        </attributes>
+                        <data iconPath="icons/expui/fileTypes/typeScript.svg" iconPlugin="JavaScript" isLeaf="true" text="frontend.d.ts" />
+                        <item name="frontend.d.ts" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/lib/index.ts" />
+                          </map>
+                        </attributes>
+                        <data iconPath="icons/expui/fileTypes/typeScript.svg" iconPlugin="JavaScript" isLeaf="true" text="index.ts" />
+                        <item name="index.ts" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/lib/utils.ts" />
+                          </map>
+                        </attributes>
+                        <data iconPath="icons/expui/fileTypes/typeScript.svg" iconPlugin="JavaScript" isLeaf="true" text="utils.ts" />
+                        <item name="utils.ts" type="ab9368bb:PsiFileNode" />
+                      </presentation>
                     </presentation>
                     <presentation>
                       <attributes>
@@ -323,7 +405,7 @@
                                 <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]/+page.svelte" />
                               </map>
                             </attributes>
-                            <data iconPath="expui/fileTypes/unknown.svg" iconPlugin="com.intellij" isLeaf="true" text="+page.svelte" />
+                            <data iconPath="icons/desaturated.svg" iconPlugin="dev.blachut.svelte.lang" isLeaf="true" text="+page.svelte" />
                             <item name="+page.svelte" type="ab9368bb:PsiFileNode" />
                           </presentation>
                           <presentation>
@@ -351,7 +433,7 @@
                               <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/blog/+page.svelte" />
                             </map>
                           </attributes>
-                          <data iconPath="expui/fileTypes/unknown.svg" iconPlugin="com.intellij" isLeaf="true" text="+page.svelte" />
+                          <data iconPath="icons/desaturated.svg" iconPlugin="dev.blachut.svelte.lang" isLeaf="true" text="+page.svelte" />
                           <item name="+page.svelte" type="ab9368bb:PsiFileNode" />
                         </presentation>
                       </presentation>
@@ -415,7 +497,7 @@
                             <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/+layout.svelte" />
                           </map>
                         </attributes>
-                        <data iconPath="expui/fileTypes/unknown.svg" iconPlugin="com.intellij" isLeaf="true" text="+layout.svelte" />
+                        <data iconPath="icons/desaturated.svg" iconPlugin="dev.blachut.svelte.lang" isLeaf="true" text="+layout.svelte" />
                         <item name="+layout.svelte" type="ab9368bb:PsiFileNode" />
                       </presentation>
                       <presentation>
@@ -433,7 +515,7 @@
                             <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/src/routes/+page.svelte" />
                           </map>
                         </attributes>
-                        <data iconPath="expui/fileTypes/unknown.svg" iconPlugin="com.intellij" isLeaf="true" text="+page.svelte" />
+                        <data iconPath="icons/desaturated.svg" iconPlugin="dev.blachut.svelte.lang" isLeaf="true" text="+page.svelte" />
                         <item name="+page.svelte" type="ab9368bb:PsiFileNode" />
                       </presentation>
                     </presentation>
@@ -579,7 +661,7 @@
                         <entry key="filePath" value="$PROJECT_DIR$/packages/frontend/svelte.config.js" />
                       </map>
                     </attributes>
-                    <data iconPath="expui/fileTypes/javaScript.svg" iconPlugin="com.intellij" isLeaf="true" text="svelte.config.js" />
+                    <data iconPath="fileTypes/javaScript.svg" iconPlugin="com.intellij" isLeaf="true" text="svelte.config.js" />
                     <item name="svelte.config.js" type="ab9368bb:PsiFileNode" />
                   </presentation>
                   <presentation>
@@ -746,11 +828,11 @@
     </panes>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4202000" />
+    <option name="totallyTimeSpent" value="4399000" />
   </component>
   <component name="ToolWindowManager">
     <layoutV2>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23854166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23854166" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
@@ -768,8 +850,8 @@
       <unified_weights bottom="0.33004642" left="0.23854166" />
     </layoutV2>
     <recentWindows>
-      <value>Problems View</value>
       <value>Project</value>
+      <value>Problems View</value>
     </recentWindows>
   </component>
   <component name="WindowStateProjectService">
@@ -781,14 +863,14 @@
       <screen x="0" y="38" width="1440" height="862" />
     </state>
     <state x="315" y="154" width="804" height="636" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.38.1440.862@0.38.1440.862" timestamp="1746902958932" />
-    <state x="503" y="227" width="428" height="490" key="FileChooserDialogImpl" timestamp="1746902931479">
+    <state x="503" y="227" width="428" height="490" key="FileChooserDialogImpl" timestamp="1747103242891">
       <screen x="0" y="38" width="1440" height="862" />
     </state>
-    <state x="503" y="227" width="428" height="490" key="FileChooserDialogImpl/0.38.1440.862@0.38.1440.862" timestamp="1746902931479" />
-    <state x="0" y="38" width="1440" height="862" key="SettingsEditor" timestamp="1746903099420">
+    <state x="503" y="227" width="428" height="490" key="FileChooserDialogImpl/0.38.1440.862@0.38.1440.862" timestamp="1747103242891" />
+    <state x="0" y="38" width="1440" height="862" key="SettingsEditor" timestamp="1747103247980">
       <screen x="0" y="38" width="1440" height="862" />
     </state>
-    <state x="0" y="38" width="1440" height="862" key="SettingsEditor/0.38.1440.862@0.38.1440.862" timestamp="1746903099420" />
+    <state x="0" y="38" width="1440" height="862" key="SettingsEditor/0.38.1440.862@0.38.1440.862" timestamp="1747103247980" />
     <state x="383" y="217" width="687" height="681" key="search.everywhere.popup" timestamp="1746902848490">
       <screen x="0" y="38" width="1440" height="862" />
     </state>
@@ -803,6 +885,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]/+page.server.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]/+page.svelte">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="783">
@@ -810,10 +899,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/frontend/src/routes/blog/[slug]/+page.server.ts">
+    <entry file="file://$PROJECT_DIR$/packages/frontend/src/lib/frontend.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="108">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>

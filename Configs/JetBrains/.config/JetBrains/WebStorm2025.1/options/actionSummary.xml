@@ -4,31 +4,40 @@
       <i c="1" l="1746903139689" />
     </e>
     <e n="EditorBackSpace">
-      <i c="23" l="1746903121915" />
+      <i c="29" l="1747103265114" />
     </e>
     <e n="EditorCopy">
       <i c="1" l="1746901870388" />
+    </e>
+    <e n="EditorDelete">
+      <i c="3" l="1747103254410" />
     </e>
     <e n="EditorDeleteToWordStart">
       <i c="5" l="1746899439049" />
     </e>
     <e n="EditorDown">
-      <i c="24" l="1746903055050" />
+      <i c="25" l="1747103256199" />
     </e>
     <e n="EditorEscape">
       <i c="2" l="1746899777102" />
     </e>
     <e n="EditorLeft">
-      <i c="1" l="1746902813289" />
+      <i c="3" l="1747103262362" />
     </e>
     <e n="EditorLineEnd">
-      <i c="2" l="1746902826509" />
+      <i c="3" l="1747103252652" />
     </e>
     <e n="EditorLineStart">
       <i c="2" l="1746902827285" />
     </e>
+    <e n="EditorLineStartWithSelection">
+      <i c="1" l="1747103253034" />
+    </e>
     <e n="EditorPaste">
-      <i c="2" l="1746902485927" />
+      <i c="3" l="1747103238717" />
+    </e>
+    <e n="EditorRight">
+      <i c="17" l="1747103262835" />
     </e>
     <e n="EditorUp">
       <i c="37" l="1746902947533" />
@@ -56,6 +65,12 @@
     </e>
     <e n="MoreRunToolbarActions">
       <i c="1" l="1746902876788" />
+    </e>
+    <e n="NextTemplateVariable">
+      <i c="1" l="1747103265766" />
+    </e>
+    <e n="RenameElement">
+      <i c="1" l="1747103259381" />
     </e>
     <e n="SaveDocument">
       <i c="2" l="1746902948956" />
@@ -90,6 +105,9 @@
     <e n="com.intellij.ide.startup.importSettings.chooser.productChooser.ExpChooserAction">
       <i c="1" l="1746269057142" />
     </e>
+    <e n="com.intellij.javascript.nodejs.interpreter.NodeJsInterpretersDialog$AddInterpreterTypeAction">
+      <i c="1" l="1747103236780" />
+    </e>
     <e n="com.intellij.openapi.actionSystem.impl.MoreActionGroup">
       <i c="2" l="1746903137417" />
     </e>
@@ -106,7 +124,7 @@
       <i c="2" l="1746902954612" />
     </e>
     <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
-      <i c="3" l="1746902808140" />
+      <i c="4" l="1747103201903" />
     </e>
     <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
       <i c="1" l="1746903169777" />
