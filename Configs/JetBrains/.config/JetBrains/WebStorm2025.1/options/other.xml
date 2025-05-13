@@ -65,6 +65,7 @@
   },
   "keyToStringList": {
     "file.chooser.recent.files": [
+      "/home/othman/.local/share/asdf/shims/node",
       "/home/othman/.config/biome.jsonc",
       "/home/othman/.local/share/pnpm/pnpm"
     ],
