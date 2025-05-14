@@ -105,11 +105,6 @@ u = ["undo", "collapse_selection"]
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "keep_primary_selection"]
 
-Y = ["yank"]
-
-[keys.normal.y]
-y = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "normal_mode"]
-
 [keys.select]
 X = ["extend_line_above"]
 C-s = [":format", ":write"] # format and save
@@ -132,8 +127,8 @@ esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 
 [keys.insert]
 j = { k = "normal_mode" }                               # Maps `jk` to enter normal mode
-k = { j = "select_mode" }                               # Maps `kj` to enter visual mode
-C-s = [":format", ":write"]                             # format and save
+# k = { j = "select_mode" }                               # Maps `kj` to enter visual mode
+C-s = [":write", ":format", ":write"]                             # format and save
 C-d = ["extend_to_line_bounds", "yank", "paste_before"]
 
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
