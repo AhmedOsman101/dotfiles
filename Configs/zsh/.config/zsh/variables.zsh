@@ -211,6 +211,9 @@ export SCRIPTS_DIR="$HOME/scripts"
 # ---- Starship ---- #
 export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 
+# ---- Sudo ---- #
+export SUDO_ASKPASS="/home/othman/scripts/rofi/rofi-askpass"
+
 # ---- Terminal ---- #
 export TERMINAL="kitty"
 export TERM=xterm-256color
