@@ -247,7 +247,7 @@ export PATH="$PATH:$HOME/.local/bin"
 PATH="$PATH:$SCRIPTS_DIR"                            # my custom scripts
 PATH="$PATH:$HOME/.spicetify"                        # spicetify for spotify mods
 PATH="$PATH:$BUN_INSTALL/bin"                        # BUN js runtime
-PATH="$PATH:$HOME/.local/share/gem/ruby/3.3.0/bin"   # Ruby gems
+PATH="$PATH:$HOME/.local/share/gem/ruby/3.4.0/bin"   # Ruby gems
 PATH="$PATH:$XDG_CONFIG_HOME/composer/vendor/bin"    # Composer packages
 PATH="$PATH:$CARGO_HOME/bin"                         # Cargo packages
 
