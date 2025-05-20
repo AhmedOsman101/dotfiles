@@ -43,10 +43,8 @@ run_rofi() {
 
 # Screenshot
 time=$(date +"%Y-%m-%d@%I-%M-%S%p")
-geometry=$(xrandr | grep 'current' | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current')
 dir="$(xdg-user-dir PICTURES)/Screenshots"
 file="Screenshot_${time}.png"
-border='0.322,0.585,0.886'
 
 # Directory
 if [[ ! -d "${dir}" ]]; then
@@ -59,7 +57,7 @@ notify_view() {
   ${notify_cmd_shot} "Copied to clipboard."
   paplay /usr/share/sounds/freedesktop/stereo/screen-capture.oga &>/dev/null &
   if [[ -f "${dir}/${file}" ]]; then
-    viewnior "${dir}/${file}"
+    loupe "${dir}/${file}"
     ${notify_cmd_shot} "Screenshot Saved."
   else
     ${notify_cmd_shot} "Screenshot Deleted."
@@ -85,7 +83,7 @@ shotnow() {
   killall flameshot
   xclip -selection clipboard -t image/png -i "${file}"
   paplay /usr/share/sounds/freedesktop/stereo/screen-capture.oga &>/dev/null &
-  viewnior "${dir}/${file}"
+  loupe "${dir}/${file}"
 }
 
 shot5() {
@@ -94,7 +92,7 @@ shot5() {
   killall flameshot
   xclip -selection clipboard -t image/png -i "${file}"
   paplay /usr/share/sounds/freedesktop/stereo/screen-capture.oga &>/dev/null &
-  viewnior "${dir}/${file}"
+  loupe "${dir}/${file}"
 }
 
 shot10() {
@@ -103,7 +101,7 @@ shot10() {
   killall flameshot
   xclip -selection clipboard -t image/png -i "${file}"
   paplay /usr/share/sounds/freedesktop/stereo/screen-capture.oga &>/dev/null &
-  viewnior "${dir}/${file}"
+  loupe "${dir}/${file}"
 }
 
 shotwin() {
@@ -116,7 +114,7 @@ shotarea() {
   killall flameshot
   xclip -selection clipboard -t image/png -i "${file}"
   paplay /usr/share/sounds/freedesktop/stereo/screen-capture.oga &>/dev/null &
-  viewnior "${dir}/${file}"
+  loupe "${dir}/${file}"
 }
 
 # Execute Command
