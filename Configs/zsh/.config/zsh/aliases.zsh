@@ -6,7 +6,6 @@ alias bashrc="$EDITOR ~/.bashrc"
 alias art="php artisan"
 alias cls="clear"
 alias reload="source $ZSHRC && clear && neofetch"
-# alias npm="pnpm"
 alias vim="nvim"
 alias pwdcp='clipcopy ${PWD}'
 alias python="python3"
@@ -104,3 +103,6 @@ alias CAPS="xdotool key Caps_Lock"
 
 # ---- Tokei ---- #
 alias code-stats='tokei'
+
+# ---- GIFs ---- #
+alias gif='gif-for-cli'
