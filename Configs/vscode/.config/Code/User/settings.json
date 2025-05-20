@@ -54,7 +54,7 @@
   "C_Cpp.default.cStandard": "c23",
   "debug.onTaskErrors": "showErrors",
   "code-runner.executorMap": {
-    "javascript": "clear && deno -A",
+    "javascript": "clear; deno --unstable-sloppy-imports -A",
     "java": "cd $dir; javac $fileName ; java $fileNameWithoutExt",
     "c": "cd $dirWithoutTrailingSlash; clear; clangc $fileName",
     "cpp": "cd $dirWithoutTrailingSlash; clear; cppc $fileName",
@@ -454,15 +454,6 @@
   },
   "remoteHub.commitDirectlyWarning": "off",
   "better-comments.tags": [
-    {
-      "tag": "",
-      "color": "#008C7D", // dark green
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": false,
-      "italic": true
-    },
     {
       "tag": "DEPRECATED:",
       "color": "#474747", // deprecated -> gray
