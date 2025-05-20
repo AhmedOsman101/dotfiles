@@ -72,3 +72,9 @@ which() {
     declare -f
   ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
 }
+
+gif() {
+  printf '\n\n'
+  sleep 0.2
+  kitty +kitten icat usage.gif
+}

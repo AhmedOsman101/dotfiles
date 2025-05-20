@@ -103,6 +103,3 @@ alias CAPS="xdotool key Caps_Lock"
 
 # ---- Tokei ---- #
 alias code-stats='tokei'
-
-# ---- GIFs ---- #
-alias gif='gif-for-cli'
