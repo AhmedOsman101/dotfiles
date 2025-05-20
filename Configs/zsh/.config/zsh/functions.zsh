@@ -76,5 +76,5 @@ which() {
 gif() {
   printf '\n\n'
   sleep 0.2
-  kitty +kitten icat usage.gif
+  kitty +kitten icat $1
 }
