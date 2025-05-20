@@ -32,7 +32,7 @@
 	retry = 10
 	lowSpeedLimit = 1
 	lowSpeedTime = 999999
-	postBuffer = 524288000
+	postBuffer = 1048576000
 	version = HTTP/1.1
 [http "curl"]
 	connecttimeout = 999999
