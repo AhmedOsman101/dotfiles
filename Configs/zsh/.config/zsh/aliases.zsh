@@ -103,3 +103,6 @@ alias CAPS="xdotool key Caps_Lock"
 
 # ---- Tokei ---- #
 alias code-stats='tokei'
+
+# ---- Distrobox ---- #
+alias db='distrobox'
