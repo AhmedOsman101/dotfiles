@@ -109,7 +109,7 @@ eval "$(atuin init zsh)"
 [[ -s "$HOME/.bun/_bun" ]] && source "$HOME/.bun/_bun"
 
 # ---- Asdf ---- #
-source "$ASDF_DIR/asdf.sh"
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 
 # ---- Cargo ---- #
 source "$CARGO_HOME/env"
