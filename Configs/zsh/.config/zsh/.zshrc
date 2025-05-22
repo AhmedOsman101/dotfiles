@@ -168,3 +168,4 @@ eval "$(uvx --generate-shell-completion zsh)"
 # --- git aliases (override) --- #
 alias gca='git-commit --ai'
 alias gl='git pull origin $(git_current_branch)'
+
