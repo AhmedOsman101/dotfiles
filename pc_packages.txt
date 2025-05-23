@@ -91,7 +91,6 @@ archcraft-vim
 argparse
 aria2
 ascii-image-converter
-asdf-vm
 aspell
 aspell-en
 astyle
@@ -600,7 +599,6 @@ wayland-protocols
 webstorm
 webstorm-jre
 wget
-wike
 wireless-regdb
 wireless_tools
 wireplumber
