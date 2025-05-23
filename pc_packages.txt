@@ -2,6 +2,7 @@
 acpi
 adw-gtk-theme
 alacritty
+alpaca-ai
 apparmor
 arch-wiki-docs
 archcraft-arandr
@@ -90,6 +91,7 @@ archcraft-vim
 argparse
 aria2
 ascii-image-converter
+asdf-vm
 aspell
 aspell-en
 astyle
@@ -134,6 +136,7 @@ clonezilla
 cloud-init
 cmake
 composer
+containers-common
 copyq
 cowsay
 cppcheck
@@ -142,6 +145,7 @@ cups
 cups-filters
 cups-pdf
 curlie
+cursor-extracted
 dbus-broker-units
 debtap
 dhclient
@@ -152,7 +156,6 @@ diffuse
 diffutils
 discord
 discover
-distrobox
 dmenu
 dmidecode
 dmraid
@@ -206,6 +209,7 @@ ghostscript
 gimp
 git-crypt
 git-delta
+git-filter-repo
 github-cli
 glfw
 global
@@ -251,6 +255,7 @@ helix
 highlight
 htop
 httpie
+hyperfine
 hyperv
 i3lock-color
 iftop
@@ -270,6 +275,7 @@ jp2a
 jq
 jq-lsp
 kde-gtk-config
+kdialog
 keyd
 kitty
 kitty-terminfo
@@ -287,6 +293,7 @@ lazygit
 ldns
 less
 lftp
+libadwaita
 libappindicator-gtk2
 libavif
 libc++
@@ -315,6 +322,7 @@ linux-lts
 linux-lts-headers
 llvm
 localsend
+loupe
 lrzip
 lsb-release
 lsscsi
@@ -393,6 +401,7 @@ obmenu-generator
 obs-plugin-input-overlay-bin
 obs-studio
 obsidian
+okular
 open-iscsi
 openarena
 openconnect
@@ -414,6 +423,7 @@ pastel
 patch
 pavucontrol
 pcsclite
+pdfchain
 perl-image-exiftool
 perl-linux-desktopfiles
 php
@@ -435,6 +445,7 @@ plank
 playerctl
 plocate
 plymouth
+podman
 polkit
 polybar
 postgresql
@@ -494,6 +505,7 @@ shlorem
 simple-completion-language-server-git
 simplescreenrecorder
 skippy-xd-git
+slirp4netns
 slock
 slop
 smartmontools
@@ -511,6 +523,7 @@ sublime-text-4
 sudo
 svelte-language-server
 swaybg
+switcheroo
 swtpm
 sxiv
 syncthing
@@ -525,12 +538,14 @@ tesseract-data-eng
 texlab
 texlive-binextra
 thefuck
+themechanger-git
 thorium-browser-bin
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 timeshift
+timg
 tipp10
 tlrc
 tmux
@@ -548,6 +563,7 @@ ttf-amiri
 ttyper
 tumbler
 tuned
+twitch
 udftools
 udisks2
 ueberzug
@@ -584,6 +600,7 @@ wayland-protocols
 webstorm
 webstorm-jre
 wget
+wike
 wireless-regdb
 wireless_tools
 wireplumber
@@ -593,6 +610,7 @@ wmname
 wpa_supplicant
 wrk
 wvdial
+x11-ssh-askpass
 x264
 x265
 xarchiver
@@ -615,7 +633,6 @@ xfce-polkit
 xfce4-appfinder
 xfce4-power-manager
 xfce4-settings
-xfce4-terminal
 xfdashboard
 xfsprogs
 xl2tpd
@@ -667,6 +684,7 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xournalpp
 xsel
 xsettingsd
 xsv
