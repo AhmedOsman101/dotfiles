@@ -108,3 +108,6 @@ alias db='distrobox'
 
 # ---- Shutdown (safely) ---- #
 alias goodnight='sync && sudo systemctl poweroff'
+
+# ---- Rtx (asdf rust clone) ---- #
+alias asdf='rtx'

@@ -169,3 +169,4 @@ eval "$(uvx --generate-shell-completion zsh)"
 alias gca='git-commit --ai'
 alias glg="git log --all --graph --pretty=format:'%C(magenta)%h%C(default) %an %C(yellow)%ar%C(auto) %D%n%s%n'"
 
+eval "$(~/.local/share/cargo/bin/rtx activate zsh)"
