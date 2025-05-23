@@ -3,10 +3,68 @@
 	email = trollingosman101@outlook.com
 [core]
 	editor = hx
-  pager = delta
+ pager = delta
+ # more cpu, less network usage
+ compression = 9
+ whitespace = error # don't commit spaces
+ preloadindex = true # better performance
+
+# creates a url alias
+[url "git@github.com:AhmedOsman101/"]
+ insteadof = "me:"
+
+[url "git@github.com:"]
+ insteadof = "gh:"
+
+# try later
+# [status]
+# branch = true
+# showStash = true
+# showUntrackedFiles = all
+
+[push]
+ default = current # push to current branch
+ autoSetupRemote = true
+ followTags = true
+
+[pull]
+ default = current
+ # rebase = true # try later
+
+[rebase]
+ autostash = true
+ missingCommitsCheck = warn
+
+[log]
+ abbrevCommit = true # short hash
+ graphColors = blue,yellow,cyan,magenta,green,red
+
+[color "decorate"]
+ HEAD = red
+ branch = blue
+ tag = yellow
+ remoteBranch = magenta
+
+[color "branch"]
+ current = magenta
+ local = default
+ remote = yellow
+ upstream = green
+ plain = blue
+
+[branch]
+ sort = -committerdate # try current
+
+[tag]
+ sort = -taggerdate
+
+[pager]
+ branch = false
+ tag = false
 
 [interactive]
   diffFilter = delta --color-only
+  singleKey = true # press y or n, no enter
 
 [delta]
   # navigate = true   # use n and N to move between diff sections
@@ -20,20 +78,26 @@
 
 [diff]
   colorMoved = default
+  context = 3
+  renames = copies
+  interHunkContext = 10
+
 [credential "https://github.com"]
 	helper = !/usr/bin/gh auth git-credential
+
 [credential "https://gist.github.com"]
 	helper = !/usr/bin/gh auth git-credential
+
 [init]
 	defaultBranch = main
-[push]
-	autoSetupRemote = true
+
 [http]
 	retry = 10
 	lowSpeedLimit = 1
 	lowSpeedTime = 999999
 	postBuffer = 1048576000
 	version = HTTP/1.1
+
 [http "curl"]
 	connecttimeout = 999999
 	speedtime = 999999
