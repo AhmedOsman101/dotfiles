@@ -64,8 +64,7 @@ alias psmem='n "ps | sort-by mem | last 5"'
 alias pscpu='n "ps | sort-by cpu | last 5"'
 
 #---- Git ---- #
-[[ -n $(command -v git_current_branch) ]] ||
-  alias git_current_branch='git branch --show-current 2>/dev/null'
+alias git_current_branch='git branch --show-current 2>/dev/null'
 
 # ---- Copy to Clipboard ----#
 [[ -n $(command -v copyclip) ]] || alias copyclip="clipcopy"
