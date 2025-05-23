@@ -1,4 +1,4 @@
-# shellcheck disable=SC1090,SC1091,SC2001,SC2002,SC2016,SC2034,SC2086,SC2153,SC2154,SC2155,SC2181,SC2230,SC2250,SC2296,SC2312
+# shellcheck disable=SC1090,SC1091,SC2001,SC2002,SC2016,SC2034,SC2086,SC2153,SC2154,SC2155,SC2181,SC2206,SC2230,SC2250,SC2296,SC2312
 
 # ---- Zsh config directory ---- #
 export ZDOTDIR="$HOME/.config/zsh"
@@ -109,7 +109,7 @@ eval "$(atuin init zsh)"
 [[ -s "$HOME/.bun/_bun" ]] && source "$HOME/.bun/_bun"
 
 # ---- Asdf ---- #
-fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+fpath=("${ASDF_DATA_DIR:-$HOME/.asdf}/completions" $fpath)
 
 # ---- Cargo ---- #
 source "$CARGO_HOME/env"
@@ -167,5 +167,5 @@ eval "$(uvx --generate-shell-completion zsh)"
 
 # --- git aliases (override) --- #
 alias gca='git-commit --ai'
-alias gl='git pull origin $(git_current_branch)'
+alias glg="git log --all --graph --pretty=format:'%C(magenta)%h%C(default) %an %C(yellow)%ar%C(auto) %D%n%s%n'"
 
