@@ -1,105 +1,105 @@
 [user]
-	name = AhmedOsman101
-	email = trollingosman101@outlook.com
+    name = AhmedOsman101                # Sets the username for Git commits
+    email = ahmad.ali.othman@outlook.com # Sets the email address for Git commits
+
 [core]
-	editor = hx
- pager = delta
- # more cpu, less network usage
- compression = 9
- whitespace = error # don't commit spaces
- preloadindex = true # better performance
+    editor = hx                        # Specifies the text editor for Git operations (e.g., commit messages)
+    pager = delta                      # Sets the pager program for viewing Git output (e.g., diffs, logs)
+    # more cpu, less network usage
+    compression = 9                    # Sets the compression level for Git objects (0-9, 9 is maximum)
+    whitespace = error                 # Treats trailing whitespace or other whitespace issues as errors
+    preloadindex = true                # Enables preloading of the index for improved performance
 
 # creates a url alias
 [url "git@github.com:AhmedOsman101/"]
- insteadof = "me:"
+    insteadof = "me:"                  # Replaces "me:" with the full GitHub URL for the user's repositories
 
 [url "git@github.com:"]
- insteadof = "gh:"
+    insteadof = "gh:"                  # Replaces "gh:" with the full GitHub URL for any GitHub repository
 
-# try later
-# [status]
-# branch = true
-# showStash = true
-# showUntrackedFiles = all
+[status]
+    branch = false                    # Disables showing branch information
+    showStash = false                 # Disables showing stash information
+    showUntrackedFiles = all           # Shows all untracked files and directories, including ignored ones 
 
 [push]
- default = current # push to current branch
- autoSetupRemote = true
- followTags = true
+    default = current                  # Sets the default push behavior to push the current branch
+    autoSetupRemote = true             # Automatically configures remote tracking when pushing a new branch
+    followTags = true                  # Pushes annotated tags along with branches
 
 [pull]
- default = current
- # rebase = true # try later
+    default = current                  # Sets the default pull behavior to pull into the current branch
+    rebase = true                     # Performs a rebase instead of a merge when pulling changes 
 
 [rebase]
- autostash = true
- missingCommitsCheck = warn
+    autostash = true                   # Automatically stashes local changes before rebasing and reapplies them after
+    missingCommitsCheck = warn         # Warns if commits are missing during a rebase
 
 [log]
- abbrevCommit = true # short hash
- graphColors = blue,yellow,cyan,magenta,green,red
+    abbrevCommit = true                # Displays abbreviated commit hashes in logs
+    graphColors = blue,yellow,cyan,magenta,green,red # Sets colors for the commit graph in logs
 
 [color "decorate"]
- HEAD = red
- branch = blue
- tag = yellow
- remoteBranch = magenta
+    HEAD = red                         # Colors the HEAD reference in red
+    branch = blue                      # Colors branch references in blue
+    tag = yellow                       # Colors tag references in yellow
+    remoteBranch = magenta             # Colors remote branch references in magenta
 
 [color "branch"]
- current = magenta
- local = default
- remote = yellow
- upstream = green
- plain = blue
+    current = magenta                  # Colors the current branch in magenta
+    local = default                    # Uses the default color for local branches
+    remote = yellow                    # Colors remote branches in yellow
+    upstream = green                   # Colors upstream branches in green
+    plain = blue                       # Colors plain branch names in blue
 
 [branch]
- sort = -committerdate # try current
+    sort = -committerdate              # Sorts branches by committer date in descending order (newest first)
 
 [tag]
- sort = -taggerdate
+    sort = -taggerdate                 # Sorts tags by tagger date in descending order (newest first)
 
 [pager]
- branch = false
- tag = false
+    branch = false                     # Disables the pager for `git branch` output
+    tag = false                        # Disables the pager for `git tag` output
 
 [interactive]
-  diffFilter = delta --color-only
-  singleKey = true # press y or n, no enter
+    diffFilter = delta --color-only   # Applies a color-only filter to diffs in interactive commands
+    singleKey = true                   # Enables single-key input (e.g., 'y' or 'n') without requiring Enter
 
 [delta]
-  # navigate = true   # use n and N to move between diff sections
-  # side-by-side = true
-  dark = true
-	line-numbers = true
-	syntax-theme = "OneHalfDark"
+    # navigate = true # use n and N to move between diff sections
+    # side-by-side = true
+    dark = true                        # Enables dark mode for the delta diff viewer
+    line-numbers = true                # Shows line numbers in delta output
+    syntax-theme = "OneHalfDark"       # Sets the syntax highlighting theme for delta to "OneHalfDark"
 
 [merge]
-  conflictstyle = diff3
+    conflictstyle = diff3              # Uses the diff3 style to display merge conflicts (shows base, local, and remote)
 
 [diff]
-  colorMoved = default
-  context = 3
-  renames = copies
-  interHunkContext = 10
+    colorMoved = default               # Highlights moved lines in diffs with default colors
+    context = 3                        # Shows 3 lines of context around diff changes
+    renames = copies                   # Detects both renames and copies in diffs
+    interHunkContext = 10              # Shows 10 lines of context between diff hunks
 
 [credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
+    helper = !/usr/bin/gh auth git-credential # Uses GitHub CLI as the credential helper for GitHub
 
 [credential "https://gist.github.com"]
-	helper = !/usr/bin/gh auth git-credential
+    helper = !/usr/bin/gh auth git-credential # Uses GitHub CLI as the credential helper for GitHub Gists
 
 [init]
-	defaultBranch = main
+    defaultBranch = main               # Sets the default branch name to "main" for new repositories
 
 [http]
-	retry = 10
-	lowSpeedLimit = 1
-	lowSpeedTime = 999999
-	postBuffer = 1048576000
-	version = HTTP/1.1
+    retry = 10                         # Retries HTTP requests up to 10 times on failure
+    lowSpeedLimit = 1                  # Sets the low speed limit to 1 byte per second
+    lowSpeedTime = 999999              # Considers a transfer slow if below the limit for 999,999 seconds
+    postBuffer = 1048576000            # Sets the buffer size for HTTP POST requests to ~1GB
+    version = HTTP/1.1                 # Forces Git to use HTTP/1.1 for requests
 
 [http "curl"]
-	connecttimeout = 999999
-	speedtime = 999999
-	speedlimit = 1
-	buffer-size = 524288000
+    connecttimeout = 999999            # Sets the connection timeout for curl to 999,999 seconds
+    speedtime = 999999                 # Measures speed over 999,999 seconds for slow transfer detection
+    speedlimit = 1                     # Sets the minimum speed limit to 1 byte per second
+    buffer-size = 1048576000            # Sets the curl buffer size to ~1GB
