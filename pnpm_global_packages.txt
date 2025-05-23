@@ -22,3 +22,4 @@ yo
 vercel
 quicktype
 medium-to-markdown
+esbuild
