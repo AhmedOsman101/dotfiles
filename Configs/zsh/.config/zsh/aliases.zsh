@@ -106,3 +106,6 @@ alias code-stats='tokei'
 
 # ---- Distrobox ---- #
 alias db='distrobox'
+
+# ---- Shutdown (safely) ---- #
+alias goodnight='sync && sudo systemctl poweroff'
