@@ -1,11 +1,10 @@
 [user]
-    name = AhmedOsman101                # Sets the username for Git commits
+    name = AhmedOsman101                 # Sets the username for Git commits
     email = ahmad.ali.othman@outlook.com # Sets the email address for Git commits
 
 [core]
     editor = hx                        # Specifies the text editor for Git operations (e.g., commit messages)
     pager = delta                      # Sets the pager program for viewing Git output (e.g., diffs, logs)
-    # more cpu, less network usage
     compression = 9                    # Sets the compression level for Git objects (0-9, 9 is maximum)
     whitespace = error                 # Treats trailing whitespace or other whitespace issues as errors
     preloadindex = true                # Enables preloading of the index for improved performance
@@ -18,8 +17,8 @@
     insteadof = "gh:"                  # Replaces "gh:" with the full GitHub URL for any GitHub repository
 
 [status]
-    branch = false                    # Disables showing branch information
-    showStash = false                 # Disables showing stash information
+    branch = false                     # Disables showing branch information
+    showStash = false                  # Disables showing stash information
     showUntrackedFiles = all           # Shows all untracked files and directories, including ignored ones 
 
 [push]
@@ -29,7 +28,7 @@
 
 [pull]
     default = current                  # Sets the default pull behavior to pull into the current branch
-    rebase = true                     # Performs a rebase instead of a merge when pulling changes 
+    rebase = true                      # Performs a rebase instead of a merge when pulling changes 
 
 [rebase]
     autostash = true                   # Automatically stashes local changes before rebasing and reapplies them after
@@ -38,6 +37,7 @@
 [log]
     abbrevCommit = true                # Displays abbreviated commit hashes in logs
     graphColors = blue,yellow,cyan,magenta,green,red # Sets colors for the commit graph in logs
+
 
 [color "decorate"]
     HEAD = red                         # Colors the HEAD reference in red
@@ -71,7 +71,7 @@
     # side-by-side = true
     dark = true                        # Enables dark mode for the delta diff viewer
     line-numbers = true                # Shows line numbers in delta output
-    syntax-theme = "OneHalfDark"       # Sets the syntax highlighting theme for delta to "OneHalfDark"
+    syntax-theme = "Catppuccin Mocha"  # Sets the syntax highlighting theme for delta
 
 [merge]
     conflictstyle = diff3              # Uses the diff3 style to display merge conflicts (shows base, local, and remote)
