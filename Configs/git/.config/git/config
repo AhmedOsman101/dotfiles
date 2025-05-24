@@ -1,5 +1,5 @@
 [user]
-    name = AhmedOsman101                 # Sets the username for Git commits
+    name = "Ahmad Othman"                 # Sets the username for Git commits
     email = ahmad.ali.othman@outlook.com # Sets the email address for Git commits
 
 [core]
@@ -24,7 +24,7 @@
 [push]
     default = current                  # Sets the default push behavior to push the current branch
     autoSetupRemote = true             # Automatically configures remote tracking when pushing a new branch
-    followTags = true                  # Pushes annotated tags along with branches
+    followTags = false                 # Pushes annotated tags along with branches (disabled)
 
 [pull]
     default = current                  # Sets the default pull behavior to pull into the current branch
