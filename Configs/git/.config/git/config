@@ -35,7 +35,7 @@
     missingCommitsCheck = warn         # Warns if commits are missing during a rebase
 
 [log]
-    abbrevCommit = true                # Displays abbreviated commit hashes in logs
+    abbrevCommit = false               # Display abbreviated commit hashes in logs
     graphColors = blue,yellow,cyan,magenta,green,red # Sets colors for the commit graph in logs
 
 
