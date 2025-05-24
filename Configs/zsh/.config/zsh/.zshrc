@@ -165,8 +165,11 @@ fi
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 
+# ---- rtx (asdf clone) ---- #
+eval "$($HOME/.local/share/cargo/bin/rtx activate zsh)"
+
 # --- git aliases (override) --- #
+unalias g
 alias gca='git-commit --ai'
 alias glg="git log --all --graph --pretty=format:'%C(magenta)%h%C(default) %an %C(yellow)%ar%C(auto) %D%n%s%n'"
 
-eval "$(~/.local/share/cargo/bin/rtx activate zsh)"
