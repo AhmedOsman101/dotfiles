@@ -1,0 +1,79 @@
+{
+    "com.github.ulauncher.ulauncher-emoji": {
+        "id": "com.github.ulauncher.ulauncher-emoji",
+        "url": "https://github.com/Ulauncher/ulauncher-emoji",
+        "updated_at": "2025-05-26T12:59:59.860932",
+        "last_commit": "827cfe5e1d2f89f742f811f981759787b0654fa9",
+        "last_commit_time": "2023-11-04T18:37:13"
+    },
+    "com.github.mikebarkmin.ulauncher-obsidian": {
+        "id": "com.github.mikebarkmin.ulauncher-obsidian",
+        "url": "https://github.com/mikebarkmin/ulauncher-obsidian",
+        "updated_at": "2025-05-26T13:04:29.318002",
+        "last_commit": "a419cdc5e73453e4b284bb4905448ca60e4a3864",
+        "last_commit_time": "2023-09-12T10:42:25"
+    },
+    "com.github.brpaz.ulauncher-devdocs": {
+        "id": "com.github.brpaz.ulauncher-devdocs",
+        "url": "https://github.com/brpaz/ulauncher-devdocs",
+        "updated_at": "2025-05-26T13:08:03.862946",
+        "last_commit": "491bb5a5ccef082c5f6623db5f5676a8ab481144",
+        "last_commit_time": "2022-04-03T10:50:15"
+    },
+    "com.github.pywkm.ulauncher-spotify": {
+        "id": "com.github.pywkm.ulauncher-spotify",
+        "url": "https://github.com/pywkm/ulauncher-spotify",
+        "updated_at": "2025-05-26T13:09:46.355071",
+        "last_commit": "89d9b02316aaccea0d70b458bb97b3976287f03e",
+        "last_commit_time": "2020-02-17T16:20:21"
+    },
+    "com.github.zensoup.ulauncher-unicode": {
+        "id": "com.github.zensoup.ulauncher-unicode",
+        "url": "https://github.com/zensoup/ulauncher-unicode",
+        "updated_at": "2025-05-26T13:12:17.868838",
+        "last_commit": "0ad36c00a888e687b4bfbf76f266f1000040b337",
+        "last_commit_time": "2019-07-11T06:53:31"
+    },
+    "com.github.dhelmr.ulauncher-tldr": {
+        "id": "com.github.dhelmr.ulauncher-tldr",
+        "url": "https://github.com/dhelmr/ulauncher-tldr",
+        "updated_at": "2025-05-26T13:29:39.723576",
+        "last_commit": "2e5904451bf89dfa155280dfb6fa3d45ed4cab4c",
+        "last_commit_time": "2023-07-29T11:06:30"
+    },
+    "com.github.brpaz.ulauncher-awesomelists": {
+        "id": "com.github.brpaz.ulauncher-awesomelists",
+        "url": "https://github.com/brpaz/ulauncher-awesomelists",
+        "updated_at": "2025-05-26T13:35:00.063633",
+        "last_commit": "a48a0b11cef4c2fb5375b11834ce0378be2d15d3",
+        "last_commit_time": "2021-12-12T15:44:13"
+    },
+    "com.github.sergius02.ulauncher-colorconverter": {
+        "id": "com.github.sergius02.ulauncher-colorconverter",
+        "url": "https://github.com/sergius02/ulauncher-colorconverter",
+        "updated_at": "2025-05-26T13:54:27.645124",
+        "last_commit": "2d5e2bc17e89f1f1dc561f73e68ea574e0be844a",
+        "last_commit_time": "2020-12-06T20:59:43"
+    },
+    "com.github.ahmedosman101.ulauncher-aurman-plugin": {
+        "id": "com.github.ahmedosman101.ulauncher-aurman-plugin",
+        "url": "https://github.com/AhmedOsman101/ulauncher-aurman-plugin",
+        "updated_at": "2025-05-26T14:16:05.403819",
+        "last_commit": "a47d752ab2509487405739b9a68c5a247293cf56",
+        "last_commit_time": "2025-05-26T11:15:44"
+    },
+    "com.github.ahmedosman101.ulauncher-qalc": {
+        "id": "com.github.ahmedosman101.ulauncher-qalc",
+        "url": "https://github.com/AhmedOsman101/ulauncher-qalc",
+        "updated_at": "2025-05-26T14:25:45.345325",
+        "last_commit": "0c93f755378fa64b319f9643e212330d9eec9a79",
+        "last_commit_time": "2025-05-26T11:25:23"
+    },
+    "com.github.ahmedosman101.ulauncher-youtube-search": {
+        "id": "com.github.ahmedosman101.ulauncher-youtube-search",
+        "url": "https://github.com/AhmedOsman101/ulauncher-youtube-search",
+        "updated_at": "2025-05-26T14:57:49.202690",
+        "last_commit": "e1a08166b0a393de914d32459c02103b325825dc",
+        "last_commit_time": "2025-05-26T11:56:58"
+    }
+}
