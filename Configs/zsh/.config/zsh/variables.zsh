@@ -53,6 +53,9 @@ export BUN_INSTALL="$HOME/.bun"
 export BIOME_CONFIG_PATH="$XDG_CONFIG_HOME/biome.jsonc"
 export BIOME_BINARY="$(which biome)"
 
+# ---- Browser ---- #
+export BROWSER="zen-browser"
+
 # ---- Cargo ---- #
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 
