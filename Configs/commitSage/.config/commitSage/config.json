@@ -8,7 +8,7 @@
     "model": "gemini-2.0-flash-exp"
   },
   "ollama": {
-    "model": "llama3.2",
+    "model": "qwen2.5-coder:0.5b",
     "baseUrl": "http://localhost:11434"
   },
   "codestral": {
