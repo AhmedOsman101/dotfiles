@@ -26,7 +26,7 @@ export AUTO_NOTIFY_IGNORE=(
   "flameshot" "frogmouth" "vi" "ncdu"
   "nu" "pnpm dev" "npm dev" "editwhich"
   "n" "tempedit" "bun run" "bunx"
-  "sudoedit" "distrobox" "db"
+  "sudoedit" "distrobox" "db" "repeat-it"
 )
 export AUTO_NOTIFY_THRESHOLD=30
 export AUTO_NOTIFY_ICON_SUCCESS="/usr/share/icons/auto-notify-zsh/success.png"
@@ -34,7 +34,8 @@ export AUTO_NOTIFY_ICON_FAILURE="/usr/share/icons/auto-notify-zsh/fail.png"
 
 # ---- Android ---- #
 export ANDROID_USER_HOME="${XDG_DATA_HOME}/android"
-export ANDROID_HOME="${XDG_DATA_HOME}/android/sdk"
+export ANDROID_SDK_ROOT="/opt/android-sdk"
+export ANDROID_HOME="${ANDROID_SDK_ROOT}"
 
 # ---- Asdf ---- #
 export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
@@ -255,6 +256,10 @@ PATH="$PATH:$HOME/.local/share/gem/ruby/3.4.0/bin"   # Ruby gems
 PATH="$PATH:$XDG_CONFIG_HOME/composer/vendor/bin"    # Composer packages
 PATH="$PATH:$CARGO_HOME/bin"                         # Cargo packages
 PATH="$PATH:${ASDF_DATA_DIR}/shims"                  # Asdf shims
+PATH="$PATH:${ANDROID_HOME}/platform-tools"          # Android SDK platform tools (adb, fastboot)
+PATH="$PATH:${ANDROID_HOME}/tools"                   # Android SDK legacy tools (android, monitor, etc)
+PATH="$PATH:${ANDROID_HOME}/tools/bin"               # Android SDK command-line tools
+PATH="$PATH:${ANDROID_HOME}/emulator"                # Android SDK emulator binaries
 
 # Define directories to exclude
 EXCLUDE_DIRS=(
