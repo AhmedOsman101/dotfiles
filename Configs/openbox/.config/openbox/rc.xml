@@ -689,8 +689,8 @@
     <!-- Rofi -->
     <keybind key="A-F1">
       <action name="Execute">
-        <command>ulauncher</command>
-        <!-- <command>rofi-launcher</command> -->
+        <!-- <command>ulauncher</command> -->
+        <command>rofi-launcher</command>
       </action>
     </keybind>
     <keybind key="W-n">
