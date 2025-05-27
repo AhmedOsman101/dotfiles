@@ -34,6 +34,7 @@ export AUTO_NOTIFY_ICON_FAILURE="/usr/share/icons/auto-notify-zsh/fail.png"
 
 # ---- Android ---- #
 export ANDROID_USER_HOME="${XDG_DATA_HOME}/android"
+export ANDROID_HOME="${XDG_DATA_HOME}/android/sdk"
 
 # ---- Asdf ---- #
 export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
