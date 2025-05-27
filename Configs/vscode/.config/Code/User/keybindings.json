@@ -112,5 +112,19 @@
     "key": "ctrl+shift+alt+'",
     "command": "-locateThisDocument.openWorkspaceRootFolderInFileExplorer",
     "when": "workspaceFolderCount == '1'"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "-editor.action.inlineDiffs.acceptPartialEdit",
+    "when": "editorHasPromptBar && editorPromptBarFocused"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "-editor.action.inlineDiffs.acceptPartialEdit",
+    "when": "editorTextFocus && @inlineDiffs.acceptPartialEdit.isActiveEditorWithDiffs"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "-aichat.newfollowupaction"
   }
 ]
