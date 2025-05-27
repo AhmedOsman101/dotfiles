@@ -111,3 +111,8 @@ alias goodnight='sync && sudo systemctl poweroff'
 
 # ---- Rtx (asdf rust clone) ---- #
 alias asdf='rtx'
+
+# ---- PNPM ---- #
+alias pnpx='pnpm dlx'
+alias npx='pnpm dlx'
+
