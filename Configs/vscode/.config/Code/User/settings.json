@@ -196,7 +196,7 @@
     "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
   },
   "[blade]": {
-    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+    "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
   },
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "[powershell]": {
