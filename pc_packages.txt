@@ -3,6 +3,7 @@ acpi
 adw-gtk-theme
 alacritty
 alpaca-ai
+android-platform
 apparmor
 arch-wiki-docs
 archcraft-arandr
@@ -117,7 +118,9 @@ bison
 blueman
 bluez
 bluez-utils
+blurhash-cli
 bolt
+boost
 breeze-gtk
 brltty
 bruno-bin
@@ -214,6 +217,7 @@ glfw
 global
 glow
 gnome-boxes
+gnome-calculator
 gnome-chess
 gnome-keyring
 gnome-software
