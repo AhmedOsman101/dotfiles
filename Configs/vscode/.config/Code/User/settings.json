@@ -157,18 +157,18 @@
     "editor.inlayHints.enabled": "on"
   },
   "files.exclude": {
-    "**/vendor/": false,
-    "**/node_modules": false,
-    "**/dist": false,
-    ".phpunit.result.cache": false,
-    "vendor": false,
-    "node_modules": false,
-    "dist": false,
-    "**/.trunk/*actions/": false,
-    "**/.trunk/*logs/": false,
-    "**/.trunk/*notifications/": false,
-    "**/.trunk/*out/": false,
-    "**/.trunk/*plugins/": false
+    "**/vendor/": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    ".phpunit.result.cache": true,
+    "vendor": true,
+    "node_modules": true,
+    "dist": true,
+    "**/.trunk/*actions/": true,
+    "**/.trunk/*logs/": true,
+    "**/.trunk/*notifications/": true,
+    "**/.trunk/*out/": true,
+    "**/.trunk/*plugins/": true
   },
   "files.watcherExclude": {
     "**/vendor/": true,
@@ -364,8 +364,8 @@
   "php.format.rules.openBraceOnNewLineForAnonymousClasses": true,
   "php.format.rules.openBraceOnNewLineForFunctions": false,
   "php.format.rules.openBraceOnNewLineForLambdas": false,
-  "php.format.rules.openBraceOnNewLineForNamespaces": true,
-  "php.format.rules.openBraceOnNewLineForTypes": true,
+  "php.format.rules.openBraceOnNewLineForNamespaces": false,
+  "php.format.rules.openBraceOnNewLineForTypes": false,
   "intelephense.phpdoc.useFullyQualifiedNames": true,
   "intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": true,
   "intelephense.maxMemory": 512,
@@ -385,9 +385,9 @@
   "search.exclude": {
     // Hide everything in /vendor, except the "laravel" and "livewire" folder.
     // "**/vendor/{[^l],?[^ai]}*": true,
-    "**/vendor/": true,
-    "**/node_modules": true,
-    "**/dist": true,
+    "**/vendor/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
     "**/_ide_helper.php": true,
     "**/composer.lock": true,
     "**/package-lock.json": true,
@@ -535,7 +535,7 @@
   "php.format.rules.spaceBeforeParenthesesInControlStatements": true,
   "php.format.rules.alignConsecutiveAssignments": false,
   "php.format.rules.alignConstants": true,
-  "php.format.rules.alignEnumCases": false,
+  "php.format.rules.alignEnumCases": true,
   "php.format.rules.alignMatchArmBodies": true,
   "php.format.rules.arrayInitializersAlignKeyValuePairs": true,
   "php.format.rules.arrayInitializersNewLineAfterLastElement": true,
@@ -620,7 +620,6 @@
   "security.allowedUNCHosts": [
     "wsl.localhost"
   ],
-  "php.format.codeStyle": "K&R",
   "editor.unicodeHighlight.nonBasicASCII": false,
   "codesnap.transparentBackground": true,
   "redhat.telemetry.enabled": false,
@@ -1019,4 +1018,10 @@
   },
   "editor.suggest.preview": false,
   "inlineFold.unfoldOnLineSelect": true,
+  "php.docblock.colorMode": "simple",
+  "php.format.codeStyle": "K&R",
+  "php.format.rules.spaceWithinArrayInitilizersParens": false,
+  "php.format.rules.arrayInitializersWrap": "onEveryItem",
+  "editor.experimental.preferTreeSitter.ini": true,
+  "editor.experimentalEditContextEnabled": true,
 }
