@@ -27,6 +27,7 @@ export AUTO_NOTIFY_IGNORE=(
   "nu" "pnpm dev" "npm dev" "editwhich"
   "n" "tempedit" "bun run" "bunx"
   "sudoedit" "distrobox" "db" "repeat-it"
+  "composer"
 )
 export AUTO_NOTIFY_THRESHOLD=30
 export AUTO_NOTIFY_ICON_SUCCESS="/usr/share/icons/auto-notify-zsh/success.png"
