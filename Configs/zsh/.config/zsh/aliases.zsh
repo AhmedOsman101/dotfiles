@@ -116,3 +116,5 @@ alias asdf='rtx'
 alias pnpx='pnpm dlx'
 alias npx='pnpm dlx'
 
+# ---- Standard-version ---- #
+alias stdver='standard-version'
