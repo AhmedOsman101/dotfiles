@@ -85,9 +85,8 @@
 		"scope": "typescript,vue",
 		"prefix": "v-iprops",
 		"body": [
-			"interface PageProps {",
-			"  $1: $2;",
-			"  [key: string]: any;",
+			"interface IProps {",
+			"\t$1: $2;",
 			"}",
 			""
 		],
