@@ -109,6 +109,7 @@ bash-completion
 bash-language-server
 bat
 bat-extras
+bats
 bauh
 bcachefs-tools
 betterlockscreen
