@@ -136,6 +136,7 @@
   "onecentlin.laravel5-snippets",
   "patbenatar.advanced-new-file",
   "pedrohenrique-ql.regex-match",
+  "pflannery.vscode-versionlens",
   "pgl.laravel-jump-controller",
   "pranaygp.vscode-css-peek",
   "prisma.prisma",
@@ -188,5 +189,6 @@
   "wix.vscode-import-cost",
   "xabikos.javascriptsnippets",
   "xshrim.txt-syntax",
+  "yaoyuanzhang.version-highlight",
   "yoavbls.pretty-ts-errors"
 ]
