@@ -118,3 +118,6 @@ alias npx='pnpm dlx'
 
 # ---- Standard-version ---- #
 alias stdver='standard-version'
+
+# ---- Release Please ---- #
+alias rp='release-please'
