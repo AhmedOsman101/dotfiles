@@ -173,3 +173,4 @@ unalias g
 alias gca='git-commit --ai'
 alias glg="git log --all --graph --pretty=format:'%C(magenta)%h%C(default) %an %C(yellow)%ar%C(auto) %D%n%s%n'"
 alias gc="git clone"
+alias glc='git pull origin $(git_current_branch)'
