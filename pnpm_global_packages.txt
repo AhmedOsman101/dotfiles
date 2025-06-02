@@ -24,3 +24,4 @@ quicktype
 medium-to-markdown
 esbuild
 standard-version
+release-please

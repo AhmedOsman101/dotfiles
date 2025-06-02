@@ -488,8 +488,8 @@ rofi-spotify-git
 rofimoji
 rp-pppoe
 rsync
-ruby
-rubygems
+rubocop
+ruby-rubocop-performance
 ruff
 rxvt-unicode-terminfo
 samba
