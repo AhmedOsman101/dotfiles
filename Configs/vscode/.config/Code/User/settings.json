@@ -19,7 +19,6 @@
   "problems.showCurrentInStatus": true,
   "auto-close-tag.fullMode": true,
   "auto-close-tag.insertSpaceBeforeSelfClosingTag": true,
-  "blade.format.enable": true,
   "bladeFormatter.format.indentInnerHtml": true,
   "bladeFormatter.format.noMultipleEmptyLines": true,
   "bladeFormatter.format.noPhpSyntaxCheck": true,
@@ -30,8 +29,6 @@
   "cssrem.vw": true,
   "emmet.showSuggestionsAsSnippets": true,
   "git.fetchOnPull": true,
-  "gitlens.ai.experimental.provider": "openai",
-  "gitlens.ai.experimental.openai.model": "gpt-3.5-turbo",
   "liveServer.settings.host": "localhost",
   "merge-conflict.autoNavigateNextConflict.enabled": true,
   "php.format.rules.addCommaAfterLastArrayElement": true,
@@ -58,8 +55,6 @@
     "java": "cd $dir; javac $fileName ; java $fileNameWithoutExt",
     "c": "cd $dirWithoutTrailingSlash; clear; clangc $fileName",
     "cpp": "cd $dirWithoutTrailingSlash; clear; cppc $fileName",
-    // "c": "cd $dirWithoutTrailingSlash; gcc $fileName -o $fileNameWithoutExt; clear; ./$fileNameWithoutExt; rm -f ./$fileNameWithoutExt",
-    // "cpp": "clear; cd $dirWithoutTrailingSlash; g++ $fileName -o $fileNameWithoutExt; ./$fileNameWithoutExt; rm -f ./$fileNameWithoutExt",
     "zig": "zig run",
     "objective-c": "cd $dir; gcc -framework Cocoa $fileName -o $fileNameWithoutExt ; $dir$fileNameWithoutExt",
     "php": "cd $dir; clear; php $fileName",
@@ -195,9 +190,6 @@
   "[php]": {
     "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
   },
-  "[blade]": {
-    "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
-  },
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "[powershell]": {
     "editor.defaultFormatter": "ms-vscode.powershell"
@@ -248,7 +240,8 @@
     "mkconfig": "shellscript",
     "mkconf": "shellscript",
     "*.desktop": "ini",
-    "dunstrc": "ini"
+    "dunstrc": "ini",
+    "*.mdc": "markdown"
   },
   "markdown.preview.typographer": true,
   "markdown-preview-enhanced.mathRenderingOnlineService": "https://latex.codecogs.com/png.latex",
@@ -625,7 +618,7 @@
   "redhat.telemetry.enabled": false,
   "files.autoSave": "afterDelay",
   "gitlens.hovers.currentLine.over": "line",
-  "gitlens.currentLine.format": "${authorNotYou}${agoOrDate} ${message}",
+  "gitlens.currentLine.format": "${authorNotYou} ${agoOrDate} ${message}",
   "gitlens.currentLine.uncommittedChangesFormat": "✏️ ${ago}",
   "gitlens.statusBar.enabled": false,
   "gitlens.changes.locations": [
@@ -1004,7 +997,7 @@
   "vue.server.hybridMode": false,
   "svelte.enable-ts-plugin": true,
   "[svelte]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "svelte.svelte-vscode"
   },
   "cody.suggestions.mode": "off",
   "[kotlin]": {
@@ -1024,4 +1017,10 @@
   "php.format.rules.arrayInitializersWrap": "onEveryItem",
   "editor.experimental.preferTreeSitter.ini": true,
   "editor.experimentalEditContextEnabled": true,
+  "emmet.triggerExpansionOnTab": true, // enable tab to expanse emmet tags
+  "blade.format.enable": true, // if you would like to enable blade format
+  "[blade]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
+  }
 }
