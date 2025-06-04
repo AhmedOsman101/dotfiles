@@ -10,7 +10,6 @@ PFILE="$DIR/.panel"
 launch_bar() {
   CPANEL="$(cat "$PFILE")"
 
-  sed "s|sys_network_interface = .*|sys_network_interface = $(net-interface)|g" -i "$DIR/system.ini"
   if [[ "$CPANEL" == 'polybar' ]]; then
     bash "$DIR/polybar.sh"
   elif [[ "$CPANEL" == 'tint2' ]]; then
