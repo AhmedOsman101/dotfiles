@@ -25,8 +25,7 @@ formatter = { command = "biome", args = [
   "--fix",
   "--config-path",
   "/home/othman/.config/biome.jsonc",
-  "--stdin-file-path",
-  "file.json",
+  "--stdin-file-path=file.json",
 ] }
 language-servers = [
   { name = "vscode-json-language-server", except-features = [
@@ -46,8 +45,7 @@ formatter = { command = "biome", args = [
   "--fix",
   "--config-path",
   "/home/othman/.config/biome.jsonc",
-  "--stdin-file-path",
-  "file.ts",
+  "--stdin-file-path=file.ts",
 ] }
 language-servers = [
   "deno-lsp",
@@ -68,8 +66,7 @@ formatter = { command = "biome", args = [
   "--fix",
   "--config-path",
   "/home/othman/.config/biome.jsonc",
-  "--stdin-file-path",
-  "file.js",
+  "--stdin-file-path=file.js",
 ] }
 language-servers = [
   "deno-lsp",
@@ -91,8 +88,7 @@ formatter = { command = "biome", args = [
   "--fix",
   "--config-path",
   "/home/othman/.config/biome.jsonc",
-  "--stdin-file-path",
-  "file.jsx",
+  "--stdin-file-path=file.jsx",
 ] }
 language-servers = [
   "deno-lsp",
@@ -115,8 +111,7 @@ formatter = { command = "biome", args = [
   "--fix",
   "--config-path",
   "/home/othman/.config/biome.jsonc",
-  "--stdin-file-path",
-  "file.tsx",
+  "--stdin-file-path=file.tsx",
 ] }
 language-servers = [
   # { name = "typescript-language-server", except-features = [
