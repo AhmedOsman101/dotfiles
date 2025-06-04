@@ -3,7 +3,7 @@
 ## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
-CARD="$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)"
+CARD="$(light -L 2>&1 | grep -v "No backlight" | grep 'backlight' | head -n1 | cut -d'/' -f3)"
 INTERFACE="$(net-interface)"
 BAT="$(acpi -b)"
 RFILE="$DIR/.module"
@@ -22,6 +22,8 @@ fix_modules() {
 
   if [[ "$INTERFACE" == e* ]]; then
     sed -i -e 's/network/ethernet/g' "$DIR"/config.ini
+  else
+    sed -i -e 's/ethernet/network/g' "$DIR"/config.ini
   fi
 }
 
