@@ -35,6 +35,12 @@ launch_bar() {
   # Wait until the processes have been shut down
   while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
+  if [[ "$INTERFACE" == e* ]]; then
+    sed -i -e 's/network/ethernet/g' "$DIR"/config.ini
+  else
+    sed -i -e 's/ethernet/network/g' "$DIR"/config.ini
+  fi
+
   # Launch the bar
   for mon in $(polybar --list-monitors | cut -d":" -f1); do
     MONITOR=$mon polybar -q main -c "$DIR"/config.ini &
