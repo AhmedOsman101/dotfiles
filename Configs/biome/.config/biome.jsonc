@@ -15,9 +15,10 @@
       "!**/prisma/**",
       "!**/dist/**",
       "!**/.git/**",
-      "!**/.vscode/**",
+      "**/.vscode/**",
       "!**/*.vue",
-      "!**/deno.json",
+      "!**/*.svelte",
+      "**/deno.json",
       "!**/fresh.gen.ts"
     ]
   },
@@ -43,7 +44,6 @@
     "lineWidth": 80,
     "bracketSameLine": true,
     "attributePosition": "multiline",
-    "includes": ["**", "!**/*.vue"],
     "bracketSpacing": true
   },
   "linter": {
@@ -71,7 +71,10 @@
         "useImportType": "error",
         "useExportType": "error",
         "noUselessElse": "error",
-        "useShorthandFunctionType": "error"
+        "useShorthandFunctionType": "error",
+        // "useNumericLiterals": "error",
+        "noCommaOperator": "error",
+        "noArguments": "error"
       },
       "a11y": {
         "useButtonType": "off"
@@ -90,10 +93,7 @@
         "noThisInStatic": {
           "fix": "safe",
           "level": "off"
-        },
-        "useNumericLiterals": "error",
-        "noCommaOperator": "error",
-        "noArguments": "error"
+        }
       },
       "suspicious": {
         "noImplicitAnyLet": "warn",
@@ -199,18 +199,5 @@
     "linter": {
       "enabled": true
     }
-  },
-  "overrides": [
-    {
-      "includes": ["*.svelte", "*.astro", "*.vue"],
-      "linter": {
-        "rules": {
-          "style": {
-            "useConst": "off",
-            "useImportType": "off"
-          }
-        }
-      }
-    }
-  ]
+  }
 }
