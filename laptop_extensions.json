@@ -41,7 +41,6 @@
   "cweijan.vscode-database-client2",
   "dart-code.dart-code",
   "dart-code.flutter",
-  "davideladisa.commitgroq",
   "dbaeumer.vscode-eslint",
   "deerawan.vscode-faker",
   "denoland.vscode-deno",
@@ -96,7 +95,6 @@
   "kamikillerto.vscode-colorize",
   "kisstkondoros.vscode-gutter-preview",
   "kristophbarbour.splunk-linter",
-  "kuscamara.remove-unused-imports",
   "laurencebahiirwa.deno-std-lib-snippets",
   "llvm-vs-code-extensions.vscode-clangd",
   "mads-hartmann.bash-ide-vscode",
@@ -172,7 +170,6 @@
   "tomoki1207.pdf",
   "tomoyukim.vscode-mermaid-editor",
   "tootone.org-mode",
-  "trunk.io",
   "twxs.cmake",
   "usernamehw.errorlens",
   "vincaslt.highlight-matching-tag",
@@ -185,6 +182,5 @@
   "wix.vscode-import-cost",
   "xabikos.javascriptsnippets",
   "xshrim.txt-syntax",
-  "yoavbls.pretty-ts-errors",
-  "zhuangtongfa.material-theme"
+  "yoavbls.pretty-ts-errors"
 ]
