@@ -15,16 +15,15 @@
       "!**/prisma/**",
       "!**/dist/**",
       "!**/.git/**",
-      "**/.vscode/**",
       "!**/*.vue",
       "!**/*.svelte",
-      "**/deno.json",
       "!**/fresh.gen.ts"
     ]
   },
   "assist": {
     "enabled": true,
     "actions": {
+      "recommended": true,
       "source": {
         "recommended": true,
         "organizeImports": "on",
@@ -44,7 +43,8 @@
     "lineWidth": 80,
     "bracketSameLine": true,
     "attributePosition": "multiline",
-    "bracketSpacing": true
+    "bracketSpacing": true,
+    "expand": "auto"
   },
   "linter": {
     "enabled": true,
@@ -77,7 +77,19 @@
         "useNodejsImportProtocol": {
           "fix": "safe",
           "level": "error"
-        }
+        },
+        "noEnum": "warn",
+        "noExportedImports": "on",
+        "useArrayLiterals": "info",
+        "useAtIndex": "info",
+        "useConsistentArrayType": "info",
+        "useFilenamingConvention": "info",
+        "useForOf": "info",
+        "useFragmentSyntax": "warn",
+        "useNamingConvention": "on",
+        "useShorthandAssign": "info",
+        "useThrowOnlyError": "on",
+        "useTrimStartEnd": "on"
       },
       "a11y": {
         "useButtonType": "off"
@@ -85,7 +97,28 @@
       "correctness": {
         "noUnusedFunctionParameters": "warn",
         "noUnusedImports": "warn",
-        "noUnusedVariables": "warn"
+        "noUnusedVariables": "warn",
+        "noConstAssign": "error",
+        "noConstantMathMinMaxClamp": "on",
+        "noInvalidBuiltinInstantiation": "on",
+        "noInvalidConstructorSuper": "error",
+        "noInvalidDirectionInLinearGradient": "on",
+        "noInvalidGridAreas": "on",
+        "noInvalidUseBeforeDeclaration": "error",
+        "noSelfAssign": "on",
+        "noUndeclaredDependencies": "on",
+        "noUndeclaredVariables": "error",
+        "noUnreachable": "warn",
+        "noUnreachableSuper": "warn",
+        "noUnusedLabels": "error",
+        "noUnusedPrivateClassMembers": "info",
+        "noVoidTypeReturn": "error",
+        "useHookAtTopLevel": "error",
+        "useIsNan": "warn",
+        "useJsxKeyInIterable": "warn",
+        "useValidTypeof": "error",
+        "useYield": "warn",
+        "useValidForDirection": "info"
       },
       "complexity": {
         "noUselessCatch": "warn",
@@ -95,8 +128,17 @@
         "noStaticOnlyClass": "off",
         "noThisInStatic": {
           "fix": "safe",
-          "level": "off"
-        }
+          "level": "warn"
+        },
+        "noForEach": "warn",
+        "noUselessContinue": "info",
+        "noUselessRename": "on",
+        "noUselessSwitchCase": "info",
+        "noUselessLabel": "on",
+        "noEmptyTypeParameters": "on",
+        "noUselessTernary": "info",
+        "noUselessUndefinedInitialization": "info",
+        "useWhile": "info"
       },
       "suspicious": {
         "noImplicitAnyLet": "warn",
@@ -107,13 +149,39 @@
             "ignoreNull": false
           }
         },
-        "noAssignInExpressions": "off"
+        "noAssignInExpressions": "off",
+        "noAsyncPromiseExecutor": "warn",
+        "noCompareNegZero": "error",
+        "noDuplicateCase": "warn",
+        "noDuplicateElseIf": "on",
+        "noDuplicateObjectKeys": "on",
+        "noExplicitAny": "info",
+        "noExtraNonNullAssertion": "warn",
+        "noFallthroughSwitchClause": "warn",
+        "noGlobalIsFinite": "on",
+        "noGlobalIsNan": "on",
+        "noIrregularWhitespace": "on",
+        "noLabelVar": "on",
+        "noMisleadingInstantiator": "on",
+        "noMisrefactoredShorthandAssign": "on",
+        "noRedundantUseStrict": "on",
+        "noSelfCompare": "on",
+        "noSuspiciousSemicolonInJsx": "on",
+        "noTemplateCurlyInString": "on",
+        "noVar": "on",
+        "useAwait": "warn",
+        "useDefaultSwitchClauseLast": "error",
+        "useErrorMessage": "on",
+        "useGetterReturn": "on",
+        "useIsArray": "error",
+        "useNumberToFixedDigitsArgument": "info",
+        "useStrictMode": "info"
       },
       "nursery": {
         "noBitwiseOperators": "off",
         "useSortedClasses": {
           "fix": "safe",
-          "level": "info",
+          "level": "warn",
           "options": {
             "attributes": [
               "classList",
@@ -124,7 +192,7 @@
         },
         "noAwaitInLoop": "info",
         "noConstantBinaryExpression": "info",
-        "noFloatingPromises": "info",
+        "noFloatingPromises": "warn",
         "noImportCycles": "error",
         "noTsIgnore": "on",
         "useConsistentObjectDefinition": {
@@ -132,7 +200,23 @@
           "options": {
             "syntax": "shorthand"
           }
-        }
+        },
+        "noNestedComponentDefinitions": "info",
+        "noShadow": "on",
+        "noUnresolvedImports": "error",
+        "noUselessEscapeInString": "warn",
+        "noUselessUndefined": "on",
+        "useAdjacentGetterSetter": "info",
+        "useConsistentResponse": "on",
+        "useExhaustiveSwitchCases": "on",
+        "useExportsLast": "warn",
+        "useIndexOf": "warn",
+        "useJsonImportAttribute": "warn",
+        "useNamingConvention": "on",
+        "useNumericSeparators": "info",
+        "useObjectSpread": "off",
+        "useSingleJsDocAsterisk": "on",
+        "useSymbolDescription": "warn"
       }
     }
   },
@@ -148,7 +232,10 @@
       "attributePosition": "auto",
       "bracketSpacing": true,
       "indentStyle": "space",
-      "indentWidth": 2
+      "indentWidth": 2,
+      "enabled": true,
+      "expand": "auto",
+      "lineEnding": "lf"
     }
   },
   "json": {
@@ -157,7 +244,9 @@
       "indentStyle": "space",
       "indentWidth": 2,
       "lineEnding": "lf",
-      "trailingCommas": "none"
+      "trailingCommas": "none",
+      "bracketSpacing": true,
+      "expand": "auto"
     },
     "parser": {
       "allowComments": true,
@@ -173,7 +262,8 @@
       "indentStyle": "space",
       "indentWidth": 2,
       "lineEnding": "lf",
-      "bracketSameLine": false
+      "bracketSameLine": false,
+      "selfCloseVoidElements": "always"
     }
   },
   "css": {
