@@ -92,6 +92,9 @@ export DOTNET_CLI_HOME="${XDG_DATA_HOME}/dotnet"
 # ---- Doas ---- #
 export DOAS_NOPASS="${XDG_CONFIG_HOME}/doas/doas.conf"
 
+# ---- Deno ---- #
+export DENO_UNSTABLE_SLOPPY_IMPORTS="true"
+
 #---- Editor ---- #
 export EDITOR="hx" # helix
 
