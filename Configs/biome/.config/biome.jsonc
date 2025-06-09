@@ -182,11 +182,7 @@
           "fix": "safe",
           "level": "warn",
           "options": {
-            "attributes": [
-              "classList",
-              "class",
-              "className"
-            ]
+            "attributes": ["classList", "class", "className"]
           }
         },
         "noAwaitInLoop": "info",
@@ -239,9 +235,7 @@
     "parser": {
       "unsafeParameterDecoratorsEnabled": true
     },
-    "globals": [
-      "Deno"
-    ]
+    "globals": ["Deno"]
   },
   "json": {
     "formatter": {
