@@ -202,7 +202,7 @@
         },
         "noNestedComponentDefinitions": "info",
         "noShadow": "on",
-        "noUnresolvedImports": "error",
+        "noUnresolvedImports": "off",
         "noUselessEscapeInString": "warn",
         "noUselessUndefined": "on",
         "useAdjacentGetterSetter": "info",
@@ -238,7 +238,10 @@
     },
     "parser": {
       "unsafeParameterDecoratorsEnabled": true
-    }
+    },
+    "globals": [
+      "Deno"
+    ]
   },
   "json": {
     "formatter": {
