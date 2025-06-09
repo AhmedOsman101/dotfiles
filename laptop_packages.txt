@@ -396,6 +396,7 @@ php-fpm
 php-gd
 php-mongodb
 php-odbc
+php-pear
 php-pgsql
 php-redis
 php-sodium
@@ -486,6 +487,7 @@ stockfish
 stow
 sublime-text-4
 sudo
+superhtml-bin
 svelte-language-server
 swtpm
 sx
