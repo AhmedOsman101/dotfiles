@@ -1,60 +1,42 @@
 {
   "comment": {
     "prefix": "com",
-    "body": [
-      "$LINE_COMMENT --- ${1:comment} --- $LINE_COMMENT",
-    ],
+    "body": ["$LINE_COMMENT --- ${1:comment} --- $LINE_COMMENT"],
     "description": "Adds a nicely formatted comment"
   },
   "Multiline Comment": {
     "prefix": "mcom",
-    "body": [
-      "$BLOCK_COMMENT_START",
-      "\t${0:comment}",
-      "$BLOCK_COMMENT_END",
-    ],
+    "body": ["$BLOCK_COMMENT_START", "\t${0:comment}", "$BLOCK_COMMENT_END"],
     "description": "Adds a nicely formatted multiline comment"
   },
   "Todo Comment": {
     "prefix": "todo",
-    "body": [
-      "$LINE_COMMENT TODO: $0"
-    ],
+    "body": ["$LINE_COMMENT TODO: $0"],
     "description": "Adds a nicely formatted todo comment"
   },
   "Fixme Comment": {
     "prefix": "fixme",
-    "body": [
-      "$LINE_COMMENT FIXME: $0"
-    ],
+    "body": ["$LINE_COMMENT FIXME: $0"],
     "description": "Adds a nicely formatted fixme comment"
   },
   "Alert Comment": {
     "prefix": "alert",
-    "body": [
-      "$LINE_COMMENT!: $0"
-    ],
+    "body": ["$LINE_COMMENT!: $0"],
     "description": "Adds a nicely formatted alert comment"
   },
   "Note Comment": {
     "prefix": "note",
-    "body": [
-      "$LINE_COMMENT NOTE: $0"
-    ],
+    "body": ["$LINE_COMMENT NOTE: $0"],
     "description": "Adds a nicely formatted note comment"
   },
   "Query Comment": {
     "prefix": "query",
-    "body": [
-      "$LINE_COMMENT ?: $0"
-    ],
+    "body": ["$LINE_COMMENT ?: $0"],
     "description": "Adds a nicely formatted query comment"
   },
   "Deprecated Comment": {
     "prefix": "deprecated",
-    "body": [
-      "$LINE_COMMENT DEPRECATED: $0"
-    ],
+    "body": ["$LINE_COMMENT DEPRECATED: $0"],
     "description": "Adds a nicely formatted deprecated comment"
-  },
+  }
 }

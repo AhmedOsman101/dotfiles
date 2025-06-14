@@ -1,102 +1,81 @@
 {
-	"function": {
-		"prefix": "fun",
-		"scope": "c,cpp,cs",
-		"body": [
-			"",
-			"${1:void} ${2:functionName}($3) {",
-			"\t${0://body}",
-			"}",
-		]
-	},
-	"arrow function": {
-		"prefix": "arrow",
-		"scope": "javascript,javascriptreact,typescript,typescriptreact",
-		"body": [
-			"($param) => {",
-			"\t${0://body}",
-			"}"
-		]
-	},
-	"const arrow function": {
-		"prefix": "carrow",
-		"scope": "javascript,javascriptreact,typescript,typescriptreact",
-		"body": [
-			"const $method = ($param) => {",
-			"\t${0://body}",
-			"}"
-		]
-	},
-	"const async arrow function": {
-		"prefix": "csarrow",
-		"scope": "javascript,javascriptreact,typescript,typescriptreact",
-		"body": [
-			"const $method = async ($param) => {",
-			"\t${0://body}",
-			"}"
-		]
-	},
-	"export const arrow function": {
-		"prefix": "xarrow",
-		"scope": "javascript,javascriptreact,typescript,typescriptreact",
-		"body": [
-			"export const $method = ($param) => {",
-			"\t${0://body}",
-			"}"
-		]
-	},
-	"export deafult const arrow function": {
-		"prefix": "darrow",
-		"scope": "javascript,javascriptreact,typescript,typescriptreact",
-		"body": [
-			"const $method = ($param) => {",
-			"\t${0://body}",
-			"}",
-			"",
-			"export default $method;",
-			""
-		]
-	},
-	"export deafult const async arrow function": {
-		"prefix": "dsarrow",
-		"scope": "javascript,javascriptreact,typescript,typescriptreact",
-		"body": [
-			"const $method = async ($param) => {",
-			"\t${0://body}",
-			"}",
-			"",
-			"export default $method;",
-			""
-		]
-	},
-	"export const async arrow function": {
-		"prefix": "xsarrow",
-		"scope": "javascript,javascriptreact,typescript,typescriptreact",
-		"body": [
-			"export const $method = async ($param) => {",
-			"\t${0://body}",
-			"}",
-			"",
-			"export default $method;",
-			""
-		]
-	},
-	"export deafult constant": {
-		"prefix": "dcon",
-		"scope": "javascript,javascriptreact,typescript,typescriptreact",
-		"body": [
-			"const $1 = $2;",
-			"",
-			"export default $1;",
-			""
-		]
-	},
-	"export constant": {
-		"prefix": "xcon",
-		"scope": "javascript,javascriptreact,typescript,typescriptreact",
-		"body": [
-			"export const $1 = $2;",
-			"",
-		]
-	}
+  "function": {
+    "prefix": "function",
+    "scope": "c,cpp,cs",
+    "body": ["", "${1:void} ${2:functionName}($3) {", "\t${0://body}", "}"]
+  },
+  "arrow function": {
+    "prefix": "arrow",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["(${1:param}) => {", "\t${0://body}", "}"]
+  },
+  "const arrow function": {
+    "prefix": "carrow",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["const ${1:method} = (${2:param}) => {", "\t${0://body}", "}"]
+  },
+  "const async arrow function": {
+    "prefix": "csarrow",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "const ${1:method} = async (${2:param}) => {",
+      "\t${0://body}",
+      "}"
+    ]
+  },
+  "export const arrow function": {
+    "prefix": "xarrow",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "export const ${1:method} = (${2:param}) => {",
+      "\t${0://body}",
+      "}"
+    ]
+  },
+  "export deafult const arrow function": {
+    "prefix": "darrow",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "const ${1:method} = (${2:param}) => {",
+      "\t${0://body}",
+      "}",
+      "",
+      "export default ${1:method};",
+      ""
+    ]
+  },
+  "export deafult const async arrow function": {
+    "prefix": "dsarrow",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "const ${1:method} = async (${2:param}) => {",
+      "\t${0://body}",
+      "}",
+      "",
+      "export default ${1:method};",
+      ""
+    ]
+  },
+  "export const async arrow function": {
+    "prefix": "xsarrow",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "export const ${1:method} = async (${2:param}) => {",
+      "\t${0://body}",
+      "}",
+      "",
+      "export default ${1:method};",
+      ""
+    ]
+  },
+  "export deafult constant": {
+    "prefix": "dcon",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["const ${1:var} = $2;", "", "export default ${1:var};", ""]
+  },
+  "export constant": {
+    "prefix": "xcon",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["export const $1 = $2;", ""]
+  }
 }

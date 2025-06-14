@@ -1,9 +1,26 @@
 {
-	"Basic input": {
-		"prefix": "input",
-		"body": [
-			"trim(fgets(STDIN));",
-		],
-		"description": "basic input"
-	}
+  "Basic input": {
+    "prefix": "input",
+    "body": ["trim(fgets(STDIN));"],
+    "description": "basic input"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for (${1:\\$i} = ${2:0}; ${3:condition}; ${1:\\$i}${4:++}) {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "For loop"
+  },
+  "Assoc Array": {
+    "prefix": "assoc",
+    "body": ["[", "\t\"${1:key}\" => ${2:value},", "]"],
+    "description": "Associative array"
+  },
+  "Key ... value": {
+    "prefix": "kv",
+    "body": ["\"${1:key}\" => ${2:value},"],
+    "description": "key => value statement"
+  }
 }

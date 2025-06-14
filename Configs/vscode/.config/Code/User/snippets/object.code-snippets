@@ -1,21 +1,14 @@
 {
-	"Object key ... value": {
-		"prefix": "obj",
-		"scope": "javascript,javascriptreact,typescript,typescriptreact,python",
-		"body": [
-			"{",
-			"\t\"${1:key}\": ${2:value},",
-			"\t\"${3:key}\": ${4:value},$5",
-			"}"
-		],
-		"description": "Object key: value block"
-	},
-	"Key ... value": {
-		"prefix": "kv",
-		"scope": "javascript,javascriptreact,typescript,typescriptreact,python",
-		"body": [
-			"\"${1:key}\": ${2:value},"
-		],
-		"description": "key => value statement"
-	},
+  "Object key ... value": {
+    "prefix": "obj",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,python",
+    "body": ["{", "\t\"${1:key}\": ${2:value},", "}"],
+    "description": "Object key: value block"
+  },
+  "Key ... value": {
+    "prefix": "kv",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,python",
+    "body": ["\"${1:key}\": ${2:value},"],
+    "description": "key => value statement"
+  }
 }
