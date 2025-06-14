@@ -5,7 +5,6 @@
     "description": "php echo shorthand"
   },
   "PHP Skeleton": {
-    "scope": "html",
     "prefix": "ps",
     "body": ["<?php", "", "declare(strict_types=1);", "", ""],
     "description": "php file with strict_types skeleton"
