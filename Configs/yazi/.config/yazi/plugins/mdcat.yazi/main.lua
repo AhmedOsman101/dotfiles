@@ -2,7 +2,7 @@ local M = {}
 
 function M:peek(job)
   local child = Command('mdcat')
-    :args({
+    :arg({
       '--columns',
       tostring(job.area.w),
       tostring(job.file.url),
