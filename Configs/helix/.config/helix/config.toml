@@ -2,11 +2,11 @@ theme = "github_dark"
 
 [editor]
 line-number = "relative"
-auto-format = true
+auto-format = false
 mouse = true
-continue-comments = false
+continue-comments = true
 color-modes = true
-completion-replace = true
+completion-replace = false
 true-color = true
 bufferline = "always"
 end-of-line-diagnostics = "hint"
@@ -79,17 +79,37 @@ v = ":clipboard-paste-replace"
 
 [keys.normal]
 X = ["extend_line_above"]
-C-s = [":format", ":write"] # format and save
+C-s = [":format", ":write"]                             # format and save
 C-d = ["extend_to_line_bounds", "yank", "paste_before"]
 A-r = [":reload-all"]
 C-r = [":config-reload"]
 "C-," = [":config-open"]
 
 # Move lines up and down
-A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-A-down = ["extend_to_line_bounds", "delete_selection", "move_line_down", "paste_before"]
-A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-A-j = ["extend_to_line_bounds", "delete_selection", "move_line_down", "paste_before"]
+A-up = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+A-down = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before",
+]
+A-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+A-j = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before",
+]
 
 # A world of difference!
 i = ["insert_mode", "collapse_selection"]
@@ -99,25 +119,57 @@ a = ["append_mode", "collapse_selection"]
 u = ["undo", "collapse_selection"]
 
 # Search for word under cursor
-"*" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
-"#" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_prev"]
+"*" = [
+  "move_char_right",
+  "move_prev_word_start",
+  "move_next_word_end",
+  "search_selection",
+  "search_next",
+]
+"#" = [
+  "move_char_right",
+  "move_prev_word_start",
+  "move_next_word_end",
+  "search_selection",
+  "search_prev",
+]
 
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "keep_primary_selection"]
 
 [keys.select]
 X = ["extend_line_above"]
-C-s = [":format", ":write"] # format and save
+C-s = [":format", ":write"]                             # format and save
 C-d = ["extend_to_line_bounds", "yank", "paste_before"]
 A-r = [":reload-all"]
 C-r = [":config-reload"]
 "C-," = [":config-open"]
 
 # Move lines up and down
-A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-A-down = ["extend_to_line_bounds", "delete_selection", "move_line_down", "paste_before"]
-A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-A-j = ["extend_to_line_bounds", "delete_selection", "move_line_down", "paste_before"]
+A-up = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+A-down = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before",
+]
+A-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+A-j = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before",
+]
 
 i = ["insert_mode", "collapse_selection"]
 a = ["append_mode", "collapse_selection"]
@@ -126,9 +178,9 @@ a = ["append_mode", "collapse_selection"]
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 
 [keys.insert]
-j = { k = "normal_mode" }                               # Maps `jk` to enter normal mode
+j = { k = "normal_mode" } # Maps `jk` to enter normal mode
 # k = { j = "select_mode" }                               # Maps `kj` to enter visual mode
-C-s = [":write", ":format", ":write"]                             # format and save
+C-s = [":write", ":format", ":write"]                   # format and save
 C-d = ["extend_to_line_bounds", "yank", "paste_before"]
 
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!

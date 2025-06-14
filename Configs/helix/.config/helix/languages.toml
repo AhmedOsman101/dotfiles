@@ -17,6 +17,17 @@ formatter = { command = "astyle" }
 name = "bash"
 language-servers = ["bash-language-server", "scls"]
 
+# ---- PHP ---- #
+[[language]]
+name = "php"
+language-servers = [
+  "intelephense",
+  "scls",
+  # "php-lsp",
+]
+indent = { tab-width = 2, unit = "  " }
+formatter = { command = "phpfmt" }
+
 # ---- Json ---- #
 [[language]]
 name = "json"
@@ -33,6 +44,44 @@ language-servers = [
   ] },
   "biome",
   "scls",
+]
+file-types = [
+  "json",
+  "arb",
+  "ipynb",
+  "geojson",
+  "gltf",
+  "webmanifest",
+  { glob = "flake.lock" },
+  { glob = ".babelrc" },
+  { glob = ".bowerrc" },
+  { glob = ".jscrc" },
+  "js.map",
+  "ts.map",
+  "css.map",
+  { glob = ".jslintrc" },
+  "jsonl",
+  "jsonld",
+  { glob = ".vuerc" },
+  { glob = "composer.lock" },
+  { glob = ".watchmanconfig" },
+  "avsc",
+  "ldtk",
+  "ldtkl",
+  { glob = ".swift-format" },
+  "sublime-build",
+  "sublime-color-scheme",
+  "sublime-commands",
+  "sublime-completions",
+  "sublime-keymap",
+  "sublime-macro",
+  "sublime-menu",
+  "sublime-mousemap",
+  "sublime-project",
+  "sublime-settings",
+  "sublime-theme",
+  "sublime-workspace",
+  "code-snippets",
 ]
 
 # ---- Typescript ---- #
@@ -129,6 +178,12 @@ language-servers = [
 command = "deno"
 args = ["lsp"]
 config.deno.enable = true
+
+# ---- PHP LSP ---- #
+[language-server.php-lsp]
+command = "/home/othman/.local/bin/devsense.php.ls"
+# args = ["lsp"]
+# config.deno.enable = true
 
 # ---- Biome LSP ---- #
 [language-server]
