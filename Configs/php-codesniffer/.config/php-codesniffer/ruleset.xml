@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<ruleset name="CustomRuleset">
+  <description>Custom PHP CodeSniffer ruleset based on DEVSENSE PHP tools configuration.</description>
+
+  <!-- Include PSR-12 as a base standard -->
+  <!-- <rule ref="PSR12"/> -->
+
+  <file>.</file>
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+  <exclude-pattern>*/views/*</exclude-pattern>
+  <!-- execlude any non php file -->
+  <exclude-pattern>.*[^.php]$</exclude-pattern>
+
+  <!-- Tabs should represent 4 spaces. -->
+  <arg name="tab-width" value="2"/>
+
+  <!-- Line length: warn at 200 chars, no errors -->
+  <rule ref="Generic.Files.LineLength">
+    <properties>
+      <property name="lineLimit" value="200"/>
+      <property name="absoluteLineLimit" value="0"/>
+    </properties>
+  </rule>
+
+  <!-- Boolean and null constants in lowercase -->
+  <rule ref="Generic.PHP.LowerCaseConstant"/>
+
+  <!-- Space after cast -->
+  <rule ref="Generic.Formatting.SpaceAfterCast"/>
+
+  <!-- Array elements indentation -->
+  <rule ref="Generic.Arrays.ArrayIndent">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+
+  <!-- Inline control structures won't cause an error -->
+  <rule ref="Generic.ControlStructures.InlineControlStructure">
+    <properties>
+      <property name="error" value="false" />
+    </properties>
+  </rule>
+
+  <!-- Default EOL (LF) -->
+  <rule ref="Generic.Files.LineEndings">
+    <properties>
+      <property name="eolChar" value="\n" />
+    </properties>
+  </rule>
+
+  <!-- Warn about lines longer than 100 chars, and error for lines longer than 135 chars. -->
+  <rule ref="Generic.Files.LineLength">
+    <properties>
+      <property name="lineLimit" value="100" />
+      <property name="ignoreComments" value="false" />
+      <property name="absoluteLineLimit" value="0" />
+    </properties>
+  </rule>
+
+  <!-- Alignment of assignment operators -->
+  <rule ref="Generic.Formatting.MultipleStatementAlignment">
+    <properties>
+      <property name="alignAtEnd" value="true" />
+      <property name="maxPadding" value="20" />
+    </properties>
+  </rule>
+
+  <!-- Spacing after a type cast -->
+  <rule ref="Generic.Formatting.SpaceAfterCast">
+    <properties>
+      <property name="spacing" value="1" />
+      <property name="ignoreNewlines" value="true" />
+    </properties>
+  </rule>
+
+  <!-- spacing after the ! operator (disabled) -->
+  <rule ref="Generic.Formatting.SpaceAfterNot">
+    <properties>
+      <property name="spacing" value="0" />
+      <property name="ignoreNewlines" value="false" />
+    </properties>
+  </rule>
+
+  <!-- Closure brace on same line -->
+  <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie">
+    <properties>
+      <property name="checkFunctions" value="true"/>
+      <property name="checkClosures" value="true"/>
+    </properties>
+  </rule>
+
+  <!-- Supressing errors -->
+  <rule ref="Generic.PHP.NoSilencedErrors">
+    <properties>
+      <property name="error" value="false" />
+    </properties>
+  </rule>
+
+  <!-- Checks that two strings using the same quoting style are not concatenated -->
+  <rule ref="Generic.Strings.UnnecessaryStringConcat">
+    <properties>
+      <property name="allowMultiline" value="true" />
+      <property name="error" value="false" />
+    </properties>
+  </rule>
+
+  <!-- Padding inside parenthesis not used by functions or control structures -->
+  <rule ref="Generic.WhiteSpace.ArbitraryParenthesesSpacing">
+    <properties>
+      <property name="spacing" value="0" />
+      <property name="ignoreNewlines" value="true" />
+    </properties>
+  </rule>
+
+  <!-- control structures have the correct padding inside their bracketed statement -->
+  <rule ref="PSR2.ControlStructures.ControlStructureSpacing">
+    <properties>
+      <property name="requiredSpacesAfterOpen" value="0" />
+      <property name="requiredSpacesBeforeClose" value="0" />
+    </properties>
+  </rule>
+
+  <!-- Code blocks are indented correctly -->
+  <rule ref="Generic.WhiteSpace.ScopeIndent">
+    <properties>
+      <property name="indent" value="2" />
+      <property name="exact" value="false" />
+      <property name="tabIndent" value="false" />
+    </properties>
+  </rule>
+
+  <!-- Spacing after spread (...) operator -->
+  <rule ref="Generic.WhiteSpace.SpreadOperatorSpacingAfter">
+    <properties>
+      <property name="spacing" value="1" />
+    </properties>
+  </rule>
+
+  <!-- Space around concatenation -->
+  <rule ref="Squiz.Strings.ConcatenationSpacing">
+    <properties>
+      <property name="spacing" value="0"/>
+      <property name="ignoreNewlines" value="true" />
+    </properties>
+  </rule>
+  <rule ref="Squiz.Strings.ConcatenationSpacing">
+    <properties>
+      <property name="spacing" value="0"/>
+      <property name="ignoreNewlines" value="true" />
+    </properties>
+  </rule>
+
+  <!-- functions are documented using a docblock -->
+  <rule ref="PEAR.Commenting.FunctionComment">
+    <properties>
+      <property name="minimumVisibility" value="private" />
+    </properties>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment">
+    <properties>
+      <property name="skipIfInheritdoc" value="true" />
+    </properties>
+  </rule>
+
+  <!-- Indentation of multi-line conditions -->
+  <rule ref="PEAR.ControlStructures.MultiLineCondition">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+  <rule ref="PSR12.ControlStructures.ControlStructureSpacing">
+    <execlude name="PSR12.ControlStructures.ControlStructureSpacing.OpeningBraceNewLine" />
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+
+  <!-- Indentation of multi-line assignement -->
+  <rule ref="PEAR.Formatting.MultiLineAssignment">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+
+  <!-- Function calls padding inside their brackets, formatting of multi-line function calls -->
+  <rule ref="PEAR.Functions.FunctionCallSignature">
+    <properties>
+      <property name="requiredSpacesAfterOpen" value="0" />
+      <property name="requiredSpacesBeforeClose" value="0" />
+      <property name="allowMultipleArguments" value="true" />
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+
+  <!-- the indentation of each function argument in a multi-line function declaration -->
+  <rule ref="PEAR.Functions.FunctionDeclaration">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+
+  <!-- the indent of each line in a multi-line object chain -->
+  <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent">
+    <properties>
+      <property name="indent" value="2" />
+      <property name="multilevel" value="false" />
+    </properties>
+  </rule>
+
+  <!-- no spaces surrounding an object operator (diasbled) -->
+  <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing">
+    <properties>
+      <property name="ignoreNewlines" value="true" />
+    </properties>
+  </rule>
+
+  <!-- the indent of the case terminating statement -->
+  <rule ref="PEAR.WhiteSpace.ScopeClosingBrace">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+  <rule ref="PSR2.ControlStructures.SwitchDeclaration">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+  <rule ref="Squiz.ControlStructures.SwitchDeclaration">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+
+  <!-- the indent of a list of implemented or extended class names that have been split over multiple lines -->
+  <rule ref="PSR2.Classes.ClassDeclaration">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+  <rule ref="PSR12.Classes.AnonClassDeclaration">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+  <rule ref="Squiz.Classes.ClassDeclaration">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+
+  <!-- Have code block comments look like // end foreach // etc. -->
+  <rule ref="Squiz.Commenting.LongConditionClosingComment">
+    <properties>
+      <property name="lineLimit" value="40" />
+      <property name="commentFormat" value="// --- end %s --- //" />
+    </properties>
+  </rule>
+
+  <!-- the number of spaces before the opening brace of control structures -->
+  <rule ref="Squiz.ControlStructures.ControlSignature">
+    <properties>
+      <property name="requiredSpacesBeforeColon" value="0" />
+    </properties>
+  </rule>
+
+  <!-- for loop/foreach structures have the correct padding inside their brackets -->
+  <rule ref="Squiz.ControlStructures.ForEachLoopDeclaration">
+    <properties>
+      <property name="requiredSpacesAfterOpen" value="0" />
+      <property name="requiredSpacesBeforeClose" value="0" />
+    </properties>
+  </rule>
+  <rule ref="Squiz.ControlStructures.ForLoopDeclaration">
+    <properties>
+      <property name="requiredSpacesAfterOpen" value="0" />
+      <property name="requiredSpacesBeforeClose" value="0" />
+      <property name="ignoreNewlines" value="true" />
+    </properties>
+  </rule>
+
+  <!--  the padding around equal signs in the function argument list -->
+  <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing">
+    <properties>
+      <property name="requiredSpacesAfterOpen" value="0" />
+      <property name="requiredSpacesBeforeClose" value="0" />
+      <property name="equalsSpacing" value="1" />
+    </properties>
+  </rule>
+
+  <!-- Ensure 1 blank line before and after functions, except at the top. -->
+  <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+    <properties>
+      <property name="spacing" value="1" />
+      <property name="spacingBeforeFirst" value="0" />
+      <property name="spacingAfterLast" value="1" />
+    </properties>
+  </rule>
+
+  <!-- Ensure 1 blank line between member vars, but don't require blank lines before the first. -->
+  <rule ref="Squiz.WhiteSpace.MemberVarSpacing">
+    <properties>
+      <property name="spacing" value="1" />
+      <property name="spacingBeforeFirst" value="0" />
+    </properties>
+  </rule>
+
+  <!-- ensure there is one space before and after an operator. -->
+  <rule ref="Squiz.WhiteSpace.OperatorSpacing">
+    <properties>
+      <property name="ignoreSpacingBeforeAssignments" value="true" />
+      <property name="ignoreNewlines" value="true" />
+    </properties>
+  </rule>
+
+  <!-- no whitespace at the end of a line. -->
+  <!-- functions shouldn't contain multiple blank lines in a row. -->
+  <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
+    <properties>
+      <property name="ignoreBlankLines" value="false" />
+    </properties>
+  </rule>
+
+</ruleset>
