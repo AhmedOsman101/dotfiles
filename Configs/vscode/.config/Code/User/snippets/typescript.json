@@ -1,0 +1,168 @@
+{
+  "Class-Inherit": {
+    "prefix": "class_inherit",
+    "body": [
+      "class Shape {",
+      "  constructor(protected x: number, protected y: number) {}",
+      "}",
+      "",
+      "class Movable extends Shape {",
+      "  constructor(x: number, y: number) {",
+      "    super(x, y);",
+      "}",
+      "",
+      "  move(dx: number, dy: number) {",
+      "    this.x += dx;",
+      "    this.y += dy;",
+      "  }",
+      "}"
+    ],
+    "description": "this will create two classes, one class `Movable` inherits from `Shape`"
+  },
+  "Class": {
+    "prefix": "class",
+    "body": [
+      "enum CharacterType { Warrior, Mage, Healer };",
+      "",
+      "class Character {",
+      "  constructor(",
+      "    private name: string,",
+      "    private age: number,",
+      "    private type: CharacterType",
+      "  ) {}",
+      "}"
+    ],
+    "description": "this will create a class with a constructor and backing fields"
+  },
+  "Class-Constructor": {
+    "prefix": "class_constructor",
+    "body": [
+      "constructor(",
+      "  private $1: string,",
+      "  private $2: number,",
+      "  private $3: CharacterType",
+      ") {}"
+    ],
+    "description": "this will create a constructor and backing fields"
+  },
+  "Class-Getter": {
+    "prefix": "class_getter",
+    "body": [
+      "private _$1:string",
+      "get $1(): string {",
+      "  return this._$1;",
+      "}"
+    ],
+    "description": "this will create a getter"
+  },
+  "Class-Setter": {
+    "prefix": "class_setter",
+    "body": [
+      "private _$1:string",
+      "set $1(value): string {",
+      "  this._$1= value;",
+      "}"
+    ],
+    "description": "this will create a getter"
+  },
+  "Class-Setter-Getter": {
+    "prefix": "class_setter_getter",
+    "body": [
+      "private _${1:var}: ${2:type};",
+      "get ${1:var}(): ${2:type} {",
+      "\treturn this._${1:var};",
+      "}",
+      "set ${1:var}(value): ${2:type} {",
+      "\tthis._${1:var} = value;",
+      "}"
+    ],
+    "description": "this will create a getter"
+  },
+  "Interface": {
+    "prefix": "interface",
+    "body": ["interface $1 {", " ${2:property}: ${3:string};", "};"],
+    "description": "this will create an interface"
+  },
+  "Interface impl": {
+    "prefix": "interface_impl",
+    "body": [
+      "interface Movable {",
+      " move(x: number, y: number): void",
+      "};",
+      "class Hero implements Movable {",
+      "  move(x:number, y: number) { /* FIXME: implement me */  }"
+    ],
+    "description": "this will create an interface and a class implementing the interface"
+  },
+  "Enum": {
+    "prefix": "enum",
+    "body": ["enum ${1:Colors} {", "${2:Red}, ${3:Green}, ${4:Blue}", "}"],
+    "description": "this will create an Enum"
+  },
+  "Generic class constraint": {
+    "prefix": "generic_class_constraint",
+    "body": [
+      "function factory<T>(classType: { new(): T }) {",
+      "  return new classType();",
+      "}"
+    ],
+    "description": "Creates a function with a parameter that can be instantiated"
+  },
+  "Union type": {
+    "prefix": "union",
+    "body": ["type StringOrInt = string | number;"],
+    "description": "Creates a union type and an example usage"
+  },
+  "Intersect type": {
+    "prefix": "intersect",
+    "body": [
+      "function extend<T, U>(first: T, second: U): T & U {",
+      "  let result = <T & U>{};",
+      "  for (let id in first) {",
+      "    (<any>result)[id] = (<any>first)[id];",
+      "  }",
+      "  for (let id in second) {",
+      "      if (!result.hasOwnProperty(id)) {",
+      "          (<any>result)[id] = (<any>second)[id];",
+      "      }",
+      "  }",
+      "  return result;",
+      "}",
+      "",
+      "class Warrior {",
+      "  constructor(public name: string) { }",
+      "}",
+      "interface Magic {",
+      "  castSpell(): void;",
+      "}",
+      "class Wizard implements Magic {",
+      "  castSpell() {",
+      "    console.log('wizard throws a Fireball')",
+      "  }",
+      "}",
+      "var warrior = extend(new Warrior('Aragorn'), new Wizard());",
+      "var warriorName = warrior.name;",
+      "warrior.castSpell();"
+    ],
+    "description": "Creates an intersection type and a mixin function"
+  },
+  "Decorator": {
+    "prefix": "decorator",
+    "body": [
+      "function color(value: string) {",
+      "  return function (target) {",
+      "      target.color = value;",
+      "  }",
+      "}",
+      "",
+      "@color('yellow')",
+      "class Cube {",
+      "  side = 3",
+      "}",
+      "",
+      "const cube = new Cube();",
+      "console.log( Cube['color'] );"
+    ],
+    "description": "Creates a decorator"
+  }
+}

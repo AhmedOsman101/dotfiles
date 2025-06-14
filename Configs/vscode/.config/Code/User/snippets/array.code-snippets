@@ -1,26 +1,20 @@
 {
-	"Array": {
-		"prefix": "arr",
-		"scope": "javascript,javascriptreact,typescript,typescriptreact,python",
-		"body": [
-			"[${1:value}, ${2:value}, $3];"
-		],
-		"description": "Array []"
-	},
-	"array": {
-		"prefix": "arr",
-		"scope": "c,cpp",
-		"body": [
-			"{${1:value}, ${2:value}, $3};"
-		],
-		"description": "Array {}"
-	},
-	"Array ... value": {
-		"prefix": "va",
-		"scope": "javascript,javascriptreact,typescript,typescriptreact,python,c,cpp,cs",
-		"body": [
-			"${1:value}, "
-		],
-		"description": "Array value statement"
-	}
+  "Array": {
+    "prefix": "arr",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,python,php",
+    "body": ["[ ${1:value}, ${2:value}, $3 ];"],
+    "description": "Array []"
+  },
+  "array": {
+    "prefix": "arr",
+    "scope": "c,cpp",
+    "body": ["{ ${1:value}, ${2:value}, $3 };"],
+    "description": "Array {}"
+  },
+  "Array ... value": {
+    "prefix": "va",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,python,c,cpp,cs,php",
+    "body": ["${1:value}, "],
+    "description": "Array value statement"
+  }
 }
