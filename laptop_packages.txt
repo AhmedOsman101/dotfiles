@@ -391,6 +391,7 @@ perl-image-exiftool
 perl-linux-desktopfiles
 php
 php-apache
+php-codesniffer
 php-enchant
 php-fpm
 php-gd
