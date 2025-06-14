@@ -1022,4 +1022,8 @@
   "php.format.rules.callParametersWrap": "onEveryItem",
   "php.format.rules.spaceWithinArrayInitilizersParens": false,
   "php.format.rules.arrayInitializersWrap": "onEveryItem",
+  "workbench.settings.showAISearchToggle": true,
+  "search.searchView.keywordSuggestions": true,
+  "python.terminal.shellIntegration.enabled": true,
+  "python.analysis.supportAllPythonDocuments": true,
 }
