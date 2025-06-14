@@ -530,7 +530,6 @@ swaybg
 switcheroo
 swtpm
 sxiv
-syncthing
 systemd-resolvconf
 tableplus
 taplo-cli
