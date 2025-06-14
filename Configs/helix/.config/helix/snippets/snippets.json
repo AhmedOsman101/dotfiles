@@ -1,107 +1,77 @@
 {
   "comment": {
-    "prefix": "com",
-    "body": [
-      "$LINE_COMMENT --- ${1:comment} --- $LINE_COMMENT"
-    ],
+    "prefix": "comment",
+    "body": ["$LINE_COMMENT --- ${1:comment} --- $LINE_COMMENT"],
     "description": "Adds a nicely formatted comment"
   },
   "Multiline Comment": {
-    "prefix": "mcom",
-    "body": [
-      "$BLOCK_COMMENT_START",
-      "\t${0:comment}",
-      "$BLOCK_COMMENT_END"
-    ],
+    "prefix": "mcomment",
+    "body": ["$BLOCK_COMMENT_START", "\t${0:comment}", "$BLOCK_COMMENT_END"],
     "description": "Adds a nicely formatted multiline comment"
   },
   "Todo Comment": {
     "prefix": "todo",
-    "body": [
-      "$LINE_COMMENT TODO: $0"
-    ],
+    "body": ["$LINE_COMMENT TODO: $0"],
     "description": "Adds a nicely formatted todo comment"
   },
   "Fixme Comment": {
     "prefix": "fixme",
-    "body": [
-      "$LINE_COMMENT FIXME: $0"
-    ],
+    "body": ["$LINE_COMMENT FIXME: $0"],
     "description": "Adds a nicely formatted fixme comment"
   },
   "Alert Comment": {
     "prefix": "alert",
-    "body": [
-      "$LINE_COMMENT!: $0"
-    ],
+    "body": ["$LINE_COMMENT!: $0"],
     "description": "Adds a nicely formatted alert comment"
   },
   "Note Comment": {
     "prefix": "note",
-    "body": [
-      "$LINE_COMMENT*: $0"
-    ],
+    "body": ["$LINE_COMMENT NOTE: $0"],
     "description": "Adds a nicely formatted note comment"
   },
   "Query Comment": {
     "prefix": "query",
-    "body": [
-      "$LINE_COMMENT?: $0"
-    ],
+    "body": ["$LINE_COMMENT ?: $0"],
     "description": "Adds a nicely formatted query comment"
   },
-  "Cancelled Comment": {
-    "prefix": "cancelled",
-    "body": [
-      "$LINE_COMMENT$LINE_COMMENT: $0"
-    ],
-    "description": "Adds a nicely formatted cancelled comment"
+  "Deprecated Comment": {
+    "prefix": "deprecated",
+    "body": ["$LINE_COMMENT DEPRECATED: $0"],
+    "description": "Adds a nicely formatted deprecated comment"
   },
   "Array": {
-    "prefix": "arr",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,python",
-    "body": [
-      "[${1:value}, ${2:value}, $3];"
-    ],
+    "prefix": "array",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,python,php",
+    "body": ["[ ${1:value}, ${2:value}, $3 ];"],
     "description": "Array []"
   },
   "array": {
-    "prefix": "arr",
+    "prefix": "array",
     "scope": "c,cpp",
-    "body": [
-      "{${1:value}, ${2:value}, $3};"
-    ],
+    "body": ["{ ${1:value}, ${2:value}, $3 };"],
     "description": "Array {}"
   },
   "Array ... value": {
-    "prefix": "va",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,python,c,cpp,cs",
-    "body": [
-      "${1:value}, "
-    ],
+    "prefix": "value",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,python,c,cpp,cs,php",
+    "body": ["${1:value}, "],
     "description": "Array value statement"
   },
   "If block": {
     "prefix": "if",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
-    "body": [
-      "if (${1:condition}) {",
-      "\t${0:// code...}",
-      "}"
-    ],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs,php",
+    "body": ["if (${1:condition}) {", "\t${0:// code...}", "}"],
     "description": "If  block"
   },
   "If single line": {
     "prefix": "sif",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
-    "body": [
-      "if (${1:condition}) ${2:code}"
-    ],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs,php",
+    "body": ["if (${1:condition}) ${2:code}"],
     "description": "If single line"
   },
   "If ... else": {
-    "prefix": "ifel",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
+    "prefix": "ifelse",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs,php",
     "body": [
       "if (${1:condition}) {",
       "\t${2:// code...}",
@@ -112,8 +82,8 @@
     "description": "If else block"
   },
   "If ... else single line": {
-    "prefix": "sifel",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
+    "prefix": "sifelse",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs,php",
     "body": [
       "if (${1:condition}) ${2:code}",
       "else (${3:condition}) ${4:code}"
@@ -122,7 +92,7 @@
   },
   "If ... elseif ... else": {
     "prefix": "ifelif",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs,php",
     "body": [
       "if (${1:condition}) {",
       "\t${2:// code...}",
@@ -136,7 +106,7 @@
   },
   "If ... elseif ... else single line": {
     "prefix": "sifelif",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs,php",
     "body": [
       "if (${1:condition}) ${2:code}",
       "else if (${3:condition}) ${4:code}",
@@ -145,16 +115,13 @@
     "description": "If ... elseif ... else single line"
   },
   "Switch block": {
-    "prefix": "sw",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
+    "prefix": "switch",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs,php",
     "body": [
       "switch (${1:variable}) {",
       "\tcase ${2:label}:",
       "\t\t${3:// code...}",
       "\t\tbreak;",
-      "\tcase ${4:label}:",
-      "\t\t${5:// code...}",
-      "\t\tbreak;$6",
       "\tdefault:",
       "\t\t${0:// code...}",
       "\t\tbreak;",
@@ -163,26 +130,21 @@
     "description": "Switch block"
   },
   "Case statement": {
-    "prefix": "cs",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
-    "body": [
-      "case ${1:label}:",
-      "\t${2:// code...}",
-      "\t${3|break,return|};"
-    ],
+    "prefix": "case",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs,php",
+    "body": ["case ${1:label}:", "\t${2:// code...}", "\t${3|break,return|};"],
     "description": "Case addon block"
   },
   "Ternary operator": {
-    "prefix": "tern",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
-    "body": [
-      "${1:condition} ? ${2:if_true} : ${3:if_false};"
-    ],
+    "prefix": "ternary",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs,php",
+    "body": ["${1:condition} ? ${2:if_true} : ${3:if_false};"],
     "description": "Ternary statement"
   },
+
   "Try ... catch": {
-    "prefix": "tryc",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp",
+    "prefix": "trycatch",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,php",
     "body": [
       "try {",
       "\t${1:// code...}",
@@ -193,8 +155,8 @@
     "description": "Try catch block"
   },
   "Try ... catch ... finally": {
-    "prefix": "tryf",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp",
+    "prefix": "tryfinally",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,php",
     "body": [
       "try {",
       "\t${1:// code...}",
@@ -207,66 +169,43 @@
     "description": "Try catch finally block"
   },
   "Catch": {
-    "prefix": "cat",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp",
-    "body": [
-      "catch (${2:e}) {",
-      "\t${3:// code...}",
-      "}"
-    ],
+    "prefix": "catch",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,php",
+    "body": ["catch (${2:e}) {", "\t${3:// code...}", "}"],
     "description": "Catch block"
   },
   "Finally": {
-    "prefix": "fy",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp",
-    "body": [
-      "finally {",
-      "\t${0:// code...}",
-      "}"
-    ],
+    "prefix": "finally",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,php",
+    "body": ["finally {", "\t${0:// code...}", "}"],
     "description": "Finally block"
   },
   "Throw new Exception": {
-    "prefix": "thr",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp",
-    "body": [
-      "throw new ${1:Exception}(\"${2:Error statement}\");"
-    ],
+    "prefix": "throw",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,php",
+    "body": ["throw new ${1:Exception}(\"${2:Error statement}\");"],
     "description": "Throw new exception statement"
   },
   "function": {
-    "prefix": "fun",
+    "prefix": "function",
     "scope": "c,cpp,cs",
-    "body": [
-      "",
-      "${1:void} ${2:functionName}($3) {",
-      "\t${0://body}",
-      "}"
-    ]
+    "body": ["", "${1:void} ${2:functionName}($3) {", "\t${0://body}", "}"]
   },
   "arrow function": {
     "prefix": "arrow",
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
-    "body": [
-      "($param) => {",
-      "\t${0://body}",
-      "}"
-    ]
+    "body": ["(${1:param}) => {", "\t${0://body}", "}"]
   },
   "const arrow function": {
     "prefix": "carrow",
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
-    "body": [
-      "const $method = ($param) => {",
-      "\t${0://body}",
-      "}"
-    ]
+    "body": ["const ${1:method} = (${2:param}) => {", "\t${0://body}", "}"]
   },
   "const async arrow function": {
     "prefix": "csarrow",
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
-      "const $method = async ($param) => {",
+      "const ${1:method} = async (${2:param}) => {",
       "\t${0://body}",
       "}"
     ]
@@ -275,7 +214,7 @@
     "prefix": "xarrow",
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
-      "export const $method = ($param) => {",
+      "export const ${1:method} = (${2:param}) => {",
       "\t${0://body}",
       "}"
     ]
@@ -284,11 +223,11 @@
     "prefix": "darrow",
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
-      "const $method = ($param) => {",
+      "const ${1:method} = (${2:param}) => {",
       "\t${0://body}",
       "}",
       "",
-      "export default $method;",
+      "export default ${1:method};",
       ""
     ]
   },
@@ -296,11 +235,11 @@
     "prefix": "dsarrow",
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
-      "const $method = async ($param) => {",
+      "const ${1:method} = async (${2:param}) => {",
       "\t${0://body}",
       "}",
       "",
-      "export default $method;",
+      "export default ${1:method};",
       ""
     ]
   },
@@ -308,31 +247,23 @@
     "prefix": "xsarrow",
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
-      "export const $method = async ($param) => {",
+      "export const ${1:method} = async (${2:param}) => {",
       "\t${0://body}",
       "}",
       "",
-      "export default $method;",
+      "export default ${1:method};",
       ""
     ]
   },
   "export deafult constant": {
     "prefix": "dcon",
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
-    "body": [
-      "const $1 = $2;",
-      "",
-      "export default $1;",
-      ""
-    ]
+    "body": ["const ${1:var} = $2;", "", "export default ${1:var};", ""]
   },
   "export constant": {
     "prefix": "xcon",
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
-    "body": [
-      "export const $1 = $2;",
-      ""
-    ]
+    "body": ["export const $1 = $2;", ""]
   },
   "watercss cdn": {
     "scope": "vue,html,blade",
@@ -371,7 +302,7 @@
     "prefix": "for",
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
-      "for (let ${2:i} = ${3:0}; ${2:i} < ${4:n}; ${2:i}++) {",
+      "for (let ${1:i} = ${2:0}; ${3:condition}; ${1:i}${4:++}) {",
       "\t${0:// code...}",
       "}"
     ],
@@ -379,22 +310,14 @@
   },
   "While loop": {
     "prefix": "while",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
-    "body": [
-      "while (${1:variable} ${2|<,<=,>,>=,==,!=|} ${3:n}) {",
-      "\t${0:// code...}",
-      "}"
-    ],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs,php",
+    "body": ["while (${1:condition}) {", "\t${0:// code...}", "}"],
     "description": "While loop"
   },
   "Do ... while": {
-    "prefix": "dowl",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs",
-    "body": [
-      "do {",
-      "\t${0:// code...}",
-      "} while (${1:variable} ${2|<,<=,>,>=,==,!=|} ${3:n});"
-    ],
+    "prefix": "dowhile",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,c,cpp,cs,php",
+    "body": ["do {", "\t${0:// code...}", "} while (${1:condition})"],
     "description": "Do while loop"
   },
   "Object key ... value": {
@@ -411,9 +334,7 @@
   "Key ... value": {
     "prefix": "kv",
     "scope": "javascript,javascriptreact,typescript,typescriptreact,python",
-    "body": [
-      "\"${1:key}\": ${2:value},"
-    ],
+    "body": ["\"${1:key}\": ${2:value},"],
     "description": "key => value statement"
   },
   "rfc": {
@@ -446,13 +367,14 @@
       "$0"
     ]
   },
-  "bash-skeleton": {
-    "prefix": "bash",
-    "scope": "shellscript,bash",
+
+  "bash skeleton": {
+    "prefix": "init",
+    "scope": "bash,shell,shellscript",
     "body": [
       "#!/usr/bin/env bash",
       "",
-      "set -euo pipefail",
+      "set -eo pipefail",
       "",
       "trap 'exit 1' SIGUSR1",
       "",
@@ -461,56 +383,88 @@
       "$0"
     ]
   },
-  "argparse": {
-    "prefix": "argparse",
-    "scope": "shellscript",
-    "body": "source argparse.sh",
-    "description": "source argparse library"
+  "cmdarg": {
+    "prefix": "cmdarg",
+    "scope": "bash,shell,shellscript",
+    "body": "source cmdarg.sh",
+    "description": "source cmdarg library"
   },
-  "description": {
-    "prefix": "desc",
-    "scope": "shellscript",
-    "body": "set_description ${1:description}",
-    "description": "add description"
+  "Required Argument": {
+    "prefix": "required_arg",
+    "scope": "bash,shell,shellscript",
+    "body": ["cmdarg \"${1:short}:\" \"${2:long}\" \"${0:description}\""]
   },
-  "defarg": {
-    "prefix": "defarg",
-    "scope": "shellscript",
-    "body": "define_arg \"${1:name}\" \"${2|\"\",default|}\" \"${3|\"\",description|}\" \"${4|string,bool|}\" \"${5|optional,required|}\"",
-    "description": "define an argument"
+  "Optional Argument": {
+    "prefix": "optional_arg",
+    "scope": "bash,shell,shellscript",
+    "body": [
+      "cmdarg \"${1:short}?\" \"${2:long}\" \"${3:description}\" \"${0:default}\""
+    ]
   },
-  "help": {
-    "prefix": "help",
-    "scope": "shellscript",
-    "body": "check_for_help \"$@\"",
-    "description": "check for help"
+  "Boolean Argument": {
+    "prefix": "boolean_arg",
+    "scope": "bash,shell,shellscript",
+    "body": ["cmdarg \"${1:short}\" \"${2:long}\" \"${0:description}\""]
+  },
+  "Argument": {
+    "prefix": "argument",
+    "scope": "bash,shell,shellscript",
+    "body": [
+      "cmdarg \"${1:short}\" \"${2:long}\" \"${3:description}\" \"${0:default}\""
+    ]
+  },
+  "Access Arg": {
+    "prefix": "getarg",
+    "scope": "bash,shell,shellscript",
+    "body": "\\$\\{cmdarg_cfg[\"${0:key}\"]\\}"
+  },
+  "info": {
+    "prefix": "cmdarg_info",
+    "scope": "bash,shell,shellscript",
+    "body": [
+      "cmdarg_info \"header\" \"${1:Some script that needed argument parsing}\"",
+      "cmdarg_info \"author\" \"${2:Some Poor Bastard <somepoorbastard@hell.com>}\"",
+      "cmdarg_info \"copyright\" \"${3:(C) 2013}\""
+    ]
+  },
+  "header": {
+    "prefix": "cmdarg_info",
+    "scope": "bash,shell,shellscript",
+    "body": [
+      "cmdarg_info \"header\" \"${1:Some script that needed argument parsing}\""
+    ]
   },
   "parseargs": {
     "prefix": "help",
-    "scope": "shellscript",
-    "body": "parse_args \"$@\"",
+    "scope": "bash,shell,shellscript",
+    "body": "cmdarg_parse \"\\$@\"",
     "description": "parse the args"
   },
-  "full argparse": {
-    "prefix": "fargparse",
-    "scope": "shellscript",
+  "full cmdarg": {
+    "prefix": "fcmdarg",
+    "scope": "bash,shell,shellscript",
     "body": [
-      "# ---- Source the argparse script ---- #",
-      "source argparse.sh",
-      "",
-      "set_description \"This is a simple script that greets the user.\"",
-      "",
-      "# ----  Define an argument ---- #",
-      "define_arg \"name\" \"\" \"Name of the user\" \"string\" \"required\"",
-      "",
-      "# ----  Check for help (-h, --help) ---- #",
-      "check_for_help \"$@\"",
-      "",
-      "# ----  Parse the arguments ---- #",
-      "parse_args \"$@\"",
+      "# ---- Source the cmdarg script ---- #",
+      "source cmdarg.sh",
       "",
       "# ----  Main script logic ---- #",
-      ""
+      "",
+      "cmdarg_info \"header\" \"${1:description}\"",
+      "",
+      "# ----  Define arguments ---- #",
+      "cmdarg \"${2:short}\" \"${3:long}\" \"${4:description}\" \"${5:default}\"",
+      "",
+      "# ----  Parse the arguments ---- #",
+      "cmdarg_parse \"\\$@\"",
+      "",
+      "\\$\\{cmdarg_cfg[\"${3:key}\"]\\}",
+      "$0"
     ]
+  },
+  "Define pageProps Interface in typescript": {
+    "scope": "typescript,vue",
+    "prefix": "iprops",
+    "body": ["interface IProps {", "\t${1:key}: ${2:type};", "}", ""],
+    "description": "Defines the props interface"
   }
 }
