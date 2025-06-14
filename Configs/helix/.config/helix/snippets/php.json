@@ -3,5 +3,29 @@
     "prefix": "input",
     "body": ["trim(fgets(STDIN));"],
     "description": "basic input"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for (${1:\\$i} = ${2:0}; ${3:condition}; ${1:\\$i}${4:++}) {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "For loop"
+  },
+  "Assoc Array": {
+    "prefix": "assoc",
+    "body": ["[", "\t\"${1:key}\" => ${2:value},", "]"],
+    "description": "Associative array"
+  },
+  "Key ... value": {
+    "prefix": "kv",
+    "body": ["\"${1:key}\" => ${2:value},"],
+    "description": "key => value statement"
+  },
+  "PHP Skeleton": {
+    "prefix": "ps",
+    "body": ["<?php", "", "declare(strict_types=1);", "", ""],
+    "description": "php file with strict_types skeleton"
   }
 }
