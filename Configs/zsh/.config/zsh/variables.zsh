@@ -185,7 +185,7 @@ export AUTHOR_EMAIL="ahmad.ali.othman@outlook.com"
 
 # ---- Node ---- #
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
-export NODE_PACKAGE_MANAGER="pnpm"
+# DEPRECATED: export NODE_PACKAGE_MANAGER="pnpm"
 
 # ---- Nuget ---- #
 export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
