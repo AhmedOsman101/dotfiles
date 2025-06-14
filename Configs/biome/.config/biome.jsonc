@@ -80,12 +80,33 @@
         "noEnum": "warn",
         "noExportedImports": "on",
         "useArrayLiterals": "info",
-        "useAtIndex": "info",
+        "useAtIndex": {
+          "level": "info",
+          "fix": "safe"
+        },
         "useConsistentArrayType": "info",
         "useFilenamingConvention": "info",
         "useForOf": "info",
         "useFragmentSyntax": "warn",
-        "useNamingConvention": "on",
+        "useNamingConvention": {
+          "level": "warn",
+          "options": {
+            "strictCase": false,
+            "requireAscii": true,
+            "conventions": [
+              {
+                "selector": {
+                  "kind": "objectLiteralMember"
+                },
+                "formats": [
+                  "camelCase",
+                  "PascalCase"
+                ],
+                "match": "[a-zA-Z$_][a-zA-Z0-9_]*"
+              }
+            ]
+          }
+        },
         "useShorthandAssign": "info",
         "useThrowOnlyError": "on",
         "useTrimStartEnd": "on"
@@ -182,7 +203,11 @@
           "fix": "safe",
           "level": "warn",
           "options": {
-            "attributes": ["classList", "class", "className"]
+            "attributes": [
+              "classList",
+              "class",
+              "className"
+            ]
           }
         },
         "noAwaitInLoop": "info",
@@ -204,10 +229,9 @@
         "useAdjacentGetterSetter": "info",
         "useConsistentResponse": "on",
         "useExhaustiveSwitchCases": "on",
-        "useExportsLast": "warn",
+        "useExportsLast": "off",
         "useIndexOf": "warn",
         "useJsonImportAttribute": "warn",
-        "useNamingConvention": "on",
         "useNumericSeparators": "info",
         "useObjectSpread": "off",
         "useSingleJsDocAsterisk": "on",
@@ -235,7 +259,9 @@
     "parser": {
       "unsafeParameterDecoratorsEnabled": true
     },
-    "globals": ["Deno"]
+    "globals": [
+      "Deno"
+    ]
   },
   "json": {
     "formatter": {
