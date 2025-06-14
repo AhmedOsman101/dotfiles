@@ -202,6 +202,9 @@ export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
 # ---- Pass ---- #
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
 
+# ---- PHP Codesniffer ---- #
+export PHPCS_CONFIG_PATH="$XDG_CONFIG_HOME/php-codesniffer/ruleset.xml"
+
 # ---- Pnpm ---- #
 export PNPM_HOME="$XDG_DATA_HOME/pnpm"
 
