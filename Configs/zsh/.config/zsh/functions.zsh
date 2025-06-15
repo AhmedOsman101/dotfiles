@@ -3,7 +3,7 @@
 rehash_precmd() {
   if [[ -e /var/cache/zsh/pacman ]]; then
     local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
-    if ((zshcache_time <paccache_time)); then
+    if ((zshcache_time < paccache_time)); then
       rehash
       zshcache_time="$paccache_time"
     fi
@@ -77,4 +77,10 @@ gif() {
   printf '\n\n'
   sleep 0.2
   kitty +kitten icat $1
+}
+
+ctrl_l() {
+  builtin print -rn -- $'\r\e[0J\e[H\e[22J' >"$TTY"
+  builtin zle .reset-prompt
+  builtin zle -R
 }
