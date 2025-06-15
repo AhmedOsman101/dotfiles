@@ -2,7 +2,7 @@
 
 # ---- Key Bindings ---- #
 # ---- 1. Remove emacs-style keybinds ---- #
-# bindkey -e # We'll override specific keys
+bindkey -e # We'll override specific keys
 
 # ---- Bind Home and End keys ---- #
 bindkey "^[[H" beginning-of-line # Home
@@ -16,5 +16,8 @@ bindkey "^[[1;5C" forward-word  # Ctrl+Right
 bindkey "^[[1;5D" backward-word # Ctrl+Left
 
 # ---- Undo and Redo ---- #
-bindkey "^Z" undo
-bindkey "^Y" redo
+bindkey "^z" undo
+bindkey "^y" redo
+
+zle -N ctrl_l
+bindkey '^l' ctrl_l

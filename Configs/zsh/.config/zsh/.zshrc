@@ -13,7 +13,7 @@ config_files=(
 )
 
 for file in "${config_files[@]}"; do
-  [[ -f "$file" ]] && source "$file"
+  [[ -f "${file}" ]] && source "${file}"
 done
 
 # ---- Zinit ----- #
@@ -120,20 +120,16 @@ source <(fzf --zsh)
 # ---- The fuck alias ----- #
 eval "$(thefuck --alias)"
 
-# ---- NVM ---- #
-# [[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-# [[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-
 # ---- Zoxide (better cd) ---- #
 eval "$(zoxide init zsh)"
 
-no-dups -f -q $HISTFILE 2>/dev/null
+no-dups -f -q "${HISTFILE}"
 
 # ---- Load completions ----- #
-zstyle :compinstall filename $ZSHRC
+zstyle :compinstall filename "${ZSHRC}"
 
 autoload -Uz compinit
-compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump-${ZSH_VERSION}"
 zinit cdreplay -q
 # End of lines added by compinstall
 
@@ -145,7 +141,8 @@ autoload -Uz select-word-style
 select-word-style bash
 
 # ---- region highlight style ---- #
-zstyle ':zle:*' region-highlight 'fg=none' 'bg=#7287FD66'
+zstyle ':zle:*' region-highlight 'fg=none' 'bg=none'
+# bg=#7287FD66
 
 # ---- Curlie ---- #
 [[ -s "$HOME/.config/envman/load.sh" ]] && source "$HOME/.config/envman/load.sh"
@@ -173,4 +170,6 @@ unalias g
 alias gca='git-commit --ai'
 alias glg="git log --all --graph --pretty=format:'%C(magenta)%h%C(default) %an %C(yellow)%ar%C(auto) %D%n%s%n'"
 alias gc="git clone"
+alias gcm="git clone me:" # resolves to "git clone git@github.com:AhmedOsman101/"
+alias gcg="git clone gh:" # resolves to "git clone git@github.com:"
 alias glc='git pull origin $(git_current_branch)'
