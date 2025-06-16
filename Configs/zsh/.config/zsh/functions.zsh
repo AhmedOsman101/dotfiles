@@ -84,3 +84,13 @@ ctrl_l() {
   builtin zle .reset-prompt
   builtin zle -R
 }
+
+gcm() {
+  # resolves to "git clone git@github.com:AhmedOsman101/"
+  git clone "me:$1"
+}
+
+gcg() {
+  # resolves to "git clone git@github.com:"
+  git clone "gh:$1"
+}
