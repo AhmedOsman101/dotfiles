@@ -170,6 +170,5 @@ unalias g
 alias gca='git-commit --ai'
 alias glg="git log --all --graph --pretty=format:'%C(magenta)%h%C(default) %an %C(yellow)%ar%C(auto) %D%n%s%n'"
 alias gc="git clone"
-alias gcm="git clone me:" # resolves to "git clone git@github.com:AhmedOsman101/"
-alias gcg="git clone gh:" # resolves to "git clone git@github.com:"
 alias glc='git pull origin $(git_current_branch)'
+unalias gcm || true
