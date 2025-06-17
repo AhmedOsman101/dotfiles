@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    /* Base Options: */
+    "target": "es2022",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules without default exports
+    "skipLibCheck": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    /* Strictness */
+    "strict": true, // Enable all strict type checks
+    "noImplicitAny": true, // Prevent implicit 'any' types
+    "strictNullChecks": true, // Enable strict null checks
+    "strictFunctionTypes": true, // Strict function type variance
+    "strictBindCallApply": true, // Strict check for bind/call/apply
+    "noImplicitThis": true, // Prevent implicit 'this' as 'any'
+    "alwaysStrict": true, // Parse in strict mode
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    /* If transpiling with TypeScript: */
+    "module": "NodeNext",
+    "outDir": "dist",
+    "sourceMap": true,
+    /* AND if you're building for a library: */
+    "declaration": true, // Generate .d.ts type declarations
+    /* AND if you're building for a library in a monorepo: */
+    "composite": true,
+    "declarationMap": true,
+    /* If NOT transpiling with TypeScript: */
+    // "module": "preserve",
+    "noEmit": true,
+    /* If your code runs in the DOM: */
+    // "lib": [
+    //   "es2022",
+    //   "dom",
+    //   "dom.iterable"
+    // ],
+    /* If your code doesn't run in the DOM: */
+    "lib": [
+      "es2022"
+    ]
+  }
+}
