@@ -182,12 +182,12 @@ config.deno.enable = true
 # ---- PHP LSP ---- #
 [language-server.php-lsp]
 command = "/home/othman/.local/bin/devsense.php.ls"
-# args = ["lsp"]
-# config.deno.enable = true
 
 # ---- Biome LSP ---- #
 [language-server]
 biome = { command = "biome", args = ["lsp-proxy"] }
+# --- ty --- #
+ty = { command = "ty", args = ["server"] }
 
 # ---- Rust---- #
 [[language]]
@@ -273,3 +273,9 @@ shebangs = []
 roots = []
 auto-format = false
 language-servers = ["scls"]
+
+# --- Python --- #
+[[language]]
+name = "python"
+language-servers = ["ty", "scls", "pylsp"]
+indent = { tab-width = 2, unit = "  " }
