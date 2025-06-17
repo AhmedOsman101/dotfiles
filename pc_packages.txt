@@ -97,6 +97,7 @@ aspell-en
 astyle
 atril
 atuin
+authenticator
 autoconf
 automake
 autopep8
