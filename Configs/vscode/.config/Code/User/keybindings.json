@@ -126,5 +126,29 @@
   {
     "key": "ctrl+y",
     "command": "-aichat.newfollowupaction"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-composer.showBackgroundAgentHistory",
+    "when": "backgroundComposerEnabled || showBackgroundAgentHistoryAction"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-editor.action.toggleScreenReaderAccessibilityMode",
+    "when": "accessibilityHelpIsShown"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-extension.helixKeymap.scrollUpPage",
+    "when": "editorTextFocus && extension.helixKeymap.normalMode || editorTextFocus && extension.helixKeymap.visualMode"
   }
 ]
