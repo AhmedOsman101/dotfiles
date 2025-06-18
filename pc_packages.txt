@@ -464,6 +464,7 @@ pulsemixer
 pv
 python-beautifulsoup4
 python-dbus
+python-lsp-black
 python-pip
 python-pipx
 python-pylint
@@ -539,6 +540,7 @@ telegram-desktop
 terminus-font
 tesseract
 tesseract-data-eng
+testdisk
 texlab
 texlive-binextra
 thefuck
