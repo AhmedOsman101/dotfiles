@@ -940,7 +940,7 @@
   "commitSage.openai.baseUrl": "https://api.openai.com/v1",
   "commitSage.openai.model": "gpt-3.5-turbo",
   "commitSage.provider.type": "gemini",
-  "prettify-ts.enabled": true,
+  "prettify-ts.enabled": false,
   "vue.server.hybridMode": false,
   "svelte.enable-ts-plugin": true,
   "[svelte]": {
@@ -1018,4 +1018,17 @@
   "search.searchView.keywordSuggestions": true,
   "python.terminal.shellIntegration.enabled": true,
   "python.analysis.supportAllPythonDocuments": true,
+  "json.schemaDownload.enable": true,
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "deno.json"
+      ],
+      "url": "https://github.com/denoland/deno/blob/main/cli/schemas/config-file.v1.json"
+    },
+  ],
+  "cursor.composer.textSizeScale": 1.3,
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.diffs.useCharacterLevelDiffs": true,
+  "cursor.terminal.usePreviewBox": true
 }
