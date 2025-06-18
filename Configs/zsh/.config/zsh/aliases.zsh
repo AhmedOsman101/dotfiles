@@ -55,6 +55,8 @@ alias rmdir="rmdirtrash --ignore-fail-on-non-empty"
 
 # ---- Easier to read disk ---- #
 alias df='df -h'     # human-readable sizes
+alias dus='du -sh'   # human-readable sizes
+alias du='du -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
 # ---- Get top process eating memory ---- #
