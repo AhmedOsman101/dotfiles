@@ -149,7 +149,7 @@ cups
 cups-filters
 cups-pdf
 curlie
-cursor-extracted
+cursor-electron
 dbus-broker-units
 debtap
 dhclient
