@@ -206,7 +206,7 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
 export PHPCS_CONFIG_PATH="$XDG_CONFIG_HOME/php-codesniffer/ruleset.xml"
 
 # ---- Pnpm ---- #
-export PNPM_HOME="mnt/main/pnpm"
+export PNPM_HOME="/mnt/main/pnpm"
 
 # ---- Python ---- #
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
@@ -258,8 +258,7 @@ export MRT="$HOME/Documents/backup/WordTemplates/Standard.dotx"
 export PATH="$PATH:$SCRIPTS_DIR"                     # my custom scripts
 PATH="$PATH:$HOME/.local/bin"                        # my custom scripts (alternative)
 PATH="$PATH:$HOME/.spicetify"                        # spicetify for spotify mods
-PATH="$PATH:$BUN_INSTALL/bin"                        # BUN js runtime
-# PATH="$PATH:$HOME/.local/share/gem/ruby/3.4.0/bin"   # Ruby gems
+PATH="$PATH:$BUN_INSTALL/bin"                        # Bun js runtime
 PATH="$PATH:$XDG_CONFIG_HOME/composer/vendor/bin"    # Composer packages
 PATH="$PATH:$CARGO_HOME/bin"                         # Cargo packages
 PATH="$PATH:${ASDF_DATA_DIR}/shims"                  # Asdf shims
