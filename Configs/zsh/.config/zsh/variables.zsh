@@ -206,7 +206,7 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
 export PHPCS_CONFIG_PATH="$XDG_CONFIG_HOME/php-codesniffer/ruleset.xml"
 
 # ---- Pnpm ---- #
-export PNPM_HOME="$XDG_DATA_HOME/pnpm"
+export PNPM_HOME="mnt/main/pnpm"
 
 # ---- Python ---- #
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
