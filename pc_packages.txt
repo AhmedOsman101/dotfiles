@@ -151,6 +151,7 @@ cups-pdf
 curlie
 cursor-electron
 dbus-broker-units
+ddrescue
 debtap
 dhclient
 dhcpcd
@@ -257,6 +258,7 @@ has
 haskell-djot
 hdparm
 helix
+helix-gpt-bin
 highlight
 htop
 httpie
@@ -407,6 +409,7 @@ obs-plugin-input-overlay-bin
 obs-studio
 obsidian
 okular
+ollama
 open-iscsi
 openarena
 openconnect

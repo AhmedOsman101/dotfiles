@@ -120,10 +120,10 @@ formatter = { command = "biome", args = [
 language-servers = [
   "deno-lsp",
   "biome",
-  { name = "typescript-language-server", except-features = [
-    "format",
-  ] },
   "scls",
+  # { name = "typescript-language-server", except-features = [
+  #   "format",
+  # ] },
 ]
 
 
@@ -141,13 +141,13 @@ formatter = { command = "biome", args = [
 ] }
 language-servers = [
   "deno-lsp",
-  { name = "typescript-language-server", except-features = [
-    "format",
-  ] },
-  "vscode-html-language-server",
-  "superhtml",
   "biome",
   "scls",
+  "vscode-html-language-server",
+  "superhtml",
+  # { name = "typescript-language-server", except-features = [
+  #   "format",
+  # ] },
 ]
 
 # ---- Tsx ---- #
@@ -163,14 +163,14 @@ formatter = { command = "biome", args = [
   "--stdin-file-path=file.tsx",
 ] }
 language-servers = [
+  "deno-lsp",
+  "biome",
+  "scls",
+  "vscode-html-language-server",
+  "superhtml",
   # { name = "typescript-language-server", except-features = [
   #   "format",
   # ] },
-  "vscode-html-language-server",
-  "superhtml",
-  "biome",
-  "deno-lsp",
-  "scls",
 ]
 
 # ---- Deno LSP ---- #
@@ -279,3 +279,18 @@ language-servers = ["scls"]
 name = "python"
 language-servers = ["ty", "scls", "pylsp"]
 indent = { tab-width = 2, unit = "  " }
+
+# ---- Helix-gpt ---- #
+[language-server.gpt]
+command = "helix-gpt"
+args = [
+  "--handler",
+  "codeium",   # codeium,ollama,openai
+
+  "--debounce",
+  "200",
+
+  "--ollamaModel",
+  "qwen2.5-coder:0.5b",
+
+]

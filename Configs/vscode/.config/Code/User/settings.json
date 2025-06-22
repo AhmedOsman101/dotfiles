@@ -951,7 +951,7 @@
     "editor.defaultFormatter": "esafirm.kotlin-formatter"
   },
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": false,
     "markdown": false,
     "scminput": false
@@ -1030,5 +1030,28 @@
   "cursor.composer.textSizeScale": 1.3,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "cursor.diffs.useCharacterLevelDiffs": true,
-  "cursor.terminal.usePreviewBox": true
+  "cursor.terminal.usePreviewBox": true,
+  "prettify-ts.hidePrivateProperties": false,
+  "cody.rules.enabled": true,
+  "cody.autocomplete.experimental.graphContext": "tsc",
+  "workbench.colorCustomizations": {},
+  "codeium.aggressiveShutdown": true,
+  "codeium.enableConfig": {
+    "*": true
+  },
+  "docwriter.progress.trackClasses": true,
+  "docwriter.progress.trackTypes": true,
+  "telemetry.feedback.enabled": false,
+  "github.copilot.advanced": {
+    "authPermissions": "default",
+    "useLanguageServer": false,
+    "authProvider": "github"
+  },
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "github.copilot.chat.edits.temporalContext.enabled": true,
+  "github.copilot.chat.generateTests.codeLens": true,
+  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+  "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+  "github.copilot.chat.languageContext.typescript.enabled": true,
 }
