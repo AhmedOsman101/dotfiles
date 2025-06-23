@@ -193,6 +193,7 @@ ffmpegthumbnailer
 figlet
 figlet-fonts
 figlet-fonts-extra
+figma-linux
 find-the-command
 flameshot
 flatpak
@@ -268,6 +269,7 @@ i3lock-color
 iftop
 imv
 inetutils
+inkscape
 inotify-tools
 intel-ucode
 inter-font
