@@ -16,7 +16,8 @@
       "!**/.git/**",
       "!**/*.vue",
       "!**/*.svelte",
-      "!**/fresh.gen.ts"
+      "!**/fresh.gen.ts",
+      "!**/.next/**"
     ]
   },
   "assist": {
@@ -27,7 +28,7 @@
         "recommended": true,
         "organizeImports": "on",
         "useSortedAttributes": "on",
-        "useSortedProperties": "on",
+        "useSortedProperties": "off",
         "useSortedKeys": "off"
       }
     }
@@ -89,7 +90,7 @@
         "useForOf": "info",
         "useFragmentSyntax": "warn",
         "useNamingConvention": {
-          "level": "warn",
+          "level": "off",
           "options": {
             "strictCase": false,
             "requireAscii": true,
@@ -98,10 +99,7 @@
                 "selector": {
                   "kind": "objectLiteralMember"
                 },
-                "formats": [
-                  "camelCase",
-                  "PascalCase"
-                ],
+                "formats": ["camelCase", "PascalCase"],
                 "match": "[a-zA-Z$_][a-zA-Z0-9_]*"
               }
             ]
@@ -203,11 +201,7 @@
           "fix": "safe",
           "level": "warn",
           "options": {
-            "attributes": [
-              "classList",
-              "class",
-              "className"
-            ]
+            "attributes": ["classList", "class", "className"]
           }
         },
         "noAwaitInLoop": "info",
@@ -259,9 +253,7 @@
     "parser": {
       "unsafeParameterDecoratorsEnabled": true
     },
-    "globals": [
-      "Deno"
-    ]
+    "globals": ["Deno"]
   },
   "json": {
     "formatter": {
