@@ -3,6 +3,7 @@ acpi
 adw-gtk-theme
 alacritty
 alpaca-ai
+alsa-utils
 android-platform
 apparmor
 arch-wiki-docs
@@ -140,6 +141,7 @@ clonezilla
 cloud-init
 cmake
 composer
+conky
 containers-common
 copyq
 cowsay
@@ -176,6 +178,7 @@ e2fsprogs
 edges
 edk2-shell
 efibootmgr
+electron
 electron33
 entr
 espeak-ng
@@ -183,6 +186,7 @@ ethtool
 exfatprogs
 eza
 f2fs-tools
+fabric-installer
 fakeroot
 fastfetch
 fatresize
@@ -228,6 +232,7 @@ gnome-software
 gnuchess
 go
 gopls
+goverlay
 gpart
 gparted
 gpick
@@ -278,11 +283,14 @@ iw
 iwd
 jasper
 jdk17-openjdk
+jdk8-openjdk
 jedi-language-server
 jfsutils
 jp2a
 jq
 jq-lsp
+jre8-openjdk
+jre8-openjdk-headless
 kde-gtk-config
 kdialog
 keyd
@@ -302,6 +310,10 @@ lazygit
 ldns
 less
 lftp
+lib32-openal
+lib32-pipewire
+lib32-pipewire-jack
+lib32-vulkan-icd-loader
 libadwaita
 libappindicator-gtk2
 libavif
@@ -350,6 +362,7 @@ maim
 make
 man-db
 man-pages
+mangohud
 markdown-oxide-git
 marksman
 mdadm
@@ -359,8 +372,10 @@ memtest86+
 memtest86+-efi
 memtester
 mesa
+mesa-demos
 mesa-utils
 micro
+minecraft-server
 mkinitcpio
 mkinitcpio-firmware
 mkinitcpio-nfs-utils
@@ -398,6 +413,7 @@ nitrogen
 nload
 nm-connection-editor
 nmap
+nodejs-lts-iron
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -605,6 +621,7 @@ vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 vue-language-server
+vulkan-tools
 watchexec
 wavemon
 wayland-protocols
@@ -653,6 +670,7 @@ xorg-font-util
 xorg-fonts-100dpi
 xorg-fonts-75dpi
 xorg-fonts-encodings
+xorg-fonts-misc
 xorg-iceauth
 xorg-mkfontscale
 xorg-server
