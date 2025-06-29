@@ -24,7 +24,8 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
   position: relative !important;
   width: 35px !important;
   font-size: 16px !important;
-  font-family: "FiraCode Nerd Font", "JetBrainsMonoNF Nerd Font", monospace !important;
+  font-family:
+    "FiraCode Nerd Font", "JetBrainsMonoNF Nerd Font", monospace !important;
 }
 
 /* Code canvas top shadow */
@@ -57,7 +58,8 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
 /* File Explorer Item Label */
 .monaco-tree .monaco-tree-row .label-name,
 .monaco-list .monaco-list-row .monaco-icon-label .label-name {
-  font-family: "FiraCode Nerd Font", "JetBrainsMonoNF Nerd Font", monospace !important;
+  font-family:
+    "FiraCode Nerd Font", "JetBrainsMonoNF Nerd Font", monospace !important;
   font-size: 15px !important;
   font-weight: 500 !important;
   color: #ececec !important;
@@ -124,8 +126,7 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
 }
 
 /* Project title's style at the top. */
-.monaco-workbench
-  .part.titlebar
+.monaco-workbench .part.titlebar
   > .titlebar-container
   > .titlebar-center
   > .window-title
@@ -144,7 +145,8 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
 
 /* Search Label */
 .search-label {
-  font-family: "JetBrainsMonoNF Nerd Font", "FiraCode Nerd Font", monospace !important;
+  font-family:
+    "JetBrainsMonoNF Nerd Font", "FiraCode Nerd Font", monospace !important;
   font-size: 14px !important;
   color: #fff;
   display: block;
@@ -211,7 +213,8 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
   padding: 8px !important;
   border: none !important;
   background-color: rgba(34, 34, 34, 0.4) !important;
-  font-family: "JetBrainsMonoNF Nerd Font", "FiraCode Nerd Font", monospace !important;
+  font-family:
+    "JetBrainsMonoNF Nerd Font", "FiraCode Nerd Font", monospace !important;
   font-size: 14px !important;
   margin-bottom: 16px !important;
 }
