@@ -111,7 +111,10 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
 .monaco-editor-hover,
 .monaco-hover {
   box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.45) !important;
-  padding: 15px !important;
+  padding: 1rem !important;
+  /* background-image: linear-gradient(#24292e 0%, #23272e 100%) !important;
+  backdrop-filter: blur(3px) !important;
+  border-radius: 20px !important; */
   border-radius: 10px !important;
   border: none !important;
   height: auto !important;
@@ -178,7 +181,7 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
   padding: 10px 10px 18px 10px !important;
   background-image: linear-gradient(#24292e 0%, #1f2428 100%) !important;
   backdrop-filter: blur(3px) !important;
-  border-radius: 15px !important;
+  border-radius: 15px !important; /* 20px */
 }
 
 /* Remove background for lists */
@@ -258,4 +261,8 @@ a.statusbar-item-label.disabled[role="button"][tabindex="-1"][aria-label="NOR (V
   background-position: center center !important;
   background-size: contain !important;
   width: 100% !important;
+}
+
+.watermark-box {
+  display: none !important;
 }
