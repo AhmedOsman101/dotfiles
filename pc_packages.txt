@@ -202,6 +202,7 @@ find-the-command
 flameshot
 flatpak
 flex
+flying-carpet-bin
 fontforge
 foomatic-db
 foomatic-db-engine
@@ -548,6 +549,7 @@ stockfish
 stow
 sublime-text-4
 sudo
+superhtml-bin
 svelte-language-server
 swaybg
 switcheroo
@@ -642,6 +644,7 @@ x264
 x265
 xarchiver
 xbindkeys
+xclicker
 xclip
 xcolor
 xcursor-viewer-git

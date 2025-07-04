@@ -151,19 +151,19 @@
     "editor.inlayHints.enabled": "on"
   },
   "files.exclude": {
-    "**/vendor/": true,
-    "**/node_modules": true,
-    "**/dist": true,
-    "**/.next": true,
-    ".phpunit.result.cache": true,
-    "vendor": true,
-    "node_modules": true,
-    "dist": true,
-    "**/.trunk/*actions/": true,
-    "**/.trunk/*logs/": true,
-    "**/.trunk/*notifications/": true,
-    "**/.trunk/*out/": true,
-    "**/.trunk/*plugins/": true
+    "**/vendor/": false,
+    "**/node_modules": false,
+    "**/dist": false,
+    "**/.next": false,
+    ".phpunit.result.cache": false,
+    "vendor": false,
+    "node_modules": false,
+    "dist": false,
+    "**/.trunk/*actions/": false,
+    "**/.trunk/*logs/": false,
+    "**/.trunk/*notifications/": false,
+    "**/.trunk/*out/": false,
+    "**/.trunk/*plugins/": false
   },
   "files.watcherExclude": {
     "**/vendor/": true,

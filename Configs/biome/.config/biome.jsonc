@@ -17,7 +17,8 @@
       "!**/*.vue",
       "!**/*.svelte",
       "!**/fresh.gen.ts",
-      "!**/.next/**"
+      "!**/.next/**",
+      "!**/.obsidian/**"
     ]
   },
   "assist": {
@@ -114,7 +115,10 @@
       },
       "correctness": {
         "noUnusedFunctionParameters": "warn",
-        "noUnusedImports": "warn",
+        "noUnusedImports": {
+          "fix": "safe",
+          "level": "warn"
+        },
         "noUnusedVariables": "warn",
         "noConstAssign": "error",
         "noConstantMathMinMaxClamp": "on",

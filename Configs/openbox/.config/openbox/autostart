@@ -67,4 +67,4 @@ if [[ ! $(pidof xfce-polkit) ]]; then
 fi
 
 # ---- Enable hotcorners using edges ---- #
-edges --topleft "skippy-xd --toggle" &
+# edges --topright "skippy-xd --toggle" &
