@@ -5,7 +5,7 @@
       "#include <stdio.h>",
       "",
       "int main() {",
-      "\tprintf(\"${TM_FILENAME_BASE}\\n\");",
+      "\tprintf(\"I'm here!\\n\");",
       "",
       "\treturn 0;",
       "}"

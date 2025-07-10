@@ -5,3 +5,4 @@ project.inlang
 .next
 venv
 .venv
+.husky/_
