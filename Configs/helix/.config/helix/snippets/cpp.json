@@ -7,7 +7,7 @@
       "using namespace std;",
       "",
       "int main() {",
-      "\tcout << 'Ballz Deep' << endl;",
+      "\tcout << \"I'm here!\\n\";",
       "",
       "  return 0;",
       "}"
