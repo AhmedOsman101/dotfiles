@@ -155,6 +155,7 @@ cursor-electron
 dbus-broker-units
 ddrescue
 debtap
+devtoolbox
 dhclient
 dhcpcd
 dialog
@@ -228,6 +229,7 @@ glow
 gnome-boxes
 gnome-calculator
 gnome-chess
+gnome-clocks
 gnome-keyring
 gnome-software
 gnuchess
@@ -544,6 +546,7 @@ spotify
 squashfs-tools
 stacer-git
 starship
+steam
 sticky-git
 stockfish
 stow
