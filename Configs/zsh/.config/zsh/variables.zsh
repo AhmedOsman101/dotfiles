@@ -53,7 +53,7 @@ export BATDIFF_USE_DELTA=true
 export BUN_INSTALL="$HOME/.bun"
 
 # ---- Biome ---- #
-export BIOME_CONFIG_PATH="$XDG_CONFIG_HOME/biome.jsonc"
+export BIOME_CONFIG_PATH="$XDG_CONFIG_HOME/biome.json"
 export BIOME_BINARY="$(which biome)"
 
 # ---- Browser ---- #
