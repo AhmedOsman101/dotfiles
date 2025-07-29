@@ -3,7 +3,7 @@
 # ---- Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com> ---- #
 
 # ---- Kill if already running ---- #
-killall -9 xfsettingsd picom polybar dunst ksuperkey copyq ollama mpd xfce-polkit blueman-applet edges skippy-xd
+killall -9 xfsettingsd picom polybar dunst ksuperkey copyq ollama mpd xfce-polkit blueman-applet edges skippy-xd fcitx5
 
 # ---- Restore Wallpaper ---- #
 nitrogen --restore
@@ -54,6 +54,12 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 # ---- User Friendly Bluetooth Menu ---- #
 # blueman-applet &
 
+# ---- Enable hotcorners using edges ---- #
+# edges --topright "skippy-xd --toggle" &
+
+# Start fcitx5 daemon
+fcitx5 -d &
+
 # Start DBus if not already running ---- #
 if [[ -z "${DBUS_SESSION_BUS_ADDRESS}" ]]; then
   eval "$(dbus-launch --sh-syntax)"
@@ -65,6 +71,3 @@ fi
 if [[ ! $(pidof xfce-polkit) ]]; then
   /usr/lib/xfce-polkit/xfce-polkit &
 fi
-
-# ---- Enable hotcorners using edges ---- #
-# edges --topright "skippy-xd --toggle" &
