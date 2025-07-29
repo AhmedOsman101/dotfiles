@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/biomejs/biome/refs/heads/main/packages/%40biomejs/biome/configuration_schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -100,7 +100,10 @@
                 "selector": {
                   "kind": "objectLiteralMember"
                 },
-                "formats": ["camelCase", "PascalCase"],
+                "formats": [
+                  "camelCase",
+                  "PascalCase"
+                ],
                 "match": "[a-zA-Z$_][a-zA-Z0-9_]*"
               }
             ]
@@ -205,7 +208,11 @@
           "fix": "safe",
           "level": "warn",
           "options": {
-            "attributes": ["classList", "class", "className"]
+            "attributes": [
+              "classList",
+              "class",
+              "className"
+            ]
           }
         },
         "noAwaitInLoop": "info",
@@ -257,7 +264,9 @@
     "parser": {
       "unsafeParameterDecoratorsEnabled": true
     },
-    "globals": ["Deno"]
+    "globals": [
+      "Deno"
+    ]
   },
   "json": {
     "formatter": {
