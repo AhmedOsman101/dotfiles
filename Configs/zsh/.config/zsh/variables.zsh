@@ -13,6 +13,14 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export TUCKR_HOME="$HOME"
 export TUCKR_DIR="$TUCKR_HOME/dotfiles/Configs"
 
+# ---- Localization ---- #
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
+export SDL_IM_MODULE="fcitx"
+export INPUT_METHOD="fcitx"
+export GLFW_IM_MODULE="fcitx"
+export XMODIFIERS="@im=fcitx"
+
 # ---- Auto Notify ---- #
 export AUTO_NOTIFY_IGNORE=(
   "vim" "nvim" "micro" "hx"
