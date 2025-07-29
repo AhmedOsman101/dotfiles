@@ -5,6 +5,7 @@ alacritty
 alpaca-ai
 alsa-utils
 android-platform
+anki-bin
 apparmor
 arch-wiki-docs
 archcraft-arandr
@@ -731,6 +732,7 @@ yamlfmt
 yapf
 yazi
 yq
+zapzap
 zen-browser-bin
 zenity
 zip

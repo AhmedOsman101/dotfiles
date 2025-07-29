@@ -67,6 +67,7 @@ alias pscpu='n "ps | sort-by cpu | last 5"'
 
 #---- Git ---- #
 alias git_current_branch='git branch --show-current 2>/dev/null'
+alias git-init='git init && git add -A && git commit -m "initial commit"'
 
 # ---- Copy to Clipboard ----#
 [[ -n $(command -v copyclip) ]] || alias copyclip="clipcopy"

@@ -435,7 +435,7 @@
     ]
   },
   "parseargs": {
-    "prefix": "help",
+    "prefix": "parse_arg",
     "scope": "bash,shell,shellscript",
     "body": "cmdarg_parse \"\\$@\"",
     "description": "parse the args"
