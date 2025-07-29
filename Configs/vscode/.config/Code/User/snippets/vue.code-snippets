@@ -5,7 +5,7 @@
     "prefix": "init",
     "description": "Vue component skeleton",
     "body": [
-      "<script lang=\"${1|ts,tsx,js,jsx|}\">",
+      "<script setup lang=\"${1|ts,tsx,js,jsx|}\">",
       "// code",
       "</script>",
       "",
