@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -18,6 +18,7 @@
       "!**/*.svelte",
       "!**/fresh.gen.ts",
       "!**/.next/**",
+      "!**/.nuxt/**",
       "!**/.obsidian/**"
     ]
   },
@@ -100,10 +101,7 @@
                 "selector": {
                   "kind": "objectLiteralMember"
                 },
-                "formats": [
-                  "camelCase",
-                  "PascalCase"
-                ],
+                "formats": ["camelCase", "PascalCase"],
                 "match": "[a-zA-Z$_][a-zA-Z0-9_]*"
               }
             ]
@@ -132,7 +130,7 @@
         "noInvalidUseBeforeDeclaration": "error",
         "noSelfAssign": "on",
         "noUndeclaredDependencies": "off",
-        "noUndeclaredVariables": "error",
+        "noUndeclaredVariables": "info",
         "noUnreachable": "warn",
         "noUnreachableSuper": "warn",
         "noUnusedLabels": "error",
@@ -208,11 +206,7 @@
           "fix": "safe",
           "level": "warn",
           "options": {
-            "attributes": [
-              "classList",
-              "class",
-              "className"
-            ]
+            "attributes": ["classList", "class", "className"]
           }
         },
         "noAwaitInLoop": "info",
@@ -264,9 +258,7 @@
     "parser": {
       "unsafeParameterDecoratorsEnabled": true
     },
-    "globals": [
-      "Deno"
-    ]
+    "globals": ["Deno"]
   },
   "json": {
     "formatter": {
