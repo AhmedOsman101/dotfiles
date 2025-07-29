@@ -3,6 +3,7 @@ node_modules
 .cursor
 project.inlang
 .next
+.nuxt
 venv
 .venv
 .husky/_
