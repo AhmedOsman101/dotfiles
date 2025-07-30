@@ -875,7 +875,6 @@
   "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
   "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
   "php.inlayHints.insertOnDoubleClick": true,
-  "vue.inlayHints.destructuredProps": true,
   "vue.inlayHints.missingProps": true,
   "vue.inlayHints.vBindShorthand": true,
   "astyle.csharp.enable": true,
@@ -955,10 +954,11 @@
     "editor.defaultFormatter": "esafirm.kotlin-formatter"
   },
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": false,
     "markdown": false,
-    "scminput": false
+    "scminput": false,
+    "typescript": false
   },
   "editor.suggest.preview": false,
   "inlineFold.unfoldOnLineSelect": true,
@@ -1067,5 +1067,6 @@
       "ui:\\s*{([^)]*)\\s*}",
       "(?:'|\"|`)([^']*)(?:'|\"|`)"
     ]
-  ]
+  ],
+  "vue.autoInsert.dotValue": true
 }
