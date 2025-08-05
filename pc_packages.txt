@@ -1,5 +1,7 @@
 7zip
 acpi
+adobe-source-han-sans-jp-fonts
+adobe-source-han-serif-jp-fonts
 adw-gtk-theme
 alacritty
 alpaca-ai
@@ -192,6 +194,12 @@ fabric-installer
 fakeroot
 fastfetch
 fatresize
+fcitx
+fcitx-anthy
+fcitx-configtool
+fcitx-mozc
+fcitx-qt5
+fcitx-qt6
 fd
 fern-wifi-cracker
 ffmpeg
@@ -432,6 +440,7 @@ obs-studio
 obsidian
 okular
 ollama
+onboard
 open-iscsi
 openarena
 openconnect
@@ -648,6 +657,7 @@ x264
 x265
 xarchiver
 xbindkeys
+xcb-imdkit
 xclicker
 xclip
 xcolor
