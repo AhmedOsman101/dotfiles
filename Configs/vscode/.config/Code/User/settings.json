@@ -1060,7 +1060,8 @@
   "github.copilot.chat.languageContext.typescript.enabled": true,
   "tailwindCSS.classAttributes": [
     "class",
-    "ui"
+    "ui",
+    "className"
   ],
   "tailwindCSS.experimental.classRegex": [
     [
@@ -1068,5 +1069,6 @@
       "(?:'|\"|`)([^']*)(?:'|\"|`)"
     ]
   ],
-  "vue.autoInsert.dotValue": true
+  "vue.autoInsert.dotValue": true,
+  "tailwindCSS.emmetCompletions": true
 }
