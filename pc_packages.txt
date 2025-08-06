@@ -572,6 +572,7 @@ systemd-resolvconf
 tableplus
 taplo-cli
 tcpdump
+teams-for-linux
 telegram-desktop
 terminus-font
 tesseract
