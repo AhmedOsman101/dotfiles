@@ -237,6 +237,13 @@
         "useObjectSpread": "off",
         "useSingleJsDocAsterisk": "on",
         "useSymbolDescription": "warn"
+      },
+      "security": {
+        "noBlankTarget": {
+          "fix": "safe",
+          "level": "warn",
+          "options": {}
+        }
       }
     }
   },
