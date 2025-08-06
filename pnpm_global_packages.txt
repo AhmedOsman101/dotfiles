@@ -27,3 +27,7 @@ lib-result
 prettier-eslint
 rollup
 yo
+@google/gemini-cli
+create-next-app
+gitpick
+thanos-js
