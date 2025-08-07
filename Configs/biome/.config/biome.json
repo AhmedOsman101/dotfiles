@@ -18,6 +18,7 @@
       "!**/*.vue",
       "!**/*.svelte",
       "!**/fresh.gen.ts",
+      "!**/routeTree.gen.ts",
       "!**/.next/**",
       "!**/.nuxt/**",
       "!**/.obsidian/**"
