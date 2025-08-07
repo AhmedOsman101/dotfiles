@@ -9,6 +9,7 @@ alsa-utils
 android-platform
 anki-bin
 apparmor
+appmenu-gtk-module
 arch-wiki-docs
 archcraft-arandr
 archcraft-artworks
