@@ -70,6 +70,9 @@ export BROWSER="zen-browser"
 # ---- Cargo ---- #
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 
+# ---- Chassis ---- #
+export DEVICE="$(hostnamectl chassis)"
+
 # ---- Cuda ---- #
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
 
@@ -214,7 +217,13 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
 export PHPCS_CONFIG_PATH="$XDG_CONFIG_HOME/php-codesniffer/ruleset.xml"
 
 # ---- Pnpm ---- #
-export PNPM_HOME="/mnt/main/pnpm"
+if [[ "${DEVICE}" == "laptop"  ]]; then
+  pnpmHome="$XDG_DATA_HOME/pnpm"
+else
+  pnpmHome="/mnt/main/pnpm"
+fi
+
+export PNPM_HOME="${pnpmHome}"
 
 # ---- Python ---- #
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
@@ -236,8 +245,8 @@ export SUDO_ASKPASS="/home/othman/scripts/rofi/rofi-askpass"
 
 # ---- Terminal ---- #
 export TERMINAL="kitty"
-export TERM=xterm-256color
-export COLORTERM=truecolor
+export TERM="xterm-256color"
+export COLORTERM="truecolor"
 
 # ---- Texfm ---- #
 export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
@@ -265,6 +274,7 @@ export MRT="$HOME/Documents/backup/WordTemplates/Standard.dotx"
 # ---- PATH ---- #
 export PATH="$PATH:$SCRIPTS_DIR"                     # my custom scripts
 PATH="$PATH:$HOME/.local/bin"                        # my custom scripts (alternative)
+PATH="$PATH:${PNPM_HOME}"                            # PNPM Home folder
 PATH="$PATH:$HOME/.spicetify"                        # spicetify for spotify mods
 PATH="$PATH:$BUN_INSTALL/bin"                        # Bun js runtime
 PATH="$PATH:$XDG_CONFIG_HOME/composer/vendor/bin"    # Composer packages
