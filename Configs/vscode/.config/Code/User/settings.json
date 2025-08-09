@@ -870,8 +870,6 @@
   "biome.requireConfigFile": true,
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true,
-  "javascript.inlayHints.parameterNames.enabled": "literals",
-  "typescript.inlayHints.parameterNames.enabled": "literals",
   "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
   "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
   "php.inlayHints.insertOnDoubleClick": true,
@@ -1070,5 +1068,12 @@
     ]
   ],
   "vue.autoInsert.dotValue": true,
-  "tailwindCSS.emmetCompletions": true
+  "tailwindCSS.emmetCompletions": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "literals",
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "vs-browser.reload.onSave": true,
+  "vs-browser.reload.autoReloadDurationTime": 1000
 }
