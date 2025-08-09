@@ -1,7 +1,4 @@
 @nestjs/cli
-@vue/cli
-create-vite
-create-vue
 http-server
 intelephense
 json-server
@@ -11,7 +8,6 @@ tsx
 typescript
 typescript-language-server
 unlighthouse
-vitepress
 vue-eslint-parser
 yaml-language-server
 vercel
@@ -20,14 +16,5 @@ medium-to-markdown
 esbuild
 standard-version
 release-please
-@typescript-eslint/parser
-eslint
-generator-code
-lib-result
-prettier-eslint
-rollup
-yo
 @google/gemini-cli
-create-next-app
 gitpick
-thanos-js
