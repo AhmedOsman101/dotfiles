@@ -18,3 +18,16 @@ standard-version
 release-please
 @google/gemini-cli
 gitpick
+@typescript-eslint/parser
+@vue/cli
+create-next-app
+create-vite
+create-vue
+eslint
+generator-code
+lib-result
+prettier-eslint
+rollup
+thanos-js
+vitepress
+yo

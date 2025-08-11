@@ -528,6 +528,7 @@ rsync
 rubocop
 ruby-rubocop-performance
 ruff
+rustdesk
 rxvt-unicode-terminfo
 samba
 sassc
@@ -655,6 +656,7 @@ wpa_supplicant
 wrk
 wvdial
 x11-ssh-askpass
+x11vnc
 x264
 x265
 xarchiver

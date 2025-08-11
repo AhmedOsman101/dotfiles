@@ -180,8 +180,8 @@ args = ["lsp"]
 config.deno.enable = true
 
 # ---- PHP LSP ---- #
-[language-server.php-lsp]
-command = "/home/othman/.local/bin/devsense.php.ls"
+# [language-server.php-lsp]
+# command = "/home/othman/.local/bin/devsense.php.ls"
 
 # ---- Biome LSP ---- #
 [language-server]

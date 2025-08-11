@@ -10,7 +10,7 @@
   "editor.smoothScrolling": true,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
-  "editor.minimap.autohide": true,
+  "editor.minimap.autohide": "mouseover",
   "workbench.commandPalette.experimental.suggestCommands": true,
   "window.openFilesInNewWindow": "on",
   "debug.allowBreakpointsEverywhere": true,
@@ -234,7 +234,7 @@
   },
   "[css]": {
     "editor.suggest.insertMode": "replace",
-    "cSpell.fixSpellingWithRenameProvider": false
+    "cSpell.fixSpellingWithRenameProvider": false,
   },
   "files.associations": {
     "*.css": "css",
