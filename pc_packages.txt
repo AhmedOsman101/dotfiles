@@ -376,6 +376,7 @@ make
 man-db
 man-pages
 mangohud
+mariadb
 markdown-oxide-git
 marksman
 mdadm

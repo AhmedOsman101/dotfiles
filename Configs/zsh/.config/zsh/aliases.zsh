@@ -42,6 +42,9 @@ alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settin
 # ---- Svn ---- #
 alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"
 
+# --- Laravel Sail --- #
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+
 # ---- Wget ---- #
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 
