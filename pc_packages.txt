@@ -465,6 +465,7 @@ parted
 partimage
 paru
 paru-debug
+pass
 pastel
 patch
 pavucontrol
@@ -525,6 +526,7 @@ reddio
 refind
 reflector
 resvg
+ripasso
 ripgrep
 rmtrash
 rofi-emoji-git
