@@ -1,6 +1,11 @@
 Configs/zsh/.config/zsh/secrets.zsh filter=git-crypt diff=git-crypt
 Configs/git/.config/git/credentials filter=git-crypt diff=git-crypt 
+
 # Encrypt all private keys in .ssh, while excluding public keys
 Configs/ssh/.ssh/* filter=git-crypt diff=git-crypt
 Configs/ssh/.ssh/*.pub !filter !diff
 Configs/ssh/.ssh/config !filter !diff
+
+# show diffs nicely without accidental plaintext commits
+*.gpg diff=gpg
+Secrets/**/*.gpg diff=gpg
