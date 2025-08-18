@@ -127,6 +127,9 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 # ---- Gnupg ---- #
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
 
+# --- Gnu Pass --- #
+export PASSWORD_STORE_DIR="$TUCKR_HOME/dotfiles/Secrets"
+
 # ---- Go ---- #
 export GOPATH="${XDG_DATA_HOME}/go"
 
