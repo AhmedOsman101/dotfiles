@@ -127,9 +127,6 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 # ---- Gnupg ---- #
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
 
-# --- Gnu Pass --- #
-export PASSWORD_STORE_DIR="$TUCKR_HOME/dotfiles/Secrets"
-
 # ---- Go ---- #
 export GOPATH="${XDG_DATA_HOME}/go"
 
@@ -214,7 +211,7 @@ export NU_CONFIG="$XDG_CONFIG_HOME/nushell/config.nu"
 export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
 
 # ---- Pass ---- #
-export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
+export PASSWORD_STORE_DIR="$TUCKR_HOME/dotfiles/Secrets"
 
 # ---- PHP Codesniffer ---- #
 export PHPCS_CONFIG_PATH="$XDG_CONFIG_HOME/php-codesniffer/ruleset.xml"
