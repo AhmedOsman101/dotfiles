@@ -1,1 +1,176 @@
-.app-module__historyPage___WVzuO_spicetifyDhistory{display:flex;flex-direction:column;background:var(--background-base);padding:20px;height:100vh;font-family:"Spotify Circular",Arial,sans-serif;color:var(--text-base)}.app-module__header___qX4vF_spicetifyDhistory{display:flex;align-items:center;justify-content:center;background:linear-gradient(to right,transparent,var(--text-bright-accent),transparent,var(--text-bright-accent),transparent);background-size:200% 200%;padding:40px 20px;border-radius:8px;color:var(--text-base)}.app-module__controls___ZDW-X_spicetifyDhistory{display:flex;gap:1rem;padding:20px}.app-module__controls___ZDW-X_spicetifyDhistory button{outline:0;background-color:transparent;border:none;cursor:pointer;font-size:1.2rem;color:var(--text-base)}.app-module__controls___ZDW-X_spicetifyDhistory button:hover{color:var(--text-bright-accent)}.app-module__songList___L-FO3_spicetifyDhistory{margin-top:20px;overflow-y:auto;display:flex;flex-direction:column;gap:5px}.app-module__songListHeaderRow___xxHn5_spicetifyDhistory,.app-module__songRow___n-xF5_spicetifyDhistory{display:grid;grid-template-columns:32px minmax(150px,4fr) minmax(120px,2fr) minmax(100px,1fr) minmax(50px,0.5fr) 60px;align-items:center;padding:10px 15px}.app-module__songListHeaderRow___xxHn5_spicetifyDhistory{font-weight:700;gap:.5rem;border-bottom:1px solid rgba(255,255,255,.1)}.app-module__headerIndex___4k5fN_spicetifyDhistory{text-align:center}.app-module__headerAlbum___6DBAR_spicetifyDhistory:hover,.app-module__headerDate___-DwQq_spicetifyDhistory:hover,.app-module__headerDuration___03DTc_spicetifyDhistory:hover,.app-module__headerTitle___KUMLe_spicetifyDhistory:hover{color:var(--text-bright-accent)}.app-module__songRow___n-xF5_spicetifyDhistory{border-radius:8px;transition:background .2s ease-in-out;gap:.5rem}.app-module__songRow___n-xF5_spicetifyDhistory:hover{background:rgba(255,255,255,.1)}.app-module__songRow___n-xF5_spicetifyDhistory:hover .app-module__indexNumber___9S1pj_spicetifyDhistory{display:none}.app-module__songRow___n-xF5_spicetifyDhistory:hover .app-module__playPauseIcon___SjmNT_spicetifyDhistory{display:block}.app-module__songIndex___Yut1x_spicetifyDhistory{position:relative;display:flex;align-items:center;justify-content:center;width:32px;height:32px}.app-module__songIndex___Yut1x_spicetifyDhistory .app-module__indexNumber___9S1pj_spicetifyDhistory{display:inline-block}.app-module__songIndex___Yut1x_spicetifyDhistory .app-module__playPauseIcon___SjmNT_spicetifyDhistory{display:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);cursor:pointer;width:16px;height:16px}.app-module__songIndex___Yut1x_spicetifyDhistory .app-module__playPauseIcon___SjmNT_spicetifyDhistory svg{display:block;width:100%;height:100%;fill:white}.app-module__songImageContainer___pX9an_spicetifyDhistory{display:flex;justify-content:center;align-items:center}.app-module__songImage___uu8ma_spicetifyDhistory{width:40px;height:40px;border-radius:4px}.app-module__songDetails___zGpGO_spicetifyDhistory{display:flex;justify-self:start;gap:1rem;align-items:center}.app-module__songDetailsText___GbHp4_spicetifyDhistory{display:flex;flex-direction:column}.app-module__songName___BLldK_spicetifyDhistory{font-weight:700}.app-module__songArtist___YKzqq_spicetifyDhistory{font-size:.9rem;opacity:.8;cursor:pointer}.app-module__songArtist___YKzqq_spicetifyDhistory:hover{color:var(--text-bright-accent)}.app-module__songAlbum___jsyb2_spicetifyDhistory{text-align:left;cursor:pointer}.app-module__songAlbum___jsyb2_spicetifyDhistory:hover{color:var(--text-bright-accent)}.app-module__songDate___KC4a0_spicetifyDhistory{text-align:left}.app-module__songDuration___IknZg_spicetifyDhistory{text-align:left}.app-module__songActions___xH4cS_spicetifyDhistory{text-align:left}.app-module__songActions___xH4cS_spicetifyDhistory button{background:0 0;border:none;cursor:pointer;font-size:1rem}.app-module__songActions___xH4cS_spicetifyDhistory button:hover{color:var(--text-bright-accent)}
+.app-module__historyPage___WVzuO_spicetifyDhistory {
+  display: flex;
+  flex-direction: column;
+  background: var(--background-base);
+  padding: 20px;
+  height: 100vh;
+  font-family: "Spotify Circular", Arial, sans-serif;
+  color: var(--text-base);
+}
+.app-module__header___qX4vF_spicetifyDhistory {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--text-bright-accent),
+    transparent,
+    var(--text-bright-accent),
+    transparent
+  );
+  background-size: 200% 200%;
+  padding: 40px 20px;
+  border-radius: 8px;
+  color: var(--text-base);
+}
+.app-module__controls___ZDW-X_spicetifyDhistory {
+  display: flex;
+  gap: 1rem;
+  padding: 20px;
+}
+.app-module__controls___ZDW-X_spicetifyDhistory button {
+  outline: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--text-base);
+}
+.app-module__controls___ZDW-X_spicetifyDhistory button:hover {
+  color: var(--text-bright-accent);
+}
+.app-module__songList___L-FO3_spicetifyDhistory {
+  margin-top: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.app-module__songListHeaderRow___xxHn5_spicetifyDhistory,
+.app-module__songRow___n-xF5_spicetifyDhistory {
+  display: grid;
+  grid-template-columns: 32px minmax(150px, 4fr) minmax(120px, 2fr) minmax(
+      100px,
+      1fr
+    ) minmax(50px, 0.5fr) 60px;
+  align-items: center;
+  padding: 10px 15px;
+}
+.app-module__songListHeaderRow___xxHn5_spicetifyDhistory {
+  font-weight: 700;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.app-module__headerIndex___4k5fN_spicetifyDhistory {
+  text-align: center;
+}
+.app-module__headerAlbum___6DBAR_spicetifyDhistory:hover,
+.app-module__headerDate___-DwQq_spicetifyDhistory:hover,
+.app-module__headerDuration___03DTc_spicetifyDhistory:hover,
+.app-module__headerTitle___KUMLe_spicetifyDhistory:hover {
+  color: var(--text-bright-accent);
+}
+.app-module__songRow___n-xF5_spicetifyDhistory {
+  border-radius: 8px;
+  transition: background 0.2s ease-in-out;
+  gap: 0.5rem;
+}
+.app-module__songRow___n-xF5_spicetifyDhistory:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.app-module__songRow___n-xF5_spicetifyDhistory:hover
+  .app-module__indexNumber___9S1pj_spicetifyDhistory {
+  display: none;
+}
+.app-module__songRow___n-xF5_spicetifyDhistory:hover
+  .app-module__playPauseIcon___SjmNT_spicetifyDhistory {
+  display: block;
+}
+.app-module__songIndex___Yut1x_spicetifyDhistory {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+.app-module__songIndex___Yut1x_spicetifyDhistory
+  .app-module__indexNumber___9S1pj_spicetifyDhistory {
+  display: inline-block;
+}
+.app-module__songIndex___Yut1x_spicetifyDhistory
+  .app-module__playPauseIcon___SjmNT_spicetifyDhistory {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+.app-module__songIndex___Yut1x_spicetifyDhistory
+  .app-module__playPauseIcon___SjmNT_spicetifyDhistory
+  svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
+.app-module__songImageContainer___pX9an_spicetifyDhistory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-module__songImage___uu8ma_spicetifyDhistory {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+.app-module__songDetails___zGpGO_spicetifyDhistory {
+  display: flex;
+  justify-self: start;
+  gap: 1rem;
+  align-items: center;
+}
+.app-module__songDetailsText___GbHp4_spicetifyDhistory {
+  display: flex;
+  flex-direction: column;
+}
+.app-module__songName___BLldK_spicetifyDhistory {
+  font-weight: 700;
+}
+.app-module__songArtist___YKzqq_spicetifyDhistory {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.app-module__songArtist___YKzqq_spicetifyDhistory:hover {
+  color: var(--text-bright-accent);
+}
+.app-module__songAlbum___jsyb2_spicetifyDhistory {
+  text-align: left;
+  cursor: pointer;
+}
+.app-module__songAlbum___jsyb2_spicetifyDhistory:hover {
+  color: var(--text-bright-accent);
+}
+.app-module__songDate___KC4a0_spicetifyDhistory {
+  text-align: left;
+}
+.app-module__songDuration___IknZg_spicetifyDhistory {
+  text-align: left;
+}
+.app-module__songActions___xH4cS_spicetifyDhistory {
+  text-align: left;
+}
+.app-module__songActions___xH4cS_spicetifyDhistory button {
+  background: 0 0;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.app-module__songActions___xH4cS_spicetifyDhistory button:hover {
+  color: var(--text-bright-accent);
+}

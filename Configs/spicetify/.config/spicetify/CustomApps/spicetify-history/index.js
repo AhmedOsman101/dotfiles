@@ -1,1 +1,444 @@
-var spicetifyDhistory=(()=>{var e,t,r=Object.create,o=Object.defineProperty,l=Object.getOwnPropertyDescriptor,s=Object.getOwnPropertyNames,i=Object.getPrototypeOf,n=Object.prototype.hasOwnProperty,c=(t,a,r,i)=>{if(a&&"object"==typeof a||"function"==typeof a)for(let e of s(a))n.call(t,e)||e===r||o(t,e,{get:()=>a[e],enumerable:!(i=l(a,e))||i.enumerable});return t},a=(e,t,a)=>(a=null!=e?r(i(e)):{},c(!t&&e&&e.__esModule?a:o(a,"default",{value:e,enumerable:!0}),e)),u=(e={"external-global-plugin:react"(e,t){t.exports=Spicetify.React}},function(){return t||(0,e[s(e)[0]])((t={exports:{}}).exports,t),t.exports}),d={},y=(((e,t)=>{for(var a in t)o(e,a,{get:t[a],enumerable:!0})})(d,{default:()=>function(){return q.default.createElement(A,null)}}),a(u())),p="app-module__historyPage___WVzuO_spicetifyDhistory",_="app-module__header___qX4vF_spicetifyDhistory",m="app-module__controls___ZDW-X_spicetifyDhistory",f="app-module__songList___L-FO3_spicetifyDhistory",h="app-module__songListHeaderRow___xxHn5_spicetifyDhistory",g="app-module__songRow___n-xF5_spicetifyDhistory",v="app-module__headerIndex___4k5fN_spicetifyDhistory",D="app-module__headerTitle___KUMLe_spicetifyDhistory",b="app-module__headerAlbum___6DBAR_spicetifyDhistory",E="app-module__headerDate___-DwQq_spicetifyDhistory",S="app-module__headerDuration___03DTc_spicetifyDhistory",N="app-module__indexNumber___9S1pj_spicetifyDhistory",w="app-module__playPauseIcon___SjmNT_spicetifyDhistory",k="app-module__songIndex___Yut1x_spicetifyDhistory",P="app-module__songImageContainer___pX9an_spicetifyDhistory",x="app-module__songImage___uu8ma_spicetifyDhistory",j="app-module__songDetails___zGpGO_spicetifyDhistory",O="app-module__songDetailsText___GbHp4_spicetifyDhistory",C="app-module__songName___BLldK_spicetifyDhistory",L="app-module__songArtist___YKzqq_spicetifyDhistory",I="app-module__songAlbum___jsyb2_spicetifyDhistory",F="app-module__songDate___KC4a0_spicetifyDhistory",R="app-module__songDuration___IknZg_spicetifyDhistory",U="app-module__songActions___xH4cS_spicetifyDhistory",H=r=>new Promise((t,a)=>{var e=r.transaction(["history"],"readonly").objectStore("history").getAll();e.onerror=e=>{e=(null==(e=e.target.error)?void 0:e.message)||"Unknown error";console.error("Error retrieving history:",e),a(e)},e.onsuccess=e=>{e=e.target.result;t(e)}}),A=()=>{let[t,a]=(0,y.useState)(void 0),[e,i]=(0,y.useState)([]),[r,o]=(0,y.useState)({key:"date",ascending:!1}),l=(0,y.useRef)(null),s=(0,y.useRef)(null),n=(0,y.useCallback)(async()=>{try{var e=await(()=>{let r;return new Promise((t,a)=>{var e=indexedDB.open("SpicetifyHistoryDB",1);e.onerror=e=>{var t=(null==(t=e.target.error)?void 0:t.message)||"Unknown error";console.error("Database error:",e.target.error),a(t)},e.onsuccess=e=>{r=e.target.result,console.log("Database opened successfully"),t(r)},e.onupgradeneeded=e=>{var e=e.target.result;e.objectStoreNames.contains("history")||((e=e.createObjectStore("history",{keyPath:"uid"})).createIndex("name","name",{unique:!1}),e.createIndex("uri","uri",{unique:!0}),e.createIndex("listenDate","listenDate",{unique:!1}),console.log("Object store 'history' created"))}})})(),t=await H(e);a(e),c(t,r)}catch(e){console.error("Failed to fetch history:",e)}},[r]),c=(e,r)=>{e=[...e].sort((e,t)=>{var a;return"name"===r.key?e.name.localeCompare(t.name):"album"===r.key?((null==(a=e.album)?void 0:a.name)||"").localeCompare((null==(a=t.album)?void 0:a.name)||""):"date"===r.key?e.listenDate-t.listenDate:"duration"===r.key?e.duration.milliseconds-t.duration.milliseconds:0});r.ascending||e.reverse(),i(e)};(0,y.useEffect)(()=>{n()},[n]),(0,y.useEffect)(()=>{let e=()=>{n();var e=null==(e=Spicetify.Player.data)?void 0:e.item;e&&"track"===e.type&&(s.current=e.uri,l.current=e.uid)};return Spicetify.Player.addEventListener("onplaypause",e),Spicetify.Player.addEventListener("songchange",e),()=>{Spicetify.Player.removeEventListener("songchange",e),Spicetify.Player.removeEventListener("onplaypause",e)}},[n]);let u=async e=>{if(t)try{r=t,i=e,await new Promise((t,a)=>{var e=r.transaction(["history"],"readwrite").objectStore("history").delete(i);e.onerror=e=>{var t=(null==(t=e.target.error)?void 0:t.message)||"Unknown error";console.error("Error deleting song:",e.target.error),Spicetify.showNotification("Failed to delete song"),a(t)},e.onsuccess=e=>{console.log("Successfully deleted son."),Spicetify.showNotification("Song deleted"),t()}}),n()}catch(e){console.error("Failed to delete song:",e)}var r,i},d=t=>{o(e=>({key:t,ascending:e.key!==t||!e.ascending}))};return y.default.createElement("div",{className:p},y.default.createElement("div",{className:_},y.default.createElement("h1",null,"History")),y.default.createElement("div",{className:m},y.default.createElement("button",{onClick:async()=>{if(t)try{r=t,await new Promise((t,a)=>{var e=r.transaction(["history"],"readwrite").objectStore("history").clear();e.onerror=e=>{var t=(null==(t=e.target.error)?void 0:t.message)||"Unknown error";console.error("Error clearing history:",e.target.error),Spicetify.showNotification("Failed to clear history"),a(t)},e.onsuccess=e=>{console.log("Successfully cleared history."),Spicetify.showNotification("History cleared"),t()}}),n()}catch(e){console.error("Failed to clear history:",e)}var r}},"Clear history"),y.default.createElement("button",{onClick:async()=>{if(t)try{await(async e=>{try{var t,a,r,i,o=await H(e);0===o.length?Spicetify.showNotification("No history to export"):(o.sort((e,t)=>e.listenDate-t.listenDate),t=JSON.stringify(o,null,2),a=new Blob([t],{type:"application/json"}),r=URL.createObjectURL(a),(i=document.createElement("a")).href=r,i.download="spicetify-history-download",i.click(),i.remove(),URL.revokeObjectURL(r),Spicetify.showNotification("History exported"))}catch(e){console.error("Error exporting history:",e),Spicetify.showNotification("Failed to export history")}})(t)}catch(e){console.error("Failed to export history:",e)}}},"Export history")),y.default.createElement("div",{className:f},y.default.createElement("div",{className:h},y.default.createElement("div",{className:v},"#"),y.default.createElement("div",{onClick:()=>d("name"),className:D},"Title"),y.default.createElement("div",{onClick:()=>d("album"),className:b},"Album"),y.default.createElement("div",{onClick:()=>d("date"),className:E},"Date Added"),y.default.createElement("div",{onClick:()=>d("duration"),className:S},"Duration"),y.default.createElement("div",null)),0===e.length?y.default.createElement("p",null,"No history available."):e.map((a,e)=>{var t;return y.default.createElement("div",{key:a.uid||e,className:g},y.default.createElement("div",{className:k},y.default.createElement("span",{className:N},e+1),y.default.createElement("span",{className:w,onClick:()=>{var e,t;e=a.uri,t=a.uid,Spicetify&&Spicetify.Player&&(e===s.current?Spicetify.Player.isPlaying()?Spicetify.Player.pause():Spicetify.Player.play():Spicetify.Player.playUri(e).then(()=>{s.current=e,l.current=t}))}},y.default.createElement("svg",{dangerouslySetInnerHTML:{__html:a.uid!==l.current&&a.uri!==s.current||!Spicetify.Player.isPlaying()?Spicetify.SVGIcons.play:Spicetify.SVGIcons.pause}}))),y.default.createElement("div",{className:j},y.default.createElement("div",{className:P},y.default.createElement("img",{src:(null==(e=null==(e=a.images)?void 0:e[0])?void 0:e.url)||"/default-image.png",alt:a.name,className:x})),y.default.createElement("div",{className:O},y.default.createElement("div",{className:C,title:a.name},50<a.name.length?a.name.substring(0,50)+"...":a.name),y.default.createElement("div",{className:L,onClick:()=>{var e;return Spicetify.Platform.History.push("/artist/"+(null==(e=a.artists)?void 0:e[0].uri.split(":")[2]))}},null==(e=a.artists)?void 0:e.map(e=>e.name).join(", ")))),y.default.createElement("div",{className:I,onClick:()=>{var e;return Spicetify.Platform.History.push("/album/"+(null==(e=a.album)?void 0:e.uri.split(":")[2]))}},50<(null==(e=a.album)?void 0:e.name.length)?`${null==(e=a.album)?void 0:e.name.substring(0,50)}...`:null==(e=a.album)?void 0:e.name),y.default.createElement("div",{className:F},a.listenDate?new Date(a.listenDate).toLocaleDateString():""),y.default.createElement("div",{className:R},(e=a.duration.milliseconds,t=Math.floor(e/6e4),e=(e%6e4/1e3).toFixed(0),t+":"+(parseInt(e)<10?"0":"")+e)),y.default.createElement("div",{className:U},y.default.createElement("button",{onClick:()=>u(a.uid)},"Delete")))})))},q=a(u());return a=d,c(o({},"__esModule",{value:!0}),a)})();let render=()=>spicetifyDhistory.default();
+var spicetifyDhistory = (() => {
+  var e;
+  var t;
+  var r = Object.create;
+  var o = Object.defineProperty;
+  var l = Object.getOwnPropertyDescriptor;
+  var s = Object.getOwnPropertyNames;
+  var i = Object.getPrototypeOf;
+  var n = Object.prototype.hasOwnProperty;
+  var c = (t, a, r, i) => {
+    if ((a && "object" === typeof a) || "function" === typeof a)
+      for (const e of s(a))
+        n.call(t, e) ||
+          e === r ||
+          o(t, e, {
+            get: () => a[e],
+            enumerable: !(i = l(a, e)) || i.enumerable,
+          });
+    return t;
+  };
+  var a = (e, t, a) => (
+    (a = null !== e ? r(i(e)) : {}),
+    c(
+      !t && e && e.__esModule
+        ? a
+        : o(a, "default", { value: e, enumerable: !0 }),
+      e
+    )
+  );
+  var u =
+    ((e = {
+      "external-global-plugin:react"(e, t) {
+        t.exports = Spicetify.React;
+      },
+    }),
+    () => (t || (0, e[s(e)[0]])((t = { exports: {} }).exports, t), t.exports));
+  var d = {};
+  var y =
+    (((e, t) => {
+      for (var a in t) o(e, a, { get: t[a], enumerable: !0 });
+    })(d, { default: () => () => q.default.createElement(A, null) }),
+    a(u()));
+  var p = "app-module__historyPage___WVzuO_spicetifyDhistory";
+  var _ = "app-module__header___qX4vF_spicetifyDhistory";
+  var m = "app-module__controls___ZDW-X_spicetifyDhistory";
+  var f = "app-module__songList___L-FO3_spicetifyDhistory";
+  var h = "app-module__songListHeaderRow___xxHn5_spicetifyDhistory";
+  var g = "app-module__songRow___n-xF5_spicetifyDhistory";
+  var v = "app-module__headerIndex___4k5fN_spicetifyDhistory";
+  var D = "app-module__headerTitle___KUMLe_spicetifyDhistory";
+  var b = "app-module__headerAlbum___6DBAR_spicetifyDhistory";
+  var E = "app-module__headerDate___-DwQq_spicetifyDhistory";
+  var S = "app-module__headerDuration___03DTc_spicetifyDhistory";
+  var N = "app-module__indexNumber___9S1pj_spicetifyDhistory";
+  var w = "app-module__playPauseIcon___SjmNT_spicetifyDhistory";
+  var k = "app-module__songIndex___Yut1x_spicetifyDhistory";
+  var P = "app-module__songImageContainer___pX9an_spicetifyDhistory";
+  var x = "app-module__songImage___uu8ma_spicetifyDhistory";
+  var j = "app-module__songDetails___zGpGO_spicetifyDhistory";
+  var O = "app-module__songDetailsText___GbHp4_spicetifyDhistory";
+  var C = "app-module__songName___BLldK_spicetifyDhistory";
+  var L = "app-module__songArtist___YKzqq_spicetifyDhistory";
+  var I = "app-module__songAlbum___jsyb2_spicetifyDhistory";
+  var F = "app-module__songDate___KC4a0_spicetifyDhistory";
+  var R = "app-module__songDuration___IknZg_spicetifyDhistory";
+  var U = "app-module__songActions___xH4cS_spicetifyDhistory";
+  var H = r =>
+    new Promise((t, a) => {
+      var e = r
+        .transaction(["history"], "readonly")
+        .objectStore("history")
+        .getAll();
+      (e.onerror = e => {
+        e =
+          (null === (e = e.target.error) ? void 0 : e.message) ||
+          "Unknown error";
+        console.error("Error retrieving history:", e), a(e);
+      }),
+        (e.onsuccess = e => {
+          e = e.target.result;
+          t(e);
+        });
+    });
+  var A = () => {
+    const [t, a] = (0, y.useState)(void 0);
+    let [e, i] = (0, y.useState)([]);
+    let [r, o] = (0, y.useState)({ key: "date", ascending: !1 });
+    const l = (0, y.useRef)(null);
+    const s = (0, y.useRef)(null);
+    const n = (0, y.useCallback)(async () => {
+      try {
+        var e = await (() => {
+          let r;
+          return new Promise((t, a) => {
+            var e = indexedDB.open("SpicetifyHistoryDB", 1);
+            (e.onerror = e => {
+              var t =
+                (null === (t = e.target.error) ? void 0 : t.message) ||
+                "Unknown error";
+              console.error("Database error:", e.target.error), a(t);
+            }),
+              (e.onsuccess = e => {
+                (r = e.target.result),
+                  console.log("Database opened successfully"),
+                  t(r);
+              }),
+              (e.onupgradeneeded = e => {
+                var e = e.target.result;
+                e.objectStoreNames.contains("history") ||
+                  ((e = e.createObjectStore("history", {
+                    keyPath: "uid",
+                  })).createIndex("name", "name", { unique: !1 }),
+                  e.createIndex("uri", "uri", { unique: !0 }),
+                  e.createIndex("listenDate", "listenDate", { unique: !1 }),
+                  console.log("Object store 'history' created"));
+              });
+          });
+        })();
+        var t = await H(e);
+        a(e), c(t, r);
+      } catch (e) {
+        console.error("Failed to fetch history:", e);
+      }
+    }, [r]);
+    const c = (e, r) => {
+      e = [...e].sort((e, t) => {
+        var a;
+        return "name" === r.key
+          ? e.name.localeCompare(t.name)
+          : "album" === r.key
+            ? ((null === (a = e.album) ? void 0 : a.name) || "").localeCompare(
+                (null === (a = t.album) ? void 0 : a.name) || ""
+              )
+            : "date" === r.key
+              ? e.listenDate - t.listenDate
+              : "duration" === r.key
+                ? e.duration.milliseconds - t.duration.milliseconds
+                : 0;
+      });
+      r.ascending || e.reverse(), i(e);
+    };
+    (0, y.useEffect)(() => {
+      n();
+    }, [n]),
+      (0, y.useEffect)(() => {
+        const e = () => {
+          n();
+          var e = null === (e = Spicetify.Player.data) ? void 0 : e.item;
+          e && "track" === e.type && ((s.current = e.uri), (l.current = e.uid));
+        };
+        return (
+          Spicetify.Player.addEventListener("onplaypause", e),
+          Spicetify.Player.addEventListener("songchange", e),
+          () => {
+            Spicetify.Player.removeEventListener("songchange", e),
+              Spicetify.Player.removeEventListener("onplaypause", e);
+          }
+        );
+      }, [n]);
+    const u = async e => {
+      if (t)
+        try {
+          (r = t),
+            (i = e),
+            await new Promise((t, a) => {
+              var e = r
+                .transaction(["history"], "readwrite")
+                .objectStore("history")
+                .delete(i);
+              (e.onerror = e => {
+                var t =
+                  (null === (t = e.target.error) ? void 0 : t.message) ||
+                  "Unknown error";
+                console.error("Error deleting song:", e.target.error),
+                  Spicetify.showNotification("Failed to delete song"),
+                  a(t);
+              }),
+                (e.onsuccess = e => {
+                  console.log("Successfully deleted son."),
+                    Spicetify.showNotification("Song deleted"),
+                    t();
+                });
+            }),
+            n();
+        } catch (e) {
+          console.error("Failed to delete song:", e);
+        }
+      var r;
+      var i;
+    };
+    const d = t => {
+      o(e => ({ key: t, ascending: e.key !== t || !e.ascending }));
+    };
+    return y.default.createElement(
+      "div",
+      { className: p },
+      y.default.createElement(
+        "div",
+        { className: _ },
+        y.default.createElement("h1", null, "History")
+      ),
+      y.default.createElement(
+        "div",
+        { className: m },
+        y.default.createElement(
+          "button",
+          {
+            onClick: async () => {
+              if (t)
+                try {
+                  (r = t),
+                    await new Promise((t, a) => {
+                      var e = r
+                        .transaction(["history"], "readwrite")
+                        .objectStore("history")
+                        .clear();
+                      (e.onerror = e => {
+                        var t =
+                          (null === (t = e.target.error)
+                            ? void 0
+                            : t.message) || "Unknown error";
+                        console.error(
+                          "Error clearing history:",
+                          e.target.error
+                        ),
+                          Spicetify.showNotification("Failed to clear history"),
+                          a(t);
+                      }),
+                        (e.onsuccess = e => {
+                          console.log("Successfully cleared history."),
+                            Spicetify.showNotification("History cleared"),
+                            t();
+                        });
+                    }),
+                    n();
+                } catch (e) {
+                  console.error("Failed to clear history:", e);
+                }
+              var r;
+            },
+          },
+          "Clear history"
+        ),
+        y.default.createElement(
+          "button",
+          {
+            onClick: async () => {
+              if (t)
+                try {
+                  await (async e => {
+                    try {
+                      var t;
+                      var a;
+                      var r;
+                      var i;
+                      var o = await H(e);
+                      0 === o.length
+                        ? Spicetify.showNotification("No history to export")
+                        : (o.sort((e, t) => e.listenDate - t.listenDate),
+                          (t = JSON.stringify(o, null, 2)),
+                          (a = new Blob([t], { type: "application/json" })),
+                          (r = URL.createObjectURL(a)),
+                          ((i = document.createElement("a")).href = r),
+                          (i.download = "spicetify-history-download"),
+                          i.click(),
+                          i.remove(),
+                          URL.revokeObjectURL(r),
+                          Spicetify.showNotification("History exported"));
+                    } catch (e) {
+                      console.error("Error exporting history:", e),
+                        Spicetify.showNotification("Failed to export history");
+                    }
+                  })(t);
+                } catch (e) {
+                  console.error("Failed to export history:", e);
+                }
+            },
+          },
+          "Export history"
+        )
+      ),
+      y.default.createElement(
+        "div",
+        { className: f },
+        y.default.createElement(
+          "div",
+          { className: h },
+          y.default.createElement("div", { className: v }, "#"),
+          y.default.createElement(
+            "div",
+            { onClick: () => d("name"), className: D },
+            "Title"
+          ),
+          y.default.createElement(
+            "div",
+            { onClick: () => d("album"), className: b },
+            "Album"
+          ),
+          y.default.createElement(
+            "div",
+            { onClick: () => d("date"), className: E },
+            "Date Added"
+          ),
+          y.default.createElement(
+            "div",
+            { onClick: () => d("duration"), className: S },
+            "Duration"
+          ),
+          y.default.createElement("div", null)
+        ),
+        0 === e.length
+          ? y.default.createElement("p", null, "No history available.")
+          : e.map((a, e) => {
+              var t;
+              return y.default.createElement(
+                "div",
+                { key: a.uid || e, className: g },
+                y.default.createElement(
+                  "div",
+                  { className: k },
+                  y.default.createElement("span", { className: N }, e + 1),
+                  y.default.createElement(
+                    "span",
+                    {
+                      className: w,
+                      onClick: () => {
+                        var e;
+                        var t;
+                        (e = a.uri),
+                          (t = a.uid),
+                          Spicetify &&
+                            Spicetify.Player &&
+                            (e === s.current
+                              ? Spicetify.Player.isPlaying()
+                                ? Spicetify.Player.pause()
+                                : Spicetify.Player.play()
+                              : Spicetify.Player.playUri(e).then(() => {
+                                  (s.current = e), (l.current = t);
+                                }));
+                      },
+                    },
+                    y.default.createElement("svg", {
+                      dangerouslySetInnerHTML: {
+                        __html:
+                          (a.uid !== l.current && a.uri !== s.current) ||
+                          !Spicetify.Player.isPlaying()
+                            ? Spicetify.SVGIcons.play
+                            : Spicetify.SVGIcons.pause,
+                      },
+                    })
+                  )
+                ),
+                y.default.createElement(
+                  "div",
+                  { className: j },
+                  y.default.createElement(
+                    "div",
+                    { className: P },
+                    y.default.createElement("img", {
+                      src:
+                        (null === (e = null === (e = a.images) ? void 0 : e[0])
+                          ? void 0
+                          : e.url) || "/default-image.png",
+                      alt: a.name,
+                      className: x,
+                    })
+                  ),
+                  y.default.createElement(
+                    "div",
+                    { className: O },
+                    y.default.createElement(
+                      "div",
+                      { className: C, title: a.name },
+                      50 < a.name.length
+                        ? `${a.name.substring(0, 50)}...`
+                        : a.name
+                    ),
+                    y.default.createElement(
+                      "div",
+                      {
+                        className: L,
+                        onClick: () => {
+                          var e;
+                          return Spicetify.Platform.History.push(
+                            `/artist/${null === ((e = a.artists)) ? void 0 : e[0].uri.split(":")[2]}`
+                          );
+                        },
+                      },
+                      null === (e = a.artists)
+                        ? void 0
+                        : e.map(e => e.name).join(", ")
+                    )
+                  )
+                ),
+                y.default.createElement(
+                  "div",
+                  {
+                    className: I,
+                    onClick: () => {
+                      var e;
+                      return Spicetify.Platform.History.push(
+                        `/album/${null === ((e = a.album)) ? void 0 : e.uri.split(":")[2]}`
+                      );
+                    },
+                  },
+                  50 < (null === (e = a.album) ? void 0 : e.name.length)
+                    ? `${null === ((e = a.album)) ? void 0 : e.name.substring(0, 50)}...`
+                    : null === (e = a.album)
+                      ? void 0
+                      : e.name
+                ),
+                y.default.createElement(
+                  "div",
+                  { className: F },
+                  a.listenDate
+                    ? new Date(a.listenDate).toLocaleDateString()
+                    : ""
+                ),
+                y.default.createElement(
+                  "div",
+                  { className: R },
+                  ((e = a.duration.milliseconds),
+                  (t = Math.floor(e / 6e4)),
+                  (e = ((e % 6e4) / 1e3).toFixed(0)),
+                  `${t}:${Number.parseInt(e) < 10 ? "0" : ""}${e}`)
+                ),
+                y.default.createElement(
+                  "div",
+                  { className: U },
+                  y.default.createElement(
+                    "button",
+                    { onClick: () => u(a.uid) },
+                    "Delete"
+                  )
+                )
+              );
+            })
+      )
+    );
+  };
+  var q = a(u());
+  return (a = d), c(o({}, "__esModule", { value: !0 }), a);
+})();
+const render = () => spicetifyDhistory.default();
