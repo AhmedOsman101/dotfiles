@@ -3,7 +3,7 @@
 # ---- Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com> ---- #
 
 # ---- Kill if already running ---- #
-killall -9 xfsettingsd picom polybar dunst ksuperkey copyq ollama mpd xfce-polkit blueman-applet edges skippy-xd fcitx5
+killall -9 xfsettingsd picom polybar dunst ksuperkey copyq ollama mpd xfce-polkit blueman-applet edges skippy-xd fcitx5 sxhkd
 
 # ---- Restore Wallpaper ---- #
 nitrogen --restore
@@ -18,6 +18,7 @@ xfsettingsd &
 # ---- Start Compositing Manager ---- #
 exec picom &
 
+# ---- Start Spotify listener ---- #
 systemctl --user start spotify-listener &
 
 # ---- Launch Polybar or Tint2 ---- #
@@ -39,7 +40,7 @@ exec thunar --daemon &
 exec copyq &
 
 # ---- Start the ollama server ---- #
-exec ollama serve &
+# exec ollama serve &
 
 # ---- Enable Super Keys For Menu ---- #
 ksuperkey -e 'Super_L=Alt_L|F1' &
@@ -57,8 +58,11 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 # ---- Enable hotcorners using edges ---- #
 # edges --topright "skippy-xd --toggle" &
 
-# Start fcitx5 daemon
+# --- Start fcitx5 daemon --- #
 fcitx5 -d &
+
+# --- sxhkd for shortcuts --- #
+sxhkd &
 
 # Start DBus if not already running ---- #
 if [[ -z "${DBUS_SESSION_BUS_ADDRESS}" ]]; then

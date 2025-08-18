@@ -114,6 +114,7 @@ alias db='distrobox'
 
 # ---- Shutdown (safely) ---- #
 alias goodnight='sync && sudo systemctl poweroff'
+alias goodnights='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A sync && SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A systemctl poweroff'
 
 # ---- Rtx (asdf rust clone) ---- #
 alias asdf='rtx'
@@ -127,3 +128,6 @@ alias stdver='standard-version'
 
 # ---- Release Please ---- #
 alias rp='release-please'
+
+# --- MySql --- #
+alias mysql='mariadb'
