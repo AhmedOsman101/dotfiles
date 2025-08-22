@@ -7,3 +7,4 @@ project.inlang
 venv
 .venv
 .husky/_
+vendor

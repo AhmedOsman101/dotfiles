@@ -305,7 +305,7 @@
   "git.terminalGitEditor": true,
   "workbench.cloudChanges.autoResume": "off",
   "workbench.productIconTheme": "fluent-icons",
-  "markdown-preview-enhanced.alwaysShowBacklinksInPreview": true,
+  "markdown-preview-enhanced.alwaysShowBacklinksInPreview": false,
   "markdown-preview-enhanced.enableExtendedTableSyntax": true,
   "markdown-preview-enhanced.latexEngine": "MikTex",
   "markdown-preview-enhanced.mermaidTheme": "dark",
@@ -643,7 +643,6 @@
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.semanticHighlighting.enabled": true
   },
-  "codesnap.shutterAction": "copy",
   "c-cpp-flylint.cppcheck.verbose": true,
   "c-cpp-flylint.debug": true,
   "autopep8.interpreter": [
@@ -1075,5 +1074,9 @@
   "javascript.inlayHints.variableTypes.enabled": true,
   "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
   "vs-browser.reload.onSave": true,
-  "vs-browser.reload.autoReloadDurationTime": 1000
+  "vs-browser.reload.autoReloadDurationTime": 1000,
+  "helixKeymap.toggleRelativeLineNumbers": true,
+  "[sql]": {
+    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+  }
 }
