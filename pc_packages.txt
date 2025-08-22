@@ -158,6 +158,7 @@ cups-filters
 cups-pdf
 curlie
 cursor-electron
+dbeaver
 dbus-broker-units
 ddrescue
 debtap
@@ -315,6 +316,7 @@ kitty-terminfo
 klavaro
 kmag
 kmines
+kmscube-git
 knights
 kolourpaint
 kotlin
@@ -352,6 +354,7 @@ libvirt
 libvpx
 libwebp
 light
+lighttpd
 linux
 linux-atm
 linux-firmware
@@ -475,13 +478,16 @@ perl-image-exiftool
 perl-linux-desktopfiles
 php
 php-apache
+php-codesniffer
 php-fpm
 php-gd
+php-legacy-apache
 php-mongodb
 php-pear
 php-redis
 php-sodium
 php-sqlite
+phpmyadmin
 picom
 pipewire
 pipewire-alsa
@@ -754,6 +760,7 @@ xz
 yad
 yamlfmt
 yapf
+yarn
 yazi
 yq
 zapzap
