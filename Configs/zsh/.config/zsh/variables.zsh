@@ -211,7 +211,7 @@ export NU_CONFIG="$XDG_CONFIG_HOME/nushell/config.nu"
 export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
 
 # ---- Pass ---- #
-export PASSWORD_STORE_DIR="$TUCKR_HOME/dotfiles/Secrets"
+export PASSWORD_STORE_DIR="$HOME/.password-store"
 
 # ---- PHP Codesniffer ---- #
 export PHPCS_CONFIG_PATH="$XDG_CONFIG_HOME/php-codesniffer/ruleset.xml"
@@ -253,6 +253,12 @@ export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 
 # ---- w3m ---- #
 export W3M_DIR="$XDG_DATA_HOME/w3m"
+
+# --- Webkit --- #
+export __EGL_VENDOR_LIBRARY_FILENAMES="/usr/share/glvnd/egl_vendor.d/10_nvidia.json"
+# Enable as needed
+# export WEBVIEW_FORCE_EGL=1
+# export WEBKIT_DISABLE_DMABUF_RENDERER=1
 
 # ---- X11 ---- #
 export XINITRC="$XDG_CONFIG_HOME/X11/.Xinitrc"
