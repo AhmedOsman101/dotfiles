@@ -11,9 +11,24 @@
     "ignoreUnknown": true,
     "includes": [
       "**",
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.json",
+      "**/*.jsonc",
+      "**/*.css",
+      "**/*.html",
+      "**/*.html",
+      "**/*.graphql",
+      "**/*.gql",
+      "**/*.graphqls",
+      "**/*.gqls",
       "!**/node_modules/**",
       "!**/prisma/**",
+      "!**/public/**",
       "!**/dist/**",
+      "!**/build/**",
       "!**/.git/**",
       "!**/*.vue",
       "!**/*.svelte",
@@ -21,7 +36,8 @@
       "!**/routeTree.gen.ts",
       "!**/.next/**",
       "!**/.nuxt/**",
-      "!**/.obsidian/**"
+      "!**/.obsidian/**",
+      "!**/vendor/**"
     ]
   },
   "assist": {

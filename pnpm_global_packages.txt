@@ -31,3 +31,4 @@ rollup
 thanos-js
 vitepress
 yo
+@neutralinojs/neu

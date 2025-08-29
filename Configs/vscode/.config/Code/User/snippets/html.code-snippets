@@ -34,11 +34,9 @@
     "scope": "html",
     "prefix": "ps",
     "body": [
-      "<?php",
+      "<?php declare(strict_types=1);",
       "",
-      "declare(strict_types=1);",
-      "",
-      ""
+      "$0"
     ],
     "description": "php file with strict_types skeleton"
   }
