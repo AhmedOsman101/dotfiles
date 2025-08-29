@@ -20,7 +20,8 @@ alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 alias cd="z"
 
 # ---- Eza (better ls) ----- #
-alias ls="eza  --all --color=always --long --git --icons=always --no-time --no-user --sort name"
+alias ls="eza --all --color=always --long --git --icons=always --no-time --no-user --sort name"
+alias lst="eza -T --all --color=always --long --git --icons=always --no-time --no-user --sort name --ignore-glob='node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor'"
 
 # ---- Micro (better nano) ----- #
 alias nano="micro"
@@ -63,10 +64,10 @@ alias du='du -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
 # ---- Get top process eating memory ---- #
-alias psmem='n "ps | sort-by mem | last 5"'
+alias psmem='n "ps | sort-by mem -r | first 5"'
 
 # ---- Get top process eating cpu ---- #
-alias pscpu='n "ps | sort-by cpu | last 5"'
+alias pscpu='n "ps | sort-by cpu -r | first 5"'
 
 #---- Git ---- #
 alias git_current_branch='git branch --show-current 2>/dev/null'

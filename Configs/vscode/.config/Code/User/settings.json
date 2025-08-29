@@ -138,7 +138,6 @@
     ".sml": "cd $dir && sml $fileName",
     ".mojo": "mojo run"
   },
-  // "code-runner.fileDirectoryAsCwd": true,
   "code-runner.runInTerminal": true,
   "code-runner.saveAllFilesBeforeRun": true,
   "code-runner.saveFileBeforeRun": true,
@@ -180,7 +179,7 @@
     "**/.trunk/*notifications/": true,
     "**/.trunk/*out/": true,
     "**/.trunk/*plugins/": true,
-    "**/.turbo/**": true,
+    "**/.turbo/**": true
   },
   "toggleexcludedfiles.explorer.enabled": true,
   "liveServer.settings.donotShowInfoMsg": true,
@@ -234,7 +233,7 @@
   },
   "[css]": {
     "editor.suggest.insertMode": "replace",
-    "cSpell.fixSpellingWithRenameProvider": false,
+    "cSpell.fixSpellingWithRenameProvider": false
   },
   "files.associations": {
     "*.css": "css",
@@ -365,8 +364,6 @@
   },
   "search.useIgnoreFiles": false,
   "search.exclude": {
-    // Hide everything in /vendor, except the "laravel" and "livewire" folder.
-    // "**/vendor/{[^l],?[^ai]}*": true,
     "**/vendor/**": true,
     "**/node_modules/**": true,
     "**/dist/**": true,
@@ -376,23 +373,19 @@
     "storage": true,
     ".phpunit.result.cache": true
   },
-  // Custom Settings
   "workbench.editor.enablePreview": true,
   "window.newWindowDimensions": "inherit",
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  // Silence the Noise
   "editor.hover.enabled": true,
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
-  // Typography
   "editor.suggestLineHeight": 30,
   "terminal.integrated.lineHeight": 1.5,
-  /* Code */
   "emmet.includeLanguages": {
     "blade": "html",
     "vue-html": "html",
@@ -438,7 +431,7 @@
   "better-comments.tags": [
     {
       "tag": "DEPRECATED:",
-      "color": "#474747", // deprecated -> gray
+      "color": "#474747",
       "strikethrough": true,
       "underline": false,
       "backgroundColor": "transparent",
@@ -447,7 +440,7 @@
     },
     {
       "tag": "!",
-      "color": "#FF2D00", // alert -> red
+      "color": "#FF2D00",
       "strikethrough": false,
       "underline": false,
       "backgroundColor": "transparent",
@@ -456,7 +449,7 @@
     },
     {
       "tag": "?",
-      "color": "cyan", // query -> blue
+      "color": "cyan",
       "strikethrough": false,
       "underline": false,
       "backgroundColor": "transparent",
@@ -473,7 +466,7 @@
       "italic": true
     },
     {
-      "tag": "TODO:", // yellow
+      "tag": "TODO:",
       "color": "#FF8C00",
       "strikethrough": false,
       "underline": false,
@@ -695,7 +688,6 @@
   "errorLens.gutterIconsEnabled": true,
   "errorLens.gutterIconSet": "squareRounded",
   "errorLens.messageTemplate": "[$count] $severity $message",
-  // "errorLens.severityText": ["■", "■", "■", "■"],
   "errorLens.severityText": [
     "■",
     "◈",
@@ -703,12 +695,10 @@
     "■"
   ],
   "errorLens.codeLensEnabled": false,
-  "errorLens.messageEnabled": true, // the message alongside code,
+  "errorLens.messageEnabled": true,
   "errorLens.problemRangeDecorationEnabled": true,
   "errorLens.decorations": {
     "errorRange": {
-      // "color": "#aaa",
-      // "color": "#FF6464",
       "borderRadius": "5px"
     },
     "warningRange": {
@@ -723,7 +713,6 @@
     },
     "hintMessage": {
       "backgroundColor": "transparent"
-      // "color": "transparent"
     }
   },
   "errorLens.replace": [
@@ -780,11 +769,6 @@
   "prettify-ts.maxDepth": 2,
   "prettify-ts.unwrapArrays": true,
   "cody.autocomplete.advanced.provider": "default",
-  // "cody.autocomplete.advanced.provider": "experimental-ollama",
-  // "cody.autocomplete.experimental.ollamaOptions": {
-  //   "url": "http://localhost:11434",
-  //   "model": "qwen2.5-coder:0.5b"
-  // },
   "cody.autocomplete.formatOnAccept": true,
   "cody.telemetry.level": "off",
   "dotnetAcquisitionExtension.enableTelemetry": false,
@@ -796,14 +780,14 @@
       "strings": true
     },
     "editor.suggest.insertMode": "replace",
-    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
     "editor.quickSuggestions": {
       "strings": true
     },
     "editor.suggest.insertMode": "replace",
-    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[typescript]": {
     "togglequotes.chars": [
@@ -815,7 +799,7 @@
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
     "editor.defaultFormatter": "biomejs.biome",
-    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.inlayHints.enabled": "offUnlessPressed"
   },
   "[typescriptreact]": {
     "togglequotes.chars": [
@@ -826,7 +810,7 @@
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[javascriptreact]": {
     "togglequotes.chars": [
@@ -837,7 +821,7 @@
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[javascript]": {
     "editor.maxTokenizationLineLength": 2500,
@@ -849,7 +833,7 @@
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[vue]": {
     "togglequotes.chars": [
@@ -860,7 +844,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
-    "editor.formatOnType": false,
+    "editor.formatOnType": false
   },
   "editor.formatOnType": false,
   "editor.formatOnSave": true,
@@ -923,11 +907,10 @@
     "jasew.vscode-helix-emulation": 1
   },
   "helixKeymap.yankHighlightBackgroundColor": "#F8F3AB",
-  "editor.lineNumbers": "relative",
   "commitSage.gemini.model": "gemini-2.0-flash-exp",
   "commitSage.ollama.model": "qwen2.5-coder:7b",
   "commitSage.telemetry.enabled": false,
-  "commitSage.codestral.model": "codestral-2405", // codestral-latest
+  "commitSage.codestral.model": "codestral-2405",
   "commitSage.commit.autoCommit": false,
   "commitSage.commit.autoPush": false,
   "commitSage.commit.commitFormat": "conventional",
@@ -963,8 +946,8 @@
   "php.format.codeStyle": "K&R",
   "editor.experimental.preferTreeSitter.ini": true,
   "editor.experimentalEditContextEnabled": true,
-  "emmet.triggerExpansionOnTab": true, // enable tab to expanse emmet tags
-  "blade.format.enable": true, // if you would like to enable blade format
+  "emmet.triggerExpansionOnTab": true,
+  "blade.format.enable": true,
   "[blade]": {
     "editor.autoClosingBrackets": "always",
     "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
@@ -1026,7 +1009,7 @@
         "deno.json"
       ],
       "url": "https://github.com/denoland/deno/blob/main/cli/schemas/config-file.v1.json"
-    },
+    }
   ],
   "cursor.composer.textSizeScale": 1.3,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
@@ -1078,5 +1061,12 @@
   "helixKeymap.toggleRelativeLineNumbers": true,
   "[sql]": {
     "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
-  }
+  },
+  "cursor.cpp.disabledLanguages": [
+    "plaintext",
+    "markdown",
+    "scminput",
+    "typescript"
+  ],
+  "editor.lineNumbers": "relative"
 }

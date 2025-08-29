@@ -174,7 +174,6 @@ discover
 dmenu
 dmidecode
 dmraid
-dnsmasq
 doasedit
 docker
 docker-compose
@@ -398,6 +397,7 @@ mesa-demos
 mesa-utils
 micro
 minecraft-server
+mkcert
 mkinitcpio
 mkinitcpio-firmware
 mkinitcpio-nfs-utils
