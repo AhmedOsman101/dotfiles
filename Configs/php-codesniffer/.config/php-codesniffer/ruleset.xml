@@ -6,11 +6,15 @@
   <!-- <rule ref="PSR12"/> -->
 
   <file>.</file>
-  <exclude-pattern>*/vendor/*</exclude-pattern>
-  <exclude-pattern>*/node_modules/*</exclude-pattern>
-  <exclude-pattern>*/views/*</exclude-pattern>
+
+  <!-- Ignore vendor, node_modules, compiled views, etc. -->
+  <exclude-pattern>vendor/*</exclude-pattern>
+  <exclude-pattern>node_modules/*</exclude-pattern>
+  <exclude-pattern>storage/*</exclude-pattern>
+  <exclude-pattern>bootstrap/cache/*</exclude-pattern>
+  <exclude-pattern>resources/views/*</exclude-pattern>
   <!-- execlude any non php file -->
-  <exclude-pattern>.*[^.php]$</exclude-pattern>
+  <exclude-pattern>^(?!.*[.]php$).*$</exclude-pattern>
 
   <!-- Tabs should represent 4 spaces. -->
   <arg name="tab-width" value="2"/>
