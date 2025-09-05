@@ -72,7 +72,6 @@ format = " [$symbol($version )]($style)"
 
 [deno]
 symbol = " "
-detect_extensions = ['js', 'ts']
 detect_files = [
   "deno.json",
   "deno.jsonc",
