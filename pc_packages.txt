@@ -135,6 +135,7 @@ bruno-bin
 btop
 btrfs-progs
 bzip2
+caddy
 catppuccin-gtk-theme-mocha
 chafa
 chaotic-keyring
