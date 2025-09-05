@@ -950,7 +950,7 @@
   "blade.format.enable": true,
   "[blade]": {
     "editor.autoClosingBrackets": "always",
-    "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
+    "editor.defaultFormatter": "onecentlin.laravel-blade"
   },
   "php.format.rules.addCommaAfterLastArrayElement": true,
   "php.format.rules.addCommaAfterLastCallParameter": false,
