@@ -20,8 +20,11 @@ alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 alias cd="z"
 
 # ---- Eza (better ls) ----- #
-alias ls="eza --all --color=always --long --git --icons=always --no-time --no-user --sort name"
-alias lst="eza -T --all --color=always --long --git --icons=always --no-time --no-user --sort name --ignore-glob='node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor'"
+alias ls='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza --all --color=always --long --git --icons=always --no-time --no-user --sort name'
+alias lsu='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza --all --color=always --long --git --icons=always --no-time --sort name'
+
+alias lst='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza -T --all --color=always --long --git --icons=always --no-time --no-user --sort name --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor"'
+alias lstu='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza -T --all --color=always --long --git --icons=always --no-time --sort name --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor"'
 
 # ---- Micro (better nano) ----- #
 alias nano="micro"
@@ -47,7 +50,7 @@ alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
 # ---- Wget ---- #
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 
 # ---- Confirm before overwriting something ---- #
 alias cp="cp -i"
