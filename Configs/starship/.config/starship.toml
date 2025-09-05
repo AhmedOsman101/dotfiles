@@ -174,7 +174,7 @@ format = " [$symbol($version )]($style)"
 symbol = " "
 format = " $symbol [${ram}( | ${swap})]($style) "
 threshold = 50
-disabled = false
+disabled = true
 
 [meson]
 symbol = "󰔷 "
