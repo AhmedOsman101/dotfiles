@@ -192,12 +192,16 @@ ty = { command = "ty", args = ["server"] }
 # ---- Rust---- #
 [[language]]
 name = "rust"
+auto-format = true
 formatter = { command = "rustfmt", args = [
   "--config-path",
   "/home/othman/.config/rustfmt.toml",
 ] }
 language-servers = ["rust-analyzer", "scls"]
 indent = { tab-width = 2, unit = "  " }
+
+[language-server.rust-analyzer]
+config = { checkOnSave = true, check = { command = "clippy" } }
 
 # ---- JSON ---- #
 [[language]]
