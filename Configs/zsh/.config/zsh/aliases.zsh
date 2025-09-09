@@ -140,3 +140,6 @@ alias rp='release-please'
 
 # --- MySql --- #
 alias mysql='mariadb'
+
+# --- Vite --- #
+alias vite="vite --config ${XDG_CONFIG_HOME}/vite/vite.config.js"
