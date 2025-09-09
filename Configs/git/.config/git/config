@@ -1,6 +1,6 @@
 [user]
-    name = "Ahmad Othman"                 # Sets the username for Git commits
-    email = ahmad.ali.othman@outlook.com # Sets the email address for Git commits
+    name = "Ahmad Othman"                   # Sets the author for Git commits
+    email = "ahmad.ali.othman@outlook.com"  # Sets the email address for Git commits
 
 [core]
     editor = hx                        # Specifies the text editor for Git operations (e.g., commit messages)
