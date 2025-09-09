@@ -5,7 +5,7 @@ alias zshrc="$EDITOR $ZSHRC"
 alias bashrc="$EDITOR ~/.bashrc"
 alias art="php artisan"
 alias cls="clear"
-alias reload="source $ZSHRC && clear && neofetch"
+alias reload="source $ZSHRC && cls && neofetch"
 alias vim="nvim"
 alias pwdcp='clipcopy ${PWD}'
 alias python="python3"
@@ -100,7 +100,8 @@ alias doas="doas --"
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" # Fastest mirrors
 
 # ---- Cargo ---- #
-alias cr="cargo run"
+alias cr="cargo run || true"
+alias ccr="cls; cargo run || true"
 alias cb="cargo build"
 
 # ---- Nushell ---- #
