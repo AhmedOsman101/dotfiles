@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env zsh
+
+if [[ -f "${HOME}/scripts/lib/helpers.sh" ]]; then
+  source "${HOME}/scripts/lib/helpers.sh" || echo "Failed to source helpers.sh"
+fi
 
 rehash_precmd() {
   if [[ -e /var/cache/zsh/pacman ]]; then
