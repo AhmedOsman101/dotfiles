@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 # ---- Key Bindings ---- #
 # ---- 1. Remove emacs-style keybinds ---- #

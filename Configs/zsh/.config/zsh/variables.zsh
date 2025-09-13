@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env zsh
 
 # ---- Increase the FUNCNEST limit ----- #
 FUNCNEST=99999
