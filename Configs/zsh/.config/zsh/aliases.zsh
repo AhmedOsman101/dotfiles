@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env zsh
 
 # ---- Aliases ----- #
 alias zshrc="$EDITOR $ZSHRC"
@@ -31,8 +31,8 @@ alias nano="micro"
 alias mc="micro"
 
 # ---- Ripgrep (better grep) ----- #
-alias grep="rg -iN"
-alias rg="rg -iN"
+alias grep="rg -iNL"
+alias rg="rg -iNL"
 
 # ---- Lazygit ---- #
 alias lzg="lazygit"
@@ -73,7 +73,6 @@ alias psmem='n "ps | sort-by mem -r | first 5"'
 alias pscpu='n "ps | sort-by cpu -r | first 5"'
 
 #---- Git ---- #
-alias git_current_branch='git branch --show-current 2>/dev/null'
 alias git-init='git init && git add -A && git commit -m "initial commit"'
 
 # ---- Copy to Clipboard ----#
@@ -85,7 +84,7 @@ alias qalc="qalc --base 10 --color"         # Colorize output
 
 # ---- Pacman ---- #
 # Resolve 'pacman in use' error
-alias freepacman="sudo rm /var/lib/pacman/db.lck &>/dev/null || printf ''"
+alias freepacman="sudo rm /var/lib/pacman/db.lck &>/dev/null || true"
 
 # ---- Paru ---- #
 alias no-orphans='paru -Rns $(paru -Qtdq)'
@@ -143,3 +142,12 @@ alias mysql='mariadb'
 
 # --- Vite --- #
 alias vite="vite --config ${XDG_CONFIG_HOME}/vite/vite.config.js"
+
+# --- Switch Branch --- #
+alias sw='switch-branch'
+
+# --- Mask (maskfile) --- #
+unalias mask &>/dev/null
+alias task="$(which mask)"
+alias mask='mask --maskfile "$(git-root 2>/dev/null || pwd)/maskfile.md"'
+
