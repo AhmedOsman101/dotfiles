@@ -184,6 +184,7 @@ downgrade
 dunst
 dysk
 e2fsprogs
+ed
 edges
 edk2-shell
 efibootmgr
