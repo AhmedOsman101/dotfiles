@@ -564,6 +564,8 @@ shlorem
 simple-completion-language-server-git
 simplescreenrecorder
 skippy-xd-git
+slides
+slides-debug
 slirp4netns
 slock
 slop
