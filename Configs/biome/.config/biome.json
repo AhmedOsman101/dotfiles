@@ -62,7 +62,7 @@
     "lineEnding": "lf",
     "lineWidth": 80,
     "bracketSameLine": true,
-    "attributePosition": "multiline",
+    "attributePosition": "auto",
     "bracketSpacing": true,
     "expand": "auto"
   },

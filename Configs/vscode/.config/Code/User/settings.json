@@ -1068,5 +1068,14 @@
     "scminput",
     "typescript"
   ],
-  "editor.lineNumbers": "relative"
+  "editor.lineNumbers": "relative",
+  "rust-analyzer.restartServerOnConfigChange": true,
+  "rust-analyzer.completion.fullFunctionSignatures.enable": true,
+  "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.rustfmt.extraArgs": [
+    "--config-path",
+    "/home/othman/.config/rustfmt.toml"
+  ],
 }
