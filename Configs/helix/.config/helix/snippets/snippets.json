@@ -990,5 +990,16 @@
     "body": ["prompt('${1:msg}');"],
     "description": "Code snippet for 'prompt'",
     "scope": "javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "spinner": {
+    "prefix": "spin",
+    "body": [
+      "spinner.sh &",
+      "SPINNER_PID=$!",
+      "${0:// code}",
+      "killwait \"$SPINNER_PID\""
+    ],
+    "description": "Code snippet for spinner",
+    "scope": "bash,shell,shellscript"
   }
 }

@@ -1078,4 +1078,5 @@
     "--config-path",
     "/home/othman/.config/rustfmt.toml"
   ],
+  "codesnap.shutterAction": "copy"
 }

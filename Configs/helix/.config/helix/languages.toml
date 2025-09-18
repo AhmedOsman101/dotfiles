@@ -281,7 +281,8 @@ language-servers = ["scls"]
 # --- Python --- #
 [[language]]
 name = "python"
-language-servers = ["ty", "scls", "pylsp"]
+# language-servers = ["ty", "scls", "pylsp"]
+language-servers = ["pylsp", "scls"]
 indent = { tab-width = 2, unit = "  " }
 
 # ---- Helix-gpt ---- #
