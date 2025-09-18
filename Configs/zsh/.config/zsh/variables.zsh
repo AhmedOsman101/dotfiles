@@ -3,6 +3,7 @@
 # ---- Increase the FUNCNEST limit ----- #
 FUNCNEST=99999
 export SHLVL=10
+
 # ---- XDG Standard ---- #
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -14,12 +15,12 @@ export TUCKR_HOME="$HOME"
 export TUCKR_DIR="$TUCKR_HOME/dotfiles/Configs"
 
 # ---- Localization ---- #
-export GTK_IM_MODULE="fcitx"
-export QT_IM_MODULE="fcitx"
-export SDL_IM_MODULE="fcitx"
-export INPUT_METHOD="fcitx"
-export GLFW_IM_MODULE="fcitx"
-export XMODIFIERS="@im=fcitx"
+# export GTK_IM_MODULE="fcitx"
+# export QT_IM_MODULE="fcitx"
+# export SDL_IM_MODULE="fcitx"
+# export INPUT_METHOD="fcitx"
+# export GLFW_IM_MODULE="fcitx"
+# export XMODIFIERS="@im=fcitx"
 
 # ---- Auto Notify ---- #
 export AUTO_NOTIFY_IGNORE=(
@@ -35,7 +36,7 @@ export AUTO_NOTIFY_IGNORE=(
   "nu" "pnpm dev" "npm dev" "editwhich"
   "n" "tempedit" "bun run" "bunx"
   "sudoedit" "distrobox" "db" "repeat-it"
-  "composer"
+  "composer" "mask view"
 )
 export AUTO_NOTIFY_THRESHOLD=30
 export AUTO_NOTIFY_ICON_SUCCESS="/usr/share/icons/auto-notify-zsh/success.png"
@@ -219,7 +220,7 @@ export PASSWORD_STORE_DIR="$HOME/.password-store"
 export PHPCS_CONFIG_PATH="$XDG_CONFIG_HOME/php-codesniffer/ruleset.xml"
 
 # ---- Pnpm ---- #
-if [[ "${DEVICE}" == "laptop"  ]]; then
+if [[ "${DEVICE}" == "laptop" ]]; then
   pnpmHome="$XDG_DATA_HOME/pnpm"
 else
   pnpmHome="/mnt/main/pnpm"
@@ -280,18 +281,18 @@ export ZSHRC="$ZDOTDIR/.zshrc"
 export MRT="$HOME/Documents/backup/WordTemplates/Standard.dotx"
 
 # ---- PATH ---- #
-export PATH="$PATH:$SCRIPTS_DIR"                     # my custom scripts
-PATH="$PATH:$HOME/.local/bin"                        # my custom scripts (alternative)
-PATH="$PATH:${PNPM_HOME}"                            # PNPM Home folder
-PATH="$PATH:$HOME/.spicetify"                        # spicetify for spotify mods
-PATH="$PATH:$BUN_INSTALL/bin"                        # Bun js runtime
-PATH="$PATH:$XDG_CONFIG_HOME/composer/vendor/bin"    # Composer packages
-PATH="$PATH:$CARGO_HOME/bin"                         # Cargo packages
-PATH="$PATH:${ASDF_DATA_DIR}/shims"                  # Asdf shims
-PATH="$PATH:${ANDROID_HOME}/platform-tools"          # Android SDK platform tools (adb, fastboot)
-PATH="$PATH:${ANDROID_HOME}/tools"                   # Android SDK legacy tools (android, monitor, etc)
-PATH="$PATH:${ANDROID_HOME}/tools/bin"               # Android SDK command-line tools
-PATH="$PATH:${ANDROID_HOME}/emulator"                # Android SDK emulator binaries
+export PATH="$PATH:$SCRIPTS_DIR"                  # my custom scripts
+PATH="$PATH:$HOME/.local/bin"                     # my custom scripts (alternative)
+PATH="$PATH:${PNPM_HOME}"                         # PNPM Home folder
+PATH="$PATH:$HOME/.spicetify"                     # spicetify for spotify mods
+PATH="$PATH:$BUN_INSTALL/bin"                     # Bun js runtime
+PATH="$PATH:$XDG_CONFIG_HOME/composer/vendor/bin" # Composer packages
+PATH="$PATH:$CARGO_HOME/bin"                      # Cargo packages
+PATH="$PATH:${ASDF_DATA_DIR}/shims"               # Asdf shims
+PATH="$PATH:${ANDROID_HOME}/platform-tools"       # Android SDK platform tools (adb, fastboot)
+PATH="$PATH:${ANDROID_HOME}/tools"                # Android SDK legacy tools (android, monitor, etc)
+PATH="$PATH:${ANDROID_HOME}/tools/bin"            # Android SDK command-line tools
+PATH="$PATH:${ANDROID_HOME}/emulator"             # Android SDK emulator binaries
 
 # Define directories to exclude
 EXCLUDE_DIRS=(

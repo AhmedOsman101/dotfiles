@@ -98,3 +98,9 @@ gcg() {
   # resolves to "git clone git@github.com:"
   git clone "gh:$1"
 }
+
+# Runs before any command
+# precmd() { }
+
+# Runs after any command
+# preexec() { }
