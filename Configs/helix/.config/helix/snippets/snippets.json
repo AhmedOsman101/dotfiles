@@ -997,7 +997,7 @@
       "spinner.sh &",
       "SPINNER_PID=$!",
       "${0:// code}",
-      "killwait \"$SPINNER_PID\""
+      "killwait \"$${1:SPINNER_PID}\""
     ],
     "description": "Code snippet for spinner",
     "scope": "bash,shell,shellscript"
