@@ -150,6 +150,7 @@ cmake
 composer
 conky
 containers-common
+converseen
 copyq
 cowsay
 cppcheck
@@ -366,6 +367,7 @@ linux-lts-headers
 llvm
 localsend
 loupe
+love
 lrzip
 lsb-release
 lsscsi
@@ -587,7 +589,6 @@ sudo
 superhtml-bin
 svelte-language-server
 swaybg
-switcheroo
 swtpm
 sxhkd
 sxiv
