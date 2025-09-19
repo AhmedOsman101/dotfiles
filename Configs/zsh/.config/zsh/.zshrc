@@ -13,12 +13,6 @@ config_files=(
 )
 
 for file in "${config_files[@]}"; do
-  if [[ "${file}" == "$ZDOTDIR/secrets.zsh" ]]; then
-    SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A gpgconf --kill all &>/dev/null || true
-    SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A killall gpg-agent gpg &>/dev/null || true
-    gpg-connect-agent /bye &>/dev/null || true
-  fi
-
   [[ -f "${file}" ]] && source "${file}"
 done
 

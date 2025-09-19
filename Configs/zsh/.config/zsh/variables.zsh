@@ -126,7 +126,8 @@ export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
 # ---- Gnupg ---- #
-export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
+export GNUPGHOME="${HOME}/.gnupg"
+export GPG_TTY="$(tty)"
 
 # ---- Go ---- #
 export GOPATH="${XDG_DATA_HOME}/go"
