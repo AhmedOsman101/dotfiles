@@ -99,6 +99,15 @@ gcg() {
   git clone "gh:$1"
 }
 
+cr() {
+  cargo run --quiet "${@}" || true
+}
+
+ccr() {
+  clear
+  cargo run --quiet "${@}" || true
+}
+
 # Runs before any command
 # precmd() { }
 
