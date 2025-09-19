@@ -511,7 +511,7 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.defaultFormatter": "mkhl.shfmt",
     "files.autoSave": "afterDelay"
   },
   "terminal.external.linuxExec": "kitty",
@@ -863,29 +863,14 @@
   "shellcheck.customArgs": [
     "--external-sources"
   ],
-  "shellcheck.exclude": [
-    "1017",
-    "1090",
-    "1091",
-    "2001",
-    "2002",
-    "2016",
-    "2034",
-    "2086",
-    "2153",
-    "2154",
-    "2155",
-    "2181",
-    "2230",
-    "2296",
-    "2312"
-  ],
+  "shellcheck.enableQuickFix": true,
+  "shellcheck.enable": true,
   "bashIde.enableSourceErrorDiagnostics": true,
   "bashIde.includeAllWorkspaceSymbols": true,
-  "bashIde.shfmt.caseIndent": true,
-  "bashIde.shfmt.ignoreEditorconfig": true,
+  "bashIde.shfmt.caseIndent": false,
+  "bashIde.shfmt.ignoreEditorconfig": false,
   "bashIde.shfmt.simplifyCode": true,
-  "bashIde.shfmt.spaceRedirects": true,
+  "bashIde.shfmt.spaceRedirects": false,
   "git-graph.enhancedAccessibility": true,
   "explorer.fileNesting.enabled": true,
   "typescript.format.semicolons": "insert",

@@ -238,6 +238,17 @@ language-servers = [
   "scls",
 ]
 
+# --- Env --- #
+[[language]]
+name = "env"
+file-types = [
+  ".shellcheckrc",
+  { glob = ".env" },
+  { glob = ".env.*" },
+  { glob = ".envrc" },
+]
+indent = { tab-width = 2, unit = "  " }
+
 # ---- SCLS ---- #
 # introduce new language server
 [language-server.scls]
