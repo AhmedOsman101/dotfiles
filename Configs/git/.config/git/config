@@ -63,7 +63,7 @@
     tag = false                        # Disables the pager for `git tag` output
 
 [interactive]
-    diffFilter = delta --color-only   # Applies a color-only filter to diffs in interactive commands
+    diffFilter = delta --color-only    # Applies a color-only filter to diffs in interactive commands
     singleKey = true                   # Enables single-key input (e.g., 'y' or 'n') without requiring Enter
 
 [delta]
