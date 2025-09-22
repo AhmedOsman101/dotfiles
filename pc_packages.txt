@@ -416,6 +416,7 @@ nano
 nbd
 ncdu
 ncmpcpp
+ncspot
 ncurses5-compat-libs
 ndisc6
 neovim
@@ -493,6 +494,7 @@ php-sodium
 php-sqlite
 phpmyadmin
 picom
+pinentry-rofi
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -533,6 +535,7 @@ qt6gtk2
 ranger
 re2c
 reddio
+redis
 refind
 reflector
 resvg
