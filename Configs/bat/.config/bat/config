@@ -63,4 +63,4 @@
 # * rule: horizontal lines to delimit files.
 # * numbers: show line numbers in the side bar.
 # * snip: draw separation lines between distinct line ranges.
---style="auto,-header-filename"
+--style="auto"

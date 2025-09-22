@@ -45,7 +45,7 @@ style = "bold white"
 
 [c]
 symbol = "  "
-format = ' [$symbol($name )($version)]($style)'
+format = ' [$symbol($name $version )]($style)'
 detect_extensions = ["c", "h"]
 commands = [["clang", "--version"], ["gcc", "--version"], ["cc", "--version"]]
 style = "149 bold"
