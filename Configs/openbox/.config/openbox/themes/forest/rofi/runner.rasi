@@ -4,10 +4,10 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "run";
+  modi:                       "run";
     show-icons:                 true;
     display-drun:               "";
-	drun-display-format:        "{name}";
+  drun-display-format:        "{name}";
 }
 
 /*****----- Global Properties -----*****/

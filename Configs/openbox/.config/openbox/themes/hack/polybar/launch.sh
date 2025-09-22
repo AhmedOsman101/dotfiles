@@ -10,39 +10,39 @@ RFILE="$DIR/.module"
 
 # Fix backlight and network modules
 fix_modules() {
-	if [[ -z "$CARD" ]]; then
-		sed -i -e 's/backlight/bna/g' "$DIR"/config.ini
-	elif [[ "$CARD" != *"intel_"* ]]; then
-		sed -i -e 's/backlight/brightness/g' "$DIR"/config.ini
-	fi
+  if [[ -z "$CARD" ]]; then
+    sed -i -e 's/backlight/bna/g' "$DIR"/config.ini
+  elif [[ "$CARD" != *"intel_"* ]]; then
+    sed -i -e 's/backlight/brightness/g' "$DIR"/config.ini
+  fi
 
-	if [[ -z "$BAT" ]]; then
-		sed -i -e 's/battery/btna/g' "$DIR"/config.ini
-	fi
+  if [[ -z "$BAT" ]]; then
+    sed -i -e 's/battery/btna/g' "$DIR"/config.ini
+  fi
 
-	if [[ "$INTERFACE" == e* ]]; then
-		sed -i -e 's/network/ethernet/g' "$DIR"/config.ini
-	fi
+  if [[ "$INTERFACE" == e* ]]; then
+    sed -i -e 's/network/ethernet/g' "$DIR"/config.ini
+  fi
 }
 
 # Launch the bar
 launch_bar() {
-	# Terminate already running bar instances
-	killall -q polybar
+  # Terminate already running bar instances
+  killall -q polybar
 
-	# Wait until the processes have been shut down
-	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+  # Wait until the processes have been shut down
+  while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-	# Launch the bar
-	for mon in $(polybar --list-monitors | cut -d":" -f1); do
-		MONITOR=$mon polybar -q top -c "$DIR"/config.ini &
-		MONITOR=$mon polybar -q bottom -c "$DIR"/config.ini &
-	done
+  # Launch the bar
+  for mon in $(polybar --list-monitors | cut -d":" -f1); do
+    MONITOR=$mon polybar -q top -c "$DIR"/config.ini &
+    MONITOR=$mon polybar -q bottom -c "$DIR"/config.ini &
+  done
 }
 
 # Execute functions
 if [[ ! -f "$RFILE" ]]; then
-	fix_modules
-	touch "$RFILE"
-fi	
+  fix_modules
+  touch "$RFILE"
+fi  
 launch_bar

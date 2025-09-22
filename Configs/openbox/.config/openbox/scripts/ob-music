@@ -7,5 +7,5 @@
 CONFIG="$HOME/.config/alacritty/alacritty.toml"
 
 alacritty --class 'Music,Music' --config-file "$CONFIG" \
-		  -o window.dimensions.columns=105 window.dimensions.lines=22 \
-		  -e ~/.ncmpcpp/scripts/ncmpcpp-art
+      -o window.dimensions.columns=105 window.dimensions.lines=22 \
+      -e ~/.ncmpcpp/scripts/ncmpcpp-art
