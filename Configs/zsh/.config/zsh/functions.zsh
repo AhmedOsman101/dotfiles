@@ -62,7 +62,8 @@ yy() {
 dotfiles() {
   oldDir="$PWD"
   yy "$(dotfiles.sh $1)"
-  [ "$oldDir" != "$PWD" ] && log-info "Changed directory!" || printf ""
+  [[ "$oldDir" != "$PWD" ]] && log-info "Changed directory!"
+  return 0
 }
 
 #---- Bat ---- #
@@ -106,6 +107,16 @@ cr() {
 ccr() {
   clear
   cargo run --quiet "${@}" || true
+}
+
+bashc() {
+  if (($# < 1)); then
+    input="$(gum write --placeholder='Write a bash command...')"
+  else
+    input="$*"
+  fi
+  bash -c "${input}"
+  return $?
 }
 
 # Runs before any command

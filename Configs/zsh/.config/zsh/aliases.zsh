@@ -149,3 +149,5 @@ unalias mask &>/dev/null
 alias task="$(which mask)"
 alias mask='mask --maskfile "$(git-root 2>/dev/null || pwd)/maskfile.md"'
 
+# --- diff --- #
+alias diff='diff -u --color=auto'
