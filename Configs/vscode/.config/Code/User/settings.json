@@ -1064,5 +1064,17 @@
     "/home/othman/.config/rustfmt.toml"
   ],
   "codesnap.shutterAction": "copy",
-  "php.inlayHints.types.return": "named"
+  "php.inlayHints.types.return": "named",
+  "workbench.editor.showTabIndex": true,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.enableVisualBell": true,
+  "terminal.integrated.fontLigatures.enabled": true,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.suggest.quickSuggestions": {
+    "commands": "on",
+    "arguments": "on",
+    "unknown": "off"
+  },
+  "python.terminal.activateEnvInCurrentTerminal": true
 }
