@@ -136,6 +136,7 @@ btop
 btrfs-progs
 bzip2
 caddy
+caligula
 catppuccin-gtk-theme-mocha
 chafa
 chaotic-keyring
@@ -160,7 +161,6 @@ cups-filters
 cups-pdf
 curlie
 cursor-electron
-dbeaver
 dbus-broker-units
 ddrescue
 debtap
@@ -176,6 +176,7 @@ discover
 dmenu
 dmidecode
 dmraid
+dnsmasq
 doasedit
 docker
 docker-compose
@@ -240,6 +241,7 @@ git-delta
 git-filter-repo
 github-cli
 glfw
+glib2-devel
 global
 glow
 gnome-boxes
@@ -279,7 +281,6 @@ gvfs-gphoto2
 gvfs-mtp
 gvfs-smb
 gzip
-has
 haskell-djot
 hdparm
 helix
@@ -466,7 +467,6 @@ openvpn
 os-prober
 ouch
 outlook-for-linux-bin
-pamac-all
 pandoc-bin
 partclone
 parted
@@ -526,6 +526,7 @@ python-pylint
 python-pywal
 qalculate-gtk
 qbittorrent
+qemu-guest-agent
 qmmp
 qmmp-plugin-pack
 qt5ct
@@ -551,7 +552,7 @@ rsync
 rubocop
 ruby-rubocop-performance
 ruff
-rustdesk
+rustup
 rxvt-unicode-terminfo
 samba
 sassc
@@ -562,6 +563,7 @@ screen
 screenkey
 sddm-git
 sdparm
+semver
 sequoia-sq
 sg3_utils
 shellcheck-bin
@@ -614,6 +616,7 @@ thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
+time
 timeshift
 timg
 tipp10
@@ -633,7 +636,6 @@ ttf-amiri
 ttyper
 tumbler
 tuned
-twitch
 udftools
 udisks2
 ueberzug

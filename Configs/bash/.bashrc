@@ -29,3 +29,5 @@ chsh -s "$(which zsh)"
 if command -v zsh &>/dev/null; then
   zsh
 fi
+
+. "/mnt/main/xdg/share/../bin/env"

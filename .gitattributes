@@ -1,5 +1,6 @@
 Configs/zsh/.config/zsh/secrets.zsh filter=git-crypt diff=git-crypt
 Configs/git/.config/git/credentials filter=git-crypt diff=git-crypt 
+Configs/npm/.config/npm/npmrc       filter=git-crypt diff=git-crypt 
 
 # Encrypt all private keys in .ssh, while excluding public keys
 Configs/ssh/.ssh/* filter=git-crypt diff=git-crypt
