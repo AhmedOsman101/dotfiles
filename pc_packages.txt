@@ -8,6 +8,7 @@ alpaca-ai
 alsa-utils
 android-platform
 anki-bin
+ansifilter
 apparmor
 appmenu-gtk-module
 arch-wiki-docs
@@ -148,6 +149,7 @@ clipgrab
 clonezilla
 cloud-init
 cmake
+cmd-wrapped
 composer
 conky
 containers-common
@@ -160,7 +162,7 @@ cups
 cups-filters
 cups-pdf
 curlie
-cursor-electron
+dart
 dbus-broker-units
 ddrescue
 debtap
@@ -466,7 +468,6 @@ openssh
 openvpn
 os-prober
 ouch
-outlook-for-linux-bin
 pandoc-bin
 partclone
 parted
@@ -601,7 +602,6 @@ systemd-resolvconf
 tableplus
 taplo-cli
 tcpdump
-teams-for-linux
 telegram-desktop
 terminus-font
 tesseract
@@ -770,7 +770,6 @@ xz
 yad
 yamlfmt
 yapf
-yarn
 yazi
 yq
 zapzap
