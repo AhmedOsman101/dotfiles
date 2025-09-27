@@ -295,6 +295,7 @@ format = " [$symbol($version )]($style)"
 [gradle]
 symbol = " "
 format = " [$symbol($version )]($style)"
+disabled = true
 
 [shell]
 disabled = true

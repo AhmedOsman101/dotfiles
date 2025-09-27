@@ -106,7 +106,7 @@ add-zsh-hook -Uz precmd rehash_precmd
 eval "$(atuin init zsh)"
 
 # ---- bun completions ---- #
-[[ -s "$HOME/.bun/_bun" ]] && source "$HOME/.bun/_bun"
+[[ -s "$BUN_INSTALL/_bun" ]] && source "$BUN_INSTALL/_bun"
 
 # ---- Asdf ---- #
 fpath=("${ASDF_DATA_DIR:-$HOME/.asdf}/completions" $fpath)
@@ -148,7 +148,7 @@ zstyle ':zle:*' region-highlight 'fg=none' 'bg=none'
 [[ -s "$HOME/.config/envman/load.sh" ]] && source "$HOME/.config/envman/load.sh"
 
 # ---- Posting ---- #
-. "$HOME/.local/share/../bin/env"
+source /mnt/main/xdg/share/../bin/env
 
 # ---- Deno ---- #
 # Add deno completions to search path
@@ -156,7 +156,7 @@ if [[ ":$FPATH:" != *":$HOME/.config/zsh/completions:"* ]]; then
   export FPATH="$HOME/.config/zsh/completions:$FPATH"
 fi
 
-. "/home/othman/.deno/env"
+. "$XDG_CACHE_HOME/deno/env"
 
 # ---- uv ---- #
 eval "$(uv generate-shell-completion zsh)"

@@ -66,9 +66,8 @@ dotfiles() {
   return 0
 }
 
-#---- Bat ---- #
 help() {
-  "$@" --help 2>&1 | bathelp
+  bash -c "help $*" | bathelp -- --pager=none
 }
 
 which() {

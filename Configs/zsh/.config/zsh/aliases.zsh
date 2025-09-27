@@ -13,8 +13,8 @@ alias pip="pip3"
 alias getgpu="lspci -k -d ::03xx"
 
 # ---- Bat (better cat) ----- #
-alias cat="bat --pager never --style plain"
-alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain --color=auto'
+alias cat="bat --pager never --style=plain --color=auto"
 
 # ---- Zoxide (better cd) ----- #
 alias cd="z"
@@ -86,9 +86,6 @@ alias qalc="qalc --base 10 --color"         # Colorize output
 # Resolve 'pacman in use' error
 alias freepacman="sudo rm /var/lib/pacman/db.lck &>/dev/null || true"
 
-# ---- Paru ---- #
-alias no-orphans='paru -Rns $(paru -Qtdq)'
-
 # --- Frogmouth Markdown Preview ---- #
 alias frg="frogmouth"
 
@@ -151,3 +148,11 @@ alias mask='mask --maskfile "$(git-root 2>/dev/null || pwd)/maskfile.md"'
 
 # --- diff --- #
 alias diff='diff -u --color=auto'
+
+# --- type --- #
+alias type='type -a'
+
+# --- Conky --- #
+alias conky='conky --config="$XDG_CONFIG_HOME"/conky/conkyrc'
+
+alias xbindkeys='xbindkeys -f "$XDG_CONFIG_HOME/xbindkeys/config"'

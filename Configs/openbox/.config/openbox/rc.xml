@@ -689,7 +689,6 @@
     <!-- Rofi -->
     <keybind key="A-F1">
       <action name="Execute">
-        <!-- <command>ulauncher</command> -->
         <command>rofi-launcher</command>
       </action>
     </keybind>
@@ -745,11 +744,6 @@
         <command>xfce4-appfinder</command>
       </action>
     </keybind>
-    <!-- <keybind key="W-S-d"> -->
-    <!--   <action name="Execute"> -->
-    <!--     <command>dm-hub</command> -->
-    <!--   </action> -->
-    <!-- </keybind> -->
     <keybind key="W-t">
       <action name="Execute">
         <command>ob-furminal</command>
@@ -1088,7 +1082,13 @@
   # you may use one or more of the name/class/role/title/type rules to specify
   # windows to match
 
-  <application name="the window's _OB_APP_NAME property (see obxprop)" class="the window's _OB_APP_CLASS property (see obxprop)" groupname="the window's _OB_APP_GROUP_NAME property (see obxprop)" groupclass="the window's _OB_APP_GROUP_CLASS property (see obxprop)" role="the window's _OB_APP_ROLE property (see obxprop)" title="the window's _OB_APP_TITLE property (see obxprop)" type="the window's _OB_APP_TYPE property (see obxprob)..
+  <application name="the window's _OB_APP_NAME property (see obxprop)"
+              class="the window's _OB_APP_CLASS property (see obxprop)"
+          groupname="the window's _OB_APP_GROUP_NAME property (see obxprop)"
+         groupclass="the window's _OB_APP_GROUP_CLASS property (see obxprop)"
+               role="the window's _OB_APP_ROLE property (see obxprop)"
+              title="the window's _OB_APP_TITLE property (see obxprop)"
+               type="the window's _OB_APP_TYPE property (see obxprob)..
                       (if unspecified, then it is 'dialog' for child windows)">
   # you may set only one of name/class/role/title/type, or you may use more
   # than one together to restrict your matches.
@@ -1104,7 +1104,7 @@
   # order that they appear in this list
 
 
-    # each rule element can be left out or set to 'default' to specify to not
+    # each rule element can be left out or set to 'default' to specify to not 
     # change that attribute of the window
 
     <decor>yes</decor>

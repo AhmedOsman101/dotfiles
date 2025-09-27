@@ -5,10 +5,17 @@ FUNCNEST=99999
 export SHLVL=10
 
 # ---- XDG Standard ---- #
-export XDG_DATA_HOME="$HOME/.local/share"
+if [[ -d "/mnt/main/xdg" ]]; then
+  export XDG_DATA_HOME="/mnt/main/xdg/share"
+  export XDG_CACHE_HOME="/mnt/main/xdg/.cache"
+  export XDG_STATE_HOME="/mnt/main/xdg/state"
+else
+  export XDG_DATA_HOME="$HOME/.local/share"
+  export XDG_STATE_HOME="$HOME/.local/state"
+  export XDG_CACHE_HOME="$HOME/.cache"
+fi
+
 export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_STATE_HOME="$HOME/.local/state"
-export XDG_CACHE_HOME="$HOME/.cache"
 
 # ---- Tuckr ---- #
 export TUCKR_HOME="$HOME"
@@ -59,7 +66,7 @@ export ARTISTIC_STYLE_PROJECT_OPTIONS="$XDG_CONFIG_HOME/.astylerc"
 export BATDIFF_USE_DELTA=true
 
 # ---- Bun ---- #
-export BUN_INSTALL="$HOME/.bun"
+export BUN_INSTALL="$XDG_DATA_HOME/bun"
 
 # ---- Biome ---- #
 export BIOME_CONFIG_PATH="$XDG_CONFIG_HOME/biome.json"
@@ -68,11 +75,19 @@ export BIOME_BINARY="$(which biome)"
 # ---- Browser ---- #
 export BROWSER="zen-browser"
 
+# --- Ruby Bundle --- #
+export BUNDLE_USER_CONFIG="${XDG_CONFIG_HOME}/bundle"
+export BUNDLE_USER_CACHE="${XDG_CACHE_HOME}/bundle"
+export BUNDLE_USER_PLUGIN="${XDG_DATA_HOME}/bundle"
+
 # ---- Cargo ---- #
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 
 # ---- Chassis ---- #
 export DEVICE="$(hostnamectl chassis)"
+
+# --- Chrome --- #
+export CHROME_EXECUTABLE="/usr/bin/thorium-browser"
 
 # ---- Cuda ---- #
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
@@ -134,6 +149,9 @@ export GOPATH="${XDG_DATA_HOME}/go"
 
 # ---- Gtk-2 ---- #
 export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc"
+
+# --- Gradle --- #
+export GRADLE_USER_HOME="/mnt/main/gradle"
 
 # ---- Gum ---- #
 # ---- Filter ---- #
@@ -200,6 +218,7 @@ export AUTHOR_EMAIL="ahmad.ali.othman@outlook.com"
 
 # ---- Node ---- #
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 # DEPRECATED: export NODE_PACKAGE_MANAGER="pnpm"
 
 # ---- Nuget ---- #
@@ -230,10 +249,13 @@ fi
 export PNPM_HOME="${pnpmHome}"
 
 # ---- Python ---- #
-export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
+export PYTHONSTARTUP="$HOME/python/pythonrc"
 
 # ---- Prettier ---- #
 export PRETTIERRC="${XDG_CONFIG_HOME}/.prettierrc.json"
+
+# --- comment --- #
+export PUB_CACHE="/mnt/main/pub-cache"
 
 # ---- Rustup ---- #
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
@@ -247,6 +269,9 @@ export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 # ---- Sudo ---- #
 export SUDO_ASKPASS="/home/othman/scripts/rofi/rofi-askpass"
 
+# --- Sqlite --- #
+export SQLITE_HISTORY="$XDG_CACHE_HOME/sqlite_history"
+
 # ---- Terminal ---- #
 export TERMINAL="kitty"
 export TERM="xterm-256color"
@@ -254,6 +279,9 @@ export COLORTERM="truecolor"
 
 # ---- Texfm ---- #
 export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
+
+# --- Wget --- #
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 
 # ---- w3m ---- #
 export W3M_DIR="$XDG_DATA_HOME/w3m"
@@ -294,6 +322,7 @@ PATH="$PATH:${ANDROID_HOME}/platform-tools"       # Android SDK platform tools (
 PATH="$PATH:${ANDROID_HOME}/tools"                # Android SDK legacy tools (android, monitor, etc)
 PATH="$PATH:${ANDROID_HOME}/tools/bin"            # Android SDK command-line tools
 PATH="$PATH:${ANDROID_HOME}/emulator"             # Android SDK emulator binaries
+PATH="$PATH:$HOME/opt/flutter/bin"                # Flutter and Dart
 
 # Define directories to exclude
 EXCLUDE_DIRS=(
