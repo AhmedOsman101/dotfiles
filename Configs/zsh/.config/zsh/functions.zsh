@@ -61,7 +61,12 @@ yy() {
 # ---- quickly navigate to my dotfiles ---- #
 dotfiles() {
   oldDir="$PWD"
-  yy "$(dotfiles.sh $1)"
+  target=$(dotfiles.sh $1) || {
+    eraseLine
+    log-info "Nothing selected"
+    return 0
+  }
+  yy "${target}"
   [[ "$oldDir" != "$PWD" ]] && log-info "Changed directory!"
   return 0
 }
