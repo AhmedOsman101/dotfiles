@@ -303,7 +303,6 @@
   },
   "git.terminalGitEditor": true,
   "workbench.cloudChanges.autoResume": "off",
-  "workbench.productIconTheme": "fluent-icons",
   "markdown-preview-enhanced.alwaysShowBacklinksInPreview": false,
   "markdown-preview-enhanced.enableExtendedTableSyntax": true,
   "markdown-preview-enhanced.latexEngine": "MikTex",
@@ -536,7 +535,6 @@
   "indentColorizer.ignoreErrorLanguages": [
     "*"
   ],
-  "workbench.colorTheme": "GitHub Dark Default",
   "workbench.startupEditor": "none",
   "terminal.integrated.suggest.enabled": true,
   "[markdown]": {
@@ -1076,5 +1074,18 @@
     "arguments": "on",
     "unknown": "off"
   },
-  "python.terminal.activateEnvInCurrentTerminal": true
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "yaml.schemas": {
+    "/home/othman/.vscode/extensions/continue.continue-1.1.34-linux-x64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
+  },
+  "versionlens.suggestions.showOnStartup": true,
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.colorTheme": "GitHub Dark Default",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "npm-intellisense.importES6": true,
+  "npm-intellisense.importQuotes": "\"",
+  "npm-intellisense.importLinebreak": ";\n",
+  "npm-intellisense.importDeclarationType": "const" 
 }
