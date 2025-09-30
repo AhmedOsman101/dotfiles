@@ -475,6 +475,7 @@ partimage
 paru
 paru-debug
 pass
+pass-import
 pastel
 patch
 pavucontrol
