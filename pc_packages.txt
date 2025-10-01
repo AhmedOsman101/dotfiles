@@ -301,6 +301,7 @@ inotify-tools
 intel-ucode
 inter-font
 inxi
+isoimagewriter
 iw
 iwd
 jasper
