@@ -224,7 +224,11 @@ formatter = { command = "prettier", args = [
   "--stdin-filepath",
   "file.md",
 ] }
-language-servers = ["marksman", "markdown-oxide", "scls"]
+language-servers = [
+  # "marksman",
+  "markdown-oxide",
+  "scls"
+]
 
 
 # ---- Svelte ---- #

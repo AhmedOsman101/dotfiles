@@ -6,7 +6,6 @@ alias bashrc="$EDITOR ~/.bashrc"
 alias art="php artisan"
 alias cls="clear"
 alias reload="source $ZSHRC && cls && neofetch"
-alias vim="nvim"
 alias pwdcp='clipcopy ${PWD}'
 alias python="python3"
 alias pip="pip3"
