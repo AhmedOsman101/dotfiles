@@ -148,9 +148,6 @@ zstyle ':zle:*' region-highlight 'fg=none' 'bg=none'
 # ---- Curlie ---- #
 [[ -s "$HOME/.config/envman/load.sh" ]] && source "$HOME/.config/envman/load.sh"
 
-# ---- Posting ---- #
-source /mnt/main/xdg/share/../bin/env
-
 # ---- Deno ---- #
 # Add deno completions to search path
 if [[ ":$FPATH:" != *":$HOME/.config/zsh/completions:"* ]]; then
@@ -167,9 +164,9 @@ eval "$(uvx --generate-shell-completion zsh)"
 eval "$($HOME/.local/share/cargo/bin/rtx activate zsh)"
 
 # --- git aliases (override) --- #
-unalias g
+unalias g || true
+unalias gcm || true
 alias gca='git-commit --ai'
 alias glg="git log --all --graph --pretty=format:'%C(magenta)%h%C(default) %an %C(yellow)%ar%C(auto) %D%n%s%n'"
 alias gc="git clone"
 alias glc='git pull origin $(git_current_branch)'
-unalias gcm || true
