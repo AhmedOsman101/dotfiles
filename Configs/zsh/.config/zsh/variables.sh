@@ -1,21 +1,14 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 # ---- Increase the FUNCNEST limit ----- #
 FUNCNEST=99999
 export SHLVL=10
 
 # ---- XDG Standard ---- #
-if [[ -d "/mnt/main/xdg" ]]; then
-  export XDG_DATA_HOME="/mnt/main/xdg/share"
-  export XDG_CACHE_HOME="/mnt/main/xdg/.cache"
-  export XDG_STATE_HOME="/mnt/main/xdg/state"
-else
-  export XDG_DATA_HOME="$HOME/.local/share"
-  export XDG_STATE_HOME="$HOME/.local/state"
-  export XDG_CACHE_HOME="$HOME/.cache"
-fi
-
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
 
 # ---- Tuckr ---- #
 export TUCKR_HOME="$HOME"
@@ -46,8 +39,8 @@ export AUTO_NOTIFY_IGNORE=(
   "composer" "mask view"
 )
 export AUTO_NOTIFY_THRESHOLD=30
-export AUTO_NOTIFY_ICON_SUCCESS="/usr/share/icons/auto-notify-zsh/success.png"
-export AUTO_NOTIFY_ICON_FAILURE="/usr/share/icons/auto-notify-zsh/fail.png"
+export AUTO_NOTIFY_ICON_SUCCESS="${XDG_DATA_HOME}/icons/success-failure-icons/success.svg"
+export AUTO_NOTIFY_ICON_FAILURE="${XDG_DATA_HOME}/icons/success-failure-icons/gnome-warning.svg"
 
 # ---- Android ---- #
 export ANDROID_USER_HOME="${XDG_DATA_HOME}/android"
@@ -126,7 +119,8 @@ export DENO_UNSTABLE_SLOPPY_IMPORTS="true"
 export EDITOR="hx" # helix
 
 # ---- FZF ----- #
-show_file_or_dir_preview="if [ -d {} ]; then eza --all --tree --color=always {} | head -200; else if [[ {} =~ \.(md|markdown)$ ]]; then mdcat {}; else bat --color=always --line-range :500 {}; fi; fi"
+# show_file_or_dir_preview="if [ -d {} ]; then eza --all --tree --color=always {} | head -200; else if [[ {} =~ \.(md|markdown)$ ]]; then mdcat {}; else bat --color=always --line-range :500 {}; fi; fi"
+show_file_or_dir_preview="if [[ -d {} ]]; then eza --all --tree --color=always {} | head -200; elif [[ {} =~ \.(md|markdown)$ ]]; then mdcat {}; else bat --color=always --line-range :500 {}; fi"
 
 # Use fd instead of fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
@@ -254,7 +248,7 @@ export PYTHONSTARTUP="$HOME/python/pythonrc"
 # ---- Prettier ---- #
 export PRETTIERRC="${XDG_CONFIG_HOME}/.prettierrc.json"
 
-# --- comment --- #
+# --- Flutter packages --- #
 export PUB_CACHE="/mnt/main/pub-cache"
 
 # ---- Rustup ---- #
@@ -264,10 +258,10 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export SCRIPTS_DIR="$HOME/scripts"
 
 # ---- Starship ---- #
-export STARSHIP_CONFIG="$HOME/.config/starship.toml"
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship.toml"
 
 # ---- Sudo ---- #
-export SUDO_ASKPASS="/home/othman/scripts/rofi/rofi-askpass"
+export SUDO_ASKPASS="$HOME/scripts/rofi/rofi-askpass"
 
 # --- Sqlite --- #
 export SQLITE_HISTORY="$XDG_CACHE_HOME/sqlite_history"
@@ -303,11 +297,8 @@ export YSU_MESSAGE_POSITION="after"
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # ---- Zsh ---- #
-export ZDOTDIR="$HOME/.config/zsh"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export ZSHRC="$ZDOTDIR/.zshrc"
-
-# Standard template for pandoc md to docx conversion
-export MRT="$HOME/Documents/backup/WordTemplates/Standard.dotx"
 
 # ---- PATH ---- #
 export PATH="$PATH:$SCRIPTS_DIR"                  # my custom scripts

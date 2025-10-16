@@ -1,11 +1,11 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 # ---- Aliases ----- #
-alias zshrc="$EDITOR $ZSHRC"
-alias bashrc="$EDITOR ~/.bashrc"
+alias zshrc='${EDITOR} ${ZSHRC}'
+alias bashrc='$EDITOR ~/.bashrc'
 alias art="php artisan"
 alias cls="clear"
-alias reload="source $ZSHRC && clear && neofetch"
+alias reload='source $ZSHRC && clear && neofetch'
 alias pwdcp='clipcopy ${PWD}'
 alias python="python3"
 alias pip="pip3"
@@ -40,10 +40,10 @@ alias lzg="lazygit"
 alias adb='HOME="$XDG_DATA_HOME"/android adb'
 
 # ---- Nvidia settings ---- #
-alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings"
+alias nvidia-settings='nvidia-settings --config="${XDG_CONFIG_HOME}/nvidia/settings"'
 
 # ---- Svn ---- #
-alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"
+alias svn='svn --config-dir ${XDG_CONFIG_HOME}/subversion'
 
 # --- Laravel Sail --- #
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
@@ -52,17 +52,17 @@ alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 
 # ---- Confirm before overwriting something ---- #
-alias cp="cp -i"
-alias mv="mv -i"
+alias cp="cp -iv"
+alias mv="mv -iv"
 
 # ---- Trash-cli (better rm & rmdir) ----- #
 alias rm="rmtrash"
 alias rmdir="rmdirtrash --ignore-fail-on-non-empty"
 
 # ---- Easier to read disk ---- #
-alias df='df -h'     # human-readable sizes
-alias dus='du -sh'   # human-readable sizes
-alias du='du -h'     # human-readable sizes
+alias df='df -h'     # Disk usage per file system
+alias du='du -h'     # Disk usage per directory
+alias dus='du -sh'   # Disk usage (summary)
 alias free='free -m' # show sizes in MB
 
 # ---- Get top process eating memory ---- #
@@ -73,13 +73,6 @@ alias pscpu='n "ps | sort-by cpu -r | first 5"'
 
 #---- Git ---- #
 alias git-init='git init && git add -A && git commit -m "initial commit"'
-
-# ---- Copy to Clipboard ----#
-[[ -n $(command -v copyclip) ]] || alias copyclip="clipcopy"
-
-# ---- Qalculate ---- #
-alias calc="qalc --base 10 --color --terse" # Return only the output and colorize output
-alias qalc="qalc --base 10 --color"         # Colorize output
 
 # ---- Pacman ---- #
 # Resolve 'pacman in use' error
@@ -98,7 +91,7 @@ alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacma
 alias cb="cargo build"
 
 # ---- Nushell ---- #
-[[ -n $(command -v n) ]] || alias n="nu --config $NU_CONFIG -c"
+[[ -n $(command -v n) ]] || alias n='nu --config ${NU_CONFIG} -c'
 
 # ---- Capslock ---- #
 alias caps="xdotool key Caps_Lock"
@@ -108,7 +101,7 @@ alias CAPS="xdotool key Caps_Lock"
 alias code-stats='tokei'
 
 # ---- Distrobox ---- #
-alias db='distrobox'
+alias dbox='distrobox'
 
 # ---- Shutdown (safely) ---- #
 alias goodnight='sync && sudo systemctl poweroff'
@@ -135,15 +128,18 @@ alias rp='release-please'
 alias mysql='mariadb'
 
 # --- Vite --- #
-alias vite="vite --config ${XDG_CONFIG_HOME}/vite/vite.config.js"
+alias vite='vite --config "${XDG_CONFIG_HOME}/vite/vite.config.js"'
 
 # --- Switch Branch --- #
 alias sw='switch-branch'
 
 # --- Mask (maskfile) --- #
-unalias mask &>/dev/null
-alias task="$(which mask)"
-alias mask='mask --maskfile "$(git-root 2>/dev/null || pwd)/maskfile.md"'
+if command -v mask &>/dev/null; then
+  unalias mask &>/dev/null
+  # shellcheck disable=2139
+  alias task="$(command -v mask)"
+  alias mask='mask --maskfile "$(git-root 2>/dev/null || pwd)/maskfile.md"'
+fi
 
 # --- diff --- #
 alias diff='diff -u --color=auto'
@@ -152,6 +148,7 @@ alias diff='diff -u --color=auto'
 alias type='type -a'
 
 # --- Conky --- #
-alias conky='conky --config="$XDG_CONFIG_HOME"/conky/conkyrc'
+alias conky='conky --config="$XDG_CONFIG_HOME/conky/conkyrc"'
 
-alias xbindkeys='xbindkeys -f "$XDG_CONFIG_HOME/xbindkeys/config"'
+# --- SXHKD --- #
+alias reload-sxhkd='pkill -USR1 -x sxhkd'
