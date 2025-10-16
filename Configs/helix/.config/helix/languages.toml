@@ -17,6 +17,18 @@ formatter = { command = "astyle" }
 name = "bash"
 language-servers = ["bash-language-server", "scls"]
 
+# ---- HTML ---- #
+[[language]]
+name = "html"
+roots = [".git"]
+language-servers = ["vscode-html-language-server", "superhtml", "emmet-lsp"]
+formatter = { command = "biome", args = [
+  "check",
+  "--fix",
+  "--stdin-file-path=file.json",
+] }
+
+
 # ---- PHP ---- #
 [[language]]
 name = "php"
@@ -34,8 +46,6 @@ name = "json"
 formatter = { command = "biome", args = [
   "check",
   "--fix",
-  # "--config-path",
-  # "/home/othman/.config/biome.json",
   "--stdin-file-path=file.json",
 ] }
 language-servers = [
@@ -227,7 +237,7 @@ formatter = { command = "prettier", args = [
 language-servers = [
   # "marksman",
   "markdown-oxide",
-  "scls"
+  "scls",
 ]
 
 
@@ -246,15 +256,14 @@ language-servers = [
 [[language]]
 name = "env"
 file-types = [
-  ".shellcheckrc",
-  { glob = ".env" },
+  { glob = ".shellcheckrc" },
+  { glob = ".env*" },
   { glob = ".env.*" },
   { glob = ".envrc" },
 ]
 indent = { tab-width = 2, unit = "  " }
 
-# ---- SCLS ---- #
-# introduce new language server
+# ---- simple completion language server ---- #
 [language-server.scls]
 command = "simple-completion-language-server"
 
@@ -314,3 +323,48 @@ args = [
   "qwen2.5-coder:0.5b",
 
 ]
+
+# ---- Emmet LSP ---- #
+[language-server.emmet-lsp]
+command = "emmet-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "ini"
+scope = "source.ini"
+file-types = [
+  "ini",
+  # Systemd unit files
+  "service",
+  "automount",
+  "device",
+  "mount",
+  "path",
+  "service",
+  "slice",
+  "socket",
+  "swap",
+  "target",
+  "timer",
+  # Podman quadlets
+  "container",
+  "volume",
+  "kube",
+  "network",
+  { glob = ".editorconfig" },
+  { glob = "rclone.conf" },
+  "properties",
+  "cfg",
+  "directory",
+
+  # === your specific .conf files or all ".conf" files ===
+  # { glob = "some_file.conf" },
+  # "conf",
+]
+injection-regex = "ini"
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+
+[[grammar]]
+name = "ini"
+source = { git = "https://github.com/justinmk/tree-sitter-ini", rev = "0eaed8040513e62ee2e9e8db9f086cf630a524eb" }
