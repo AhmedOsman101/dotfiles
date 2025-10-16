@@ -96,12 +96,17 @@ ctrl_l() {
 
 gcm() {
   # resolves to "git clone git@github.com:AhmedOsman101/"
-  git clone "me:$1"
+  repo=$1
+  shift
+  git clone "me:${repo}" "$@"
 }
 
 gcg() {
   # resolves to "git clone git@github.com:"
-  git clone "gh:$1"
+  repo=$1
+  shift
+  git clone "me:${repo}" "$@"
+  git clone "gh:${repo}" "$@"
 }
 
 cr() {
