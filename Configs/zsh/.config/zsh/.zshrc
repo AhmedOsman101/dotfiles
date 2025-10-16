@@ -113,7 +113,7 @@ eval "$(atuin init zsh)"
 fpath=("${ASDF_DATA_DIR:-$HOME/.asdf}/completions" $fpath)
 
 # ---- Cargo ---- #
-source "$CARGO_HOME/env"
+source "$CARGO_HOME/env" &>/dev/null
 
 # ---- FZF ----- #
 source <(fzf --zsh)
