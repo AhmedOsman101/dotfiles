@@ -5,11 +5,11 @@ export ZDOTDIR="$HOME/.config/zsh"
 
 # Load modules safely
 config_files=(
-  "$ZDOTDIR/variables.zsh"
-  "$ZDOTDIR/functions.zsh"
-  "$ZDOTDIR/aliases.zsh"
-  "$ZDOTDIR/keybinds.zsh"
-  "$ZDOTDIR/secrets.zsh"
+  "$ZDOTDIR/variables.sh"
+  "$ZDOTDIR/functions.sh"
+  "$ZDOTDIR/aliases.sh"
+  "$ZDOTDIR/keybinds.sh"
+  "$ZDOTDIR/secrets.sh"
 )
 
 for file in "${config_files[@]}"; do
