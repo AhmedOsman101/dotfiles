@@ -5,14 +5,14 @@ FUNCNEST=99999
 export SHLVL=10
 
 # ---- XDG Standard ---- #
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_STATE_HOME="${HOME}/.local/state"
 
 # ---- Tuckr ---- #
-export TUCKR_HOME="$HOME"
-export TUCKR_DIR="$TUCKR_HOME/dotfiles/Configs"
+export TUCKR_HOME="${HOME}"
+export TUCKR_DIR="${TUCKR_HOME}/dotfiles/Configs"
 
 # ---- Localization ---- #
 # export GTK_IM_MODULE="fcitx"
@@ -52,18 +52,18 @@ export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
 export ASDF_DIR="${ASDF_DATA_DIR}"
 
 # ---- Astyle ---- #
-export ARTISTIC_STYLE_OPTIONS="$XDG_CONFIG_HOME/.astylerc"
-export ARTISTIC_STYLE_PROJECT_OPTIONS="$XDG_CONFIG_HOME/.astylerc"
+export ARTISTIC_STYLE_OPTIONS="${XDG_CONFIG_HOME}/.astylerc"
+export ARTISTIC_STYLE_PROJECT_OPTIONS="${XDG_CONFIG_HOME}/.astylerc"
 
 # ---- Bat ---- #
 export BATDIFF_USE_DELTA=true
 
 # ---- Bun ---- #
-export BUN_INSTALL="$XDG_DATA_HOME/bun"
+export BUN_INSTALL="${XDG_DATA_HOME}/bun"
 
 # ---- Biome ---- #
-export BIOME_CONFIG_PATH="$XDG_CONFIG_HOME/biome.json"
-export BIOME_BINARY="$(which biome)"
+export BIOME_CONFIG_PATH="${XDG_CONFIG_HOME}/biome.json"
+export BIOME_BINARY="$(command -v biome)"
 
 # ---- Browser ---- #
 export BROWSER="zen-browser"
@@ -129,9 +129,9 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
 --color=selected-bg:#45475a \
 --multi"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
-export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
+export FZF_CTRL_T_OPTS="--preview '${show_file_or_dir_preview}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
 # ---- Gnupg ---- #
@@ -187,7 +187,7 @@ export GUM_FILE_HEADER_FOREGROUND="${U_CYAN}"
 
 # ---- History ----- #
 export HISTSIZE=999999
-export SAVEHIST=$HISTSIZE
+export SAVEHIST=${HISTSIZE}
 export HISTDUP=erase
 export HISTCONTROL="ignoreboth"
 
@@ -201,7 +201,7 @@ export LESS_TERMCAP_md=$'\e[01;32m' # Green for bold
 export LESS_TERMCAP_me=$'\e[0m'
 
 # ---- Mplayer ---- #
-export MPLAYER_HOME="$XDG_CONFIG_HOME/mplayer"
+export MPLAYER_HOME="${XDG_CONFIG_HOME}/mplayer"
 
 # ---- Micro ---- #
 export MICRO_TRUECOLOR=1
@@ -211,31 +211,31 @@ export AUTHOR="Ahmad Othman"
 export AUTHOR_EMAIL="ahmad.ali.othman@outlook.com"
 
 # ---- Node ---- #
-export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export NODE_REPL_HISTORY="${XDG_DATA_HOME}/node_repl_history"
+export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}"/npm/npmrc
 # DEPRECATED: export NODE_PACKAGE_MANAGER="pnpm"
 
 # ---- Nuget ---- #
-export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
+export NUGET_PACKAGES="${XDG_CACHE_HOME}/NuGetPackages"
 
 # ---- NVM ---- #
-export NVM_DIR="$XDG_DATA_HOME/nvm"
+export NVM_DIR="${XDG_DATA_HOME}/nvm"
 
 # ---- NU Shell ---- #
-export NU_CONFIG="$XDG_CONFIG_HOME/nushell/config.nu"
+export NU_CONFIG="${XDG_CONFIG_HOME}/nushell/config.nu"
 
 # ---- Parallel ---- #
-export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
+export PARALLEL_HOME="${XDG_CONFIG_HOME}/parallel"
 
 # ---- Pass ---- #
-export PASSWORD_STORE_DIR="$HOME/.password-store"
+export PASSWORD_STORE_DIR="${HOME}/.password-store"
 
 # ---- PHP Codesniffer ---- #
-export PHPCS_CONFIG_PATH="$XDG_CONFIG_HOME/php-codesniffer/ruleset.xml"
+export PHPCS_CONFIG_PATH="${XDG_CONFIG_HOME}/php-codesniffer/ruleset.xml"
 
 # ---- Pnpm ---- #
 if [[ "${DEVICE}" == "laptop" ]]; then
-  pnpmHome="$XDG_DATA_HOME/pnpm"
+  pnpmHome="${XDG_DATA_HOME}/pnpm"
 else
   pnpmHome="/mnt/main/pnpm"
 fi
@@ -243,7 +243,7 @@ fi
 export PNPM_HOME="${pnpmHome}"
 
 # ---- Python ---- #
-export PYTHONSTARTUP="$HOME/python/pythonrc"
+export PYTHONSTARTUP="${HOME}/python/pythonrc"
 
 # ---- Prettier ---- #
 export PRETTIERRC="${XDG_CONFIG_HOME}/.prettierrc.json"
@@ -252,19 +252,16 @@ export PRETTIERRC="${XDG_CONFIG_HOME}/.prettierrc.json"
 export PUB_CACHE="/mnt/main/pub-cache"
 
 # ---- Rustup ---- #
-export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+export RUSTUP_HOME="${XDG_DATA_HOME}/rustup"
 
 # ---- Scripts ---- #
-export SCRIPTS_DIR="$HOME/scripts"
+export SCRIPTS_DIR="${HOME}/scripts"
 
 # ---- Starship ---- #
-export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship.toml"
-
-# ---- Sudo ---- #
-export SUDO_ASKPASS="$HOME/scripts/rofi/rofi-askpass"
+export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship.toml"
 
 # --- Sqlite --- #
-export SQLITE_HISTORY="$XDG_CACHE_HOME/sqlite_history"
+export SQLITE_HISTORY="${XDG_CACHE_HOME}/sqlite_history"
 
 # ---- Terminal ---- #
 export TERMINAL="kitty"
@@ -272,13 +269,13 @@ export TERM="xterm-256color"
 export COLORTERM="truecolor"
 
 # ---- Texfm ---- #
-export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
+export TEXMFVAR="${XDG_CACHE_HOME}/texlive/texmf-var"
 
 # --- Wget --- #
-export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+export WGETRC="${XDG_CONFIG_HOME}/wgetrc"
 
 # ---- w3m ---- #
-export W3M_DIR="$XDG_DATA_HOME/w3m"
+export W3M_DIR="${XDG_DATA_HOME}/w3m"
 
 # --- Webkit --- #
 export __EGL_VENDOR_LIBRARY_FILENAMES="/usr/share/glvnd/egl_vendor.d/10_nvidia.json"
@@ -287,33 +284,33 @@ export __EGL_VENDOR_LIBRARY_FILENAMES="/usr/share/glvnd/egl_vendor.d/10_nvidia.j
 # export WEBKIT_DISABLE_DMABUF_RENDERER=1
 
 # ---- X11 ---- #
-export XINITRC="$XDG_CONFIG_HOME/X11/.Xinitrc"
+export XINITRC="${XDG_CONFIG_HOME}/X11/.Xinitrc"
 
 # ---- YouShouldUse utility ---- #
 export YSU_MESSAGE_POSITION="after"
 
 # ---- Zinit ----- #
 # Set the directory we want to store zinit and plugins
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+export ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # ---- Zsh ---- #
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export ZSHRC="$ZDOTDIR/.zshrc"
+export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
+export ZSHRC="${ZDOTDIR}/.zshrc"
 
 # ---- PATH ---- #
-export PATH="$PATH:$SCRIPTS_DIR"                  # my custom scripts
-PATH="$PATH:$HOME/.local/bin"                     # my custom scripts (alternative)
-PATH="$PATH:${PNPM_HOME}"                         # PNPM Home folder
-PATH="$PATH:$HOME/.spicetify"                     # spicetify for spotify mods
-PATH="$PATH:$BUN_INSTALL/bin"                     # Bun js runtime
-PATH="$PATH:$XDG_CONFIG_HOME/composer/vendor/bin" # Composer packages
-PATH="$PATH:$CARGO_HOME/bin"                      # Cargo packages
-PATH="$PATH:${ASDF_DATA_DIR}/shims"               # Asdf shims
-PATH="$PATH:${ANDROID_HOME}/platform-tools"       # Android SDK platform tools (adb, fastboot)
-PATH="$PATH:${ANDROID_HOME}/tools"                # Android SDK legacy tools (android, monitor, etc)
-PATH="$PATH:${ANDROID_HOME}/tools/bin"            # Android SDK command-line tools
-PATH="$PATH:${ANDROID_HOME}/emulator"             # Android SDK emulator binaries
-PATH="$PATH:$HOME/opt/flutter/bin"                # Flutter and Dart
+export PATH="${PATH}:${SCRIPTS_DIR}"                  # my custom scripts
+PATH="${PATH}:${HOME}/.local/bin"                     # my custom scripts (alternative)
+PATH="${PATH}:${PNPM_HOME}"                           # PNPM Home folder
+PATH="${PATH}:${HOME}/.spicetify"                     # spicetify for spotify mods
+PATH="${PATH}:${BUN_INSTALL}/bin"                     # Bun js runtime
+PATH="${PATH}:${XDG_CONFIG_HOME}/composer/vendor/bin" # Composer packages
+PATH="${PATH}:${CARGO_HOME}/bin"                      # Cargo packages
+PATH="${PATH}:${ASDF_DATA_DIR}/shims"                 # Asdf shims
+PATH="${PATH}:${ANDROID_HOME}/platform-tools"         # Android SDK platform tools (adb, fastboot)
+PATH="${PATH}:${ANDROID_HOME}/tools"                  # Android SDK legacy tools (android, monitor, etc)
+PATH="${PATH}:${ANDROID_HOME}/tools/bin"              # Android SDK command-line tools
+PATH="${PATH}:${ANDROID_HOME}/emulator"               # Android SDK emulator binaries
+PATH="${PATH}:${HOME}/opt/flutter/bin"                # Flutter and Dart
 
 # Define directories to exclude
 EXCLUDE_DIRS=(
@@ -324,17 +321,20 @@ EXCLUDE_DIRS=(
 
 # Dynamically add subdirectories of $HOME/scripts containing executables to PATH
 # excluding specified directories and their subdirectories
-if [ -d "$SCRIPTS_DIR" ]; then
-  for dir in $(find "$SCRIPTS_DIR" -type f -executable -exec dirname {} \; | sort -u); do
+if [[ -d "${SCRIPTS_DIR}" ]]; then
+  for dir in $(find "${SCRIPTS_DIR}" -type f -executable -exec dirname {} \; | sort -u); do
     exclude=false
     for excluded in "${EXCLUDE_DIRS[@]}"; do
-      if [[ "$dir" == "$excluded"* ]]; then
+      if [[ "${dir}" == "${excluded}"* ]]; then
         exclude=true
         break
       fi
     done
-    if ! $exclude && [[ ":$PATH:" != *":$dir:"* ]]; then
-      PATH="$PATH:$dir"
+    if ! ${exclude} && [[ ":${PATH}:" != *":${dir}:"* ]]; then
+      PATH="${PATH}:${dir}"
     fi
   done
 fi
+
+# ---- Sudo ---- #
+export SUDO_ASKPASS="$(get-askpass)"
