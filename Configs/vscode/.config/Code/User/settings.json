@@ -243,7 +243,10 @@
     "mkconf": "shellscript",
     "*.desktop": "ini",
     "dunstrc": "ini",
-    "*.mdc": "markdown"
+    "*.mdc": "markdown",
+    "*.timer": "ini",
+    "*.target": "ini",
+    "*.service": "ini"
   },
   "markdown.preview.typographer": true,
   "markdown-preview-enhanced.mathRenderingOnlineService": "https://latex.codecogs.com/png.latex",
@@ -1087,5 +1090,5 @@
   "npm-intellisense.importES6": true,
   "npm-intellisense.importQuotes": "\"",
   "npm-intellisense.importLinebreak": ";\n",
-  "npm-intellisense.importDeclarationType": "const" 
+  "npm-intellisense.importDeclarationType": "const"
 }
