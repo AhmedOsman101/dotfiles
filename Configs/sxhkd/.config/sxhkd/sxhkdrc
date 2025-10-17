@@ -1,0 +1,48 @@
+# --- Core applications --- #
+
+# Terminal
+super + Return
+  kitty
+
+# File manager
+super + f
+  dolphin
+
+# Browser
+super + b
+  zen-browser
+
+# --- System control --- #
+
+# Volume control (requires pamixer)
+# XF86AudioRaiseVolume
+#   pamixer -i 5
+
+# XF86AudioLowerVolume
+#   pamixer -d 5
+
+# XF86AudioMute
+#   pamixer -t
+
+# Brightness control (requires brightnessctl)
+# XF86MonBrightnessUp
+#   brightnessctl set +5%
+
+# XF86MonBrightnessDown
+#   brightnessctl set 5%-
+
+# --- Utility bindings --- #
+
+# Force-kill a window with the mouse
+super + Escape
+  zsh -ic kill-window
+
+# Toggle clipboard
+super + v
+  copyq toggle
+
+# Screenshot (using Flameshot)
+print
+  flameshot gui
+
+
