@@ -152,3 +152,6 @@ alias conky='conky --config="$XDG_CONFIG_HOME/conky/conkyrc"'
 
 # --- SXHKD --- #
 alias reload-sxhkd='pkill -USR1 -x sxhkd'
+
+# --- ffmpeg --- #
+alias ffmpeg='ffmpeg -hide_banner'
