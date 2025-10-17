@@ -22,6 +22,7 @@ archcraft-vim
 aria2
 ark
 astyle
+atomicparsley
 atril
 atuin
 audiorelay
@@ -51,6 +52,7 @@ catppuccin-mocha-grub-theme-git
 ccache
 chaotic-keyring
 chaotic-mirrorlist
+cherry-studio-bin
 clang
 composer
 converseen
@@ -204,6 +206,7 @@ mesa-demos
 mkcert
 mkinitcpio-firmware
 moreutils
+mpv
 nano
 ncdu
 ncurses5-compat-libs
@@ -220,6 +223,7 @@ nvidia-settings
 nvme-cli
 obs-studio
 obsidian
+okular
 ollama
 opendoas
 openssh
@@ -309,6 +313,7 @@ ttf-amiri
 tuckr
 ufw
 ulauncher
+unarchiver
 unzip
 update-grub
 upscayl-desktop-git
@@ -345,6 +350,7 @@ wl-clipboard
 wmctrl
 wpa_supplicant
 wrk
+x11-ssh-askpass
 x11vnc
 xclicker
 xclip
@@ -356,12 +362,15 @@ xdg-utils
 xdotool
 xorg-fonts-misc
 xorg-mkfontscale
+xorg-xev
 xorg-xinit
 xorg-xkill
 xsel
+xterm
 yad
 yamlfmt
 yazi
+yt-dlp
 zen-browser-bin
 zenity
 zoxide
