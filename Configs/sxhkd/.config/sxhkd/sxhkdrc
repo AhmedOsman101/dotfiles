@@ -35,7 +35,7 @@ super + b
 
 # Force-kill a window with the mouse
 super + Escape
-  zsh -ic kill-window
+  bash -ic kill-window
 
 # Toggle clipboard
 super + v
@@ -45,4 +45,5 @@ super + v
 print
   flameshot gui
 
-
+shift + Insert
+  bash -ic insert-selection
