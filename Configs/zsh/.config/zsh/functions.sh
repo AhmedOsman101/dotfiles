@@ -159,5 +159,8 @@ ffprobe() {
 # Runs before any command
 # precmd() { }
 
+# Runs when changing directories
+# chpwd() { }
+
 # Runs after any command
 # preexec() { }
