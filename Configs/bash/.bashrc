@@ -1,33 +1,45 @@
 export HISTFILE="${XDG_STATE_HOME}/bash/history"
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u \W]\$ '
 
-# ---- Prompt Starship ----- #
+# ---- Starship Prompt ----- #
 eval "$(starship init bash)"
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
-. "$HOME/.local/share/../bin/env"
-
-. "/home/othman/.deno/env"
-source /home/othman/.local/share/bash-completion/completions/deno.bash
-
-export PATH="$PATH:$HOME/.local/bin/scripts"
 
 complete -cf doas
 complete -F _command doas
 
-# chsh -s "$(which zsh)"
+# ---- Scripts ---- #
+export SCRIPTS_DIR="${HOME}/scripts"
 
-# Check for Zsh installation
-# if command -v zsh &>/dev/null; then
-#   zsh
-# fi
+# ---- PATH ---- #
+export PATH="${PATH}:${SCRIPTS_DIR}" # my custom scripts
+PATH="${PATH}:${HOME}/.local/bin"    # my custom scripts (alternative)
 
-# . "/mnt/main/xdg/share/../bin/env"
+# Define directories to exclude
+EXCLUDE_DIRS=(
+  "${SCRIPTS_DIR}/.git"
+  "${SCRIPTS_DIR}/python/.venv"
+  "${SCRIPTS_DIR}/python/venv"
+)
+
+# Dynamically add subdirectories of $HOME/scripts containing executables to PATH
+# excluding specified directories and their subdirectories
+if [[ -d "${SCRIPTS_DIR}" ]]; then
+  for dir in $(find "${SCRIPTS_DIR}" -type f -executable -exec dirname {} \; | sort -u); do
+    exclude=false
+    for excluded in "${EXCLUDE_DIRS[@]}"; do
+      if [[ "${dir}" == "${excluded}"* ]]; then
+        exclude=true
+        break
+      fi
+    done
+    if ! ${exclude} && [[ ":${PATH}:" != *":${dir}:"* ]]; then
+      PATH="${PATH}:${dir}"
+    fi
+  done
+fi
