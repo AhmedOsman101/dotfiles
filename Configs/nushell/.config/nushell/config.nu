@@ -31,3 +31,6 @@ $env.config.color_config.separator = "ligr"
 $env.config.color_config.float = "y"
 $env.config.color_config.int = "y"
 $env.config.color_config.nothing = "ligrb"
+
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
