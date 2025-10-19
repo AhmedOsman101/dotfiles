@@ -4,16 +4,6 @@
 FUNCNEST=99999
 export SHLVL=10
 
-# --- XDG Standard --- #
-export XDG_CONFIG_HOME="${HOME}/.config"
-export XDG_CACHE_HOME="${HOME}/.cache"
-export XDG_DATA_HOME="${HOME}/.local/share"
-export XDG_STATE_HOME="${HOME}/.local/state"
-
-# --- Tuckr --- #
-export TUCKR_HOME="${HOME}"
-export TUCKR_DIR="${TUCKR_HOME}/dotfiles/Configs"
-
 # --- Localization --- #
 # export GTK_IM_MODULE="fcitx"
 # export QT_IM_MODULE="fcitx"
@@ -36,7 +26,7 @@ export AUTO_NOTIFY_IGNORE=(
   "nu" "pnpm dev" "npm dev" "editwhich"
   "n" "tempedit" "bun run" "bunx"
   "sudoedit" "distrobox" "db" "repeat-it"
-  "composer" "mask view" "uv run"
+  "composer" "mask view" "uv run" "fish"
 )
 export AUTO_NOTIFY_THRESHOLD=30
 export AUTO_NOTIFY_ICON_SUCCESS="${XDG_DATA_HOME}/icons/success-failure-icons/success.svg"
@@ -63,10 +53,16 @@ export BUN_INSTALL="${XDG_DATA_HOME}/bun"
 
 # --- Biome --- #
 export BIOME_CONFIG_PATH="${XDG_CONFIG_HOME}/biome.json"
-export BIOME_BINARY="$(command -v biome)"
+export BIOME_BINARY="$(command -v biome 2>/dev/null)"
 
 # --- Browser --- #
-export BROWSER="zen-browser"
+if command -v zen-browser &>/dev/null; then
+  export BROWSER="zen-browser"
+elif command -v thorium-browser &>/dev/null; then
+  export BROWSER="thorium-browser"
+elif command -v firefox &>/dev/null; then
+  export BROWSER="firefox"
+fi
 
 # --- Ruby Bundle --- #
 export BUNDLE_USER_CONFIG="${XDG_CONFIG_HOME}/bundle"
@@ -76,11 +72,8 @@ export BUNDLE_USER_PLUGIN="${XDG_DATA_HOME}/bundle"
 # --- Cargo --- #
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 
-# --- Chassis --- #
-export DEVICE="$(hostnamectl chassis)"
-
 # --- Chrome --- #
-export CHROME_EXECUTABLE="/usr/bin/thorium-browser"
+export CHROME_EXECUTABLE="$(command -v thorium-browser 2>/dev/null)"
 
 # --- Cuda --- #
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
@@ -115,11 +108,31 @@ export DOAS_NOPASS="${XDG_CONFIG_HOME}/doas/doas.conf"
 # --- Deno --- #
 export DENO_UNSTABLE_SLOPPY_IMPORTS="true"
 
-#---- Editor --- #
-export EDITOR="hx" # helix
-
 # --- FZF ---- #
-show_file_or_dir_preview="if [[ -d {} ]]; then eza --all --tree --color=always {} | head -200; elif [[ {} =~ \.(md|markdown)$ ]]; then mdcat {}; else bat --color=always --line-range :500 {}; fi"
+# show_file_or_dir_preview="if [[ -d {} ]]; then eza --all --tree --color=always {} | head -200; elif [[ {} =~ \.(md|markdown)$ ]]; then mdcat {}; else bat --color=always --line-range :500 {}; fi"
+show_file_or_dir_preview="$(
+  cat <<'EOF'
+if [[ -d {} ]]; then
+  eza --all --tree --color=auto --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor" {} | head -n 200
+elif [[ {} =~ \.(md|markdown)$ ]]; then
+  if command -v mdcat 2>/dev/null;
+    mdcat {}
+  elif command -v glow 2>/dev/null;
+    glow {}
+  elif command -v bat 2>/dev/null;
+    bat --color=always --line-range :500 {}
+  else
+    cat {} | head -n 500
+  fi
+else
+  if command -v bat 2>/dev/null;
+    bat --color=always --line-range :500 {} || file {}
+  else
+    cat {} | head -n 500
+  fi
+fi
+EOF
+)"
 
 # Use fd instead of fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
@@ -183,12 +196,6 @@ export GUM_FILE_DIRECTORY_FOREGROUND="${U_PURPLE}"
 export GUM_FILE_CURSOR_FOREGROUND="${U_ORANGE}"
 export GUM_FILE_SELECTED_FOREGROUND="${U_ORANGE}"
 export GUM_FILE_HEADER_FOREGROUND="${U_CYAN}"
-
-# --- History ---- #
-export HISTSIZE=999999
-export SAVEHIST=${HISTSIZE}
-export HISTDUP=erase
-export HISTCONTROL="ignoreboth"
 
 # --- Libvirt --- #
 export LIBVIRT_DEFAULT_URI='qemu:///system'
@@ -288,16 +295,8 @@ export XINITRC="${XDG_CONFIG_HOME}/X11/.Xinitrc"
 # --- YouShouldUse utility --- #
 export YSU_MESSAGE_POSITION="after"
 
-# --- Zinit ---- #
-# Set the directory we want to store zinit and plugins
-export ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-
-# --- Zsh --- #
-export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
-export ZSHRC="${ZDOTDIR}/.zshrc"
-
 # --- PATH --- #
-export PATH="${PATH}:${PNPM_HOME}"                           # PNPM Home folder
+export PATH="${PATH}:${PNPM_HOME}"                    # PNPM Home folder
 PATH="${PATH}:${HOME}/.spicetify"                     # spicetify for spotify mods
 PATH="${PATH}:${BUN_INSTALL}/bin"                     # Bun js runtime
 PATH="${PATH}:${XDG_CONFIG_HOME}/composer/vendor/bin" # Composer packages

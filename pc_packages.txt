@@ -255,6 +255,7 @@ plocate
 podman
 podman-compose
 podman-docker
+prettier
 pv
 python-beautifulsoup4
 python-lxml
@@ -274,6 +275,7 @@ reflector
 reshade-shaders-git
 rmtrash
 rofi
+ruff
 samba
 sane
 scls
@@ -369,6 +371,7 @@ xsel
 xterm
 yad
 yamlfmt
+yapf
 yazi
 yt-dlp
 zen-browser-bin
