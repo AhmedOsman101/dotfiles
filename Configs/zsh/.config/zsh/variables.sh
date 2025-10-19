@@ -119,7 +119,6 @@ export DENO_UNSTABLE_SLOPPY_IMPORTS="true"
 export EDITOR="hx" # helix
 
 # ---- FZF ----- #
-# show_file_or_dir_preview="if [ -d {} ]; then eza --all --tree --color=always {} | head -200; else if [[ {} =~ \.(md|markdown)$ ]]; then mdcat {}; else bat --color=always --line-range :500 {}; fi; fi"
 show_file_or_dir_preview="if [[ -d {} ]]; then eza --all --tree --color=always {} | head -200; elif [[ {} =~ \.(md|markdown)$ ]]; then mdcat {}; else bat --color=always --line-range :500 {}; fi"
 
 # Use fd instead of fzf
@@ -311,6 +310,7 @@ PATH="${PATH}:${ANDROID_HOME}/tools"                  # Android SDK legacy tools
 PATH="${PATH}:${ANDROID_HOME}/tools/bin"              # Android SDK command-line tools
 PATH="${PATH}:${ANDROID_HOME}/emulator"               # Android SDK emulator binaries
 PATH="${PATH}:${HOME}/opt/flutter/bin"                # Flutter and Dart
+PATH="${PATH}:${XDG_DATA_HOME}/../bin"                # UV Binaries
 
 # Define directories to exclude
 EXCLUDE_DIRS=(
