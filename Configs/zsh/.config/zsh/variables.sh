@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 
-# ---- Increase the FUNCNEST limit ----- #
+# --- Increase the FUNCNEST limit ---- #
 FUNCNEST=99999
 export SHLVL=10
 
-# ---- XDG Standard ---- #
+# --- XDG Standard --- #
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
-# ---- Tuckr ---- #
+# --- Tuckr --- #
 export TUCKR_HOME="${HOME}"
 export TUCKR_DIR="${TUCKR_HOME}/dotfiles/Configs"
 
-# ---- Localization ---- #
+# --- Localization --- #
 # export GTK_IM_MODULE="fcitx"
 # export QT_IM_MODULE="fcitx"
 # export SDL_IM_MODULE="fcitx"
@@ -22,7 +22,7 @@ export TUCKR_DIR="${TUCKR_HOME}/dotfiles/Configs"
 # export GLFW_IM_MODULE="fcitx"
 # export XMODIFIERS="@im=fcitx"
 
-# ---- Auto Notify ---- #
+# --- Auto Notify --- #
 export AUTO_NOTIFY_IGNORE=(
   "vim" "nvim" "micro" "hx"
   "helix" "nano" "less" "more"
@@ -42,30 +42,30 @@ export AUTO_NOTIFY_THRESHOLD=30
 export AUTO_NOTIFY_ICON_SUCCESS="${XDG_DATA_HOME}/icons/success-failure-icons/success.svg"
 export AUTO_NOTIFY_ICON_FAILURE="${XDG_DATA_HOME}/icons/success-failure-icons/gnome-warning.svg"
 
-# ---- Android ---- #
+# --- Android --- #
 export ANDROID_USER_HOME="${XDG_DATA_HOME}/android"
 export ANDROID_SDK_ROOT="/opt/android-sdk"
 export ANDROID_HOME="${ANDROID_SDK_ROOT}"
 
-# ---- Asdf ---- #
+# --- Asdf --- #
 export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
 export ASDF_DIR="${ASDF_DATA_DIR}"
 
-# ---- Astyle ---- #
+# --- Astyle --- #
 export ARTISTIC_STYLE_OPTIONS="${XDG_CONFIG_HOME}/.astylerc"
 export ARTISTIC_STYLE_PROJECT_OPTIONS="${XDG_CONFIG_HOME}/.astylerc"
 
-# ---- Bat ---- #
+# --- Bat --- #
 export BATDIFF_USE_DELTA=true
 
-# ---- Bun ---- #
+# --- Bun --- #
 export BUN_INSTALL="${XDG_DATA_HOME}/bun"
 
-# ---- Biome ---- #
+# --- Biome --- #
 export BIOME_CONFIG_PATH="${XDG_CONFIG_HOME}/biome.json"
 export BIOME_BINARY="$(command -v biome)"
 
-# ---- Browser ---- #
+# --- Browser --- #
 export BROWSER="zen-browser"
 
 # --- Ruby Bundle --- #
@@ -73,24 +73,24 @@ export BUNDLE_USER_CONFIG="${XDG_CONFIG_HOME}/bundle"
 export BUNDLE_USER_CACHE="${XDG_CACHE_HOME}/bundle"
 export BUNDLE_USER_PLUGIN="${XDG_DATA_HOME}/bundle"
 
-# ---- Cargo ---- #
+# --- Cargo --- #
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 
-# ---- Chassis ---- #
+# --- Chassis --- #
 export DEVICE="$(hostnamectl chassis)"
 
 # --- Chrome --- #
 export CHROME_EXECUTABLE="/usr/bin/thorium-browser"
 
-# ---- Cuda ---- #
+# --- Cuda --- #
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
 
-# ---- Cursor ---- #
+# --- Cursor --- #
 export XCURSOR_PATH="/usr/share/icons:${XDG_DATA_HOME}/icons"
 export XCURSOR_THEME="Bibata-Modern-Ice"
 export XCURSOR_SIZE="26"
 
-# ---- Colors ---- #
+# --- Colors --- #
 export U_BLACK="#14141E"
 export U_RED="#F7768E"
 export U_GREEN="#35BF88"
@@ -103,22 +103,22 @@ export U_GRAY="#B5BCC9"
 export U_ORANGE="#EFCA84"
 export U_PURPLE="#7AA2F7"
 
-# ---- Docker ---- #
+# --- Docker --- #
 export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
 
-# ---- Dotnet ---- #
+# --- Dotnet --- #
 export DOTNET_CLI_HOME="${XDG_DATA_HOME}/dotnet"
 
-# ---- Doas ---- #
+# --- Doas --- #
 export DOAS_NOPASS="${XDG_CONFIG_HOME}/doas/doas.conf"
 
-# ---- Deno ---- #
+# --- Deno --- #
 export DENO_UNSTABLE_SLOPPY_IMPORTS="true"
 
-#---- Editor ---- #
+#---- Editor --- #
 export EDITOR="hx" # helix
 
-# ---- FZF ----- #
+# --- FZF ---- #
 show_file_or_dir_preview="if [[ -d {} ]]; then eza --all --tree --color=always {} | head -200; elif [[ {} =~ \.(md|markdown)$ ]]; then mdcat {}; else bat --color=always --line-range :500 {}; fi"
 
 # Use fd instead of fzf
@@ -133,49 +133,49 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 export FZF_CTRL_T_OPTS="--preview '${show_file_or_dir_preview}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
-# ---- Gnupg ---- #
+# --- Gnupg --- #
 export GNUPGHOME="${HOME}/.gnupg"
 export GPG_TTY="$(tty)"
 
-# ---- Go ---- #
+# --- Go --- #
 export GOPATH="${XDG_DATA_HOME}/go"
 
-# ---- Gtk-2 ---- #
+# --- Gtk-2 --- #
 export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc"
 
 # --- Gradle --- #
 export GRADLE_USER_HOME="/mnt/main/gradle"
 
-# ---- Gum ---- #
-# ---- Filter ---- #
+# --- Gum --- #
+# --- Filter --- #
 export GUM_FILTER_PROMPT="❯ "
 export GUM_FILTER_INDICATOR_FOREGROUND="${U_CYAN}"
 export GUM_FILTER_MATCH_FOREGROUND="${U_CYAN}"
 export GUM_FILTER_PROMPT_FOREGROUND="${U_CYAN}"
 export GUM_FILTER_HEADER_FOREGROUND="${U_BLUE}"
-#---- Choose ---- #
+#---- Choose --- #
 export GUM_CONFIRM_PROMPT_FOREGROUND="${U_PURPLE}"
 export GUM_CONFIRM_SELECTED_FOREGROUND="${U_BLACK}"
 export GUM_CONFIRM_SELECTED_BACKGROUND="${U_PURPLE}"
 export GUM_CHOOSE_UNSELECTED_PREFIX="󰄱 "
 export GUM_CHOOSE_CURSOR_PREFIX="󰄱 "
 export GUM_CHOOSE_SELECTED_PREFIX="󰄲 "
-#---- Choose ---- #
+#---- Choose --- #
 export GUM_CHOOSE_CURSOR="❯ "
 export GUM_CHOOSE_CURSOR_FOREGROUND="${U_CYAN}"
 export GUM_CHOOSE_SELECTED_FOREGROUND="${U_CYAN}"
 export GUM_CHOOSE_HEADER_FOREGROUND="${U_BLUE}"
-#---- Input ---- #
+#---- Input --- #
 export GUM_INPUT_PROMPT="❯ "
 export GUM_INPUT_PROMPT_FOREGROUND="${U_CYAN}"
 export GUM_INPUT_HEADER_FOREGROUND="${U_GRAY}"
 export GUM_INPUT_CURSOR_FOREGROUND="${U_CYAN}"
-#---- Spinner ---- #
+#---- Spinner --- #
 export GUM_SPIN_SPINNER_FOREGROUND="${U_GREEN}"
 export GUM_SPIN_TITLE_FOREGROUND="${U_GREEN}"
-#---- Write ---- #
+#---- Write --- #
 export GUM_WRITE_CURSOR_FOREGROUND="${U_GRAY}"
-#---- File ---- #
+#---- File --- #
 export GUM_FILE_CURSOR="❯ "
 export GUM_FILE_HEIGHT=20
 export GUM_FILE_SYMLINK_FOREGROUND="${U_GREEN}"
@@ -184,55 +184,55 @@ export GUM_FILE_CURSOR_FOREGROUND="${U_ORANGE}"
 export GUM_FILE_SELECTED_FOREGROUND="${U_ORANGE}"
 export GUM_FILE_HEADER_FOREGROUND="${U_CYAN}"
 
-# ---- History ----- #
+# --- History ---- #
 export HISTSIZE=999999
 export SAVEHIST=${HISTSIZE}
 export HISTDUP=erase
 export HISTCONTROL="ignoreboth"
 
-# ---- Libvirt ---- #
+# --- Libvirt --- #
 export LIBVIRT_DEFAULT_URI='qemu:///system'
 
-# ---- Man ---- #
+# --- Man --- #
 export MANROFFOPT="-c"
 export MANPAGER="sh -c 'col -bx | bat --paging=always --language=man -p'"
 export LESS_TERMCAP_md=$'\e[01;32m' # Green for bold
 export LESS_TERMCAP_me=$'\e[0m'
 
-# ---- Mplayer ---- #
+# --- Mplayer --- #
 export MPLAYER_HOME="${XDG_CONFIG_HOME}/mplayer"
 
-# ---- Micro ---- #
+# --- Micro --- #
 export MICRO_TRUECOLOR=1
 
-# ---- Misc ---- #
+# --- Misc --- #
 export AUTHOR="Ahmad Othman"
 export AUTHOR_EMAIL="ahmad.ali.othman@outlook.com"
 
-# ---- Node ---- #
+# --- Node --- #
 export NODE_REPL_HISTORY="${XDG_DATA_HOME}/node_repl_history"
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}"/npm/npmrc
 # DEPRECATED: export NODE_PACKAGE_MANAGER="pnpm"
 
-# ---- Nuget ---- #
+# --- Nuget --- #
 export NUGET_PACKAGES="${XDG_CACHE_HOME}/NuGetPackages"
 
-# ---- NVM ---- #
+# --- NVM --- #
 export NVM_DIR="${XDG_DATA_HOME}/nvm"
 
-# ---- NU Shell ---- #
+# --- NU Shell --- #
 export NU_CONFIG="${XDG_CONFIG_HOME}/nushell/config.nu"
 
-# ---- Parallel ---- #
+# --- Parallel --- #
 export PARALLEL_HOME="${XDG_CONFIG_HOME}/parallel"
 
-# ---- Pass ---- #
+# --- Pass --- #
 export PASSWORD_STORE_DIR="${HOME}/.password-store"
 
-# ---- PHP Codesniffer ---- #
+# --- PHP Codesniffer --- #
 export PHPCS_CONFIG_PATH="${XDG_CONFIG_HOME}/php-codesniffer/ruleset.xml"
 
-# ---- Pnpm ---- #
+# --- Pnpm --- #
 if [[ "${DEVICE}" == "laptop" ]]; then
   pnpmHome="${XDG_DATA_HOME}/pnpm"
 else
@@ -241,65 +241,63 @@ fi
 
 export PNPM_HOME="${pnpmHome}"
 
-# ---- Python ---- #
+# --- Python --- #
 export PYTHONSTARTUP="${HOME}/python/pythonrc"
 
-# ---- Prettier ---- #
+# --- Prettier --- #
 export PRETTIERRC="${XDG_CONFIG_HOME}/.prettierrc.json"
 
 # --- Flutter packages --- #
 export PUB_CACHE="/mnt/main/pub-cache"
 
-# ---- Rustup ---- #
+# --- Rustup --- #
 export RUSTUP_HOME="${XDG_DATA_HOME}/rustup"
 
-# ---- Scripts ---- #
-export SCRIPTS_DIR="${HOME}/scripts"
+# --- Sudo --- #
+export SUDO_ASKPASS="$(get-askpass)"
 
-# ---- Starship ---- #
+# --- Starship --- #
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship.toml"
 
 # --- Sqlite --- #
 export SQLITE_HISTORY="${XDG_CACHE_HOME}/sqlite_history"
 
-# ---- Terminal ---- #
+# --- Terminal --- #
 export TERMINAL="kitty"
 export TERM="xterm-256color"
 export COLORTERM="truecolor"
 
-# ---- Texfm ---- #
+# --- Texfm --- #
 export TEXMFVAR="${XDG_CACHE_HOME}/texlive/texmf-var"
 
 # --- Wget --- #
 export WGETRC="${XDG_CONFIG_HOME}/wgetrc"
 
-# ---- w3m ---- #
+# --- w3m --- #
 export W3M_DIR="${XDG_DATA_HOME}/w3m"
 
 # --- Webkit --- #
-export __EGL_VENDOR_LIBRARY_FILENAMES="/usr/share/glvnd/egl_vendor.d/10_nvidia.json"
+# export __EGL_VENDOR_LIBRARY_FILENAMES="/usr/share/glvnd/egl_vendor.d/10_nvidia.json"
 # Enable as needed
 # export WEBVIEW_FORCE_EGL=1
 # export WEBKIT_DISABLE_DMABUF_RENDERER=1
 
-# ---- X11 ---- #
+# --- X11 --- #
 export XINITRC="${XDG_CONFIG_HOME}/X11/.Xinitrc"
 
-# ---- YouShouldUse utility ---- #
+# --- YouShouldUse utility --- #
 export YSU_MESSAGE_POSITION="after"
 
-# ---- Zinit ----- #
+# --- Zinit ---- #
 # Set the directory we want to store zinit and plugins
 export ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-# ---- Zsh ---- #
+# --- Zsh --- #
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 export ZSHRC="${ZDOTDIR}/.zshrc"
 
-# ---- PATH ---- #
-export PATH="${PATH}:${SCRIPTS_DIR}"                  # my custom scripts
-PATH="${PATH}:${HOME}/.local/bin"                     # my custom scripts (alternative)
-PATH="${PATH}:${PNPM_HOME}"                           # PNPM Home folder
+# --- PATH --- #
+export PATH="${PATH}:${PNPM_HOME}"                           # PNPM Home folder
 PATH="${PATH}:${HOME}/.spicetify"                     # spicetify for spotify mods
 PATH="${PATH}:${BUN_INSTALL}/bin"                     # Bun js runtime
 PATH="${PATH}:${XDG_CONFIG_HOME}/composer/vendor/bin" # Composer packages
@@ -335,6 +333,3 @@ if [[ -d "${SCRIPTS_DIR}" ]]; then
     fi
   done
 fi
-
-# ---- Sudo ---- #
-export SUDO_ASKPASS="$(get-askpass)"
