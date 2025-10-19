@@ -1,9 +1,6 @@
 # shellcheck disable=SC1090,SC1091,SC2001,SC2002,SC2016,SC2034,SC2086,SC2153,SC2154,SC2155,SC2181,SC2206,SC2230,SC2250,SC2296,SC2312
 
-# ---- Zsh config directory ---- #
-export ZDOTDIR="$HOME/.config/zsh"
-
-# Load modules safely
+# --- Load modules safely --- #
 config_files=(
   "$ZDOTDIR/variables.sh"
   "$ZDOTDIR/functions.sh"
