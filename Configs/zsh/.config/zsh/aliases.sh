@@ -10,7 +10,7 @@ alias pwdcp='clipcopy ${PWD}'
 alias python="python3"
 alias pip="pip3"
 alias getgpu="lspci -k -d ::03xx"
-alias path='echo "${PATH}" | tr ":" "\n"'
+alias path='echo "${PATH}" | tr ":" "\n" | sed "s|$HOME|~|g"'
 
 # ---- Bat (better cat) ----- #
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain --color=auto'
