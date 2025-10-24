@@ -171,6 +171,34 @@ touch() {
   done
 }
 
+bat() {
+  local -a flags
+  local lines=$((0)) count
+
+  builtin cd "${PWD}" || return 1
+
+  flags+=(
+    --paging=auto
+    --style=plain
+    --color=auto
+  )
+
+  for arg in "$@"; do
+    if [[ -f "${arg}" ]]; then
+      count=$(wc -l "${arg}" | awk '{print $1}')
+      lines=$((lines + count))
+    fi
+  done
+
+  ((lines *= 100))
+  local limit
+  limit=$(((COLUMNS / 2) * 100))
+
+  ((lines > limit)) && flags+=(--pager=builtin)
+
+  command bat "${flags[@]}" "$@"
+}
+
 # Runs before any command
 # precmd() { }
 

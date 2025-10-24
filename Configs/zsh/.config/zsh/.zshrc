@@ -115,9 +115,6 @@ source "$CARGO_HOME/env" &>/dev/null
 # ---- FZF ----- #
 source <(fzf --zsh)
 
-# ---- The fuck alias ----- #
-eval "$(thefuck --alias)"
-
 # ---- Zoxide (better cd) ---- #
 eval "$(zoxide init zsh)"
 

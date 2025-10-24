@@ -14,7 +14,7 @@ alias path='echo "${PATH}" | tr ":" "\n" | sed "s|$HOME|~|g"'
 
 # ---- Bat (better cat) ----- #
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain --color=auto'
-alias cat="bat --pager never --style=plain --color=auto"
+alias cat="command bat --paging=never --style=plain --color=auto"
 
 # ---- Zoxide (better cd) ----- #
 alias cd="z"
@@ -143,7 +143,7 @@ if command -v mask &>/dev/null; then
 fi
 
 # --- diff --- #
-alias diff='diff -u --color=auto'
+alias diff='diff -u --color=auto || true'
 
 # --- type --- #
 alias type='type -a'
