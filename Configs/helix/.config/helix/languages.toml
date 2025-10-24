@@ -103,7 +103,7 @@ formatter = { command = "biome", args = [
   "check",
   "--fix",
   "--config-path",
-  "/home/othman/.config/biome.json",
+  "/home/othman/.config/biome/biome.json",
   "--stdin-file-path=file.ts",
 ] }
 language-servers = [
@@ -124,7 +124,7 @@ formatter = { command = "biome", args = [
   "check",
   "--fix",
   "--config-path",
-  "/home/othman/.config/biome.json",
+  "/home/othman/.config/biome/biome.json",
   "--stdin-file-path=file.js",
 ] }
 language-servers = [
@@ -146,7 +146,7 @@ formatter = { command = "biome", args = [
   "check",
   "--fix",
   "--config-path",
-  "/home/othman/.config/biome.json",
+  "/home/othman/.config/biome/biome.json",
   "--stdin-file-path=file.jsx",
 ] }
 language-servers = [
@@ -169,7 +169,7 @@ formatter = { command = "biome", args = [
   "check",
   "--fix",
   "--config-path",
-  "/home/othman/.config/biome.json",
+  "/home/othman/.config/biome/biome.json",
   "--stdin-file-path=file.tsx",
 ] }
 language-servers = [
