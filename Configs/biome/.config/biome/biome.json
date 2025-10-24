@@ -78,7 +78,8 @@
         "useConst": "error",
         "useSingleVarDeclarator": {
           "fix": "safe",
-          "level": "error"
+          "level": "error",
+          "options": {}
         },
         "noUnusedTemplateLiteral": "error",
         "useNumberNamespace": "error",
@@ -86,7 +87,8 @@
         "useExponentiationOperator": "error",
         "useTemplate": {
           "fix": "safe",
-          "level": "warn"
+          "level": "warn",
+          "options": {}
         },
         "useDefaultParameterLast": "error",
         "useImportType": "error",
@@ -95,14 +97,16 @@
         "useShorthandFunctionType": "error",
         "useNodejsImportProtocol": {
           "fix": "safe",
-          "level": "error"
+          "level": "error",
+          "options": {}
         },
         "noEnum": "warn",
         "noExportedImports": "on",
         "useArrayLiterals": "info",
         "useAtIndex": {
           "level": "info",
-          "fix": "safe"
+          "fix": "safe",
+          "options": {}
         },
         "useConsistentArrayType": "info",
         "useFilenamingConvention": "info",
@@ -147,7 +151,8 @@
         "noUnusedFunctionParameters": "warn",
         "noUnusedImports": {
           "fix": "safe",
-          "level": "warn"
+          "level": "warn",
+          "options": {}
         },
         "noUnusedVariables": "warn",
         "noConstAssign": "error",
@@ -183,7 +188,8 @@
         "noStaticOnlyClass": "off",
         "noThisInStatic": {
           "fix": "safe",
-          "level": "warn"
+          "level": "warn",
+          "options": {}
         },
         "noForEach": "warn",
         "noUselessContinue": "info",
@@ -223,6 +229,7 @@
         "noRedundantUseStrict": "on",
         "noSelfCompare": "on",
         "noSuspiciousSemicolonInJsx": "on",
+        "noUnknownAtRules": "off",
         "noTemplateCurlyInString": "on",
         "noVar": "on",
         "useAwait": "warn",
@@ -310,7 +317,17 @@
       "lineEnding": "lf",
       "bracketSameLine": false,
       "selfCloseVoidElements": "always"
-    }
+    },
+    "assist": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true
+    },
+    "parser": {
+      "interpolation": true
+    },
+    "experimentalFullSupportEnabled": true
   },
   "css": {
     "assist": {
@@ -325,6 +342,9 @@
     },
     "linter": {
       "enabled": true
+    },
+    "parser": {
+      "tailwindDirectives": true
     }
   },
   "graphql": {
