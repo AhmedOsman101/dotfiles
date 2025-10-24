@@ -52,7 +52,7 @@ export BATDIFF_USE_DELTA=true
 export BUN_INSTALL="${XDG_DATA_HOME}/bun"
 
 # --- Biome --- #
-export BIOME_CONFIG_PATH="${XDG_CONFIG_HOME}/biome.json"
+export BIOME_CONFIG_PATH="${XDG_CONFIG_HOME}/biome/biome.json"
 export BIOME_BINARY="$(command -v biome 2>/dev/null)"
 
 # --- Browser --- #
@@ -218,7 +218,7 @@ export AUTHOR_EMAIL="ahmad.ali.othman@outlook.com"
 # --- Node --- #
 export NODE_REPL_HISTORY="${XDG_DATA_HOME}/node_repl_history"
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}"/npm/npmrc
-# DEPRECATED: export NODE_PACKAGE_MANAGER="pnpm"
+export NODE_PACKAGE_MANAGER="pnpm"
 
 # --- Nuget --- #
 export NUGET_PACKAGES="${XDG_CACHE_HOME}/NuGetPackages"

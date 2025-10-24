@@ -1,11 +1,9 @@
 {
-  "root": true,
   "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json/",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
-    "useIgnoreFile": true,
-    "defaultBranch": "main"
+    "useIgnoreFile": true
   },
   "files": {
     "ignoreUnknown": true,
@@ -24,20 +22,20 @@
       "**/*.gql",
       "**/*.graphqls",
       "**/*.gqls",
-      "!**/node_modules/**",
-      "!**/prisma/**",
-      "!**/public/**",
-      "!**/dist/**",
-      "!**/build/**",
-      "!**/.git/**",
+      "!**/node_modules",
+      "!**/prisma",
+      "!**/public",
+      "!**/dist",
+      "!**/build",
+      "!**/.git",
       "!**/*.vue",
       "!**/*.svelte",
       "!**/fresh.gen.ts",
       "!**/routeTree.gen.ts",
-      "!**/.next/**",
-      "!**/.nuxt/**",
-      "!**/.obsidian/**",
-      "!**/vendor/**"
+      "!**/.next",
+      "!**/.nuxt",
+      "!**/.obsidian",
+      "!**/vendor"
     ]
   },
   "assist": {
@@ -119,7 +117,10 @@
                 "selector": {
                   "kind": "objectLiteralMember"
                 },
-                "formats": ["camelCase", "PascalCase"],
+                "formats": [
+                  "camelCase",
+                  "PascalCase"
+                ],
                 "match": "[a-zA-Z$_][a-zA-Z0-9_]*"
               }
             ]
@@ -225,7 +226,11 @@
           "fix": "safe",
           "level": "warn",
           "options": {
-            "attributes": ["classList", "class", "className"]
+            "attributes": [
+              "classList",
+              "class",
+              "className"
+            ]
           }
         },
         "noAwaitInLoop": "info",
@@ -284,7 +289,9 @@
     "parser": {
       "unsafeParameterDecoratorsEnabled": true
     },
-    "globals": ["Deno"]
+    "globals": [
+      "Deno"
+    ]
   },
   "json": {
     "formatter": {
