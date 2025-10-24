@@ -233,7 +233,8 @@
   },
   "[css]": {
     "editor.suggest.insertMode": "replace",
-    "cSpell.fixSpellingWithRenameProvider": false
+    "cSpell.fixSpellingWithRenameProvider": false,
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "files.associations": {
     "*.css": "css",

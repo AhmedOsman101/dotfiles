@@ -26,6 +26,7 @@ atomicparsley
 atril
 atuin
 audiorelay
+audiotube
 awk-language-server
 awk-language-server-debug
 axel
@@ -42,6 +43,7 @@ bluez
 bluez-utils
 blurhash-cli
 bottles
+boxbuddy
 bridge-utils
 bruno-bin
 btop
@@ -58,6 +60,7 @@ composer
 converseen
 copyq
 cowsay
+croc
 cronie
 cups
 cups-filters
@@ -79,6 +82,7 @@ dysk
 ed
 emmet-language-server
 entr
+errands
 evince
 exfatprogs
 eza
@@ -93,6 +97,7 @@ flameshot
 flatpak
 fmt
 freedownloadmanager
+frog-ocr
 frogmouth
 fwupd
 fzf
@@ -182,6 +187,7 @@ libva-nvidia-driver
 linux-firmware
 linux-lts
 linux-lts-headers
+llvm
 localsend
 love
 lua-language-server
@@ -258,6 +264,7 @@ podman-docker
 prettier
 pv
 python-beautifulsoup4
+python-faker
 python-lxml
 python-pylsp-rope
 qalculate-gtk
@@ -301,7 +308,6 @@ teamviewer
 terminus-font
 tesseract-data-eng
 testdisk
-thefuck
 thorium-browser-bin
 time
 timeshift
