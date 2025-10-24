@@ -109,23 +109,22 @@ export DOAS_NOPASS="${XDG_CONFIG_HOME}/doas/doas.conf"
 export DENO_UNSTABLE_SLOPPY_IMPORTS="true"
 
 # --- FZF ---- #
-# show_file_or_dir_preview="if [[ -d {} ]]; then eza --all --tree --color=always {} | head -200; elif [[ {} =~ \.(md|markdown)$ ]]; then mdcat {}; else bat --color=always --line-range :500 {}; fi"
 show_file_or_dir_preview="$(
   cat <<'EOF'
 if [[ -d {} ]]; then
   eza --all --tree --color=auto --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor" {} | head -n 200
 elif [[ {} =~ \.(md|markdown)$ ]]; then
-  if command -v mdcat 2>/dev/null;
+  if command -v mdcat 2>/dev/null; then
     mdcat {}
-  elif command -v glow 2>/dev/null;
+  elif command -v glow 2>/dev/null; then
     glow {}
-  elif command -v bat 2>/dev/null;
+  elif command -v bat 2>/dev/null; then
     bat --color=always --line-range :500 {}
   else
     cat {} | head -n 500
   fi
 else
-  if command -v bat 2>/dev/null;
+  if command -v bat 2>/dev/null; then
     bat --color=always --line-range :500 {} || file {}
   else
     cat {} | head -n 500
