@@ -1,6 +1,6 @@
 {
   "root": true,
-  "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json/",
+  "$schema": "https://biomejs.dev/schemas/2.3.0/schema.json/",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -118,10 +118,7 @@
                 "selector": {
                   "kind": "objectLiteralMember"
                 },
-                "formats": [
-                  "camelCase",
-                  "PascalCase"
-                ],
+                "formats": ["camelCase", "PascalCase"],
                 "match": "[a-zA-Z$_][a-zA-Z0-9_]*"
               }
             ]
@@ -129,7 +126,18 @@
         },
         "useShorthandAssign": "info",
         "useThrowOnlyError": "on",
-        "useTrimStartEnd": "on"
+        "useTrimStartEnd": "on",
+        "useConsistentObjectDefinitions": {
+          "level": "warn",
+          "options": {
+            "syntax": "shorthand"
+          }
+        },
+        "useGroupedAccessorPairs": "info",
+        "useExportsLast": "off",
+        "useNumericSeparators": "info",
+        "useObjectSpread": "off",
+        "useSymbolDescription": "warn"
       },
       "a11y": {
         "useButtonType": "off",
@@ -162,7 +170,10 @@
         "useJsxKeyInIterable": "warn",
         "useValidTypeof": "error",
         "useYield": "warn",
-        "useValidForDirection": "info"
+        "useValidForDirection": "info",
+        "noNestedComponentDefinitions": "info",
+        "useJsonImportAttributes": "warn",
+        "useSingleJsDocAsterisk": "on"
       },
       "complexity": {
         "noUselessCatch": "warn",
@@ -182,7 +193,8 @@
         "noEmptyTypeParameters": "on",
         "noUselessTernary": "info",
         "noUselessUndefinedInitialization": "info",
-        "useWhile": "info"
+        "useWhile": "info",
+        "useIndexOf": "warn"
       },
       "suspicious": {
         "noImplicitAnyLet": "warn",
@@ -219,47 +231,27 @@
         "useGetterReturn": "on",
         "useIsArray": "error",
         "useNumberToFixedDigitsArgument": "info",
-        "useStrictMode": "info"
+        "useStrictMode": "info",
+        "noBitwiseOperators": "off",
+        "noConstantBinaryExpressions": "info",
+        "noTsIgnore": "on",
+        "noUselessEscapeInString": "warn",
+        "useStaticResponseMethods": "on"
       },
       "nursery": {
-        "noBitwiseOperators": "off",
         "useSortedClasses": {
           "fix": "safe",
           "level": "warn",
           "options": {
-            "attributes": [
-              "classList",
-              "class",
-              "className"
-            ]
+            "attributes": ["classList", "class", "className"]
           }
         },
-        "noAwaitInLoop": "info",
-        "noConstantBinaryExpression": "info",
         "noFloatingPromises": "warn",
         "noImportCycles": "error",
-        "noTsIgnore": "on",
-        "useConsistentObjectDefinition": {
-          "level": "warn",
-          "options": {
-            "syntax": "shorthand"
-          }
-        },
-        "noNestedComponentDefinitions": "info",
         "noShadow": "on",
         "noUnresolvedImports": "off",
-        "noUselessEscapeInString": "warn",
         "noUselessUndefined": "on",
-        "useAdjacentGetterSetter": "info",
-        "useConsistentResponse": "on",
-        "useExhaustiveSwitchCases": "on",
-        "useExportsLast": "off",
-        "useIndexOf": "warn",
-        "useJsonImportAttribute": "warn",
-        "useNumericSeparators": "info",
-        "useObjectSpread": "off",
-        "useSingleJsDocAsterisk": "on",
-        "useSymbolDescription": "warn"
+        "useExhaustiveSwitchCases": "on"
       },
       "security": {
         "noBlankTarget": {
@@ -290,9 +282,7 @@
     "parser": {
       "unsafeParameterDecoratorsEnabled": true
     },
-    "globals": [
-      "Deno"
-    ]
+    "globals": ["Deno"]
   },
   "json": {
     "formatter": {
