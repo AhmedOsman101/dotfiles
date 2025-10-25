@@ -4,9 +4,9 @@
     "disable-desktop-filters": false,
     "grab-mouse-pointer": false,
     "hotkey-show-app": "<Alt>space",
-    "render-on-screen": "mouse-pointer-monitor",
+    "render-on-screen": "default-monitor",
     "show-indicator-icon": true,
     "show-recent-apps": "5",
     "terminal-command": "kitty -e",
-    "theme-name": "Catppuccin-Mocha-Blue"
+    "theme-name": "Monochrome"
 }
