@@ -1091,5 +1091,6 @@
   "npm-intellisense.importES6": true,
   "npm-intellisense.importQuotes": "\"",
   "npm-intellisense.importLinebreak": ";\n",
-  "npm-intellisense.importDeclarationType": "const"
+  "npm-intellisense.importDeclarationType": "const",
+  "workbench.secondarySideBar.defaultVisibility": "hidden"
 }
