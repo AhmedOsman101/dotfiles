@@ -20,7 +20,7 @@ configuration {
 /*****----- Global Properties -----*****/
 
 * {
-    font: "Iosevka 10";
+    font: "JetBrainsMonoNF Nerd Font 10";
     background:     #1E2128;
     background-alt: #292d37;
     foreground:     #ABB2BF;
