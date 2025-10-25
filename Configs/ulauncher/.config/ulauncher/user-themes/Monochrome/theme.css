@@ -1,0 +1,88 @@
+/** biome-ignore-all lint/suspicious/noUnknownAtRules: Ulauncher theme */
+/** biome-ignore-all lint/correctness/noUnknownFunction: Ulauncher theme */
+/** biome-ignore-all lint/correctness/noUnknownPseudoClass: Ulauncher theme */
+/* Monochrome colors */
+
+@define-color backgroundColor #0a0f14;
+@define-color accentColor #2b4d73;
+@define-color textColor #dbe9f4;
+@define-color subTextColor #7aa2d6;
+
+
+/* * {
+  --backgroundColor: #0a0f14;
+  --accentColor: #3a6ea5;
+  --textColor: #dbe9f4;
+  --subTextColor: #9dbbd9;
+
+  --backgroundColor: #0a0f14;
+  --accentColor: #2b4d73;
+  --textColor: #ffffff;
+  --subTextColor: #7aa2d6;
+} */
+
+
+
+.app {
+  background-color: @backgroundColor;
+  border-color: @accentColor;
+  border-radius: 14px;
+}
+
+.input {
+  /* color: @accentColor; */
+  color: @textColor;
+}
+
+.input *:selected,
+.input *:focus,
+*:selected:focus {
+  background-color: alpha(@accentColor, 0.4);
+  color: @textColor;
+}
+
+.item-text {
+  /* color: @textColor; */
+  color: @subTextColor; /* matched text */
+}
+
+.item-name {
+  color: @textColor;
+  font-size: 1.2rem;
+}
+
+.selected.item-box {
+  background-color: alpha(@accentColor, 0.3);
+  border-radius: 14px;
+}
+
+.selected.item-box .item-text {
+  color: @textColor;
+}
+
+.selected.item-box .item-name {
+  color: @textColor;
+  font-size: 1.2rem;
+}
+
+.item-shortcut {
+  /* color: @accentColor; */
+  color: @subTextColor;
+}
+
+.selected.item-box .item-shortcut {
+  color: @accentColor;
+  font-size: 1.1rem;
+}
+
+.selected.item-box {
+  color: @accentColor;
+}
+
+.prefs-btn {
+  opacity: 1;
+}
+
+.prefs-btn:hover {
+  background-color: alpha(@accentColor, 1);
+}
