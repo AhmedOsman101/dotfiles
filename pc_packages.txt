@@ -56,6 +56,7 @@ chaotic-keyring
 chaotic-mirrorlist
 cherry-studio-bin
 clang
+cmake
 composer
 converseen
 copyq
@@ -138,6 +139,7 @@ htop
 hyperfine
 hyperv
 inetutils
+inkscape
 inotify-tools
 intel-ucode
 inxi
@@ -154,9 +156,11 @@ kdialog
 keyd
 kitty
 kmag
+kolourpaint
 konsole
 kvantum
 kvantum-qt5
+kwin-effects-forceblur
 lazygit
 lib32-freetype2
 lib32-gamemode
