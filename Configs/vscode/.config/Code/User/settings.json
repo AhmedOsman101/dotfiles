@@ -1092,5 +1092,11 @@
   "npm-intellisense.importQuotes": "\"",
   "npm-intellisense.importLinebreak": ";\n",
   "npm-intellisense.importDeclarationType": "const",
-  "workbench.secondarySideBar.defaultVisibility": "hidden"
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "qt-core.additionalQtPaths": [
+    {
+      "name": "Qt-5.15.17-linux-g++_from_PATH",
+      "path": "/usr/bin/qtpaths"
+    }
+  ]
 }
