@@ -143,7 +143,7 @@ if command -v mask &>/dev/null; then
 fi
 
 # --- diff --- #
-alias diff='diff -u --color=auto || true'
+alias diff='diff -u --color=auto'
 
 # --- type --- #
 alias type='type -a'
