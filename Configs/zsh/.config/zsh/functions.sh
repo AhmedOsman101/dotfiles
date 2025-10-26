@@ -199,6 +199,20 @@ bat() {
   command bat "${flags[@]}" "$@"
 }
 
+vite() {
+  trap 'printf "\r"; log-info "Vite interrupted, started cleaning"' INT
+  command vite --config "${XDG_CONFIG_HOME}/vite/vite.config.js" "$@"
+  for arg in "$@"; do
+    if [[ -d "${arg}" && -d "${arg}/.vite" ]]; then
+      gum confirm "Remove .vite directory?" && rm -r "${arg}/.vite"
+      break
+    fi
+  done
+
+  eraseLine  # cleanup
+  trap - INT # restore default
+}
+
 # Runs before any command
 # precmd() { }
 
