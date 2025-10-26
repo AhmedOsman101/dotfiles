@@ -1098,5 +1098,6 @@
       "name": "Qt-5.15.17-linux-g++_from_PATH",
       "path": "/usr/bin/qtpaths"
     }
-  ]
+  ],
+  "editor.autoClosingBrackets": "always"
 }
