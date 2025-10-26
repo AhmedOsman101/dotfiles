@@ -25,7 +25,9 @@ language-servers = ["vscode-html-language-server", "superhtml", "emmet-lsp"]
 formatter = { command = "biome", args = [
   "check",
   "--fix",
-  "--stdin-file-path=file.json",
+  "--config-path",
+  "/home/othman/.config/biome/biome.json",
+  "--stdin-file-path=file.html",
 ] }
 
 
@@ -46,6 +48,8 @@ name = "json"
 formatter = { command = "biome", args = [
   "check",
   "--fix",
+  "--config-path",
+  "/home/othman/.config/biome/biome.json",
   "--stdin-file-path=file.json",
 ] }
 language-servers = [

@@ -316,7 +316,7 @@
       "indentWidth": 2,
       "lineEnding": "lf",
       "bracketSameLine": false,
-      "selfCloseVoidElements": "always"
+      "selfCloseVoidElements": "never"
     },
     "assist": {
       "enabled": true
