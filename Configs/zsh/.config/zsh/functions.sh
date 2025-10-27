@@ -199,6 +199,10 @@ bat() {
   command bat "${flags[@]}" "$@"
 }
 
+bathelp() {
+  command bat --language=help --pager=builtin --style=plain --color=auto "$@"
+}
+
 vite() {
   trap 'printf "\r"; log-info "Vite interrupted, started cleaning"' INT
   command vite --config "${XDG_CONFIG_HOME}/vite/vite.config.js" "$@"

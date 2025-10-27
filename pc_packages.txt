@@ -166,6 +166,7 @@ lib32-freetype2
 lib32-gamemode
 lib32-giflib
 lib32-gnutls
+lib32-libcanberra
 lib32-libpng
 lib32-mpg123
 lib32-nvidia-470xx-utils
@@ -194,6 +195,7 @@ linux-lts-headers
 llvm
 localsend
 love
+lttng-ust2.12
 lua-language-server
 lua-lgi
 luarocks
@@ -204,6 +206,7 @@ mailspring
 maim
 man-db
 man-pages
+mangayomi-bin
 mangohud
 mariadb
 markdown-oxide
@@ -253,6 +256,7 @@ php-redis
 php-sodium
 php-sqlite
 phpmyadmin
+pinta
 pipewire
 pipewire-alsa
 pipewire-jack
