@@ -200,7 +200,7 @@ bat() {
 }
 
 bathelp() {
-  command bat --language=help --pager=builtin --style=plain --color=auto "$@"
+  command bat --language=help --style=plain --color=auto "$@"
 }
 
 vite() {

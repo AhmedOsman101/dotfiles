@@ -13,7 +13,7 @@ alias getgpu="lspci -k -d ::03xx"
 alias path='echo "${PATH}" | tr ":" "\n" | sed "s|$HOME|~|g"'
 
 # ---- Bat (better cat) ----- #
-alias -g -- --help='--help 2>&1 | command bat --language=help --style=plain --color=auto --pager=builtin'
+alias -g -- --help='--help 2>&1 | command bat --language=help --style=plain --color=auto'
 alias cat="command bat --paging=never --style=plain --color=auto"
 
 # ---- Zoxide (better cd) ----- #

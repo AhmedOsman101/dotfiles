@@ -247,6 +247,7 @@ pamac
 paru
 paru-debug
 pass-import
+photocrea
 php-apache
 php-fpm
 php-gd
