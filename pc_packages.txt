@@ -210,6 +210,8 @@ mangayomi-bin
 mangohud
 mariadb
 markdown-oxide
+marp-bin
+marp-bin-debug
 mdcat
 meld
 memtest86+
@@ -238,6 +240,7 @@ obs-studio
 obsidian
 okular
 ollama
+onlyoffice-bin
 opendoas
 openssh
 os-prober
@@ -247,6 +250,7 @@ pamac
 paru
 paru-debug
 pass-import
+perl-graph-easy
 photocrea
 php-apache
 php-fpm
@@ -302,6 +306,7 @@ shellcheck
 shellharden
 shfmt
 shlorem
+slides
 smartmontools
 sof-firmware
 speedtest-cli
