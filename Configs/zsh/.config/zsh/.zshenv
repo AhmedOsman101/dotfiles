@@ -31,10 +31,10 @@ elif command -v vim &>/dev/null; then
   export EDITOR="vim"
 elif command -v nvim &>/dev/null; then
   export EDITOR="nvim"
-elif command -v micro &>/dev/null; then
-  export EDITOR="micro"
 elif command -v vi &>/dev/null; then
   export EDITOR="vi"
+elif command -v micro &>/dev/null; then
+  export EDITOR="micro"
 else
   export EDITOR="nano"
 fi
