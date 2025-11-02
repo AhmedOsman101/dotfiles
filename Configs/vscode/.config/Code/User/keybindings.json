@@ -6,7 +6,7 @@
   // },
   {
     "key": "ctrl+n",
-    "command": "extension.advancedNewFile",
+    "command": "extension.advancedNewFile"
   },
   {
     "key": "ctrl+g",
