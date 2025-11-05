@@ -2,23 +2,9 @@
     "com.github.ulauncher.ulauncher-emoji": {
         "id": "com.github.ulauncher.ulauncher-emoji",
         "url": "https://github.com/Ulauncher/ulauncher-emoji",
-        "updated_at": "2025-05-26T12:59:59.860932",
-        "last_commit": "827cfe5e1d2f89f742f811f981759787b0654fa9",
-        "last_commit_time": "2023-11-04T18:37:13"
-    },
-    "com.github.mikebarkmin.ulauncher-obsidian": {
-        "id": "com.github.mikebarkmin.ulauncher-obsidian",
-        "url": "https://github.com/mikebarkmin/ulauncher-obsidian",
-        "updated_at": "2025-05-26T13:04:29.318002",
-        "last_commit": "a419cdc5e73453e4b284bb4905448ca60e4a3864",
-        "last_commit_time": "2023-09-12T10:42:25"
-    },
-    "com.github.brpaz.ulauncher-devdocs": {
-        "id": "com.github.brpaz.ulauncher-devdocs",
-        "url": "https://github.com/brpaz/ulauncher-devdocs",
-        "updated_at": "2025-05-26T13:08:03.862946",
-        "last_commit": "491bb5a5ccef082c5f6623db5f5676a8ab481144",
-        "last_commit_time": "2022-04-03T10:50:15"
+        "updated_at": "2025-11-05T11:47:43.272492",
+        "last_commit": "195d167ea0cfdbb2169906b5acaac8097db84767",
+        "last_commit_time": "2025-10-05T04:07:23"
     },
     "com.github.pywkm.ulauncher-spotify": {
         "id": "com.github.pywkm.ulauncher-spotify",
@@ -33,13 +19,6 @@
         "updated_at": "2025-05-26T13:12:17.868838",
         "last_commit": "0ad36c00a888e687b4bfbf76f266f1000040b337",
         "last_commit_time": "2019-07-11T06:53:31"
-    },
-    "com.github.dhelmr.ulauncher-tldr": {
-        "id": "com.github.dhelmr.ulauncher-tldr",
-        "url": "https://github.com/dhelmr/ulauncher-tldr",
-        "updated_at": "2025-05-26T13:29:39.723576",
-        "last_commit": "2e5904451bf89dfa155280dfb6fa3d45ed4cab4c",
-        "last_commit_time": "2023-07-29T11:06:30"
     },
     "com.github.brpaz.ulauncher-awesomelists": {
         "id": "com.github.brpaz.ulauncher-awesomelists",

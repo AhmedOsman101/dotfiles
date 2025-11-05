@@ -72,7 +72,7 @@ dotfiles() {
 }
 
 help() {
-  bash -c "help $*" | bathelp -- --pager=none
+  bash -c "help $*" | bathelp --pager=none --
 }
 
 which() {
