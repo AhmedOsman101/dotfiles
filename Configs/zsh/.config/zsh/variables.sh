@@ -121,13 +121,13 @@ elif [[ {} =~ \.(md|markdown)$ ]]; then
   elif command -v bat 2>/dev/null; then
     bat --color=always --line-range :500 {}
   else
-    cat {} | head -n 500
+    head -n 500 {}
   fi
 else
   if command -v bat 2>/dev/null; then
     bat --color=always --line-range :500 {} || file {}
   else
-    cat {} | head -n 500
+    head -n 500 {}
   fi
 fi
 EOF
