@@ -372,3 +372,22 @@ indent = { tab-width = 2, unit = "  " }
 [[grammar]]
 name = "ini"
 source = { git = "https://github.com/justinmk/tree-sitter-ini", rev = "0eaed8040513e62ee2e9e8db9f086cf630a524eb" }
+
+# --- Vim script --- #
+[language-server.vim-language-server]
+command = "vim-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "vim"
+scope = "source.vim"
+injection-regex = "vim"
+file-types = ["vim", "vimrc", { glob = ".vimrc" }, { glob = "*.vim" }]
+comment-token = "\""
+language-servers = ["vim-language-server"]
+indent = { tab-width = 2, unit = "  " }
+
+
+[[grammar]]
+name = "vim"
+source = { git = "https://github.com/neovim/tree-sitter-vim", rev = "3dd4747082d1b717b8978211c06ef7b6cd16125b" }

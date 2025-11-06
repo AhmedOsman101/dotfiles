@@ -135,6 +135,7 @@ gvfs
 gvfs-mtp
 gvfs-smb
 helix
+helixbinhx
 htop
 hyperfine
 hyperv
@@ -175,8 +176,8 @@ lib32-pipewire
 lib32-pipewire-jack
 lib32-vkd3d
 lib32-vulkan-icd-loader
+libappindicator
 libappindicator-gtk2
-libappindicator-gtk3
 libc++
 libfido2
 libgphoto2
@@ -186,6 +187,7 @@ libpfm
 libpulse
 libqtxdg
 libreoffice-fresh
+libreoffice-fresh-ar
 libusb-compat
 libva-intel-driver
 libva-nvidia-driver
@@ -247,6 +249,8 @@ os-prober
 pacman-contrib
 pacui
 pamac
+pandoc-cli
+pandoc-crossref
 paru
 paru-debug
 pass-import
@@ -280,6 +284,7 @@ python-beautifulsoup4
 python-faker
 python-lxml
 python-pylsp-rope
+python-pyqt6
 qalculate-gtk
 qalculate-qt
 qmmp
@@ -322,6 +327,7 @@ teamviewer
 terminus-font
 tesseract-data-eng
 testdisk
+texlive-basic
 thorium-browser-bin
 time
 timeshift
@@ -346,6 +352,7 @@ valkey
 vhs
 vi
 vim
+vim-language-server
 vim-sxhkdrc-git
 virt-manager
 virtualbox
@@ -360,6 +367,7 @@ vscode-json-languageserver
 vue-language-server
 watchexec
 wavemon
+weylus-bin
 wget
 wine
 wine-gecko
@@ -382,10 +390,12 @@ xdg-desktop-portal-gtk4-git
 xdg-ninja
 xdg-utils
 xdotool
+xf86-video-dummy
 xorg-fonts-misc
 xorg-mkfontscale
 xorg-xev
 xorg-xinit
+xorg-xinput
 xorg-xkill
 xsel
 xterm

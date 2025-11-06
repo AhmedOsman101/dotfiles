@@ -87,11 +87,11 @@ gui:
   switchToFilesAfterStashApply: true
   switchTabsWithPanelJumpKeys: false
 git:
-  paging:
-    colorArg: always
-    pager: ""
-    useConfig: false
-    externalDiffCommand: ""
+  pagers:
+    - colorArg: always
+      pager: ""
+      useConfig: false
+      externalDiffCommand: ""
   commit:
     signOff: false
     autoWrapCommitMessage: true
@@ -233,7 +233,7 @@ keybinding:
     viewResetOptions: D
     fetch: f
     toggleTreeView: '`'
-    openMergeTool: M
+    openMergeOptions: M
     openStatusFilter: <c-b>
     copyFileInfoToClipboard: "y"
     collapseAll: '-'

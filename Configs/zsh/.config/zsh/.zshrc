@@ -52,6 +52,8 @@ zinit light-mode for \
   zdharma-continuum/zinit-annex-patch-dl \
   zdharma-continuum/zinit-annex-rust
 
+zinit light larkery/zsh-histdb
+
 ### End of Zinit's installer chunk
 
 # ---- Add in snippets ----- #
@@ -68,8 +70,6 @@ unsetopt nomatch
 setopt AUTO_CD  # Type directory name to cd into it
 
 # ---- History ----- #
-export HISTFILE="$HOME/.zsh_history"
-export HISTTIMEFORMAT="%F %T "
 setopt extended_history       # Enable timestamps in history
 setopt share_history          # Share history across shells
 setopt inc_append_history     # Add commands to history immediately
