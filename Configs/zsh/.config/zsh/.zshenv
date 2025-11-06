@@ -40,10 +40,16 @@ else
 fi
 
 # --- History --- #
+export HISTFILE="${HOME}/.zsh_history"
+export HISTTIMEFORMAT="%F %T "
 export HISTSIZE=999999
 export SAVEHIST=${HISTSIZE}
 export HISTDUP=erase
 export HISTCONTROL="ignoreboth"
+
+# ---- zsh-histdb setup ---- #
+export HISTDB_FILE="${HOME}/.histdb/zsh-history.db"
+export HISTDB_TABULATE_CMD=(column -t -s $'\x1f')
 
 # --- PATH --- #
 export PATH="${PATH}:${SCRIPTS_DIR}:${HOME}/.local/bin" # my custom scripts
