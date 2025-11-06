@@ -1,0 +1,12 @@
+[theme]
+name = "github-theme"
+
+[colors]
+AlertInfo  = "#35BF88"  # Light green for info alerts
+AlertWarn  = "#DBAC66"  # Yellow for warning alerts
+AlertError = "#F7768E"  # Red for error alerts
+Annotation = "#B5BCC9"  # Light gray for annotations
+Base       = "#B5BCC9"  # Light gray for base text
+Guidance   = "#7AA2F7"  # Soft blue for guidance text
+Important  = "#7DCFFF"  # Purple for important info
+Title      = "#4CA6E8"  # Dark blue for titles
