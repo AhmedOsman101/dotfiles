@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# shellcheck disable=2142
 
 # ---- Aliases ----- #
 alias zshrc='${EDITOR} ${ZSHRC}'
@@ -10,7 +11,7 @@ alias pwdcp='clipcopy ${PWD}'
 alias python="python3"
 alias pip="pip3"
 alias getgpu="lspci -k -d ::03xx"
-alias path='echo "${PATH}" | tr ":" "\n" | sed "s|$HOME|~|g"'
+alias path='printenv PATH | tr ":" "\n" | sed "s|$HOME|~|g" | no-dups | sort'
 
 # ---- Bat (better cat) ----- #
 alias -g -- --help='--help 2>&1 | command bat --language=help --style=plain --color=auto'
@@ -74,6 +75,7 @@ alias pscpu='n "ps | sort-by cpu -r | first 5"'
 
 #---- Git ---- #
 alias git-init='git init && git add -A && git commit -m "initial commit"'
+alias first-commit="git log --oneline | tail -1 | awk '{print \$1}'"
 
 # ---- Pacman ---- #
 # Resolve 'pacman in use' error
