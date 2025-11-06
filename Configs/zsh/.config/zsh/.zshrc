@@ -1,22 +1,22 @@
-# shellcheck disable=SC1090,SC1091,SC2001,SC2002,SC2016,SC2034,SC2086,SC2153,SC2154,SC2155,SC2181,SC2206,SC2230,SC2250,SC2296,SC2312
+# shellcheck disable=SC2016,SC2034
 
 # --- Load modules safely --- #
 config_files=(
-  "$ZDOTDIR/variables.sh"
-  "$ZDOTDIR/functions.sh"
-  "$ZDOTDIR/aliases.sh"
-  "$ZDOTDIR/keybinds.sh"
-  "$ZDOTDIR/secrets.sh"
+  "${ZDOTDIR}/variables.sh"
+  "${ZDOTDIR}/functions.sh"
+  "${ZDOTDIR}/aliases.sh"
+  "${ZDOTDIR}/keybinds.sh"
+  "${ZDOTDIR}/secrets.sh"
 )
 
 for file in "${config_files[@]}"; do
-  [[ -f "${file}" ]] && source "${file}"
+  [[ -s "${file}" ]] && source "${file}"
 done
 
 # ---- Zinit ----- #
 # ---- Download Zinit, if it's not there yet ----- #
-[[ ! -d "$ZINIT_HOME" ]] && mkdir -p "$(dirname "$ZINIT_HOME")"
-[[ ! -d "$ZINIT_HOME"/.git ]] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+[[ ! -d "${ZINIT_HOME}" ]] && mkdir -p "$(dirname "${ZINIT_HOME}")"
+[[ ! -d "${ZINIT_HOME}"/.git ]] && git clone https://github.com/zdharma-continuum/zinit.git "${ZINIT_HOME}"
 
 # ---- Source/Load zinit ----- #
 source "${ZINIT_HOME}/zinit.zsh"
@@ -43,6 +43,7 @@ zinit light zsh-users/zsh-completions
 # zinit light "marlonrichert/zsh-autocomplete"
 zinit light hlissner/zsh-autopair
 zinit light zsh-users/zsh-autosuggestions
+zinit light larkery/zsh-histdb
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
@@ -52,7 +53,6 @@ zinit light-mode for \
   zdharma-continuum/zinit-annex-patch-dl \
   zdharma-continuum/zinit-annex-rust
 
-zinit light larkery/zsh-histdb
 
 ### End of Zinit's installer chunk
 
@@ -97,20 +97,14 @@ autoload -Uz add-zsh-hook
 add-zsh-hook -Uz precmd rehash_precmd
 
 # ---- pnpm ---- #
-[[ ":$PATH:" != *":$PNPM_HOME:"* ]] && export PATH="$PNPM_HOME:$PATH"
+[[ ":${PATH}:" != *":${PNPM_HOME}:"* ]] && export PATH="${PNPM_HOME}:${PATH}"
 
 # ---- Atuin ---- #
-[[ ":$PATH:" != *":$HOME/.atuin/bin:"* ]] && export PATH="$HOME/.atuin/bin:$PATH"
+[[ ":${PATH}:" != *":${HOME}/.atuin/bin:"* ]] && export PATH="${HOME}/.atuin/bin:${PATH}"
 eval "$(atuin init zsh)"
 
-# ---- bun completions ---- #
-[[ -s "$BUN_INSTALL/_bun" ]] && source "$BUN_INSTALL/_bun"
-
-# ---- Asdf ---- #
-fpath=("${ASDF_DATA_DIR:-$HOME/.asdf}/completions" $fpath)
-
 # ---- Cargo ---- #
-source "$CARGO_HOME/env" &>/dev/null
+source "${CARGO_HOME}/env" &>/dev/null
 
 # ---- FZF ----- #
 source <(fzf --zsh)
@@ -129,7 +123,8 @@ zinit cdreplay -q
 # End of lines added by compinstall
 
 # ---- find the command plugin ---- #
-source /usr/share/doc/find-the-command/ftc.zsh noupdate
+ftc='/usr/share/doc/find-the-command/ftc.zsh'
+[[ -s "${ftc}" ]] && source "${ftc}" noupdate
 
 # ---- Enable better selection support ---- #
 autoload -Uz select-word-style
@@ -137,25 +132,26 @@ select-word-style bash
 
 # ---- region highlight style ---- #
 zstyle ':zle:*' region-highlight 'fg=none' 'bg=none'
-# bg=#7287FD66
 
 # ---- Curlie ---- #
-[[ -s "$HOME/.config/envman/load.sh" ]] && source "$HOME/.config/envman/load.sh"
+[[ -s "${HOME}/.config/envman/load.sh" ]] && source "${HOME}/.config/envman/load.sh"
 
-# ---- Deno ---- #
-# Add deno completions to search path
-if [[ ":$FPATH:" != *":$HOME/.config/zsh/completions:"* ]]; then
-  export FPATH="$HOME/.config/zsh/completions:$FPATH"
+# Add completions to search path
+if [[ ":${FPATH}:" != *":${HOME}/.config/zsh/completions:"* ]]; then
+  export FPATH="${HOME}/.config/zsh/completions:${FPATH}"
 fi
 
-. "$XDG_CACHE_HOME/deno/env"
+# ---- Deno ---- #
+[[ -s "${XDG_CACHE_HOME}/deno/env" ]] && . "${XDG_CACHE_HOME}/deno/env"
 
 # ---- uv ---- #
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
+if command -v uv &>/dev/null; then
+  eval "$(uv generate-shell-completion zsh)"
+  eval "$(uvx --generate-shell-completion zsh)"
+fi
 
 # ---- rtx (asdf clone) ---- #
-eval "$($HOME/.local/share/cargo/bin/rtx activate zsh)"
+[[ -s "${XDG_DATA_HOME}/cargo/bin/rtx" ]] && eval "$("${XDG_DATA_HOME}/cargo/bin/rtx" activate zsh)"
 
 # --- git aliases (override) --- #
 unalias g || true
