@@ -32,7 +32,7 @@ alias nano="micro"
 alias mc="micro"
 
 # ---- Ripgrep (better grep) ----- #
-alias grep="rg -iNL"
+alias grep="command rg -iNL"
 alias rg="rg -iNL"
 
 # ---- Lazygit ---- #
