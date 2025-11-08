@@ -86,6 +86,7 @@ entr
 errands
 evince
 exfatprogs
+exo
 eza
 fastfetch
 fatresize
@@ -243,6 +244,7 @@ obsidian
 okular
 ollama
 onlyoffice-bin
+openbsd-netcat
 opendoas
 openssh
 os-prober
@@ -301,6 +303,7 @@ reshade-shaders-git
 rmtrash
 rofi
 ruff
+runc
 samba
 sane
 scls
