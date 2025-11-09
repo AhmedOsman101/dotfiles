@@ -54,5 +54,19 @@
         "updated_at": "2025-05-26T14:57:49.202690",
         "last_commit": "e1a08166b0a393de914d32459c02103b325825dc",
         "last_commit_time": "2025-05-26T11:56:58"
+    },
+    "com.github.dhenriquearantes.ulauncher-string-utils": {
+        "id": "com.github.dhenriquearantes.ulauncher-string-utils",
+        "url": "https://github.com/dhenriquearantes/ulauncher-string-utils",
+        "updated_at": "2025-11-09T19:19:07.712870",
+        "last_commit": "96106a3533a099df4d5bbc567ec1871635204e58",
+        "last_commit_time": "2025-05-12T23:00:55"
+    },
+    "com.github.mikebarkmin.ulauncher-obsidian": {
+        "id": "com.github.mikebarkmin.ulauncher-obsidian",
+        "url": "https://github.com/mikebarkmin/ulauncher-obsidian",
+        "updated_at": "2025-11-09T19:21:04.063000",
+        "last_commit": "a419cdc5e73453e4b284bb4905448ca60e4a3864",
+        "last_commit_time": "2023-09-12T10:42:25"
     }
 }
