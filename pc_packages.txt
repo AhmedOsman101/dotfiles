@@ -370,7 +370,6 @@ vscode-json-languageserver
 vue-language-server
 watchexec
 wavemon
-weylus-bin
 wget
 wine
 wine-gecko
