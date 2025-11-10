@@ -248,6 +248,7 @@ openbsd-netcat
 opendoas
 openssh
 os-prober
+otf-font-awesome
 pacman-contrib
 pacui
 pamac
@@ -380,6 +381,7 @@ wireless_tools
 wireplumber
 wl-clipboard
 wmctrl
+woff2-font-awesome
 wpa_supplicant
 wrk
 x11-ssh-askpass
