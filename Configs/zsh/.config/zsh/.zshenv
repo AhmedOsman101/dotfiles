@@ -39,6 +39,15 @@ else
   export EDITOR="nano"
 fi
 
+# --- Browser --- #
+if command -v zen-browser &>/dev/null; then
+  export BROWSER="zen-browser"
+elif command -v thorium-browser &>/dev/null; then
+  export BROWSER="thorium-browser"
+elif command -v firefox &>/dev/null; then
+  export BROWSER="firefox"
+fi
+
 # --- History --- #
 export HISTFILE="${HOME}/.zsh_history"
 export HISTTIMEFORMAT="%F %T "
