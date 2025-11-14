@@ -55,15 +55,6 @@ export BUN_INSTALL="${XDG_DATA_HOME}/bun"
 export BIOME_CONFIG_PATH="${XDG_CONFIG_HOME}/biome/biome.json"
 export BIOME_BINARY="$(command -v biome 2>/dev/null)"
 
-# --- Browser --- #
-if command -v zen-browser &>/dev/null; then
-  export BROWSER="zen-browser"
-elif command -v thorium-browser &>/dev/null; then
-  export BROWSER="thorium-browser"
-elif command -v firefox &>/dev/null; then
-  export BROWSER="firefox"
-fi
-
 # --- Ruby Bundle --- #
 export BUNDLE_USER_CONFIG="${XDG_CONFIG_HOME}/bundle"
 export BUNDLE_USER_CACHE="${XDG_CACHE_HOME}/bundle"
