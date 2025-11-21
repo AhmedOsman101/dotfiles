@@ -57,10 +57,12 @@ chaotic-mirrorlist
 cherry-studio-bin
 clang
 cmake
+colord
 composer
 converseen
 copyq
 cowsay
+cracklib
 croc
 cronie
 cups
@@ -113,6 +115,7 @@ git-delta
 github-cli
 glow
 gnome-boxes
+gnome-calendar
 gnome-clocks
 gnome-keyring
 go
@@ -140,6 +143,7 @@ helixbinhx
 htop
 hyperfine
 hyperv
+ibus
 inetutils
 inkscape
 inotify-tools
@@ -186,6 +190,7 @@ libmpeg2
 libnma-gtk4
 libpfm
 libpulse
+libpwquality
 libqtxdg
 libreoffice-fresh
 libreoffice-fresh-ar
@@ -268,7 +273,6 @@ php-redis
 php-sodium
 php-sqlite
 phpmyadmin
-pinta
 pipewire
 pipewire-alsa
 pipewire-jack
