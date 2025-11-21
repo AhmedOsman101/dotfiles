@@ -1102,5 +1102,10 @@
   "gitlens.showWhatsNewAfterUpgrades": false,
   "gitlens.hovers.enabled": false,
   "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1"
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "licenser.author": "Ahmad Othman",
+  "license.author": "Ahmad Othman",
+  "license.year": "auto",
+  "licenser.license": "MIT",
+  "licenser.useSPDXLicenseFormat": true,
 }
