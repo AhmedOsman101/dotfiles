@@ -25,6 +25,7 @@ astyle
 atomicparsley
 atril
 atuin
+audacity
 audiorelay
 audiotube
 awk-language-server
@@ -86,6 +87,7 @@ ed
 emmet-language-server
 entr
 errands
+eslint
 evince
 exfatprogs
 exo
@@ -109,6 +111,7 @@ gamemode
 gamescope
 gearlever
 ghostscript
+gimp
 git
 git-crypt
 git-delta
@@ -228,8 +231,11 @@ memtester
 mesa-demos
 mkcert
 mkinitcpio-firmware
+mokutil
+mold
 moreutils
 mpv
+musl
 nano
 ncdu
 ncurses5-compat-libs
@@ -287,6 +293,7 @@ podman-compose
 podman-docker
 prettier
 pv
+pyright
 python-beautifulsoup4
 python-faker
 python-lxml
@@ -322,6 +329,7 @@ shlorem
 slides
 smartmontools
 sof-firmware
+speed-dreams-bin
 speedtest-cli
 spotify
 sshfs
@@ -373,9 +381,11 @@ vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 vue-language-server
+vulkan-nouveau
 watchexec
 wavemon
 wget
+wild
 wine
 wine-gecko
 wine-mono
