@@ -100,8 +100,8 @@ add-zsh-hook -Uz precmd rehash_precmd
 [[ ":${PATH}:" != *":${PNPM_HOME}:"* ]] && export PATH="${PNPM_HOME}:${PATH}"
 
 # ---- Atuin ---- #
-[[ ":${PATH}:" != *":${HOME}/.atuin/bin:"* ]] && export PATH="${HOME}/.atuin/bin:${PATH}"
-[[ -s "${HOME}/.local/bin/atuin.sh" ]] && source "${HOME}/.local/bin/atuin.sh"
+# [[ ":${PATH}:" != *":${HOME}/.atuin/bin:"* ]] && export PATH="${HOME}/.atuin/bin:${PATH}"
+# [[ -s "${HOME}/.local/bin/atuin.sh" ]] && source "${HOME}/.local/bin/atuin.sh"
 
 # ---- Cargo ---- #
 source "${CARGO_HOME}/env" &>/dev/null
