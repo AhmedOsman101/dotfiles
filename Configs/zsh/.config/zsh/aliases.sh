@@ -158,3 +158,6 @@ alias ffmpeg='ffmpeg -hide_banner'
 
 # --- shlorem --- #
 alias lorem='shlorem'
+
+# --- mancat --- #
+alias mancat='man --pager="bat --paging=never --style=plain --color=auto --language=man"'

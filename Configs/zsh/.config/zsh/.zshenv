@@ -20,7 +20,8 @@ export TUCKR_HOME="${HOME}"
 export TUCKR_DIR="${TUCKR_HOME}/dotfiles/Configs"
 
 # --- Chassis --- #
-export DEVICE="$(hostnamectl chassis)"
+device="$(hostnamectl chassis)"
+export DEVICE="${device}"
 
 # --- Editor --- #
 if command -v hx &>/dev/null; then
