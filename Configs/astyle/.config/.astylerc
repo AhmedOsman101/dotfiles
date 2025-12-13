@@ -48,7 +48,7 @@ pad-header           # Insert space padding between a header (e.g. 'if', 'for', 
 unpad-paren          # Remove unnecessary padding inside parentheses
 squeeze-lines=2      # Remove extra empty lines exceeding the given number.
 squeeze-ws           # Remove extra whitespaces.
-align-pointer=type   # Align pointers to the type
+align-pointer=name   # Align pointers to the type or name
 align-reference=name # Align references to the variable name
 
 # ---- Formatting Options ---- #
