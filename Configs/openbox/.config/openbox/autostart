@@ -40,23 +40,14 @@ exec thunar --daemon &
 exec copyq &
 
 # ---- Start the ollama server ---- #
-exec ollama serve &
+# exec ollama serve &
 
 # ---- Enable Super Keys For Menu ---- #
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 
-# ---- These applets are specifically for tint2 panel. ---- #
-# ---- If you're using tint2 as panel, Uncomment these applets. ---- #
-
-# ---- User Friendly Network Menu ---- #
-# nm-applet --indicator &
-
-# ---- User Friendly Bluetooth Menu ---- #
-# blueman-applet &
-
 # ---- Enable hotcorners using edges ---- #
-# edges --topright "skippy-xd --toggle" &
+edges --topright "skippy-xd --toggle" &
 
 # --- Start fcitx5 daemon --- #
 # fcitx5 -d &
@@ -72,6 +63,15 @@ if [[ -z "${DBUS_SESSION_BUS_ADDRESS}" ]]; then
 fi
 
 # ---- polkit agent ---- #
-if [[ ! $(pidof xfce-polkit) ]]; then
+if ! pidof xfce-polkit; then
   /usr/lib/xfce-polkit/xfce-polkit &
 fi
+
+# Ensure D-Bus knows about the X11 session
+if command -v dbus-update-activation-environment >/dev/null; then
+  dbus-update-activation-environment --systemd DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP=openbox
+fi
+
+# Start portals
+/usr/lib/xdg-desktop-portal &
+/usr/lib/xdg-desktop-portal-gtk &
