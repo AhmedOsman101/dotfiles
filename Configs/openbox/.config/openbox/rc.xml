@@ -18,7 +18,7 @@
   </focus>
   <!-- Placement -->
   <placement>
-    <policy>UnderMouse</policy>
+    <policy>Smart</policy>
     <center>yes</center>
     <monitor>Mouse</monitor>
     <primaryMonitor>Mouse</primaryMonitor>

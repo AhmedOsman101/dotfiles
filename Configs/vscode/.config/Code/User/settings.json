@@ -223,7 +223,7 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "cody.commandCodeLenses": true,
-  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
   "diffEditor.ignoreTrimWhitespace": false,
   "vscord.app.name": "Visual Studio Code",
   "debug.terminal.clearBeforeReusing": true,
@@ -251,7 +251,7 @@
   },
   "markdown.preview.typographer": true,
   "markdown-preview-enhanced.mathRenderingOnlineService": "https://latex.codecogs.com/png.latex",
-  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+  "markdown-preview-enhanced.codeBlockTheme": "github.css",
   "markdown-preview-enhanced.enableHTML5Embed": true,
   "markdown-preview-enhanced.enableTypographer": true,
   "markdown-preview-enhanced.revealjsTheme": "black.css",
