@@ -161,3 +161,6 @@ alias glg="git log --all --graph --pretty=format:'%C(magenta)%h%C(default) %an %
 alias gc="git clone"
 alias glc='git pull origin $(git_current_branch)'
 alias glo='git pull origin'
+
+# bun completions
+[ -s "/home/othman/.local/share/bun/_bun" ] && source "/home/othman/.local/share/bun/_bun"

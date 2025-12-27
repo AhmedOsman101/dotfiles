@@ -21,11 +21,11 @@ alias cat="command bat --paging=never --style=plain --color=auto"
 alias cd="z"
 
 # ---- Eza (better ls) ----- #
-alias ls='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza --all --color=always --long --git --icons=always --no-time --no-user --sort name'
-alias lsu='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza --all --color=always --long --git --icons=always --no-time --sort name'
+alias ls='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza --all --color=always --long --git --icons=always --no-time --no-user --sort name --group-directories-first'
+alias lsu='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza --all --color=always --long --git --icons=always --no-time --sort name --group-directories-first'
 
-alias lst='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza -T --all --color=always --long --git --icons=always --no-time --no-user --sort name --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor"'
-alias lstu='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza -T --all --color=always --long --git --icons=always --no-time --sort name --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor"'
+alias lst='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza -T --all --color=always --long --git --icons=always --no-time --no-user --sort name --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor" --group-directories-first'
+alias lstu='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza -T --all --color=always --long --git --icons=always --no-time --sort name --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor" --group-directories-first'
 
 # ---- Micro (better nano) ----- #
 alias nano="micro"

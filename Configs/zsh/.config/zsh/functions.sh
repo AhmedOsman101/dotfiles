@@ -217,6 +217,10 @@ vite() {
   trap - INT # restore default
 }
 
+pdf2png() {
+  pdftocairo -png -r 300 "$1" "${1%.pdf}"
+}
+
 # Runs before any command
 # precmd() { }
 
