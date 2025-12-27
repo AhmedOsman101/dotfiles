@@ -47,7 +47,7 @@ ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # ---- Enable hotcorners using edges ---- #
-edges --topright "skippy-xd --toggle" &
+edges --topleft "skippy-xd --toggle" &
 
 # --- Start fcitx5 daemon --- #
 # fcitx5 -d &
@@ -75,3 +75,7 @@ fi
 # Start portals
 /usr/lib/xdg-desktop-portal &
 /usr/lib/xdg-desktop-portal-gtk &
+
+# Adjust bluetooth devices
+bluetoothctl remove 41:42:D8:8C:FA:85 &>/dev/null
+sudo systemctl restart bluetooth &>/dev/null
