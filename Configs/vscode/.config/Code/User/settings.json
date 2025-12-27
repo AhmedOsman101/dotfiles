@@ -1108,4 +1108,5 @@
   "license.year": "auto",
   "licenser.license": "MIT",
   "licenser.useSPDXLicenseFormat": true,
+  "qt-cpp.doNotShowCMakePresetWarning": true,
 }
