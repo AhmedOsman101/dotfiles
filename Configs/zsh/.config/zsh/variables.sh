@@ -267,6 +267,10 @@ export COLORTERM="truecolor"
 # --- Texfm --- #
 export TEXMFVAR="${XDG_CACHE_HOME}/texlive/texmf-var"
 
+# --- TGPT --- #
+export AI_PROVIDER="phind"         # Default chat provider
+export IMG_PROVIDER="pollinations" # Default image provider
+
 # --- Wget --- #
 export WGETRC="${XDG_CONFIG_HOME}/wgetrc"
 
