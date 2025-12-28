@@ -222,6 +222,13 @@ pdf2png() {
 }
 
 # --- TGPT --- #
+tgpt() {
+  if [[ -z "$1" ]]; then
+    tgpt "$(gum write --placeholder "Write your message...")"
+  else
+    tgpt "$@"
+  fi
+}
 # 1. Shell Assistant Mode (-s)
 # Optimized for generating and executing commands
 t-sh() {
@@ -229,7 +236,7 @@ t-sh() {
   prompt="$(gum write --placeholder "Describe the shell command you need..." --width 80)"
 
   if [[ -n "$prompt" ]]; then
-    tgpt --shell "$prompt"
+    command tgpt --shell "$prompt"
   else
     log-info "Nothing to do..."
   fi
@@ -241,7 +248,7 @@ t-code() {
   local prompt
   prompt="$(gum write --placeholder "Describe the code/script to generate..." --width 80)"
   if [[ -n "$prompt" ]]; then
-    tgpt --code "$prompt"
+    command tgpt --code "$prompt"
   else
     log-info "Nothing to do..."
   fi
@@ -259,7 +266,7 @@ t-img() {
 
   [[ -z "$filename" ]] && filename="output.jpg"
 
-  tgpt --image --out "$filename" "$prompt"
+  command tgpt --image --out "$filename" "$prompt"
   log-info "Image saved to: $filename"
 }
 
@@ -269,7 +276,7 @@ t-search() {
   local prompt
   prompt="$(gum write --placeholder "Enter your research query (Web Search)..." --width 80)"
   if [[ -n "$prompt" ]]; then
-    tgpt --provider isou "$prompt"
+    command tgpt --provider isou "$prompt"
   else
     log-info "Nothing to do..."
   fi
@@ -278,7 +285,27 @@ t-search() {
 # 5. Full Interactive Mode (-m)
 # Starts a persistent session with Phind
 t-chat() {
-  tgpt --multiline
+  command tgpt --multiline
+}
+
+ai() {
+  local mode
+  mode=$(gum choose \
+    "Shell (Execute Commands)" \
+    "Code (Write Scripts)" \
+    "Search (Web/Research)" \
+    "Chat (Interactive)" \
+    "Image (Generation)" \
+    "Exit")
+
+  case "$mode" in
+  "Shell (Execute Commands)") t-sh ;;
+  "Code (Write Scripts)") t-code ;;
+  "Search (Web/Research)") t-search ;;
+  "Chat (Interactive)") t-chat ;;
+  "Image (Generation)") t-img ;;
+  "Exit" | *) return 0 ;;
+  esac
 }
 
 # Runs before any command
