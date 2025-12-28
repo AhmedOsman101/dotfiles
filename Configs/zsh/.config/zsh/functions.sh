@@ -221,6 +221,66 @@ pdf2png() {
   pdftocairo -png -r 300 "$1" "${1%.pdf}"
 }
 
+# --- TGPT --- #
+# 1. Shell Assistant Mode (-s)
+# Optimized for generating and executing commands
+t-sh() {
+  local prompt
+  prompt="$(gum write --placeholder "Describe the shell command you need..." --width 80)"
+
+  if [[ -n "$prompt" ]]; then
+    tgpt --shell "$prompt"
+  else
+    log-info "Nothing to do..."
+  fi
+}
+
+# 2. Code Generation Mode (-c)
+# Uses phind (default) for high-quality dev responses
+t-code() {
+  local prompt
+  prompt="$(gum write --placeholder "Describe the code/script to generate..." --width 80)"
+  if [[ -n "$prompt" ]]; then
+    tgpt --code "$prompt"
+  else
+    log-info "Nothing to do..."
+  fi
+}
+
+# 3. Image Generation Mode (-img)
+# Defaults to Pollinations and asks for a filename
+t-img() {
+  local prompt filename
+  prompt="$(gum write --placeholder "Describe the image to generate..." --width 80)"
+
+  [[ -z "$prompt" ]] && return
+
+  filename="$(gum input --placeholder "Output filename (e.g., wallpaper.jpg)")"
+
+  [[ -z "$filename" ]] && filename="output.jpg"
+
+  tgpt --image --out "$filename" "$prompt"
+  log-info "Image saved to: $filename"
+}
+
+# 4. Search/Research Mode (isou)
+# Specifically uses the 'isou' provider for web search
+t-search() {
+  local prompt
+  prompt="$(gum write --placeholder "Enter your research query (Web Search)..." --width 80)"
+  if [[ -n "$prompt" ]]; then
+    tgpt --provider isou "$prompt"
+  else
+    log-info "Nothing to do..."
+  fi
+}
+
+# 5. Full Interactive Mode (-m)
+# Starts a persistent session with Phind
+t-chat() {
+  tgpt --multiline
+}
+
 # Runs before any command
 # precmd() { }
 
