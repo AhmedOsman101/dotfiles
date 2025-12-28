@@ -100,7 +100,7 @@ export DOAS_NOPASS="${XDG_CONFIG_HOME}/doas/doas.conf"
 export DENO_UNSTABLE_SLOPPY_IMPORTS="true"
 
 # --- FZF ---- #
-show_file_or_dir_preview="$(
+SHOW_FILE_OR_DIR_PREVIEW="$(
   cat <<'EOF'
 if [[ -d {} ]]; then
   eza --all --tree --color=auto --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor" {} | head -n 200
@@ -133,7 +133,7 @@ export FZF_DEFAULT_OPTS=" \
 --multi"
 export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
-export FZF_CTRL_T_OPTS="--preview '${show_file_or_dir_preview}'"
+export FZF_CTRL_T_OPTS="--preview '${SHOW_FILE_OR_DIR_PREVIEW}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
 # --- Gnupg --- #

@@ -5,8 +5,9 @@ if [[ -f "${HOME}/scripts/lib/helpers.sh" ]]; then
 fi
 
 rehash_precmd() {
+  local paccache_time
   if [[ -e /var/cache/zsh/pacman ]]; then
-    local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
+    paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
     if ((zshcache_time < paccache_time)); then
       rehash
       zshcache_time="${paccache_time}"
@@ -43,14 +44,15 @@ _fzf_comprun() {
     fzf --preview 'dig {}' "$@"
     ;;
   *)
-    fzf --preview "${show_file_or_dir_preview}" "$@"
+    fzf --preview "${SHOW_FILE_OR_DIR_PREVIEW}" "$@"
     ;;
   esac
 }
 
 # ---- Yazi ---- #
 yy() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  local tmp
+  tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   yazi "$@" --cwd-file="${tmp}"
   if cwd="$(command cat -- "${tmp}")" && [[ -n "${cwd}" ]] && [[ "${cwd}" != "${PWD}" ]]; then
     builtin cd -- "${cwd}" || exit
@@ -157,9 +159,10 @@ ffprobe() {
 }
 
 touch() {
+  local dir
   for file in "$@"; do
     if [[ ! -f "${file}" ]]; then
-      local dir="$(dirname "${file}")"
+      dir="$(dirname "${file}")"
       if [[ ! -d "${dir}" ]]; then
         if ! mkdir -p "${dir}"; then
           log-warning "Couldn't create parent directory, skipping file: ${file}"
@@ -224,9 +227,9 @@ pdf2png() {
 # --- TGPT --- #
 tgpt() {
   if [[ -z "$1" ]]; then
-    tgpt "$(gum write --placeholder "Write your message...")"
+    command tgpt "$(gum write --placeholder "Write your message...")"
   else
-    tgpt "$@"
+    command tgpt "$@"
   fi
 }
 # 1. Shell Assistant Mode (-s)
