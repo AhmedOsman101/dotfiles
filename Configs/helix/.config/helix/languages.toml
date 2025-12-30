@@ -391,3 +391,8 @@ indent = { tab-width = 2, unit = "  " }
 [[grammar]]
 name = "vim"
 source = { git = "https://github.com/neovim/tree-sitter-vim", rev = "3dd4747082d1b717b8978211c06ef7b6cd16125b" }
+
+# --- XML --- #
+[[language]]
+name = "xml"
+formatter = { command = "xmllint", args = ["--format", "-"] }
