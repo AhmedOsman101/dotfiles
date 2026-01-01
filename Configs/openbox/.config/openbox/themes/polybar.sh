@@ -34,7 +34,7 @@ set_values() {
 
 ## Launch Polybar with selected style
 launch_bar() {
-  bash "$HOME"/.config/openbox/themes/"$STYLE"/polybar/launch.sh
+  PATH="${PATH}:${HOME}/scripts" bash "$HOME"/.config/openbox/themes/"$STYLE"/polybar/launch.sh
 }
 
 # Execute functions
