@@ -63,7 +63,7 @@ if [[ -z "${DBUS_SESSION_BUS_ADDRESS}" ]]; then
 fi
 
 # ---- polkit agent ---- #
-if ! pidof xfce-polkit; then
+if ! ps aux | rg -iq 'polkit'; then
   /usr/lib/xfce-polkit/xfce-polkit &
 fi
 
@@ -76,6 +76,5 @@ fi
 /usr/lib/xdg-desktop-portal &
 /usr/lib/xdg-desktop-portal-gtk &
 
-# Adjust bluetooth devices
-bluetoothctl remove 41:42:D8:8C:FA:85 &>/dev/null
-sudo systemctl restart bluetooth &>/dev/null
+# Start mediactl for polybar
+/home/othman/scripts/bin/mediactl &
