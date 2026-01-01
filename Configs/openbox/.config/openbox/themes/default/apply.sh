@@ -5,12 +5,12 @@
 ## Script To Apply Themes
 
 ## Theme ------------------------------------
-TDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+TDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 THEME="${TDIR##*/}"
 
 source "$HOME"/.config/openbox/themes/"$THEME"/theme.bash
-altbackground="`pastel color $background | pastel lighten $light_value | pastel format hex`"
-altforeground="`pastel color $foreground | pastel darken $dark_value | pastel format hex`"
+altbackground="$(pastel color "$background" | pastel lighten "$light_value" | pastel format hex)"
+altforeground="$(pastel color $foreground | pastel darken $dark_value | pastel format hex)"
 
 ## Directories ------------------------------
 PATH_CONF="$HOME/.config"
@@ -38,32 +38,32 @@ apply_polybar() {
   sed -i -e "s/font-0 = .*/font-0 = \"$polybar_font\"/g" ${PATH_PBAR}/config.ini
 
   # rewrite colors file
-  cat > ${PATH_PBAR}/colors.ini <<- EOF
-    [color]
-    
-    BACKGROUND = ${background}
-    FOREGROUND = ${foreground}
-    ALTBACKGROUND = ${altbackground}
-    ALTFOREGROUND = ${altforeground}
-    ACCENT = ${accent}
-    
-    BLACK = ${color0}
-    RED = ${color1}
-    GREEN = ${color2}
-    YELLOW = ${color3}
-    BLUE = ${color4}
-    MAGENTA = ${color5}
-    CYAN = ${color6}
-    WHITE = ${color7}
-    ALTBLACK = ${color8}
-    ALTRED = ${color9}
-    ALTGREEN = ${color10}
-    ALTYELLOW = ${color11}
-    ALTBLUE = ${color12}
-    ALTMAGENTA = ${color13}
-    ALTCYAN = ${color14}
-    ALTWHITE = ${color15}
-  EOF
+  cat >${PATH_PBAR}/colors.ini <<EOF
+[color]
+
+BACKGROUND = ${background}
+FOREGROUND = ${foreground}
+ALTBACKGROUND = ${altbackground}
+ALTFOREGROUND = ${altforeground}
+ACCENT = ${accent}
+
+BLACK = ${color0}
+RED = ${color1}
+GREEN = ${color2}
+YELLOW = ${color3}
+BLUE = ${color4}
+MAGENTA = ${color5}
+CYAN = ${color6}
+WHITE = ${color7}
+ALTBLACK = ${color8}
+ALTRED = ${color9}
+ALTGREEN = ${color10}
+ALTYELLOW = ${color11}
+ALTBLUE = ${color12}
+ALTMAGENTA = ${color13}
+ALTCYAN = ${color14}
+ALTWHITE = ${color15}
+EOF
 }
 
 ## Tint2 -----------------------------------
@@ -74,7 +74,7 @@ apply_tint2() {
 
 # Rofi --------------------------------------
 apply_rofi() {
-  border_color="`pastel color $accent | pastel format rgb-float | tr -d '[:alpha:]','(',')' | sed 's/ /,/g'`"
+  border_color="$(pastel color $accent | pastel format rgb-float | tr -d '[:alpha:]','(',')' | sed 's/ /,/g')"
 
   # modify screenshots scripts
   sed -i -e "s/border=.*/border='$border_color'/g" \
@@ -90,21 +90,21 @@ apply_rofi() {
     ${PATH_OBOX}/scripts/rofi-powermenu \
     ${PATH_OBOX}/scripts/rofi-runner \
     ${PATH_OBOX}/scripts/rofi-screenshot
-  
+
   # apply default theme fonts
   sed -i -e "s/font:.*/font: \"$rofi_font\";/g" ${PATH_ROFI}/shared/fonts.rasi
 
   # rewrite colors file
-  cat > ${PATH_ROFI}/shared/colors.rasi <<- EOF
-    * {
-        background:     ${background};
-        background-alt: ${altbackground};
-        foreground:     ${foreground};
-        selected:       ${accent};
-        active:         ${color2};
-        urgent:         ${color1};
-    }
-  EOF
+  cat >${PATH_ROFI}/shared/colors.rasi <<EOF
+* {
+  background:     ${background};
+  background-alt: ${altbackground};
+  foreground:     ${foreground};
+  selected:       ${accent};
+  active:         ${color2};
+  urgent:         ${color1};
+}
+EOF
 
   # modify icon theme
   if [[ -f "$PATH_CONF"/rofi/config.rasi ]]; then
@@ -128,32 +128,32 @@ apply_terminal() {
       -e "s/size = .*/size = $terminal_font_size/g"
 
     # alacritty : colors
-    cat > ${PATH_TERM}/colors.toml <<- _EOF_
-      ## Colors configuration
-      [colors.primary]
-      background = "${background}"
-      foreground = "${foreground}"
-      
-      [colors.normal]
-      black   = "${color0}"
-      red     = "${color1}"
-      green   = "${color2}"
-      yellow  = "${color3}"
-      blue    = "${color4}"
-      magenta = "${color5}"
-      cyan    = "${color6}"
-      white   = "${color7}"
-      
-      [colors.bright]
-      black   = "${color8}"
-      red     = "${color9}"
-      green   = "${color10}"
-      yellow  = "${color11}"
-      blue    = "${color12}"
-      magenta = "${color13}"
-      cyan    = "${color14}"
-      white   = "${color15}"
-    _EOF_
+    cat >${PATH_TERM}/colors.toml <<_EOF_
+## Colors configuration
+[colors.primary]
+background = "${background}"
+foreground = "${foreground}"
+
+[colors.normal]
+black   = "${color0}"
+red     = "${color1}"
+green   = "${color2}"
+yellow  = "${color3}"
+blue    = "${color4}"
+magenta = "${color5}"
+cyan    = "${color6}"
+white   = "${color7}"
+
+[colors.bright]
+black   = "${color8}"
+red     = "${color9}"
+green   = "${color10}"
+yellow  = "${color11}"
+blue    = "${color12}"
+magenta = "${color13}"
+cyan    = "${color14}"
+white   = "${color15}"
+_EOF_
   fi
 
   if [[ -f "$PATH_CONF/kitty/fonts.conf" && -f "$PATH_CONF/kitty/colors.conf" ]]; then
@@ -163,31 +163,31 @@ apply_terminal() {
       -e "s/font_size .*/font_size $terminal_font_size/g"
 
     # kitty : colors
-    cat > ${PATH_CONF}/kitty/colors.conf <<- _EOF_
-      ## Colors configuration
-      background ${background}
-      foreground ${foreground}
-      selection_background ${foreground}
-      selection_foreground ${background}
-      cursor ${foreground}
-      
-      color0 ${color0}
-      color8 ${color8}
-      color1 ${color1}
-      color9 ${color9}
-      color2 ${color2}
-      color10 ${color10}
-      color3 ${color3}
-      color11 ${color11}
-      color4 ${color4}
-      color12 ${color12}
-      color5 ${color5}
-      color13 ${color13}
-      color6 ${color6}
-      color14 ${color14}
-      color7 ${color7}
-      color15 ${color15}
-    _EOF_
+    cat >${PATH_CONF}/kitty/colors.conf <<_EOF_
+## Colors configuration
+background ${background}
+foreground ${foreground}
+selection_background ${foreground}
+selection_foreground ${background}
+cursor ${foreground}
+
+color0 ${color0}
+color8 ${color8}
+color1 ${color1}
+color9 ${color9}
+color2 ${color2}
+color10 ${color10}
+color3 ${color3}
+color11 ${color11}
+color4 ${color4}
+color12 ${color12}
+color5 ${color5}
+color13 ${color13}
+color6 ${color6}
+color14 ${color14}
+color7 ${color7}
+color15 ${color15}
+_EOF_
 
     # reload kitty config
     kill -SIGUSR1 $(pidof kitty)
@@ -215,15 +215,15 @@ apply_appearance() {
   xfconf-query -c xsettings -p /Net/ThemeName -s "$gtk_theme"
   xfconf-query -c xsettings -p /Net/IconThemeName -s "$icon_theme"
   xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "$cursor_theme"
-  
+
   # inherit cursor theme
   if [[ -f "$HOME"/.icons/default/index.theme ]]; then
     sed -i -e "s/Inherits=.*/Inherits=$cursor_theme/g" "$HOME"/.icons/default/index.theme
-  fi  
+  fi
 }
 
 # Openbox -----------------------------------
-apply_obconfig () {
+apply_obconfig() {
   namespace="http://openbox.org/3.4/rc"
   config="$PATH_OBOX/rc.xml"
 
@@ -292,25 +292,25 @@ apply_dunst() {
 
   # modify colors
   sed -i '/urgency_low/Q' ${PATH_DUNST}/dunstrc
-  cat >> ${PATH_DUNST}/dunstrc <<- _EOF_
-    [urgency_low]
-    timeout = 2
-    background = "${background}"
-    foreground = "${foreground}"
-    frame_color = "${altbackground}"
+  cat >>${PATH_DUNST}/dunstrc <<_EOF_
+[urgency_low]
+timeout = 2
+background = "${background}"
+foreground = "${foreground}"
+frame_color = "${altbackground}"
 
-    [urgency_normal]
-    timeout = 5
-    background = "${background}"
-    foreground = "${foreground}"
-    frame_color = "${altbackground}"
+[urgency_normal]
+timeout = 5
+background = "${background}"
+foreground = "${foreground}"
+frame_color = "${altbackground}"
 
-    [urgency_critical]
-    timeout = 0
-    background = "${background}"
-    foreground = "${color1}"
-    frame_color = "${color1}"
-  _EOF_
+[urgency_critical]
+timeout = 0
+background = "${background}"
+foreground = "${color1}"
+frame_color = "${color1}"
+_EOF_
 
   # restart dunst
   pkill dunst && dunst &
@@ -319,29 +319,29 @@ apply_dunst() {
 # Plank -------------------------------------
 apply_plank() {
   # create temporary config file
-  cat > "$HOME"/.cache/plank.conf <<- _EOF_
-    [dock1]
-    alignment='center'
-    auto-pinning=true
-    current-workspace-only=false
-    dock-items=['xfce-settings-manager.dockitem', 'Alacritty.dockitem', 'thunar.dockitem', 'firefox.dockitem', 'geany.dockitem']
-    hide-delay=0
-    hide-mode='$plank_hmode'
-    icon-size=$plank_icon_size
-    items-alignment='center'
-    lock-items=false
-    monitor=''
-    offset=$plank_offset
-    pinned-only=false
-    position='$plank_position'
-    pressure-reveal=false
-    show-dock-item=false
-    theme='$plank_theme'
-    tooltips-enabled=true
-    unhide-delay=0
-    zoom-enabled=true
-    zoom-percent=$plank_zoom_percent
-  _EOF_
+  cat >"$HOME"/.cache/plank.conf <<_EOF_
+[dock1]
+alignment='center'
+auto-pinning=true
+current-workspace-only=false
+dock-items=['xfce-settings-manager.dockitem', 'Alacritty.dockitem', 'thunar.dockitem', 'firefox.dockitem', 'geany.dockitem']
+hide-delay=0
+hide-mode='$plank_hmode'
+icon-size=$plank_icon_size
+items-alignment='center'
+lock-items=false
+monitor=''
+offset=$plank_offset
+pinned-only=false
+position='$plank_position'
+pressure-reveal=false
+show-dock-item=false
+theme='$plank_theme'
+tooltips-enabled=true
+unhide-delay=0
+zoom-enabled=true
+zoom-percent=$plank_zoom_percent
+_EOF_
 
   # apply config and reload plank
   cat "$HOME"/.cache/plank.conf | dconf load /net/launchpad/plank/docks/
@@ -369,7 +369,7 @@ create_file() {
   if [[ ! -f "$theme_file" ]]; then
     touch ${theme_file}
   fi
-  echo "$THEME" > ${theme_file}
+  echo "$THEME" >${theme_file}
 }
 
 # Notify User -------------------------------
