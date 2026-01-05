@@ -2,6 +2,7 @@ gui:
   authorColors: {}
   branchColors: {}
   branchColorPatterns: {}
+  useHunkModeInStagingView: false
   customIcons:
     filenames: {}
     extensions: {}
