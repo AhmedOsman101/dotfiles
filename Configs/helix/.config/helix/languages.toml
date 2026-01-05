@@ -17,6 +17,10 @@ formatter = { command = "astyle" }
 name = "bash"
 language-servers = ["bash-language-server", "scls"]
 
+[language-server.bash-language-server.config]
+includeAllWorkspaceSymbols = true
+backgroundAnalysisMaxFiles = 1000
+
 # ---- HTML ---- #
 [[language]]
 name = "html"
