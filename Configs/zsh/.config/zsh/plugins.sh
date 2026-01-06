@@ -40,4 +40,5 @@ zinit snippet OMZP::copypath
 zinit snippet OMZP::dirhistory
 zinit snippet OMZP::extract
 
-zinit cdreplay -q
+# --- Open buffer line editor --- #
+autoload -Uz edit-command-line

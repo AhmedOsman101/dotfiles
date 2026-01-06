@@ -28,3 +28,7 @@ ctrl_l() {
 
 zle -N ctrl_l
 bindkey '^l' ctrl_l
+
+# --- Open buffer line editor (Ctrl+x Ctrl+e) --- #
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
