@@ -190,6 +190,14 @@ export GUM_FILE_HEADER_FOREGROUND="${U_CYAN}"
 # --- Libvirt --- #
 export LIBVIRT_DEFAULT_URI='qemu:///system'
 
+# --- LS_COLORS --- #
+# initialize LS_COLORS if not set
+if [[ -z "${LS_COLORS}" ]]; then
+  if command -v dircolors &>/dev/null; then
+    eval "$(dircolors -b)" # reads the default color database and sets LS_COLORS
+  fi
+fi
+
 # --- Man --- #
 export MANROFFOPT="-c"
 export MANPAGER="sh -c 'col -bx | bat --paging=always --language=man -p'"

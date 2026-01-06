@@ -6,12 +6,12 @@ promptinit
 
 # ---- Prompt Starship ---- #
 if command -v starship &>/dev/null; then
-	eval "$(starship init zsh)"
+  eval "$(starship init zsh)"
 else
-	zinit ice as"command" from"gh-r" \
-		atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
-		atpull"%atclone" src"init.zsh"
-	zinit light starship/starship
+  zinit ice as"command" from"gh-r" \
+    atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+    atpull"%atclone" src"init.zsh"
+  zinit light starship/starship
 fi
 
 # ---- Add in zsh plugins ---- #
@@ -27,10 +27,10 @@ zinit light larkery/zsh-histdb
 
 # Load a few important annexes, without Turbo
 zinit light-mode for \
-	zdharma-continuum/zinit-annex-as-monitor \
-	zdharma-continuum/zinit-annex-bin-gem-node \
-	zdharma-continuum/zinit-annex-patch-dl \
-	zdharma-continuum/zinit-annex-rust
+  zdharma-continuum/zinit-annex-as-monitor \
+  zdharma-continuum/zinit-annex-bin-gem-node \
+  zdharma-continuum/zinit-annex-patch-dl \
+  zdharma-continuum/zinit-annex-rust
 
 # ---- Add in snippets ---- #
 zinit snippet OMZP::git

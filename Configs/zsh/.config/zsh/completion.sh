@@ -34,5 +34,5 @@ zstyle ':zle:*' region-highlight 'fg=none' 'bg=none'
 
 # ---- Add completions to search path ---- #
 if [[ ":${FPATH}:" != *":${ZSH_CONF}/completions:"* ]]; then
-	export FPATH="${ZSH_CONF}/completions:${FPATH}"
+  export FPATH="${ZSH_CONF}/completions:${FPATH}"
 fi
