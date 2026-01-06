@@ -1,0 +1,50 @@
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/previous]
+type = custom/ipc
+format-font = 2
+; Default
+hook-0 = echo ""
+; When player active
+hook-1 = echo " 󰙣 "
+click-left = "playerctl previous"
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/next]
+type = custom/ipc
+format-font = 2
+; Default
+hook-0 = echo ""
+; When player active
+hook-1 = echo "󰙡 "
+click-left = "playerctl next"
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/playpause]
+type = custom/ipc
+format-font = 2
+; Default
+hook-0 = echo ""
+; Playing
+hook-1 = echo " "
+; Paused
+hook-2 = echo "󰐌 "
+click-left = "playerctl play-pause"
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/media]
+type = custom/script
+exec = ~/.config/openbox/themes/default/polybar/scripts/player-status.sh
+interval = 1
+format = <label>
+; format-background = ${color.BACKGROUND}
+; format-padding = 1
+; format-prefix = 
+; format-prefix-font = 7
+; format-prefix-foreground = ${color.CYAN}
+label = " %output%"
+; click-left = "playerctl play-pause"
+
