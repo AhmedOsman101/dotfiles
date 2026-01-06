@@ -1,8 +1,5 @@
 export HISTFILE="${XDG_STATE_HOME}/bash/history"
 
-# If not running interactively, don't do anything
-# [[ $- != *i* ]] && return
-
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u \W]\$ '
@@ -12,6 +9,8 @@ eval "$(starship init bash)"
 
 complete -cf doas
 complete -F _command doas
+
+source "${XDG_DATA_HOME:-${HOME}/.local/share}/bash-completion/completions/deno.bash"
 
 # ---- Scripts ---- #
 export SCRIPTS_DIR="${HOME}/scripts"
