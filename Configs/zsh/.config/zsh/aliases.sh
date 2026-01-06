@@ -64,7 +64,6 @@ alias rmdir="rmdirtrash --ignore-fail-on-non-empty"
 
 # ---- Easier to read disk ---- #
 alias df='df -h'     # Disk usage per file system
-alias du='du -h'     # Disk usage per directory
 alias dus='du -sh'   # Disk usage (summary)
 alias free='free -m' # show sizes in MB
 

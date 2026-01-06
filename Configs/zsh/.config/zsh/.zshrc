@@ -91,7 +91,8 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color=always --long -
 zstyle ':fzf-tab:complete:_files:*' fzf-preview 'eza --color=always --long --no-time --no-user --sort name --no-permissions --no-filesize --all $realpath'
 zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2 --bind=tab:accept
 
-# ---- On-demand rehash ----- #
+# Rehash Zsh only when pacman updates /usr/bin
+# Triggered by /usr/share/libalpm/hooks/archcraft-hook-zsh.hook
 zshcache_time="$(date +%s%N)"
 autoload -Uz add-zsh-hook
 add-zsh-hook -Uz precmd rehash_precmd
