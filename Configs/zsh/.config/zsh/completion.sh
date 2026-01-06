@@ -19,6 +19,7 @@ zstyle :compinstall filename "${ZSHRC}"
 
 autoload -Uz compinit
 compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump-${ZSH_VERSION}"
+zinit cdreplay -q
 # End of lines added by compinstall
 
 # ---- find the command plugin ---- #
