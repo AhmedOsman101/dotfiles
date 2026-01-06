@@ -1,0 +1,23 @@
+enable=all
+source-path=SCRIPTDIR
+severity=style
+
+# If you're having issues with shellcheck following source, disable the errors via:
+disable=SC1090  # Can't follow non-constant source. Use a directive to specify location
+disable=SC1091  # Not following: (error message here)
+disable=SC2154  # Variable referenced but not assigned.
+disable=SC2155  # Declare and assign separately to avoid masking return values.
+disable=SC2310  # This function is invoked in an || condition so set -e will be disabled.
+disable=SC2312  # Consider invoking this command separately to avoid masking its return value (or use '|| true' to ignore).
+disable=SC2317  # Command appears to be unreachable.
+disable=SC2329  # This function is never invoked.
+enable=SC2001   # See if you can use `${variable//search/replace}` instead.
+enable=SC2002   # Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.
+enable=SC2016   # Expressions don't expand in single quotes, use double quotes for that.
+enable=SC2034   # Variable appears unused. Verify it or export it.
+enable=SC2086   # Double quote to prevent globbing and word splitting.
+enable=SC2153   # Possible Misspelling: MYVARIABLE may not be assigned. Did you mean MY_VARIABLE?
+enable=SC2181   # Check exit code directly with e.g. `if mycmd;`, not indirectly with `$?`.
+enable=SC2207   # Prefer `mapfile` or `read -a` to split command output (or quote to avoid splitting).
+enable=SC2230   # 'which' is non-standard. Use builtin 'command -v' instead.
+enable=SC2296   # Parameter expansions can't start with `{`. Double check syntax.
