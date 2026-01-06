@@ -1,53 +1,9 @@
 #!/usr/bin/env bash
 
 if [[ -f "${HOME}/scripts/lib/helpers.sh" ]]; then
+  # shellcheck disable=SC1091
   source "${HOME}/scripts/lib/helpers.sh" || echo "Failed to source helpers.sh"
 fi
-
-rehash_precmd() {
-  local paccache_time
-  if [[ -e /var/cache/zsh/pacman ]]; then
-    paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
-    if ((zshcache_time < paccache_time)); then
-      rehash
-      zshcache_time="${paccache_time}"
-    fi
-  fi
-}
-
-# ---- fd ---- #
-# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
-_fzf_compgen_path() {
-  fd --hidden --exclude .git . "$1"
-}
-
-# Use fd to generate the list for directory completion
-_fzf_compgen_dir() {
-  fd --type=d --hidden --exclude .git . "$1"
-}
-
-# Advanced customization of fzf options via _fzf_comprun function
-# - The first argument to the function is the name of the command.
-# - You should make sure to pass the rest of the arguments to fzf.
-_fzf_comprun() {
-  local command=$1
-  shift
-
-  case "${command}" in
-  cd)
-    fzf --preview 'eza --tree --color=always {} | head -200' "$@"
-    ;;
-  export | unset)
-    fzf --preview "eval 'echo {}'" "$@"
-    ;;
-  ssh)
-    fzf --preview 'dig {}' "$@"
-    ;;
-  *)
-    fzf --preview "${SHOW_FILE_OR_DIR_PREVIEW}" "$@"
-    ;;
-  esac
-}
 
 # ---- Yazi ---- #
 yy() {
@@ -81,19 +37,13 @@ which() {
   (
     alias
     declare -f
-  ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot "$@"
+  ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot "$@" | shellfmt
 }
 
 gif() {
   printf '\n\n'
   sleep 0.2
   kitty +kitten icat "$1"
-}
-
-ctrl_l() {
-  builtin print -rn -- $'\r\e[0J\e[H\e[22J' >"${TTY}"
-  builtin zle .reset-prompt
-  builtin zle -R
 }
 
 gcm() {
@@ -120,13 +70,13 @@ ccr() {
 }
 
 bashc() {
-  if (($# < 1)); then
-    input="$(gum write --placeholder='Write a bash command...')"
-  else
+  if (($#)); then
     input="$*"
+  else
+    input="$(gum write --placeholder='Write a bash command...')"
   fi
+  clipcopy "${input}"
   bash -c "${input}"
-  return $?
 }
 
 # ---- Qalculate ---- #
@@ -147,7 +97,11 @@ qalc() {
 }
 
 du-dir() {
-  sudo du -h -d1 "$1" | sort -hr
+  sudo sh -c "du -h -d1 $1" | sort -hr
+}
+
+du() {
+  sudo sh -c "du -h $1" | sort -hr
 }
 
 ffprobe() {
@@ -164,13 +118,13 @@ touch() {
     if [[ ! -f "${file}" ]]; then
       dir="$(dirname "${file}")"
       if [[ ! -d "${dir}" ]]; then
-        if ! mkdir -p "${dir}"; then
+        if ! sudo mkdir -p "${dir}"; then
           log-warning "Couldn't create parent directory, skipping file: ${file}"
           continue
         fi
       fi
     fi
-    command touch "${file}"
+    sudo sh -c "touch ${file}"
   done
 }
 
@@ -207,11 +161,11 @@ bathelp() {
 }
 
 vite() {
-  trap 'printf "\r"; log-info "Vite interrupted, started cleaning"' INT
+  trap 'printf "\r"; log-info "Vite interrupted, cleaning started..."' INT
   command vite --config "${XDG_CONFIG_HOME}/vite/vite.config.js" "$@"
   for arg in "$@"; do
     if [[ -d "${arg}" && -d "${arg}/.vite" ]]; then
-      gum confirm "Remove .vite directory?" && rm -r "${arg}/.vite"
+      gum confirm "Remove ${arg}/.vite directory?" && rm -r "${arg}/.vite"
       break
     fi
   done
@@ -238,8 +192,8 @@ t-sh() {
   local prompt
   prompt="$(gum write --placeholder "Describe the shell command you need..." --width 80)"
 
-  if [[ -n "$prompt" ]]; then
-    command tgpt --shell "$prompt"
+  if [[ -n "${prompt}" ]]; then
+    command tgpt --shell "${prompt}"
   else
     log-info "Nothing to do..."
   fi
@@ -250,8 +204,8 @@ t-sh() {
 t-code() {
   local prompt
   prompt="$(gum write --placeholder "Describe the code/script to generate..." --width 80)"
-  if [[ -n "$prompt" ]]; then
-    command tgpt --code "$prompt"
+  if [[ -n "${prompt}" ]]; then
+    command tgpt --code "${prompt}"
   else
     log-info "Nothing to do..."
   fi
@@ -263,14 +217,14 @@ t-img() {
   local prompt filename
   prompt="$(gum write --placeholder "Describe the image to generate..." --width 80)"
 
-  [[ -z "$prompt" ]] && return
+  [[ -z "${prompt}" ]] && return
 
   filename="$(gum input --placeholder "Output filename (e.g., wallpaper.jpg)")"
 
-  [[ -z "$filename" ]] && filename="output.jpg"
+  [[ -z "${filename}" ]] && filename="output.jpg"
 
-  command tgpt --image --out "$filename" "$prompt"
-  log-info "Image saved to: $filename"
+  command tgpt --image --out "${filename}" "${prompt}"
+  log-info "Image saved to: ${filename}"
 }
 
 # 4. Search/Research Mode (isou)
@@ -278,8 +232,8 @@ t-img() {
 t-search() {
   local prompt
   prompt="$(gum write --placeholder "Enter your research query (Web Search)..." --width 80)"
-  if [[ -n "$prompt" ]]; then
-    command tgpt --provider isou "$prompt"
+  if [[ -n "${prompt}" ]]; then
+    command tgpt --provider isou "${prompt}"
   else
     log-info "Nothing to do..."
   fi
@@ -301,7 +255,7 @@ ai() {
     "Image (Generation)" \
     "Exit")
 
-  case "$mode" in
+  case "${mode}" in
   "Shell (Execute Commands)") t-sh ;;
   "Code (Write Scripts)") t-code ;;
   "Search (Web/Research)") t-search ;;
@@ -310,12 +264,3 @@ ai() {
   "Exit" | *) return 0 ;;
   esac
 }
-
-# Runs before any command
-# precmd() { }
-
-# Runs when changing directories
-# chpwd() { }
-
-# Runs after any command
-# preexec() { }
