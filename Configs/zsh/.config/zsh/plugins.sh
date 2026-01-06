@@ -52,16 +52,10 @@ ctrl_l() {
 }
 
 # Runs before any command
-precmd() {
-  :
-}
+# precmd() { :; }
 
 # Runs when changing directories
-chpwd() {
-  :
-}
+# chpwd() { :; }
 
 # Runs after any command
-preexec() {
-  :
-}
+# preexec() { :; }
