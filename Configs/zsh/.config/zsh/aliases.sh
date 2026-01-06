@@ -76,6 +76,14 @@ alias pscpu='n "ps | sort-by cpu -r | first 5"'
 #---- Git ---- #
 alias git-init='git init && git add -A && git commit -m "initial commit"'
 alias first-commit="git log --oneline | tail -1 | awk '{print \$1}'"
+alias gca='git-commit --ai'
+alias glg="git log --all --graph --pretty=format:'%C(magenta)%h%C(default) %an %C(yellow)%ar%C(auto) %D%n%s%n'"
+alias gc="git clone"
+alias glc='git pull origin $(git_current_branch)'
+alias glo='git pull origin'
+# --- aliases override --- #
+unalias g &>/dev/null || true
+unalias gcm &>/dev/null || true
 
 # ---- Pacman ---- #
 # Resolve 'pacman in use' error

@@ -19,5 +19,12 @@ bindkey "^[[1;5D" backward-word # Ctrl+Left
 bindkey "^z" undo
 bindkey "^y" redo
 
+# ---- Ctrl+L to clear screen and reset prompt ---- #
+ctrl_l() {
+  builtin print -rn -- $'\r\e[0J\e[H\e[22J' >"${TTY}"
+  builtin zle .reset-prompt
+  builtin zle -R
+}
+
 zle -N ctrl_l
 bindkey '^l' ctrl_l
