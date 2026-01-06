@@ -1,10 +1,11 @@
-# shellcheck disable=SC2016,SC2034
+# shellcheck disable=SC1090,SC1091,SC2016,SC2034
 
 # --- Load modules safely --- #
 config_files=(
   "${ZDOTDIR}/variables.sh"
   "${ZDOTDIR}/functions.sh"
   "${ZDOTDIR}/aliases.sh"
+  "${ZDOTDIR}/plugins.sh"
   "${ZDOTDIR}/keybinds.sh"
   "${ZDOTDIR}/secrets.sh"
 )
@@ -16,7 +17,7 @@ done
 # ---- Zinit ----- #
 # ---- Download Zinit, if it's not there yet ----- #
 [[ ! -d "${ZINIT_HOME}" ]] && mkdir -p "$(dirname "${ZINIT_HOME}")"
-[[ ! -d "${ZINIT_HOME}"/.git ]] && git clone https://github.com/zdharma-continuum/zinit.git "${ZINIT_HOME}"
+[[ ! -d "${ZINIT_HOME}"/.git ]] && git clone 'https://github.com/zdharma-continuum/zinit.git' "${ZINIT_HOME}"
 
 # ---- Source/Load zinit ----- #
 source "${ZINIT_HOME}/zinit.zsh"
@@ -30,8 +31,8 @@ promptinit
 # ---- Prompt Starship ----- #
 # eval "$(starship init zsh)"
 zinit ice as"command" from"gh-r" \
-          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
-          atpull"%atclone" src"init.zsh"
+  atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+  atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 
 # ---- Add in zsh plugins ----- #
@@ -53,7 +54,6 @@ zinit light-mode for \
   zdharma-continuum/zinit-annex-patch-dl \
   zdharma-continuum/zinit-annex-rust
 
-
 ### End of Zinit's installer chunk
 
 # ---- Add in snippets ----- #
@@ -67,16 +67,16 @@ zinit snippet OMZP::extract
 # ---- zsh options ----- #
 setopt extendedglob
 unsetopt nomatch
-setopt AUTO_CD  # Type directory name to cd into it
+setopt AUTO_CD # Type directory name to cd into it
 
 # ---- History ----- #
-setopt extended_history       # Enable timestamps in history
-setopt share_history          # Share history across shells
-setopt inc_append_history     # Add commands to history immediately
-setopt hist_ignore_space      # Ignore commands starting with space
-setopt hist_ignore_all_dups   # Remove older duplicate entries
-setopt hist_save_no_dups      # Don't save duplicates to history file
-setopt hist_find_no_dups      # Skip duplicates when searching history
+setopt extended_history     # Enable timestamps in history
+setopt share_history        # Share history across shells
+setopt inc_append_history   # Add commands to history immediately
+setopt hist_ignore_space    # Ignore commands starting with space
+setopt hist_ignore_all_dups # Remove older duplicate entries
+setopt hist_save_no_dups    # Don't save duplicates to history file
+setopt hist_find_no_dups    # Skip duplicates when searching history
 
 # ---- Completion styling ----- #
 # disable sort when completing `git checkout`
@@ -153,6 +153,9 @@ fi
 # ---- rtx (asdf clone) ---- #
 [[ -s "${XDG_DATA_HOME}/cargo/bin/rtx" ]] && eval "$("${XDG_DATA_HOME}/cargo/bin/rtx" activate zsh)"
 
+# Micromamba setup
+[[ -s "${XDG_DATA_HOME}/micromamba.sh" ]] && source "${XDG_DATA_HOME}/micromamba.sh"
+
 # --- git aliases (override) --- #
 unalias g || true
 unalias gcm || true
@@ -162,5 +165,3 @@ alias gc="git clone"
 alias glc='git pull origin $(git_current_branch)'
 alias glo='git pull origin'
 
-# bun completions
-[ -s "/home/othman/.local/share/bun/_bun" ] && source "/home/othman/.local/share/bun/_bun"

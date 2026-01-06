@@ -16,6 +16,7 @@ alias path='printenv PATH | tr ":" "\n" | sed "s|$HOME|~|g" | no-dups | sort'
 # ---- Bat (better cat) ----- #
 alias -g -- --help='--help 2>&1 | command bat --language=help --style=plain --color=auto'
 alias cat="command bat --paging=never --style=plain --color=auto"
+alias catwhich="batwhich"
 
 # ---- Zoxide (better cd) ----- #
 alias cd="z"

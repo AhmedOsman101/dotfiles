@@ -226,6 +226,9 @@ export PARALLEL_HOME="${XDG_CONFIG_HOME}/parallel"
 # --- Pass --- #
 export PASSWORD_STORE_DIR="${HOME}/.password-store"
 
+# --- Piper voices directory --- #
+export PIPER_DIR="${XDG_DATA_HOME}/piper"
+
 # --- PHP Codesniffer --- #
 export PHPCS_CONFIG_PATH="${XDG_CONFIG_HOME}/php-codesniffer/ruleset.xml"
 
@@ -261,7 +264,6 @@ export SQLITE_HISTORY="${XDG_CACHE_HOME}/sqlite_history"
 
 # --- Terminal --- #
 export TERMINAL="kitty"
-export TERM="xterm-256color"
 export COLORTERM="truecolor"
 
 # --- Texfm --- #
