@@ -14,12 +14,12 @@ alias getgpu="lspci -k -d ::03xx"
 alias path='printenv PATH | tr ":" "\n" | sed "s|$HOME|~|g" | no-dups | sort'
 
 # ---- Bat (better cat) ----- #
-alias -g -- --help='--help 2>&1 | command bat --language=help --style=plain --color=auto'
 alias cat="command bat --paging=never --style=plain --color=auto"
 alias catwhich="batwhich"
 
 # ---- Zoxide (better cd) ----- #
 alias cd="z"
+alias cdroot='cd "$(git-root)"'
 
 # ---- Eza (better ls) ----- #
 alias ls='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza --all --color=always --long --git --icons=always --no-time --no-user --sort name --group-directories-first'
@@ -169,3 +169,6 @@ alias lorem='shlorem'
 
 # --- mancat --- #
 alias mancat='man --pager="bat --paging=never --style=plain --color=auto --language=man"'
+
+# --- Global aliases --- #
+alias -g -- --help='--help 2>&1 | command bat --language=help --style=plain --color=auto'
