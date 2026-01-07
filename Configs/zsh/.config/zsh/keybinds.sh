@@ -16,8 +16,8 @@ bindkey "^[[1;5C" forward-word  # Ctrl+Right
 bindkey "^[[1;5D" backward-word # Ctrl+Left
 
 # ---- Undo and Redo ---- #
-bindkey "^z" undo
-bindkey "^y" redo
+bindkey "^Z" undo
+bindkey "^Y" redo
 
 # ---- Ctrl+L to clear screen and reset prompt ---- #
 ctrl_l() {
@@ -27,20 +27,27 @@ ctrl_l() {
 }
 
 zle -N ctrl_l
-bindkey '^l' ctrl_l
+bindkey '^L' ctrl_l
 
 # --- Open buffer line editor (Ctrl+x Ctrl+e) --- #
 zle -N edit-command-line
-bindkey '^x^e' edit-command-line
+bindkey '^X^E' edit-command-line
 
-# ---- copy current command ---- #
-copy-cmd() {
-  clipcopy "${BUFFER}"
-  zle -M "Copied buffer to clipboard"
+# ---- Copy current buffer ---- #
+copybuffer() {
+  if builtin which clipcopy &>/dev/null; then
+    clipcopy "${BUFFER}"
+    zle -M "Copied buffer to clipboard"
+  else
+    zle -M "clipcopy not found. Please make sure you have Scripts installed correctly."
+  fi
 }
 
-zle -N copy-cmd
-bindkey '^x^c' copy-cmd
+zle -N copybuffer
+
+bindkey -M emacs "^O" copybuffer
+bindkey -M viins "^O" copybuffer
+bindkey -M vicmd "^O" copybuffer
 
 # --- Magic space --- #
 bindkey '^[[Z' magic-space
