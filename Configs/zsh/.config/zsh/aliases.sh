@@ -11,7 +11,7 @@ alias pwdcp='clipcopy ${PWD}'
 alias python="python3"
 alias pip="pip3"
 alias getgpu="lspci -k -d ::03xx"
-alias path='printenv PATH | tr ":" "\n" | sed "s|$HOME|~|g" | no-dups | sort'
+alias paths='printenv PATH | tr ":" "\n" | sed "s|$HOME|~|g" | no-dups | sort'
 
 # ---- Bat (better cat) ----- #
 alias cat="command bat --paging=never --style=plain --color=auto"
@@ -168,6 +168,9 @@ alias mancat='man --pager="bat --paging=never --style=plain --color=auto --langu
 
 # --- jless (pager for json/yaml) --- #
 alias yless='jless --yaml'
+
+# --- less --- #
+alias less='less -R -F -X'
 
 # --- Suffix aliases --- #
 alias -s json='jless'
