@@ -41,3 +41,6 @@ copy-cmd() {
 
 zle -N copy-cmd
 bindkey '^x^c' copy-cmd
+
+# --- Magic space --- #
+bindkey '^[[Z' magic-space
