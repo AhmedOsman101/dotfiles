@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # ---- Key Bindings ---- #
-# ---- 1. Remove emacs-style keybinds ---- #
-bindkey -e # We'll override specific keys
+# ---- 1. Enable emacs keybinds ---- #
+bindkey -e
 
 # ---- Bind Home and End keys ---- #
 bindkey "^[[H" beginning-of-line # Home
@@ -32,3 +32,12 @@ bindkey '^l' ctrl_l
 # --- Open buffer line editor (Ctrl+x Ctrl+e) --- #
 zle -N edit-command-line
 bindkey '^x^e' edit-command-line
+
+# ---- copy current command ---- #
+copy-cmd() {
+  clipcopy "${BUFFER}"
+  zle -M "Copied buffer to clipboard"
+}
+
+zle -N copy-cmd
+bindkey '^x^c' copy-cmd
