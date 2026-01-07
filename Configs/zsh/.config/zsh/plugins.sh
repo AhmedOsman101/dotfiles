@@ -23,6 +23,7 @@ zinit light 'zsh-users/zsh-completions'                  # Extra completion defs
 zinit light 'hlissner/zsh-autopair'                      # Auto-close brackets/quotes
 zinit light 'AhmedOsman101/archlinux-zsh-plugin'         # Useful package manager commands
 zinit light 'zsh-users/zsh-autosuggestions'              # History-based suggestions
+zinit light 'olets/zsh-transient-prompt'                 # Transient prompt for zsh
 # zinit light 'larkery/zsh-histdb'                         # SQLite-backed history
 
 # Load a few important annexes, without Turbo
