@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# shellcheck disable=2142
+# shellcheck disable=SC2142,SC2139
 
 # ---- Aliases ----- #
 alias zshrc='${EDITOR} ${ZSHRC}'
@@ -54,9 +54,9 @@ alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 # ---- Wget ---- #
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 
-# ---- Confirm before overwriting something ---- #
-alias cp="cp -iv"
-alias mv="mv -iv"
+# ---- Copy and move with progress bars! ---- #
+alias cp='advcp -ivg'
+alias mv='advmv -ivg'
 
 # ---- Trash-cli (better rm & rmdir) ----- #
 alias rm="rmtrash"
@@ -101,9 +101,6 @@ alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacma
 # ---- Cargo ---- #
 alias cb="cargo build"
 
-# ---- Nushell ---- #
-[[ -n $(command -v n) ]] || alias n='nu --config ${NU_CONFIG} -c'
-
 # ---- Capslock ---- #
 alias caps="xdotool key Caps_Lock"
 alias CAPS="xdotool key Caps_Lock"
@@ -144,7 +141,6 @@ alias sw='switch-branch'
 # --- Mask (maskfile) --- #
 if command -v mask &>/dev/null; then
   unalias mask &>/dev/null
-  # shellcheck disable=2139
   alias task="$(command -v mask)"
   alias mask='mask --maskfile "$(git-root 2>/dev/null || pwd)/maskfile.md"'
 fi
@@ -186,4 +182,3 @@ alias -g NO='>/dev/null'
 alias -g NUL='&>/dev/null'
 alias -g C='| clipcopy'
 alias -g L='| less'
-
