@@ -42,3 +42,13 @@ zinit snippet OMZP::extract
 
 # --- Open buffer line editor --- #
 autoload -Uz edit-command-line
+
+# --- ZMV advanced file move --- #
+autoload zmv
+
+# --- run-help will use man instead of less --- #
+autoload -Uz run-help
+unalias run-help &>/dev/null
+
+# --- Enable binding functions to hooks --- #
+autoload -Uz add-zsh-hook
