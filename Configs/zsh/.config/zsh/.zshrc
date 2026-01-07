@@ -1,7 +1,7 @@
 # shellcheck disable=SC1090,SC1091,SC2016,SC2034
 
 # ---- Interactive shell guard ---- #
-# [[ -o interactive ]] || return
+[[ -o interactive ]] || return
 
 # ---- Zinit bootstrap ---- #
 : "${ZINIT_HOME:=${XDG_DATA_HOME:-$HOME/.local/share}/zinit}"
