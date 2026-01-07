@@ -19,6 +19,7 @@ rehash_precmd() {
 python-hook() {
   if [[ -n "${VIRTUAL_ENV}" && "${PWD}" != *"${VIRTUAL_ENV:h}"* ]]; then
     deactivate
+    zle -M "Deactivated venv"
     return
   fi
 
@@ -29,9 +30,11 @@ python-hook() {
   while [[ "${dir}" != "/" ]]; do
     if [[ -f "${dir}/.venv/bin/activate" ]]; then
       source "${dir}/.venv/bin/activate"
+      zle -M "Activated venv"
       return
     elif [[ -f "${dir}/venv/bin/activate" ]]; then
       source "${dir}/venv/bin/activate"
+      zle -M "Activated venv"
       return
     fi
     dir="${dir:h}"
