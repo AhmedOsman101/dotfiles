@@ -138,7 +138,6 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
 # --- Gnupg --- #
 export GNUPGHOME="${HOME}/.gnupg"
-export GPG_TTY="$(tty)"
 
 # --- Go --- #
 export GOPATH="${XDG_DATA_HOME}/go"
