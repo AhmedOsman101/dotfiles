@@ -298,9 +298,14 @@ format = " [$symbol($version )]($style)"
 disabled = true
 
 [shell]
-disabled = true
-bash_indicator = " "
-zsh_indicator = " "
+disabled = false
+bash_indicator = ""
+zsh_indicator = ""
+fish_indicator = '󰈺 '
+nu_indicator = '𝛈'
+powershell_indicator = '_'
+unknown_indicator = 'mystery shell'
+style = 'blue bold'
 format = "[$indicator]($style) "
 
 [status]
@@ -309,7 +314,8 @@ symbol = '🔴 '
 success_symbol = ''
 format = '[\[$symbol$common_meaning$signal_name$maybe_int\]]($style) '
 map_symbol = true
-pipestatus = false
+pipestatus = true
+recognize_signal_code = true
 
 [git_metrics]
 disabled = true
