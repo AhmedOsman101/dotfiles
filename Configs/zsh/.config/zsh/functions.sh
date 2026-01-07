@@ -125,13 +125,13 @@ touch() {
     if [[ ! -f "${file}" ]]; then
       dir="$(dirname "${file}")"
       if [[ ! -d "${dir}" ]]; then
-        if ! sudo mkdir -p "${dir}"; then
+        if ! mkdir -p "${dir}"; then
           log-warning "Couldn't create parent directory, skipping file: ${file}"
           continue
         fi
       fi
     fi
-    sudo sh -c "touch ${file}"
+    command touch "${file}"
   done
 }
 
