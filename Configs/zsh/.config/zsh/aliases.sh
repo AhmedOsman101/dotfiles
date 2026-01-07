@@ -170,5 +170,20 @@ alias lorem='shlorem'
 # --- mancat --- #
 alias mancat='man --pager="bat --paging=never --style=plain --color=auto --language=man"'
 
+# --- jless (pager for json/yaml) --- #
+alias yless='jless --yaml'
+
+# --- Suffix aliases --- #
+alias -s json='jless'
+alias -s yml='yless'
+alias -s yaml='yless'
+alias -s md='frogmouth'
+
 # --- Global aliases --- #
 alias -g -- --help='--help 2>&1 | command bat --language=help --style=plain --color=auto'
+alias -g NE='2>/dev/null'
+alias -g NO='>/dev/null'
+alias -g NUL='&>/dev/null'
+alias -g C='| clipcopy'
+alias -g L='| less'
+
