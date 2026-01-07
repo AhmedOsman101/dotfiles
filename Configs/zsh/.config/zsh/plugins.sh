@@ -14,16 +14,15 @@ else
   zinit light starship/starship
 fi
 
-# ---- Add in zsh plugins ---- #
-zinit light Aloxaf/fzf-tab
-zinit light zdharma-continuum/fast-syntax-highlighting
-zinit light "MichaelAquilina/zsh-you-should-use"
-zinit light "AhmedOsman101/zsh-auto-notify-fork"
-zinit light zsh-users/zsh-completions
-# zinit light "marlonrichert/zsh-autocomplete"
-zinit light hlissner/zsh-autopair
-zinit light zsh-users/zsh-autosuggestions
-zinit light larkery/zsh-histdb
+# ---- Add zsh Plugins ---- #
+zinit light 'zdharma-continuum/fast-syntax-highlighting' # Fast async syntax highlighting
+zinit light 'hlissner/zsh-autopair'                      # Auto-close brackets/quotes
+zinit light 'Aloxaf/fzf-tab'                             # fzf-powered tab completion
+zinit light 'zsh-users/zsh-completions'                  # Extra completion defs
+zinit light 'MichaelAquilina/zsh-you-should-use'         # Suggest existing aliases
+zinit light 'AhmedOsman101/zsh-auto-notify-fork'         # Notify on long commands
+zinit light 'zsh-users/zsh-autosuggestions'              # History-based suggestions
+zinit light 'larkery/zsh-histdb'                         # SQLite-backed history
 
 # Load a few important annexes, without Turbo
 zinit light-mode for \
@@ -33,12 +32,11 @@ zinit light-mode for \
   zdharma-continuum/zinit-annex-rust
 
 # ---- Add in snippets ---- #
-zinit snippet OMZP::git
-zinit snippet OMZP::command-not-found
-zinit snippet OMZP::copyfile
-zinit snippet OMZP::copypath
-zinit snippet OMZP::dirhistory
-zinit snippet OMZP::extract
+zinit snippet OMZP::git               # Git aliases & helpers
+zinit snippet OMZP::command-not-found # Suggest packages for missing commands
+zinit snippet OMZP::dirhistory        # Alt+ <- / Alt+ -> directory navigation
+zinit snippet OMZP::extract           # `x` -> extract any archive
+zinit snippet OMZP::alias-finder      # Suggest existing aliases for commands
 
 # --- Open buffer line editor --- #
 autoload -Uz edit-command-line

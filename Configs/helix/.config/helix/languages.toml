@@ -16,6 +16,8 @@ formatter = { command = "astyle" }
 [[language]]
 name = "bash"
 language-servers = ["bash-language-server", "scls"]
+formatter = { command = "shellfmt" }
+
 
 [language-server.bash-language-server.config]
 includeAllWorkspaceSymbols = true
