@@ -27,7 +27,7 @@ function transient_precmd() {
   else
     TRANSIENT_CHAR='%F{red}✗%f '
   fi
-  # log-debug "${TRANSIENT_CHAR} LAST_CMD: ${LAST_EXECUTED_CMD} - code: ${_status}"
+  printf '\n'
 }
 
 add-zsh-hook preexec transient_preexec
