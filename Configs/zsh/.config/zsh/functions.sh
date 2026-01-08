@@ -44,7 +44,7 @@ which() {
     --show-tilde \
     --show-dot \
     "$@" |
-    shellfmt
+    shellfmt 2>/dev/null
 }
 
 gif() {

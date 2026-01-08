@@ -314,7 +314,7 @@ symbol = '🔴 '
 success_symbol = ''
 format = '[\[$symbol$common_meaning$signal_name$maybe_int\]]($style) '
 map_symbol = true
-pipestatus = true
+pipestatus = false
 recognize_signal_code = true
 
 [git_metrics]
