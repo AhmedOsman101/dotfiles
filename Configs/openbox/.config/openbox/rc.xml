@@ -20,8 +20,8 @@
   <placement>
     <policy>Smart</policy>
     <center>yes</center>
-    <monitor>Mouse</monitor>
-    <primaryMonitor>Mouse</primaryMonitor>
+    <monitor>Active</monitor>
+    <primaryMonitor/>
   </placement>
   <!-- Theme -->
   <theme>
@@ -1051,6 +1051,15 @@
       <focus>yes</focus>
       <decor>yes</decor>
       <cursor>Bibata</cursor>
+      <position>
+        <x>center</x>
+        <y>center</y>
+      </position>
+    </application>
+    <application class="zen">
+      <decor>no</decor>
+      <focus>yes</focus>
+      <maximized>yes</maximized>
     </application>
     <application name="obconf-qt">
       <position force="yes">
@@ -1061,9 +1070,6 @@
         <width>50%</width>
       </size>
     </application>
-    <application title="MPlayer">
-      <decor>no</decor>
-    </application>
     <application title="Nitrogen">
       <position force="yes">
         <x>center</x>
@@ -1071,10 +1077,22 @@
       </position>
     </application>
     <application class="Alacritty">
-      <position>
+      <position force="yes">
         <x>center</x>
         <y>center</y>
       </position>
+      <fullscreen>yes</fullscreen>
+      <decor>no</decor>
+      <focus>yes</focus>
+    </application>
+    <application class="kitty">
+      <maximized>yes</maximized>
+      <position force="yes">
+        <x>center</x>
+        <y>center</y>
+      </position>
+      <focus>yes</focus>
+      <decor>no</decor>
     </application>
     <!--
   # this is an example with comments through out. use these to make your
