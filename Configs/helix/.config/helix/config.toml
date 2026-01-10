@@ -76,7 +76,7 @@ v = ":clipboard-paste-replace"
 
 F = ["file_picker"]
 E = ["file_explorer"]
-f = ["file_picker_in_current_buffer_directory"]
+f = ["file_picker_in_current_directory"]
 e = ["file_explorer_in_current_buffer_directory"]
 
 [keys.select."space"]
@@ -84,7 +84,7 @@ v = ":clipboard-paste-replace"
 
 F = ["file_picker"]
 E = ["file_explorer"]
-f = ["file_picker_in_current_buffer_directory"]
+f = ["file_picker_in_current_directory"]
 e = ["file_explorer_in_current_buffer_directory"]
 
 [keys.normal]

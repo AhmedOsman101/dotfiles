@@ -179,7 +179,7 @@ alias -s yaml='yless'
 alias -s md='frogmouth'
 
 # --- Global aliases --- #
-alias -g -- --help='--help 2>&1 | command bat --language=help --style=plain --color=auto'
+alias -g H='--help 2>&1 | command bat --language=help --style=plain --color=auto'
 alias -g NE='2>/dev/null'
 alias -g NO='>/dev/null'
 alias -g NUL='&>/dev/null'
