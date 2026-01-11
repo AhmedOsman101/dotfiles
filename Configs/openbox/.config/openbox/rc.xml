@@ -1,7 +1,4 @@
-<?xml version="1.0"?>
-<!-- Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com> -->
-<!-- ################################ General Settings ################################ -->
-<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" ?><!-- Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com> --><!-- ################################ General Settings ################################ --><openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <!-- Resistance -->
   <resistance>
     <strength>10</strength>
@@ -1098,5 +1095,7 @@
       <maximized>yes</maximized>
       <focus>yes</focus>
     </application>
-  </applications>
+  
+<application name="pavucontrol" class="pavucontrol" title="Volume Control" type="normal"><maximized>yes</maximized></application>
+</applications>
 </openbox_config>
