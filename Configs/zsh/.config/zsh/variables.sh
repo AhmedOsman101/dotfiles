@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# --- Increase the FUNCNEST limit ---- #
-FUNCNEST=99999
-export SHLVL=10
-
 # --- Localization --- #
 # export GTK_IM_MODULE="fcitx"
 # export QT_IM_MODULE="fcitx"
@@ -27,6 +23,7 @@ export AUTO_NOTIFY_IGNORE=(
   "n" "tempedit" "bun run" "bunx"
   "sudoedit" "distrobox" "db" "repeat-it"
   "composer" "mask view" "uv run" "fish"
+  "opencode" "gemini"
 )
 export AUTO_NOTIFY_THRESHOLD=30
 export AUTO_NOTIFY_ICON_SUCCESS="${XDG_DATA_HOME}/icons/success-failure-icons/success.svg"
@@ -45,6 +42,9 @@ export ASDF_DIR="${ASDF_DATA_DIR}"
 export ARTISTIC_STYLE_OPTIONS="${XDG_CONFIG_HOME}/.astylerc"
 export ARTISTIC_STYLE_PROJECT_OPTIONS="${XDG_CONFIG_HOME}/.astylerc"
 
+# --- Anthropic --- #
+export ANTHROPIC_BASE_URL=https://agentrouter.org/
+
 # --- Bat --- #
 export BATDIFF_USE_DELTA=true
 
@@ -53,7 +53,10 @@ export BUN_INSTALL="${XDG_DATA_HOME}/bun"
 
 # --- Biome --- #
 export BIOME_CONFIG_PATH="${XDG_CONFIG_HOME}/biome/biome.json"
-export BIOME_BINARY="$(command -v biome 2>/dev/null)"
+if command -v biome &>/dev/null; then
+  BIOME_VERSION="$(biome --version | awk '{print $2}')"
+  export BIOME_VERSION
+fi
 
 # --- Ruby Bundle --- #
 export BUNDLE_USER_CONFIG="${XDG_CONFIG_HOME}/bundle"
