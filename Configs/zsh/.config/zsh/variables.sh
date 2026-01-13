@@ -67,7 +67,8 @@ export BUNDLE_USER_PLUGIN="${XDG_DATA_HOME}/bundle"
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 
 # --- Chrome --- #
-export CHROME_EXECUTABLE="$(command -v thorium-browser 2>/dev/null)"
+CHROME_EXECUTABLE="$(command -v thorium-browser 2>/dev/null)"
+export CHROME_EXECUTABLE
 
 # --- Cuda --- #
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
@@ -103,30 +104,6 @@ export DOAS_NOPASS="${XDG_CONFIG_HOME}/doas/doas.conf"
 export DENO_UNSTABLE_SLOPPY_IMPORTS="true"
 
 # --- FZF ---- #
-SHOW_FILE_OR_DIR_PREVIEW="$(
-  cat <<'EOF'
-if [[ -d {} ]]; then
-  eza --all --tree --color=auto --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor" {} | head -n 200
-elif [[ {} =~ \.(md|markdown)$ ]]; then
-  if command -v mdcat 2>/dev/null; then
-    mdcat {}
-  elif command -v glow 2>/dev/null; then
-    glow {}
-  elif command -v bat 2>/dev/null; then
-    bat --color=always --line-range :500 {}
-  else
-    head -n 500 {}
-  fi
-else
-  if command -v bat 2>/dev/null; then
-    bat --color=always --line-range :500 {} || file {}
-  else
-    head -n 500 {}
-  fi
-fi
-EOF
-)"
-
 # Use fd instead of fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_DEFAULT_OPTS=" \
@@ -136,7 +113,7 @@ export FZF_DEFAULT_OPTS=" \
 --multi"
 export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
-export FZF_CTRL_T_OPTS="--preview '${SHOW_FILE_OR_DIR_PREVIEW}'"
+export FZF_CTRL_T_OPTS="--preview 'fzf-preview {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
 # --- Gnupg --- #
@@ -264,7 +241,8 @@ export PUB_CACHE="/mnt/main/pub-cache"
 export RUSTUP_HOME="${XDG_DATA_HOME}/rustup"
 
 # --- Sudo --- #
-export SUDO_ASKPASS="$(get-askpass)"
+SUDO_ASKPASS="$(get-askpass)"
+export SUDO_ASKPASS
 
 # --- Starship --- #
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship.toml"

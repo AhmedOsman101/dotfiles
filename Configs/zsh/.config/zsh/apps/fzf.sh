@@ -21,7 +21,7 @@ _fzf_comprun() {
   shift
 
   case "${command}" in
-  cd)
+  cd | z)
     fzf --preview 'eza --tree --color=always {} | head -200' "$@"
     ;;
   export | unset)
@@ -31,7 +31,7 @@ _fzf_comprun() {
     fzf --preview 'dig {}' "$@"
     ;;
   *)
-    fzf --preview "${SHOW_FILE_OR_DIR_PREVIEW}" "$@"
+    fzf --preview "fzf-preview {}" "$@"
     ;;
   esac
 }
