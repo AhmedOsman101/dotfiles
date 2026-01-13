@@ -22,11 +22,15 @@ alias cd="z"
 alias cdroot='cd "$(git-root)"'
 
 # ---- Eza (better ls) ----- #
-alias ls='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza --all --color=always --long --git --icons=always --no-time --no-user --sort name --group-directories-first'
-alias lsu='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza --all --color=always --long --git --icons=always --no-time --sort name --group-directories-first'
+_ls_alias='eza --all --color=auto --long --icons --no-time --no-user --sort name --group-directories-first --total-size'
+_lst_alias='eza --all --color=auto --long --icons --no-time --no-user --sort name --group-directories-first --total-size --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor" --no-permissions --tree'
 
-alias lst='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza -T --all --color=always --long --git --icons=always --no-time --no-user --sort name --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor" --group-directories-first'
-alias lstu='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A eza -T --all --color=always --long --git --icons=always --no-time --sort name --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor" --group-directories-first'
+alias ls="${_ls_alias}"
+alias lsu="SUDO_ASKPASS='$SCRIPTS_DIR/echopass' sudo -A ${_ls_alias}"
+
+alias lst="${_lst_alias}"
+alias lstu="SUDO_ASKPASS='$SCRIPTS_DIR/echopass' sudo -A ${_lst_alias}"
+unset _ls_alias _lst_alias
 
 # ---- Micro (better nano) ----- #
 alias nano="micro"
