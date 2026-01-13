@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ -f "${HOME}/scripts/lib/helpers.sh" ]]; then
-  # shellcheck disable=SC1091
+  # shellcheck disable=1091
   source "${HOME}/scripts/lib/helpers.sh" || echo "Failed to source helpers.sh"
 fi
 
@@ -137,7 +137,8 @@ touch() {
 
 bat() {
   local -a flags
-  local lines=$((0)) count
+  local lines=0 
+  local limit count
 
   builtin cd "${PWD}" || return 1
 
@@ -148,14 +149,13 @@ bat() {
   )
 
   for arg in "$@"; do
-    if [[ -f "${arg}" ]]; then
+    if [[ -r "${arg}" ]]; then
       count=$(wc -l "${arg}" | awk '{print $1}')
       lines=$((lines + count))
     fi
   done
 
   ((lines *= 100))
-  local limit
   limit=$(((COLUMNS / 2) * 100))
 
   ((lines > limit)) && flags+=(--pager=builtin)
