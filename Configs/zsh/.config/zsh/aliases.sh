@@ -170,7 +170,7 @@ alias mancat='man --pager="bat --paging=never --style=plain --color=auto --langu
 alias yless='jless --yaml'
 
 # --- less --- #
-alias less='less -R -F -X'
+alias less='less -RFX'
 
 # --- Suffix aliases --- #
 alias -s json='jless'
@@ -185,3 +185,5 @@ alias -g NO='>/dev/null'
 alias -g NUL='&>/dev/null'
 alias -g C='| clipcopy'
 alias -g L='| less'
+alias -g J='| jq .'
+alias -g JL='| jless'
