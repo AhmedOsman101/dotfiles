@@ -137,7 +137,7 @@ touch() {
 
 bat() {
   local -a flags
-  local lines=0 
+  local lines=0
   local limit count
 
   builtin cd "${PWD}" || return 1
@@ -270,4 +270,64 @@ ai() {
   "Image (Generation)") t-img ;;
   "Exit" | *) return 0 ;;
   esac
+}
+
+# ---- Eza (better ls) ----- #
+# Common flags for all eza calls
+_eza_common_flags=(
+  '--all'
+  '--color=auto'
+  '--long'
+  '--icons'
+  '--no-time'
+  '--no-user'
+  '--sort=name'
+  '--group-directories-first'
+)
+
+# Ignore pattern for tree listings
+_eza_ignore_glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor"
+
+# Common flags for tree listings
+_tree_common_flags=(
+  "${_eza_common_flags[@]}"
+  "--ignore-glob=${_eza_ignore_glob}"
+  '--no-permissions'
+  '--tree'
+)
+
+ls() {
+  local args=("$@")
+
+  # Try with --total-size first, with timeout
+  if ! timeout 3 eza "${_eza_common_flags[@]}" --total-size "${args[@]}"; then
+    # fallback without --total-size
+    eza "${_eza_common_flags[@]}" "${args[@]}"
+  fi
+}
+
+lsu() {
+  local args=("$@")
+
+  # Try with --total-size first, with timeout
+  if ! timeout 3 sudo -A eza "${_eza_common_flags[@]}" --total-size "${args[@]}"; then
+    # fallback without --total-size
+    sudo -A eza "${_eza_common_flags[@]}" "${args[@]}"
+  fi
+}
+
+lst() {
+  local args=("$@")
+
+  if ! timeout 3 eza "${_tree_common_flags[@]}" --total-size "${args[@]}"; then
+    eza "${_tree_common_flags[@]}" "${args[@]}"
+  fi
+}
+
+lstu() {
+  local args=("$@")
+
+  if ! timeout 3 sudo -A eza "${_tree_common_flags[@]}" --total-size "${args[@]}"; then
+    sudo -A eza "${_tree_common_flags[@]}" "${args[@]}"
+  fi
 }

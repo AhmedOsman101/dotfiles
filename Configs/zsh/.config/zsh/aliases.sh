@@ -21,17 +21,6 @@ alias catwhich="batwhich"
 alias cd="z"
 alias cdroot='cd "$(git-root)"'
 
-# ---- Eza (better ls) ----- #
-_ls_alias='eza --all --color=auto --long --icons --no-time --no-user --sort name --group-directories-first --total-size'
-_lst_alias='eza --all --color=auto --long --icons --no-time --no-user --sort name --group-directories-first --total-size --ignore-glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor" --no-permissions --tree'
-
-alias ls="${_ls_alias}"
-alias lsu="SUDO_ASKPASS='$SCRIPTS_DIR/echopass' sudo -A ${_ls_alias}"
-
-alias lst="${_lst_alias}"
-alias lstu="SUDO_ASKPASS='$SCRIPTS_DIR/echopass' sudo -A ${_lst_alias}"
-unset _ls_alias _lst_alias
-
 # ---- Micro (better nano) ----- #
 alias nano="micro"
 alias mc="micro"
