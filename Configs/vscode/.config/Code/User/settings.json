@@ -982,8 +982,7 @@
 	"rust-analyzer.rustfmt.extraArgs": [
 		"--config-path",
 		"/home/othman/.config/rustfmt.toml"
-	],
-	"codesnap.shutterAction": "copy",
+  ],
 	"php.inlayHints.types.return": "named",
 	"workbench.editor.showTabIndex": true,
 	"terminal.integrated.copyOnSelection": true,
