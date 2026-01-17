@@ -331,3 +331,14 @@ lstu() {
     sudo -A eza "${_tree_common_flags[@]}" "${args[@]}"
   fi
 }
+
+advrm() {
+  local dir="$1" total_files total_dirs
+
+  total_files="$(find "${dir}" -type f | wc -l)"
+  total_dirs="$(find "${dir}" -type d | wc -l)"
+
+  log-info "Deleting ${total_dirs} directories with ${total_files} files"
+  find "${dir}" -type f -print0 | pv -0 -l -s "${total_files}" | xargs -0 rm -f
+  rm -rf "${dir}" # remove empty directories
+}
