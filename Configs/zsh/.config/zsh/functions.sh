@@ -310,7 +310,7 @@ lsu() {
   local args=("$@")
 
   # Try with --total-size first, with timeout
-  if ! timeout 3 sudo -A eza "${_eza_common_flags[@]}" --total-size "${args[@]}"; then
+  if ! timeout 5 sudo -A eza "${_eza_common_flags[@]}" --total-size "${args[@]}"; then
     # fallback without --total-size
     sudo -A eza "${_eza_common_flags[@]}" "${args[@]}"
   fi
@@ -327,7 +327,7 @@ lst() {
 lstu() {
   local args=("$@")
 
-  if ! timeout 3 sudo -A eza "${_tree_common_flags[@]}" --total-size "${args[@]}"; then
+  if ! timeout 5 sudo -A eza "${_tree_common_flags[@]}" --total-size "${args[@]}"; then
     sudo -A eza "${_tree_common_flags[@]}" "${args[@]}"
   fi
 }
