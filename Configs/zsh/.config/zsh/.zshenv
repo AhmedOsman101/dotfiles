@@ -58,3 +58,6 @@ export HISTDB_TABULATE_CMD=(column -t -s $'\x1f')
 
 # --- PATH --- #
 export PATH="${PATH}:${SCRIPTS_DIR}:${HOME}/.local/bin" # my custom scripts
+
+# --- FPATH --- #
+export FPATH="${ZDOTDIR}/functions:${FPATH}"
