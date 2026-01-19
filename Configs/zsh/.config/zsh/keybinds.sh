@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # ---- Key Bindings ---- #
-# ---- 1. Enable emacs keybinds ---- #
+# ---- Enable emacs keybinds ---- #
 bindkey -e
 
 # ---- Bind Home and End keys ---- #
@@ -16,10 +16,10 @@ bindkey "^[[1;5C" forward-word  # Ctrl+Right
 bindkey "^[[1;5D" backward-word # Ctrl+Left
 
 # ---- Undo and Redo ---- #
-bindkey "^Z" undo
-bindkey "^Y" redo
+bindkey "^Z" undo # Ctrl+z
+bindkey "^Y" redo # Ctrl+y
 
-# ---- Ctrl+L to clear screen and reset prompt ---- #
+# ---- Clear screen and reset prompt (Ctrl+l) ---- #
 ctrl_l() {
   builtin print -rn -- $'\r\e[0J\e[H\e[22J' >"${TTY}"
   builtin zle .reset-prompt
@@ -35,7 +35,7 @@ bindkey '^X^E' edit-command-line
 
 # ---- Copy current buffer ---- #
 copybuffer() {
-  if builtin which clipcopy &>/dev/null; then
+  if command -v clipcopy &>/dev/null; then
     clipcopy "${BUFFER}"
     zle -M "Copied buffer to clipboard"
   else
@@ -45,9 +45,10 @@ copybuffer() {
 
 zle -N copybuffer
 
+# --- Copy current terminal buffer (Ctrl+o) --- #
 bindkey -M emacs "^O" copybuffer
 bindkey -M viins "^O" copybuffer
 bindkey -M vicmd "^O" copybuffer
 
-# --- Magic space --- #
+# --- Magic space (Shift+tab) --- #
 bindkey '^[[Z' magic-space
