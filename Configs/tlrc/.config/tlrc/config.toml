@@ -10,7 +10,9 @@ show_title = true
 platform_title = false
 show_hyphens = false
 example_prefix = "- "
+line_length = 0
 compact = false
+option_style = "long"
 raw_markdown = false
 
 [indent]

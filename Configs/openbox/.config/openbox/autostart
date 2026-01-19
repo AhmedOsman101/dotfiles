@@ -68,8 +68,8 @@ if ! ps aux | rg -iq 'polkit'; then
 fi
 
 # Ensure D-Bus knows about the X11 session
-if command -v dbus-update-activation-environment >/dev/null; then
-  dbus-update-activation-environment --systemd DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP=openbox
+if command -v dbus-update-activation-environment &>/dev/null; then
+  dbus-update-activation-environment --systemd DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP=openbox &
 fi
 
 # Start portals

@@ -25,20 +25,23 @@ export DEVICE="${device}"
 
 # --- Editor --- #
 if command -v hx &>/dev/null; then
-  export EDITOR="hx"
+  EDITOR="hx"
 elif command -v helix &>/dev/null; then
-  export EDITOR="helix"
+  EDITOR="helix"
 elif command -v vim &>/dev/null; then
-  export EDITOR="vim"
+  EDITOR="vim"
 elif command -v nvim &>/dev/null; then
-  export EDITOR="nvim"
+  EDITOR="nvim"
 elif command -v vi &>/dev/null; then
-  export EDITOR="vi"
+  EDITOR="vi"
 elif command -v micro &>/dev/null; then
-  export EDITOR="micro"
+  EDITOR="micro"
 else
-  export EDITOR="nano"
+  EDITOR="nano"
 fi
+
+export EDITOR
+export VISUAL="${EDITOR}" # VISUAL takes precedence over EDITOR
 
 # --- Browser --- #
 if command -v zen-browser &>/dev/null; then
