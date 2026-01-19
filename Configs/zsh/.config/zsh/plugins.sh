@@ -52,7 +52,8 @@ zinit snippet OMZP::aliases      # Search all aliases by group
 # zinit snippet OMZP::command-not-found # Suggest packages for missing commands
 
 # --- Open buffer line editor --- #
-autoload -Uz edit-command-line
+# autoload -Uz edit-command-line
+autoload -Uz edit-command-line-sh
 
 # --- ZMV advanced file move --- #
 autoload zmv

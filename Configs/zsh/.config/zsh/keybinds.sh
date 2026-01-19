@@ -30,8 +30,8 @@ zle -N ctrl_l
 bindkey '^L' ctrl_l
 
 # --- Open buffer line editor (Ctrl+x Ctrl+e) --- #
-zle -N edit-command-line
-bindkey '^X^E' edit-command-line
+zle -N edit-command-line-sh
+bindkey '^X^E' edit-command-line-sh
 
 # ---- Copy current buffer ---- #
 copybuffer() {
