@@ -9,7 +9,6 @@ GITHUB_TOKEN="$(pass show github/tokens/1)"
 
 ADVENT_OF_CODE_SESSION="$(pass show advent-of-code)"
 
-ANTHROPIC_AUTH_TOKEN="$(pass show agent-router)"
 ANTHROPIC_API_KEY="$(pass show agent-router)"
 
 export GEMINI_API_KEY \

@@ -23,7 +23,7 @@ export AUTO_NOTIFY_IGNORE=(
   "n" "tempedit" "bun run" "bunx"
   "sudoedit" "distrobox" "db" "repeat-it"
   "composer" "mask view" "uv run" "fish"
-  "opencode" "gemini"
+  "opencode" "gemini" "claude" "tmux"
 )
 export AUTO_NOTIFY_THRESHOLD=30
 export AUTO_NOTIFY_ICON_SUCCESS="${XDG_DATA_HOME}/icons/success-failure-icons/success.svg"
@@ -260,6 +260,9 @@ export TEXMFVAR="${XDG_CACHE_HOME}/texlive/texmf-var"
 # --- TGPT --- #
 export AI_PROVIDER="phind"         # Default chat provider
 export IMG_PROVIDER="pollinations" # Default image provider
+
+# --- tmux --- #
+export TMUX_PLUGIN_MANAGER_PATH="${XDG_DATA_HOME}/tmux/plugins"
 
 # --- Wget --- #
 export WGETRC="${XDG_CONFIG_HOME}/wgetrc"
