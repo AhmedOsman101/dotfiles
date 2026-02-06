@@ -33,3 +33,5 @@ vitepress
 yo
 @neutralinojs/neu
 concurrently
+minify
+vite
