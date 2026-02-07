@@ -2,16 +2,15 @@ othman@othman-pc
 ----------------
 OS: Arch Linux x86_64
 Host: H410M H V2 (-CF)
-Kernel: Linux 6.12.49-1-lts
-Packages: 894 (pacman)
-Shell: zsh 5.9
-Terminal: kitty 0.43.0
+Kernel: Linux 6.12.58-1-lts
+Packages: 2166 (pacman)
+Terminal: kitty 0.44.0
 WM: KWin (X11)
-DE: KDE Plasma 6.4.5
+DE: KDE Plasma 6.5.3
+Shell: zsh 5.9
 GPU: NVIDIA GeForce GTX 660 [Discrete]
-Monitor (BenQ G900W): 1440x900 px @ 60.016 Hz - 408x255 mm (18.94 inches, 89.65 ppi)
+Monitor (BenQ G900W): 1440x900 px @ 60 Hz - 408x255 mm (18.94 inches, 89.65 ppi)
 CPU: Intel(R) Core(TM) i3-10105F (8) @ 4.40 GHz
-Memory: 3.36 GiB / 15.53 GiB (22%)
-Swap: 0 B / 4.00 GiB (0%)
-Disk (/): 12.06 GiB / 110.79 GiB (11%) - btrfs
-Disk (/mnt/main): 224.54 GiB / 817.53 GiB (27%) - btrfs
+Memory: 15.53 GiB
+Swap: 4.00 GiB
+Disk (/): 476.94 GiB - btrfs
