@@ -126,7 +126,7 @@ export GOPATH="${XDG_DATA_HOME}/go"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc"
 
 # --- Gradle --- #
-export GRADLE_USER_HOME="/mnt/main/gradle"
+export GRADLE_USER_HOME="${HOME}/gradle"
 
 # --- Gum --- #
 # --- Filter --- #
@@ -220,13 +220,7 @@ export PIPER_DIR="${XDG_DATA_HOME}/piper"
 export PHPCS_CONFIG_PATH="${XDG_CONFIG_HOME}/php-codesniffer/ruleset.xml"
 
 # --- Pnpm --- #
-if [[ "${DEVICE}" == "laptop" ]]; then
-  pnpmHome="${XDG_DATA_HOME}/pnpm"
-else
-  pnpmHome="/mnt/main/pnpm"
-fi
-
-export PNPM_HOME="${pnpmHome}"
+export PNPM_HOME="${XDG_DATA_HOME}/pnpm"
 
 # --- Python --- #
 export PYTHONSTARTUP="${HOME}/python/pythonrc"
@@ -235,7 +229,7 @@ export PYTHONSTARTUP="${HOME}/python/pythonrc"
 export PRETTIERRC="${XDG_CONFIG_HOME}/.prettierrc.json"
 
 # --- Flutter packages --- #
-export PUB_CACHE="/mnt/main/pub-cache"
+export PUB_CACHE="${HOME}/pub-cache"
 
 # --- Rustup --- #
 export RUSTUP_HOME="${XDG_DATA_HOME}/rustup"

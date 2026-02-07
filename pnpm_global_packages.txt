@@ -35,3 +35,5 @@ yo
 concurrently
 minify
 vite
+helix-snippets-ls
+license

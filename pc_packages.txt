@@ -1,5 +1,8 @@
 adobe-source-han-sans-jp-fonts
 adobe-source-han-serif-jp-fonts
+advancecomp
+advcpmv
+adw-gtk-theme
 alacritty
 alsa-plugins
 alsa-utils
@@ -21,6 +24,7 @@ archcraft-sddm-theme
 archcraft-vim
 aria2
 ark
+ascii
 astyle
 atomicparsley
 atril
@@ -43,16 +47,17 @@ bind
 bluez
 bluez-utils
 blurhash-cli
-bottles
 boxbuddy
 bridge-utils
 bruno-bin
 btop
 btrfs-progs
 caddy
+catimg
 catppuccin-gtk-theme-mocha
 catppuccin-mocha-grub-theme-git
 ccache
+chafa
 chaotic-keyring
 chaotic-mirrorlist
 cherry-studio-bin
@@ -115,6 +120,7 @@ gimp
 git
 git-crypt
 git-delta
+git-lfs
 github-cli
 glow
 gnome-boxes
@@ -161,6 +167,7 @@ kate
 kconfig5
 kconfigwidgets5
 kdeconnect
+kdenlive
 kdialog
 keyd
 kitty
@@ -210,7 +217,6 @@ lttng-ust2.12
 lua-language-server
 lua-lgi
 luarocks
-lutris
 lxappearance
 lzip
 mailspring
@@ -224,11 +230,13 @@ markdown-oxide
 marp-bin
 marp-bin-debug
 mdcat
+media-downloader-git
 meld
 memtest86+
 memtest86+-efi
 memtester
 mesa-demos
+micromamba-bin
 mkcert
 mkinitcpio-firmware
 mokutil
@@ -256,6 +264,8 @@ okular
 ollama
 onlyoffice-bin
 openbsd-netcat
+opencc
+opencode-bin
 opendoas
 openssh
 os-prober
@@ -296,7 +306,10 @@ pv
 pyright
 python-beautifulsoup4
 python-faker
+python-keyring
 python-lxml
+python-nltk
+python-pip
 python-pylsp-rope
 python-pyqt6
 qalculate-gtk
@@ -329,6 +342,7 @@ shlorem
 slides
 smartmontools
 sof-firmware
+sox
 speed-dreams-bin
 speedtest-cli
 spotify
@@ -348,6 +362,7 @@ thorium-browser-bin
 time
 timeshift
 tlrc
+tmux
 toilet
 tokei
 trackma-git
@@ -359,7 +374,6 @@ ufw
 ulauncher
 unarchiver
 unzip
-update-grub
 upscayl-desktop-git
 usbutils
 uutils-coreutils
@@ -386,10 +400,6 @@ watchexec
 wavemon
 wget
 wild
-wine
-wine-gecko
-wine-mono
-winetricks
 wireless-regdb
 wireless_tools
 wireplumber
