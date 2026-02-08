@@ -2,16 +2,16 @@
 # shellcheck disable=SC2142,SC2139
 
 # ---- Aliases ----- #
-alias zshrc='${EDITOR} ${ZSHRC}'
-alias bashrc='$EDITOR ~/.bashrc'
+alias zshrc='${EDITOR} "${ZSHRC}"'
+alias bashrc='${EDITOR} "${HOME}/.bashrc"'
 alias art="php artisan"
 alias cls="clear"
-alias reload='source $ZSHRC'
-alias pwdcp='clipcopy ${PWD}'
+alias reload='source "${ZSHRC}"'
+alias pwdcp='clipcopy "${PWD}"'
 alias python="python3"
 alias pip="pip3"
 alias getgpu="lspci -k -d ::03xx"
-alias paths='printenv PATH | tr ":" "\n" | sed "s|$HOME|~|g" | no-dups | sort'
+alias paths='printenv PATH | tr ":" "\n" | sed "s|${HOME}|~|g" | no-dups | sort'
 
 # ---- Bat (better cat) ----- #
 alias cat="command bat --paging=never --style=plain --color=auto"
@@ -33,13 +33,13 @@ alias rg="rg -iNL"
 alias lzg="lazygit"
 
 # ---- Adb ---- #
-alias adb='HOME="$XDG_DATA_HOME"/android adb'
+alias adb='HOME="${XDG_DATA_HOME}/android" adb'
 
 # ---- Nvidia settings ---- #
 alias nvidia-settings='nvidia-settings --config="${XDG_CONFIG_HOME}/nvidia/settings"'
 
 # ---- Svn ---- #
-alias svn='svn --config-dir ${XDG_CONFIG_HOME}/subversion'
+alias svn='svn --config-dir "${XDG_CONFIG_HOME}/subversion"'
 
 # --- Laravel Sail --- #
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
