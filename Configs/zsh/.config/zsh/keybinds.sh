@@ -5,8 +5,11 @@
 bindkey -e
 
 # ---- Bind Home and End keys ---- #
-bindkey "^[[H" beginning-of-line # Home
-bindkey "^[[F" end-of-line       # End
+bindkey "^[[H" beginning-of-line  # Home
+bindkey "^[[1~" beginning-of-line # Alternative notation
+
+bindkey "^[[F" end-of-line  # End
+bindkey "^[[4~" end-of-line # Alternative notation
 
 # ---- Bind Delete key ---- #
 bindkey "^[[3~" delete-char # Delete
