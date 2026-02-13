@@ -363,6 +363,7 @@ terminus-font
 tesseract-data-eng
 testdisk
 texlive-basic
+tgpt
 thorium-browser-bin
 time
 timeshift
