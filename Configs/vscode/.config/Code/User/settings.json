@@ -102,7 +102,7 @@
     "fortran_fixed-form": "cd $dir ; gfortran $fileName -o $fileNameWithoutExt ; $dir$fileNameWithoutExt",
     "fortran": "cd $dir ; gfortran $fileName -o $fileNameWithoutExt ; $dir$fileNameWithoutExt",
     "sml": "cd $dir ; sml $fileName",
-    "mojo": "mojo run",
+    "mojo": "mojo run"
   },
   "code-runner.executorMapByFileExtension": {
     ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
@@ -136,18 +136,18 @@
     ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     ".ring": "ring",
     ".sml": "cd $dir && sml $fileName",
-    ".mojo": "mojo run",
+    ".mojo": "mojo run"
   },
   "code-runner.runInTerminal": true,
   "code-runner.saveAllFilesBeforeRun": true,
   "code-runner.saveFileBeforeRun": true,
   "[cpp]": {
-    "editor.defaultFormatter": "chiehyu.vscode-astyle",
+    "editor.defaultFormatter": "chiehyu.vscode-astyle"
   },
   "[c]": {
     "editor.defaultFormatter": "chiehyu.vscode-astyle",
     "editor.inlayHints.padding": true,
-    "editor.inlayHints.enabled": "on",
+    "editor.inlayHints.enabled": "on"
   },
   "files.exclude": {
     "**/vendor/": true,
@@ -163,7 +163,7 @@
     "**/.trunk/*notifications/": true,
     "**/.trunk/*out/": true,
     "**/.trunk/*plugins/": true,
-    "**/.turbo/**": true,
+    "**/.turbo/**": true
   },
   "files.watcherExclude": {
     "**/vendor/": true,
@@ -179,7 +179,7 @@
     "**/.trunk/*notifications/": true,
     "**/.trunk/*out/": true,
     "**/.trunk/*plugins/": true,
-    "**/.turbo/**": true,
+    "**/.turbo/**": true
   },
   "toggleexcludedfiles.explorer.enabled": true,
   "liveServer.settings.donotShowInfoMsg": true,
@@ -190,17 +190,17 @@
   "terminal.integrated.fontWeightBold": "800",
   "terminal.integrated.fontSize": 17,
   "[php]": {
-    "editor.defaultFormatter": "DEVSENSE.phptools-vscode",
+    "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
   },
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "[powershell]": {
-    "editor.defaultFormatter": "ms-vscode.powershell",
+    "editor.defaultFormatter": "ms-vscode.powershell"
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8",
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.wordBasedSuggestions": "off",
-    "editor.snippetSuggestions": "bottom",
+    "editor.snippetSuggestions": "bottom"
   },
   "git.openRepositoryInParentFolders": "always",
   "scm.showIncomingChanges": "always",
@@ -208,7 +208,7 @@
   "gitlens.graph.minimap.additionalTypes": [
     "localBranches",
     "stashes",
-    "remoteBranches",
+    "remoteBranches"
   ],
   "php.version": "8.4",
   "terminal.integrated.enableImages": true,
@@ -216,11 +216,11 @@
   "security.promptForLocalFileProtocolHandling": false,
   "explorer.confirmDragAndDrop": false,
   "[lua]": {
-    "editor.defaultFormatter": "sumneko.lua",
+    "editor.defaultFormatter": "sumneko.lua"
   },
   "newFile.expandBraces": true,
   "[snippets]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "cody.commandCodeLenses": true,
   "markdown-preview-enhanced.previewTheme": "github-dark.css",
@@ -229,12 +229,12 @@
   "debug.terminal.clearBeforeReusing": true,
   "[plaintext]": {
     "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false
   },
   "[css]": {
     "editor.suggest.insertMode": "replace",
     "cSpell.fixSpellingWithRenameProvider": false,
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "files.associations": {
     "*.css": "css",
@@ -247,7 +247,7 @@
     "*.mdc": "markdown",
     "*.timer": "ini",
     "*.target": "ini",
-    "*.service": "ini",
+    "*.service": "ini"
   },
   "markdown.preview.typographer": true,
   "markdown-preview-enhanced.mathRenderingOnlineService": "https://latex.codecogs.com/png.latex",
@@ -291,19 +291,19 @@
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
-      "icon": "terminal-powershell",
+      "icon": "terminal-powershell"
     },
     "Command Prompt": {
       "path": [
         "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
       ],
       "args": [],
-      "icon": "terminal-cmd",
+      "icon": "terminal-cmd"
     },
     "Git Bash": {
-      "source": "Git Bash",
-    },
+      "source": "Git Bash"
+    }
   },
   "git.terminalGitEditor": true,
   "workbench.cloudChanges.autoResume": "off",
@@ -329,7 +329,7 @@
     "*.sqlite3": "${capture}.${extname}-*",
     "*.db3": "${capture}.${extname}-*",
     "*.sdb": "${capture}.${extname}-*",
-    "*.s3db": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
   },
   "database-client.capitalizeKeywordsWhenFormatting": true,
   "phpParameterHint.collapseTypeWhenEqual": true,
@@ -341,7 +341,7 @@
   "prettier.singleAttributePerLine": true,
   "js/ts.implicitProjectConfig.target": "ESNext",
   "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma",
+    "editor.defaultFormatter": "Prisma.prisma"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "css.lint.unknownAtRules": "ignore",
@@ -363,7 +363,7 @@
   "editor.quickSuggestions": {
     "other": "on",
     "comments": "on",
-    "strings": "on",
+    "strings": "on"
   },
   "search.useIgnoreFiles": false,
   "search.exclude": {
@@ -374,7 +374,7 @@
     "**/composer.lock": true,
     "**/package-lock.json": true,
     "storage": true,
-    ".phpunit.result.cache": true,
+    ".phpunit.result.cache": true
   },
   "workbench.editor.enablePreview": true,
   "window.newWindowDimensions": "inherit",
@@ -383,7 +383,6 @@
   "files.trimFinalNewlines": true,
   "editor.hover.enabled": true,
   "editor.gotoLocation.multipleReferences": "goto",
-  "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
@@ -392,11 +391,9 @@
   "emmet.includeLanguages": {
     "blade": "html",
     "vue-html": "html",
-    "react": "html",
+    "react": "html"
   },
-  "emmet.excludeLanguages": [
-    "php"
-  ],
+  "emmet.excludeLanguages": ["php"],
   "explorer.sortOrder": "type",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.minimap.maxColumn": 250,
@@ -408,27 +405,25 @@
   "editor.padding.top": 16,
   "vscode_custom_css.imports": [
     "file:///home/othman/.config/Code/User/custom/custom-vscode.css",
-    "file:///home/othman/.config/Code/User/custom/custom-vscode.js",
+    "file:///home/othman/.config/Code/User/custom/custom-vscode.js"
   ],
-  "css.customData": [
-    "/home/othman/.config/Code/User/custom/tailwindcss.json"
-  ],
+  "css.customData": ["/home/othman/.config/Code/User/custom/tailwindcss.json"],
   "cody.chat.defaultLocation": "sidebar",
   "[sass]": {
-    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter",
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
   },
   "scss.format.braceStyle": "expand",
   "scss.lint.duplicateProperties": "warning",
   "liveSassCompile.settings.useNewCompiler": true,
   "[scss]": {
-    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter",
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
   },
   "liveSassCompile.settings.showOutputWindowOn": "None",
   "[dotenv]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[ignore]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "remoteHub.commitDirectlyWarning": "off",
   "better-comments.tags": [
@@ -439,7 +434,7 @@
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,
-      "italic": true,
+      "italic": true
     },
     {
       "tag": "!",
@@ -448,7 +443,7 @@
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,
-      "italic": true,
+      "italic": true
     },
     {
       "tag": "?",
@@ -457,7 +452,7 @@
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,
-      "italic": true,
+      "italic": true
     },
     {
       "tag": "NOTE:",
@@ -466,7 +461,7 @@
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,
-      "italic": true,
+      "italic": true
     },
     {
       "tag": "TODO:",
@@ -475,7 +470,7 @@
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,
-      "italic": true,
+      "italic": true
     },
     {
       "tag": "FIXME:",
@@ -484,8 +479,8 @@
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,
-      "italic": true,
-    },
+      "italic": true
+    }
   ],
   "phpParameterHint.hintOnlyVisibleRanges": true,
   "commitgroq.model": "llama3-70b-8192",
@@ -507,15 +502,15 @@
   "php.completion.autoimport-docblock": "auto-import",
   "php.problems.excludeGitIgnore": true,
   "[xml]": {
-    "editor.defaultFormatter": "DotJoshJohnson.xml",
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
   },
   "prettier.experimentalTernaries": true,
   "[properties]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[shellscript]": {
     "editor.defaultFormatter": "mkhl.shfmt",
-    "files.autoSave": "afterDelay",
+    "files.autoSave": "afterDelay"
   },
   "terminal.external.linuxExec": "kitty",
   "diffEditor.maxComputationTime": 0,
@@ -530,35 +525,29 @@
     "source.removeUnusedImports": "never",
     "source.addMissingImports.ts": "explicit",
     "source.fixAll.ts": "explicit",
-    "source.removeUnused.ts": "never",
+    "source.removeUnused.ts": "never"
   },
   "livePreview.notifyOnOpenLooseFile": false,
   "editor.tabSize": 2,
   "cody.autocomplete.enabled": true,
   "prettier.useEditorConfig": false,
-  "indentColorizer.ignoreErrorLanguages": [
-    "*"
-  ],
+  "indentColorizer.ignoreErrorLanguages": ["*"],
   "workbench.startupEditor": "none",
   "terminal.integrated.suggest.enabled": true,
   "[markdown]": {
     "editor.quickSuggestions": {
       "other": "on",
       "comments": "off",
-      "strings": "on",
+      "strings": "on"
     },
     "editor.wordBasedSuggestions": "off",
     "editor.wordWrap": "off",
     "editor.wordBreak": "normal",
-    "editor.wrappingIndent": "none",
+    "editor.wrappingIndent": "none"
   },
   "workbench.iconTheme": "vscode-icons",
-  "cSpell.enableFiletypes": [
-    "lua"
-  ],
-  "security.allowedUNCHosts": [
-    "wsl.localhost"
-  ],
+  "cSpell.enableFiletypes": ["lua"],
+  "security.allowedUNCHosts": ["wsl.localhost"],
   "editor.unicodeHighlight.nonBasicASCII": false,
   "codesnap.transparentBackground": true,
   "redhat.telemetry.enabled": false,
@@ -567,20 +556,11 @@
   "gitlens.currentLine.format": "${authorNotYou} ${agoOrDate} ${message}",
   "gitlens.currentLine.uncommittedChangesFormat": "✏️ ${ago}",
   "gitlens.statusBar.enabled": false,
-  "gitlens.changes.locations": [
-    "gutter",
-    "line",
-    "overview"
-  ],
-  "gitlens.heatmap.locations": [
-    "overview"
-  ],
+  "gitlens.changes.locations": ["gutter", "line", "overview"],
+  "gitlens.heatmap.locations": ["overview"],
   "gitlens.heatmap.fadeLines": false,
   "markdown-preview-enhanced.enablePreviewZenMode": true,
-  "autopep8.args": [
-    "--indent-size",
-    "2"
-  ],
+  "autopep8.args": ["--indent-size", "2"],
   "editor.wordWrapColumn": 120,
   "diffEditor.wordWrap": "off",
   "editor.inlineSuggest.syntaxHighlightingEnabled": true,
@@ -603,7 +583,7 @@
   "window.newWindowProfile": "Default",
   "vsicons.dontShowNewVersionMessage": true,
   "shellcheck.ignorePatterns": {
-    "**/.zshrc": true,
+    "**/.zshrc": true
   },
   "shellcheck.useWorkspaceRootAsCwd": true,
   "geminiCommit.commitMessageLength": "short",
@@ -618,7 +598,7 @@
     "text.updateImports",
     "html",
     "uri.path.relative",
-    "uri.path.absolute",
+    "uri.path.absolute"
   ],
   "terminal.integrated.fontLigatures": true,
   "clang-format.executable": "/usr/bin/clang-format",
@@ -636,43 +616,30 @@
   "continue.enableTabAutocomplete": true,
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
-    "editor.semanticHighlighting.enabled": true,
+    "editor.semanticHighlighting.enabled": true
   },
   "c-cpp-flylint.cppcheck.verbose": true,
   "c-cpp-flylint.debug": true,
-  "autopep8.interpreter": [
-    "python"
-  ],
+  "autopep8.interpreter": ["python"],
   "autopep8.showNotifications": "always",
   "autopep8.importStrategy": "fromEnvironment",
   "c-cpp-flylint.ignoreParseErrors": true,
-  "c-cpp-flylint.standard": [
-    "c11",
-    "c++11"
-  ],
+  "c-cpp-flylint.standard": ["c11", "c++11"],
   "c-cpp-flylint.enable": false,
   "c-cpp-flylint.language": "c",
   "geminiCommit.commit.onlyStagedChanges": true,
   "files.readonlyFromPermissions": true,
   "prettier.endOfLine": "lf",
   "prettier.resolveGlobalModules": true,
-  "clangd.fallbackFlags": [
-    "-Iinclude"
-  ],
-  "clangd.arguments": [
-    "--header-insertion=iwyu"
-  ],
-  "c-cpp-flylint.clang.includePaths": [
-    "*/inlcude/*"
-  ],
-  "c-cpp-flylint.includePaths": [
-    "inlcude"
-  ],
+  "clangd.fallbackFlags": ["-Iinclude"],
+  "clangd.arguments": ["--header-insertion=iwyu"],
+  "c-cpp-flylint.clang.includePaths": ["*/inlcude/*"],
+  "c-cpp-flylint.includePaths": ["inlcude"],
   "vscord.behaviour.prioritizeLanguagesOverExtensions": true,
   "security.workspace.trust.enabled": true,
   "vscord.behaviour.suppressNotifications": true,
   "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
   "git.defaultBranchName": "main",
   "errorLens.gutterIconSize": "",
@@ -681,88 +648,72 @@
   "errorLens.messageBackgroundMode": "message",
   "errorLens.padding": "2px 0.5ch",
   "errorLens.margin": "2.5ch",
-  "errorLens.enabledDiagnosticLevels": [
-    "error",
-    "warning",
-    "info",
-    "hint"
-  ],
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info", "hint"],
   "errorLens.gutterIconsEnabled": true,
   "errorLens.gutterIconSet": "squareRounded",
   "errorLens.messageTemplate": "[$count] $severity $message",
-  "errorLens.severityText": [
-    "■",
-    "◈",
-    "◉",
-    "■"
-  ],
+  "errorLens.severityText": ["■", "◈", "◉", "■"],
   "errorLens.codeLensEnabled": false,
   "errorLens.messageEnabled": true,
   "errorLens.problemRangeDecorationEnabled": true,
   "errorLens.decorations": {
     "errorRange": {
-      "borderRadius": "5px",
+      "borderRadius": "5px"
     },
     "warningRange": {
       "borderRadius": "5px",
-      "color": "#FF942F",
+      "color": "#FF942F"
     },
     "infoRange": {
-      "backgroundColor": "transparent",
+      "backgroundColor": "transparent"
     },
     "hintRange": {
-      "backgroundColor": "transparent",
+      "backgroundColor": "transparent"
     },
     "hintMessage": {
-      "backgroundColor": "transparent",
-    },
+      "backgroundColor": "transparent"
+    }
   },
   "errorLens.replace": [
     {
       "matcher": "Missing semicolon",
-      "message": ";",
-    },
+      "message": ";"
+    }
   ],
   "errorLens.enableOnDiffView": true,
   "errorLens.removeLinebreaks": true,
   "errorLens.replaceLinebreaksSymbol": "⏎",
-  "cssVariables.languages": [
-    "vue-postcss",
-    "scss",
-    "postcss",
-    "less",
-    "css"
-  ],
+  "cssVariables.languages": ["vue-postcss", "scss", "postcss", "less", "css"],
   "highlight-matching-tag.highlightSelfClosing": true,
   "highlight-matching-tag.styles": {
     "opening": {
       "left": {
-        "highlight": "rgba(255, 255, 255, 0.1)",
+        "highlight": "rgba(255, 255, 255, 0.1)"
       },
       "right": {
-        "highlight": "rgba(255, 255, 255, 0.1)",
-      },
-    },
+        "highlight": "rgba(255, 255, 255, 0.1)"
+      }
+    }
   },
   "css.enabledLanguages": [
     "html",
     "javascriptreact",
     "typescriptreact",
-    "vue-html",
+    "vue-html"
   ],
   "inlineFold.maskChar": "...",
   "iridium.npm.packageManager": "pnpm",
   "iridium.npm.runAudit": true,
   "iridium.npm.showResultDescription": true,
   "iridium.npm.showSupportIcon": false,
-  "npm-intellisense.importES6": true,
-  "npm-intellisense.importQuotes": "\"",
-  "npm-intellisense.importLinebreak": ";\n",
-  "npm-intellisense.importDeclarationType": "const",
   "npm-intellisense.scanDevDependencies": true,
   "npm-intellisense.packageSubfoldersIntellisense": true,
   "npm-intellisense.recursivePackageJsonLookup": true,
   "npm-intellisense.showBuildInLibs": true,
+  "npm-intellisense.importES6": true,
+  "npm-intellisense.importQuotes": "\"",
+  "npm-intellisense.importLinebreak": ";\n",
+  "npm-intellisense.importDeclarationType": "const",
   "javascript.suggest.paths": false,
   "typescript.suggest.paths": false,
   "path-intellisense.autoSlashAfterDirectory": true,
@@ -774,79 +725,57 @@
   "cody.autocomplete.formatOnAccept": true,
   "cody.telemetry.level": "off",
   "dotnetAcquisitionExtension.enableTelemetry": false,
-  "dotnetAcquisitionExtension.existingDotnetPath": [
-    "/usr/bin/dotnet"
-  ],
+  "dotnetAcquisitionExtension.existingDotnetPath": ["/usr/bin/dotnet"],
   "[json]": {
     "editor.quickSuggestions": {
-      "strings": true,
+      "strings": true
     },
     "editor.suggest.insertMode": "replace",
-    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
     "editor.quickSuggestions": {
-      "strings": true,
+      "strings": true
     },
     "editor.suggest.insertMode": "replace",
-    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[typescript]": {
-    "togglequotes.chars": [
-      "\"",
-      "'",
-      "`"
-    ],
+    "togglequotes.chars": ["\"", "'", "`"],
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
     "editor.defaultFormatter": "biomejs.biome",
-    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.inlayHints.enabled": "offUnlessPressed"
   },
   "[typescriptreact]": {
-    "togglequotes.chars": [
-      "\"",
-      "'",
-      "`"
-    ],
+    "togglequotes.chars": ["\"", "'", "`"],
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[javascriptreact]": {
-    "togglequotes.chars": [
-      "\"",
-      "'",
-      "`"
-    ],
+    "togglequotes.chars": ["\"", "'", "`"],
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[javascript]": {
     "editor.maxTokenizationLineLength": 2500,
-    "togglequotes.chars": [
-      "\"",
-      "'",
-      "`"
-    ],
+    "togglequotes.chars": ["\"", "'", "`"],
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[vue]": {
-    "togglequotes.chars": [
-      "\"",
-      "'",
-      "`"
-    ],
+    "togglequotes.chars": ["\"", "'", "`"],
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
-    "editor.formatOnType": false,
+    "editor.formatOnType": false
   },
   "editor.formatOnType": false,
   "editor.formatOnSave": true,
@@ -862,9 +791,7 @@
   "vue.inlayHints.vBindShorthand": true,
   "astyle.csharp.enable": true,
   "astyle.java.enable": true,
-  "shellcheck.customArgs": [
-    "--external-sources"
-  ],
+  "shellcheck.customArgs": ["--external-sources"],
   "shellcheck.enableQuickFix": true,
   "shellcheck.enable": true,
   "bashIde.enableSourceErrorDiagnostics": true,
@@ -884,14 +811,14 @@
   "locateThisDocument.editorTitleIcons.locateActiveDocument": false,
   "locateThisDocument.editorTitleContext": false,
   "[slint]": {
-    "editor.defaultFormatter": "Slint.slint",
+    "editor.defaultFormatter": "Slint.slint"
   },
   "cmake.pinnedCommands": [
     "workbench.action.tasks.configureTaskRunner",
-    "workbench.action.tasks.runTask",
+    "workbench.action.tasks.runTask"
   ],
   "extensions.experimental.affinity": {
-    "jasew.vscode-helix-emulation": 1,
+    "jasew.vscode-helix-emulation": 1
   },
   "helixKeymap.yankHighlightBackgroundColor": "#F8F3AB",
   "commitSage.gemini.model": "gemini-2.0-flash-exp",
@@ -914,18 +841,18 @@
   "vue.server.hybridMode": false,
   "svelte.enable-ts-plugin": true,
   "[svelte]": {
-    "editor.defaultFormatter": "svelte.svelte-vscode",
+    "editor.defaultFormatter": "svelte.svelte-vscode"
   },
   "cody.suggestions.mode": "off",
   "[kotlin]": {
-    "editor.defaultFormatter": "esafirm.kotlin-formatter",
+    "editor.defaultFormatter": "esafirm.kotlin-formatter"
   },
   "github.copilot.enable": {
     "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false,
-    "typescript": false,
+    "typescript": false
   },
   "editor.suggest.preview": false,
   "inlineFold.unfoldOnLineSelect": true,
@@ -937,7 +864,7 @@
   "blade.format.enable": true,
   "[blade]": {
     "editor.autoClosingBrackets": "always",
-    "editor.defaultFormatter": "onecentlin.laravel-blade",
+    "editor.defaultFormatter": "onecentlin.laravel-blade"
   },
   "php.format.rules.addCommaAfterLastArrayElement": true,
   "php.format.rules.addCommaAfterLastCallParameter": false,
@@ -992,11 +919,9 @@
   "json.schemaDownload.enable": true,
   "json.schemas": [
     {
-      "fileMatch": [
-        "deno.json"
-      ],
-      "url": "https://github.com/denoland/deno/blob/main/cli/schemas/config-file.v1.json",
-    },
+      "fileMatch": ["deno.json"],
+      "url": "https://github.com/denoland/deno/blob/main/cli/schemas/config-file.v1.json"
+    }
   ],
   "cursor.composer.textSizeScale": 1.3,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
@@ -1008,14 +933,14 @@
   "workbench.colorCustomizations": {},
   "codeium.aggressiveShutdown": true,
   "codeium.enableConfig": {
-    "*": true,
+    "*": true
   },
   "docwriter.progress.trackClasses": true,
   "docwriter.progress.trackTypes": true,
   "telemetry.feedback.enabled": false,
   "github.copilot.advanced": {
     "authPermissions": "default",
-    "useLanguageServer": false,
+    "useLanguageServer": false
   },
   "github.copilot.chat.codesearch.enabled": true,
   "github.copilot.chat.editor.temporalContext.enabled": true,
@@ -1024,16 +949,9 @@
   "github.copilot.chat.languageContext.fix.typescript.enabled": true,
   "github.copilot.chat.languageContext.inline.typescript.enabled": true,
   "github.copilot.chat.languageContext.typescript.enabled": true,
-  "tailwindCSS.classAttributes": [
-    "class",
-    "ui",
-    "className"
-  ],
+  "tailwindCSS.classAttributes": ["class", "ui", "className"],
   "tailwindCSS.experimental.classRegex": [
-    [
-      "ui:\\s*{([^)]*)\\s*}",
-      "(?:'|\"|`)([^']*)(?:'|\"|`)"
-    ],
+    ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
   "vue.autoInsert.dotValue": true,
   "tailwindCSS.emmetCompletions": true,
@@ -1046,13 +964,13 @@
   "vs-browser.reload.autoReloadDurationTime": 1000,
   "helixKeymap.toggleRelativeLineNumbers": true,
   "[sql]": {
-    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode",
+    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
   },
   "cursor.cpp.disabledLanguages": [
     "plaintext",
     "markdown",
     "scminput",
-    "typescript",
+    "typescript"
   ],
   "editor.lineNumbers": "relative",
   "rust-analyzer.restartServerOnConfigChange": true,
@@ -1062,7 +980,7 @@
   "rust-analyzer.inlayHints.typeHints.enable": false,
   "rust-analyzer.rustfmt.extraArgs": [
     "--config-path",
-    "/home/othman/.config/rustfmt.toml",
+    "/home/othman/.config/rustfmt.toml"
   ],
   "php.inlayHints.types.return": "named",
   "workbench.editor.showTabIndex": true,
@@ -1074,28 +992,24 @@
   "terminal.integrated.suggest.quickSuggestions": {
     "commands": "on",
     "arguments": "on",
-    "unknown": "off",
+    "unknown": "off"
   },
   "python.terminal.activateEnvInCurrentTerminal": true,
   "yaml.schemas": {
     "/home/othman/.vscode/extensions/continue.continue-1.1.34-linux-x64/config-yaml-schema.json": [
-      ".continue/**/*.yaml",
-    ],
+      ".continue/**/*.yaml"
+    ]
   },
   "versionlens.suggestions.showOnStartup": true,
   "workbench.productIconTheme": "fluent-icons",
   "workbench.colorTheme": "GitHub Dark Default",
   "editor.gotoLocation.multipleDefinitions": "goto",
-  "npm-intellisense.importES6": true,
-  "npm-intellisense.importQuotes": "\"",
-  "npm-intellisense.importLinebreak": ";\n",
-  "npm-intellisense.importDeclarationType": "const",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "qt-core.additionalQtPaths": [
     {
       "name": "Qt-5.15.17-linux-g++_from_PATH",
-      "path": "/usr/bin/qtpaths",
-    },
+      "path": "/usr/bin/qtpaths"
+    }
   ],
   "editor.autoClosingBrackets": "always",
   "gitlens.showWhatsNewAfterUpgrades": false,
@@ -1115,5 +1029,5 @@
   "deno.path": "/home/othman/.cache/deno/bin/deno",
   "errorLens.enabled": true,
   "claudeCode.preferredLocation": "panel",
-  "claudeCode.disableLoginPrompt": true,
+  "claudeCode.disableLoginPrompt": true
 }

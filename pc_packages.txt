@@ -264,6 +264,7 @@ obsidian
 okular
 ollama
 onlyoffice-bin
+openai-codex
 openbsd-netcat
 opencc
 opencode-bin
@@ -283,6 +284,7 @@ pass-import
 perl-graph-easy
 photocrea
 php-apache
+php-codesniffer
 php-fpm
 php-gd
 php-legacy-apache

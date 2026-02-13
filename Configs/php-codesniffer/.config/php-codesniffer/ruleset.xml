@@ -106,7 +106,6 @@
   <rule ref="Generic.Strings.UnnecessaryStringConcat">
     <properties>
       <property name="allowMultiline" value="true" />
-      <property name="error" value="false" />
     </properties>
   </rule>
 
