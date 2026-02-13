@@ -37,3 +37,4 @@ minify
 vite
 helix-snippets-ls
 license
+@mixedbread/mgrep
