@@ -20,8 +20,7 @@ export TUCKR_HOME="${HOME}"
 export TUCKR_DIR="${TUCKR_HOME}/dotfiles/Configs"
 
 # --- Chassis --- #
-device="$(hostnamectl chassis)"
-export DEVICE="${device}"
+DEVICE="$(hostnamectl chassis)"
 
 # --- Editor --- #
 if command -v hx &>/dev/null; then
@@ -40,7 +39,6 @@ else
   EDITOR="nano"
 fi
 
-export EDITOR
 export VISUAL="${EDITOR}" # VISUAL takes precedence over EDITOR
 
 # --- Browser --- #
@@ -61,3 +59,5 @@ export PATH="${PATH}:${SCRIPTS_DIR}:${HOME}/.local/bin" # my custom scripts
 
 # --- FPATH --- #
 export FPATH="${ZDOTDIR}/functions:${FPATH}"
+
+export EDITOR DEVICE

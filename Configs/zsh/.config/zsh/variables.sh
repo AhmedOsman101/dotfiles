@@ -245,15 +245,14 @@ export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship.toml"
 export SQLITE_HISTORY="${XDG_CACHE_HOME}/sqlite_history"
 
 # --- Terminal --- #
-export TERMINAL="kitty"
 export COLORTERM="truecolor"
 
 # --- Texfm --- #
 export TEXMFVAR="${XDG_CACHE_HOME}/texlive/texmf-var"
 
 # --- TGPT --- #
-export AI_PROVIDER="phind"         # Default chat provider
-export IMG_PROVIDER="pollinations" # Default image provider
+# export AI_PROVIDER="isou"          # Default chat provider
+# export IMG_PROVIDER="pollinations" # Default image provider
 
 # --- tmux --- #
 export TMUX_PLUGIN_MANAGER_PATH="${XDG_DATA_HOME}/tmux/plugins"
@@ -265,10 +264,12 @@ export WGETRC="${XDG_CONFIG_HOME}/wgetrc"
 export W3M_DIR="${XDG_DATA_HOME}/w3m"
 
 # --- Webkit --- #
-# export __EGL_VENDOR_LIBRARY_FILENAMES="/usr/share/glvnd/egl_vendor.d/10_nvidia.json"
-# Enable as needed
-# export WEBVIEW_FORCE_EGL=1
-# export WEBKIT_DISABLE_DMABUF_RENDERER=1
+if [[ "${DEVICE}" == 'desktop' ]]; then
+  export __EGL_VENDOR_LIBRARY_FILENAMES="/usr/share/glvnd/egl_vendor.d/10_nvidia.json"
+  # Enable as needed
+  # export WEBVIEW_FORCE_EGL=1
+  # export WEBKIT_DISABLE_DMABUF_RENDERER=1
+fi
 
 # --- X11 --- #
 export XINITRC="${XDG_CONFIG_HOME}/X11/.Xinitrc"
