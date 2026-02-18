@@ -278,18 +278,19 @@ export XINITRC="${XDG_CONFIG_HOME}/X11/.Xinitrc"
 export YSU_MESSAGE_POSITION="after"
 
 # --- PATH --- #
-export PATH="${PATH}:${PNPM_HOME}"                    # PNPM Home folder
-PATH="${PATH}:${HOME}/.spicetify"                     # spicetify for spotify mods
-PATH="${PATH}:${BUN_INSTALL}/bin"                     # Bun js runtime
-PATH="${PATH}:${XDG_CONFIG_HOME}/composer/vendor/bin" # Composer packages
-PATH="${PATH}:${CARGO_HOME}/bin"                      # Cargo packages
-PATH="${PATH}:${ASDF_DATA_DIR}/shims"                 # Asdf shims
-PATH="${PATH}:${ANDROID_HOME}/platform-tools"         # Android SDK platform tools (adb, fastboot)
-PATH="${PATH}:${ANDROID_HOME}/tools"                  # Android SDK legacy tools (android, monitor, etc)
-PATH="${PATH}:${ANDROID_HOME}/tools/bin"              # Android SDK command-line tools
-PATH="${PATH}:${ANDROID_HOME}/emulator"               # Android SDK emulator binaries
-PATH="${PATH}:${HOME}/opt/flutter/bin"                # Flutter and Dart
-PATH="${PATH}:${XDG_DATA_HOME}/../bin"                # UV Binaries
+export PATH="${PATH}:${PNPM_HOME}"                      # PNPM Home folder
+PATH="${PATH}:${HOME}/.spicetify"                       # spicetify for spotify mods
+PATH="${PATH}:${BUN_INSTALL}/bin"                       # Bun js runtime
+PATH="${PATH}:${XDG_CONFIG_HOME}/composer/vendor/bin"   # Composer packages
+PATH="${PATH}:${CARGO_HOME}/bin"                        # Cargo packages
+PATH="${PATH}:${ASDF_DATA_DIR}/shims"                   # Asdf shims
+PATH="${PATH}:${ANDROID_HOME}/platform-tools"           # Android SDK platform tools (adb, fastboot)
+PATH="${PATH}:${ANDROID_HOME}/emulator"                 # Android SDK emulator binaries
+PATH="${PATH}:${ANDROID_HOME}/cmdline-tools/latest/bin" # Android SDK Command-line Tools
+PATH="${PATH}:${ANDROID_HOME}/tools/bin"                # Android SDK command-line tools
+PATH="${PATH}:${ANDROID_HOME}/tools"                    # Android SDK legacy tools (android, monitor, etc)
+PATH="${PATH}:${HOME}/opt/flutter/bin"                  # Flutter and Dart
+PATH="${PATH}:${XDG_DATA_HOME}/../bin"                  # UV Binaries
 
 # Define directories to exclude
 EXCLUDE_DIRS=(
