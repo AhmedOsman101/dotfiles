@@ -402,3 +402,14 @@ source = { git = "https://github.com/neovim/tree-sitter-vim", rev = "3dd4747082d
 [[language]]
 name = "xml"
 formatter = { command = "xmllint", args = ["--format", "-"] }
+
+# --- Kotlin --- #
+[[language]]
+name = "kotlin"
+language-servers = ["kotlin-lsp"]
+roots = ["settings.gradle", "settings.gradle.kts", "build.gradle.kts"]
+indent = { tab-width = 2, unit = "  " }
+
+[language-server.kotlin-lsp]
+command = "kotlin-lsp"
+args = ["--stdio"]
