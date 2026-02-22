@@ -6,6 +6,11 @@ adw-gtk-theme
 alacritty
 alsa-plugins
 alsa-utils
+android-sdk
+android-sdk-build-tools
+android-sdk-cmdline-tools-latest
+android-sdk-platform-tools
+android-udev
 ansifilter
 anydesk-bin
 apparmor
@@ -31,7 +36,6 @@ atril
 atuin
 audacity
 audiorelay
-audiotube
 awk-language-server
 awk-language-server-debug
 axel
@@ -65,7 +69,6 @@ clang
 cmake
 colord
 composer
-converseen
 copyq
 cowsay
 cracklib
@@ -91,9 +94,8 @@ dysk
 ed
 emmet-language-server
 entr
-errands
-eslint
 evince
+ex-vi-compat
 exfatprogs
 exo
 eza
@@ -113,7 +115,6 @@ frogmouth
 fwupd
 fzf
 gamemode
-gamescope
 gearlever
 ghostscript
 gimp
@@ -133,6 +134,7 @@ gpart
 gparted
 gpick
 gptfdisk
+gradle
 grub
 grub-btrfs
 gst-libav
@@ -161,6 +163,7 @@ inxi
 isoimagewriter
 iw
 iwd
+jdk21-openjdk
 jless
 jq
 jq-lsp
@@ -168,13 +171,15 @@ kate
 kconfig5
 kconfigwidgets5
 kdeconnect
-kdenlive
 kdialog
 keyd
 kitty
 kmag
 kolourpaint
-konsole
+kotlin
+kotlin-language-server-bin
+kotlin-lsp-bin
+ktlint
 kvantum
 kvantum-qt5
 kwin-effects-forceblur
@@ -225,7 +230,6 @@ maim
 man-db
 man-pages
 mangayomi-bin
-mangohud
 mariadb
 markdown-oxide
 marp-bin
@@ -238,6 +242,8 @@ memtest86+-efi
 memtester
 mesa-demos
 micromamba-bin
+mise
+mission-center
 mkcert
 mkinitcpio-firmware
 mokutil
@@ -259,12 +265,12 @@ nvidia-470xx-dkms
 nvidia-470xx-utils
 nvidia-settings
 nvme-cli
+nvtop
 obs-studio
 obsidian
 okular
 ollama
 onlyoffice-bin
-openai-codex
 openbsd-netcat
 opencc
 opencode-bin
@@ -285,6 +291,7 @@ perl-graph-easy
 photocrea
 php-apache
 php-codesniffer
+php-embed
 php-fpm
 php-gd
 php-legacy-apache
@@ -344,6 +351,7 @@ shellcheck
 shellharden
 shfmt
 shlorem
+slf4j
 slides
 smartmontools
 sof-firmware
@@ -381,13 +389,13 @@ ulauncher
 unarchiver
 unzip
 upscayl-desktop-git
+usage
 usbutils
 uutils-coreutils
 uv
 valkey
 ventoy-bin
 vhs
-vi
 vim
 vim-language-server
 vim-sxhkdrc-git
@@ -437,6 +445,7 @@ xterm
 yad
 yamlfmt
 yapf
+yay
 yazi
 yt-dlp
 zen-browser-bin
