@@ -112,9 +112,6 @@ alias goodnights='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A sync && SUDO_AS
 alias restart='sync && sudo systemctl reboot'
 alias restarts='SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A sync && SUDO_ASKPASS="${SCRIPTS_DIR}/echopass" sudo -A systemctl reboot'
 
-# ---- Rtx (asdf rust clone) ---- #
-alias asdf='rtx'
-
 # ---- PNPM ---- #
 alias pnpx='pnpm dlx'
 alias npx='pnpm dlx'

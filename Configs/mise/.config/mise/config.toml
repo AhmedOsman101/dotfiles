@@ -1,0 +1,191 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Mise Configuration
+# Docs: https://mise.jdx.dev/configuration.html
+# Schema: https://mise.jdx.dev/schema/mise.json
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TOOLS
+# Define runtime versions to install and use.
+# Values: "version" | ["version1", "version2"] | "lts" | "latest"
+# Examples:
+#   node = "22"           # latest 22.x
+#   node = "22.16.0"      # exact version
+#   node = ["lts", "latest"]  # multiple versions (first is default)
+#   python = "3.12"
+#   go = "latest"
+# ─────────────────────────────────────────────────────────────────────────────
+[tools]
+node = ["lts", "latest"]
+python = "latest"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ENVIRONMENT VARIABLES
+# Set env vars that activate when entering this directory.
+# Values: string | number | boolean | { value = "...", redact = true }
+# ─────────────────────────────────────────────────────────────────────────────
+# [env]
+# NODE_ENV = "development"
+# DATABASE_URL = { value = "postgres://localhost:5432/db", redact = true }
+
+# Load env vars from a file:
+# [env._.file]
+# path = ".env"
+
+# Add paths to PATH:
+# [env._.path]
+# paths = ["./node_modules/.bin", "./bin"]
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SETTINGS
+# Global mise configuration.
+# ─────────────────────────────────────────────────────────────────────────────
+[settings]
+# Automatically install missing tools when needed.
+# Values: true | false
+auto_install = true
+
+# Number of concurrent jobs for downloads/installs.
+# Values: 1-32 (default: 8)
+jobs = 4
+
+# Use color in terminal output.
+# Values: true | false
+color = true
+
+# Theme for interactive prompts.
+# Values: "default" | "charm" | "base16" | "catppuccin" | "dracula"
+color_theme = "catppuccin"
+
+# Log level for mise output.
+# Values: "trace" | "debug" | "info" | "warn" | "error"
+log_level = "info"
+
+# Cache duration for remote version lists.
+# Values: duration string (e.g., "1h", "30m", "1d")
+fetch_remote_versions_cache = "1h"
+
+# HTTP timeout for requests.
+# Values: duration string (default: "30s")
+http_timeout = "1m"
+
+# Delete cached files older than this.
+# Values: duration string (default: "30d")
+cache_prune_age = "30d"
+
+# Enable experimental features (may change).
+# Values: true | false
+experimental = false
+
+# Prefer cached data over network requests.
+# Values: true | false
+prefer_offline = false
+
+# Disable all HTTP requests (offline mode).
+# Values: true | false
+offline = false
+
+# Enable SLSA provenance verification for security.
+# Values: true | false
+slsa = true
+
+# Enable GitHub Artifact Attestations verification.
+# Values: true | false
+github_attestations = true
+
+# ─────────────────────────────────────────────────────────────────────────────
+# STATUS (shell prompt integration)
+# Show warnings/info when entering directories.
+# ─────────────────────────────────────────────────────────────────────────────
+[settings.status]
+# Warn about missing tools.
+# Values: "always" | "if_other_versions_installed" | "never"
+missing_tools = "if_other_versions_installed"
+
+# Show configured tools in status.
+# Values: true | false
+show_tools = false
+
+# Show configured env vars in status.
+# Values: true | false
+show_env = false
+
+# Truncate long status messages.
+# Values: true | false
+truncate = true
+
+# ─────────────────────────────────────────────────────────────────────────────
+# HOOK ENV
+# Configure shell hook behavior.
+# ─────────────────────────────────────────────────────────────────────────────
+[settings.hook_env]
+# Only run hooks on directory change (not every prompt).
+# Values: true | false
+chpwd_only = false
+
+# Cache hook-env for slow filesystems.
+# Values: duration string (default: "0s")
+cache_ttl = "0s"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# NODE-SPECIFIC SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────
+[settings.node]
+# Verify downloaded assets using GPG.
+# Values: true | false
+verify = true
+
+# Install corepack shims after node install.
+# Values: true | false
+corepack = false
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PYTHON-SPECIFIC SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────
+[settings.python]
+# Compile from source or use precompiled binaries.
+# Values: true (compile) | false (precompiled) | unset (auto)
+compile = false
+
+# Integrate with uv for venv management.
+# Values: false | "source" | "create|source" | true
+uv_venv_auto = true
+
+# ─────────────────────────────────────────────────────────────────────────────
+# NPM SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────
+[settings.npm]
+# Package manager for npm backend tools.
+# Values: "npm" | "bun" | "pnpm"
+package_manager = "pnpm"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PIPX SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────
+[settings.pipx]
+# Use uvx instead of pipx if uv is installed.
+# Values: true | false
+uvx = true
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TASKS (optional)
+# Define reusable scripts/commands.
+# ─────────────────────────────────────────────────────────────────────────────
+# [tasks.build]
+# run = "npm run build"
+# description = "Build the project"
+#
+# [tasks.test]
+# run = "npm test"
+# description = "Run tests"
+#
+# [tasks.dev]
+# run = "npm run dev"
+# description = "Start dev server"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ALIASES (tool version aliases)
+# ─────────────────────────────────────────────────────────────────────────────
+# [alias]
+# node.16 = "node@16.20.0"
+# python.stable = "python@3.12"
