@@ -23,32 +23,24 @@ export TUCKR_DIR="${TUCKR_HOME}/dotfiles/Configs"
 DEVICE="$(hostnamectl chassis)"
 
 # --- Editor --- #
-if command -v hx &>/dev/null; then
-  EDITOR="hx"
-elif command -v helix &>/dev/null; then
-  EDITOR="helix"
-elif command -v vim &>/dev/null; then
-  EDITOR="vim"
-elif command -v nvim &>/dev/null; then
-  EDITOR="nvim"
-elif command -v vi &>/dev/null; then
-  EDITOR="vi"
-elif command -v micro &>/dev/null; then
-  EDITOR="micro"
-else
-  EDITOR="nano"
-fi
-
+for editor in hx helix nvim vim vi micro nano emacs; do
+  if command -v "${editor}" &>/dev/null; then
+    EDITOR="${editor}"
+    break
+  fi
+done
 export VISUAL="${EDITOR}" # VISUAL takes precedence over EDITOR
 
 # --- Browser --- #
-if command -v zen-browser &>/dev/null; then
-  export BROWSER="zen-browser"
-elif command -v thorium-browser &>/dev/null; then
-  export BROWSER="thorium-browser"
-elif command -v firefox &>/dev/null; then
-  export BROWSER="firefox"
-fi
+for browser in zen-browser thorium-browser firefox; do
+  if command -v "${browser}" &>/dev/null; then
+    BROWSER="${browser}"
+    break
+  fi
+done
+
+# --- Gnupg --- #
+GPG_TTY="$(tty)"
 
 # ---- zsh-histdb setup ---- #
 export HISTDB_FILE="${HOME}/.histdb/zsh-history.db"
@@ -60,4 +52,4 @@ export PATH="${PATH}:${SCRIPTS_DIR}:${HOME}/.local/bin" # my custom scripts
 # --- FPATH --- #
 export FPATH="${ZDOTDIR}/functions:${FPATH}"
 
-export EDITOR DEVICE
+export DEVICE EDITOR BROWSER GPG_TTY
