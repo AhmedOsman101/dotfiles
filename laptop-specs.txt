@@ -1,0 +1,17 @@
+othman@OTHMAN-LAPTOP
+--------------------
+OS: Archcraft x86_64
+Host: HP EliteBook 745 G6 (SBKPF)
+Kernel: Linux 6.18.1-arch1-2
+GPU: AMD Radeon Vega 10 Graphics [Integrated]
+Monitor (BOE0868): 1920x1080 px @ 60.003 Hz - 309x174 mm (13.96 inches, 157.78 ppi)
+CPU: AMD Ryzen 7 PRO 3700U (8) @ 2.30 GHz
+Memory: 3.85 GiB / 13.55 GiB (28%)
+Swap: Disabled
+Disk (/dev/sda): 476.9 GiB - whole disk
+Disk (/): 30.00 GiB - btrfs
+Disk (/home): 72.74 GiB - btrfs
+
+Shell: zsh 5.9
+Terminal: kitty 0.44.0
+WM: Openbox 3.6.1 (X11)
