@@ -272,6 +272,15 @@ ai() {
   esac
 }
 
+# ---- fd wrapper ---- #
+fd() {
+  if command -v fd.sh &>/dev/null; then
+    command fd.sh "$@"
+  else
+    command fd "${@}"
+  fi
+}
+
 # ---- Eza (better ls) ----- #
 # Common flags for all eza calls
 _eza_common_flags=(
