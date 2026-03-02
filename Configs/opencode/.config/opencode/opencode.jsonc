@@ -1,1 +1,24 @@
-opencode.json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "mgrep": {
+      "command": ["mgrep", "mcp"],
+      "enabled": true,
+      "type": "local"
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp/oauth",
+      "enabled": true,
+      "timeout": 10000
+    }
+  },
+  "plugin": [
+    "cc-safety-net",
+    "@tarquinen/opencode-dcp",
+    "opencode-handoff",
+    "@howaboua/opencode-planning-toolkit",
+    "@plannotator/opencode"
+  ],
+  "instructions": ["~/.config/opencode/plugins/shell-strategy/shell_strategy.md"]
+}
