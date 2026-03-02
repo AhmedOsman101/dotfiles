@@ -57,6 +57,7 @@ bruno-bin
 btop
 btrfs-progs
 caddy
+calf
 catimg
 catppuccin-gtk-theme-mocha
 catppuccin-mocha-grub-theme-git
@@ -88,9 +89,11 @@ dos2unix
 dosbox
 dosfstools
 downgrade
+duf
 dunst
 dxvk-bin
 dysk
+easyeffects
 ed
 emmet-language-server
 entr
@@ -116,11 +119,13 @@ fwupd
 fzf
 gamemode
 gearlever
+gemini-cli
 ghostscript
 gimp
 git
 git-crypt
 git-delta
+git-filter-repo
 git-lfs
 github-cli
 glow
@@ -219,6 +224,7 @@ linux-lts-headers
 llvm
 localsend
 love
+lsp-plugins-lv2
 lttng-ust2.12
 lua-language-server
 lua-lgi
@@ -234,6 +240,7 @@ mariadb
 markdown-oxide
 marp-bin
 marp-bin-debug
+mda.lv2
 mdcat
 media-downloader-git
 meld
@@ -259,6 +266,7 @@ nerd-fonts-inter
 nginx
 nm-connection-editor
 nomacs
+nsis
 ntfs-3g
 nushell
 nvidia-470xx-dkms
@@ -447,6 +455,7 @@ yamlfmt
 yapf
 yay
 yazi
+yelp
 yt-dlp
 zen-browser-bin
 zenity
