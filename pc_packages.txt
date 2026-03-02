@@ -169,6 +169,7 @@ isoimagewriter
 iw
 iwd
 jdk21-openjdk
+jdtls
 jless
 jq
 jq-lsp
@@ -240,6 +241,7 @@ mariadb
 markdown-oxide
 marp-bin
 marp-bin-debug
+maven
 mda.lv2
 mdcat
 media-downloader-git
@@ -263,6 +265,7 @@ ncdu
 ncurses5-compat-libs
 neovim
 nerd-fonts-inter
+nethogs
 nginx
 nm-connection-editor
 nomacs

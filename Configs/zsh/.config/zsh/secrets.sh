@@ -13,6 +13,8 @@ ANTHROPIC_API_KEY="$(pass show agent-router)"
 
 AI_GATEWAY_API_KEY="$(pass show vercel/ai-gateway)"
 
+CONTEXT7_API_KEY="$(pass show context7)"
+
 export GEMINI_API_KEY \
   GOOGLE_GENERATIVE_AI_API_KEY \
   OPENAI_API_KEY \
@@ -20,4 +22,5 @@ export GEMINI_API_KEY \
   ADVENT_OF_CODE_SESSION \
   ANTHROPIC_AUTH_TOKEN \
   ANTHROPIC_API_KEY \
-  AI_GATEWAY_API_KEY
+  AI_GATEWAY_API_KEY \
+  CONTEXT7_API_KEY
