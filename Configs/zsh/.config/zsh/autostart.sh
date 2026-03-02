@@ -4,12 +4,12 @@
 
 # ---- Kill if already running ---- #
 programs=(
-  copyq
-  ollama
-  sxhkd
-  # thunar
-  # dunst
-  # fcitx5
+  'copyq'
+  'ollama'
+  'sxhkd'
+  # 'thunar'
+  # 'dunst'
+  # 'fcitx5'
 )
 
 killall -9 "${programs[@]}"
