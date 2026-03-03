@@ -2,15 +2,23 @@
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
     "mgrep": {
+      "type": "local",
       "command": ["mgrep", "mcp"],
-      "enabled": true,
-      "type": "local"
+      "enabled": true
     },
     "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp/oauth",
-      "enabled": true,
-      "timeout": 10000
+      "timeout": 10000,
+      "enabled": true
+    },
+    "github": {
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp",
+      "headers": {
+        "Authorization": "Bearer {env:GITHUB_TOKEN}"
+      },
+      "enabled": true
     }
   },
   "plugin": [
@@ -20,5 +28,7 @@
     "@howaboua/opencode-planning-toolkit",
     "@plannotator/opencode"
   ],
-  "instructions": ["~/.config/opencode/plugins/shell-strategy/shell_strategy.md"]
+  "instructions": [
+    "~/.config/opencode/plugins/shell-strategy/shell_strategy.md"
+  ]
 }
