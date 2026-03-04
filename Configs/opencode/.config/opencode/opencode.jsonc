@@ -19,6 +19,14 @@
         "Authorization": "Bearer {env:GITHUB_TOKEN}"
       },
       "enabled": true
+    },
+    "obsidian": {
+      "type": "local",
+      "command": ["uvx", "mcp-obsidian"],
+      "environment": {
+        "OBSIDIAN_API_KEY": "{env:OBSIDIAN_API_KEY}"
+      },
+      "enabled": true
     }
   },
   "plugin": [
