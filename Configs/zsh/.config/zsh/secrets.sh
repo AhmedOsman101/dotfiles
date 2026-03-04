@@ -15,6 +15,8 @@ AI_GATEWAY_API_KEY="$(pass show vercel/ai-gateway)"
 
 CONTEXT7_API_KEY="$(pass show context7)"
 
+OBSIDIAN_API_KEY="$(pass show obsidian/api-key)"
+
 export GEMINI_API_KEY \
   GOOGLE_GENERATIVE_AI_API_KEY \
   OPENAI_API_KEY \
@@ -23,4 +25,5 @@ export GEMINI_API_KEY \
   ANTHROPIC_AUTH_TOKEN \
   ANTHROPIC_API_KEY \
   AI_GATEWAY_API_KEY \
-  CONTEXT7_API_KEY
+  CONTEXT7_API_KEY \
+  OBSIDIAN_API_KEY
