@@ -282,12 +282,13 @@ obsidian
 okular
 ollama
 onlyoffice-bin
+openblas
 openbsd-netcat
 opencc
 opencode
 opendoas
 openssh
-os-prober
+os-prober-btrfs
 otf-font-awesome
 pacman-contrib
 pacui

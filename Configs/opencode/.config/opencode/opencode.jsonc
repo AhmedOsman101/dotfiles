@@ -38,5 +38,25 @@
   ],
   "instructions": [
     "~/.config/opencode/plugins/shell-strategy/shell_strategy.md"
-  ]
+  ],
+  "provider": {
+    "ollama": {
+      "models": {
+        "deepseek-r1:1.5b": {
+          "name": "deepseek-r1:1.5b"
+        },
+        "qwen3:1.7b": {
+          "name": "qwen3:1.7b"
+        },
+        "qwen3.5:0.8b": {
+          "name": "qwen3.5:0.8b"
+        }
+      },
+      "name": "Ollama (local)",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://127.0.0.1:11434/v1"
+      }
+    }
+  }
 }

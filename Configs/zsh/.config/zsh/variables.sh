@@ -290,6 +290,7 @@ PATH="${PATH}:${ANDROID_HOME}/cmdline-tools/latest/bin" # Android SDK Command-li
 PATH="${PATH}:${ANDROID_HOME}/tools/bin"                # Android SDK command-line tools
 PATH="${PATH}:${ANDROID_HOME}/tools"                    # Android SDK legacy tools (android, monitor, etc)
 PATH="${PATH}:${HOME}/opt/flutter/bin"                  # Flutter and Dart
+PATH="${PATH}:/opt/google/chrome/"                      # Chrome browser
 PATH="${PATH}:${XDG_DATA_HOME}/../bin"                  # UV Binaries
 
 # Define directories to exclude
