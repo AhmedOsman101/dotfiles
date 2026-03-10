@@ -9,3 +9,4 @@ antigravity-signature-cache.json
 antigravity-logs/
 
 opencode-multi-auth-codex-accounts.json*
+.gitignore
