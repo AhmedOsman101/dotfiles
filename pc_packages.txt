@@ -12,6 +12,7 @@ android-sdk-cmdline-tools-latest
 android-sdk-platform-tools
 android-udev
 ansifilter
+antigravity
 anydesk-bin
 apparmor
 appmenu-gtk-module
@@ -70,6 +71,7 @@ cherry-studio-bin
 clang
 cmake
 colord
+colordiff
 composer
 copyq
 cowsay
