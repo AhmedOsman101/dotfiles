@@ -36,8 +36,8 @@
     "@howaboua/opencode-planning-toolkit",
     "@plannotator/opencode",
     "opencode-antigravity-auth@latest",
-    "opencode-openai-codex-auth",
-    "opencode-agent-memory"
+    "opencode-agent-memory",
+    "opencode-multi-auth-codex"
   ],
   "instructions": [
     "~/.config/opencode/plugins/shell-strategy/shell_strategy.md"
