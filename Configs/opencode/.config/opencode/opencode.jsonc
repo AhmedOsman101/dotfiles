@@ -37,6 +37,7 @@
     "@plannotator/opencode",
     "opencode-antigravity-auth@latest",
     "opencode-openai-codex-auth",
+    "opencode-agent-memory"
   ],
   "instructions": [
     "~/.config/opencode/plugins/shell-strategy/shell_strategy.md"
