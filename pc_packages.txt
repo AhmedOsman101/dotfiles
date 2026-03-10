@@ -56,6 +56,7 @@ bridge-utils
 bruno-bin
 btop
 btrfs-progs
+cadaver
 caddy
 calf
 catimg
@@ -98,7 +99,6 @@ ed
 emmet-language-server
 entr
 evince
-ex-vi-compat
 exfatprogs
 exo
 eza
@@ -113,7 +113,6 @@ flameshot
 flatpak
 fmt
 freedownloadmanager
-frog-ocr
 frogmouth
 fwupd
 fzf
@@ -121,6 +120,8 @@ gamemode
 gearlever
 gemini-cli
 ghostscript
+gimagereader-gtk
+gimagereader-qt
 gimp
 git
 git-crypt
@@ -223,6 +224,7 @@ linux-firmware
 linux-lts
 linux-lts-headers
 llvm
+lmstudio-bin
 localsend
 love
 lsp-plugins-lv2

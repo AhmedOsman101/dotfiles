@@ -38,3 +38,4 @@ vite
 helix-snippets-ls
 license
 @mixedbread/mgrep
+@playwright/cli

@@ -16,8 +16,9 @@ source "${XDG_DATA_HOME:-${HOME}/.local/share}/bash-completion/completions/deno.
 export SCRIPTS_DIR="${HOME}/scripts"
 
 # ---- PATH ---- #
-export PATH="${PATH}:${SCRIPTS_DIR}" # my custom scripts
-PATH="${PATH}:${HOME}/.local/bin"    # my custom scripts (alternative)
+PATH="${PATH}:${SCRIPTS_DIR}" # my custom scripts
+PATH="${PATH}:/home/othman/.lmstudio/bin"
+PATH="${PATH}:${HOME}/.local/bin" # my custom scripts (alternative)
 
 # Define directories to exclude
 EXCLUDE_DIRS=(
@@ -42,3 +43,5 @@ if [[ -d "${SCRIPTS_DIR}" ]]; then
     fi
   done
 fi
+
+export PATH

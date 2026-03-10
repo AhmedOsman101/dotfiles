@@ -4,3 +4,5 @@ end
 
 starship init fish | source
 enable_transience
+
+set -gx PATH $PATH /home/othman/.lmstudio/bin

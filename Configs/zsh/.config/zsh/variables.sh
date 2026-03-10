@@ -283,6 +283,7 @@ PATH="${PATH}:${HOME}/.spicetify"                       # spicetify for spotify 
 PATH="${PATH}:${BUN_INSTALL}/bin"                       # Bun js runtime
 PATH="${PATH}:${XDG_CONFIG_HOME}/composer/vendor/bin"   # Composer packages
 PATH="${PATH}:${CARGO_HOME}/bin"                        # Cargo packages
+PATH="${PATH}:${GOPATH}/bin"                            # Golang packages
 PATH="${PATH}:${ASDF_DATA_DIR}/shims"                   # Asdf shims
 PATH="${PATH}:${ANDROID_HOME}/platform-tools"           # Android SDK platform tools (adb, fastboot)
 PATH="${PATH}:${ANDROID_HOME}/emulator"                 # Android SDK emulator binaries
@@ -292,6 +293,7 @@ PATH="${PATH}:${ANDROID_HOME}/tools"                    # Android SDK legacy too
 PATH="${PATH}:${HOME}/opt/flutter/bin"                  # Flutter and Dart
 PATH="${PATH}:/opt/google/chrome/"                      # Chrome browser
 PATH="${PATH}:${XDG_DATA_HOME}/../bin"                  # UV Binaries
+PATH="${PATH}:${HOME}/.lmstudio/bin"                    # LM Studio (lms) CLI
 
 # Define directories to exclude
 EXCLUDE_DIRS=(
