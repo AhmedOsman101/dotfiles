@@ -17,6 +17,10 @@ CONTEXT7_API_KEY="$(pass show context7)"
 
 OBSIDIAN_API_KEY="$(pass show obsidian/api-key)"
 
+OPENROUTER_API_KEY="$(pass show openrouter)"
+
+ZAI_API_KEY="$(pass show z.ai)"
+
 export GEMINI_API_KEY \
   GOOGLE_GENERATIVE_AI_API_KEY \
   OPENAI_API_KEY \
@@ -26,4 +30,6 @@ export GEMINI_API_KEY \
   ANTHROPIC_API_KEY \
   AI_GATEWAY_API_KEY \
   CONTEXT7_API_KEY \
-  OBSIDIAN_API_KEY
+  OBSIDIAN_API_KEY \
+  OPENROUTER_API_KEY \
+  ZAI_API_KEY

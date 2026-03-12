@@ -4,10 +4,6 @@
     "maxRetries": 3,
     "initialRetryDelayMs": 1000
   },
-  "ollama": {
-    "model": "deepseek-r1:1.5b",
-    "baseUrl": "http://localhost:11434/api"
-  },
   "commit": {
     "autoCommit": false,
     "autoPush": false,

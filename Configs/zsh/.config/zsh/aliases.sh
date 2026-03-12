@@ -89,7 +89,7 @@ alias frg="frogmouth"
 alias doas="doas --"
 
 # ---- Mirrorlist ---- #
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" # Fastest mirrors
+alias mirror='sudo reflector --save /etc/pacman.d/mirrorlist --protocol https --country Turkey,Greece,Italy,SaudiArabia,Israel,Germany --latest 15 --sort rate' # Fastest mirrors
 
 # ---- Cargo ---- #
 alias cb="cargo build"
