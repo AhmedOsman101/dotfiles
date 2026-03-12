@@ -245,8 +245,7 @@ formatter = { command = "prettier", args = [
   "file.md",
 ] }
 language-servers = [
-  # "marksman",
-  "markdown-oxide",
+  "marksman",
   "scls",
 ]
 
