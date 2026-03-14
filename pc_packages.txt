@@ -12,6 +12,7 @@ android-sdk-cmdline-tools-latest
 android-sdk-platform-tools
 android-udev
 ansifilter
+apfs-fuse-git
 apparmor
 appmenu-gtk-module
 archcraft-fonts
@@ -80,6 +81,7 @@ dialog
 discord
 dkms
 dmenu
+dmg2img
 dnsmasq
 dolphin
 dos2unix
@@ -337,6 +339,7 @@ python-pip
 python-pyqt6
 qalculate-gtk
 qalculate-qt
+qemu-full
 qmmp
 qmmp-plugin-pack
 qt5-tools
@@ -344,6 +347,8 @@ qt5-wayland
 qt5ct
 qt6ct
 qtpass
+quickemu-git
+quickgui
 rar
 rebuild-detector
 reflector
@@ -376,6 +381,7 @@ sxhkd
 tableplus
 tailscale
 taplo-cli
+tcpdump
 terminus-font
 tesseract-data-eng
 testdisk
