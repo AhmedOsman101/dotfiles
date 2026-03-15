@@ -379,8 +379,6 @@ starship
 swtpm
 sxhkd
 tableplus
-tailscale
-taplo-cli
 tcpdump
 terminus-font
 tesseract-data-eng
@@ -394,6 +392,7 @@ tlrc
 tmux
 toilet
 tokei
+tombi
 trash-cli
 tree
 ttf-amiri
@@ -420,6 +419,8 @@ vkbasalt
 vkd3d
 vlc
 vlc-plugins-all
+vnstat
+vnstat-client
 vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver

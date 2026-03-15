@@ -40,3 +40,6 @@ done
 for app in "${ZSH_CONF}"/apps/*.sh; do
   [[ -s "${app}" ]] && source "${app}"
 done
+
+# ---- Auto-start tmux if not already running ---- #
+tmux ls &>/dev/null || tmux
