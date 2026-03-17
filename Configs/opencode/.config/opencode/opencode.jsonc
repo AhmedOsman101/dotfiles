@@ -30,14 +30,14 @@
     }
   },
   "plugin": [
-    "cc-safety-net",
-    "@tarquinen/opencode-dcp",
-    "opencode-handoff",
-    "@howaboua/opencode-planning-toolkit",
-    "@plannotator/opencode",
+    "cc-safety-net@latest",
+    "@tarquinen/opencode-dcp@latest",
+    "opencode-handoff@latest",
+    "@howaboua/opencode-planning-toolkit@latest",
+    "@plannotator/opencode@latest",
     "opencode-antigravity-auth@latest",
-    "opencode-agent-memory",
-    "opencode-multi-auth-codex"
+    "opencode-agent-memory@latest",
+    "opencode-multi-auth-codex@latest"
   ],
   "instructions": [
     "~/.config/opencode/plugins/shell-strategy/shell_strategy.md"

@@ -436,6 +436,7 @@ wireplumber
 wl-clipboard
 wmctrl
 woff2-font-awesome
+words
 wpa_supplicant
 wrk
 x11-ssh-askpass
