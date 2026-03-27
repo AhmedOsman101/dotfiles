@@ -299,6 +299,7 @@ partitionmanager
 paru
 paru-debug
 pass-import
+pavucontrol
 perl-graph-easy
 photocrea
 php-apache
