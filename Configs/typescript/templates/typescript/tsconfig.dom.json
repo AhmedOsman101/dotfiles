@@ -1,0 +1,30 @@
+{
+  // =====================================================================
+  // tsconfig.dom.json — USE FOR: Browser apps / anything touching the DOM
+  //
+  // When to use:
+  //   - Your code runs in a browser
+  //   - You use `document`, `window`, `fetch`, `localStorage`, etc.
+  //   - A bundler (Vite, Webpack, esbuild) handles compilation
+  //
+  // Examples:
+  //   - React/Vue/Svelte/Solid app
+  //   - Next.js, Nuxt, SvelteKit, Astro
+  //   - Browser extension
+  //   - Any frontend app built with Vite/Webpack
+  //
+  // NOT for:
+  //   - Server-side Node.js code (use tsconfig.node*.json)
+  //   - Isomorphic libraries (use tsconfig.library.json, add dom to lib yourself)
+  // =====================================================================
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "preserve",               // Let bundler decide module output
+    "noEmit": true,                     // Do not generate JS output
+    "lib": [
+      "es2022",                         // ES2022 built-in types
+      "dom",                            // DOM API types (document, window, etc.)
+      "dom.iterable"                    // DOM iterable types (NodeList, etc.)
+    ]
+  }
+}

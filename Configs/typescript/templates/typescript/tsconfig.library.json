@@ -1,0 +1,29 @@
+{
+  // =====================================================================
+  // tsconfig.library.json — USE FOR: npm packages / libraries you publish
+  //
+  // When to use:
+  //   - You publish to npm and others `import` your package
+  //   - You need `.d.ts` declarations so consumers get types
+  //   - You need declaration maps for consumers' go-to-definition
+  //
+  // Examples:
+  //   - A utility library (lodash-like)
+  //   - A shared component library
+  //   - An SDK or API client package
+  //   - Any package with `"main"` or `"exports"` in package.json
+  //
+  // NOT for:
+  //   - Apps that don't get published (use tsconfig.node.json)
+  //   - Libraries in a monorepo (use tsconfig.library-monorepo.json)
+  //   - Browser apps (use tsconfig.dom.json)
+  // =====================================================================
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "NodeNext",               // ESM-compatible Node.js modules
+    "outDir": "dist",                   // Output directory for compiled JS
+    "sourceMap": true,                  // Generate .map files for debugging
+    "declaration": true,                // Generate .d.ts type declarations
+    "declarationMap": true              // Generate .d.ts.map for go-to-definition
+  }
+}

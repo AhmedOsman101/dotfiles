@@ -1,0 +1,28 @@
+{
+  // =====================================================================
+  // tsconfig.node.json — USE FOR: Node.js apps where tsc compiles TS → JS
+  //
+  // When to use:
+  //   - You run `tsc` to build, then `node dist/index.js` to run
+  //   - Plain Node.js server or CLI tool (no bundler)
+  //   - You want `.d.ts` declarations alongside your compiled JS
+  //
+  // Examples:
+  //   - Express/Hono/Fastify API server
+  //   - CLI tool published to npm (but not a library for others)
+  //   - Background worker, cron job, queue consumer
+  //   - Node.js script run via `node dist/script.js`
+  //
+  // NOT for:
+  //   - Projects using tsx/ts-node/bun (use tsconfig.node-no-emit.json)
+  //   - npm packages (use tsconfig.library.json)
+  //   - Browser apps (use tsconfig.dom.json)
+  // =====================================================================
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "NodeNext",               // ESM-compatible Node.js modules
+    "outDir": "dist",                   // Output directory for compiled JS
+    "sourceMap": true,                  // Generate .map files for debugging
+    "declaration": true                 // Generate .d.ts type declarations
+  }
+}

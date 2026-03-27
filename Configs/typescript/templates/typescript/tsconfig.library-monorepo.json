@@ -1,0 +1,27 @@
+{
+  // =====================================================================
+  // tsconfig.library-monorepo.json — USE FOR: npm packages INSIDE a monorepo
+  //
+  // When to use:
+  //   - Same as library.json, but inside a monorepo workspace
+  //   - Your package depends on other packages in the same repo
+  //   - You use project references (`references` in tsconfig)
+  //   - You want incremental builds across the monorepo
+  //
+  // Examples:
+  //   - `packages/utils/` in a Turborepo/Lerna/pnpm workspace
+  //   - `libs/shared/` in an Nx monorepo
+  //   - A design system package in a monorepo
+  //   - Any package that imports from sibling packages in the repo
+  //
+  // Extends tsconfig.library.json (adds composite for project references)
+  //
+  // NOT for:
+  //   - Standalone npm packages (use tsconfig.library.json)
+  //   - Apps (use tsconfig.node.json or tsconfig.node-no-emit.json)
+  // =====================================================================
+  "extends": "./tsconfig.library.json",
+  "compilerOptions": {
+    "composite": true                   // Enable project references for monorepo builds
+  }
+}

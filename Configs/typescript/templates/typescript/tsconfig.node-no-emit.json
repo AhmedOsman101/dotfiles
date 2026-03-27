@@ -1,0 +1,26 @@
+{
+  // =====================================================================
+  // tsconfig.node-no-emit.json — USE FOR: Node.js apps where something
+  // else handles the TS compilation (NOT tsc)
+  //
+  // When to use:
+  //   - You run TS directly without a separate build step
+  //   - TypeScript only does type-checking, not compilation
+  //
+  // Examples:
+  //   - `npx tsx src/index.ts` (tsx runtime)
+  //   - `bun run src/index.ts` (Bun's built-in TS support)
+  //   - `ts-node src/index.ts` (ts-node runtime)
+  //   - `esbuild src/index.ts` (esbuild handles transpilation)
+  //
+  // NOT for:
+  //   - Projects that run `tsc` to compile (use tsconfig.node.json)
+  //   - npm packages (use tsconfig.library.json)
+  //   - Browser apps (use tsconfig.dom.json)
+  // =====================================================================
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "preserve",               // Let bundler decide module output
+    "noEmit": true                      // Do not generate JS output
+  }
+}
