@@ -5,7 +5,8 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true, // Allow default imports from modules without default exports
     "skipLibCheck": true,
-    "allowJs": true,
+    "allowJs": false,
+    "checkJs": false,
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
@@ -18,8 +19,19 @@
     "strictBindCallApply": true, // Strict check for bind/call/apply
     "noImplicitThis": true, // Prevent implicit 'this' as 'any'
     "alwaysStrict": true, // Parse in strict mode
+    /* Must Have */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnusedLablels": false,
+    "noUncheckedSideEffectImports": true,
+    "allowUnreachableCode": false,
+    /* Optional But Recommended */
     "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    /* Completely Optional */
     "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+    // "noErrorTruncation": true,
     /* If transpiling with TypeScript: */
     "module": "NodeNext",
     "outDir": "dist",
