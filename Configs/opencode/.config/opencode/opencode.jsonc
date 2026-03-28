@@ -9,7 +9,13 @@
     "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp/oauth",
-      "timeout": 10000,
+      "timeout": 5000,
+      "enabled": true
+    },
+    "zod": {
+      "type": "remote",
+      "url": "https://mcp.inkeep.com/zod/mcp",
+      "timeout": 5000,
       "enabled": true
     },
     "github": {

@@ -17,7 +17,7 @@ export SCRIPTS_DIR="${HOME}/scripts"
 
 # --- Tuckr --- #
 export TUCKR_HOME="${HOME}/dotfiles"
-export TUCKR_DIR="${TUCKR_HOME}/dotfiles/Configs"
+export TUCKR_DIR="${TUCKR_HOME}/Configs"
 
 # --- Chassis --- #
 DEVICE="$(hostnamectl chassis)"
