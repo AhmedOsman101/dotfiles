@@ -3,7 +3,7 @@
   "mcp": {
     "mgrep": {
       "type": "local",
-      "command": ["mgrep", "mcp"],
+      "command": [ "mgrep", "mcp" ],
       "enabled": true
     },
     "context7": {
@@ -28,7 +28,7 @@
     },
     "obsidian": {
       "type": "local",
-      "command": ["uvx", "mcp-obsidian"],
+      "command": [ "uvx", "mcp-obsidian" ],
       "environment": {
         "OBSIDIAN_API_KEY": "{env:OBSIDIAN_API_KEY}"
       },
@@ -43,7 +43,7 @@
     "@plannotator/opencode@latest",
     "opencode-antigravity-auth@latest",
     "opencode-agent-memory@latest",
-    "opencode-multi-auth-codex@latest"
+    "@iam-brain/opencode-codex-auth@latest"
   ],
   "instructions": [
     "~/.config/opencode/plugins/shell-strategy/shell_strategy.md"

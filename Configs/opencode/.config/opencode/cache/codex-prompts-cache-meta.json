@@ -1,0 +1,11 @@
+{
+  "lastChecked": 1774722202834,
+  "urls": {
+    "orchestrator": "https://raw.githubusercontent.com/openai/codex/4ab44e2c5cc54ed47e47a6729dfd8aa5a3dc2476/codex-rs/core/templates/agents/orchestrator.md",
+    "plan": "https://raw.githubusercontent.com/openai/codex/4ab44e2c5cc54ed47e47a6729dfd8aa5a3dc2476/codex-rs/core/templates/collaboration_mode/plan.md"
+  },
+  "etags": {
+    "orchestrator": "W/\"870b5d98e40f6637151e4bbe483766e2b3d93573aa01ff254844fd5e0867af4e\"",
+    "plan": "W/\"78ef13e4c338e7d649b4cfd3b0de2224c1fec04424004edc970f40ac2a940ad6\""
+  }
+}
