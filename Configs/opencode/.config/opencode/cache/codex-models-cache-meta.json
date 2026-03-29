@@ -1,6 +1,6 @@
 {
   "etag": "W/\"24e1c22b73350522d57db178e6df81291dd19d6c38d6389832cc5343edf07167\"",
-  "tag": "rust-v0.116.0",
-  "lastChecked": 1774722254486,
-  "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.116.0/codex-rs/core/models.json"
+  "tag": "rust-v0.117.0",
+  "lastChecked": 1774722932078,
+  "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.117.0/codex-rs/core/models.json"
 }
