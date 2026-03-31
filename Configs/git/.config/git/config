@@ -67,10 +67,10 @@
     singleKey = true                   # Enables single-key input (e.g., 'y' or 'n') without requiring Enter
 
 [delta]
-    # navigate = true # use n and N to move between diff sections
-    # side-by-side = true
+    navigate = true # use n and N to move between diff sections
+    side-by-side = true
     dark = true                        # Enables dark mode for the delta diff viewer
-    line-numbers = true                # Shows line numbers in delta output
+    line-numbers = false                # Shows line numbers in delta output
     syntax-theme = "Catppuccin Mocha"  # Sets the syntax highlighting theme for delta
 
 [merge]
