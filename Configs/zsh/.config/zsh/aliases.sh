@@ -131,7 +131,7 @@ alias sw='switch-branch'
 # --- Mask (maskfile) --- #
 if command -v mask &>/dev/null; then
   unalias mask &>/dev/null
-  alias task="$(command -v mask)"
+  alias task='command mask'
   alias mask='mask --maskfile "$(git-root 2>/dev/null || pwd)/maskfile.md"'
 fi
 

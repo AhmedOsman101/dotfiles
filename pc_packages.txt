@@ -117,8 +117,6 @@ gamemode
 gearlever
 gemini-cli
 ghostscript
-gimagereader-gtk
-gimagereader-qt
 gimp
 git
 git-crypt
@@ -269,6 +267,7 @@ nethogs
 nginx
 nm-connection-editor
 nomacs
+normcap
 nsis
 ntfs-3g
 nushell
