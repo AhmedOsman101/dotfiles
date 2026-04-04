@@ -45,11 +45,14 @@
     "cc-safety-net@latest",
     "@tarquinen/opencode-dcp@latest",
     "opencode-handoff@latest",
-    "@howaboua/opencode-planning-toolkit@latest",
     "@plannotator/opencode@latest",
     "opencode-antigravity-auth@latest",
-    // "opencode-agent-memory@latest",
-    "@iam-brain/opencode-codex-auth@latest"
+    "@iam-brain/opencode-codex-auth@latest",
+    "opencode-agent-skills@latest", // provides tools for loading and using reusable AI agent skills.
+    "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
+    "micode@latest", // structured Brainstorm → Plan → Implement workflow and session continuity.
+    // "superpowers@git+https://github.com/obra/superpowers.git",
+    // "@howaboua/opencode-planning-toolkit@latest", // planning toolkit for OpenCode
   ],
   "instructions": [
     "~/.config/opencode/plugins/shell-strategy/shell_strategy.md"
