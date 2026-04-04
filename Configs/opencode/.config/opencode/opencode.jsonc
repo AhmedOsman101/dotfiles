@@ -3,10 +3,7 @@
   "mcp": {
     "mgrep": {
       "type": "local",
-      "command": [
-        "mgrep",
-        "mcp"
-      ],
+      "command": ["mgrep", "mcp"],
       "enabled": true
     },
     "context7": {
@@ -31,10 +28,7 @@
     },
     "obsidian": {
       "type": "local",
-      "command": [
-        "uvx",
-        "mcp-obsidian"
-      ],
+      "command": ["uvx", "mcp-obsidian"],
       "environment": {
         "OBSIDIAN_API_KEY": "{env:OBSIDIAN_API_KEY}"
       },
@@ -50,7 +44,7 @@
     "@iam-brain/opencode-codex-auth@latest",
     "opencode-agent-skills@latest", // provides tools for loading and using reusable AI agent skills.
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
-    "micode@latest", // structured Brainstorm → Plan → Implement workflow and session continuity.
+    "micode@latest" // structured Brainstorm → Plan → Implement workflow and session continuity.
     // "superpowers@git+https://github.com/obra/superpowers.git",
     // "@howaboua/opencode-planning-toolkit@latest", // planning toolkit for OpenCode
   ],
@@ -85,14 +79,8 @@
             "output": 65535
           },
           "modalities": {
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image", "pdf"],
+            "output": ["text"]
           },
           "variants": {
             "low": {
@@ -110,14 +98,8 @@
             "output": 65535
           },
           "modalities": {
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image", "pdf"],
+            "output": ["text"]
           },
           "variants": {
             "low": {
@@ -135,14 +117,8 @@
             "output": 65536
           },
           "modalities": {
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image", "pdf"],
+            "output": ["text"]
           },
           "variants": {
             "minimal": {
@@ -166,14 +142,8 @@
             "output": 64000
           },
           "modalities": {
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image", "pdf"],
+            "output": ["text"]
           }
         },
         "antigravity-claude-opus-4-6-thinking": {
@@ -183,14 +153,8 @@
             "output": 64000
           },
           "modalities": {
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image", "pdf"],
+            "output": ["text"]
           },
           "variants": {
             "low": {
@@ -212,14 +176,8 @@
             "output": 65536
           },
           "modalities": {
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image", "pdf"],
+            "output": ["text"]
           }
         },
         "gemini-2.5-pro": {
@@ -229,14 +187,8 @@
             "output": 65536
           },
           "modalities": {
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image", "pdf"],
+            "output": ["text"]
           }
         },
         "gemini-3-flash-preview": {
@@ -246,14 +198,8 @@
             "output": 65536
           },
           "modalities": {
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image", "pdf"],
+            "output": ["text"]
           }
         },
         "gemini-3-pro-preview": {
@@ -263,14 +209,8 @@
             "output": 65535
           },
           "modalities": {
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image", "pdf"],
+            "output": ["text"]
           }
         },
         "gemini-3.1-pro-preview": {
@@ -280,14 +220,8 @@
             "output": 65535
           },
           "modalities": {
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image", "pdf"],
+            "output": ["text"]
           }
         },
         "gemini-3.1-pro-preview-customtools": {
@@ -297,14 +231,8 @@
             "output": 65535
           },
           "modalities": {
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image", "pdf"],
+            "output": ["text"]
           }
         }
       }
