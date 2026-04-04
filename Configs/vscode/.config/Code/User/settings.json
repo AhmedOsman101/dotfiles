@@ -73,7 +73,8 @@
     "editor.wordBasedSuggestions": "off",
     "editor.wordBreak": "normal",
     "editor.wordWrap": "off",
-    "editor.wrappingIndent": "none"
+    "editor.wrappingIndent": "none",
+    "diffEditor.ignoreTrimWhitespace": false
   },
   "[php]": {
     "editor.defaultFormatter": "DEVSENSE.phptools-vscode"

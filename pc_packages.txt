@@ -289,6 +289,7 @@ opendoas
 openssh
 os-prober-btrfs
 otf-font-awesome
+packettracer
 pacman-contrib
 pacui
 pamac
@@ -300,6 +301,7 @@ paru-debug
 pass-import
 pavucontrol
 perl-graph-easy
+perl-rename
 photocrea
 php-apache
 php-codesniffer
@@ -400,6 +402,7 @@ tuckr
 ufw
 ulauncher
 unarchiver
+unicode
 unzip
 upscayl-desktop-git
 usage
