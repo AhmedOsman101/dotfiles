@@ -66,10 +66,6 @@ export BUNDLE_USER_PLUGIN="${XDG_DATA_HOME}/bundle"
 # --- Cargo --- #
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 
-# --- Chrome --- #
-CHROME_EXECUTABLE="$(command -v thorium-browser 2>/dev/null)"
-export CHROME_EXECUTABLE
-
 # --- Cuda --- #
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
 

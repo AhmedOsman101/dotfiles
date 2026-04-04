@@ -46,10 +46,14 @@ GPG_TTY="$(tty)"
 export HISTDB_FILE="${HOME}/.histdb/zsh-history.db"
 export HISTDB_TABULATE_CMD=(column -t -s $'\x1f')
 
+# --- Chrome --- #
+CHROME_EXECUTABLE="$(command -v thorium-browser 2>/dev/null || command -v thorium-browser-avx2 2>/dev/null)"
+PUPPETEER_EXECUTABLE_PATH="${CHROME_EXECUTABLE}"
+
 # --- PATH --- #
 export PATH="${PATH}:${SCRIPTS_DIR}:${HOME}/.local/bin" # my custom scripts
 
 # --- FPATH --- #
 export FPATH="${ZDOTDIR}/functions:${FPATH}"
 
-export DEVICE EDITOR BROWSER GPG_TTY
+export DEVICE EDITOR BROWSER GPG_TTY CHROME_EXECUTABLE PUPPETEER_EXECUTABLE_PATH

@@ -351,3 +351,14 @@ advrm() {
   find "${dir}" -type f -print0 | pv -0 -l -s "${total_files}" | xargs -0 rm -f
   rm -rf "${dir}" # remove empty directories
 }
+
+rename() {
+  local perlRename
+  perlRename="$(command -v /usr/bin/vendor_perl/rename 2>/dev/null || command -v perl-rename 2>/dev/null)"
+
+  if [[ -n "${perlRename}" ]]; then
+    "${perlRename}" "$@"
+  else
+    command rename "$@"
+  fi
+}
