@@ -2,16 +2,16 @@
   "$schema": "https://raw.githubusercontent.com/Opencode-DCP/opencode-dynamic-context-pruning/master/dcp.schema.json",
   "strategies": {
     "deduplication": {
-      "protectedTools": ["question", "brainstorming", "createPlan", "createSpec", "appendSpec", "readPlan", "markPlanDone", "submit_plan", "memory_set", "memory_replace", "memory_list"]
+      "protectedTools": []
     },
     "purgeErrors": {
-      "protectedTools": ["question", "brainstorming", "createPlan", "createSpec", "appendSpec", "readPlan", "markPlanDone", "submit_plan", "memory_set", "memory_replace", "memory_list"]
+      "protectedTools": []
     }
   },
   "commands": {
-    "protectedTools": ["question", "brainstorming", "createPlan", "createSpec", "appendSpec", "readPlan", "markPlanDone", "submit_plan", "memory_set", "memory_replace", "memory_list"]
+    "protectedTools": []
   },
   "compress": {
-    "protectedTools": ["question", "brainstorming", "createPlan", "createSpec", "appendSpec", "readPlan", "markPlanDone", "submit_plan", "memory_set", "memory_replace", "memory_list"]
+    "protectedTools": []
   }
 }

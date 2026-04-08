@@ -4,7 +4,7 @@
     "mgrep": {
       "type": "local",
       "command": ["mgrep", "mcp"],
-      "enabled": true
+      "enabled": false
     },
     "context7": {
       "type": "remote",
@@ -24,7 +24,7 @@
       "headers": {
         "Authorization": "Bearer {env:GITHUB_TOKEN}"
       },
-      "enabled": true
+      "enabled": false
     },
     "obsidian": {
       "type": "local",
@@ -42,11 +42,10 @@
     "@plannotator/opencode@latest",
     "opencode-antigravity-auth@latest",
     "@iam-brain/opencode-codex-auth@latest",
-    "opencode-agent-skills@latest", // provides tools for loading and using reusable AI agent skills.
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
-    "micode@latest" // structured Brainstorm → Plan → Implement workflow and session continuity.
+    "@howaboua/opencode-planning-toolkit@latest", // planning toolkit for OpenCode
     // "superpowers@git+https://github.com/obra/superpowers.git",
-    // "@howaboua/opencode-planning-toolkit@latest", // planning toolkit for OpenCode
+    // "micode@latest" // structured Brainstorm → Plan → Implement workflow and session continuity.
   ],
   "instructions": [
     "~/.config/opencode/plugins/shell-strategy/shell_strategy.md"
