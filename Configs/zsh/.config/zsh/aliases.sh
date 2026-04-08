@@ -74,6 +74,7 @@ alias glg="git log --all --graph --pretty=format:'%C(magenta)%h%C(default) %an %
 alias gc="git clone"
 alias glc='git pull origin $(git_current_branch)'
 alias glo='git pull origin'
+alias gi='mk-gitignore'
 # --- aliases override --- #
 unalias g &>/dev/null || true
 unalias gcm &>/dev/null || true
