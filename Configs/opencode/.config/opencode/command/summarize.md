@@ -8,25 +8,25 @@ If no source material is present, ask the user to attach or paste the material i
 
 Create an exam-optimized summary that prioritizes **understanding through structure** and **active recall**.
 
-Length Constraint: Target 750-800 words for a 5-minute review at 150 WPM. Hard ceiling: 1000 words only if cutting would lose testable information.
+Length Constraint: Target 750–800 words for a 5-minute review at 150 WPM. Hard ceiling: 1000 words only if cutting would lose testable information.
 
 **Core Objective:** Maximize information density per sentence. Every line must be testable or explain a relationship.
 
 **Structural Requirements for Active Recall:**
 
-- **Concept Chunks:** Group related ideas into 100-150 word sections with clear `##` headers
+- **Concept Chunks:** Group related ideas into 100–150 word sections with clear `##` headers
 - **Elaborative Rehearsal:** Follow each definition with 1 sentence explaining _why_ or _how_ it works (not just "what")
 - **Visualize relationships:** Comparison tables for contrasting concepts; Mermaid diagrams for multi-step processes; nested bullets for hierarchies
-- **Edge Case Highlighting:** Use GitHub-flavored alerts to surface critical exceptions and nuanced conditions.
+- **Edge Case Highlighting:** Use GitHub‑flavored alerts to surface critical exceptions and nuanced conditions.
 - Bold all **testable terminology** (definitions, formulas, proper nouns) on first appearance
 
 **Content Hierarchy (strict priority order):**
 
-1. **Definitions with boundaries** - what's included/excluded (exam traps live here)
-2. **Conditional logic** - "If/then" rules, edge cases, exceptions
-3. **Procedural steps** - numbered, with _why this order matters_
-4. **Contrast pairs** - easily confused concepts; use explicit "vs." statements and tables
-5. **Formulas/code** - with code/commands (preserve syntax exactly)
+1. **Definitions with boundaries** — what's included/excluded (exam traps live here)
+2. **Conditional logic** — "If/then" rules, edge cases, exceptions
+3. **Procedural steps** — numbered, with _why this order matters_
+4. **Contrast pairs** — easily confused concepts; use explicit "vs." statements and tables
+5. **Formulas/code** — with code/commands (preserve syntax exactly)
 
 **Compression Rules:**
 
@@ -45,4 +45,4 @@ Length Constraint: Target 750-800 words for a 5-minute review at 150 WPM. Hard c
 
 Honor any narrowing or emphasis in `$ARGUMENTS` as long as it does not conflict with the source material.
 
-Begin immediately with the first heading. No introduction or conclusion.
+Begin immediately with the first heading. No introduction, prerequisites, or conclusion.
