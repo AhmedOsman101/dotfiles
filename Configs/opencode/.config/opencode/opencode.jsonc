@@ -9,13 +9,13 @@
     "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp/oauth",
-      "timeout": 1000,
+      "timeout": 5000,
       "enabled": false
     },
     "zod": {
       "type": "remote",
       "url": "https://mcp.inkeep.com/zod/mcp",
-      "timeout": 1000,
+      "timeout": 5000,
       "enabled": false
     },
     "github": {
@@ -45,7 +45,6 @@
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
     "@howaboua/opencode-planning-toolkit@latest", // planning toolkit for OpenCode
     // "superpowers@git+https://github.com/obra/superpowers.git",
-    // "micode@latest" // structured Brainstorm → Plan → Implement workflow and session continuity.
   ],
   "instructions": [
     "~/.config/opencode/plugins/shell-strategy/shell_strategy.md"
