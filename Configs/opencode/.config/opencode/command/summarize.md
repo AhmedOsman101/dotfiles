@@ -8,7 +8,7 @@ If no source material is present, ask the user to attach or paste the material i
 
 Create an exam-optimized summary that prioritizes **understanding through structure** and **active recall**.
 
-Length Constraint: Target 750–800 words for a 5-minute review at 150 WPM. Hard ceiling: 1000 words only if cutting would lose testable information.
+Length Constraint: Target 750–800 words for a 5-minute review at 150 WPM. Hard ceiling: 1000 words (8-minute read) only if cutting would lose testable information. Use the ~/scripts/readtime script to determine the readtime.
 
 **Core Objective:** Maximize information density per sentence. Every line must be testable or explain a relationship.
 
