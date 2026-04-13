@@ -28,7 +28,7 @@
 
 [pull]
     default = current                  # Sets the default pull behavior to pull into the current branch
-    rebase = true                      # Performs a rebase instead of a merge when pulling changes 
+    rebase = false                     # Performs a rebase instead of a merge when pulling changes (disabled)
 
 [rebase]
     autostash = true                   # Automatically stashes local changes before rebasing and reapplies them after
