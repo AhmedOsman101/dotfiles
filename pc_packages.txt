@@ -151,7 +151,7 @@ gum
 gvfs
 gvfs-mtp
 gvfs-smb
-helix
+helix-git
 helixbinhx
 htop
 hyperfine
@@ -355,6 +355,7 @@ quickgui
 rar
 rebuild-detector
 reflector
+resvg
 rmtrash
 rofi
 ruff

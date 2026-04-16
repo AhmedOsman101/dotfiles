@@ -333,7 +333,7 @@
     "groovy": "groovy",
     "haskell": "runghc",
     "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-    "java": "cd $dir; javac $fileName ; java $fileNameWithoutExt",
+    "java": "cd $dir; java -cp out $fileName",
     "javascript": "clear; deno --unstable-sloppy-imports -A",
     "julia": "julia",
     "kit": "kitc --run",
