@@ -23,12 +23,12 @@ mode.select = "VISUAL"
 enable = true
 
 [editor.auto-pairs]
-'(' = ')'
-'{' = '}'
-'[' = ']'
+'(' = ")"
+'{' = "}"
+'[' = "]"
 '"' = '"'
 "'" = "'"
-'`' = '`'
+'`' = "`"
 # '<' = '>'
 
 [editor.cursor-shape]
@@ -62,7 +62,7 @@ tabpad = "·"
 
 [editor.indent-guides]
 render = true
-character = "┆" # Some characters that work well: "▏", "┆", "┊", "⸽"
+character = "┆"  # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
 
 [editor.inline-diagnostics]
@@ -71,25 +71,9 @@ other-lines = "disable"
 prefix-len = 2
 max-diagnostics = 2
 
-[keys.normal."space"]
-v = ":clipboard-paste-replace"
-
-F = ["file_picker"]
-E = ["file_explorer"]
-f = ["file_picker_in_current_directory"]
-e = ["file_explorer_in_current_buffer_directory"]
-
-[keys.select."space"]
-v = ":clipboard-paste-replace"
-
-F = ["file_picker"]
-E = ["file_explorer"]
-f = ["file_picker_in_current_directory"]
-e = ["file_explorer_in_current_buffer_directory"]
-
 [keys.normal]
 X = ["extend_line_above"]
-C-s = [":format", ":write"]                             # format and save
+C-s = [":format", ":write"]  # format and save
 C-d = ["extend_to_line_bounds", "yank", "paste_before"]
 A-r = [":reload-all"]
 C-r = [":config-reload"]
@@ -147,9 +131,17 @@ u = ["undo", "collapse_selection"]
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "keep_primary_selection"]
 
+[keys.normal."space"]
+v = ":clipboard-paste-replace"
+
+F = ["file_picker"]
+E = ["file_explorer"]
+f = ["file_picker_in_current_directory"]
+e = ["file_explorer_in_current_buffer_directory"]
+
 [keys.select]
 X = ["extend_line_above"]
-C-s = [":format", ":write"]                             # format and save
+C-s = [":format", ":write"]  # format and save
 C-d = ["extend_to_line_bounds", "yank", "paste_before"]
 A-r = [":reload-all"]
 C-r = [":config-reload"]
@@ -187,10 +179,18 @@ a = ["append_mode", "collapse_selection"]
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 
+[keys.select."space"]
+v = ":clipboard-paste-replace"
+
+F = ["file_picker"]
+E = ["file_explorer"]
+f = ["file_picker_in_current_directory"]
+e = ["file_explorer_in_current_buffer_directory"]
+
 [keys.insert]
-j = { k = "normal_mode" } # Maps `jk` to enter normal mode
+j = { k = "normal_mode" }  # Maps `jk` to enter normal mode
 # k = { j = "select_mode" }                               # Maps `kj` to enter visual mode
-C-s = [":write", ":format", ":write"]                   # format and save
+C-s = [":write", ":format", ":write"]  # format and save
 C-d = ["extend_to_line_bounds", "yank", "paste_before"]
 
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!

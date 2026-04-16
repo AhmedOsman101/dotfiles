@@ -6,10 +6,36 @@ name = "c"
 language-servers = ["clangd", "scls"]
 formatter = { command = "astyle" }
 
+[[language]]
+name = "vim"
+scope = "source.vim"
+injection-regex = "vim"
+file-types = ["vim", "vimrc", { glob = ".vimrc" }, { glob = "*.vim" }]
+comment-token = "\""
+language-servers = ["vim-language-server"]
+indent = { tab-width = 2, unit = "  " }
+
+# --- XML --- #
+[[language]]
+name = "xml"
+formatter = { command = "xmllint", args = ["--format", "-"] }
+
 # ---- C++ ---- #
 [[language]]
 name = "cpp"
 language-servers = ["clangd", "scls"]
+formatter = { command = "astyle" }
+
+# --- Kotlin --- #
+[[language]]
+name = "kotlin"
+language-servers = ["kotlin-lsp"]
+roots = ["settings.gradle", "settings.gradle.kts", "build.gradle.kts"]
+indent = { tab-width = 2, unit = "  " }
+
+# --- Java --- #
+[[language]]
+name = "java"
 formatter = { command = "astyle" }
 
 # ---- Bash ---- #
@@ -17,11 +43,6 @@ formatter = { command = "astyle" }
 name = "bash"
 language-servers = ["bash-language-server", "scls"]
 formatter = { command = "shellfmt" }
-
-
-[language-server.bash-language-server.config]
-includeAllWorkspaceSymbols = true
-backgroundAnalysisMaxFiles = 1000
 
 # ---- HTML ---- #
 [[language]]
@@ -35,7 +56,6 @@ formatter = { command = "biome", args = [
   "/home/othman/.config/biome/biome.json",
   "--stdin-file-path=file.html",
 ] }
-
 
 # ---- PHP ---- #
 [[language]]
@@ -146,7 +166,6 @@ language-servers = [
   # ] },
 ]
 
-
 # ---- Jsx ---- #
 [[language]]
 name = "jsx"
@@ -193,22 +212,6 @@ language-servers = [
   # ] },
 ]
 
-# ---- Deno LSP ---- #
-[language-server.deno-lsp]
-command = "deno"
-args = ["lsp"]
-config.deno.enable = true
-
-# ---- PHP LSP ---- #
-# [language-server.php-lsp]
-# command = "/home/othman/.local/bin/devsense.php.ls"
-
-# ---- Biome LSP ---- #
-[language-server]
-biome = { command = "biome", args = ["lsp-proxy"] }
-# --- ty --- #
-ty = { command = "ty", args = ["server"] }
-
 # ---- Rust---- #
 [[language]]
 name = "rust"
@@ -219,9 +222,6 @@ formatter = { command = "rustfmt", args = [
 ] }
 language-servers = ["rust-analyzer", "scls"]
 indent = { tab-width = 2, unit = "  " }
-
-[language-server.rust-analyzer]
-config = { checkOnSave = true, check = { command = "clippy" } }
 
 # ---- JSON ---- #
 [[language]]
@@ -246,7 +246,6 @@ formatter = { command = "prettier", args = [
 ] }
 language-servers = ["marksman", "scls"]
 
-
 # ---- Svelte ---- #
 [[language]]
 name = "svelte"
@@ -268,25 +267,6 @@ file-types = [
   { glob = ".envrc" },
 ]
 indent = { tab-width = 2, unit = "  " }
-
-# ---- simple completion language server ---- #
-[language-server.scls]
-command = "simple-completion-language-server"
-
-[language-server.scls.config]
-feature_words = false               # enable completion by word
-feature_snippets = true             # enable snippets
-snippets_first = true               # completions will return before snippets by default
-snippets_inline_by_word_tail = true # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
-feature_unicode_input = false       # enable "unicode input"
-feature_paths = true                # enable path completion
-feature_citations = false           # enable citation completion (only on `citation` feature enabled)
-
-
-# write logs to /tmp/completion.log
-[language-server.scls.environment]
-RUST_LOG = "info,simple-completion-language-server=info"
-LOG_FILE = "/tmp/completion.log"
 
 # append language server to existed languages
 [[language]]
@@ -310,30 +290,9 @@ language-servers = ["scls"]
 # --- Python --- #
 [[language]]
 name = "python"
-# language-servers = ["ty", "scls"]
 language-servers = ["ty", "scls", "pylsp"]
 indent = { tab-width = 2, unit = "  " }
 formatter = { command = "yapf" }
-
-# ---- Helix-gpt ---- #
-[language-server.gpt]
-command = "helix-gpt"
-args = [
-  "--handler",
-  "codeium",   # codeium,ollama,openai
-
-  "--debounce",
-  "200",
-
-  "--ollamaModel",
-  "qwen2.5-coder:0.5b",
-
-]
-
-# ---- Emmet LSP ---- #
-[language-server.emmet-lsp]
-command = "emmet-language-server"
-args = ["--stdio"]
 
 [[language]]
 name = "ini"
@@ -362,50 +321,70 @@ file-types = [
   "properties",
   "cfg",
   "directory",
+  "conf",
 
   # === your specific .conf files or all ".conf" files ===
   # { glob = "some_file.conf" },
-  # "conf",
 ]
 injection-regex = "ini"
 comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
 
-[[grammar]]
-name = "ini"
-source = { git = "https://github.com/justinmk/tree-sitter-ini", rev = "0eaed8040513e62ee2e9e8db9f086cf630a524eb" }
+# ---- Biome LSP ---- #
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
+
+# --- ty --- #
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
+[language-server.bash-language-server.config]
+includeAllWorkspaceSymbols = true
+backgroundAnalysisMaxFiles = 1000
+
+# ---- Deno LSP ---- #
+[language-server.deno-lsp]
+command = "deno"
+args = ["lsp"]
+config.deno.enable = true
+
+[language-server.rust-analyzer]
+config = { checkOnSave = true, check = { command = "clippy" } }
+
+# ---- simple completion language server ---- #
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[language-server.scls.config]
+feature_words = false  # enable completion by word
+feature_snippets = true  # enable snippets
+snippets_first = true  # completions will return before snippets by default
+snippets_inline_by_word_tail = true  # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
+feature_unicode_input = false  # enable "unicode input"
+feature_paths = true  # enable path completion
+feature_citations = false  # enable citation completion (only on `citation` feature enabled)
+
+# write logs to /tmp/completion.log
+[language-server.scls.environment]
+RUST_LOG = "info,simple-completion-language-server=info"
+LOG_FILE = "/tmp/completion.log"
+
+# ---- Emmet LSP ---- #
+[language-server.emmet-lsp]
+command = "emmet-language-server"
+args = ["--stdio"]
 
 # --- Vim script --- #
 [language-server.vim-language-server]
 command = "vim-language-server"
 args = ["--stdio"]
 
-[[language]]
-name = "vim"
-scope = "source.vim"
-injection-regex = "vim"
-file-types = ["vim", "vimrc", { glob = ".vimrc" }, { glob = "*.vim" }]
-comment-token = "\""
-language-servers = ["vim-language-server"]
-indent = { tab-width = 2, unit = "  " }
-
+[language-server.kotlin-lsp]
+command = "kotlin-lsp"
+args = ["--stdio"]
 
 [[grammar]]
 name = "vim"
 source = { git = "https://github.com/neovim/tree-sitter-vim", rev = "3dd4747082d1b717b8978211c06ef7b6cd16125b" }
-
-# --- XML --- #
-[[language]]
-name = "xml"
-formatter = { command = "xmllint", args = ["--format", "-"] }
-
-# --- Kotlin --- #
-[[language]]
-name = "kotlin"
-language-servers = ["kotlin-lsp"]
-roots = ["settings.gradle", "settings.gradle.kts", "build.gradle.kts"]
-indent = { tab-width = 2, unit = "  " }
-
-[language-server.kotlin-lsp]
-command = "kotlin-lsp"
-args = ["--stdio"]
