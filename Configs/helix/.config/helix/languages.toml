@@ -221,6 +221,7 @@ formatter = { command = "rustfmt", args = [
   "/home/othman/.config/rustfmt.toml",
 ] }
 language-servers = ["rust-analyzer", "scls"]
+persistent-diagnostic-sources = ["rustc", "clippy"]
 indent = { tab-width = 2, unit = "  " }
 
 # ---- JSON ---- #
@@ -267,11 +268,6 @@ file-types = [
   { glob = ".envrc" },
 ]
 indent = { tab-width = 2, unit = "  " }
-
-# append language server to existed languages
-[[language]]
-name = "rust"
-language-servers = ["scls", "rust-analyzer"]
 
 [[language]]
 name = "git-commit"

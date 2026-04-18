@@ -832,7 +832,7 @@
   "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
   "markdown-preview-enhanced.enableExtendedTableSyntax": true,
   "markdown-preview-enhanced.enableHTML5Embed": true,
-  "markdown-preview-enhanced.enablePreviewZenMode": true,
+  "markdown-preview-enhanced.enablePreviewZenMode": false,
   "markdown-preview-enhanced.enableTypographer": true,
   "markdown-preview-enhanced.latexEngine": "MikTex",
   "markdown-preview-enhanced.mathRenderingOnlineService": "https://latex.codecogs.com/png.latex",
@@ -1109,5 +1109,12 @@
     "https://json-schema.org/": true,
     "https://biomejs.dev": true
   },
-  "licenser.disableAutoHeaderInsertion": true
+  "licenser.disableAutoHeaderInsertion": true,
+  "[java]": {
+    "editor.defaultFormatter": "chiehyu.vscode-astyle"
+  },
+  "update.statusBar": "hidden",
+  "cSpell.userWords": [
+    "phpredis"
+  ]
 }
