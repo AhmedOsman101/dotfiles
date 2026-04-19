@@ -21,6 +21,8 @@ OPENROUTER_API_KEY="$(pass show openrouter)"
 
 ZAI_API_KEY="$(pass show z.ai)"
 
+ANILIST_TOKEN="$(pass show anilist/access-token)"
+
 export GEMINI_API_KEY \
   GOOGLE_GENERATIVE_AI_API_KEY \
   OPENAI_API_KEY \
@@ -32,4 +34,5 @@ export GEMINI_API_KEY \
   CONTEXT7_API_KEY \
   OBSIDIAN_API_KEY \
   OPENROUTER_API_KEY \
-  ZAI_API_KEY
+  ZAI_API_KEY \
+  ANILIST_TOKEN

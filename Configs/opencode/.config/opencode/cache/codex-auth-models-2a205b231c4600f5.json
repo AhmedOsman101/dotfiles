@@ -1,5 +1,5 @@
 {
-  "fetchedAt": 1776445577239,
+  "fetchedAt": 1776608310112,
   "models": [
     {
       "slug": "codex-auto-review",
@@ -156,7 +156,7 @@
           "effort": "xhigh"
         }
       ],
-      "default_reasoning_level": "medium",
+      "default_reasoning_level": "high",
       "supports_reasoning_summaries": true,
       "reasoning_summary_format": "experimental",
       "supports_parallel_tool_calls": true,
