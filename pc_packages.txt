@@ -11,6 +11,7 @@ android-sdk-build-tools
 android-sdk-cmdline-tools-latest
 android-sdk-platform-tools
 android-udev
+ani-cli
 ansifilter
 apfs-fuse-git
 apparmor
