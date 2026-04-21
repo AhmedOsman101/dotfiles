@@ -40,10 +40,10 @@ indent-preproc-block
 indent-col1-comments
 
 # ---- Padding Options ---- #
-break-blocks # Break blocks after header lines, add new line before loops and if statements
+# break-blocks # Break blocks after header lines, add new line before loops and if statements
 pad-oper     # Pad operators with spaces
 pad-comma    # Insert space padding after commas.
-pad-include
+pad-include  # Insert space padding after include statements.
 pad-header           # Insert space padding between a header (e.g. 'if', 'for', 'while'...) and the following paren.
 unpad-paren          # Remove unnecessary padding inside parentheses
 squeeze-lines=2      # Remove extra empty lines exceeding the given number.
