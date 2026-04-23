@@ -5,6 +5,7 @@ advcpmv
 adw-gtk-theme
 alacritty
 alsa-plugins
+alsa-tools
 alsa-utils
 android-sdk
 android-sdk-build-tools
