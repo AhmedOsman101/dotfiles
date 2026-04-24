@@ -31,7 +31,6 @@ ark
 ascii
 astyle
 atomicparsley
-atril
 atuin
 audacity
 audiorelay
@@ -44,7 +43,6 @@ bash-completion
 bash-language-server
 bat
 bat-extras
-bauh
 bc
 bind
 bluez
@@ -93,7 +91,6 @@ duf
 dunst
 dxvk-bin
 dysk
-easyeffects
 ed
 emmet-language-server
 entr
@@ -117,7 +114,6 @@ fwupd
 fzf
 gamemode
 gearlever
-gemini-cli
 ghostscript
 gimp
 git
@@ -147,7 +143,6 @@ gst-plugins-bad
 gst-plugins-ugly
 gtk-engine-murrine
 gtk-engines
-gucharmap
 guestfs-tools
 gum
 gvfs
@@ -160,7 +155,6 @@ hyperfine
 hyperv
 ibus
 inetutils
-inkscape
 inotify-tools
 intel-ucode
 inxi
@@ -172,7 +166,6 @@ jdtls
 jless
 jq
 jq-lsp
-kate
 kconfig5
 kconfigwidgets5
 kdeconnect
@@ -244,7 +237,6 @@ maven
 mda.lv2
 mdcat
 mdfried
-media-downloader-git
 meld
 memtest86+
 memtest86+-efi
@@ -252,7 +244,6 @@ memtester
 mesa-demos
 micromamba-bin
 mise
-mission-center
 mkcert
 mkinitcpio-firmware
 mokutil
@@ -269,7 +260,6 @@ nethogs
 nginx
 nm-connection-editor
 nomacs
-normcap
 nsis
 ntfs-3g
 nushell
@@ -295,8 +285,7 @@ otf-font-awesome
 packettracer
 pacman-contrib
 pacui
-pamac
-pandoc-cli
+pandoc-bin
 pandoc-crossref
 partitionmanager
 paru
@@ -318,6 +307,7 @@ php-redis
 php-sodium
 php-sqlite
 phpmyadmin
+piper-tts-git
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -340,6 +330,7 @@ python-keyring
 python-lsp-server
 python-lxml
 python-nltk
+python-pathvalidate
 python-pip
 python-pyqt6
 qalculate-gtk
@@ -372,16 +363,15 @@ shellcheck
 shellharden
 shfmt
 shlorem
-slf4j
 slides
 smartmontools
 sof-firmware
 sox
-speed-dreams-bin
 speedtest-cli
 sshfs
 stacer-bin
 starship
+sublime-text-4
 swtpm
 sxhkd
 tableplus
@@ -390,6 +380,8 @@ terminus-font
 tesseract-data-eng
 testdisk
 texlive-basic
+texlive-fontsrecommended
+texlive-latex
 tgpt
 thorium-browser-avx2-bin
 time
@@ -426,8 +418,6 @@ vkbasalt
 vkd3d
 vlc
 vlc-plugins-all
-vnstat
-vnstat-client
 vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
@@ -450,7 +440,6 @@ x11-ssh-askpass
 x11vnc
 xclicker
 xclip
-xcolor
 xcwd
 xdg-desktop-portal-gtk4-git
 xdg-ninja
