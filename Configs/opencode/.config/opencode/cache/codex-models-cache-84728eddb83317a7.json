@@ -1,5 +1,5 @@
 {
-  "fetchedAt": 1776608219661,
+  "fetchedAt": 1776975961683,
   "models": [
     {
       "slug": "codex-auto-review",
@@ -124,7 +124,7 @@
     {
       "slug": "gpt-5.4",
       "display_name": "gpt-5.4",
-      "priority": 2,
+      "priority": -1,
       "context_window": 272000,
       "input_modalities": [
         "text",
