@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+[[ -n "${GEMINI_API_KEY}" ]] && return
+
 GEMINI_API_KEY="$(pass show gemini)"
 GOOGLE_GENERATIVE_AI_API_KEY="${GEMINI_API_KEY}"
 
