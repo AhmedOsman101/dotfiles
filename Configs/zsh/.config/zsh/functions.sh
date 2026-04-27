@@ -362,3 +362,27 @@ rename() {
     command rename "$@"
   fi
 }
+
+copypath() {
+  local file="${1:-.}"
+  [[ "${file}" = /* ]] || file="${PWD}/${file}"
+  local absolutePath
+
+  if command -v realpath &>/dev/null; then
+    absolutePath="$(realpath "${file}")"
+  elif command -v readlink &>/dev/null && readlink -f "${file}" >/dev/null 2>&1; then
+    absolutePath="$(readlink -f "${file}")"
+  else
+    # Fallback: use cd and pwd -P (works for existing paths)
+    if [[ -e "${file}" ]]; then
+      absolutePath="$(cd "$(dirname "${file}")" && pwd -P)/$(basename "${file}")"
+    else
+      log-error "Cannot resolve path '${file}'"
+    fi
+  fi
+
+  collapseTilde "${absolutePath}" | clipcopy
+
+  # shellcheck disable=all
+  echo "${(%):-"%B${file:a}%b copied to clipboard."}"
+}

@@ -38,7 +38,7 @@ zinit snippet OMZP::git          # Git aliases & helpers
 zinit snippet OMZP::dirhistory   # Alt+ <- / Alt+ -> directory navigation
 zinit snippet OMZP::extract      # `x` -> extract any archive
 zinit snippet OMZP::encode64     # Encoding or decoding using base64 command (e64, ef64, d64)
-zinit snippet OMZP::copypath     # Copies the path of given directory or file to the system clipboard
+# zinit snippet OMZP::copypath     # Copies the path of given directory or file to the system clipboard
 zinit snippet OMZP::gh           # Adds completion for the GitHub CLI
 zinit snippet OMZP::qrcode       # Generate a QR Code from the command line
 zinit snippet OMZP::rsync        # Aliases for rsync (rsync-{copy,move,update,synchronize})
