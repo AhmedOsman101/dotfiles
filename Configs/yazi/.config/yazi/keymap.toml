@@ -3,7 +3,6 @@
 # "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
 [mgr]
-
 keymap = [
   { on = "<Esc>", run = "escape", desc = "Exit visual mode, clear selected, or cancel search" },
   { on = "<C-[>", run = "escape", desc = "Exit visual mode, clear selected, or cancel search" },
@@ -257,7 +256,6 @@ keymap = [
 ]
 
 [tasks]
-
 keymap = [
   { on = "<Esc>", run = "close", desc = "Close task manager" },
   { on = "<C-[>", run = "close", desc = "Close task manager" },
@@ -279,7 +277,6 @@ keymap = [
 ]
 
 [select]
-
 keymap = [
   { on = "<Esc>", run = "close", desc = "Cancel selection" },
   { on = "<C-[>", run = "close", desc = "Cancel selection" },
@@ -298,7 +295,6 @@ keymap = [
 ]
 
 [input]
-
 keymap = [
   { on = "<C-c>", run = "close", desc = "Cancel input" },
   { on = "<Enter>", run = "close --submit", desc = "Submit input" },
@@ -408,7 +404,6 @@ keymap = [
 ]
 
 [completion]
-
 keymap = [
   { on = "<C-c>", run = "close", desc = "Cancel completion" },
   { on = "<Tab>", run = "close --submit", desc = "Submit the completion" },
@@ -432,7 +427,6 @@ keymap = [
 ]
 
 [help]
-
 keymap = [
   { on = "<Esc>", run = "escape", desc = "Clear the filter, or hide the help" },
   { on = "<C-[>", run = "escape", desc = "Clear the filter, or hide the help" },
@@ -450,7 +444,22 @@ keymap = [
   { on = "f", run = "filter", desc = "Apply a filter for the help items" },
 ]
 
-[[mgr.prepend_keymap]]
-on = ["C"]
-run = "plugin ouch rar"
-desc = "Compress with ouch"
+[[plugin.prepend_previewers]]
+url = "*.tar*"
+run = 'piper --format=url -- tar tf "$1"'
+
+[[plugin.prepend_previewers]]
+url = "*.md"
+run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"'
+
+[[plugin.prepend_previewers]]
+url = "*/"
+run = 'piper -- eza -TL=3 --color=always --icons=always --group-directories-first --no-quotes "$1"'
+
+[[plugin.prepend_previewers]]
+mime = "application/sqlite3"
+run = 'piper -- sqlite3 "$1" ".schema --indent"'
+
+[[plugin.append_previewers]]
+url = "*"
+run = 'piper -- bat -p --color=always "$1"'

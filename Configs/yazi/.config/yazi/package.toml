@@ -1,12 +1,7 @@
 [[plugin.deps]]
-use = "GrzegorzKozub/mdcat"
-rev = "d3d5089"
-hash = "40c20e6c1085d1f45309b9f148bf4f6e"
-
-[[plugin.deps]]
-use = "Reledia/glow"
-rev = "5ce76dc"
-hash = "52e5f5c602962e7cbf874da28f52ba45"
+use = "yazi-rs/plugins:piper"
+rev = "ac82af3"
+hash = "384464b6df8cb807425c521f8cd790f3"
 
 [flavor]
 deps = []
