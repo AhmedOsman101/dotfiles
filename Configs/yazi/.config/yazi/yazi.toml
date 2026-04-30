@@ -32,8 +32,8 @@ ueberzug_offset = [0, 0, 0, 0]
 [opener]
 edit = [
   { run = '${EDITOR:-vim} "$@"', desc = "$EDITOR", block = true, for = "unix" },
-  { run = 'code %*', orphan = true, desc = "code", for = "windows" },
-  { run = 'code -w %*', block = true, desc = "code (block)", for = "windows" },
+  { run = "code %*", orphan = true, desc = "code", for = "windows" },
+  { run = "code -w %*", block = true, desc = "code (block)", for = "windows" },
 ]
 open = [
   { run = 'xdg-open "$1"', desc = "Open", for = "linux" },
@@ -48,11 +48,11 @@ reveal = [
 ]
 extract = [
   { run = 'ya pub extract --list "$@"', desc = "Extract here", for = "unix" },
-  { run = 'ya pub extract --list %*', desc = "Extract here", for = "windows" },
+  { run = "ya pub extract --list %*", desc = "Extract here", for = "windows" },
 ]
 play = [
   { run = 'vlc --one-instance "$@"', orphan = true, for = "unix" },
-  { run = 'vlc --one-instance %*', orphan = true, for = "windows" },
+  { run = "vlc --one-instance %*", orphan = true, for = "windows" },
   { run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
 
@@ -98,10 +98,7 @@ rules = [
     "reveal",
   ] },
   # Empty file
-  { mime = "inode/x-empty", use = [
-    "open",
-    "edit"
-  ] },
+  { mime = "inode/x-empty", use = ["open", "edit"] },
   # Fallback
   { name = "*", use = [
     "open",
@@ -232,15 +229,16 @@ sort_reverse = false
 sort_translit = false
 
 [log]
-enabled = false
+enabled = true
 
-[plugin]
-prepend_previewers = [
-  { name = "*.md", run = "mdcat" },
-  { mime = "application/*zip", run = "ouch" },
-  { mime = "application/x-tar", run = "ouch" },
-  { mime = "application/x-bzip2", run = "ouch" },
-  { mime = "application/x-7z-compressed", run = "ouch" },
-  { mime = "application/x-rar", run = "ouch" },
-  { mime = "application/x-xz", run = "ouch" },
-]
+[[plugin.prepend_previewers]]
+url = "*.tar*"
+run = 'piper --format=url -- tar tf "$1"'
+
+[[plugin.prepend_previewers]]
+mime = "application/sqlite3"
+run = 'piper -- sqlite3 "$1" ".schema --indent"'
+
+[[plugin.append_previewers]]
+url = "*"
+run = 'piper -- bat -p --color=always "$1"'
