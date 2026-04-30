@@ -257,6 +257,7 @@ ncurses5-compat-libs
 neovim
 nerd-fonts-inter
 nethogs
+nextdns-bin
 nginx
 nm-connection-editor
 nomacs
@@ -277,7 +278,7 @@ onnx
 openblas
 openbsd-netcat
 opencc
-opencode
+opencode-bin
 opendoas
 openssh
 os-prober-btrfs
