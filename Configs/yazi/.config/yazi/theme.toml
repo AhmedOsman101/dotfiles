@@ -86,7 +86,7 @@ title = {}
 value = {}
 selected = { reversed = true }
 
-[completion]
+[cmp]
 border = { fg = "#7fb4ca" }
 active = { reversed = true }
 inactive = {}
@@ -145,6 +145,9 @@ rules = [
 
   # Empty files
   # { mime = "inode/x-empty", fg = "red" },
+
+  # Virtual file system
+  { mime = "vfs/{absent,stale}", fg = "gray" },
 
   # Dummy files
   { name = "*", is = "dummy", bg = "red" },
