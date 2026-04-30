@@ -78,6 +78,16 @@ C-d = ["extend_to_line_bounds", "yank", "paste_before"]
 A-r = [":reload-all"]
 C-r = [":config-reload"]
 "C-," = [":config-open"]
+# Use yazi as file picker
+C-y = [
+  ":sh rm -f /tmp/unique-ca1ea106",
+  ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-ca1ea106',
+  ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ":open %sh{cat /tmp/unique-ca1ea106}",
+  ":redraw",
+  ":set mouse false",
+  ":set mouse true",
+]
 
 # Move lines up and down
 A-up = [
