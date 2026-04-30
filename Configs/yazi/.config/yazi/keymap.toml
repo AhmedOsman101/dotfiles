@@ -255,6 +255,11 @@ keymap = [
   { on = "<F1>", run = "help", desc = "Open help" },
 ]
 
+[[mgr.prepend_keymap]]
+on = "<C-g>"
+run = 'shell -- rofi -theme fullscreen-preview -show filebrowser -filebrowser-command "ya emit reveal" -filebrowser-directory "$(pwd)"'
+desc = "Grid view"
+
 [tasks]
 keymap = [
   { on = "<Esc>", run = "close", desc = "Close task manager" },
