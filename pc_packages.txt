@@ -150,6 +150,7 @@ gvfs-mtp
 gvfs-smb
 helix-git
 helixbinhx
+hexyl
 htop
 hyperfine
 hyperv
@@ -352,6 +353,8 @@ reflector
 resvg
 rmtrash
 rofi
+rofi-emoji
+rofimoji
 ruff
 runc
 samba

@@ -1118,5 +1118,15 @@
     "Colada",
     "phpredis",
     "Romaji"
-  ]
+  ],
+  "roo-cline.debug": false,
+  "roo-cline.allowedCommands": [
+    "git log",
+    "git diff",
+    "git show",
+    "cd",
+    "javac",
+    "java"
+  ],
+  "roo-cline.deniedCommands": []
 }
