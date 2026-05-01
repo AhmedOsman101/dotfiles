@@ -6,6 +6,7 @@ name = "c"
 language-servers = ["clangd", "scls"]
 formatter = { command = "astyle" }
 
+# --- Vim --- #
 [[language]]
 name = "vim"
 scope = "source.vim"
@@ -290,6 +291,7 @@ language-servers = ["ty", "scls", "pylsp"]
 indent = { tab-width = 2, unit = "  " }
 formatter = { command = "yapf" }
 
+# --- INI --- #
 [[language]]
 name = "ini"
 scope = "source.ini"
@@ -325,6 +327,11 @@ file-types = [
 injection-regex = "ini"
 comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
+
+# --- SQL --- #
+[[language]]
+name = "sql"
+language-servers = ["sqls", "scls"]
 
 # ---- Biome LSP ---- #
 [language-server.biome]
@@ -380,6 +387,10 @@ args = ["--stdio"]
 [language-server.kotlin-lsp]
 command = "kotlin-lsp"
 args = ["--stdio"]
+
+# ---- SQL LSP ---- #
+[language-server.sqls]
+command = "sqls"
 
 [[grammar]]
 name = "vim"
