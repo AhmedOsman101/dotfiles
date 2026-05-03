@@ -63,6 +63,7 @@ chafa
 chaotic-keyring
 chaotic-mirrorlist
 clang
+claude-code
 cmake
 colord
 colordiff
@@ -372,6 +373,7 @@ smartmontools
 sof-firmware
 sox
 speedtest-cli
+sqls
 sshfs
 stacer-bin
 starship
