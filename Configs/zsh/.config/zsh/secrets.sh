@@ -16,6 +16,7 @@ _vars=(
   ZAI_API_KEY
   ANILIST_TOKEN
   FEATHERLESS_API_KEY
+  HF_TOKEN
 )
 
 for var in "${_vars[@]}"; do
@@ -55,6 +56,8 @@ ZAI_API_KEY="$(pass show z.ai)"
 ANILIST_TOKEN="$(pass show anilist/access-token)"
 
 FEATHERLESS_API_KEY="$(pass show featherless | head -1)"
+
+HF_TOKEN="$(pass show hugging-face)"
 
 export "${_vars[@]}"
 
