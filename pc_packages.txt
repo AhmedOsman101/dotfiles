@@ -397,6 +397,7 @@ tmux
 toilet
 tokei
 tombi
+topgrade
 trash-cli
 tree
 ttf-amiri
