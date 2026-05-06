@@ -389,6 +389,7 @@ texlive-basic
 texlive-fontsrecommended
 texlive-latex
 tgpt
+thefuck
 thorium-browser-avx2-bin
 time
 timeshift
