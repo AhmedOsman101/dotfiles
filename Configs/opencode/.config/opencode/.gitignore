@@ -17,3 +17,5 @@ quarantine/
 cache/codex-session-affinity.json
 cache/codex-snapshots.json
 logs/codex-plugin/
+.gitignore
+codex-accounts.json
