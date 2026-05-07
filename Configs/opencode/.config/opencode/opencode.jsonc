@@ -87,8 +87,8 @@
         "Qwen/Qwen3-Coder-480B-A35B-Instruct": {
           "name": "Qwen3-Coder-480B"
         },
-        "tachyphylaxis/Meta-Llama-3.1-Chat-Uncensored": {
-          "name": "Llama-3.1-Uncensored"
+        "AskVenice/venice-uncensored": {
+          "name": "Venice Uncensored"
         }
       }
     }
