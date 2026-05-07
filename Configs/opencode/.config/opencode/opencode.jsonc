@@ -75,8 +75,20 @@
         "apiKey": "{env:FEATHERLESS_API_KEY}"
       },
       "models": {
-        "openai/gpt-oss-120b": {
-          "name": "gpt-oss-120b"
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "Kimi-K2.6"
+        },
+        "zai-org/GLM-5.1": {
+          "name": "GLM-5.1"
+        },
+        "Qwen/Qwen3-Coder-480B-A35B-Instruct": {
+          "name": "Qwen3-Coder-480B"
+        },
+        "tachyphylaxis/Meta-Llama-3.1-Chat-Uncensored": {
+          "name": "Llama-3.1-Uncensored"
         }
       }
     }
