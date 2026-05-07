@@ -1,0 +1,4 @@
+antigravity-accounts.json filter=git-crypt diff=git-crypt
+antigravity-signature-cache.json filter=git-crypt diff=git-crypt
+codex-accounts.json filter=git-crypt diff=git-crypt
+opencode-multi-auth-codex-accounts.json filter=git-crypt diff=git-crypt
