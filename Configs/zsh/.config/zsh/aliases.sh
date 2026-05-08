@@ -163,6 +163,9 @@ alias yless='jless --yaml'
 # --- less --- #
 alias less='less -RFX'
 
+# --- Open (xdg-open) --- #
+alias open='xdg-open'
+
 # --- Suffix aliases --- #
 alias -s json='jless'
 alias -s yml='yless'

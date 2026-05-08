@@ -16,8 +16,9 @@ export ZSHRC="${ZDOTDIR}/.zshrc"
 export SCRIPTS_DIR="${HOME}/scripts"
 
 # --- Tuckr --- #
-export TUCKR_HOME="${HOME}/dotfiles"
-export TUCKR_DIR="${TUCKR_HOME}/Configs"
+export TUCKR_HOME="${HOME}" # The parent directory of your dotfiles directory (default: $HOME/.config)
+export TUCKR_TARGET="${HOME}" # The directory from which all dotfiles are symlinked (default: $HOME)
+export TUCKR_DIR="${TUCKR_HOME}/dotfiles/Configs" # Custom variable for my use
 
 # --- Chassis --- #
 DEVICE="$(hostnamectl chassis)"
