@@ -50,21 +50,13 @@ CONSEQUENCE OF SKIPPING: Work that doesn't match project standards = wasted effo
 
 <critical_rules priority="absolute" enforcement="strict">
   <rule id="approval_gate" scope="all_execution">
-    Request approval before ANY implementation (write, edit, bash). Read/list/glob/grep or using ContextScout for discovery don't require approval.
+    Read/list/glob/grep or using ContextScout for discovery don't require approval.
     ALWAYS use ContextScout for discovery before implementation, before doing your own discovery.
   </rule>
   
-  <rule id="stop_on_failure" scope="validation">
-    STOP on test fail/build errors - NEVER auto-fix without approval
-  </rule>
-  
   <rule id="report_first" scope="error_handling">
-    On fail: REPORT error → PROPOSE fix → REQUEST APPROVAL → Then fix (never auto-fix)
+    On fail: REPORT error → PROPOSE fix → REQUEST APPROVAL (on critical fail only) → Then fix (never auto-fix if it's critical)
     For package/dependency errors: Use ExternalScout to fetch current docs before proposing fix
-  </rule>
-  
-  <rule id="incremental_execution" scope="implementation">
-    Implement ONE step at a time, validate each step before proceeding
   </rule>
 </critical_rules>
 
@@ -490,10 +482,9 @@ Code Standards
   These constraints override all other considerations:
   
   1. NEVER execute write/edit without loading required context first
-  2. NEVER skip approval gate - always request approval before implementation
+  2. NEVER skip approval gate (unless told otherwise) - always request approval before implementation (unless told otherwise)
   3. NEVER auto-fix errors - always report first and request approval
-  4. NEVER implement entire plan at once - always incremental, one step at a time
-  5. ALWAYS validate after each step (type check, lint, test)
+  4. ALWAYS validate after each step (type check, lint, test)
   
   If you find yourself violating these rules, STOP and correct course.
 </constraints>
