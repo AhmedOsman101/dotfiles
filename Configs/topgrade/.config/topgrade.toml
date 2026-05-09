@@ -270,10 +270,26 @@ show_arch_news = true
 max_concurrency = 2
 
 # Additional git repositories to pull or fetch
-# repos = [
-#     "~/src/*/",
-#     "~/.config/something"
-# ]
+repos = [
+    "~/Documents/backup",
+    "~/Documents/Notes",
+    "~/Documents/obsidian",
+    "~/dotfiles",
+    "~/.password-store",
+    "~/scripts",
+    "~/work/AdventOfCode",
+    "~/work/college",
+    "~/work/desktop/pass-gui",
+    "~/work/elderCare/client",
+    "~/work/elderCare/server",
+    "~/work/go/learning",
+    "~/work/ICPC",
+    "~/work/ITI",
+    "~/work/portfolio",
+    "~/work/problemSolving",
+    "~/work/TS/commit-sage",
+    "~/work/TS/lib-result",
+]
 
 # Set to `false` to skip pulling/fetching the predefined git repos
 pull_predefined = true
