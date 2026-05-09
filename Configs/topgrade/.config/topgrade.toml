@@ -74,7 +74,7 @@ ask_retry = true
 show_skipped = true
 
 # Run inside tmux (default: false)
-run_in_tmux = true
+run_in_tmux = false
 
 # Changes the way topgrade interacts with
 # the tmux session, creating the session
@@ -86,7 +86,7 @@ tmux_session_mode = "attach_if_not_in_session"
 cleanup = false
 
 # Send a notification for every step (default: false)
-notify_each_step = true
+notify_each_step = false
 
 # When to send a notification at the end of a run
 # (default: "always", allowed values: "always", "never", "on_failure")
