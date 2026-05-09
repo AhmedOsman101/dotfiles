@@ -13,6 +13,7 @@ programs=(
 )
 
 killall -9 "${programs[@]}"
+podman stop openwebui &>/dev/null
 
 # ---- Disable power management ---- #
 (sleep 1 && xset s off && xset s noblank && xset -dpms) &
@@ -51,5 +52,8 @@ fi
 
 # --- Start fcitx5 daemon --- #
 # fcitx5 -d &
+
+# --- Start OpenWeb UI --- #
+podman start openwebui &>/dev/null
 
 exit 0
