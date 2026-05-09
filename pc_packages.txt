@@ -294,6 +294,7 @@ partitionmanager
 paru
 paru-debug
 pass-import
+pass-otp
 pavucontrol
 perl-graph-easy
 perl-rename
