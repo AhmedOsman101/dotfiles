@@ -2,7 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/AhmedOsman101/commit-sage-cli/refs/heads/main/config.schema.json",
   "general": {
     "maxRetries": 3,
-    "initialRetryDelayMs": 1000
+    "initialRetryDelayMs": 1000,
+    "temperature": 0.3,
+    "maxInputChars": 100000,
+    "diffStrategy": "staged"
   },
   "commit": {
     "autoCommit": false,
@@ -10,10 +13,19 @@
     "commitFormat": "conventional",
     "onlyStagedChanges": true,
     "commitLanguage": "english",
-    "promptForRefs": false
+    "promptForRefs": false,
+    "maxSubjectLength": 80,
+    "bodyStyle": "subject-body"
+  },
+  "openai": {
+    "baseUrl": "https://api.featherless.ai/v1",
+    "apiKeyEnvVar": "FEATHERLESS_API_KEY",
+    "useChatCompletions": true
   },
   "provider": {
-    "type": "gemini",
-    "model": "gemini-2.5-flash-lite"
+    "type": "openai",
+    "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+    "timeoutMs": 60000,
+    "reasoning": "off"
   }
 }
