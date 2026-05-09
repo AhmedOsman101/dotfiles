@@ -106,7 +106,7 @@ notify_end = "always"
 # this will be ignored if the binary is built without self update support
 #
 # available also via setting the environment variable TOPGRADE_NO_SELF_UPGRADE)
-no_self_update = false
+no_self_update = true
 
 # Extra tracing filter directives
 # These are prepended to the `--log-filter` argument
@@ -169,7 +169,7 @@ show_distribution_summary = true
 
 
 [composer]
-self_update = true
+self_update = false
 
 
 [brew]
@@ -300,7 +300,7 @@ jobs = 2
 
 # Run interactively
 # (default: false)
-interactive = true
+interactive = false
 
 [go]
 # Exclude specified binaries from `gup update`
@@ -309,7 +309,7 @@ interactive = true
 
 [npm]
 # Use sudo if the NPM directory isn't owned by the current user
-use_sudo = true
+use_sudo = false
 
 
 [yarn]
