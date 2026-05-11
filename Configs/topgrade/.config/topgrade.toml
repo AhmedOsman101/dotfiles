@@ -28,13 +28,21 @@ pre_sudo = true
 sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
-disable = []
+disable = [
+  "android_studio",
+  "dotnet",
+  "flatpak",
+  "flutter",
+  "ollama",
+  "snap",
+  "vscode",
+]
 
 # Run these steps before all others
-# first = ["chezmoi"]
+# first = []
 
 # Run these steps after all others
-# last = ["system"]
+# last = []
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
@@ -127,12 +135,12 @@ show_distribution_summary = true
 
 # Commands to run before anything
 [pre_commands]
-# "Emacs Snapshot" = "rm -rf ~/.emacs.d/elpa.bak && cp -rl ~/.emacs.d/elpa ~/.emacs.d/elpa.bak"
+"Timeshift snapshot" = 'sudo timeshift --create --comments "Topgrade backup $(now)"'
 
 
 # Commands to run after anything
 [post_commands]
-# "Emacs Snapshot" = "rm -rf ~/.emacs.d/elpa.bak && cp -rl ~/.emacs.d/elpa ~/.emacs.d/elpa.bak"
+"Reload shell" = "exec $SHELL"
 
 
 # Custom commands
@@ -271,24 +279,24 @@ max_concurrency = 2
 
 # Additional git repositories to pull or fetch
 repos = [
-    "~/Documents/backup",
-    "~/Documents/Notes",
-    "~/Documents/obsidian",
-    "~/dotfiles",
-    "~/.password-store",
-    "~/scripts",
-    "~/work/AdventOfCode",
-    "~/work/college",
-    "~/work/desktop/pass-gui",
-    "~/work/elderCare/client",
-    "~/work/elderCare/server",
-    "~/work/go/learning",
-    "~/work/ICPC",
-    "~/work/ITI",
-    "~/work/portfolio",
-    "~/work/problemSolving",
-    "~/work/TS/commit-sage",
-    "~/work/TS/lib-result",
+  "~/Documents/backup",
+  "~/Documents/Notes",
+  "~/Documents/obsidian",
+  "~/dotfiles",
+  "~/.password-store",
+  "~/scripts",
+  "~/work/AdventOfCode",
+  "~/work/college",
+  "~/work/desktop/pass-gui",
+  "~/work/elderCare/client",
+  "~/work/elderCare/server",
+  "~/work/go/learning",
+  "~/work/ICPC",
+  "~/work/ITI",
+  "~/work/portfolio",
+  "~/work/problemSolving",
+  "~/work/TS/commit-sage",
+  "~/work/TS/lib-result",
 ]
 
 # Set to `false` to skip pulling/fetching the predefined git repos
