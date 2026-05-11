@@ -254,6 +254,7 @@ moreutils
 mpv
 musl
 nano
+nautilus
 ncdu
 ncurses5-compat-libs
 neovim
@@ -382,6 +383,7 @@ sublime-text-4
 swtpm
 sxhkd
 tableplus
+taplo-cli
 tcpdump
 terminus-font
 tesseract-data-eng
