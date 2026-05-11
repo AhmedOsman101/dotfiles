@@ -98,6 +98,7 @@ export DOAS_NOPASS="${XDG_CONFIG_HOME}/doas/doas.conf"
 
 # --- Deno --- #
 export DENO_UNSTABLE_SLOPPY_IMPORTS="true"
+export DENO_INSTALL="${XDG_DATA_HOME}/deno"
 
 # --- FZF ---- #
 # Use fd instead of fzf
