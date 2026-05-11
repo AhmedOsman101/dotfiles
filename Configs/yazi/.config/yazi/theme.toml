@@ -1,6 +1,6 @@
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
-"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+# "$schema" = "https://yazi-rs.github.io/schemas/theme.json"
 
 # [flavor]
 # dark = "kanagawa"
@@ -150,8 +150,8 @@ rules = [
   { mime = "vfs/{absent,stale}", fg = "gray" },
 
   # Dummy files
-  { name = "*", is = "dummy", bg = "red" },
-  { name = "*/", is = "dummy", bg = "red" },
+  { url = "*", is = "dummy", bg = "red" },
+  { url = "*/", is = "dummy", bg = "red" },
 
   # Broken links
   { url = "*", is = "orphan", fg = "#c34043" },

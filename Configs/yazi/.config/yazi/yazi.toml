@@ -59,7 +59,7 @@ play = [
 [open]
 rules = [
   # Folder
-  { name = "*/", use = [
+  { mime = "*/*", use = [
     "edit",
     "open",
     "reveal",
@@ -100,7 +100,7 @@ rules = [
   # Empty file
   { mime = "inode/x-empty", use = ["open", "edit"] },
   # Fallback
-  { name = "*", use = [
+  { mime = "*", use = [
     "open",
     "reveal",
   ] },
