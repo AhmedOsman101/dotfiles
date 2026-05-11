@@ -260,7 +260,7 @@ ncurses5-compat-libs
 neovim
 nerd-fonts-inter
 nethogs
-nextdns-bin
+nextdns
 nginx
 nm-connection-editor
 nomacs

@@ -24,7 +24,7 @@
   },
   "provider": {
     "type": "openai",
-    "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+    "model": "Qwen/Qwen3-Coder-Next",
     "timeoutMs": 60000,
     "reasoning": "off"
   }
