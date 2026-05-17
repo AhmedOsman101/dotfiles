@@ -109,7 +109,7 @@ disable = [
   # "juliaup",
   # "kakoune",
   # "krew",
-  # "lensfun",
+  "lensfun",
   # "lure",
   # "macports",
   # "mamba",

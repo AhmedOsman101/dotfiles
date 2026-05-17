@@ -43,3 +43,6 @@ done
 
 # ---- Auto-start tmux if not already running ---- #
 tmux ls &>/dev/null || tmux
+
+# bun completions
+[ -s "/home/othman/.local/share/bun/_bun" ] && source "/home/othman/.local/share/bun/_bun"
