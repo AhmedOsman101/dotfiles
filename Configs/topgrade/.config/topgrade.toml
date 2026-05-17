@@ -194,6 +194,7 @@ disable = [
   # "yarn",
   # "yazi",
   # "zigup",
+  "zinit",
   # "zvm",
 ]
 
