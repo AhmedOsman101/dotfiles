@@ -11,7 +11,7 @@ alias pwdcp='collapseTilde "${PWD}" | clipcopy'
 alias python="python3"
 alias pip="pip3"
 alias getgpu="lspci -k -d ::03xx"
-alias paths='printenv PATH | tr ":" "\n" | sed "s|^${HOME}|~|g" | no-dups | sort'
+alias paths='printenv PATH | tr ":" "\n" | collapseTilde | no-dups | sort'
 
 # ---- Bat (better cat) ----- #
 alias cat="command bat --paging=never --style=plain --color=auto"

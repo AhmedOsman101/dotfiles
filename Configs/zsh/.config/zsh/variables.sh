@@ -275,7 +275,7 @@ export XINITRC="${XDG_CONFIG_HOME}/X11/.Xinitrc"
 export YSU_MESSAGE_POSITION="after"
 
 # --- PATH --- #
-export PATH="${PATH}:${PNPM_HOME}"                      # PNPM Home directory
+PATH="${PATH}:${PNPM_HOME}"                             # PNPM Home directory
 PATH="${PATH}:${PNPM_HOME}/bin"                         # PNPM binaries directory
 PATH="${PATH}:${HOME}/.spicetify"                       # Spicetify for spotify mods
 PATH="${PATH}:${BUN_INSTALL}/bin"                       # Bun js runtime
@@ -293,26 +293,42 @@ PATH="${PATH}:${XDG_DATA_HOME}/../bin"                  # UV Binaries
 PATH="${PATH}:${HOME}/.lmstudio/bin"                    # LM Studio (lms) CLI
 PATH="${PATH}:${ASDF_DATA_DIR}/shims"                   # asdf shims
 
-# Define directories to exclude
-EXCLUDE_DIRS=(
-  "${SCRIPTS_DIR}/.git"
-  "${SCRIPTS_DIR}/python/.venv"
-  "${SCRIPTS_DIR}/python/venv"
+# Define patterns to exclude
+EXCLUDE_PATTERNS=(
+  ".git"
+  ".venv"
+  "venv"
+  "node_modules"
 )
 
-# Dynamically add subdirectories of $HOME/scripts containing executables to PATH
+# Dynamically add subdirectories of $SCRIPTS_DIR containing executables to PATH
 # excluding specified directories and their subdirectories
 if [[ -d "${SCRIPTS_DIR}" ]]; then
   for dir in $(find "${SCRIPTS_DIR}" -type f -executable -exec dirname {} \; | sort -u); do
     exclude=false
-    for excluded in "${EXCLUDE_DIRS[@]}"; do
-      if [[ "${dir}" == "${excluded}"* ]]; then
+    for excluded in "${EXCLUDE_PATTERNS[@]}"; do
+      # Check if 'excluded' appears as a *directory component* (e.g., /node_modules/, /.venv/)
+      # Using regex: (^|/)$excluded(/|$)
+      case "${dir}" in
+      */"${excluded}"/* | */"${excluded}" | ^"${excluded}"/*)
         exclude=true
         break
-      fi
+        ;;
+      *) ;; # Pass
+      esac
     done
-    if ! ${exclude} && [[ ":${PATH}:" != *":${dir}:"* ]]; then
+
+    # Also explicitly catch .venv/venv (even if dir name is "bin", parent may be venv)
+    if ! ${exclude}; then
+      if [[ "${dir}" =~ (^|/)(\.?venv)(/|$) ]]; then
+        exclude=true
+      fi
+    fi
+
+    if ! ${exclude} && [[ ":${PATH}" != *":${dir}"* ]]; then
       PATH="${PATH}:${dir}"
     fi
   done
 fi
+
+export PATH
