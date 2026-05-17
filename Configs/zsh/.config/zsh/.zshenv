@@ -16,8 +16,8 @@ export ZSHRC="${ZDOTDIR}/.zshrc"
 export SCRIPTS_DIR="${HOME}/scripts"
 
 # --- Tuckr --- #
-export TUCKR_HOME="${HOME}" # The parent directory of your dotfiles directory (default: $HOME/.config)
-export TUCKR_TARGET="${HOME}" # The directory from which all dotfiles are symlinked (default: $HOME)
+export TUCKR_HOME="${HOME}"                       # The parent directory of your dotfiles directory (default: $HOME/.config)
+export TUCKR_TARGET="${HOME}"                     # The directory from which all dotfiles are symlinked (default: $HOME)
 export TUCKR_DIR="${TUCKR_HOME}/dotfiles/Configs" # Custom variable for my use
 
 # --- Chassis --- #
@@ -51,8 +51,11 @@ export HISTDB_TABULATE_CMD=(column -t -s $'\x1f')
 CHROME_EXECUTABLE="$(command -v thorium-browser 2>/dev/null || command -v thorium-browser-avx2 2>/dev/null)"
 PUPPETEER_EXECUTABLE_PATH="${CHROME_EXECUTABLE}"
 
+# --- Xonsh --- #
+export XONSH_HOME="${HOME}/.local/xonsh-env"
+
 # --- PATH --- #
-export PATH="${PATH}:${SCRIPTS_DIR}:${HOME}/.local/bin" # my custom scripts
+export PATH="${PATH}:${XONSH_HOME}/xbin:${SCRIPTS_DIR}:${HOME}/.local/bin" # my custom scripts
 
 # --- FPATH --- #
 export FPATH="${ZDOTDIR}/functions:${FPATH}"
