@@ -1,3 +1,7 @@
+@mixedbread/mgrep
+@neutralinojs/neu
+@playwright/cli
+@pnpm/exe
 concurrently
 esbuild
 gitpick
@@ -5,9 +9,6 @@ helix-snippets-ls
 json-server
 license
 minify
-@mixedbread/mgrep
-@neutralinojs/neu
-@playwright/cli
 quicktype
 release-please
 standard-version
