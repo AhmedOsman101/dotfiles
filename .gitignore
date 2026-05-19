@@ -1,6 +1,7 @@
 *.sql
+*.log
 Configs/micro/.config/micro/buffers
 Configs/zsh/.config/zsh/.zcompdump
 Configs/nushell/.config/nushell/history.txt
 Configs/nvim_1
-*.log
+Configs/gnupg/.gnupg/random_seed
