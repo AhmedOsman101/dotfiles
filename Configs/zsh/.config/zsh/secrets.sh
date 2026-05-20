@@ -35,9 +35,9 @@ fi
 GEMINI_API_KEY="$(pass show gemini)"
 GOOGLE_GENERATIVE_AI_API_KEY="${GEMINI_API_KEY}"
 
-OPENAI_API_KEY="$(pass show openai)"
+OPENAI_API_KEY="$(pass show openai | head -1)"
 
-GITHUB_TOKEN="$(pass show github/tokens/main)"
+GITHUB_TOKEN="$(pass show github/tokens/main | head -1)"
 
 ADVENT_OF_CODE_SESSION="$(pass show advent-of-code)"
 
