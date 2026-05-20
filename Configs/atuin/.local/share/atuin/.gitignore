@@ -1,0 +1,12 @@
+history.db
+history.db-shm
+history.db-wal
+records.db
+records.db-shm
+records.db-wal
+kv.db
+meta.db
+scripts.db
+atuin-daemon.pid
+atuin-daemon.pid.startup.lock
+*.db

@@ -14,3 +14,8 @@ Configs/gnupg/.gnupg/openpgp-revocs.d/**  filter=git-crypt diff=git-crypt
 # show diffs nicely without accidental plaintext commits
 *.gpg diff=gpg
 Secrets/**/*.gpg diff=gpg
+
+# Atuin
+Configs/atuin/.local/share/atuin/key filter=git-crypt diff=git-crypt 
+Configs/atuin/.local/share/atuin/session filter=git-crypt diff=git-crypt
+Configs/atuin/.local/share/atuin/host_id filter=git-crypt diff=git-crypt
