@@ -340,6 +340,7 @@ python-nltk
 python-pathvalidate
 python-pip
 python-pyqt6
+python-weasyprint
 qalculate-gtk
 qalculate-qt
 qemu-full
@@ -407,6 +408,7 @@ topgrade
 trash-cli
 tree
 ttf-amiri
+ttf-ms-aptos-core
 tuckr
 ufw
 ulauncher
