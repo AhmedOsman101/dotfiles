@@ -75,9 +75,6 @@ alias gc="git clone"
 alias glc='git pull origin $(git_current_branch)'
 alias glo='git pull origin'
 alias gi='mk-gitignore'
-# --- aliases override --- #
-unalias g &>/dev/null || true
-unalias gcm &>/dev/null || true
 
 # ---- Pacman ---- #
 # Resolve 'pacman in use' error
@@ -165,6 +162,11 @@ alias less='less -RFX'
 
 # --- Open (xdg-open) --- #
 alias open='xdg-open'
+
+# --- aliases override --- #
+unalias g &>/dev/null || true
+unalias gcm &>/dev/null || true
+unalias zi &>/dev/null || true
 
 # --- Suffix aliases --- #
 alias -s json='jless'

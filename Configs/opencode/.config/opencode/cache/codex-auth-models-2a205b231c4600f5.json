@@ -1,10 +1,10 @@
 {
-  "fetchedAt": 1778753156157,
+  "fetchedAt": 1779209057956,
   "models": [
     {
       "slug": "codex-auto-review",
       "display_name": "Codex Auto Review",
-      "priority": 29,
+      "priority": 43,
       "context_window": 272000,
       "input_modalities": [
         "text",
@@ -47,7 +47,7 @@
     {
       "slug": "gpt-5.2",
       "display_name": "gpt-5.2",
-      "priority": 10,
+      "priority": 29,
       "context_window": 272000,
       "input_modalities": [
         "text",
@@ -81,7 +81,7 @@
     {
       "slug": "gpt-5.3-codex",
       "display_name": "gpt-5.3-codex",
-      "priority": 6,
+      "priority": 25,
       "context_window": 272000,
       "input_modalities": [
         "text",
@@ -124,7 +124,7 @@
     {
       "slug": "gpt-5.4",
       "display_name": "gpt-5.4",
-      "priority": 2,
+      "priority": 16,
       "context_window": 272000,
       "input_modalities": [
         "text",
@@ -167,7 +167,7 @@
     {
       "slug": "gpt-5.4-mini",
       "display_name": "GPT-5.4-Mini",
-      "priority": 4,
+      "priority": 23,
       "context_window": 272000,
       "input_modalities": [
         "text",
@@ -210,7 +210,7 @@
     {
       "slug": "gpt-5.5",
       "display_name": "GPT-5.5",
-      "priority": 0,
+      "priority": 9,
       "context_window": 272000,
       "input_modalities": [
         "text",

@@ -7,6 +7,10 @@ Configs/ssh/.ssh/* filter=git-crypt diff=git-crypt
 Configs/ssh/.ssh/*.pub !filter !diff
 Configs/ssh/.ssh/config !filter !diff
 
+# Encrypt all private keys in .gnupg, while excluding the rest
+Configs/gnupg/.gnupg/private-keys-v1.d/** filter=git-crypt diff=git-crypt
+Configs/gnupg/.gnupg/openpgp-revocs.d/**  filter=git-crypt diff=git-crypt
+
 # show diffs nicely without accidental plaintext commits
 *.gpg diff=gpg
 Secrets/**/*.gpg diff=gpg
