@@ -37,7 +37,7 @@ GOOGLE_GENERATIVE_AI_API_KEY="${GEMINI_API_KEY}"
 
 OPENAI_API_KEY="$(pass show openai)"
 
-GITHUB_TOKEN="$(pass show github/tokens/1)"
+GITHUB_TOKEN="$(pass show github/tokens/main)"
 
 ADVENT_OF_CODE_SESSION="$(pass show advent-of-code)"
 

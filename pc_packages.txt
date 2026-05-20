@@ -3,6 +3,7 @@ adobe-source-han-serif-jp-fonts
 advancecomp
 advcpmv
 adw-gtk-theme
+age
 alacritty
 alsa-plugins
 alsa-tools
@@ -55,6 +56,7 @@ btrfs-progs
 cadaver
 caddy
 calf
+caligula
 catimg
 catppuccin-gtk-theme-mocha
 catppuccin-mocha-grub-theme-git
