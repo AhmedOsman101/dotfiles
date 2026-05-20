@@ -278,6 +278,7 @@ export YSU_MESSAGE_POSITION="after"
 PATH="${PATH}:${PNPM_HOME}"                             # PNPM Home directory
 PATH="${PATH}:${PNPM_HOME}/bin"                         # PNPM binaries directory
 PATH="${PATH}:${HOME}/.spicetify"                       # Spicetify for spotify mods
+PATH="${PATH}:${DENO_INSTALL}/bin"                      # Deno runtime
 PATH="${PATH}:${BUN_INSTALL}/bin"                       # Bun js runtime
 PATH="${PATH}:${XDG_CONFIG_HOME}/composer/vendor/bin"   # Composer packages
 PATH="${PATH}:${CARGO_HOME}/bin"                        # Cargo packages

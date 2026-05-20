@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 
 # ---- mise (runtime version manager) ---- #
-command -v mise &>/dev/null && eval "$(mise activate zsh)"
+if command -v mise &>/dev/null; then
+  eval "$(mise activate zsh)"
+  mise completion bash --include-bash-completion-lib >"${XDG_DATA_HOME}/bash-completion/completions/mise"
+  mise completion zsh >"${ZDOTDIR}/completions/_mise"
+fi
