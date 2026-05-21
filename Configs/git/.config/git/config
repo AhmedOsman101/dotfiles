@@ -71,6 +71,7 @@
     line-numbers = false               # Shows line numbers in delta output
     syntax-theme = "Coldark-Dark"      # Sets the syntax highlighting theme for delta
     side-by-side = true                # Display diffs in two columns instead of inline
+    hyperlinks = true                  # Turn line numbers, file paths, commit hashes, etc into clickable links
 
     # --- Deletions (Minus) --- #
     minus-style = syntax "#693233"                   # Standard removed lines background
