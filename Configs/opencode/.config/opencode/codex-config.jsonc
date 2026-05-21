@@ -25,7 +25,7 @@
     // Account rotation strategy.
     // options: "sticky" | "hybrid" | "round_robin"
     // default: "sticky"
-    "rotationStrategy": "round_robin",
+    "rotationStrategy": "hybrid",
     // Input compatibility sanitizer for edge payloads.
     // options: true | false
     // default: false
@@ -79,12 +79,12 @@
     // Reasoning effort override.
     // examples: "minimal", "low", "medium", "high"
     // omit => use the selected model/catalog default
-    "reasoningEffort": "high",
+    // "reasoningEffort": "high",
     // Reasoning summary format sent upstream as reasoning.summary.
     // options: "auto" | "concise" | "detailed" | "none"
     // "none" disables reasoning summaries entirely.
     // deprecated aliases: reasoningSummaries, thinkingSummaries
-    "reasoningSummary": "auto",
+    "reasoningSummary": "auto"
     // Fast Mode behavior (serviceTier):
     // "auto"     => do not force a service_tier override
     // "priority" => fast mode for GPT-5.4* requests only
@@ -95,7 +95,7 @@
     // options: "default" | "low" | "medium" | "high" | "none"
     // "default" uses each model's catalog default verbosity.
     // "none" disables text verbosity entirely.
-    "textVerbosity": "default"
+    // "textVerbosity": ""
     // Optional extra response includes.
     // allowed: "reasoning.encrypted_content" | "file_search_call.results" | "message.output_text.logprobs"
     // "include": ["file_search_call.results"],
