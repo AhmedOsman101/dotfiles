@@ -19,7 +19,7 @@
 [status]
     branch = false                     # Disables showing branch information
     showStash = false                  # Disables showing stash information
-    showUntrackedFiles = all           # Shows all untracked files and directories, including ignored ones 
+    showUntrackedFiles = all           # Shows all untracked files and directories, including ignored ones
 
 [push]
     default = current                  # Sets the default push behavior to push the current branch
@@ -67,11 +67,26 @@
     singleKey = true                   # Enables single-key input (e.g., 'y' or 'n') without requiring Enter
 
 [delta]
-    navigate = true # use n and N to move between diff sections
-    side-by-side = true
-    dark = true                        # Enables dark mode for the delta diff viewer
-    line-numbers = false                # Shows line numbers in delta output
-    syntax-theme = "Catppuccin Mocha"  # Sets the syntax highlighting theme for delta
+    navigate = true                    # use n and N to move between diff sections
+    line-numbers = false               # Shows line numbers in delta output
+    syntax-theme = "Coldark-Dark"      # Sets the syntax highlighting theme for delta
+    side-by-side = true                # Display diffs in two columns instead of inline
+
+    # --- Deletions (Minus) --- #
+    minus-style = syntax "#693233"                   # Standard removed lines background
+    minus-non-emph-style = syntax "#693233"          # Non-emphasized removed lines (usually whitespace changes)
+    minus-emph-style = syntax "#2B161C"              # Emphasized removed text (actual deleted characters)
+    minus-empty-line-marker-style = normal "#693233" # Background for the marker showing an empty line was removed
+
+    # --- Unchanged (Zero) --- #
+    # No background color, just the syntax highlighting text
+    zero-style = syntax                           # Unchanged lines between diffs
+
+    # --- Additions (Plus) ---
+    plus-style = syntax "#245632"                   # Standard added lines background
+    plus-non-emph-style = syntax "#245632"          # Non-emphasized added lines (usually whitespace changes)
+    plus-emph-style = syntax "#10221C"              # Emphasized added text (actual added characters)
+    plus-empty-line-marker-style = normal "#245632" # Background for the marker showing an empty line was added
 
 [merge]
     conflictstyle = diff3              # Uses the diff3 style to display merge conflicts (shows base, local, and remote)
