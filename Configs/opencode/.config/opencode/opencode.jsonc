@@ -42,8 +42,8 @@
     "@plannotator/opencode@latest",
     "@iam-brain/opencode-codex-auth@latest",
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
-    "@howaboua/opencode-planning-toolkit@latest", // planning toolkit for OpenCode
-    "superpowers@git+https://github.com/obra/superpowers.git"
+    "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
+    // "superpowers@git+https://github.com/obra/superpowers.git"
   ],
   "instructions": [
     "~/.config/opencode/plugins/shell-strategy/shell_strategy.md"
@@ -66,8 +66,8 @@
         "zai-org/GLM-5.1": {
           "name": "GLM-5.1"
         },
-        "Qwen/Qwen3-Coder-480B-A35B-Instruct": {
-          "name": "Qwen3-Coder-480B"
+        "Qwen/Qwen3-Coder-Next": {
+          "name": "Qwen3-Coder"
         },
         "AskVenice/venice-uncensored": {
           "name": "Venice Uncensored"
