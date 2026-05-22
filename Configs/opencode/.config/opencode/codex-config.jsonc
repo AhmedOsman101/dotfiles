@@ -25,7 +25,7 @@
     // Account rotation strategy.
     // options: "sticky" | "hybrid" | "round_robin"
     // default: "sticky"
-    "rotationStrategy": "hybrid",
+    "rotationStrategy": "round_robin",
     // Input compatibility sanitizer for edge payloads.
     // options: true | false
     // default: false
@@ -79,7 +79,7 @@
     // Reasoning effort override.
     // examples: "minimal", "low", "medium", "high"
     // omit => use the selected model/catalog default
-    // "reasoningEffort": "high",
+    "reasoningEffort": "high",
     // Reasoning summary format sent upstream as reasoning.summary.
     // options: "auto" | "concise" | "detailed" | "none"
     // "none" disables reasoning summaries entirely.

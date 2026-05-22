@@ -15,6 +15,7 @@ android-sdk-platform-tools
 android-udev
 ani-cli
 ansifilter
+antigravity-ide
 apfs-fuse-git
 apparmor
 appmenu-gtk-module
