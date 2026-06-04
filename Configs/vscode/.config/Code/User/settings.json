@@ -1089,7 +1089,6 @@
   "workbench.colorCustomizations": {},
   "workbench.colorTheme": "GitHub Dark Default",
   "workbench.commandPalette.experimental.suggestCommands": true,
-  "workbench.editor.enablePreview": true,
   "workbench.editor.showTabIndex": true,
   "workbench.iconTheme": "vscode-icons",
   "workbench.productIconTheme": "fluent-icons",

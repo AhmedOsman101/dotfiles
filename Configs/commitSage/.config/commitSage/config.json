@@ -23,8 +23,8 @@
     "useChatCompletions": true
   },
   "provider": {
-    "type": "openai",
-    "model": "Qwen/Qwen3-Coder-Next",
+    "type": "gemini",
+    "model": "gemini-3.1-flash-lite",
     "timeoutMs": 60000,
     "reasoning": "off"
   }

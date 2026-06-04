@@ -413,6 +413,7 @@ tree
 ttf-amiri
 ttf-ms-aptos-core
 tuckr
+typioca-bin
 ufw
 ulauncher
 unarchiver

@@ -1,7 +1,6 @@
 @mixedbread/mgrep
 @neutralinojs/neu
 @playwright/cli
-@pnpm/exe
 concurrently
 esbuild
 gitpick
