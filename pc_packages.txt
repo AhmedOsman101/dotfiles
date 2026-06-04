@@ -329,6 +329,7 @@ plocate
 podman
 podman-compose
 podman-docker
+postgresql-libs
 prettier
 pv
 pyright
@@ -355,6 +356,7 @@ qtpass
 quickemu-git
 quickgui
 rar
+re2c
 rebuild-detector
 reflector
 resvg
