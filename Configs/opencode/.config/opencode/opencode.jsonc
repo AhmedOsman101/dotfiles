@@ -1,5 +1,9 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "lsp": true,
+  "skills": {
+    "paths": ["/home/othman/.agents/skills"]
+  },
   "mcp": {
     "mgrep": {
       "type": "local",
