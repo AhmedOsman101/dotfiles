@@ -46,37 +46,11 @@
     "@plannotator/opencode@latest",
     "@iam-brain/opencode-codex-auth@latest",
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
-    "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
-    // "superpowers@git+https://github.com/obra/superpowers.git"
+    "@howaboua/opencode-planning-toolkit@latest", // planning toolkit for OpenCode
+    "opencode-mem0@latest"
+    // ,"superpowers@git+https://github.com/obra/superpowers.git"
   ],
   "instructions": [
     "~/.config/opencode/plugins/shell-strategy/shell_strategy.md"
-  ],
-  "provider": {
-    "featherless": {
-      "name": "Featherless",
-      "npm": "@ai-sdk/openai-compatible",
-      "options": {
-        "baseURL": "https://api.featherless.ai/v1",
-        "apiKey": "{env:FEATHERLESS_API_KEY}"
-      },
-      "models": {
-        "deepseek-ai/DeepSeek-V4-Pro": {
-          "name": "DeepSeek-V4-Pro"
-        },
-        "moonshotai/Kimi-K2.6": {
-          "name": "Kimi-K2.6"
-        },
-        "zai-org/GLM-5.1": {
-          "name": "GLM-5.1"
-        },
-        "Qwen/Qwen3-Coder-Next": {
-          "name": "Qwen3-Coder"
-        },
-        "AskVenice/venice-uncensored": {
-          "name": "Venice Uncensored"
-        }
-      }
-    }
-  }
+  ]
 }

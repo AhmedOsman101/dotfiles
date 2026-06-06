@@ -1,0 +1,6 @@
+{
+  // "memoryProvider": "openai-chat",
+  // "memoryModel": "gpt-4o-mini",
+  // "memoryApiUrl": "https://api.openai.com/v1",
+  // "memoryApiKey": "sk-...",
+}
