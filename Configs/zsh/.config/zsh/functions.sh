@@ -300,7 +300,7 @@ _eza_ignore_glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor"
 # Common flags for tree listings
 _tree_common_flags=(
   "${_eza_common_flags[@]}"
-  "--ignore-glob=${_eza_ignore_glob}"
+  "--ignore-glob='${_eza_ignore_glob}'"
   '--no-permissions'
   '--tree'
 )
