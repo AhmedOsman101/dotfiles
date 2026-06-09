@@ -3,10 +3,10 @@
   "memoryProvider": "openai-chat",
   "memoryModel": "gpt-4o-mini",
   "memoryApiUrl": "https://api.openai.com/v1",
-  "memoryApiKey": "env://OPENAI_API_KEY",
+  "memoryApiKey": "env://OPENAI_API_KEY"
 
   // Ollama for local embeddings
-  "embeddingModel": "nomic-embed-text",
-  "embeddingApiUrl": "http://localhost:11434/v1",
-  "embeddingApiKey": "ollama"
+  // "embeddingModel": "nomic-embed-text",
+  // "embeddingApiUrl": "http://localhost:11434/v1",
+  // "embeddingApiKey": "ollama"
 }

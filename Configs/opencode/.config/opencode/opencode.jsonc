@@ -46,8 +46,7 @@
     "@plannotator/opencode@latest",
     "@iam-brain/opencode-codex-auth@latest",
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
-    "@howaboua/opencode-planning-toolkit@latest", // planning toolkit for OpenCode
-    "opencode-mem0@latest"
+    "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
     // ,"superpowers@git+https://github.com/obra/superpowers.git"
   ],
   "instructions": [

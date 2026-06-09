@@ -828,7 +828,7 @@
   "locateThisDocument.explorerIcons.openWorkspaceRootFolderInFileExplorer": false,
   "markdown-preview-enhanced.HTML5EmbedUseLinkSyntax": true,
   "markdown-preview-enhanced.alwaysShowBacklinksInPreview": false,
-  "markdown-preview-enhanced.chromePath": "/usr/bin/google-chrome-stable",
+  "markdown-preview-enhanced.chromePath": "/opt/thorium-browser-avx2/thorium-browser",
   "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
   "markdown-preview-enhanced.enableExtendedTableSyntax": true,
   "markdown-preview-enhanced.enableHTML5Embed": true,
@@ -840,7 +840,6 @@
   "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "markdown-preview-enhanced.printBackground": true,
   "markdown-preview-enhanced.revealjsTheme": "black.css",
-  "markdown-preview-enhanced.scrollSync": false,
   "markdown-preview-enhanced.useGitHubStylePipedLink": true,
   "markdown.preview.typographer": true,
   "merge-conflict.autoNavigateNextConflict.enabled": true,
@@ -1127,5 +1126,7 @@
     "javac",
     "java"
   ],
-  "roo-cline.deniedCommands": []
+  "roo-cline.deniedCommands": [],
+  "markdown-preview-enhanced.previewColorScheme": "editorColorScheme",
+  "markdown-preview-enhanced.scrollSync": false
 }
