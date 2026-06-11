@@ -25,6 +25,7 @@
     "github": {
       "type": "remote",
       "url": "https://api.githubcopilot.com/mcp",
+      "timeout": 5000,
       "headers": {
         "Authorization": "Bearer {env:GITHUB_TOKEN}"
       },
@@ -46,10 +47,22 @@
     "@plannotator/opencode@latest",
     "@iam-brain/opencode-codex-auth@latest",
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
-    "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
-    // ,"superpowers@git+https://github.com/obra/superpowers.git"
+    "superpowers@git+https://github.com/obra/superpowers.git",
+    "opentmux@latest",
+    "opencode-agent-tmux@latest",
+    [
+      "@knikolov/opencode-plugin-simple-memory@latest",
+      {
+        "autoLoad": true,
+        "autoSave": true,
+        "autoHookTimeoutMs": 100,
+        "contextLimit": 5,
+        "contextMaxChars": 1200,
+        "contextMinScore": 1,
+        "autoSaveScope": "user"
+      }
+    ]
+    // "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
   ],
-  "instructions": [
-    "~/.config/opencode/plugins/shell-strategy/shell_strategy.md"
-  ]
+  "instructions": ["~/.config/opencode/plugin/shell-strategy/shell_strategy.md"]
 }

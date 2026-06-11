@@ -1,5 +1,5 @@
 {
-  "lastChecked": 1781021275554,
+  "lastChecked": 1781180455885,
   "urls": {
     "orchestrator": "https://raw.githubusercontent.com/openai/codex/4ab44e2c5cc54ed47e47a6729dfd8aa5a3dc2476/codex-rs/core/templates/agents/orchestrator.md",
     "plan": "https://raw.githubusercontent.com/openai/codex/4ab44e2c5cc54ed47e47a6729dfd8aa5a3dc2476/codex-rs/core/templates/collaboration_mode/plan.md"

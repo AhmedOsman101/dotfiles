@@ -3,8 +3,6 @@ package.json
 bun.lock
 .env
 superpowers
-# antigravity-accounts.json
-# antigravity-signature-cache.json
 antigravity-accounts.json.*.tmp
 antigravity-logs/
 
