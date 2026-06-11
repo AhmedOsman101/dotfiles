@@ -166,6 +166,7 @@ inxi
 isoimagewriter
 iw
 iwd
+jbig2enc-git
 jdk21-openjdk
 jdtls
 jless
@@ -256,6 +257,7 @@ mold
 moreutils
 mpv
 musl
+mypy
 nano
 nautilus
 ncdu
@@ -277,6 +279,7 @@ nvme-cli
 nvtop
 obs-studio
 obsidian
+ocrmypdf
 okular
 ollama
 onlyoffice-bin
@@ -284,7 +287,7 @@ onnx
 openblas
 openbsd-netcat
 opencc
-opencode-bin
+opencode
 opendoas
 openssh
 os-prober-btrfs
@@ -334,6 +337,7 @@ prettier
 pv
 pyright
 python-beautifulsoup4
+python-email-validator
 python-faker
 python-keyring
 python-lsp-server
@@ -342,6 +346,7 @@ python-nltk
 python-pathvalidate
 python-pip
 python-pyqt6
+python-rapidocr-onnxruntime
 python-weasyprint
 qalculate-gtk
 qalculate-qt
@@ -449,7 +454,6 @@ wild
 wireless-regdb
 wireless_tools
 wireplumber
-wl-clipboard
 wmctrl
 woff2-font-awesome
 words

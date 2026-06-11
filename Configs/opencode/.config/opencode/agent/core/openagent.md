@@ -5,16 +5,21 @@ mode: primary
 temperature: 0.2
 permission:
   bash:
-    "*": "ask"
     "rm -rf *": "ask"
-    "rm -rf /*": "deny"
+    "sudo -A": "ask"
     "sudo *": "deny"
-    "> /dev/*": "deny"
+    "chmod *": "ask"
+    "curl *": "ask"
+    "wget *": "ask"
+    "docker *": "ask"
+    "kubectl *": "ask"
   edit:
     "**/*.env*": "deny"
     "**/*.key": "deny"
     "**/*.secret": "deny"
     "node_modules/**": "deny"
+    "**/__pycache__/**": "deny"
+    "**/*.pyc": "deny"
     ".git/**": "deny"
 ---
 
