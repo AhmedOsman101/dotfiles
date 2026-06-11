@@ -294,13 +294,11 @@ _eza_common_flags=(
   '--group-directories-first'
 )
 
-# Ignore pattern for tree listings
-_eza_ignore_glob="node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor"
-
 # Common flags for tree listings
 _tree_common_flags=(
   "${_eza_common_flags[@]}"
-  "--ignore-glob='${_eza_ignore_glob}'"
+  # Ignore pattern for tree listings
+  --ignore-glob='node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor'
   '--no-permissions'
   '--tree'
 )
