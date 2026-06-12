@@ -49,7 +49,7 @@
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
     "superpowers@git+https://github.com/obra/superpowers.git",
     "opentmux@latest",
-    "opencode-agent-tmux@latest",
+    "opencode-agent-tmux",
     [
       "@knikolov/opencode-plugin-simple-memory@latest",
       {
