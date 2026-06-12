@@ -29,10 +29,11 @@ If no source material is present, ask the user to provide it. Do not guess or fa
 **PDF path provided:**
 
 ```bash
+# Use pdfx to get useful metadata and a best effort to format and organize the PDF content
 pdfx "$FILE_PATH"
 
-# Or use this as a fallback
-# pdftotext "$FILE_PATH" -
+# Then use pdftotext to get the raw text, may give you more info
+pdftotext "$FILE_PATH" -
 ```
 
 If `pdfx` and `pdftotext` both fail (non-zero exit or empty output), stop and tell the user: the PDF may be scanned/image-based and needs OCR, or the path is wrong.
@@ -42,8 +43,9 @@ If `pdfx` and `pdftotext` both fail (non-zero exit or empty output), stop and te
 ### 2. Measure original read time
 
 ```bash
+# Accepts PDF files or any text file format
 readtime "$FILE_PATH"
-# or, for non-PDF input:
+# or, for raw text input:
 echo "$TEXT" | readtime
 ```
 
@@ -99,12 +101,14 @@ Honor any narrowing or emphasis in `$ARGUMENTS` as long as it does not conflict 
 ### 4. Measure summary read time and append footer
 
 ```bash
-echo "$SUMMARY_TEXT" | readtime
+readtime "$SUMMARY_FILE"
 ```
 
-If the summary read time is equal to or greater than the original, the summary is too long.
-Revise by removing in this order:
+Footer format for summarized lectures: `_X min read (source: Y min)_` where X is summary read time and Y is original source read time.
 
+If the summary read time is greater than the original, the summary is too long.
+
+Revise by removing in this order:
 1. Any sentence that restates a point made elsewhere
 2. Any illustrative example that does not reveal an edge case
 3. Any prose that can be converted to a tighter bullet or table row
