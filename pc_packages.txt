@@ -337,6 +337,7 @@ prettier
 pv
 pyright
 python-beautifulsoup4
+python-dominate
 python-email-validator
 python-faker
 python-keyring
