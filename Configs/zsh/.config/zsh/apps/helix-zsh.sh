@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# ---- Helix keybindings (helix-zsh) ---- #
+_path="${XDG_DATA_HOME}/zsh/helix-zsh/helix_zsh.zsh"
+[[ -d "${_path}" ]] && source "${_path}"
+
+# Bind custom widgets in helix keymaps after helix-zsh initializes
+if [[ "${HELIX_ZSH}" == "1" ]]; then
+  # fzf-tab completion (replaces expand-or-complete default binding)
+  _hx_bindkey_all '^I' fzf-tab-complete
+
+  # Clear screen with prompt reset
+  _hx_bindkey_all '^L' ctrl_l
+
+  # Edit command line
+  _hx_bindkey_all '^X^E' edit-command-line-sh
+
+  # Copy buffer
+  _hx_bindkey_all '^O' copybuffer
+
+  # Magic space
+  _hx_bindkey_all '^[[Z' magic-space
+fi
+
+unset _path
