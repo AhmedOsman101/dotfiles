@@ -18,4 +18,4 @@ unlighthouse
 vite
 yaml-language-server
 envsitter
-opentmux
+skills

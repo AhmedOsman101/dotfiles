@@ -34,22 +34,19 @@ zinit light-mode for \
   zdharma-continuum/zinit-annex-rust
 
 # ---- Add in snippets ---- #
-zinit snippet OMZP::git          # Git aliases & helpers
-zinit snippet OMZP::dirhistory   # Alt+ <- / Alt+ -> directory navigation
-zinit snippet OMZP::extract      # `x` -> extract any archive
-zinit snippet OMZP::encode64     # Encoding or decoding using base64 command (e64, ef64, d64)
-# zinit snippet OMZP::copypath     # Copies the path of given directory or file to the system clipboard
-zinit snippet OMZP::gh           # Adds completion for the GitHub CLI
-zinit snippet OMZP::qrcode       # Generate a QR Code from the command line
-zinit snippet OMZP::rsync        # Aliases for rsync (rsync-{copy,move,update,synchronize})
-zinit snippet OMZP::rust         # Completions for rust toolchain
-zinit snippet OMZP::alias-finder # Suggest existing aliases for commands
-zinit snippet OMZP::aliases      # Search all aliases by group
-# zinit snippet OMZP::fancy-ctrl-z # Allows pressing Ctrl-Z again to switch back to a background job
-# zinit snippet OMZP::gitignore    # Various .gitignore templates (implemented manually 💪🏻)
-# zinit snippet OMZP::gpg-agent    # fixes for some common issues encountered with gpg-agent
+zinit snippet OMZP::aliases           # Search all aliases by group
+zinit snippet OMZP::alias-finder      # Suggest existing aliases for commands
+zinit snippet OMZP::command-not-found # Suggest packages for missing commands
+zinit snippet OMZP::dirhistory        # Alt+ <- / Alt+ -> directory navigation
+zinit snippet OMZP::encode64          # Encoding or decoding using base64 command (e64, ef64, d64)
+zinit snippet OMZP::extract           # `x` -> extract any archive
+zinit snippet OMZP::gh                # Adds completion for the GitHub CLI
+zinit snippet OMZP::git               # Git aliases & helpers
+zinit snippet OMZP::qrcode            # Generate a QR Code from the command line
+zinit snippet OMZP::rsync             # Aliases for rsync (rsync-{copy,move,update,synchronize})
+zinit snippet OMZP::rust              # Completions for rust toolchain
+# zinit snippet OMZP::gpg-agent         # fixes for some common issues encountered with gpg-agent
 # zinit snippet OMZP::safe-paste        # Preventing any code from actually running while pasting
-# zinit snippet OMZP::command-not-found # Suggest packages for missing commands
 
 # --- Open buffer line editor --- #
 autoload -Uz edit-command-line-sh
