@@ -27,16 +27,16 @@ zinit light 'zsh-users/zsh-autosuggestions'              # History-based suggest
 # zvm_config is called by ZVM at init time (before plugin loads)
 # Must be defined BEFORE zinit light jeffreytse/zsh-vi-mode
 function zvm_config() {
-  ZVM_LINE_INIT_MODE="${ZVM_MODE_INSERT}"      # Start in insert mode
-  ZVM_VI_INSERT_ESCAPE_BINDKEY='jk'            # `jk` like helix
-  ZVM_INSERT_MODE_CURSOR="${ZVM_CURSOR_BLOCK}" # Block cursor like helix
-  ZVM_NORMAL_MODE_CURSOR="${ZVM_CURSOR_BLOCK}" # Block cursor like helix
-  ZVM_VI_HIGHLIGHT_FOREGROUND='#ebdbb2'        # Readable light fg for selection
-  ZVM_VI_HIGHLIGHT_BACKGROUND='#3a3a3a'        # Muted dark bg for selection
+  ZVM_LINE_INIT_MODE="${ZVM_MODE_INSERT}"          # Start in insert mode
+  ZVM_VI_INSERT_ESCAPE_BINDKEY='jk'                # `jk` like helix
+  ZVM_INSERT_MODE_CURSOR="${ZVM_CURSOR_UNDERLINE}" # Underline cursor
+  ZVM_NORMAL_MODE_CURSOR="${ZVM_CURSOR_BLOCK}"     # Block cursor
+  ZVM_VI_HIGHLIGHT_FOREGROUND='#ebdbb2'            # Readable light fg for selection
+  ZVM_VI_HIGHLIGHT_BACKGROUND='#3a3a3a'            # Muted dark bg for selection
 }
 
 zinit ice depth=1
-zinit light 'jeffreytse/zsh-vi-mode'     # Better vi mode with text objects, surround, etc.
+zinit light 'jeffreytse/zsh-vi-mode' # Better vi mode with text objects, surround, etc.
 # --- ZVM End --- #
 zinit light 'olets/zsh-transient-prompt' # Transient prompt for zsh
 

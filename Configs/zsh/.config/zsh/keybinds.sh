@@ -42,7 +42,7 @@ function zvm_after_init() {
 
   # Custom widgets in insert mode
   bindkey -M viins '^L' ctrl_l
-  bindkey -M viins '^X^E' edit-command-line-sh
+  # bindkey -M viins '^X^E' edit-command-line-sh
   bindkey -M viins '^O' copybuffer
   bindkey -M viins '^[[Z' magic-space
 }
@@ -54,7 +54,7 @@ function zvm_after_lazy_keybindings() {
 
   # Custom widgets in normal mode
   zvm_bindkey vicmd '^L' ctrl_l
-  zvm_bindkey vicmd '^X^E' edit-command-line-sh
+  # zvm_bindkey vicmd '^X^E' edit-command-line-sh
   zvm_bindkey vicmd '^O' copybuffer
   zvm_bindkey vicmd '^[[Z' magic-space
   zvm_bindkey vicmd '^Z' undo
