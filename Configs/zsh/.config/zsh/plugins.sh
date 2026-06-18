@@ -31,6 +31,8 @@ function zvm_config() {
   ZVM_VI_INSERT_ESCAPE_BINDKEY='jk'                # `jk` like helix
   ZVM_INSERT_MODE_CURSOR="${ZVM_CURSOR_UNDERLINE}" # Underline cursor
   ZVM_NORMAL_MODE_CURSOR="${ZVM_CURSOR_BLOCK}"     # Block cursor
+  ZVM_VI_SURROUND_BINDKEY='s-prefix'               # sa/sd/sr like helix
+  ZVM_SYSTEM_CLIPBOARD_ENABLED='true'              # yank copies to system clipboard
   ZVM_VI_HIGHLIGHT_FOREGROUND='#ebdbb2'            # Readable light fg for selection
   ZVM_VI_HIGHLIGHT_BACKGROUND='#3a3a3a'            # Muted dark bg for selection
 }

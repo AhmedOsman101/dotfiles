@@ -26,6 +26,9 @@ zle -N copybuffer
 
 # ---- ZVM hooks (run after ZVM init at first prompt) ---- #
 function zvm_after_init() {
+  # Restore autopair bindings after ZVM clears them
+  autopair-init
+
   # Insert mode: emacs-compatible line editing
   bindkey -M viins '^K' kill-line
   bindkey -M viins '^U' kill-whole-line
@@ -57,6 +60,8 @@ function zvm_after_lazy_keybindings() {
   # zvm_bindkey vicmd '^X^E' edit-command-line-sh
   zvm_bindkey vicmd '^O' copybuffer
   zvm_bindkey vicmd '^[[Z' magic-space
+  zvm_bindkey vicmd '^K' kill-line
+  zvm_bindkey vicmd '^U' kill-whole-line
   zvm_bindkey vicmd '^Z' undo
   zvm_bindkey vicmd '^Y' redo
 
