@@ -58,7 +58,7 @@ A modular, XDG-compliant Zsh setup managed via [Tuckr](https://github.com/RaphGL
 - **Starship prompt** — Fast, customizable cross-shell prompt
 - **Transient prompt** — Prompt collapses to a single `❯`/`✗` after command execution
 - **fzf-tab** — fzf-powered tab completion with file previews via `eza`
-- **helix-zsh** — Helix-style modal keybindings via Rust driver (hxcmd/hxins/hxsel)
+- **vi mode** — Native `bindkey -v` vi keymaps (vicmd/viins)
 - **pass** — GPG-encrypted password store for API keys (never plaintext in config)
 - **No Oh My Zsh** — Uses individual OMZ snippets instead (lighter weight)
 - **ShellCheck validated** — `.shellcheckrc` enforces strict linting

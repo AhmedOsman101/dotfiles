@@ -2,14 +2,15 @@
 
 ## Input Mode
 
-[helix-zsh](https://github.com/john-h-k/helix-zsh) replaces the default emacs keymap with Helix-style modal editing via a Rust driver.
-Three keymaps are available:
+Native zsh vi mode (`bindkey -v`) with `vicmd`/`viins` keymaps.
+Built-in, zero dependencies — works with atuin, fzf-tab, and autosuggestions natively.
+
+Previous helix-zsh config preserved at `apps/helix-zsh.sh.disabled` for easy revert.
 
 | Keymap | Mode | Description |
 |--------|------|-------------|
-| `hxcmd` | Normal | Navigate & manipulate (default) |
-| `hxins` | Insert | Text entry |
-| `hxsel` | Select | Visual selection |
+| `vicmd` | Normal | Vim navigation & manipulation |
+| `viins` | Insert | Text entry (default) |
 
 ## Standard Keys
 

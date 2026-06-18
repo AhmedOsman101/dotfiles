@@ -212,15 +212,8 @@ See [keybindings.md](./keybindings.md) for the complete reference.
 
 ---
 
-## apps/helix-zsh.sh
+## apps/helix-zsh.sh.disabled
 
-Sourced after all modules and app configs. Initializes helix-zsh:
-1. Sources `helix_zsh.zsh` (creates `hxcmd`/`hxins`/`hxsel` keymaps, starts the Rust `helix-driver` coprocess)
-2. Binds custom widgets in all helix keymaps:
-   - `^I` → `fzf-tab-complete` (overrides `expand-or-complete` default)
-   - `^L` → `ctrl_l` (clear screen with prompt reset)
-   - `^X^E` → `edit-command-line-sh` (edit in $EDITOR)
-   - `^O` → `copybuffer` (copy buffer to clipboard)
-   - `Shift+Tab` → `magic-space` (expand history)
-
-Key config respects `~/.config/helix/config.toml`.
+Preserved helix-zsh config — rename to `helix-zsh.sh` to re-enable:
+1. Sources `helix_zsh.zsh` from `$XDG_DATA_HOME/zsh/helix-zsh/`
+2. Binds custom widgets in hxcmd/hxins/hxsel keymaps (fzf-tab, ctrl_l, edit-command-line, copybuffer, magic-space)
