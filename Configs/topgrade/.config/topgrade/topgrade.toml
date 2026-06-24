@@ -29,7 +29,7 @@ sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
 disable = [
-  # "am",
+  # "a_m",
   "android_studio",
   # "antigravity",
   # "app_man",
@@ -77,8 +77,8 @@ disable = [
   # "gem",
   # "getnf",
   # "ghcup",
-  # "git_repos",
   # "github_cli_extensions",
+  # "git_repos",
   # "gnome_shell_extensions",
   # "go",
   # "guix",
@@ -131,7 +131,7 @@ disable = [
   # "pacstall",
   # "pearl",
   # "pi",
-  # "pip3",
+  "pip3",
   # "pip_review",
   # "pip_review_local",
   # "pipupgrade",
@@ -162,7 +162,7 @@ disable = [
   # "sheldon",
   # "shell",
   # "skills",
-  # "snap",
+  "snap",
   # "sparkle",
   # "spicetify",
   # "stack",
@@ -194,8 +194,7 @@ disable = [
   # "yarn",
   # "yazi",
   # "zigup",
-  "zinit",
-  # "zvm",
+  # "zvm"
 ]
 
 # Run these steps before all others
