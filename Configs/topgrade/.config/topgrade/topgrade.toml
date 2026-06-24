@@ -177,7 +177,7 @@ disable = [
   # "uv",
   # "vagrant",
   # "vcpkg",
-  # "vim",
+  "vim",
   # "vite_plus",
   # "volta_packages",
   "vscode",
