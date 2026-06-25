@@ -104,6 +104,7 @@ eza
 fastfetch
 fatresize
 fd
+fetch-git
 ffmpegthumbnailer
 find-the-command
 fish

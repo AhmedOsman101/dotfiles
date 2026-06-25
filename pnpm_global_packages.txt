@@ -19,3 +19,4 @@ vite
 yaml-language-server
 envsitter
 skills
+dom-to-pptx
