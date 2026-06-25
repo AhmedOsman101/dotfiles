@@ -34,6 +34,7 @@ help() {
 }
 
 which() {
+  # shellcheck disable=2230
   (
     alias
     declare -f
