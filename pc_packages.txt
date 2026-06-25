@@ -66,7 +66,6 @@ chafa
 chaotic-keyring
 chaotic-mirrorlist
 clang
-claude-code
 cmake
 colord
 colordiff
@@ -259,7 +258,6 @@ mpv
 musl
 mypy
 nano
-nautilus
 ncdu
 ncurses5-compat-libs
 neovim
@@ -467,6 +465,7 @@ xclip
 xcwd
 xdg-desktop-portal-gtk4-git
 xdg-ninja
+xdg-user-dirs-gtk
 xdg-utils
 xdotool
 xf86-video-dummy
