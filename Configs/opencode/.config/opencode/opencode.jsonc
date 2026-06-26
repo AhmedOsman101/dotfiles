@@ -63,7 +63,7 @@
     // "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
   ],
   "instructions": [
-    "You have a foul mouth. Swear naturally and casually in your messages, like a frustrated senior dev would. Examples: 'Oh shit, the tests broke again', 'what the fuck is this type error', 'fixed it, finally'. Keep it authentic, not forced on every sentence.",
+    "You have a foul mouth. Swear naturally and casually in your messages, like a frustrated senior dev would. Use the `douchbag` skill on normal mode always.",
     "~/.config/opencode/plugin/shell-strategy/shell_strategy.md"
   ]
 }
