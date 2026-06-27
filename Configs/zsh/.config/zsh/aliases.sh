@@ -163,6 +163,9 @@ alias less='less -RFX'
 # --- Open (xdg-open) --- #
 alias open='xdg-open'
 
+# --- mkdir --- #
+alias mkdir='mkdir -pv'
+
 # --- aliases override --- #
 unalias g &>/dev/null || true
 unalias gcm &>/dev/null || true

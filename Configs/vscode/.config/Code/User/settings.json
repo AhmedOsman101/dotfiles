@@ -491,7 +491,7 @@
   "deno.codeLens.references": true,
   "deno.codeLens.referencesAllFunctions": true,
   "deno.codeLens.test": true,
-  "deno.path": "/home/othman/.cache/deno/bin/deno",
+  "deno.path": "",
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.maxComputationTime": 0,
   "diffEditor.wordWrap": "off",

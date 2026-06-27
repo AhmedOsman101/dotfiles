@@ -170,6 +170,7 @@
         "noUnusedLabels": "error",
         "noUnusedPrivateClassMembers": "info",
         "noVoidTypeReturn": "error",
+        "useParseIntRadix": "off",
         "useHookAtTopLevel": "error",
         "useIsNan": "warn",
         "useJsxKeyInIterable": "warn",
