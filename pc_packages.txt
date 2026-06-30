@@ -323,7 +323,6 @@ pipewire-alsa
 pipewire-jack
 pipewire-onnx
 pipewire-pulse
-pkgfile
 plasma-meta
 plasma-workspace
 plasma-x11-session
@@ -386,6 +385,7 @@ smartmontools
 sof-firmware
 sox
 speedtest-cli
+spice-vdagent
 sqls
 sshfs
 stacer-bin
