@@ -44,7 +44,7 @@
     "cc-safety-net@latest",
     "@tarquinen/opencode-dcp@latest",
     "opencode-handoff@latest",
-    "@plannotator/opencode@latest",
+    // "@plannotator/opencode@latest",
     // "@iam-brain/opencode-codex-auth@latest",
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
     "superpowers@git+https://github.com/obra/superpowers.git",
@@ -54,7 +54,7 @@
         "autoLoad": true,
         "autoSave": true,
         "autoHookTimeoutMs": 100,
-        "contextLimit": 5,
+        "contextLimit": 10,
         "contextMaxChars": 1200,
         "contextMinScore": 1,
         "autoSaveScope": "user"
@@ -63,7 +63,6 @@
     // "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
   ],
   "instructions": [
-    "You have a foul mouth. Swear naturally and casually in your messages, like a frustrated senior dev would. Use the `douchbag` skill on normal mode always.",
-    "~/.config/opencode/plugin/shell-strategy/shell_strategy.md"
+    "/home/othman/.config/opencode/plugin/shell-strategy/shell_strategy.md"
   ]
 }
