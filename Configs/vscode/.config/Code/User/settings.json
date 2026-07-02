@@ -654,7 +654,7 @@
     "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*"
   },
   "explorer.sortOrder": "type",
-  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.autoUpdate": "on",
   "extensions.experimental.affinity": {
     "jasew.vscode-helix-emulation": 1
   },
