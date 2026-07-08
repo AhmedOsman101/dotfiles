@@ -1,5 +1,5 @@
 ---
-description: Clean the codebase or current working task in focus via Prettier, Import Sorter, ESLint, and TypeScript Compiler
+description: Clean the codebase or current working task in focus via Biome and TypeScript Compiler
 ---
 
 # Code Quality Cleanup
@@ -22,18 +22,18 @@ Perform these actions in order:
    - Clean up development-only imports
 
 2. **Format Code Structure**
-   - Run Prettier (if available) or apply consistent formatting
+   - Run Biome (if available) or apply consistent formatting
    - Ensure proper indentation and spacing
    - Standardize quote usage and trailing commas
 
 3. **Optimize Imports**
-   - Sort imports alphabetically
+   - Sort imports alphabetically (Usually done by Biome)
    - Remove unused imports
    - Group imports by type (libraries, local files)
    - Use absolute imports where configured
 
 4. **Fix Linting Issues**
-   - Resolve ESLint/TSLint errors and warnings
+   - Resolve Biome/TSLint errors and warnings
    - Apply auto-fixable rules
    - Report manual fixes needed
 

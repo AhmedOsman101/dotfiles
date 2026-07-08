@@ -1,160 +1,120 @@
 ---
-description: Create well-formatted commits with conventional commit messages and emoji
+description: Create well-formatted commits using the Conventional Commits format
 ---
 
 # Commit Command
 
-You are an AI agent that helps create well-formatted git commits with conventional commit messages and emoji icons, follow these instructions exactly. Always run and push the commit, you don't need to ask for confirmation unless there is a big issue or error.
+You are an AI agent that helps create well-formatted git commits using the Conventional Commits format. Follow these instructions exactly. Always run the commit. Don't ask for confirmation unless there is a big issue or error.
 
 ## Instructions for Agent
 
 When the user runs this command, execute the following workflow:
 
 1. **Check command mode**:
-   - If user provides $ARGUMENTS (a simple message), skip to step 3
+   - If the user provides $ARGUMENTS (a simple message), skip to step 3.
 
 2. **Run pre-commit validation**:
-   - Execute `pnpm lint` and report any issues
-   - Execute `pnpm build` and ensure it succeeds
-   - If either fails, ask user if they want to proceed anyway or fix issues first
-   
+   - Execute `pnpm lint` and report any issues.
+   - Execute `pnpm typecheck` or `pnpm build` and ensure it succeeds.
+   - If either fails, ask the user if they want to proceed anyway or fix issues first.
+
 3. **Analyze git status**:
-   - Run `git status --porcelain` to check for changes
-   - If no files are staged, run `git add .` to stage all modified files
-   - If files are already staged, proceed with only those files
-   
+   - Run `git status --porcelain` to check for changes.
+   - If no files are staged, run `git add .` to stage all modified files.
+   - If files are already staged, proceed with only those files.
+
 4. **Analyze the changes**:
-   - Run `git diff --cached` to see what will be committed
-   - Analyze the diff to determine the primary change type (feat, fix, docs, etc.)
-   - Identify the main scope and purpose of the changes
-   
+   - Run `git diff --cached` to see what will be committed.
+   - Determine the primary change type and scope from the rules below.
+
 5. **Generate commit message**:
-   - Choose appropriate emoji and type from the reference below
-   - Create message following format: `<emoji> <type>: <description>`
-   - Keep description concise, clear, and in imperative mood
-   - Show the proposed message to user for confirmation
-   
+   - Build the message using the format and rules below.
+   - Show the proposed message to the user for confirmation.
+
 6. **Execute the commit**:
-   - Run `git commit -m "<generated message>"`
-   - Display the commit hash and confirm success
-   - Provide brief summary of what was committed
+   - Run `git commit -m "<generated title>" -m "<generated body>"`.
+   - Display the commit hash and confirm success.
 
-## Commit Message Guidelines
+## Commit Message Format
 
-When generating commit messages, follow these rules:
+```
+<type>[optional scope]: <description>
 
-- **Atomic commits**: Each commit should contain related changes that serve a single purpose
-- **Imperative mood**: Write as commands (e.g., "add feature" not "added feature")
-- **Concise first line**: Keep under 72 characters
-- **Conventional format**: Use `<emoji> <type>: <description>` where type is one of:
-  - `feat`: A new feature
-  - `fix`: A bug fix
-  - `docs`: Documentation changes
-  - `style`: Code style changes (formatting, etc.)
-  - `refactor`: Code changes that neither fix bugs nor add features
-  - `perf`: Performance improvements
-  - `test`: Adding or fixing tests
-  - `chore`: Changes to the build process, tools, etc.
-- **Present tense, imperative mood**: Write commit messages as commands (e.g., "add feature" not "added feature")
-- **Concise first line**: Keep the first line under 72 characters
-- **Emoji**: Each commit type is paired with an appropriate emoji:
-  - ✨ `feat`: New feature
-  - 🐛 `fix`: Bug fix
-  - 📝 `docs`: Documentation
-  - 💄 `style`: Formatting/style
-  - ♻️ `refactor`: Code refactoring
-  - ⚡️ `perf`: Performance improvements
-  - ✅ `test`: Tests
-  - 🔧 `chore`: Tooling, configuration
-  - 🚀 `ci`: CI/CD improvements
-  - 🗑️ `revert`: Reverting changes
-  - 🧪 `test`: Add a failing test
-  - 🚨 `fix`: Fix compiler/linter warnings
-  - 🔒️ `fix`: Fix security issues
-  - 👥 `chore`: Add or update contributors
-  - 🚚 `refactor`: Move or rename resources
-  - 🏗️ `refactor`: Make architectural changes
-  - 🔀 `chore`: Merge branches
-  - 📦️ `chore`: Add or update compiled files or packages
-  - ➕ `chore`: Add a dependency
-  - ➖ `chore`: Remove a dependency
-  - 🌱 `chore`: Add or update seed files
-  - 🧑‍💻 `chore`: Improve developer experience
-  - 🧵 `feat`: Add or update code related to multithreading or concurrency
-  - 🔍️ `feat`: Improve SEO
-  - 🏷️ `feat`: Add or update types
-  - 💬 `feat`: Add or update text and literals
-  - 🌐 `feat`: Internationalization and localization
-  - 👔 `feat`: Add or update business logic
-  - 📱 `feat`: Work on responsive design
-  - 🚸 `feat`: Improve user experience / usability
-  - 🩹 `fix`: Simple fix for a non-critical issue
-  - 🥅 `fix`: Catch errors
-  - 👽️ `fix`: Update code due to external API changes
-  - 🔥 `fix`: Remove code or files
-  - 🎨 `style`: Improve structure/format of the code
-  - 🚑️ `fix`: Critical hotfix
-  - 🎉 `chore`: Begin a project
-  - 🔖 `chore`: Release/Version tags
-  - 🚧 `wip`: Work in progress
-  - 💚 `fix`: Fix CI build
-  - 📌 `chore`: Pin dependencies to specific versions
-  - 👷 `ci`: Add or update CI build system
-  - 📈 `feat`: Add or update analytics or tracking code
-  - ✏️ `fix`: Fix typos
-  - ⏪️ `revert`: Revert changes
-  - 📄 `chore`: Add or update license
-  - 💥 `feat`: Introduce breaking changes
-  - 🍱 `assets`: Add or update assets
-  - ♿️ `feat`: Improve accessibility
-  - 💡 `docs`: Add or update comments in source code
-  - 🗃️ `db`: Perform database related changes
-  - 🔊 `feat`: Add or update logs
-  - 🔇 `fix`: Remove logs
-  - 🤡 `test`: Mock things
-  - 🥚 `feat`: Add or update an easter egg
-  - 🙈 `chore`: Add or update .gitignore file
-  - 📸 `test`: Add or update snapshots
-  - ⚗️ `experiment`: Perform experiments
-  - 🚩 `feat`: Add, update, or remove feature flags
-  - 💫 `ui`: Add or update animations and transitions
-  - ⚰️ `refactor`: Remove dead code
-  - 🦺 `feat`: Add or update code related to validation
-  - ✈️ `feat`: Improve offline support
+[optional body with bullet points]
+```
 
-## Reference: Good Commit Examples
+### Rules
 
-Use these as examples when generating commit messages:
-- ✨ feat: add user authentication system
-- 🐛 fix: resolve memory leak in rendering process
-- 📝 docs: update API documentation with new endpoints
-- ♻️ refactor: simplify error handling logic in parser
-- 🚨 fix: resolve linter warnings in component files
-- 🧑‍💻 chore: improve developer tooling setup process
-- 👔 feat: implement business logic for transaction validation
-- 🩹 fix: address minor styling inconsistency in header
-- 🚑️ fix: patch critical security vulnerability in auth flow
-- 🎨 style: reorganize component structure for better readability
-- 🔥 fix: remove deprecated legacy code
-- 🦺 feat: add input validation for user registration form
-- 💚 fix: resolve failing CI pipeline tests
-- 📈 feat: implement analytics tracking for user engagement
-- 🔒️ fix: strengthen authentication password requirements
-- ♿️ feat: improve form accessibility for screen readers
+1. **First line**: `type(scope): description` (max 50 chars).
+   - Use imperative mood for the description (e.g., "add" not "added").
+   - Description starts with a lowercase letter.
+2. **For small changes**, use only the first line.
+3. **For complex changes**, list key points in the body:
+   - Each line starts with `- ` and is max 50 chars.
+   - Limit to 5 bullet points.
+   - Use present tense and active voice.
+   - Focus on what and why, not how, unless necessary.
+4. **References**: optionally reference issues or PRs (e.g., "Closes #123").
 
-Example commit sequence:
-- ✨ feat: add user authentication system
-- 🐛 fix: resolve memory leak in rendering process  
-- 📝 docs: update API documentation with new endpoints
-- ♻️ refactor: simplify error handling logic in parser
-- 🚨 fix: resolve linter warnings in component files
-- ✅ test: add unit tests for authentication flow
+### Type Selection Rules
+
+Choose the most appropriate type based on the change:
+
+- `docs`: any changes to documentation files (`*.md`, `docs/*`, etc.)
+- `feat`: new features or significant functional changes
+- `fix`: bug fixes and error corrections
+- `style`: changes not affecting code behavior (formatting, semicolons, etc.)
+- `refactor`: code changes that neither fix a bug nor add a feature
+- `perf`: performance improvements
+- `test`: adding or updating tests
+- `build`: changes affecting the build system or external dependencies
+- `ci`: CI/CD changes
+- `chore`: build configuration, libraries, and other maintenance tasks
+- `revert`: reverting a previous commit
+
+The type drives changelog generation and other automated tooling. Pick it carefully.
+
+## Examples
+
+**Documentation change**:
+```
+docs: update installation and usage guides
+
+- add new features description
+- update configuration section
+- add usage examples
+```
+
+**Feature change**:
+```
+feat(auth): add user authentication
+
+- implement OAuth2 provider integration
+- create auth service module
+- add session management
+```
+
+**Fix change**:
+```
+fix(api): resolve null pointer exception in user service
+```
+
+**Refactor change**:
+```
+refactor(core): simplify error handling logic
+```
+
+**Test change**:
+```
+test: add unit tests for authentication module
+```
 
 ## Agent Behavior Notes
 
-- **Error handling**: If validation fails, give user option to proceed or fix issues first  
-- **Auto-staging**: If no files are staged, automatically stage all changes with `git add .`
-- **File priority**: If files are already staged, only commit those specific files
-- **Always run and push the commit**: You don't need to ask for confirmation unless there is a big issue or error `git push`.
-- **Message quality**: Ensure commit messages are clear, concise, and follow conventional format
-- **Success feedback**: After successful commit, show commit hash and brief summary
+- **Error handling**: if validation fails, give the user the option to proceed or fix issues first.
+- **Auto-staging**: if no files are staged, stage all changes with `git add .`.
+- **File priority**: if files are already staged, commit only those specific files.
+- **Always run and push the commit**: don't ask for confirmation unless there is a big issue or error.
+- **Message quality**: keep the first line at or under 50 chars, imperative mood, lowercase start.
+- **Single logical change**: keep each commit focused, especially for complex changes.
+- **Reference**: see the [Conventional Commits specification](https://www.conventionalcommits.org/) for more detail.
