@@ -1,5 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "model": "anthropic/claude-sonnet-4-5",
   "lsp": true,
   "skills": {
     "paths": ["/home/othman/.agents/skills"]
@@ -45,7 +46,7 @@
     "@tarquinen/opencode-dcp@latest",
     "opencode-handoff@latest",
     // "@plannotator/opencode@latest",
-    // "@iam-brain/opencode-codex-auth@latest",
+    "@iam-brain/opencode-codex-auth@latest",
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
     "superpowers@git+https://github.com/obra/superpowers.git",
     [
@@ -62,6 +63,14 @@
     ]
     // "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
   ],
+  "provider": {
+    "anthropic": {
+      "options": {
+        "apiKey": "{env:KIRO_PROXY_API_KEY}",
+        "baseURL": "http://localhost:9001"
+      }
+    }
+  },
   "instructions": [
     "/home/othman/.config/opencode/plugin/shell-strategy/shell_strategy.md"
   ]
