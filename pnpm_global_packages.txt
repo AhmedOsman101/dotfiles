@@ -21,3 +21,4 @@ envsitter
 skills
 dom-to-pptx
 intelephense
+@earendil-works/pi-coding-agent
