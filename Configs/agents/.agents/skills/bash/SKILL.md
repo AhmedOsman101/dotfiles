@@ -1,11 +1,11 @@
 ---
-name: bash-linux
+name: linux
 description: "Bash/Linux terminal patterns. Critical commands, piping, error handling, scripting. Use when working on macOS, Linux, or any system with Bash/Zsh."
 ---
 
 # Bash Linux Patterns
 
-> Essential patterns for Bash on Linux/macOS.
+> Essential patterns for Bash on Linux/macOS. Load [shell-strategy.md](./references/shell-strategy.md) file before execution.
 
 ---
 
@@ -16,8 +16,8 @@ description: "Bash/Linux terminal patterns. Critical commands, piping, error han
 | Operator | Meaning                   | Example                             |
 | -------- | ------------------------- | ----------------------------------- |
 | `;`      | Run sequentially          | `cmd1; cmd2`                        |
-| `&&`     | Run if previous succeeded | `pnpm install && pnpm run dev`        |
-| `\|\|`   | Run if previous failed    | `pnpm test \|\| echo "Tests failed"` |
+| `&&`     | Run if previous succeeded | `pnpm install && pnpm run dev`      |
+| `\|\|`   | Run if previous failed    | `pnpm test \|\| echo "Tests failed"`|
 | `\|`     | Pipe output               | `ls \| rg ".js"`                    |
 
 ---

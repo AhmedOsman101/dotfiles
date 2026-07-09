@@ -16,26 +16,12 @@
       "timeout": 5000,
       "enabled": false
     },
-    "zod": {
-      "type": "remote",
-      "url": "https://mcp.inkeep.com/zod/mcp",
-      "timeout": 5000,
-      "enabled": false
-    },
     "github": {
       "type": "remote",
       "url": "https://api.githubcopilot.com/mcp",
       "timeout": 5000,
       "headers": {
         "Authorization": "Bearer {env:GITHUB_TOKEN}"
-      },
-      "enabled": false
-    },
-    "obsidian": {
-      "type": "local",
-      "command": ["uvx", "mcp-obsidian"],
-      "environment": {
-        "OBSIDIAN_API_KEY": "{env:OBSIDIAN_API_KEY}"
       },
       "enabled": false
     }
@@ -47,7 +33,7 @@
     // "@plannotator/opencode@latest",
     // "@iam-brain/opencode-codex-auth@latest",
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
-    "superpowers@git+https://github.com/obra/superpowers.git",
+    // "superpowers@git+https://github.com/obra/superpowers.git",
     [
       "@knikolov/opencode-plugin-simple-memory@latest",
       {
@@ -60,7 +46,7 @@
         "autoSaveScope": "user"
       }
     ],
-    "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
+    // "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
   ],
   "provider": {
     "kiro": {
@@ -87,7 +73,5 @@
       }
     }
   },
-  "instructions": [
-    "/home/othman/.config/opencode/plugin/shell-strategy/shell_strategy.md"
-  ]
+  "instructions": []
 }

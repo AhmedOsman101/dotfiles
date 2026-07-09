@@ -57,9 +57,9 @@ These environment variables help prevent interactive prompts:
 
 | Tool         | Interactive (BAD)     | Non-Interactive (GOOD)                       |
 | ------------ | --------------------- | -------------------------------------------- |
-| **NPM**      | `npm init`            | `npm init -y`                                |
 | **NPM**      | `npm install`         | `npm install --yes`                          |
 | **Yarn**     | `yarn install`        | `yarn install --non-interactive`             |
+| **PNPM**     | `pnpm init`           | `pnpm init -y`                               |
 | **PNPM**     | `pnpm install`        | `pnpm install --reporter=silent`             |
 | **Bun**      | `bun init`            | `bun init -y`                                |
 | **APT**      | `apt-get install pkg` | `apt-get install -y pkg`                     |
