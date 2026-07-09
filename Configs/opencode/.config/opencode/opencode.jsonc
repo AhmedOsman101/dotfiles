@@ -29,6 +29,7 @@
   "plugin": [
     "cc-safety-net@latest",
     "@tarquinen/opencode-dcp@latest",
+    "@tarquinen/opencode-smart-title@latest",
     "opencode-handoff@latest",
     // "@plannotator/opencode@latest",
     // "@iam-brain/opencode-codex-auth@latest",
