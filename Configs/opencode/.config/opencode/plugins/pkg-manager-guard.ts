@@ -11,6 +11,23 @@ const MANAGERS: Record<string, PkgManager> = {
   deno: { manager: "deno", runner: "deno x" },
 }
 
+function needsRewrite(cmd: string): boolean {
+  return cmd.includes(" npm ") || cmd.startsWith("npm ") ||
+    cmd.includes(" npx ") || cmd.startsWith("npx ")
+}
+
+function rewrite(cmd: string, pm: PkgManager): string {
+  const hadNpx = cmd.includes(" npx ") || cmd.startsWith("npx ")
+  const hadNpm = cmd.includes(" npm ") || cmd.startsWith("npm ")
+
+  const parts: string[] = []
+  if (hadNpx) parts.push(`npx → ${pm.runner}`)
+  if (hadNpm) parts.push(`npm → ${pm.manager}`)
+  const notice = `echo "[pkg-manager-guard] ${parts.join(", ")} — use these directly next time" >&2 && `
+
+  return notice + cmd.replace(NPX_RE, `${pm.runner} `).replace(NPM_RE, `${pm.manager} `)
+}
+
 async function detectPkgManager($: any, dir: string): Promise<PkgManager> {
   const check = async (file: string) => {
     const out = await $`test -f ${dir}/${file} && echo "exists"`.quiet()
@@ -23,14 +40,6 @@ async function detectPkgManager($: any, dir: string): Promise<PkgManager> {
   return MANAGERS.pnpm
 }
 
-function needsRewrite(cmd: string): boolean {
-  return NPX_RE.test(cmd) || NPM_RE.test(cmd)
-}
-
-function rewrite(cmd: string, pm: PkgManager): string {
-  return cmd.replace(NPX_RE, `${pm.runner} `).replace(NPM_RE, `${pm.manager} `)
-}
-
 export const PkgManagerGuard: Plugin = async ({ $, directory }) => {
   const pm = await detectPkgManager($, directory)
 
@@ -41,7 +50,8 @@ export const PkgManagerGuard: Plugin = async ({ $, directory }) => {
       const command = output.args.command
       if (typeof command !== "string" || !needsRewrite(command)) return
 
-      output.args.command = rewrite(command, pm)
+      const rewritten = rewrite(command, pm)
+      output.args.command = rewritten
     },
   }
 }
