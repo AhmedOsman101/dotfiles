@@ -200,7 +200,7 @@ Transforms Ok to U, or returns an **eager** default. The default is always evalu
 
 ```ts
 Ok(5).mapOr(0, x => x * 2);            // 10
-Err<number>(new Error("fail")).mapOr(0, x => x * 2); // 0
+ErrFromText<number>("fail").mapOr(0, x => x * 2); // 0
 ```
 
 Use `mapOrElse` for lazy fallback computation.
@@ -228,7 +228,7 @@ Calls fn with the Ok value (if Ok). Returns the original Result unchanged.
 Ok(42).inspect(value => console.log(value));
 // logs 42, returns the same Result (identity)
 
-Err(new Error("fail")).inspect(console.log);
+ErrFromText("fail").inspect(console.log);
 // not called, returns Err
 ```
 
@@ -239,7 +239,7 @@ If `fn` throws, the error propagates.
 Calls fn with the Err value (if Err). Returns the original Result unchanged.
 
 ```ts
-Err(new Error("fail")).inspectErr(e => console.error(e.message));
+Err(new ApiError("not found")).inspectErr(e => console.error(e.message));
 // logs "fail", returns the same Result
 
 Ok(42).inspectErr(console.error);

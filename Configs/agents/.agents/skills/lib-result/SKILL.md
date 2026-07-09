@@ -55,8 +55,8 @@ Use `import type` for types.
 
 | Situation | Function |
 |-----------|----------|
-| Wrap a sync function call | `wrap(() => fn())` |
-| Wrap an async function call | `wrapAsync(() => fn())` |
+| Wrap a sync function call | `wrap(() => fn(arg))` or `wrap(fn)` where fn is a function with no arguments |
+| Wrap an async function call | `wrapAsync(async () => await fn(arg))` or `wrapAsync(fn)` where fn is an async function with no arguments |
 | Convert a sync throwing function to Result-returning | `wrapThrowable(fn)` |
 | Convert an async throwing function to Result-returning | `wrapAsyncThrowable(fn)` |
 
@@ -103,12 +103,16 @@ function processUser(id: number): Result<User, AppError> {
 ```ts
 // Before: throws on bad input or I/O error
 function readConfig(path: string) {
-  return JSON.parse(fs.readFileSync(path, "utf-8"));
+  const content = fs.readFileSync(path, "utf-8");
+  return JSON.parse(content)
 }
 
 // After: returns Result
 function readConfig(path: string): Result<Config, CustomError> {
-  return wrap(() => JSON.parse(fs.readFileSync(path, "utf-8")));
+  return wrap(() => {
+    const content = fs.readFileSync(path, "utf-8");
+    return JSON.parse(content)
+  });
 }
 ```
 
@@ -148,6 +152,8 @@ const safeGet = wrapAsyncThrowable(async (url: string) => {
   if (!res.ok) throw new ApiError("Request failed", res.status);
   return res.json() as Promise<unknown>;
 });
+
+const getResult = await safeGet("https://api.website.com/users");
 ```
 
 ### Pattern 7: Error with cause chain
@@ -256,7 +262,7 @@ result.unwrapOrElse(e => e.message.length); // number ← plain value
 
 ```ts
 result.match({ okFn: v => v, errFn: e => `Error: ${e.message}` });  // with error
-result.match({ okFn: v => v, errFn: () => "default" });             // ignore error
+result.match({ okFn: v => v, errFn: () => "default" });             // ignore error value
 ```
 
 Implementation uses `fn.length` at runtime.

@@ -1,6 +1,6 @@
 ---
 name: bash-linux
-description: "Bash/Linux terminal patterns. Critical commands, piping, error handling, scripting. Use when working on macOS or Linux systems."
+description: "Bash/Linux terminal patterns. Critical commands, piping, error handling, scripting. Use when working on macOS, Linux, or any system with Bash/Zsh."
 ---
 
 # Bash Linux Patterns
@@ -16,8 +16,8 @@ description: "Bash/Linux terminal patterns. Critical commands, piping, error han
 | Operator | Meaning                   | Example                             |
 | -------- | ------------------------- | ----------------------------------- |
 | `;`      | Run sequentially          | `cmd1; cmd2`                        |
-| `&&`     | Run if previous succeeded | `npm install && npm run dev`        |
-| `\|\|`   | Run if previous failed    | `npm test \|\| echo "Tests failed"` |
+| `&&`     | Run if previous succeeded | `pnpm install && pnpm run dev`        |
+| `\|\|`   | Run if previous failed    | `pnpm test \|\| echo "Tests failed"` |
 | `\|`     | Pipe output               | `ls \| rg ".js"`                    |
 
 ---
@@ -49,7 +49,7 @@ description: "Bash/Linux terminal patterns. Critical commands, piping, error han
 | Kill by PID    | `kill -9 <PID>`               |
 | Find port user | `lsof -i :3000`               |
 | Kill port      | `kill -9 $(lsof -t -i :3000)` |
-| Background     | `pnpm run dev &`              |
+| Background     | `pnpm dev &`                  |
 | Jobs           | `jobs -l`                     |
 | Bring to front | `fg %1`                       |
 
