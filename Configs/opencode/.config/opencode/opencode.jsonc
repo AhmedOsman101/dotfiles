@@ -24,6 +24,16 @@
         "Authorization": "Bearer {env:GITHUB_TOKEN}"
       },
       "enabled": false
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": [
+        "bunx",
+        "chrome-devtools-mcp@latest",
+        "--executable-path=/usr/bin/thorium-browser-avx2",
+        "--no-usage-statistics"
+      ],
+      "enabled": false
     }
   },
   "plugin": [
@@ -46,7 +56,7 @@
         "contextMinScore": 1,
         "autoSaveScope": "user"
       }
-    ],
+    ]
     // "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
   ],
   "provider": {
