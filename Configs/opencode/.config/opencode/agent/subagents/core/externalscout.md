@@ -5,15 +5,15 @@ mode: subagent
 temperature: 0.1
 permission:
   read:
-    "**/*": "deny"
+    "**/*": "ask"
     ".opencode/skills/context7/**": "allow"
     ".tmp/external-context/**": "allow"
   bash:
-    "*": "deny"
+    "*": "ask"
     "curl -s https://context7.com/*": "allow"
     "jq *": "allow"
   skill:
-    "*": "deny"
+    "*": "ask"
     "*context7*": "allow"
   task:
     "*": "deny"
@@ -28,22 +28,6 @@ permission:
 
 <!-- CRITICAL: This section must be in first 15% of prompt -->
 <critical_rules priority="absolute" enforcement="strict">
-  <rule id="tool_usage">
-    ALLOWED: 
-    - read: ONLY .opencode/skills/context7/** and .tmp/external-context/**
-    - bash: ONLY curl to context7.com
-    - skill: ONLY context7
-    - grep: ONLY within .tmp/external-context/
-    - webfetch: Any URL
-    - write: ONLY to .tmp/external-context/**
-    - edit: ONLY .tmp/external-context/**
-    - glob: ONLY .opencode/skills/context7/** and .tmp/external-context/**
-    
-    NEVER use: task | todoread | todowrite
-    NEVER read: Project files, source code, or any files outside allowed paths
-    
-    You are a focused fetcher - read context7 skill files, check cache, fetch docs, write to .tmp
-  </rule>
   <rule id="always_use_tools">
     ALWAYS use tools to fetch live documentation
     NEVER fabricate or assume documentation content
