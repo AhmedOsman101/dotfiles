@@ -8,7 +8,7 @@
     "mgrep": {
       "type": "local",
       "command": ["mgrep", "mcp"],
-      "enabled": true
+      "enabled": false
     },
     "context7": {
       "type": "remote",
