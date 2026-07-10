@@ -82,6 +82,36 @@
         "minimax-m2.5": { "name": "MiniMax M2.5" },
         "qwen3-coder-next": { "name": "Qwen3 Coder Next" }
       }
+    },
+    "ollama": {
+      "name": "Ollama",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:11434/v1",
+        "apiKey": "ollama"
+      },
+      "models": {
+        "qwen3.5:0.8b": { "name": "Qwen 3.5 0.8B" },
+        "deepseek-r1:1.5b": { "name": "DeepSeek R1 1.5B" },
+        "qwen3:1.7b": { "name": "Qwen 3 1.7B" },
+        "lfm2.5-thinking": { "name": "LFM 2.5 Thinking" },
+        "qwen2.5-coder:0.5b": { "name": "Qwen 2.5 Coder 0.5B" }
+      }
+    },
+    "llamacpp": {
+      "name": "llama.cpp",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:9002/v1",
+        "apiKey": "llamacpp"
+      },
+      "models": {
+        "qwen3.5:0.8b": { "name": "Qwen 3.5 0.8B" },
+        "deepseek-r1:1.5b": { "name": "DeepSeek R1 1.5B" },
+        "qwen3:1.7b": { "name": "Qwen 3 1.7B" },
+        "lfm2.5-thinking": { "name": "LFM 2.5 Thinking" },
+        "qwen2.5-coder:0.5b": { "name": "Qwen 2.5 Coder 0.5B" }
+      }
     }
   },
   "instructions": []
