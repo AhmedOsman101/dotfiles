@@ -7,11 +7,11 @@ permission:
   bash:
     "date *": allow
     "mkdir *": allow
-    "cat *": deny
-    "tee *": "deny"
-    "sponge *": deny
+    "cat *": ask
+    "tee *": ask
+    "sponge *": ask
   edit:
-    "*": deny
+    "*": ask
     "**/*.md": allow
   write:
     "*": deny
