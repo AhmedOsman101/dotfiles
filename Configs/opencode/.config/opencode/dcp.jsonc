@@ -55,7 +55,7 @@
     // Soft upper threshold: above this, DCP keeps injecting strong
     // compression nudges (based on nudgeFrequency), so compression is
     // much more likely. Accepts: number or "X%" of model context window.
-    "maxContextLimit": 200000,
+    "maxContextLimit": 160000,
     // Soft lower threshold for reminder nudges: below this, turn/iteration
     // reminders are off (compression less likely). At/above this, reminders
     // are on. Accepts: number or "X%" of model context window.
@@ -85,7 +85,7 @@
     // Tool names whose completed outputs are appended to the compression
     "protectedTools": [],
     // Preserve text wrapped in <protect>...</protect> when compressed
-    "protectTags": false,
+    "protectTags": true,
     // Preserve your messages during compression.
     // Warning: large copy-pasted prompts will never be compressed away
     "protectUserMessages": false
