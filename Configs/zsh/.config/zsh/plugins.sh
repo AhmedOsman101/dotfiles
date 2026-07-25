@@ -37,10 +37,13 @@ function zvm_config() {
   ZVM_VI_HIGHLIGHT_BACKGROUND='#3a3a3a'            # Muted dark bg for selection
 }
 
-zinit ice depth=1
-zinit light 'jeffreytse/zsh-vi-mode' # Better vi mode with text objects, surround, etc.
+# zinit ice depth=1
+# zinit light 'jeffreytse/zsh-vi-mode' # Better vi mode with text objects, surround, etc.
+unset -f zvm_config # NOTE: Invert the comments to enable ZVM again
 # --- ZVM End --- #
-zinit light 'olets/zsh-transient-prompt' # Transient prompt for zsh
+
+# Transient prompt for zsh
+zinit light 'olets/zsh-transient-prompt'
 
 # Load a few important annexes, without Turbo
 zinit light-mode for \

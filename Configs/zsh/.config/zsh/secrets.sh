@@ -19,6 +19,7 @@ _vars=(
   OPENAI_API_KEY
   OPENROUTER_API_KEY
   ZAI_API_KEY
+  N9ROUTER_API_KEY
 )
 
 for var in "${_vars[@]}"; do
@@ -50,6 +51,7 @@ OBSIDIAN_API_KEY="$(pass show obsidian/api-key)"
 OPENAI_API_KEY="$(pass show openai | head -1)"
 OPENROUTER_API_KEY="$(pass show openrouter)"
 ZAI_API_KEY="$(pass show z.ai)"
+N9ROUTER_API_KEY="$(pass show 9router)"
 
 export "${_vars[@]}"
 
