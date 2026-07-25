@@ -1,6 +1,7 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "lsp": true,
+  "model": "9router/kr/claude-opus-4.8-thinking-agentic",
   "skills": {
     "paths": ["/home/othman/.agents/skills"]
   },
@@ -56,7 +57,8 @@
         "contextMinScore": 1,
         "autoSaveScope": "user"
       }
-    ]
+    ],
+    "@dietrichgebert/ponytail@latest"
     // "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
   ],
   "provider": {
@@ -68,19 +70,45 @@
         "apiKey": "{env:KIRO_PROXY_API_KEY}"
       },
       "models": {
-        "auto-kiro": { "name": "Auto (Kiro)" },
-        "claude-haiku-4.5": { "name": "Claude Haiku 4.5" },
-        "claude-sonnet-4": { "name": "Claude Sonnet 4" },
-        "claude-sonnet-4.5": { "name": "Claude Sonnet 4.5" },
-        "claude-sonnet-4.6": { "name": "Claude Sonnet 4.6" },
-        "claude-opus-4.5": { "name": "Claude Opus 4.5" },
-        "claude-opus-4.6": { "name": "Claude Opus 4.6" },
-        "claude-opus-4.7": { "name": "Claude Opus 4.7" },
-        "deepseek-3.2": { "name": "DeepSeek V3.2" },
-        "glm-5": { "name": "GLM-5" },
-        "minimax-m2.1": { "name": "MiniMax M2.1" },
-        "minimax-m2.5": { "name": "MiniMax M2.5" },
-        "qwen3-coder-next": { "name": "Qwen3 Coder Next" }
+        "auto-kiro": {
+          "name": "Auto (Kiro)"
+        },
+        "claude-haiku-4.5": {
+          "name": "Claude Haiku 4.5"
+        },
+        "claude-sonnet-4": {
+          "name": "Claude Sonnet 4"
+        },
+        "claude-sonnet-4.5": {
+          "name": "Claude Sonnet 4.5"
+        },
+        "claude-sonnet-4.6": {
+          "name": "Claude Sonnet 4.6"
+        },
+        "claude-opus-4.5": {
+          "name": "Claude Opus 4.5"
+        },
+        "claude-opus-4.6": {
+          "name": "Claude Opus 4.6"
+        },
+        "claude-opus-4.7": {
+          "name": "Claude Opus 4.7"
+        },
+        "deepseek-3.2": {
+          "name": "DeepSeek V3.2"
+        },
+        "glm-5": {
+          "name": "GLM-5"
+        },
+        "minimax-m2.1": {
+          "name": "MiniMax M2.1"
+        },
+        "minimax-m2.5": {
+          "name": "MiniMax M2.5"
+        },
+        "qwen3-coder-next": {
+          "name": "Qwen3 Coder Next"
+        }
       }
     },
     "ollama": {
@@ -91,12 +119,24 @@
         "apiKey": "ollama"
       },
       "models": {
-        "hf.co/ewinregirgojr/MiniCPM5-1B-Agentic-Tooluse-GGUF:Q8_0": { "name": "MiniCPM 5" },
-        "qwen3.5:0.8b": { "name": "Qwen 3.5 0.8B" },
-        "deepseek-r1:1.5b": { "name": "DeepSeek R1 1.5B" },
-        "qwen3:1.7b": { "name": "Qwen 3 1.7B" },
-        "lfm2.5-thinking": { "name": "LFM 2.5 Thinking" },
-        "qwen2.5-coder:0.5b": { "name": "Qwen 2.5 Coder 0.5B" }
+        "hf.co/ewinregirgojr/MiniCPM5-1B-Agentic-Tooluse-GGUF:Q8_0": {
+          "name": "MiniCPM 5"
+        },
+        "qwen3.5:0.8b": {
+          "name": "Qwen 3.5 0.8B"
+        },
+        "deepseek-r1:1.5b": {
+          "name": "DeepSeek R1 1.5B"
+        },
+        "qwen3:1.7b": {
+          "name": "Qwen 3 1.7B"
+        },
+        "lfm2.5-thinking": {
+          "name": "LFM 2.5 Thinking"
+        },
+        "qwen2.5-coder:0.5b": {
+          "name": "Qwen 2.5 Coder 0.5B"
+        }
       }
     },
     "llamacpp": {
@@ -107,12 +147,215 @@
         "apiKey": "llamacpp"
       },
       "models": {
-        "minicpm5-1b": { "name": "MiniCPM 5" },
-        "qwen3.5-0.8b": { "name": "Qwen 3.5 0.8B" },
-        "deepseek-r1-1.5b": { "name": "DeepSeek R1 1.5B" },
-        "qwen3-1.7b": { "name": "Qwen 3 1.7B" },
-        "lfm2.5-thinking": { "name": "LFM 2.5 Thinking" },
-        "qwen2.5-coder-0.5b": { "name": "Qwen 2.5 Coder 0.5B" }
+        "minicpm5-1b": {
+          "name": "MiniCPM 5"
+        },
+        "qwen3.5-0.8b": {
+          "name": "Qwen 3.5 0.8B"
+        },
+        "deepseek-r1-1.5b": {
+          "name": "DeepSeek R1 1.5B"
+        },
+        "qwen3-1.7b": {
+          "name": "Qwen 3 1.7B"
+        },
+        "lfm2.5-thinking": {
+          "name": "LFM 2.5 Thinking"
+        },
+        "qwen2.5-coder-0.5b": {
+          "name": "Qwen 2.5 Coder 0.5B"
+        }
+      }
+    },
+    "9router": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://127.0.0.1:20128/v1",
+        "apiKey": "{env:N9ROUTER_API_KEY}"
+      },
+      "models": {
+        "kc/anthropic/claude-opus-4-20250514": {
+          "name": "kc/anthropic/claude-opus-4-20250514",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kc/anthropic/claude-sonnet-4-20250514": {
+          "name": "kc/anthropic/claude-sonnet-4-20250514",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kc/nvidia/nemotron-3-ultra-550b-a55b:free": {
+          "name": "kc/nvidia/nemotron-3-ultra-550b-a55b:free",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kc/google/gemini-2.5-pro": {
+          "name": "kc/google/gemini-2.5-pro",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kr/claude-haiku-4.5-thinking-agentic": {
+          "name": "kr/claude-haiku-4.5-thinking-agentic",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kr/claude-opus-4.5-thinking-agentic": {
+          "name": "kr/claude-opus-4.5-thinking-agentic",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kr/claude-opus-4.7-thinking-agentic": {
+          "name": "kr/claude-opus-4.7-thinking-agentic",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kr/claude-opus-4.8-thinking-agentic": {
+          "name": "kr/claude-opus-4.8-thinking-agentic",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kr/claude-sonnet-4.5-thinking-agentic": {
+          "name": "kr/claude-sonnet-4.5-thinking-agentic",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kr/claude-sonnet-5-thinking-agentic": {
+          "name": "kr/claude-sonnet-5-thinking-agentic",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kr/gpt-5.6-sol-thinking-agentic": {
+          "name": "kr/gpt-5.6-sol-thinking-agentic",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kr/gpt-5.6-luna-thinking-agentic": {
+          "name": "kr/gpt-5.6-luna-thinking-agentic",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kr/gpt-5.6-terra-thinking-agentic": {
+          "name": "kr/gpt-5.6-terra-thinking-agentic",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kr/MiniMax-M2.5": {
+          "name": "kr/MiniMax-M2.5",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "oc/big-pickle": {
+          "name": "oc/big-pickle",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "oc/deepseek-v4-flash-free": {
+          "name": "oc/deepseek-v4-flash-free",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "oc/mimo-v2.5-free": {
+          "name": "oc/mimo-v2.5-free",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "nvidia/z-ai/glm-5.2": {
+          "name": "nvidia/z-ai/glm-5.2",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "nvidia/moonshotai/kimi-k2.6": {
+          "name": "nvidia/moonshotai/kimi-k2.6",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "nvidia/deepseek-ai/deepseek-v4-pro": {
+          "name": "nvidia/deepseek-ai/deepseek-v4-pro",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "nvidia/minimaxai/minimax-m3": {
+          "name": "nvidia/minimaxai/minimax-m3",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "nvidia/minimaxai/minimax-m2.7": {
+          "name": "nvidia/minimaxai/minimax-m2.7",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "ollama/minimax-m3": {
+          "name": "ollama/minimax-m3",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "ollama/glm-5": {
+          "name": "ollama/glm-5",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "ollama/qwen3.5": {
+          "name": "ollama/qwen3.5",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "ollama/kimi-k2.5": {
+          "name": "ollama/kimi-k2.5",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        }
       }
     }
   },
