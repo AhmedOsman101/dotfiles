@@ -104,7 +104,6 @@ eza
 fastfetch
 fatresize
 fd
-fetch-git
 ffmpegthumbnailer
 find-the-command
 fish
@@ -473,6 +472,7 @@ xf86-video-dummy
 xorg-fonts-misc
 xorg-mkfontscale
 xorg-xev
+xorg-xhost
 xorg-xinit
 xorg-xinput
 xorg-xkill

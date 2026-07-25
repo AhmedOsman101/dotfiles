@@ -1133,5 +1133,6 @@
   "commitSage.custom.model": "Qwen/Qwen3-Coder-Next",
   "commitSage.custom.useApiKey": true,
   "commitSage.commit.commitlint.enabled": false,
-  "python.analysis.typeCheckingMode": "standard"
+  "python.analysis.typeCheckingMode": "standard",
+  "js/ts.experimental.useTsgo": true
 }
