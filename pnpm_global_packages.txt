@@ -24,3 +24,4 @@ intelephense
 @earendil-works/pi-coding-agent
 @types/node
 fallow
+9router
