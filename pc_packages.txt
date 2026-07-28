@@ -484,6 +484,7 @@ yapf
 yay
 yazi
 yelp
+yq
 yt-dlp
 zen-browser-bin
 zenity
