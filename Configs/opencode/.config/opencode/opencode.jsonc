@@ -1,7 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "lsp": true,
-  "model": "9router/cx/gpt-5.6-terra",
   "skills": {
     "paths": ["/home/othman/.agents/skills"]
   },
@@ -38,6 +37,7 @@
     }
   },
   "plugin": [
+    // "opencode-system-prompt-logger",
     "cc-safety-net@latest",
     "@tarquinen/opencode-dcp@latest",
     "@tarquinen/opencode-smart-title@latest",
@@ -174,15 +174,15 @@
         "apiKey": "{env:N9ROUTER_API_KEY}"
       },
       "models": {
-        "kc/anthropic/claude-opus-4-20250514": {
-          "name": "kc/anthropic/claude-opus-4-20250514",
+        "kc/poolside/laguna-s-2.1:free": {
+          "name": "kc/poolside/laguna-s-2.1:free",
           "modalities": {
             "input": ["text", "image"],
             "output": ["text"]
           }
         },
-        "kc/anthropic/claude-sonnet-4-20250514": {
-          "name": "kc/anthropic/claude-sonnet-4-20250514",
+        "kc/nvidia/nemotron-3.5-content-safety:free": {
+          "name": "kc/nvidia/nemotron-3.5-content-safety:free",
           "modalities": {
             "input": ["text", "image"],
             "output": ["text"]
@@ -195,27 +195,27 @@
             "output": ["text"]
           }
         },
-        "kc/google/gemini-2.5-pro": {
-          "name": "kc/google/gemini-2.5-pro",
+        "kc/stepfun/step-3.7-flash:free": {
+          "name": "kc/stepfun/step-3.7-flash:free",
           "modalities": {
             "input": ["text", "image"],
             "output": ["text"]
           }
         },
         "kr/deepseek-3.2": {
-          "name": "DeepSeek V3.2"
+          "name": "kr/DeepSeek V3.2"
         },
         "kr/glm-5": {
-          "name": "GLM-5"
+          "name": "kr/GLM-5"
         },
         "kr/minimax-m2.1": {
-          "name": "MiniMax M2.1"
+          "name": "kr/MiniMax M2.1"
         },
         "kr/minimax-m2.5": {
-          "name": "MiniMax M2.5"
+          "name": "kr/MiniMax M2.5"
         },
         "kr/qwen3-coder-next": {
-          "name": "Qwen3 Coder Next"
+          "name": "kr/Qwen3 Coder Next"
         },
         "kr/claude-haiku-4.5": {
           "name": "kr/claude-haiku-4.5",
