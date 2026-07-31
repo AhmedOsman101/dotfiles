@@ -1,9 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "lsp": true,
-  "skills": {
-    "paths": ["/home/othman/.agents/skills"]
-  },
   "mcp": {
     "mgrep": {
       "type": "local",
@@ -394,6 +391,41 @@
         },
         "cx/gpt-5.5": {
           "name": "cx/gpt-5.5",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kimchi/deepseek-v4-flash": {
+          "name": "kimchi/deepseek-v4-flash",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kimchi/glm-5.2-fp8": {
+          "name": "kimchi/glm-5.2-fp8",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kimchi/minimax-m3": {
+          "name": "kimchi/minimax-m3",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kimchi/nemotron-3-ultra-fp4": {
+          "name": "kimchi/nemotron-3-ultra-fp4",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kimchi/kimi-k2.7": {
+          "name": "kimchi/kimi-k2.7",
           "modalities": {
             "input": ["text", "image"],
             "output": ["text"]

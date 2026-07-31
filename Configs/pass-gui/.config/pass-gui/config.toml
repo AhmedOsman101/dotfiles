@@ -1,18 +1,16 @@
 [core] # Active application settings.
 active_store = 'test' # Store key used by default. Default: "default".
 
-[preferences] # UI behavior preferences.
-
 [generation] # Default pass generate options.
-default_length = 16                      # Generated password length. Default: 25.
+default_length = 16.0                    # Generated password length. Default: 25.
 symbols = true                           # Include symbols by default. Default: true.
 character_set = '[[:punct:]][[:alnum:]]' # Charset when symbols are enabled. Default: "[[:punct:]][[:alnum:]]".
 character_set_no_symbols = '[[:alnum:]]' # Charset when symbols are disabled. Default: "[[:alnum:]]".
 memorable = false                        # Use memorable passwords diceware.
 
 [clipboard] # Clipboard behavior after copy.
-clear_after_seconds = 45 # Clear clipboard after seconds. Default: 45.
-selection = 'clipboard'  # X selection to use: clipboard, primary, secondary. Default: "clipboard".
+clear_after_seconds = 45.0 # Clear clipboard after seconds. Default: 45.
+selection = 'clipboard'    # X selection to use: clipboard, primary, secondary. Default: "clipboard".
 
 [gpg] # Supported GPG-related pass defaults.
 opts = [] # Extra GPG options passed to pass. Default: [].
@@ -26,4 +24,4 @@ enabled = false # Enable pass extensions. Default: false.
 path = '~/.password-store' # Password store path. Default: "~/.password-store".
 
 [stores.test] # Testing store
-path = '~/.cache/pass-gui/.password-store'
+path = '/tmp/.password-store'

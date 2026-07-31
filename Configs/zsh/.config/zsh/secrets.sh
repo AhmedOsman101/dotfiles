@@ -38,7 +38,6 @@ fi
 ADVENT_OF_CODE_SESSION="$(pass show advent-of-code)"
 AI_GATEWAY_API_KEY="$(pass show vercel/ai-gateway)"
 ANILIST_TOKEN="$(pass show anilist/access-token)"
-ANTHROPIC_API_KEY="$(pass show agent-router)"
 CONTEXT7_API_KEY="$(pass show context7)"
 FEATHERLESS_API_KEY="$(pass show featherless | head -1)"
 GEMINI_API_KEY="$(pass show gemini)"
@@ -52,6 +51,7 @@ OPENAI_API_KEY="$(pass show openai | head -1)"
 OPENROUTER_API_KEY="$(pass show openrouter)"
 ZAI_API_KEY="$(pass show z.ai)"
 N9ROUTER_API_KEY="$(pass show 9router)"
+ANTHROPIC_API_KEY="${N9ROUTER_API_KEY}"
 
 export "${_vars[@]}"
 
