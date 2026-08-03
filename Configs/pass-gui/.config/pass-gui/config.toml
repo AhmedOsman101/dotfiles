@@ -24,4 +24,4 @@ enabled = false # Enable pass extensions. Default: false.
 path = '~/.password-store' # Password store path. Default: "~/.password-store".
 
 [stores.test] # Testing store
-path = '/tmp/.password-store'
+path = '~/.cache/pass-gui/.password-store'

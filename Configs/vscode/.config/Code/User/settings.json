@@ -1134,5 +1134,13 @@
   "commitSage.custom.useApiKey": true,
   "commitSage.commit.commitlint.enabled": false,
   "python.analysis.typeCheckingMode": "standard",
-  "js/ts.experimental.useTsgo": true
+  "js/ts.experimental.useTsgo": false,
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ]
 }
