@@ -31,31 +31,34 @@
         "--no-usage-statistics"
       ],
       "enabled": false
+    },
+    "codegraph": {
+      "type": "local",
+      "command": ["codegraph", "serve", "--mcp"],
+      "enabled": true
     }
   },
   "plugin": [
-    // "opencode-system-prompt-logger",
     "cc-safety-net@latest",
     "@tarquinen/opencode-dcp@latest",
-    "@tarquinen/opencode-smart-title@latest",
     "opencode-handoff@latest",
-    // "@plannotator/opencode@latest",
-    // "@iam-brain/opencode-codex-auth@latest",
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
-    // "superpowers@git+https://github.com/obra/superpowers.git",
-    [
-      "@knikolov/opencode-plugin-simple-memory@latest",
-      {
-        "autoLoad": true,
-        "autoSave": true,
-        "autoHookTimeoutMs": 100,
-        "contextLimit": 10,
-        "contextMaxChars": 1200,
-        "contextMinScore": 1,
-        "autoSaveScope": "user"
-      }
-    ],
     "@dietrichgebert/ponytail@latest"
+    // "opencode-system-prompt-logger",
+    // "@tarquinen/opencode-smart-title@latest",
+    // "@plannotator/opencode@latest",
+    // [
+    //   "@knikolov/opencode-plugin-simple-memory@latest",
+    //   {
+    //     "autoLoad": true,
+    //     "autoSave": true,
+    //     "autoHookTimeoutMs": 100,
+    //     "contextLimit": 10,
+    //     "contextMaxChars": 1200,
+    //     "contextMinScore": 1,
+    //     "autoSaveScope": "user"
+    //   }
+    // ],
     // "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
   ],
   "provider": {

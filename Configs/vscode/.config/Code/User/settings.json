@@ -441,7 +441,7 @@
   "commitSage.ollama.model": "qwen2.5-coder:7b",
   "commitSage.openai.baseUrl": "https://api.featherless.ai/v1",
   "commitSage.openai.model": "Qwen/Qwen3-Coder-Next",
-  "commitSage.provider.type": "custom",
+  "commitSage.provider.type": "gemini",
   "commitSage.telemetry.enabled": false,
   "continue.enableQuickActions": true,
   "continue.enableTabAutocomplete": true,
