@@ -44,7 +44,8 @@ export ARTISTIC_STYLE_OPTIONS="${XDG_CONFIG_HOME}/.astylerc"
 export ARTISTIC_STYLE_PROJECT_OPTIONS="${XDG_CONFIG_HOME}/.astylerc"
 
 # --- Anthropic --- #
-export ANTHROPIC_BASE_URL=https://agentrouter.org/
+export ANTHROPIC_BASE_URL="http://127.0.0.1:20128/v1"
+export CLAUDE_CODE_ENABLE_TELEMETRY=0
 
 # --- Bat --- #
 export BATDIFF_USE_DELTA=true
@@ -66,14 +67,6 @@ export BUNDLE_USER_PLUGIN="${XDG_DATA_HOME}/bundle"
 
 # --- Cargo --- #
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
-
-# --- Claude --- #
-export ANTHROPIC_BASE_URL="http://127.0.0.1:20128/v1"
-export ANTHROPIC_DEFAULT_FABLE_MODEL="cx/gpt-5.6-sol"
-export ANTHROPIC_DEFAULT_OPUS_MODEL="cx/gpt-5.6-terra"
-export ANTHROPIC_DEFAULT_SONNET_MODEL="cx/gpt-5.6-luna"
-export ANTHROPIC_DEFAULT_HAIKU_MODEL="cx/gpt-5.5"
-export CLAUDE_CODE_ENABLE_TELEMETRY=0
 
 # --- Cuda --- #
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"

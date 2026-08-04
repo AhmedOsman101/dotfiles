@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "ANTHROPIC_DEFAULT_FABLE_MODEL": "kimchi/minimax-m3",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "kimchi/minimax-m3",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "oc/deepseek-v4-flash-free",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "oc/mimo-v2.5-free"
+  },
+  "model": "sonnet",
+  "disableSkillShellExecution": true,
+  "respondToBashCommands": true,
+  "statusLine": {
+    "type": "command",
+    "command": "bunx cc-safety-net statusline --claude-code"
+  },
+  "enabledPlugins": {
+    "ponytail@ponytail": true,
+    "plannotator@plannotator": true,
+    "impeccable@impeccable": true
+  },
+  "extraKnownMarketplaces": {
+    "plannotator": {
+      "source": {
+        "source": "github",
+        "repo": "backnotprop/plannotator"
+      }
+    },
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    },
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
+      }
+    }
+  },
+  "spinnerTipsEnabled": false,
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "low",
+  "plansDirectory": "./docs/plans",
+  "tui": "fullscreen",
+  "autoMemoryEnabled": true,
+  "showThinkingSummaries": true,
+  "theme": "dark",
+  "autoScrollEnabled": true,
+  "hasCompletedOnboarding": true,
+  "permissions": {
+    "allow": [
+      "mcp__codegraph__*"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "codegraph prompt-hook"
+          }
+        ]
+      }
+    ]
+  }
+}
