@@ -433,6 +433,27 @@
             "input": ["text", "image"],
             "output": ["text"]
           }
+        },
+        "bzl/auto:free": {
+          "name": "bzl/auto:free",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "bzl/deepseek-v4-flash": {
+          "name": "bzl/deepseek-v4-flash",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "bzl/qwen3.7-flash": {
+          "name": "bzl/qwen3.7-flash",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         }
       }
     }
