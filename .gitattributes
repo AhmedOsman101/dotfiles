@@ -25,4 +25,3 @@ Configs/atuin/.local/share/atuin/host_id filter=git-crypt diff=git-crypt
 
 # 9Router
 Configs/9router/.9router/9router-backup*.json  filter=git-crypt diff=git-crypt
-Configs/9router/.9router/db/data.sqlite                  filter=git-crypt diff=git-crypt
