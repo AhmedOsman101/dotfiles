@@ -1,0 +1,27 @@
+# ---- 9router ---- #
+
+# External binary (never commit the cloudflared download)
+bin/
+
+# Runtime database and its journaling files
+db/*.sqlite
+db/*.sqlite-shm
+db/*.sqlite-wal
+db/*.db
+db/*.db-shm
+db/*.db-wal
+
+# Logs
+logs/
+
+# Node
+**/node_modules
+
+# ---- Machine-specific generated secrets (never commit) ----
+# These are 32-byte random values generated locally per device.
+# Good git-crypt candidates would be SHARED secrets (.env, API keys),
+# not instance identity like machine-id.
+auth/cli-secret
+jwt-secret
+machine-id
+
