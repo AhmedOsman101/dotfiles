@@ -2,6 +2,10 @@
   "$schema": "https://opencode.ai/config.json",
   "lsp": true,
   "model": "opencode/deepseek-v4-flash-free",
+  "server": {
+    "port": 8081,
+    "hostname": "0.0.0.0"
+  },
   "mcp": {
     "mgrep": {
       "type": "local",

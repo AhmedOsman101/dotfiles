@@ -22,16 +22,16 @@ _vars=(
   N9ROUTER_API_KEY
 )
 
-for var in "${_vars[@]}"; do
+for _var in "${_vars[@]}"; do
   # shellcheck disable=2296
-  if [[ -z "${(P)var}" ]]; then # zsh style variable variables
+  if [[ -z "${(P)_var}" ]]; then # zsh style variable variables
     _allChecked=false
     break
   fi
 done
 
 if ${_allChecked}; then
-  unset _vars _allChecked
+  unset _vars _allChecked _var
   return 0
 fi
 
@@ -55,4 +55,4 @@ ANTHROPIC_API_KEY="${N9ROUTER_API_KEY}"
 
 export "${_vars[@]}"
 
-unset _vars _allChecked
+unset _vars _allChecked _var
