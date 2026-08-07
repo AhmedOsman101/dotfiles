@@ -27,22 +27,14 @@
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
     "editor.maxTokenizationLineLength": 2500,
-    "togglequotes.chars": [
-      "\"",
-      "'",
-      "`"
-    ]
+    "togglequotes.chars": ["\"", "'", "`"]
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "biomejs.biome",
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
-    "togglequotes.chars": [
-      "\"",
-      "'",
-      "`"
-    ]
+    "togglequotes.chars": ["\"", "'", "`"]
   },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features",
@@ -133,33 +125,21 @@
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
     "editor.inlayHints.enabled": "offUnlessPressed",
-    "togglequotes.chars": [
-      "\"",
-      "'",
-      "`"
-    ]
+    "togglequotes.chars": ["\"", "'", "`"]
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "biomejs.biome",
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
-    "togglequotes.chars": [
-      "\"",
-      "'",
-      "`"
-    ]
+    "togglequotes.chars": ["\"", "'", "`"]
   },
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
-    "togglequotes.chars": [
-      "\"",
-      "'",
-      "`"
-    ]
+    "togglequotes.chars": ["\"", "'", "`"]
   },
   "[xml]": {
     "editor.defaultFormatter": "DotJoshJohnson.xml"
@@ -169,14 +149,9 @@
   "astyle.java.enable": true,
   "auto-close-tag.fullMode": true,
   "auto-close-tag.insertSpaceBeforeSelfClosingTag": true,
-  "autopep8.args": [
-    "--indent-size",
-    "2"
-  ],
+  "autopep8.args": ["--indent-size", "2"],
   "autopep8.importStrategy": "fromEnvironment",
-  "autopep8.interpreter": [
-    "python"
-  ],
+  "autopep8.interpreter": ["python"],
   "autopep8.showNotifications": "always",
   "bashIde.enableSourceErrorDiagnostics": true,
   "bashIde.includeAllWorkspaceSymbols": true,
@@ -274,35 +249,22 @@
   "breadcrumbs.showTypeParameters": false,
   "breadcrumbs.showVariables": false,
   "breadcrumbs.symbolPath": "off",
-  "c-cpp-flylint.clang.includePaths": [
-    "*/inlcude/*"
-  ],
+  "c-cpp-flylint.clang.includePaths": ["*/inlcude/*"],
   "c-cpp-flylint.cppcheck.verbose": true,
   "c-cpp-flylint.debug": true,
   "c-cpp-flylint.enable": false,
   "c-cpp-flylint.ignoreParseErrors": true,
-  "c-cpp-flylint.includePaths": [
-    "inlcude"
-  ],
+  "c-cpp-flylint.includePaths": ["inlcude"],
   "c-cpp-flylint.language": "c",
-  "c-cpp-flylint.standard": [
-    "c11",
-    "c++23"
-  ],
+  "c-cpp-flylint.standard": ["c11", "c++23"],
   "cSpell.autoFormatConfigFile": true,
-  "cSpell.enableFiletypes": [
-    "lua"
-  ],
+  "cSpell.enableFiletypes": ["lua"],
   "cSpell.showAutocompleteSuggestions": true,
   "cSpell.textDecorationColorSuggestion": "#FFF",
   "clang-format.executable": "/usr/bin/clang-format",
-  "clangd.arguments": [
-    "--header-insertion=iwyu"
-  ],
+  "clangd.arguments": ["--header-insertion=iwyu"],
   "clangd.checkUpdates": false,
-  "clangd.fallbackFlags": [
-    "-Iinclude"
-  ],
+  "clangd.fallbackFlags": ["-Iinclude"],
   "clangd.onConfigChanged": "restart",
   "claudeCode.disableLoginPrompt": true,
   "claudeCode.preferredLocation": "panel",
@@ -452,9 +414,7 @@
   "C_Cpp.default.cppStandard": "c++23",
   "C_Cpp.intelliSenseEngine": "disabled",
   "C_Cpp.vcFormat.indent.braces": true,
-  "css.customData": [
-    "/home/othman/.config/Code/User/custom/tailwindcss.json"
-  ],
+  "css.customData": ["/home/othman/.config/Code/User/custom/tailwindcss.json"],
   "css.enabledLanguages": [
     "html",
     "javascriptreact",
@@ -463,13 +423,7 @@
   ],
   "css.lint.emptyRules": "ignore",
   "css.lint.unknownAtRules": "ignore",
-  "cssVariables.languages": [
-    "vue-postcss",
-    "scss",
-    "postcss",
-    "less",
-    "css"
-  ],
+  "cssVariables.languages": ["vue-postcss", "scss", "postcss", "less", "css"],
   "cssrem.vw": true,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "cursor.composer.textSizeScale": 1.3,
@@ -498,9 +452,7 @@
   "docwriter.progress.trackClasses": true,
   "docwriter.progress.trackTypes": true,
   "dotnetAcquisitionExtension.enableTelemetry": false,
-  "dotnetAcquisitionExtension.existingDotnetPath": [
-    "/usr/bin/dotnet"
-  ],
+  "dotnetAcquisitionExtension.existingDotnetPath": ["/usr/bin/dotnet"],
   "editor.accessibilitySupport": "off",
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingComments": "always",
@@ -571,9 +523,7 @@
   "editor.wordWrapColumn": 120,
   "editor.wrappingIndent": "none",
   "editor.wrappingStrategy": "simple",
-  "emmet.excludeLanguages": [
-    "php"
-  ],
+  "emmet.excludeLanguages": ["php"],
   "emmet.includeLanguages": {
     "blade": "html",
     "react": "html",
@@ -602,12 +552,7 @@
   },
   "errorLens.enableOnDiffView": true,
   "errorLens.enabled": true,
-  "errorLens.enabledDiagnosticLevels": [
-    "error",
-    "warning",
-    "info",
-    "hint"
-  ],
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info", "hint"],
   "errorLens.enabledInMergeConflict": false,
   "errorLens.fontStyleItalic": false,
   "errorLens.gutterIconSet": "squareRounded",
@@ -627,12 +572,7 @@
     }
   ],
   "errorLens.replaceLinebreaksSymbol": "⏎",
-  "errorLens.severityText": [
-    "■",
-    "◈",
-    "◉",
-    "■"
-  ],
+  "errorLens.severityText": ["■", "◈", "◉", "■"],
   "explorer.autoReveal": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -735,11 +675,7 @@
     "scminput": false,
     "typescript": false
   },
-  "gitlens.changes.locations": [
-    "gutter",
-    "line",
-    "overview"
-  ],
+  "gitlens.changes.locations": ["gutter", "line", "overview"],
   "gitlens.currentLine.format": "${authorNotYou} ${agoOrDate} ${message}",
   "gitlens.currentLine.uncommittedChangesFormat": "✏️ ${ago}",
   "gitlens.graph.minimap.additionalTypes": [
@@ -748,9 +684,7 @@
     "remoteBranches"
   ],
   "gitlens.heatmap.fadeLines": false,
-  "gitlens.heatmap.locations": [
-    "overview"
-  ],
+  "gitlens.heatmap.locations": ["overview"],
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.hovers.enabled": false,
   "gitlens.showWhatsNewAfterUpgrades": false,
@@ -768,9 +702,7 @@
       }
     }
   },
-  "indentColorizer.ignoreErrorLanguages": [
-    "*"
-  ],
+  "indentColorizer.ignoreErrorLanguages": ["*"],
   "inlineFold.maskChar": "...",
   "inlineFold.unfoldOnLineSelect": true,
   "intelephense.codeLens.implementations.enable": true,
@@ -802,9 +734,7 @@
   "json.schemaDownload.enable": true,
   "json.schemas": [
     {
-      "fileMatch": [
-        "deno.json"
-      ],
+      "fileMatch": ["deno.json"],
       "url": "https://github.com/denoland/deno/blob/main/cli/schemas/config-file.v1.json"
     }
   ],
@@ -987,15 +917,11 @@
   },
   "search.searchView.keywordSuggestions": true,
   "search.useIgnoreFiles": false,
-  "security.allowedUNCHosts": [
-    "wsl.localhost"
-  ],
+  "security.allowedUNCHosts": ["wsl.localhost"],
   "security.promptForLocalFileProtocolHandling": false,
   "security.workspace.trust.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
-  "shellcheck.customArgs": [
-    "--external-sources"
-  ],
+  "shellcheck.customArgs": ["--external-sources"],
   "shellcheck.enable": true,
   "shellcheck.enableQuickFix": true,
   "shellcheck.ignorePatterns": {
@@ -1003,17 +929,10 @@
   },
   "shellcheck.useWorkspaceRootAsCwd": true,
   "svelte.enable-ts-plugin": true,
-  "tailwindCSS.classAttributes": [
-    "class",
-    "ui",
-    "className"
-  ],
+  "tailwindCSS.classAttributes": ["class", "ui", "className"],
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.experimental.classRegex": [
-    [
-      "ui:\\s*{([^)]*)\\s*}",
-      "(?:'|\"|`)([^']*)(?:'|\"|`)"
-    ]
+    ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
   "tailwindCSS.experimental.configFile": null,
   "telemetry.feedback.enabled": false,
@@ -1112,11 +1031,7 @@
     "editor.defaultFormatter": "chiehyu.vscode-astyle"
   },
   "update.statusBar": "hidden",
-  "cSpell.userWords": [
-    "Colada",
-    "phpredis",
-    "Romaji"
-  ],
+  "cSpell.userWords": ["Colada", "phpredis", "Romaji"],
   "roo-cline.debug": false,
   "roo-cline.allowedCommands": [
     "git log",
@@ -1142,5 +1057,7 @@
     "**/.gitea/workflows/*.yaml",
     "**/.forgejo/workflows/*.yml",
     "**/.forgejo/workflows/*.yaml"
-  ]
+  ],
+  "fallow.autoDownload": false,
+  "fallow.lspPath": "/home/othman/.local/share/pnpm/bin/fallow-lsp"
 }

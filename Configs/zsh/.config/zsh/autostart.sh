@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-# Run all startup programs in background without terminal
+# Runs all startup programs in background without terminal
+
+# Load the PATH variable
+source "${ZDOTDIR:-"${HOME}/.config/zsh"}/.zshenv"
+source "${ZDOTDIR:-"${HOME}/.config/zsh"}/variables.sh"
 
 # ---- Kill if already running ---- #
 programs=(
@@ -16,7 +20,12 @@ programs=(
 killall -9 "${programs[@]}"
 
 # ---- Disable power management ---- #
-(sleep 1 && xset s off && xset s noblank && xset -dpms) &
+{
+  sleep 1
+  xset s off
+  xset s noblank
+  xset -dpms
+} &
 
 # ---- Start CopyQ ---- #
 if [[ -n "${DISPLAY}" || -n "${WAYLAND_DISPLAY}" ]]; then
