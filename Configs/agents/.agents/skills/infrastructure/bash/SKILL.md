@@ -1,5 +1,5 @@
 ---
-name: linux
+name: bash
 description: "Bash/Linux terminal patterns. Critical commands, piping, error handling, scripting. Use when working on macOS, Linux, or any system with Bash/Zsh."
 ---
 
