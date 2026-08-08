@@ -180,32 +180,16 @@
       },
       "models": {
         "kc/poolside/laguna-s-2.1:free": {
-          "name": "kc/poolside/laguna-s-2.1:free",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kc/poolside/laguna-s-2.1:free"
         },
         "kc/nvidia/nemotron-3.5-content-safety:free": {
-          "name": "kc/nvidia/nemotron-3.5-content-safety:free",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kc/nvidia/nemotron-3.5-content-safety:free"
         },
         "kc/nvidia/nemotron-3-ultra-550b-a55b:free": {
-          "name": "kc/nvidia/nemotron-3-ultra-550b-a55b:free",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kc/nvidia/nemotron-3-ultra-550b-a55b:free"
         },
         "kc/stepfun/step-3.7-flash:free": {
-          "name": "kc/stepfun/step-3.7-flash:free",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kc/stepfun/step-3.7-flash:free"
         },
         "kr/deepseek-3.2": {
           "name": "kr/DeepSeek V3.2"
@@ -223,244 +207,110 @@
           "name": "kr/Qwen3 Coder Next"
         },
         "kr/claude-haiku-4.5": {
-          "name": "kr/claude-haiku-4.5",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kr/claude-haiku-4.5"
         },
         "kr/claude-opus-4.5": {
-          "name": "kr/claude-opus-4.5",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kr/claude-opus-4.5"
         },
         "kr/claude-opus-4.7": {
-          "name": "kr/claude-opus-4.7",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kr/claude-opus-4.7"
         },
         "kr/claude-opus-4.8": {
-          "name": "kr/claude-opus-4.8",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kr/claude-opus-4.8"
         },
         "kr/claude-sonnet-4.5": {
-          "name": "kr/claude-sonnet-4.5",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kr/claude-sonnet-4.5"
         },
         "kr/claude-sonnet-5": {
-          "name": "kr/claude-sonnet-5",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kr/claude-sonnet-5"
         },
         "kr/gpt-5.6-sol": {
-          "name": "kr/gpt-5.6-sol",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kr/gpt-5.6-sol"
         },
         "kr/gpt-5.6-luna": {
-          "name": "kr/gpt-5.6-luna",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kr/gpt-5.6-luna"
         },
         "kr/gpt-5.6-terra": {
-          "name": "kr/gpt-5.6-terra",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kr/gpt-5.6-terra"
         },
         "kr/MiniMax-M2.5": {
-          "name": "kr/MiniMax-M2.5",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kr/MiniMax-M2.5"
         },
         "oc/big-pickle": {
-          "name": "oc/big-pickle",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "oc/big-pickle"
         },
         "oc/deepseek-v4-flash-free": {
-          "name": "oc/deepseek-v4-flash-free",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "oc/deepseek-v4-flash-free"
         },
         "oc/mimo-v2.5-free": {
-          "name": "oc/mimo-v2.5-free",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "oc/mimo-v2.5-free"
         },
         "nvidia/z-ai/glm-5.2": {
-          "name": "nvidia/z-ai/glm-5.2",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "nvidia/z-ai/glm-5.2"
         },
         "nvidia/moonshotai/kimi-k2.6": {
-          "name": "nvidia/moonshotai/kimi-k2.6",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "nvidia/moonshotai/kimi-k2.6"
         },
         "nvidia/deepseek-ai/deepseek-v4-pro": {
-          "name": "nvidia/deepseek-ai/deepseek-v4-pro",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "nvidia/deepseek-ai/deepseek-v4-pro"
         },
         "nvidia/minimaxai/minimax-m3": {
-          "name": "nvidia/minimaxai/minimax-m3",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "nvidia/minimaxai/minimax-m3"
         },
         "nvidia/minimaxai/minimax-m2.7": {
-          "name": "nvidia/minimaxai/minimax-m2.7",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "nvidia/minimaxai/minimax-m2.7"
         },
         "ollama/minimax-m3": {
-          "name": "ollama/minimax-m3",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "ollama/minimax-m3"
         },
         "ollama/glm-5": {
-          "name": "ollama/glm-5",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "ollama/glm-5"
         },
         "ollama/qwen3.5": {
-          "name": "ollama/qwen3.5",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "ollama/qwen3.5"
         },
         "ollama/kimi-k2.5": {
-          "name": "ollama/kimi-k2.5",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "ollama/kimi-k2.5"
         },
         "cx/gpt-5.6-terra": {
-          "name": "cx/gpt-5.6-terra",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "cx/gpt-5.6-terra"
         },
         "cx/gpt-5.6-sol": {
-          "name": "cx/gpt-5.6-sol",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "cx/gpt-5.6-sol"
         },
         "cx/gpt-5.6-luna": {
-          "name": "cx/gpt-5.6-luna",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "cx/gpt-5.6-luna"
         },
         "cx/gpt-5.5": {
-          "name": "cx/gpt-5.5",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "cx/gpt-5.5"
         },
         "kimchi/deepseek-v4-flash": {
-          "name": "kimchi/deepseek-v4-flash",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kimchi/deepseek-v4-flash"
         },
         "kimchi/glm-5.2-fp8": {
-          "name": "kimchi/glm-5.2-fp8",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kimchi/glm-5.2-fp8"
         },
         "kimchi/minimax-m3": {
-          "name": "kimchi/minimax-m3",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kimchi/minimax-m3"
         },
         "kimchi/nemotron-3-ultra-fp4": {
-          "name": "kimchi/nemotron-3-ultra-fp4",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kimchi/nemotron-3-ultra-fp4"
         },
         "kimchi/kimi-k2.7": {
-          "name": "kimchi/kimi-k2.7",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "kimchi/kimi-k2.7"
         },
         "bzl/auto:free": {
-          "name": "bzl/auto:free",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "bzl/auto:free"
         },
         "bzl/deepseek-v4-flash": {
-          "name": "bzl/deepseek-v4-flash",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "bzl/deepseek-v4-flash"
         },
         "bzl/qwen3.7-flash": {
-          "name": "bzl/qwen3.7-flash",
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          }
+          "name": "bzl/qwen3.7-flash"
         }
       }
     }
   }
 }
+
+
