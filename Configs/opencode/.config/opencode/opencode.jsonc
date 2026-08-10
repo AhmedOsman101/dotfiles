@@ -48,9 +48,9 @@
     "@tarquinen/opencode-dcp@latest",
     "opencode-handoff@latest",
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
+    "@tarquinen/opencode-smart-title@latest",
     "@dietrichgebert/ponytail@latest"
     // "opencode-system-prompt-logger",
-    // "@tarquinen/opencode-smart-title@latest",
     // "@plannotator/opencode@latest",
     // [
     //   "@knikolov/opencode-plugin-simple-memory@latest",

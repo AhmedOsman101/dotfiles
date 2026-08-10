@@ -2,18 +2,3 @@ node_modules
 package.json
 bun.lock
 .env
-superpowers
-antigravity-accounts.json.*.tmp
-antigravity-logs/
-
-opencode-multi-auth-codex-accounts.json*
-!opencode-multi-auth-codex-accounts.json
-# codex-accounts.json
-codex-accounts.json.tmp.*
-codex-accounts.json.*.tmp
-quarantine/
-cache/codex-session-affinity.json
-cache/codex-snapshots.json
-logs/codex-plugin/
-.gitignore
-codex-accounts.json
