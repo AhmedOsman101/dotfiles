@@ -336,3 +336,4 @@ if [[ -d "${SCRIPTS_DIR}" ]]; then
 fi
 
 export PATH
+unset EXCLUDE_PATTERNS

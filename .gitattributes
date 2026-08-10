@@ -10,7 +10,7 @@ Configs/npm/.config/npm/*           filter=git-crypt diff=git-crypt
 # SSH
 
 # Encrypt all private keys in .ssh, while excluding public keys
-Configs/ssh/.ssh/* filter=git-crypt diff=git-crypt
+Configs/ssh/.ssh/*     filter=git-crypt diff=git-crypt
 Configs/ssh/.ssh/*.pub !filter !diff
 Configs/ssh/.ssh/config !filter !diff
 
@@ -25,3 +25,7 @@ Configs/atuin/.local/share/atuin/host_id filter=git-crypt diff=git-crypt
 
 # 9Router
 Configs/9router/.9router/9router-backup*.json  filter=git-crypt diff=git-crypt
+
+# PI sessions and auth
+Configs/pi/.pi/agent/sessions/**  filter=git-crypt diff=git-crypt
+Configs/pi/.pi/agent/auth.json    filter=git-crypt diff=git-crypt
