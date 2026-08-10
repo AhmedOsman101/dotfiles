@@ -1,0 +1,15 @@
+{
+  "lastChangelogVersion": "0.84.1",
+  "theme": "dark",
+  "defaultProvider": "9router",
+  "defaultModel": "kc/tencent/hy3:free",
+  "packages": [
+    "npm:pi-mcp-extension"
+  ],
+  "terminal": {
+    "showTerminalProgress": true
+  },
+  "steeringMode": "all",
+  "enableInstallTelemetry": false,
+  "defaultProjectTrust": "always"
+}

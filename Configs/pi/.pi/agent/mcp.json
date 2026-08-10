@@ -1,0 +1,21 @@
+{
+  "settings": {
+    "toolPrefix": "mcp",
+    "requestTimeoutMs": 30000,
+    "maxRetries": 5
+  },
+  "mcpServers": {
+    "codegraph": {
+      "command": "codegraph",
+      "args": ["serve", "--mcp"],
+      "transport": "stdio",
+      "lifecycle": "eager"
+    },
+    "mgrep": {
+      "command": "mgrep",
+      "args": ["mcp"],
+      "transport": "stdio",
+      "lifecycle": "lazy"
+    }
+  }
+}
