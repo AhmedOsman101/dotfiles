@@ -67,55 +67,6 @@
     // "@howaboua/opencode-planning-toolkit@latest" // planning toolkit for OpenCode
   ],
   "provider": {
-    "kiro": {
-      "name": "Kiro Gateway",
-      "npm": "@ai-sdk/openai-compatible",
-      "options": {
-        "baseURL": "http://localhost:9001/v1",
-        "apiKey": "{env:KIRO_PROXY_API_KEY}"
-      },
-      "models": {
-        "auto-kiro": {
-          "name": "Auto (Kiro)"
-        },
-        "claude-haiku-4.5": {
-          "name": "Claude Haiku 4.5"
-        },
-        "claude-sonnet-4": {
-          "name": "Claude Sonnet 4"
-        },
-        "claude-sonnet-4.5": {
-          "name": "Claude Sonnet 4.5"
-        },
-        "claude-sonnet-4.6": {
-          "name": "Claude Sonnet 4.6"
-        },
-        "claude-opus-4.5": {
-          "name": "Claude Opus 4.5"
-        },
-        "claude-opus-4.6": {
-          "name": "Claude Opus 4.6"
-        },
-        "claude-opus-4.7": {
-          "name": "Claude Opus 4.7"
-        },
-        "deepseek-3.2": {
-          "name": "DeepSeek V3.2"
-        },
-        "glm-5": {
-          "name": "GLM-5"
-        },
-        "minimax-m2.1": {
-          "name": "MiniMax M2.1"
-        },
-        "minimax-m2.5": {
-          "name": "MiniMax M2.5"
-        },
-        "qwen3-coder-next": {
-          "name": "Qwen3 Coder Next"
-        }
-      }
-    },
     "ollama": {
       "name": "Ollama",
       "npm": "@ai-sdk/openai-compatible",
@@ -179,138 +130,83 @@
         "apiKey": "{env:N9ROUTER_API_KEY}"
       },
       "models": {
-        "kc/poolside/laguna-s-2.1:free": {
-          "name": "kc/poolside/laguna-s-2.1:free"
-        },
-        "kc/nvidia/nemotron-3.5-content-safety:free": {
-          "name": "kc/nvidia/nemotron-3.5-content-safety:free"
-        },
+        "cx/gpt-5.6-luna": { "name": "cx/gpt-5.6-luna" },
+        "cx/gpt-5.6-sol": { "name": "cx/gpt-5.6-sol" },
+        "cx/gpt-5.6-terra": { "name": "cx/gpt-5.6-terra" },
         "kc/nvidia/nemotron-3-ultra-550b-a55b:free": {
           "name": "kc/nvidia/nemotron-3-ultra-550b-a55b:free"
         },
+        "kc/poolside/laguna-s-2.1:free": {
+          "name": "kc/poolside/laguna-s-2.1:free"
+        },
+        "kc/tencent/hy3:free": { "name": "kc/tencent/hy3:free" },
         "kc/stepfun/step-3.7-flash:free": {
           "name": "kc/stepfun/step-3.7-flash:free"
         },
-        "kr/deepseek-3.2": {
-          "name": "kr/DeepSeek V3.2"
+        "kc/nvidia/nemotron-3.5-lightning:free": {
+          "name": "kc/nvidia/nemotron-3.5-lightning:free"
         },
-        "kr/glm-5": {
-          "name": "kr/GLM-5"
-        },
-        "kr/minimax-m2.1": {
-          "name": "kr/MiniMax M2.1"
-        },
-        "kr/minimax-m2.5": {
-          "name": "kr/MiniMax M2.5"
-        },
-        "kr/qwen3-coder-next": {
-          "name": "kr/Qwen3 Coder Next"
-        },
-        "kr/claude-haiku-4.5": {
-          "name": "kr/claude-haiku-4.5"
-        },
-        "kr/claude-opus-4.5": {
-          "name": "kr/claude-opus-4.5"
-        },
-        "kr/claude-opus-4.7": {
-          "name": "kr/claude-opus-4.7"
-        },
-        "kr/claude-opus-4.8": {
-          "name": "kr/claude-opus-4.8"
-        },
-        "kr/claude-sonnet-4.5": {
-          "name": "kr/claude-sonnet-4.5"
-        },
-        "kr/claude-sonnet-5": {
-          "name": "kr/claude-sonnet-5"
-        },
-        "kr/gpt-5.6-sol": {
-          "name": "kr/gpt-5.6-sol"
-        },
-        "kr/gpt-5.6-luna": {
-          "name": "kr/gpt-5.6-luna"
-        },
-        "kr/gpt-5.6-terra": {
-          "name": "kr/gpt-5.6-terra"
-        },
-        "kr/MiniMax-M2.5": {
-          "name": "kr/MiniMax-M2.5"
-        },
-        "oc/big-pickle": {
-          "name": "oc/big-pickle"
-        },
-        "oc/deepseek-v4-flash-free": {
-          "name": "oc/deepseek-v4-flash-free"
-        },
-        "oc/mimo-v2.5-free": {
-          "name": "oc/mimo-v2.5-free"
-        },
-        "nvidia/z-ai/glm-5.2": {
-          "name": "nvidia/z-ai/glm-5.2"
-        },
-        "nvidia/moonshotai/kimi-k2.6": {
-          "name": "nvidia/moonshotai/kimi-k2.6"
-        },
-        "nvidia/deepseek-ai/deepseek-v4-pro": {
-          "name": "nvidia/deepseek-ai/deepseek-v4-pro"
-        },
-        "nvidia/minimaxai/minimax-m3": {
-          "name": "nvidia/minimaxai/minimax-m3"
-        },
-        "nvidia/minimaxai/minimax-m2.7": {
-          "name": "nvidia/minimaxai/minimax-m2.7"
-        },
-        "ollama/minimax-m3": {
-          "name": "ollama/minimax-m3"
-        },
-        "ollama/glm-5": {
-          "name": "ollama/glm-5"
-        },
-        "ollama/qwen3.5": {
-          "name": "ollama/qwen3.5"
-        },
-        "ollama/kimi-k2.5": {
-          "name": "ollama/kimi-k2.5"
-        },
-        "cx/gpt-5.6-terra": {
-          "name": "cx/gpt-5.6-terra"
-        },
-        "cx/gpt-5.6-sol": {
-          "name": "cx/gpt-5.6-sol"
-        },
-        "cx/gpt-5.6-luna": {
-          "name": "cx/gpt-5.6-luna"
-        },
-        "cx/gpt-5.5": {
-          "name": "cx/gpt-5.5"
-        },
-        "kimchi/deepseek-v4-flash": {
-          "name": "kimchi/deepseek-v4-flash"
-        },
-        "kimchi/glm-5.2-fp8": {
-          "name": "kimchi/glm-5.2-fp8"
-        },
-        "kimchi/minimax-m3": {
-          "name": "kimchi/minimax-m3"
-        },
+        "kr/claude-opus-4.8": { "name": "kr/claude-opus-4.8" },
+        "kr/claude-opus-5": { "name": "kr/claude-opus-5" },
+        "kr/claude-sonnet-5": { "name": "kr/claude-sonnet-5" },
+        "kr/glm-5": { "name": "kr/glm-5" },
+        "kr/gpt-5.6-luna": { "name": "kr/gpt-5.6-luna" },
+        "kr/gpt-5.6-sol": { "name": "kr/gpt-5.6-sol" },
+        "kr/gpt-5.6-terra": { "name": "kr/gpt-5.6-terra" },
+        "mmf/mimo-auto": { "name": "mmf/mimo-auto" },
+        "oc/big-pickle": { "name": "oc/big-pickle" },
+        "oc/deepseek-v4-flash-free": { "name": "oc/deepseek-v4-flash-free" },
+        "oc/laguna-s-2.1-free": { "name": "oc/laguna-s-2.1-free" },
+        "oc/ling-3.0-flash-free": { "name": "oc/ling-3.0-flash-free" },
+        "oc/longcat-2.0-free": { "name": "oc/longcat-2.0-free" },
+        "oc/mimo-v2.5-free": { "name": "oc/mimo-v2.5-free" },
+        "oc/nemotron-3-ultra-free": { "name": "oc/nemotron-3-ultra-free" },
+        "kimchi/minimax-m3": { "name": "kimchi/minimax-m3" },
+        "kimchi/kimi-k2.7": { "name": "kimchi/kimi-k2.7" },
         "kimchi/nemotron-3-ultra-fp4": {
           "name": "kimchi/nemotron-3-ultra-fp4"
         },
-        "kimchi/kimi-k2.7": {
-          "name": "kimchi/kimi-k2.7"
+        "kimchi/deepseek-v4-flash": { "name": "kimchi/deepseek-v4-flash" },
+        "kimchi/glm-5.2-fp8": { "name": "kimchi/glm-5.2-fp8" },
+        "nvidia/deepseek-ai/deepseek-v4-flash": {
+          "name": "nvidia/deepseek-ai/deepseek-v4-flash"
         },
-        "bzl/auto:free": {
-          "name": "bzl/auto:free"
+        "nvidia/z-ai/glm-5.2": { "name": "nvidia/z-ai/glm-5.2" },
+        "nvidia/minimaxai/minimax-m3": {
+          "name": "nvidia/minimaxai/minimax-m3"
         },
-        "bzl/deepseek-v4-flash": {
-          "name": "bzl/deepseek-v4-flash"
+        "nvidia/nvidia/nemotron-3-ultra-550b-a55b": {
+          "name": "nvidia/nvidia/nemotron-3-ultra-550b-a55b"
         },
-        "bzl/qwen3.7-flash": {
-          "name": "bzl/qwen3.7-flash"
-        }
+        "ollama/glm-4.7-flash": { "name": "ollama/glm-4.7-flash" },
+        "ollama/glm-5": { "name": "ollama/glm-5" },
+        "ollama/minimax-m3": { "name": "ollama/minimax-m3" },
+        "ollama/qwen3.5": { "name": "ollama/qwen3.5" },
+        "openrouter/openrouter/free": { "name": "openrouter/openrouter/free" },
+        "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free": {
+          "name": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free"
+        },
+        "openrouter/nvidia/nemotron-3.5-lightning:free": {
+          "name": "openrouter/nvidia/nemotron-3.5-lightning:free"
+        },
+        "bzl/auto:free": { "name": "bzl/auto:free" },
+        "bzl/deepseek-v4-flash": { "name": "bzl/deepseek-v4-flash" },
+        "bzl/qwen3.7-flash": { "name": "bzl/qwen3.7-flash" },
+        "ollama-local/deepseek-r1:1.5b": {
+          "name": "ollama-local/deepseek-r1:1.5b"
+        },
+        "ollama-local/hf.co/ewinregirgojr/MiniCPM5-1B-Agentic-Tooluse-GGUF:Q8_0": {
+          "name": "ollama-local/MiniCPM5-1B"
+        },
+        "ollama-local/qwen2.5-coder:0.5b": {
+          "name": "ollama-local/qwen2.5-coder:0.5b"
+        },
+        "ollama-local/qwen3.5:0.8b": { "name": "ollama-local/qwen3.5:0.8b" },
+        "ollama-local/lfm2.5-thinking": {
+          "name": "ollama-local/lfm2.5-thinking"
+        },
+        "ollama-local/qwen3:1.7b": { "name": "ollama-local/qwen3:1.7b" }
       }
     }
   }
 }
-
-

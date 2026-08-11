@@ -5,216 +5,111 @@
       "api": "openai-completions",
       "apiKey": "$N9ROUTER_API_KEY",
       "models": [
-        {
-          "id": "kc/poolside/laguna-s-2.1:free",
-          "name": "kc/poolside/laguna-s-2.1:free",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "kc/tencent/hy3:free",
-          "name": "kc/tencent/hy3:free",
-          "input": ["text", "image"]
-        },
+        { "id": "cx/gpt-5.6-luna", "name": "cx/gpt-5.6-luna" },
+        { "id": "cx/gpt-5.6-sol", "name": "cx/gpt-5.6-sol" },
+        { "id": "cx/gpt-5.6-terra", "name": "cx/gpt-5.6-terra" },
         {
           "id": "kc/nvidia/nemotron-3-ultra-550b-a55b:free",
-          "name": "kc/nvidia/nemotron-3-ultra-550b-a55b:free",
-          "input": ["text", "image"]
+          "name": "kc/nvidia/nemotron-3-ultra-550b-a55b:free"
         },
+        {
+          "id": "kc/poolside/laguna-s-2.1:free",
+          "name": "kc/poolside/laguna-s-2.1:free"
+        },
+        { "id": "kc/tencent/hy3:free", "name": "kc/tencent/hy3:free" },
         {
           "id": "kc/stepfun/step-3.7-flash:free",
-          "name": "kc/stepfun/step-3.7-flash:free",
-          "input": ["text", "image"]
+          "name": "kc/stepfun/step-3.7-flash:free"
         },
         {
-          "id": "kr/deepseek-3.2",
-          "name": "kr/DeepSeek V3.2"
+          "id": "kc/nvidia/nemotron-3.5-lightning:free",
+          "name": "kc/nvidia/nemotron-3.5-lightning:free"
         },
-        {
-          "id": "kr/glm-5",
-          "name": "kr/GLM-5"
-        },
-        {
-          "id": "kr/minimax-m2.1",
-          "name": "kr/MiniMax M2.1"
-        },
-        {
-          "id": "kr/minimax-m2.5",
-          "name": "kr/MiniMax M2.5"
-        },
-        {
-          "id": "kr/qwen3-coder-next",
-          "name": "kr/Qwen3 Coder Next"
-        },
-        {
-          "id": "kr/claude-haiku-4.5",
-          "name": "kr/claude-haiku-4.5",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "kr/claude-opus-4.5",
-          "name": "kr/claude-opus-4.5",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "kr/claude-opus-4.7",
-          "name": "kr/claude-opus-4.7",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "kr/claude-opus-4.8",
-          "name": "kr/claude-opus-4.8",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "kr/claude-sonnet-4.5",
-          "name": "kr/claude-sonnet-4.5",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "kr/claude-sonnet-5",
-          "name": "kr/claude-sonnet-5",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "kr/gpt-5.6-sol",
-          "name": "kr/gpt-5.6-sol",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "kr/gpt-5.6-luna",
-          "name": "kr/gpt-5.6-luna",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "kr/gpt-5.6-terra",
-          "name": "kr/gpt-5.6-terra",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "kr/MiniMax-M2.5",
-          "name": "kr/MiniMax-M2.5",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "oc/big-pickle",
-          "name": "oc/big-pickle",
-          "input": ["text", "image"]
-        },
+        { "id": "kr/claude-opus-4.8", "name": "kr/claude-opus-4.8" },
+        { "id": "kr/claude-opus-5", "name": "kr/claude-opus-5" },
+        { "id": "kr/claude-sonnet-5", "name": "kr/claude-sonnet-5" },
+        { "id": "kr/glm-5", "name": "kr/glm-5" },
+        { "id": "kr/gpt-5.6-luna", "name": "kr/gpt-5.6-luna" },
+        { "id": "kr/gpt-5.6-sol", "name": "kr/gpt-5.6-sol" },
+        { "id": "kr/gpt-5.6-terra", "name": "kr/gpt-5.6-terra" },
+        { "id": "mmf/mimo-auto", "name": "mmf/mimo-auto" },
+        { "id": "oc/big-pickle", "name": "oc/big-pickle" },
         {
           "id": "oc/deepseek-v4-flash-free",
-          "name": "oc/deepseek-v4-flash-free",
-          "input": ["text", "image"]
+          "name": "oc/deepseek-v4-flash-free"
         },
+        { "id": "oc/laguna-s-2.1-free", "name": "oc/laguna-s-2.1-free" },
+        { "id": "oc/ling-3.0-flash-free", "name": "oc/ling-3.0-flash-free" },
+        { "id": "oc/longcat-2.0-free", "name": "oc/longcat-2.0-free" },
+        { "id": "oc/mimo-v2.5-free", "name": "oc/mimo-v2.5-free" },
         {
-          "id": "oc/mimo-v2.5-free",
-          "name": "oc/mimo-v2.5-free",
-          "input": ["text", "image"]
+          "id": "oc/nemotron-3-ultra-free",
+          "name": "oc/nemotron-3-ultra-free"
         },
+        { "id": "kimchi/minimax-m3", "name": "kimchi/minimax-m3" },
+        { "id": "kimchi/kimi-k2.7", "name": "kimchi/kimi-k2.7" },
         {
-          "id": "nvidia/z-ai/glm-5.2",
-          "name": "nvidia/z-ai/glm-5.2",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "nvidia/moonshotai/kimi-k2.6",
-          "name": "nvidia/moonshotai/kimi-k2.6",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "nvidia/deepseek-ai/deepseek-v4-pro",
-          "name": "nvidia/deepseek-ai/deepseek-v4-pro",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "nvidia/minimaxai/minimax-m3",
-          "name": "nvidia/minimaxai/minimax-m3",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "nvidia/minimaxai/minimax-m2.7",
-          "name": "nvidia/minimaxai/minimax-m2.7",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "ollama/minimax-m3",
-          "name": "ollama/minimax-m3",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "ollama/glm-5",
-          "name": "ollama/glm-5",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "ollama/qwen3.5",
-          "name": "ollama/qwen3.5",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "ollama/kimi-k2.5",
-          "name": "ollama/kimi-k2.5",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "cx/gpt-5.6-terra",
-          "name": "cx/gpt-5.6-terra",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "cx/gpt-5.6-sol",
-          "name": "cx/gpt-5.6-sol",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "cx/gpt-5.6-luna",
-          "name": "cx/gpt-5.6-luna",
-          "input": ["text", "image"]
-        },
-        {
-          "id": "cx/gpt-5.5",
-          "name": "cx/gpt-5.5",
-          "input": ["text", "image"]
+          "id": "kimchi/nemotron-3-ultra-fp4",
+          "name": "kimchi/nemotron-3-ultra-fp4"
         },
         {
           "id": "kimchi/deepseek-v4-flash",
-          "name": "kimchi/deepseek-v4-flash",
-          "input": ["text", "image"]
+          "name": "kimchi/deepseek-v4-flash"
+        },
+        { "id": "kimchi/glm-5.2-fp8", "name": "kimchi/glm-5.2-fp8" },
+        {
+          "id": "nvidia/deepseek-ai/deepseek-v4-flash",
+          "name": "nvidia/deepseek-ai/deepseek-v4-flash"
+        },
+        { "id": "nvidia/z-ai/glm-5.2", "name": "nvidia/z-ai/glm-5.2" },
+        {
+          "id": "nvidia/minimaxai/minimax-m3",
+          "name": "nvidia/minimaxai/minimax-m3"
         },
         {
-          "id": "kimchi/glm-5.2-fp8",
-          "name": "kimchi/glm-5.2-fp8",
-          "input": ["text", "image"]
+          "id": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
+          "name": "nvidia/nvidia/nemotron-3-ultra-550b-a55b"
+        },
+        { "id": "ollama/glm-4.7-flash", "name": "ollama/glm-4.7-flash" },
+        { "id": "ollama/glm-5", "name": "ollama/glm-5" },
+        { "id": "ollama/minimax-m3", "name": "ollama/minimax-m3" },
+        { "id": "ollama/qwen3.5", "name": "ollama/qwen3.5" },
+        {
+          "id": "openrouter/openrouter/free",
+          "name": "openrouter/openrouter/free"
         },
         {
-          "id": "kimchi/minimax-m3",
-          "name": "kimchi/minimax-m3",
-          "input": ["text", "image"]
+          "id": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+          "name": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free"
         },
         {
-          "id": "kimchi/nemotron-3-ultra-fp4",
-          "name": "kimchi/nemotron-3-ultra-fp4",
-          "input": ["text", "image"]
+          "id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+          "name": "openrouter/nvidia/nemotron-3.5-lightning:free"
+        },
+        { "id": "bzl/auto:free", "name": "bzl/auto:free" },
+        { "id": "bzl/deepseek-v4-flash", "name": "bzl/deepseek-v4-flash" },
+        { "id": "bzl/qwen3.7-flash", "name": "bzl/qwen3.7-flash" },
+        {
+          "id": "ollama-local/deepseek-r1:1.5b",
+          "name": "ollama-local/deepseek-r1:1.5b"
         },
         {
-          "id": "kimchi/kimi-k2.7",
-          "name": "kimchi/kimi-k2.7",
-          "input": ["text", "image"]
+          "id": "ollama-local/hf.co/ewinregirgojr/MiniCPM5-1B-Agentic-Tooluse-GGUF:Q8_0",
+          "name": "ollama-local/MiniCPM5-1B"
         },
         {
-          "id": "bzl/auto:free",
-          "name": "bzl/auto:free",
-          "input": ["text", "image"]
+          "id": "ollama-local/qwen2.5-coder:0.5b",
+          "name": "ollama-local/qwen2.5-coder:0.5b"
         },
         {
-          "id": "bzl/deepseek-v4-flash",
-          "name": "bzl/deepseek-v4-flash",
-          "input": ["text", "image"]
+          "id": "ollama-local/qwen3.5:0.8b",
+          "name": "ollama-local/qwen3.5:0.8b"
         },
         {
-          "id": "bzl/qwen3.7-flash",
-          "name": "bzl/qwen3.7-flash",
-          "input": ["text", "image"]
-        }
+          "id": "ollama-local/lfm2.5-thinking",
+          "name": "ollama-local/lfm2.5-thinking"
+        },
+        { "id": "ollama-local/qwen3:1.7b", "name": "ollama-local/qwen3:1.7b" }
       ]
     }
   }
