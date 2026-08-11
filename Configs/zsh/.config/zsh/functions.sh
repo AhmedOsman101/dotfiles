@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-if [[ -f "${HOME}/scripts/lib/helpers.sh" ]]; then
+if [[ -f "${SCRIPTS_DIR}/lib/helpers.sh" ]]; then
   # shellcheck disable=1091
-  source "${HOME}/scripts/lib/helpers.sh" || echo "Failed to source helpers.sh"
+  source "${SCRIPTS_DIR}/lib/helpers.sh" || echo "Failed to source lib/helpers.sh"
 fi
 
 # ---- Yazi ---- #
