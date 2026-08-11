@@ -480,7 +480,7 @@
         }
       }
     ],
-    "checkedAt": 1786365928989,
+    "checkedAt": 1786476216609,
     "lastModified": 1786365271000,
     "etag": "W/\"486e04edb7dc14c34b5182fe347a3c8b\""
   },
@@ -1369,7 +1369,7 @@
         "maxTokens": 131072
       }
     ],
-    "checkedAt": 1786365929085,
+    "checkedAt": 1786476216616,
     "lastModified": 1786098933000,
     "etag": "W/\"f2e3195c908c25cbd1166f11a16d8dc2\""
   },
@@ -2590,7 +2590,7 @@
         }
       }
     ],
-    "checkedAt": 1786365929047,
+    "checkedAt": 1786476216626,
     "lastModified": 1786365286000,
     "etag": "W/\"7ac97151d0d133dd97e299dd4cb1662c\""
   },
@@ -2933,7 +2933,7 @@
         }
       }
     ],
-    "checkedAt": 1786365929887,
+    "checkedAt": 1786476217938,
     "lastModified": 1786021090000,
     "etag": "W/\"2174ed7392c0d5376beba2c4ee0b170f\""
   },
@@ -4650,6 +4650,26 @@
         "maxTokens": 8192
       },
       {
+        "id": "meta/muse-glimmer-30b",
+        "name": "Muse Glimmer 30B",
+        "api": "anthropic-messages",
+        "baseUrl": "https://ai-gateway.vercel.sh",
+        "provider": "vercel-ai-gateway",
+        "reasoning": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "cost": {
+          "input": 0.35,
+          "output": 1.5,
+          "cacheRead": 0.04,
+          "cacheWrite": 0
+        },
+        "contextWindow": 131072,
+        "maxTokens": 131072
+      },
+      {
         "id": "meta/muse-spark-1.1",
         "name": "Muse Spark 1.1",
         "api": "anthropic-messages",
@@ -6250,6 +6270,26 @@
         "maxTokens": 1000000
       },
       {
+        "id": "sakana/namazu",
+        "name": "Sakana Namazu",
+        "api": "anthropic-messages",
+        "baseUrl": "https://ai-gateway.vercel.sh",
+        "provider": "vercel-ai-gateway",
+        "reasoning": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "cost": {
+          "input": 0.95,
+          "output": 4,
+          "cacheRead": 0.15,
+          "cacheWrite": 0
+        },
+        "contextWindow": 256000,
+        "maxTokens": 256000
+      },
+      {
         "id": "stepfun/step-3.5-flash",
         "name": "StepFun 3.5 Flash",
         "api": "anthropic-messages",
@@ -6897,9 +6937,9 @@
         "maxTokens": 128000
       }
     ],
-    "checkedAt": 1786365929120,
-    "lastModified": 1786365298000,
-    "etag": "W/\"0439164bc46de9458abdd05f9e2a259c\""
+    "checkedAt": 1786476217958,
+    "lastModified": 1786458605000,
+    "etag": "W/\"b78f30563266e1e032eea009896cb66b\""
   },
   "huggingface": {
     "models": [
@@ -8297,7 +8337,7 @@
         "maxTokens": 131072
       }
     ],
-    "checkedAt": 1786365929056,
+    "checkedAt": 1786476216613,
     "lastModified": 1786021105000,
     "etag": "W/\"a508615ea67fd437968799e9714303ae\""
   },
@@ -9746,13 +9786,13 @@
           "text"
         ],
         "cost": {
-          "input": 0.435,
-          "output": 0.87,
-          "cacheRead": 0.003625,
+          "input": 0.63168,
+          "output": 1.26336,
+          "cacheRead": 0.053298,
           "cacheWrite": 0
         },
         "contextWindow": 1048576,
-        "maxTokens": 384000,
+        "maxTokens": 393216,
         "compat": {
           "supportsDeveloperRole": false,
           "thinkingFormat": "openrouter",
@@ -10837,6 +10877,30 @@
         }
       },
       {
+        "id": "meta/muse-glimmer-30b",
+        "name": "Meta: Muse Glimmer 30B",
+        "api": "openai-completions",
+        "baseUrl": "https://openrouter.ai/api/v1",
+        "provider": "openrouter",
+        "reasoning": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "cost": {
+          "input": 0.35,
+          "output": 1.5,
+          "cacheRead": 0.04,
+          "cacheWrite": 0
+        },
+        "contextWindow": 131072,
+        "maxTokens": 4096,
+        "compat": {
+          "supportsDeveloperRole": false,
+          "thinkingFormat": "openrouter"
+        }
+      },
+      {
         "id": "meta/muse-spark-1.1",
         "name": "Meta: Muse Spark 1.1",
         "api": "openai-completions",
@@ -11529,9 +11593,9 @@
           "image"
         ],
         "cost": {
-          "input": 0.95,
-          "output": 4,
-          "cacheRead": 0.16,
+          "input": 0.5795,
+          "output": 2.44,
+          "cacheRead": 0.0976,
           "cacheWrite": 0
         },
         "contextWindow": 262144,
@@ -11827,6 +11891,29 @@
       {
         "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "name": "NVIDIA: Nemotron 3 Ultra (free)",
+        "api": "openai-completions",
+        "baseUrl": "https://openrouter.ai/api/v1",
+        "provider": "openrouter",
+        "reasoning": true,
+        "input": [
+          "text"
+        ],
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0
+        },
+        "contextWindow": 1000000,
+        "maxTokens": 65536,
+        "compat": {
+          "supportsDeveloperRole": false,
+          "thinkingFormat": "openrouter"
+        }
+      },
+      {
+        "id": "nvidia/nemotron-3.5-lightning:free",
+        "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
         "api": "openai-completions",
         "baseUrl": "https://openrouter.ai/api/v1",
         "provider": "openrouter",
@@ -12737,7 +12824,7 @@
           "cacheWrite": 0
         },
         "contextWindow": 128000,
-        "maxTokens": 16384,
+        "maxTokens": 32000,
         "compat": {
           "thinkingFormat": "openrouter"
         },
@@ -12842,32 +12929,6 @@
         },
         "contextWindow": 400000,
         "maxTokens": 128000,
-        "compat": {
-          "thinkingFormat": "openrouter"
-        },
-        "thinkingLevelMap": {
-          "xhigh": "xhigh"
-        }
-      },
-      {
-        "id": "openai/gpt-5.3-chat",
-        "name": "OpenAI: GPT-5.3 Chat",
-        "api": "openai-completions",
-        "baseUrl": "https://openrouter.ai/api/v1",
-        "provider": "openrouter",
-        "reasoning": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "cost": {
-          "input": 1.75,
-          "output": 14,
-          "cacheRead": 0.175,
-          "cacheWrite": 0
-        },
-        "contextWindow": 128000,
-        "maxTokens": 16384,
         "compat": {
           "thinkingFormat": "openrouter"
         },
@@ -14580,12 +14641,12 @@
         ],
         "cost": {
           "input": 0.07,
-          "output": 0.27,
+          "output": 0.28,
           "cacheRead": 0,
           "cacheWrite": 0
         },
-        "contextWindow": 160000,
-        "maxTokens": 32768,
+        "contextWindow": 262144,
+        "maxTokens": 262144,
         "compat": {
           "supportsDeveloperRole": false,
           "thinkingFormat": "openrouter"
@@ -14745,8 +14806,8 @@
           "cacheRead": 0,
           "cacheWrite": 0
         },
-        "contextWindow": 131072,
-        "maxTokens": 32768,
+        "contextWindow": 262144,
+        "maxTokens": 262144,
         "compat": {
           "supportsDeveloperRole": false,
           "thinkingFormat": "openrouter"
@@ -15004,13 +15065,13 @@
           "image"
         ],
         "cost": {
-          "input": 0.39,
-          "output": 2.34,
-          "cacheRead": 0,
+          "input": 0.5,
+          "output": 3.6,
+          "cacheRead": 0.3,
           "cacheWrite": 0
         },
         "contextWindow": 262144,
-        "maxTokens": 65536,
+        "maxTokens": 262144,
         "compat": {
           "supportsDeveloperRole": false,
           "thinkingFormat": "openrouter"
@@ -15398,6 +15459,30 @@
         }
       },
       {
+        "id": "sakana/sakana-namazu",
+        "name": "Sakana: Sakana Namazu",
+        "api": "openai-completions",
+        "baseUrl": "https://openrouter.ai/api/v1",
+        "provider": "openrouter",
+        "reasoning": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "cost": {
+          "input": 0.95,
+          "output": 4,
+          "cacheRead": 0.15,
+          "cacheWrite": 0
+        },
+        "contextWindow": 262144,
+        "maxTokens": 65536,
+        "compat": {
+          "supportsDeveloperRole": false,
+          "thinkingFormat": "openrouter"
+        }
+      },
+      {
         "id": "sao10k/l3.1-euryale-70b",
         "name": "Sao10K: Llama 3.1 Euryale 70B v2.2",
         "api": "openai-completions",
@@ -15625,6 +15710,29 @@
           "cacheWrite": 0
         },
         "contextWindow": 131072,
+        "maxTokens": 131072,
+        "compat": {
+          "supportsDeveloperRole": false,
+          "thinkingFormat": "openrouter"
+        }
+      },
+      {
+        "id": "upstage/solar-pro4",
+        "name": "Upstage: Solar Pro 4",
+        "api": "openai-completions",
+        "baseUrl": "https://openrouter.ai/api/v1",
+        "provider": "openrouter",
+        "reasoning": true,
+        "input": [
+          "text"
+        ],
+        "cost": {
+          "input": 0.03,
+          "output": 0.12,
+          "cacheRead": 0.006,
+          "cacheWrite": 0
+        },
+        "contextWindow": 524288,
         "maxTokens": 131072,
         "compat": {
           "supportsDeveloperRole": false,
@@ -15994,9 +16102,9 @@
           "text"
         ],
         "cost": {
-          "input": 1.4,
-          "output": 4.4,
-          "cacheRead": 0.26,
+          "input": 0.952,
+          "output": 2.992,
+          "cacheRead": 0.1768,
           "cacheWrite": 0
         },
         "contextWindow": 202752,
@@ -16017,13 +16125,13 @@
           "text"
         ],
         "cost": {
-          "input": 0.76,
-          "output": 2.42,
-          "cacheRead": 0.14,
+          "input": 0.49,
+          "output": 1.54,
+          "cacheRead": 0.091,
           "cacheWrite": 0
         },
-        "contextWindow": 262144,
-        "maxTokens": 262144,
+        "contextWindow": 1048576,
+        "maxTokens": 131072,
         "compat": {
           "supportsDeveloperRole": false,
           "thinkingFormat": "openrouter"
@@ -16190,13 +16298,13 @@
           "text"
         ],
         "cost": {
-          "input": 0.079996,
-          "output": 0.252,
-          "cacheRead": 0.0252,
+          "input": 0.0798,
+          "output": 0.1596,
+          "cacheRead": 0.01596,
           "cacheWrite": 0
         },
         "contextWindow": 1048576,
-        "maxTokens": 4096,
+        "maxTokens": 131072,
         "compat": {
           "supportsDeveloperRole": false,
           "thinkingFormat": "openrouter",
@@ -16356,9 +16464,9 @@
         }
       }
     ],
-    "checkedAt": 1786365929105,
-    "lastModified": 1786365291000,
-    "etag": "W/\"9f18b9fa2776bbd69443a1da7e00323b\""
+    "checkedAt": 1786476216640,
+    "lastModified": 1786458597000,
+    "etag": "W/\"ad27e3ea76f98bb2cfefbf727ac2b77c\""
   },
   "zai": {
     "models": [
@@ -16478,7 +16586,7 @@
         "maxTokens": 131072
       }
     ],
-    "checkedAt": 1786365929906,
+    "checkedAt": 1786476217920,
     "lastModified": 1785917102000,
     "etag": "W/\"98c169c629803193583fc42e7311af91\""
   }
