@@ -1,10 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "env": {
+    "ANTHROPIC_BASE_URL": "http://127.0.0.1:20128/v1",
     "ANTHROPIC_DEFAULT_FABLE_MODEL": "kimchi/minimax-m3",
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "kimchi/minimax-m3",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "oc/deepseek-v4-flash-free",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "oc/mimo-v2.5-free"
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "oc/mimo-v2.5-free",
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
   },
   "model": "sonnet",
   "disableSkillShellExecution": true,
@@ -49,9 +51,7 @@
   "autoScrollEnabled": true,
   "hasCompletedOnboarding": true,
   "permissions": {
-    "allow": [
-      "mcp__codegraph__*"
-    ]
+    "allow": ["mcp__codegraph__*"]
   },
   "hooks": {
     "UserPromptSubmit": [
