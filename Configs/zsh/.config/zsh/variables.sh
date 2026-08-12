@@ -43,10 +43,6 @@ export ASDF_DIR="${ASDF_DATA_DIR}"
 export ARTISTIC_STYLE_OPTIONS="${XDG_CONFIG_HOME}/.astylerc"
 export ARTISTIC_STYLE_PROJECT_OPTIONS="${XDG_CONFIG_HOME}/.astylerc"
 
-# --- Anthropic --- #
-export ANTHROPIC_BASE_URL="http://127.0.0.1:20128/v1"
-export CLAUDE_CODE_ENABLE_TELEMETRY=0
-
 # --- Bat --- #
 export BATDIFF_USE_DELTA=true
 

@@ -20,27 +20,29 @@ autoload -Uz _zinit
 ZSH_CONF="${ZDOTDIR:-${HOME}/.config/zsh}"
 
 MODULES=(
-  variables.sh  # env, PATH (must be first)
-  options.sh    # setopt / unsetopt
-  functions.sh  # reusable logic
-  plugins.sh    # zinit + OMZ snippets (may define aliases)
-  keybinds.sh   # ZLE depends on plugins sometimes
-  completion.sh # compinit, zstyle (after plugins)
-  history.sh    # history options
-  hooks.sh      # precmd, preexec
-  aliases.sh    # MUST be late to override OMZ
-  secrets.sh    # last, contains secrets like API keys (depends on gnupg and env vars)
+  'variables.sh'  # env, PATH (must be first)
+  'options.sh'    # setopt / unsetopt
+  'functions.sh'  # reusable logic
+  'plugins.sh'    # zinit + OMZ snippets (may define aliases)
+  'keybinds.sh'   # ZLE depends on plugins sometimes
+  'completion.sh' # compinit, zstyle (after plugins)
+  'history.sh'    # history options
+  'hooks.sh'      # precmd, preexec
+  'aliases.sh'    # MUST be late to override OMZ
+  'secrets.sh'    # last, contains secrets like API keys (depends on gnupg and env vars)
 )
 
-for m in "${MODULES[@]}"; do
-  [[ -s "${ZSH_CONF}/${m}" ]] && source "${ZSH_CONF}/${m}"
+for module in "${MODULES[@]}"; do
+  [[ -s "${ZSH_CONF}/${module}" ]] && source "${ZSH_CONF}/${module}"
 done
 
 # ---- Load app-specific configurations ---- #
-for app in "${ZSH_CONF}"/apps/*.sh; do
+for app in "${ZSH_CONF}/apps"/*.sh; do
   [[ -s "${app}" ]] && source "${app}"
 done
 
+# Cleanup
+unset MODULES module app
+
 # ---- Auto-start tmux if not already running ---- #
 tmux ls &>/dev/null || tmux
-

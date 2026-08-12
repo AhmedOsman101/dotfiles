@@ -55,7 +55,7 @@ PUPPETEER_EXECUTABLE_PATH="${CHROME_EXECUTABLE}"
 export XONSH_HOME="${HOME}/.local/xonsh-env"
 
 # --- PATH --- #
-export PATH="${PATH}:${XONSH_HOME}/xbin:${HOME}/.local/bin" # my custom scripts
+export PATH="${PATH}:${SCRIPTS_DIR}:${XONSH_HOME}/xbin:${HOME}/.local/bin"
 
 # --- FPATH --- #
 export FPATH="${ZDOTDIR}/functions:${FPATH}"
