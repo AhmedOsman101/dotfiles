@@ -88,11 +88,10 @@ gui:
   switchToFilesAfterStashApply: true
   switchTabsWithPanelJumpKeys: false
 git:
-  pagers:
+  diffRenderers:
     - colorArg: always
-      pager: ""
       useConfig: false
-      externalDiffCommand: ""
+      type: rawGit
   commit:
     signOff: false
     autoWrapCommitMessage: true
@@ -214,6 +213,7 @@ keybinding:
     increaseRenameSimilarityThreshold: )
     decreaseRenameSimilarityThreshold: (
     openDiffTool: <ctrl+t>
+    newWorktree: w
   status:
     checkForUpdate: u
     recentRepos: <enter>
@@ -255,8 +255,6 @@ keybinding:
     setUpstream: u
     fetchRemote: f
     sortOrder: s
-  worktrees:
-    viewWorktreeOptions: w
   commits:
     squashDown: s
     renameCommit: r
