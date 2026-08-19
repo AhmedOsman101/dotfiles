@@ -362,12 +362,6 @@ rename() {
   fi
 }
 
-getVersion() {
-  local url="https://api.github.com/repos/$1/releases"
-  [[ $2 == 'all' ]] && url+='/all' || url+='/latest'
-  curl -fsSL "${url}" | jq -r 'if type == "array" then .[].tag_name else .tag_name end'
-}
-
 copypath() {
   local file="${1:-.}"
   [[ "${file}" = /* ]] || file="${PWD}/${file}"
@@ -389,4 +383,15 @@ copypath() {
   collapseTilde "${absolutePath}" | clipcopy
 
   printBold "${absolutePath} copied to clipboard."
+}
+
+getVersion() {
+  local repo="$1"
+  local json
+  if [[ $2 == 'all' ]]; then
+    gh release list -R "${repo}" --limit 100
+  else
+    json="$(curl -fsSL "https://api.github.com/repos/${repo}/releases/latest")" || return 1
+    echo "${json}" | jq -r '.tag_name' || return 1
+  fi
 }
