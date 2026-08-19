@@ -362,6 +362,12 @@ rename() {
   fi
 }
 
+getVersion() {
+  local url="https://api.github.com/repos/$1/releases"
+  [[ $2 == 'all' ]] && url+='/all' || url+='/latest'
+  curl -fsSL "${url}" | jq -r 'if type == "array" then .[].tag_name else .tag_name end'
+}
+
 copypath() {
   local file="${1:-.}"
   [[ "${file}" = /* ]] || file="${PWD}/${file}"
@@ -382,6 +388,5 @@ copypath() {
 
   collapseTilde "${absolutePath}" | clipcopy
 
-  # shellcheck disable=all
-  echo "${(%):-"%B${file:a}%b copied to clipboard."}"
+  printBold "${absolutePath} copied to clipboard."
 }
