@@ -1113,12 +1113,17 @@
     ]
   },
   "json.schemaDownload.trustedDomains": {
-    "https://schemastore.azurewebsites.net/": true,
-    "https://raw.githubusercontent.com/": true,
-    "https://www.schemastore.org/": true,
-    "https://json.schemastore.org/": true,
+    "https://app.kilo.ai": true,
+    "https://biomejs.dev": true,
+    "https://developer.microsoft.com/json-schemas/": true,
     "https://json-schema.org/": true,
-    "https://biomejs.dev": true
+    "https://json.schemastore.org/": true,
+    "https://models.dev": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://schemastore.azurewebsites.net/": true,
+    "https://www.schemastore.org/": true
   },
   "licenser.disableAutoHeaderInsertion": true,
   "[java]": {
@@ -1148,16 +1153,22 @@
   "commitSage.commit.commitlint.enabled": false,
   "python.analysis.typeCheckingMode": "standard",
   "js/ts.experimental.useTsgo": false,
-  "yaml.disableSchemaDetection": [
-    "**/.github/workflows/*.yml",
-    "**/.github/workflows/*.yaml",
-    "**/.gitea/workflows/*.yml",
-    "**/.gitea/workflows/*.yaml",
-    "**/.forgejo/workflows/*.yml",
-    "**/.forgejo/workflows/*.yaml"
-  ],
   "fallow.autoDownload": false,
   "fallow.lspPath": "/home/othman/.local/share/pnpm/bin/fallow-lsp",
   "editor.autoClosingQuotes": "always",
-  "js/ts.preferences.quoteStyle": "double"
+  "js/ts.preferences.quoteStyle": "double",
+  "terminal.integrated.commandsToSkipShell": [
+    "kilo-code.new.agentManagerOpen",
+    "kilo-code.new.agentManager.showTerminal",
+    "kilo-code.new.agentManager.previousTerminal",
+    "kilo-code.new.agentManager.nextTerminal"
+  ],
+  "kilo-code.new.agentWorkStyle": "unset",
+  "kilo-code.new.browserAutomation.enabled": true,
+  "kilo-code.new.attention.enabled": true,
+  "kilo-code.new.language": "en",
+  "kilo-code.new.showTokenThroughput": true,
+  "kilo-code.new.languageCommitMessage": "en",
+  "kilo-code.new.showTaskTimeline": false,
+  "kilo-code.new.autocomplete.enableChatAutocomplete": true
 }
