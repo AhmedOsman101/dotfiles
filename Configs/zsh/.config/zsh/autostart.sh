@@ -3,6 +3,7 @@
 # Runs all startup programs in background without terminal
 
 # Load the PATH variable
+HOME="${HOME:-/home/othman}"
 source "${ZDOTDIR:-"${HOME}/.config/zsh"}/.zshenv"
 source "${ZDOTDIR:-"${HOME}/.config/zsh"}/variables.sh"
 
@@ -22,9 +23,11 @@ killall -9 "${programs[@]}"
 # ---- Disable power management ---- #
 {
   sleep 1
-  xset s off
-  xset s noblank
-  xset -dpms
+  if [[ "${XDG_SESSION_TYPE}" == "x11" ]]; then
+    xset s off
+    xset s noblank
+    xset -dpms
+  fi
 } &
 
 # ---- Start CopyQ ---- #
