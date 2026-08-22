@@ -1,9 +1,11 @@
 {
-  "lastChangelogVersion": "0.84.1",
+  "lastChangelogVersion": "0.84.2",
   "theme": "dark",
   "defaultProvider": "9router",
-  "defaultModel": "kc/tencent/hy3:free",
-  "packages": ["npm:pi-mcp-extension"],
+  "defaultModel": "kc/stealth/ox-alpha",
+  "packages": [
+    "npm:pi-mcp-extension"
+  ],
   "terminal": {
     "showTerminalProgress": true
   },

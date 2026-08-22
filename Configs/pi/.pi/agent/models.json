@@ -11,7 +11,10 @@
           "contextWindow": 272000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "cx/gpt-5.6-sol",
@@ -19,7 +22,10 @@
           "contextWindow": 372000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "cx/gpt-5.6-terra",
@@ -27,7 +33,10 @@
           "contextWindow": 272000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "kc/nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -67,7 +76,9 @@
           "contextWindow": 200000,
           "maxTokens": 128000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/gpt-5.6-luna",
@@ -119,7 +130,10 @@
           "contextWindow": 1048576,
           "maxTokens": 524288,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "kimchi/kimi-k2.7",
@@ -127,7 +141,10 @@
           "contextWindow": 262144,
           "maxTokens": 60000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "kimchi/nemotron-3-ultra-fp4",
@@ -135,7 +152,9 @@
           "contextWindow": 1048576,
           "maxTokens": 66000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kimchi/deepseek-v4-flash",
@@ -143,7 +162,9 @@
           "contextWindow": 1048576,
           "maxTokens": 384000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kimchi/glm-5.2-fp8",
@@ -151,7 +172,9 @@
           "contextWindow": 200000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "nvidia/deepseek-ai/deepseek-v4-flash",
@@ -159,7 +182,9 @@
           "contextWindow": 1000000,
           "maxTokens": 65536,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "nvidia/z-ai/glm-5.2",
@@ -167,7 +192,9 @@
           "contextWindow": 200000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "nvidia/minimaxai/minimax-m3",
@@ -175,7 +202,10 @@
           "contextWindow": 512000,
           "maxTokens": 131072,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
@@ -187,7 +217,9 @@
           "contextWindow": 200000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "ollama/glm-5",
@@ -195,7 +227,9 @@
           "contextWindow": 200000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "ollama/minimax-m3",
@@ -203,7 +237,10 @@
           "contextWindow": 1048576,
           "maxTokens": 512000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "ollama/qwen3.5",
@@ -211,7 +248,10 @@
           "contextWindow": 1000000,
           "maxTokens": 65536,
           "reasoning": true,
-          "input": ["text", "image", "video"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "openrouter/openrouter/free",
@@ -219,7 +259,9 @@
           "contextWindow": 200000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -227,7 +269,9 @@
           "contextWindow": 128000,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "openrouter/nvidia/nemotron-3.5-lightning:free",
@@ -235,7 +279,9 @@
           "contextWindow": 128000,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "bzl/auto:free",
@@ -243,7 +289,9 @@
           "contextWindow": 200000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "bzl/deepseek-v4-flash",
@@ -251,7 +299,9 @@
           "contextWindow": 1000000,
           "maxTokens": 384000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "bzl/qwen3.7-flash",
@@ -259,7 +309,10 @@
           "contextWindow": 1000000,
           "maxTokens": 65536,
           "reasoning": true,
-          "input": ["text", "image", "video"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "ollama-local/deepseek-r1:1.5b",
@@ -267,7 +320,9 @@
           "contextWindow": 128000,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "ollama-local/hf.co/ewinregirgojr/MiniCPM5-1B-Agentic-Tooluse-GGUF:Q8_0",
@@ -275,7 +330,9 @@
           "contextWindow": 200000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "ollama-local/qwen2.5-coder:0.5b",
@@ -283,7 +340,9 @@
           "contextWindow": 1000000,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "ollama-local/qwen3.5:0.8b",
@@ -291,7 +350,10 @@
           "contextWindow": 1000000,
           "maxTokens": 65536,
           "reasoning": true,
-          "input": ["text", "image", "video"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "ollama-local/lfm2.5-thinking",
@@ -299,7 +361,9 @@
           "contextWindow": 200000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "ollama-local/qwen3:1.7b",
@@ -307,7 +371,9 @@
           "contextWindow": 262144,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "cx/gpt-5.3-codex-spark",
@@ -315,7 +381,9 @@
           "contextWindow": 400000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "cx/gpt-5.3-codex-spark-review",
@@ -323,7 +391,9 @@
           "contextWindow": 400000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "cx/gpt-5.4",
@@ -331,7 +401,10 @@
           "contextWindow": 400000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "cx/gpt-5.4-mini",
@@ -339,7 +412,10 @@
           "contextWindow": 400000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "cx/gpt-5.4-mini-review",
@@ -347,7 +423,10 @@
           "contextWindow": 400000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "cx/gpt-5.4-review",
@@ -355,7 +434,10 @@
           "contextWindow": 400000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "cx/gpt-5.5",
@@ -363,7 +445,10 @@
           "contextWindow": 400000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "cx/gpt-5.5-review",
@@ -371,7 +456,10 @@
           "contextWindow": 400000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "cx/gpt-5.6-luna-review",
@@ -379,7 +467,10 @@
           "contextWindow": 272000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "cx/gpt-5.6-sol-review",
@@ -387,7 +478,10 @@
           "contextWindow": 372000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "cx/gpt-5.6-terra-review",
@@ -395,7 +489,10 @@
           "contextWindow": 272000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "kc/stealth/ox-alpha",
@@ -403,7 +500,9 @@
           "contextWindow": 200000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kimchi/deepseek-v4-flash-0731",
@@ -411,7 +510,9 @@
           "contextWindow": 1048576,
           "maxTokens": 512000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/auto",
@@ -419,7 +520,9 @@
           "contextWindow": 200000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/auto-thinking",
@@ -427,7 +530,9 @@
           "contextWindow": 200000,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/claude-sonnet-4",
@@ -435,7 +540,9 @@
           "contextWindow": 200000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/claude-sonnet-4-agentic",
@@ -443,7 +550,9 @@
           "contextWindow": 200000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/claude-sonnet-4-thinking",
@@ -451,7 +560,9 @@
           "contextWindow": 200000,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/claude-sonnet-4-thinking-agentic",
@@ -459,7 +570,9 @@
           "contextWindow": 200000,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/deepseek-3.2-agentic",
@@ -467,7 +580,9 @@
           "contextWindow": 128000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/deepseek-3.2-thinking",
@@ -475,7 +590,9 @@
           "contextWindow": 128000,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/deepseek-3.2-thinking-agentic",
@@ -483,7 +600,9 @@
           "contextWindow": 128000,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/glm-5-agentic",
@@ -491,7 +610,9 @@
           "contextWindow": 200000,
           "maxTokens": 128000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/glm-5-thinking",
@@ -499,7 +620,9 @@
           "contextWindow": 200000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/glm-5-thinking-agentic",
@@ -507,7 +630,9 @@
           "contextWindow": 200000,
           "maxTokens": 128000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/minimax-m2.1",
@@ -515,7 +640,9 @@
           "contextWindow": 200000,
           "maxTokens": 131072,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/minimax-m2.1-agentic",
@@ -523,7 +650,9 @@
           "contextWindow": 200000,
           "maxTokens": 131072,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/minimax-m2.1-thinking",
@@ -531,7 +660,9 @@
           "contextWindow": 200000,
           "maxTokens": 131072,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/minimax-m2.1-thinking-agentic",
@@ -539,7 +670,9 @@
           "contextWindow": 200000,
           "maxTokens": 131072,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/minimax-m2.5",
@@ -547,7 +680,9 @@
           "contextWindow": 200000,
           "maxTokens": 131072,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/minimax-m2.5-agentic",
@@ -555,7 +690,9 @@
           "contextWindow": 200000,
           "maxTokens": 131072,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/minimax-m2.5-thinking",
@@ -563,7 +700,9 @@
           "contextWindow": 200000,
           "maxTokens": 131072,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/minimax-m2.5-thinking-agentic",
@@ -571,7 +710,9 @@
           "contextWindow": 200000,
           "maxTokens": 131072,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/qwen3-coder-next",
@@ -579,7 +720,9 @@
           "contextWindow": 1000000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/qwen3-coder-next-agentic",
@@ -587,7 +730,9 @@
           "contextWindow": 1000000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/qwen3-coder-next-thinking",
@@ -595,7 +740,9 @@
           "contextWindow": 1000000,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "kr/qwen3-coder-next-thinking-agentic",
@@ -603,7 +750,9 @@
           "contextWindow": 1000000,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "nvidia/nemotron-3-ultra-550b-a55b",
@@ -611,7 +760,9 @@
           "contextWindow": 128000,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "nvidia/parakeet-ctc-1.1b-asr",
@@ -619,7 +770,9 @@
           "contextWindow": 200000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "ollama/gpt-oss:120b",
@@ -627,7 +780,9 @@
           "contextWindow": 128000,
           "maxTokens": 64000,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "ollama/kimi-k2.5",
@@ -635,7 +790,10 @@
           "contextWindow": 262144,
           "maxTokens": 262144,
           "reasoning": true,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         },
         {
           "id": "ollama/minimax-m2.5",
@@ -643,7 +801,9 @@
           "contextWindow": 200000,
           "maxTokens": 131072,
           "reasoning": true,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "openrouter/cohere/north-mini-code:free",
@@ -651,7 +811,9 @@
           "contextWindow": 200000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text"]
+          "input": [
+            "text"
+          ]
         },
         {
           "id": "openrouter/google/gemma-4-31b-it:free",
@@ -659,7 +821,10 @@
           "contextWindow": 128000,
           "maxTokens": 64000,
           "reasoning": false,
-          "input": ["text", "image"]
+          "input": [
+            "text",
+            "image"
+          ]
         }
       ]
     }

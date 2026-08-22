@@ -1,16 +1,17 @@
+
 [core] # Active application settings.
-active_store = 'test' # Store key used by default. Default: "default".
+active_store = 'temp' # Store key used by default. Default: "default".
 
 [generation] # Default pass generate options.
-default_length = 16.0                    # Generated password length. Default: 25.
-symbols = true                           # Include symbols by default. Default: true.
+default_length = 16.0 # Generated password length. Default: 25.
+symbols = true # Include symbols by default. Default: true.
 character_set = '[[:punct:]][[:alnum:]]' # Charset when symbols are enabled. Default: "[[:punct:]][[:alnum:]]".
 character_set_no_symbols = '[[:alnum:]]' # Charset when symbols are disabled. Default: "[[:alnum:]]".
-memorable = false                        # Use memorable passwords diceware.
+memorable = false # Use memorable passwords diceware.
 
 [clipboard] # Clipboard behavior after copy.
 clear_after_seconds = 45.0 # Clear clipboard after seconds. Default: 45.
-selection = 'clipboard'    # X selection to use: clipboard, primary, secondary. Default: "clipboard".
+selection = 'clipboard' # X selection to use: clipboard, primary, secondary. Default: "clipboard".
 
 [gpg] # Supported GPG-related pass defaults.
 opts = [] # Extra GPG options passed to pass. Default: [].
@@ -19,6 +20,7 @@ opts = [] # Extra GPG options passed to pass. Default: [].
 enabled = false # Enable pass extensions. Default: false.
 
 [stores] # Configured password stores.
+temp.path = '/tmp/.password-store'
 
 [stores.default] # Default store (default).
 path = '~/.password-store' # Password store path. Default: "~/.password-store".

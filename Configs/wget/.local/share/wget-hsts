@@ -3,7 +3,7 @@
 # <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
 adrianwilczynski.gallery.vsassets.io	0	1	1747499306	31536000
 www.gnu.org	0	0	1763668313	63072000
-bun.com	0	0	1787081350	63072000
+bun.com	0	0	1787401918	63072000
 raw.githubusercontent.com	0	0	1757777225	31536000
 deno.land	0	1	1787082587	63072000
 api.vercel.com	0	1	1744049297	63072000
