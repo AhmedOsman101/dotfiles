@@ -166,6 +166,9 @@ alias open='xdg-open'
 # --- mkdir --- #
 alias mkdir='mkdir -pv'
 
+# --- DeepSeek Harness --- #
+alias dsh='bunx @deepseek-ai/dsh'
+
 # --- aliases override --- #
 unalias g &>/dev/null || true
 unalias gcm &>/dev/null || true
