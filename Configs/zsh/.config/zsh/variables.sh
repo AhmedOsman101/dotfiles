@@ -96,8 +96,10 @@ export DOAS_NOPASS="${XDG_CONFIG_HOME}/doas/doas.conf"
 
 # --- Deno --- #
 export DENO_UNSTABLE_SLOPPY_IMPORTS="true"
-# export DENO_INSTALL="${XDG_DATA_HOME}/deno"
 export DENO_INSTALL="${HOME}/.deno"
+
+# --- DeepSeek Harness --- #
+export DSH_HOME="${XDG_CONFIG_HOME}/dsh"
 
 # --- FZF ---- #
 # Use fd instead of fzf
