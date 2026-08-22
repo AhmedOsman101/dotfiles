@@ -2,6 +2,9 @@
   "$schema": "https://opencode.ai/config.json",
   "lsp": true,
   "model": "opencode/deepseek-v4-flash-free",
+  "permission": {
+    "websearch": "deny"
+  },
   "server": {
     "port": 8081,
     "hostname": "0.0.0.0"
@@ -40,6 +43,11 @@
     "codegraph": {
       "type": "local",
       "command": ["codegraph", "serve", "--mcp"],
+      "enabled": true
+    },
+    "firecrawl": {
+      "type": "remote",
+      "url": "https://mcp.firecrawl.dev/v2/mcp-oauth",
       "enabled": true
     }
   },
@@ -130,82 +138,637 @@
         "apiKey": "{env:N9ROUTER_API_KEY}"
       },
       "models": {
-        "cx/gpt-5.6-luna": { "name": "cx/gpt-5.6-luna" },
-        "cx/gpt-5.6-sol": { "name": "cx/gpt-5.6-sol" },
-        "cx/gpt-5.6-terra": { "name": "cx/gpt-5.6-terra" },
+        "bzl/auto:free": {
+          "name": "bzl/auto:free",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          }
+        },
+        "bzl/deepseek-v4-flash": {
+          "name": "bzl/deepseek-v4-flash",
+          "limit": {
+            "context": 1000000,
+            "output": 384000
+          },
+          "reasoning": true
+        },
+        "bzl/qwen3.7-flash": {
+          "name": "bzl/qwen3.7-flash",
+          "limit": {
+            "context": 1000000,
+            "output": 65536
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image", "video"],
+            "output": ["text"]
+          }
+        },
+        "cx/gpt-5.4": {
+          "name": "cx/gpt-5.4",
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "cx/gpt-5.4-review": {
+          "name": "cx/gpt-5.4-review",
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "cx/gpt-5.5": {
+          "name": "cx/gpt-5.5",
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "cx/gpt-5.5-review": {
+          "name": "cx/gpt-5.5-review",
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "cx/gpt-5.6-luna": {
+          "name": "cx/gpt-5.6-luna",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "cx/gpt-5.6-luna-review": {
+          "name": "cx/gpt-5.6-luna-review",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "cx/gpt-5.6-sol": {
+          "name": "cx/gpt-5.6-sol",
+          "limit": {
+            "context": 372000,
+            "output": 128000
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "cx/gpt-5.6-sol-review": {
+          "name": "cx/gpt-5.6-sol-review",
+          "limit": {
+            "context": 372000,
+            "output": 128000
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "cx/gpt-5.6-terra": {
+          "name": "cx/gpt-5.6-terra",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "cx/gpt-5.6-terra-review": {
+          "name": "cx/gpt-5.6-terra-review",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
         "kc/nvidia/nemotron-3-ultra-550b-a55b:free": {
           "name": "kc/nvidia/nemotron-3-ultra-550b-a55b:free"
-        },
-        "kc/poolside/laguna-s-2.1:free": {
-          "name": "kc/poolside/laguna-s-2.1:free"
-        },
-        "kc/tencent/hy3:free": { "name": "kc/tencent/hy3:free" },
-        "kc/stepfun/step-3.7-flash:free": {
-          "name": "kc/stepfun/step-3.7-flash:free"
         },
         "kc/nvidia/nemotron-3.5-lightning:free": {
           "name": "kc/nvidia/nemotron-3.5-lightning:free"
         },
-        "kr/claude-opus-4.8": { "name": "kr/claude-opus-4.8" },
-        "kr/claude-opus-5": { "name": "kr/claude-opus-5" },
-        "kr/claude-sonnet-5": { "name": "kr/claude-sonnet-5" },
-        "kr/glm-5": { "name": "kr/glm-5" },
-        "kr/gpt-5.6-luna": { "name": "kr/gpt-5.6-luna" },
-        "kr/gpt-5.6-sol": { "name": "kr/gpt-5.6-sol" },
-        "kr/gpt-5.6-terra": { "name": "kr/gpt-5.6-terra" },
-        "mmf/mimo-auto": { "name": "mmf/mimo-auto" },
-        "oc/big-pickle": { "name": "oc/big-pickle" },
-        "oc/deepseek-v4-flash-free": { "name": "oc/deepseek-v4-flash-free" },
-        "oc/laguna-s-2.1-free": { "name": "oc/laguna-s-2.1-free" },
-        "oc/ling-3.0-flash-free": { "name": "oc/ling-3.0-flash-free" },
-        "oc/longcat-2.0-free": { "name": "oc/longcat-2.0-free" },
-        "oc/mimo-v2.5-free": { "name": "oc/mimo-v2.5-free" },
-        "oc/nemotron-3-ultra-free": { "name": "oc/nemotron-3-ultra-free" },
-        "kimchi/minimax-m3": { "name": "kimchi/minimax-m3" },
-        "kimchi/kimi-k2.7": { "name": "kimchi/kimi-k2.7" },
+        "kc/poolside/laguna-s-2.1:free": {
+          "name": "kc/poolside/laguna-s-2.1:free"
+        },
+        "kc/stealth/ox-alpha": {
+          "name": "kc/stealth/ox-alpha",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          }
+        },
+        "kc/stepfun/step-3.7-flash:free": {
+          "name": "kc/stepfun/step-3.7-flash:free"
+        },
+        "kc/tencent/hy3:free": {
+          "name": "kc/tencent/hy3:free"
+        },
+        "kc/thinkingmachines/inkling-small:free": {
+          "name": "kc/thinkingmachines/inkling-small:free"
+        },
+        "kc/thinkingmachines/inkling:free": {
+          "name": "kc/thinkingmachines/inkling:free"
+        },
+        "kimchi/deepseek-v4-flash": {
+          "name": "kimchi/deepseek-v4-flash",
+          "limit": {
+            "context": 1048576,
+            "output": 384000
+          },
+          "reasoning": true
+        },
+        "kimchi/deepseek-v4-flash-0731": {
+          "name": "kimchi/deepseek-v4-flash-0731",
+          "limit": {
+            "context": 1048576,
+            "output": 512000
+          },
+          "reasoning": true
+        },
+        "kimchi/glm-5.2-fp8": {
+          "name": "kimchi/glm-5.2-fp8",
+          "limit": {
+            "context": 200000,
+            "output": 128000
+          },
+          "reasoning": true
+        },
+        "kimchi/kimi-k2.7": {
+          "name": "kimchi/kimi-k2.7"
+        },
+        "kimchi/minimax-m3": {
+          "name": "kimchi/minimax-m3",
+          "limit": {
+            "context": 1048576,
+            "output": 524288
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
         "kimchi/nemotron-3-ultra-fp4": {
-          "name": "kimchi/nemotron-3-ultra-fp4"
+          "name": "kimchi/nemotron-3-ultra-fp4",
+          "limit": {
+            "context": 1048576,
+            "output": 66000
+          },
+          "reasoning": true
         },
-        "kimchi/deepseek-v4-flash": { "name": "kimchi/deepseek-v4-flash" },
-        "kimchi/glm-5.2-fp8": { "name": "kimchi/glm-5.2-fp8" },
+        "kr/auto": {
+          "name": "kr/auto",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          }
+        },
+        "kr/auto-thinking": {
+          "name": "kr/auto-thinking",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "reasoning": true
+        },
+        "kr/claude-opus-4.7": {
+          "name": "kr/claude-opus-4.7"
+        },
+        "kr/claude-opus-4.8": {
+          "name": "kr/claude-opus-4.8"
+        },
+        "kr/claude-opus-5": {
+          "name": "kr/claude-opus-5"
+        },
+        "kr/claude-sonnet-5": {
+          "name": "kr/claude-sonnet-5"
+        },
+        "kr/glm-5": {
+          "name": "kr/glm-5",
+          "limit": {
+            "context": 200000,
+            "output": 128000
+          }
+        },
+        "kr/gpt-5.6-luna": {
+          "name": "kr/gpt-5.6-luna"
+        },
+        "kr/gpt-5.6-sol": {
+          "name": "kr/gpt-5.6-sol"
+        },
+        "kr/gpt-5.6-terra": {
+          "name": "kr/gpt-5.6-terra"
+        },
+        "kr/qwen3-coder-next": {
+          "name": "kr/qwen3-coder-next",
+          "limit": {
+            "context": 1000000,
+            "output": 64000
+          }
+        },
+        "mmf/mimo-auto": {
+          "name": "mmf/mimo-auto"
+        },
         "nvidia/deepseek-ai/deepseek-v4-flash": {
-          "name": "nvidia/deepseek-ai/deepseek-v4-flash"
+          "name": "nvidia/deepseek-ai/deepseek-v4-flash",
+          "limit": {
+            "context": 1000000,
+            "output": 65536
+          },
+          "reasoning": true
         },
-        "nvidia/z-ai/glm-5.2": { "name": "nvidia/z-ai/glm-5.2" },
         "nvidia/minimaxai/minimax-m3": {
-          "name": "nvidia/minimaxai/minimax-m3"
+          "name": "nvidia/minimaxai/minimax-m3",
+          "limit": {
+            "context": 512000,
+            "output": 131072
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "nvidia/nemotron-3-ultra-550b-a55b": {
+          "name": "nvidia/nemotron-3-ultra-550b-a55b",
+          "limit": {
+            "context": 128000,
+            "output": 64000
+          },
+          "reasoning": true
         },
         "nvidia/nvidia/nemotron-3-ultra-550b-a55b": {
           "name": "nvidia/nvidia/nemotron-3-ultra-550b-a55b"
         },
-        "ollama/glm-4.7-flash": { "name": "ollama/glm-4.7-flash" },
-        "ollama/glm-5": { "name": "ollama/glm-5" },
-        "ollama/minimax-m3": { "name": "ollama/minimax-m3" },
-        "ollama/qwen3.5": { "name": "ollama/qwen3.5" },
-        "openrouter/openrouter/free": { "name": "openrouter/openrouter/free" },
-        "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free": {
-          "name": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free"
+        "nvidia/z-ai/glm-5.2": {
+          "name": "nvidia/z-ai/glm-5.2",
+          "limit": {
+            "context": 200000,
+            "output": 128000
+          },
+          "reasoning": true
         },
-        "openrouter/nvidia/nemotron-3.5-lightning:free": {
-          "name": "openrouter/nvidia/nemotron-3.5-lightning:free"
+        "oc/big-pickle": {
+          "name": "oc/big-pickle"
         },
-        "bzl/auto:free": { "name": "bzl/auto:free" },
-        "bzl/deepseek-v4-flash": { "name": "bzl/deepseek-v4-flash" },
-        "bzl/qwen3.7-flash": { "name": "bzl/qwen3.7-flash" },
+        "oc/deepseek-v4-flash-free": {
+          "name": "oc/deepseek-v4-flash-free"
+        },
+        "oc/laguna-s-2.1-free": {
+          "name": "oc/laguna-s-2.1-free"
+        },
+        "oc/ling-3.0-flash-free": {
+          "name": "oc/ling-3.0-flash-free"
+        },
+        "oc/longcat-2.0-free": {
+          "name": "oc/longcat-2.0-free"
+        },
+        "oc/mimo-v2.5-free": {
+          "name": "oc/mimo-v2.5-free"
+        },
+        "oc/nemotron-3-ultra-free": {
+          "name": "oc/nemotron-3-ultra-free"
+        },
         "ollama-local/deepseek-r1:1.5b": {
           "name": "ollama-local/deepseek-r1:1.5b"
         },
         "ollama-local/hf.co/ewinregirgojr/MiniCPM5-1B-Agentic-Tooluse-GGUF:Q8_0": {
           "name": "ollama-local/MiniCPM5-1B"
         },
-        "ollama-local/qwen2.5-coder:0.5b": {
-          "name": "ollama-local/qwen2.5-coder:0.5b"
-        },
-        "ollama-local/qwen3.5:0.8b": { "name": "ollama-local/qwen3.5:0.8b" },
         "ollama-local/lfm2.5-thinking": {
           "name": "ollama-local/lfm2.5-thinking"
         },
-        "ollama-local/qwen3:1.7b": { "name": "ollama-local/qwen3:1.7b" }
+        "ollama-local/qwen2.5-coder:0.5b": {
+          "name": "ollama-local/qwen2.5-coder:0.5b"
+        },
+        "ollama-local/qwen3.5:0.8b": {
+          "name": "ollama-local/qwen3.5:0.8b"
+        },
+        "ollama-local/qwen3:1.7b": {
+          "name": "ollama-local/qwen3:1.7b"
+        },
+        "ollama/glm-4.7-flash": {
+          "name": "ollama/glm-4.7-flash"
+        },
+        "ollama/glm-5": {
+          "name": "ollama/glm-5",
+          "limit": {
+            "context": 200000,
+            "output": 128000
+          },
+          "reasoning": true
+        },
+        "ollama/gpt-oss:120b": {
+          "name": "ollama/gpt-oss:120b",
+          "limit": {
+            "context": 128000,
+            "output": 64000
+          },
+          "reasoning": true
+        },
+        "ollama/kimi-k2.5": {
+          "name": "ollama/kimi-k2.5",
+          "limit": {
+            "context": 262144,
+            "output": 262144
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "ollama/minimax-m3": {
+          "name": "ollama/minimax-m3",
+          "limit": {
+            "context": 1048576,
+            "output": 512000
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "ollama/qwen3.5": {
+          "name": "ollama/qwen3.5",
+          "limit": {
+            "context": 1000000,
+            "output": 65536
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image", "video"],
+            "output": ["text"]
+          }
+        },
+        "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free": {
+          "name": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+          "limit": {
+            "context": 128000,
+            "output": 64000
+          },
+          "reasoning": true
+        },
+        "openrouter/nvidia/nemotron-3.5-lightning:free": {
+          "name": "openrouter/nvidia/nemotron-3.5-lightning:free",
+          "limit": {
+            "context": 128000,
+            "output": 64000
+          },
+          "reasoning": true
+        },
+        "openrouter/openrouter/free": {
+          "name": "openrouter/openrouter/free",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          }
+        },
+        "kr/claude-sonnet-4": {
+          "name": "kr/claude-sonnet-4",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          }
+        },
+        "kr/claude-sonnet-4-thinking": {
+          "name": "kr/claude-sonnet-4-thinking",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "reasoning": true
+        },
+        "kr/claude-sonnet-4-agentic": {
+          "name": "kr/claude-sonnet-4-agentic",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          }
+        },
+        "kr/claude-sonnet-4-thinking-agentic": {
+          "name": "kr/claude-sonnet-4-thinking-agentic",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "reasoning": true
+        },
+        "kr/deepseek-3.2-thinking": {
+          "name": "kr/deepseek-3.2-thinking",
+          "limit": {
+            "context": 128000,
+            "output": 64000
+          },
+          "reasoning": true
+        },
+        "kr/deepseek-3.2-agentic": {
+          "name": "kr/deepseek-3.2-agentic",
+          "limit": {
+            "context": 128000,
+            "output": 64000
+          }
+        },
+        "kr/deepseek-3.2-thinking-agentic": {
+          "name": "kr/deepseek-3.2-thinking-agentic",
+          "limit": {
+            "context": 128000,
+            "output": 64000
+          },
+          "reasoning": true
+        },
+        "kr/minimax-m2.5": {
+          "name": "kr/minimax-m2.5",
+          "limit": {
+            "context": 200000,
+            "output": 131072
+          }
+        },
+        "kr/minimax-m2.5-thinking": {
+          "name": "kr/minimax-m2.5-thinking",
+          "limit": {
+            "context": 200000,
+            "output": 131072
+          },
+          "reasoning": true
+        },
+        "kr/minimax-m2.5-agentic": {
+          "name": "kr/minimax-m2.5-agentic",
+          "limit": {
+            "context": 200000,
+            "output": 131072
+          }
+        },
+        "kr/minimax-m2.5-thinking-agentic": {
+          "name": "kr/minimax-m2.5-thinking-agentic",
+          "limit": {
+            "context": 200000,
+            "output": 131072
+          },
+          "reasoning": true
+        },
+        "kr/minimax-m2.1": {
+          "name": "kr/minimax-m2.1",
+          "limit": {
+            "context": 200000,
+            "output": 131072
+          }
+        },
+        "kr/minimax-m2.1-thinking": {
+          "name": "kr/minimax-m2.1-thinking",
+          "limit": {
+            "context": 200000,
+            "output": 131072
+          },
+          "reasoning": true
+        },
+        "kr/minimax-m2.1-agentic": {
+          "name": "kr/minimax-m2.1-agentic",
+          "limit": {
+            "context": 200000,
+            "output": 131072
+          }
+        },
+        "kr/minimax-m2.1-thinking-agentic": {
+          "name": "kr/minimax-m2.1-thinking-agentic",
+          "limit": {
+            "context": 200000,
+            "output": 131072
+          },
+          "reasoning": true
+        },
+        "kr/glm-5-thinking": {
+          "name": "kr/glm-5-thinking",
+          "limit": {
+            "context": 200000,
+            "output": 128000
+          },
+          "reasoning": true
+        },
+        "kr/glm-5-agentic": {
+          "name": "kr/glm-5-agentic",
+          "limit": {
+            "context": 200000,
+            "output": 128000
+          }
+        },
+        "kr/glm-5-thinking-agentic": {
+          "name": "kr/glm-5-thinking-agentic",
+          "limit": {
+            "context": 200000,
+            "output": 128000
+          },
+          "reasoning": true
+        },
+        "kr/qwen3-coder-next-thinking": {
+          "name": "kr/qwen3-coder-next-thinking",
+          "limit": {
+            "context": 1000000,
+            "output": 64000
+          },
+          "reasoning": true
+        },
+        "kr/qwen3-coder-next-agentic": {
+          "name": "kr/qwen3-coder-next-agentic",
+          "limit": {
+            "context": 1000000,
+            "output": 64000
+          }
+        },
+        "kr/qwen3-coder-next-thinking-agentic": {
+          "name": "kr/qwen3-coder-next-thinking-agentic",
+          "limit": {
+            "context": 1000000,
+            "output": 64000
+          },
+          "reasoning": true
+        },
+        "openrouter/cohere/north-mini-code:free": {
+          "name": "openrouter/cohere/north-mini-code:free",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          }
+        },
+        "openrouter/google/gemma-4-31b-it:free": {
+          "name": "openrouter/google/gemma-4-31b-it:free",
+          "limit": {
+            "context": 128000,
+            "output": 64000
+          },
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "nvidia/parakeet-ctc-1.1b-asr": {
+          "name": "nvidia/parakeet-ctc-1.1b-asr",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          }
+        },
+        "ollama/minimax-m2.5": {
+          "name": "ollama/minimax-m2.5",
+          "limit": {
+            "context": 200000,
+            "output": 131072
+          },
+          "reasoning": true
+        },
+        "cx/gpt-5.4-mini": {
+          "name": "cx/gpt-5.4-mini",
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "cx/gpt-5.4-mini-review": {
+          "name": "cx/gpt-5.4-mini-review",
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "reasoning": true,
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "cx/gpt-5.3-codex-spark": {
+          "name": "cx/gpt-5.3-codex-spark",
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "reasoning": true
+        },
+        "cx/gpt-5.3-codex-spark-review": {
+          "name": "cx/gpt-5.3-codex-spark-review",
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "reasoning": true
+        }
       }
     }
   }

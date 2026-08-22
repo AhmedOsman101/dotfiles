@@ -3,9 +3,7 @@
   "theme": "dark",
   "defaultProvider": "9router",
   "defaultModel": "kc/tencent/hy3:free",
-  "packages": [
-    "npm:pi-mcp-extension"
-  ],
+  "packages": ["npm:pi-mcp-extension"],
   "terminal": {
     "showTerminalProgress": true
   },
