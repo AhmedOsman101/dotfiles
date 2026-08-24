@@ -1,6 +1,6 @@
 
 [core] # Active application settings.
-active_store = 'temp' # Store key used by default. Default: "default".
+active_store = 'test' # Store key used by default. Default: "default".
 
 [generation] # Default pass generate options.
 default_length = 16.0 # Generated password length. Default: 25.
@@ -19,8 +19,8 @@ opts = [] # Extra GPG options passed to pass. Default: [].
 [extensions] # pass extension support.
 enabled = false # Enable pass extensions. Default: false.
 
-[stores] # Configured password stores.
-temp.path = '/tmp/.password-store'
+[stores.temp] # Configured password stores.
+path = '/tmp/.password-store'
 
 [stores.default] # Default store (default).
 path = '~/.password-store' # Password store path. Default: "~/.password-store".
