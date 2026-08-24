@@ -45,9 +45,14 @@
       "command": ["codegraph", "serve", "--mcp"],
       "enabled": true
     },
-    "firecrawl": {
-      "type": "remote",
-      "url": "https://mcp.firecrawl.dev/v2/mcp-oauth",
+    "ddg-search": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--with",
+        "'duckduckgo-mcp-server[browser]'",
+        "duckduckgo-mcp-server"
+      ],
       "enabled": true
     }
   },
@@ -174,7 +179,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "cx/gpt-5.4-review": {
           "name": "cx/gpt-5.4-review",
@@ -184,7 +192,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "cx/gpt-5.5": {
           "name": "cx/gpt-5.5",
@@ -194,7 +205,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "cx/gpt-5.5-review": {
           "name": "cx/gpt-5.5-review",
@@ -204,7 +218,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "cx/gpt-5.6-luna": {
           "name": "cx/gpt-5.6-luna",
@@ -214,7 +231,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "cx/gpt-5.6-luna-review": {
           "name": "cx/gpt-5.6-luna-review",
@@ -224,7 +244,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "cx/gpt-5.6-sol": {
           "name": "cx/gpt-5.6-sol",
@@ -234,7 +257,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "cx/gpt-5.6-sol-review": {
           "name": "cx/gpt-5.6-sol-review",
@@ -244,7 +270,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "cx/gpt-5.6-terra": {
           "name": "cx/gpt-5.6-terra",
@@ -254,7 +283,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "cx/gpt-5.6-terra-review": {
           "name": "cx/gpt-5.6-terra-review",
@@ -264,7 +296,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "kc/nvidia/nemotron-3-ultra-550b-a55b:free": {
           "name": "kc/nvidia/nemotron-3-ultra-550b-a55b:free"
@@ -278,8 +313,8 @@
         "kc/stealth/ox-alpha": {
           "name": "kc/stealth/ox-alpha",
           "limit": {
-            "context": 200000,
-            "output": 64000
+            "context": 1048576,
+            "output": 131072
           }
         },
         "kc/stepfun/step-3.7-flash:free": {
@@ -329,7 +364,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "kimchi/nemotron-3-ultra-fp4": {
           "name": "kimchi/nemotron-3-ultra-fp4",
@@ -408,7 +446,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "nvidia/nemotron-3-ultra-550b-a55b": {
           "name": "nvidia/nemotron-3-ultra-550b-a55b",
@@ -495,7 +536,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "ollama/minimax-m3": {
           "name": "ollama/minimax-m3",
@@ -505,7 +549,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "ollama/qwen3.5": {
           "name": "ollama/qwen3.5",
@@ -716,7 +763,10 @@
             "output": 64000
           },
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "nvidia/parakeet-ctc-1.1b-asr": {
           "name": "nvidia/parakeet-ctc-1.1b-asr",
@@ -741,7 +791,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "cx/gpt-5.4-mini-review": {
           "name": "cx/gpt-5.4-mini-review",
@@ -751,7 +804,10 @@
           },
           "reasoning": true,
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         },
         "cx/gpt-5.3-codex-spark": {
           "name": "cx/gpt-5.3-codex-spark",

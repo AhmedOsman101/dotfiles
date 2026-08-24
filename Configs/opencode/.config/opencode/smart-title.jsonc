@@ -9,7 +9,7 @@
   // Format: "provider/model" (same as agent model config in opencode.jsonc)
   // If not specified, will use intelligent fallbacks from authenticated providers
   // Examples: "anthropic/claude-haiku-4-5", "openai/gpt-5-mini"
-  "model": "9router/kc/tencent/hy3:free",
+  "model": "9router/kc/kilo-auto/free",
 
   // Update title every N idle events (default: 1)
   "updateThreshold": 1
