@@ -50,7 +50,7 @@
       "command": [
         "uvx",
         "--with",
-        "'duckduckgo-mcp-server[browser]'",
+        "duckduckgo-mcp-server[browser]",
         "duckduckgo-mcp-server"
       ],
       "enabled": true
