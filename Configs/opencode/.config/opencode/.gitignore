@@ -3,3 +3,4 @@ package.json
 bun.lock
 .env
 docs
+plugins/opencode-smart-title

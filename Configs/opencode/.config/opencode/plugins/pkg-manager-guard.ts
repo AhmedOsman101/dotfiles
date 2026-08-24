@@ -1,3 +1,5 @@
+import { existsSync } from "node:fs"
+import { join } from "node:path"
 import type { Plugin } from "@opencode-ai/plugin"
 
 type PkgManager = { manager: string; runner: string }
@@ -19,31 +21,39 @@ function needsRewrite(cmd: string): boolean {
 function rewrite(cmd: string, pm: PkgManager): string {
   const hadNpx = cmd.includes(" npx ") || cmd.startsWith("npx ")
   const hadNpm = cmd.includes(" npm ") || cmd.startsWith("npm ")
+  const corrected = cmd.replace(NPX_RE, `${pm.runner} `).replace(NPM_RE, `${pm.manager} `)
 
   const parts: string[] = []
-  if (hadNpx) parts.push(`npx → ${pm.runner}`)
-  if (hadNpm) parts.push(`npm → ${pm.manager}`)
-  const notice = `echo "[pkg-manager-guard] ${parts.join(", ")} — use these directly next time" >&2 && `
+  if (hadNpx) parts.push(`npx -> ${pm.runner}`)
+  if (hadNpm) parts.push(`npm -> ${pm.manager}`)
 
-  return notice + cmd.replace(NPX_RE, `${pm.runner} `).replace(NPM_RE, `${pm.manager} `)
+  // Strip chars that would break out of the double-quoted echo (quotes, backticks,
+  // $-expansion, backslashes) — the original command is shown for context only.
+  const safeOriginal = cmd.replace(/["\\`$]/g, "'")
+  const notice =
+    `[pkg-manager-guard] AGENT NOTICE: Your command was AUTO-REWRITTEN by an opencode plugin before running. ` +
+    `The 'echo' line below was injected by the plugin, not written by you. ` +
+    `Original: '${safeOriginal}' (${parts.join(", ")}). ` +
+    `Use '${pm.manager}' directly next time (and '${pm.runner}' instead of npx).`
+
+  return `echo "${notice}" >&2 && ${corrected}`
 }
 
-async function detectPkgManager($: any, dir: string): Promise<PkgManager> {
-  const check = async (file: string) => {
-    const out = await $`test -f ${dir}/${file} && echo "exists"`.quiet()
-    return (await out.text()).trim() === "exists"
-  }
-
-  if (await check("pnpm-lock.yaml")) return MANAGERS.pnpm
-  if (await check("bun.lock")) return MANAGERS.bun
-  if (await check("deno.lock")) return MANAGERS.deno
+// ponytail: fs-based lockfile detection instead of shelling out — opencode's
+// plugin ctx `$` lacked .quiet() and crashed the whole plugin on load.
+function detectPkgManager(dir: string): PkgManager {
+  if (existsSync(join(dir, "pnpm-lock.yaml"))) return MANAGERS.pnpm
+  if (existsSync(join(dir, "bun.lock"))) return MANAGERS.bun
+  if (existsSync(join(dir, "deno.lock"))) return MANAGERS.deno
   return MANAGERS.pnpm
 }
 
-export const PkgManagerGuard: Plugin = async ({ $, directory }) => {
-  const pm = await detectPkgManager($, directory)
+// biome-ignore lint/suspicious/useAwait: That's how it works
+export const PkgManagerGuard: Plugin = async ({ directory }) => {
+  const pm = detectPkgManager(directory)
 
   return {
+    // biome-ignore lint/suspicious/useAwait: That's how it works
     "tool.execute.before": async (input, output) => {
       if (input.tool !== "bash") return
 
