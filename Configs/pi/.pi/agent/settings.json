@@ -2,7 +2,7 @@
   "lastChangelogVersion": "0.84.2",
   "theme": "dark",
   "defaultProvider": "9router",
-  "defaultModel": "kc/stealth/ox-alpha",
+  "defaultModel": "oc/x-preview-f-free",
   "packages": [
     "npm:pi-mcp-extension"
   ],
@@ -11,5 +11,6 @@
   },
   "steeringMode": "all",
   "enableInstallTelemetry": false,
-  "defaultProjectTrust": "always"
+  "defaultProjectTrust": "always",
+  "defaultThinkingLevel": "medium"
 }

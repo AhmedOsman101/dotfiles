@@ -20,6 +20,7 @@ _vars=(
   OPENROUTER_API_KEY
   ZAI_API_KEY
   N9ROUTER_API_KEY
+  FIRECRAWL_API_KEY
 )
 
 for _var in "${_vars[@]}"; do
@@ -52,6 +53,7 @@ OPENROUTER_API_KEY="$(pass show openrouter)"
 ZAI_API_KEY="$(pass show z.ai)"
 N9ROUTER_API_KEY="$(pass show 9router)"
 ANTHROPIC_API_KEY="${N9ROUTER_API_KEY}"
+FIRECRAWL_API_KEY="$(pass show firecrawl/api-key)"
 
 export "${_vars[@]}"
 

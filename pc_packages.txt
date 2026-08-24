@@ -15,7 +15,6 @@ android-sdk-platform-tools
 android-udev
 ani-cli
 ansifilter
-antigravity-ide
 apfs-fuse-git
 apparmor
 appmenu-gtk-module
@@ -46,6 +45,7 @@ bash-language-server
 bat
 bat-extras
 bc
+betterbird-bin
 bind
 bluez
 bluez-utils
@@ -86,6 +86,7 @@ dkms
 dmenu
 dmg2img
 dnsmasq
+docker-sbx
 dolphin
 dos2unix
 dosfstools
@@ -220,7 +221,6 @@ linux-firmware
 linux-lts
 linux-lts-headers
 llvm
-lmstudio-bin
 localsend
 love
 lsp-plugins-lv2

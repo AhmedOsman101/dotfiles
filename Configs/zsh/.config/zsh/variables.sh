@@ -205,6 +205,9 @@ export NVM_DIR="${XDG_DATA_HOME}/nvm"
 # --- NU Shell --- #
 export NU_CONFIG="${XDG_CONFIG_HOME}/nushell/config.nu"
 
+# --- OpenCode --- #
+export OPENCODE_ENABLE_EXA=1
+
 # --- Parallel --- #
 export PARALLEL_HOME="${XDG_CONFIG_HOME}/parallel"
 
