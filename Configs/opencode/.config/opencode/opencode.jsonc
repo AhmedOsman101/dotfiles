@@ -61,7 +61,8 @@
     "@tarquinen/opencode-dcp@latest",
     "opencode-handoff@latest",
     "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
-    "@tarquinen/opencode-smart-title@latest",
+    // "@tarquinen/opencode-smart-title@latest", // TODO: restore after PR #13 merges
+    // "@tarquinen/opencode-smart-title@git+https://github.com/AhmedOsman101/opencode-smart-title.git#run/fork-build", // replaced by local clone in plugins/opencode-smart-title/ (auto-loaded, avoids DEP0169)
     "@dietrichgebert/ponytail@latest"
     // "opencode-system-prompt-logger",
     // "@plannotator/opencode@latest",
@@ -308,7 +309,18 @@
           "name": "kc/nvidia/nemotron-3.5-lightning:free"
         },
         "kc/poolside/laguna-s-2.1:free": {
-          "name": "kc/poolside/laguna-s-2.1:free"
+          "name": "kc/poolside/laguna-s-2.1:free",
+          "limit": {
+            "context": 1000000,
+            "output": 32000
+          }
+        },
+        "ps/poolside/laguna-s-2.1": {
+          "name": "ps/poolside/laguna-s-2.1",
+          "limit": {
+            "context": 1000000,
+            "output": 32000
+          }
         },
         "kc/stealth/ox-alpha": {
           "name": "kc/stealth/ox-alpha",
