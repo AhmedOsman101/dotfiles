@@ -859,7 +859,7 @@
   "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
   "markdown-preview-enhanced.enableExtendedTableSyntax": true,
   "markdown-preview-enhanced.enableHTML5Embed": true,
-  "markdown-preview-enhanced.enablePreviewZenMode": false,
+  "markdown-preview-enhanced.enablePreviewZenMode": true,
   "markdown-preview-enhanced.enableTypographer": true,
   "markdown-preview-enhanced.latexEngine": "MikTex",
   "markdown-preview-enhanced.mathRenderingOnlineService": "https://latex.codecogs.com/png.latex",
@@ -1170,5 +1170,8 @@
   "kilo-code.new.showTokenThroughput": true,
   "kilo-code.new.languageCommitMessage": "en",
   "kilo-code.new.showTaskTimeline": false,
-  "kilo-code.new.autocomplete.enableChatAutocomplete": true
+  "kilo-code.new.autocomplete.enableChatAutocomplete": true,
+  "omnicopilot.baseUrl": "http://localhost:8082",
+  "omnicopilot.defaultContextLength": 200000,
+  "omnicopilot.maxOutputTokens": 32000
 }
