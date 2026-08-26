@@ -34,6 +34,14 @@
           "name": "kc/nvidia/nemotron-3-ultra-550b-a55b:free"
         },
         {
+          "id": "kc/thinkingmachines/inkling:free",
+          "name": "kc/thinkingmachines/inkling:free"
+        },
+        {
+          "id": "kc/kilo-auto/free",
+          "name": "kc/kilo-auto/free"
+        },
+        {
           "id": "kc/poolside/laguna-s-2.1:free",
           "name": "kc/poolside/laguna-s-2.1:free"
         },

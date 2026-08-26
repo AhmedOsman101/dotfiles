@@ -1,8 +1,8 @@
 {
   "lastChangelogVersion": "0.84.2",
   "theme": "dark",
-  "defaultProvider": "openrouter",
-  "defaultModel": "stealth/ox-alpha",
+  "defaultProvider": "9router",
+  "defaultModel": "kc/kilo-auto/free",
   "packages": [
     "npm:pi-mcp-extension",
     "git:github.com/amosblomqvist/pi-interactive-subagents",

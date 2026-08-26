@@ -12,5 +12,9 @@
   "model": "poolside/poolside/laguna-s-2.1",
 
   // Update title every N idle events (default: 1)
-  "updateThreshold": 1
+  // Set to 0 to generate title only once on the first idle event of a new session
+  "updateThreshold": 0,
+
+  // Enable `/smart-title generate` command to regenerate the session title
+  "commandsEnabled": true
 }
