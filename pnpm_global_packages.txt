@@ -21,3 +21,4 @@ typescript-language-server
 unlighthouse
 vite
 yaml-language-server
+strip-json-comments-cli
