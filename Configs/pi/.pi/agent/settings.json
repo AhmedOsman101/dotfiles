@@ -4,7 +4,9 @@
   "defaultProvider": "9router",
   "defaultModel": "kc/nvidia/nemotron-3-ultra-550b-a55b:free",
   "packages": [
-    "npm:pi-mcp-extension"
+    "npm:pi-mcp-extension",
+    "git:github.com/amosblomqvist/pi-interactive-subagents",
+    "git:github.com/amosblomqvist/pi-observational-memory"
   ],
   "terminal": {
     "showTerminalProgress": true
