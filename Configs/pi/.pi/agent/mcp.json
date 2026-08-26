@@ -16,6 +16,36 @@
       "args": ["mcp"],
       "transport": "stdio",
       "lifecycle": "lazy"
+    },
+    "ddg-search": {
+      "command": "uvx",
+      "args": ["--with", "duckduckgo-mcp-server[browser]", "duckduckgo-mcp-server"],
+      "transport": "stdio",
+      "lifecycle": "lazy"
+    },
+    "context7": {
+      "command": "pnpx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "transport": "stdio",
+      "lifecycle": "lazy",
+      "enabled": false
+    },
+    "github": {
+      "command": "pnpx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "transport": "stdio",
+      "lifecycle": "lazy",
+      "enabled": false,
+      "env": {
+        "GITHUB_TOKEN": "{env:GITHUB_TOKEN}"
+      }
+    },
+    "chrome-devtools": {
+      "command": "bunx",
+      "args": ["chrome-devtools-mcp@latest", "--executable-path=/usr/bin/thorium-browser-avx2", "--no-usage-statistics"],
+      "transport": "stdio",
+      "lifecycle": "lazy",
+      "enabled": false
     }
   }
 }
