@@ -1,8 +1,8 @@
 {
   "lastChangelogVersion": "0.84.2",
   "theme": "dark",
-  "defaultProvider": "9router",
-  "defaultModel": "kc/poolside/laguna-s-2.1:free",
+  "defaultProvider": "openrouter",
+  "defaultModel": "stealth/ox-alpha",
   "packages": [
     "npm:pi-mcp-extension",
     "git:github.com/amosblomqvist/pi-interactive-subagents",
@@ -14,5 +14,5 @@
   "steeringMode": "all",
   "enableInstallTelemetry": false,
   "defaultProjectTrust": "always",
-  "defaultThinkingLevel": "medium"
+  "defaultThinkingLevel": "high"
 }

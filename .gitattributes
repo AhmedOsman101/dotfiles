@@ -29,3 +29,4 @@ Configs/9router/.9router/9router-backup*.json  filter=git-crypt diff=git-crypt
 # PI sessions and auth
 Configs/pi/.pi/agent/sessions/**  filter=git-crypt diff=git-crypt
 Configs/pi/.pi/agent/auth.json    filter=git-crypt diff=git-crypt
+Configs/pi/.pi/.memory/**         filter=git-crypt diff=git-crypt
