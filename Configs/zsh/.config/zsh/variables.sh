@@ -217,6 +217,9 @@ export PASSWORD_STORE_DIR="${HOME}/.password-store"
 # --- Piper voices directory --- #
 export PIPER_DIR="${XDG_DATA_HOME}/piper"
 
+# --- Pi --- #
+export PI_SUBAGENT_SHELL_READY_DELAY_MS=2500
+
 # --- PHP Codesniffer --- #
 export PHPCS_CONFIG_PATH="${XDG_CONFIG_HOME}/php-codesniffer/ruleset.xml"
 
