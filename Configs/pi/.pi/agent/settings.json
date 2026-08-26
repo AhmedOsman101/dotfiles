@@ -2,7 +2,7 @@
   "lastChangelogVersion": "0.84.2",
   "theme": "dark",
   "defaultProvider": "9router",
-  "defaultModel": "kc/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "defaultModel": "kc/poolside/laguna-s-2.1:free",
   "packages": [
     "npm:pi-mcp-extension",
     "git:github.com/amosblomqvist/pi-interactive-subagents",
