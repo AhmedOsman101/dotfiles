@@ -8,6 +8,7 @@ _vars=(
   ANILIST_TOKEN
   ANTHROPIC_API_KEY
   CONTEXT7_API_KEY
+  EXA_API_KEY
   FEATHERLESS_API_KEY
   GEMINI_API_KEY
   GITHUB_TOKEN
@@ -40,6 +41,7 @@ ADVENT_OF_CODE_SESSION="$(pass show advent-of-code)"
 AI_GATEWAY_API_KEY="$(pass show vercel/ai-gateway)"
 ANILIST_TOKEN="$(pass show anilist/access-token)"
 CONTEXT7_API_KEY="$(pass show context7)"
+EXA_API_KEY="$(pass show exa-search)"
 FEATHERLESS_API_KEY="$(pass show featherless | head -1)"
 GEMINI_API_KEY="$(pass show gemini)"
 GITHUB_TOKEN="$(pass show github/tokens/main | head -1)"
