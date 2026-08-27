@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# ---- FZF ---- #
+# --- FZF --- #
 command -v fzf &>/dev/null && source <(fzf --zsh)
 
 # Use fd for listing path candidates.

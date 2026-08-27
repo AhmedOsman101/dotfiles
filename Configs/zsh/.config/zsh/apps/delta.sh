@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# ---- Atuin ---- #
+# --- Delta --- #
 if command -v delta &>/dev/null; then
   eval "$(delta --generate-completion zsh)"
 fi

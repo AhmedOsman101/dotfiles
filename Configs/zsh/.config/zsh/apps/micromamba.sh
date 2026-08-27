@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-# ---- Micromamba ---- #
+# --- Micromamba --- #
 [[ -s "${XDG_DATA_HOME}/micromamba.sh" ]] && source "${XDG_DATA_HOME}/micromamba.sh"
