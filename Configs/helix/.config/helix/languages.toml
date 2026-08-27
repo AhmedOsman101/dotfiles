@@ -141,9 +141,7 @@ language-servers = [
   "deno-lsp",
   "biome",
   "scls",
-  # { name = "typescript-language-server", except-features = [
-  #   "format",
-  # ] },
+  # "tsgo"
 ]
 
 # ---- Javascript ---- #
@@ -162,9 +160,7 @@ language-servers = [
   "deno-lsp",
   "biome",
   "scls",
-  # { name = "typescript-language-server", except-features = [
-  #   "format",
-  # ] },
+  # "tsgo"
 ]
 
 # ---- Jsx ---- #
@@ -185,9 +181,7 @@ language-servers = [
   "scls",
   "vscode-html-language-server",
   "superhtml",
-  # { name = "typescript-language-server", except-features = [
-  #   "format",
-  # ] },
+  # "tsgo"
 ]
 
 # ---- Tsx ---- #
@@ -208,9 +202,7 @@ language-servers = [
   "scls",
   "vscode-html-language-server",
   "superhtml",
-  # { name = "typescript-language-server", except-features = [
-  #   "format",
-  # ] },
+  # "tsgo"
 ]
 
 # ---- Rust---- #
@@ -344,6 +336,11 @@ formatter = { command = "taplo", args = ["fmt", "-"] }
 command = "biome"
 args = ["lsp-proxy"]
 
+# ---- Typescript 7 LSP ---- #
+[language-server.tsgo]
+command = "tsc"
+args = ["--lsp", "--stdio"]
+
 # --- ty --- #
 [language-server.ty]
 command = "ty"
@@ -397,7 +394,3 @@ args = ["--stdio"]
 # ---- SQL LSP ---- #
 [language-server.sqls]
 command = "sqls"
-
-[[grammar]]
-name = "vim"
-source = { git = "https://github.com/neovim/tree-sitter-vim", rev = "3dd4747082d1b717b8978211c06ef7b6cd16125b" }

@@ -303,6 +303,9 @@
             "output": ["text"]
           }
         },
+        "kc/kilo-auto/free": {
+          "name": "kc/kilo-auto/free"
+        },
         "kc/nvidia/nemotron-3-ultra-550b-a55b:free": {
           "name": "kc/nvidia/nemotron-3-ultra-550b-a55b:free"
         },
