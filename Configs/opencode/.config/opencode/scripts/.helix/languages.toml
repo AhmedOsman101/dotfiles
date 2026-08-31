@@ -1,0 +1,7 @@
+[[language]]
+name = "typescript"
+language-servers = [
+  "tsgo",
+  "biome",
+  "scls"
+]
