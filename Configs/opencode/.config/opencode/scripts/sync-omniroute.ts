@@ -105,20 +105,42 @@ await Bun.write(MODELS_OUT, JSON.stringify(models, null, 2));
 console.info(`wrote ${Object.keys(models).length} models -> ${MODELS_OUT}`);
 
 if (shouldUpdate) {
-  const cfg: any = (await import(`${DIR}/../opencode.jsonc`, { with: { type: "jsonc" } } as any)).default;
-  cfg.provider ??= {};
-  const omnirouteConfig = cfg.provider.omniroute ?? {};
-  cfg.provider.omniroute = {
-    npm: omnirouteConfig.npm ?? "@ai-sdk/openai-compatible",
-    options: omnirouteConfig.options ?? {
+  const { modify, applyEdits, format } = await import("jsonc-parser");
+  const configPath = `${DIR}/../opencode.jsonc`;
+  const text = await Bun.file(configPath).text();
+
+  // Read existing omniroute options if present, to preserve them
+  const { parse } = await import("jsonc-parser");
+  const parsed = parse(text) as any;
+  const existing = parsed?.provider?.omniroute ?? {};
+  const omnirouteValue = {
+    npm: existing.npm ?? "@ai-sdk/openai-compatible",
+    options: existing.options ?? {
       baseURL: OMNI_URL,
       apiKey: "{env:OMNIROUTE_API_KEY}",
     },
     models,
   };
-  await Bun.write(`${DIR}/../opencode.jsonc`, JSON.stringify(cfg, null, 2));
+
+  // jsonc-parser.modify returns edits that surgically replace only the target path, preserving comments
+  const modifyEdits = modify(text, ["provider", "omniroute"], omnirouteValue, {
+    insertSpaces: true,
+    tabSize: 2,
+  });
+  const patched = applyEdits(text, modifyEdits);
+
+  // format the entire document to ensure consistent indentation (modify outputs compact JSON)
+  const formatEdits = format(patched, undefined, {
+    insertSpaces: true,
+    tabSize: 2,
+    trimTrailingWhitespace: true,
+    insertFinalNewline: true,
+  });
+  const updated = applyEdits(patched, formatEdits);
+
+  await Bun.write(configPath, updated);
   console.info(
-    `patched opencode.jsonc with provider.omniroute (${Object.keys(models).length} models)`
+    `patched opencode.jsonc provider.omniroute (${Object.keys(models).length} models, comments preserved)`
   );
 } else {
   console.info(
