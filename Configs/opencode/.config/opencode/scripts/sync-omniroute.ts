@@ -105,7 +105,7 @@ await Bun.write(MODELS_OUT, JSON.stringify(models, null, 2));
 console.info(`wrote ${Object.keys(models).length} models -> ${MODELS_OUT}`);
 
 if (shouldUpdate) {
-  const cfg: any = await Bun.file(`${DIR}/../opencode.jsonc`).json();
+  const cfg: any = (await import(`${DIR}/../opencode.jsonc`, { with: { type: "jsonc" } } as any)).default;
   cfg.provider ??= {};
   const omnirouteConfig = cfg.provider.omniroute ?? {};
   cfg.provider.omniroute = {
