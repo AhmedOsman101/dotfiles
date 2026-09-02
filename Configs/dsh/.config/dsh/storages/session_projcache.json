@@ -14,34 +14,34 @@
         "rows": {
           "sessionStats": {
             "ver": 1,
-            "seq": 699,
+            "seq": 967,
             "val": {
-              "turns": 4,
-              "steps": 29,
-              "llmMs": 430625,
-              "toolMs": 45371,
-              "ttftMs": 366799,
-              "ttftSteps": 27,
-              "decodeMs": 63826,
+              "turns": 6,
+              "steps": 38,
+              "llmMs": 643304,
+              "toolMs": 45454,
+              "ttftMs": 532457,
+              "ttftSteps": 36,
+              "decodeMs": 110847,
               "decodeTokens": 0,
-              "lastTurn": 4,
+              "lastTurn": 6,
               "openStep": null,
               "pendingCalls": {}
             }
           },
           "title": {
             "ver": 1,
-            "seq": 699,
+            "seq": 967,
             "val": "I want to make the"
           },
           "goal": {
             "ver": 4,
-            "seq": 699,
+            "seq": 967,
             "val": null
           },
           "tokenUsage": {
             "ver": 1,
-            "seq": 699,
+            "seq": 967,
             "val": {
               "totals": {
                 "uncachedInputTokens": 0,
@@ -50,7 +50,7 @@
                 "cacheWriteTokens": 0
               },
               "last": {
-                "turn": 4,
+                "turn": 6,
                 "step": 4,
                 "buckets": {
                   "uncachedInputTokens": 0,
@@ -63,26 +63,26 @@
           },
           "contextPressure": {
             "ver": 4,
-            "seq": 699,
+            "seq": 967,
             "val": {
-              "surfaceTokens": 60726,
+              "surfaceTokens": 79172,
               "contextWindow": 1048576,
               "pressureTokens": 0,
-              "sampledSurfaceTokens": 60425
+              "sampledSurfaceTokens": 78932
             }
           },
           "contextBreakdown": {
             "ver": 2,
-            "seq": 699,
+            "seq": 967,
             "val": {
               "systemTokens": 4467,
               "toolsTokens": 8346,
-              "messageTokens": 60726
+              "messageTokens": 79172
             }
           },
           "subagentTiming": {
             "ver": 2,
-            "seq": 699,
+            "seq": 967,
             "val": {
               "descriptorSeen": false,
               "settledMs": 0
@@ -90,12 +90,12 @@
           },
           "subagent": {
             "ver": 2,
-            "seq": 699,
+            "seq": 967,
             "val": {}
           },
           "permissions": {
             "ver": 1,
-            "seq": 699,
+            "seq": 967,
             "val": {
               "preset": "workspace-write",
               "sandbox": "workspace-write",
@@ -104,7 +104,7 @@
           },
           "sessionListMetadata": {
             "ver": 1,
-            "seq": 699,
+            "seq": 967,
             "val": {
               "blank": false,
               "lastPromptAt": 1788353874653
@@ -112,17 +112,17 @@
           },
           "imageLimits": {
             "ver": 1,
-            "seq": 699,
+            "seq": 967,
             "val": null
           },
           "todos": {
             "ver": 2,
-            "seq": 699,
+            "seq": 967,
             "val": null
           },
           "plan": {
             "ver": 2,
-            "seq": 699,
+            "seq": 967,
             "val": {
               "active": false,
               "wanted": null,
