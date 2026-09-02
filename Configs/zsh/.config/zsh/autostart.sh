@@ -52,9 +52,10 @@ if [[ -z "${DBUS_SESSION_BUS_ADDRESS}" ]]; then
 fi
 
 # ---- 9Router ---- #
-bun update -g 9router omniroute --latest
-9router --tray --skip-update &
-omniroute --tray --no-open --port 8082 &
+bun update -g 9router omniroute --latest && {
+  9router --tray --skip-update
+  omniroute --tray --no-open --port 8082
+} &
 
 # ---- Start Spotify listener ---- #
 # systemctl --user start spotify-listener &
