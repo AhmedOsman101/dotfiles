@@ -1,0 +1,136 @@
+{
+  "unit": {
+    "name": "session_projcache",
+    "version": 3
+  },
+  "global": null,
+  "tables": {
+    "sessions": {
+      "session-8c2eb4ba-0698-4be9-846c-7ede0016016e": {
+        "identity": {
+          "createdAt": 1788353423027,
+          "cwd": "/home/othman/test"
+        },
+        "rows": {
+          "sessionStats": {
+            "ver": 1,
+            "seq": 699,
+            "val": {
+              "turns": 4,
+              "steps": 29,
+              "llmMs": 430625,
+              "toolMs": 45371,
+              "ttftMs": 366799,
+              "ttftSteps": 27,
+              "decodeMs": 63826,
+              "decodeTokens": 0,
+              "lastTurn": 4,
+              "openStep": null,
+              "pendingCalls": {}
+            }
+          },
+          "title": {
+            "ver": 1,
+            "seq": 699,
+            "val": "I want to make the"
+          },
+          "goal": {
+            "ver": 4,
+            "seq": 699,
+            "val": null
+          },
+          "tokenUsage": {
+            "ver": 1,
+            "seq": 699,
+            "val": {
+              "totals": {
+                "uncachedInputTokens": 0,
+                "outputTokens": 0,
+                "cacheReadTokens": 0,
+                "cacheWriteTokens": 0
+              },
+              "last": {
+                "turn": 4,
+                "step": 4,
+                "buckets": {
+                  "uncachedInputTokens": 0,
+                  "outputTokens": 0,
+                  "cacheReadTokens": 0,
+                  "cacheWriteTokens": 0
+                }
+              }
+            }
+          },
+          "contextPressure": {
+            "ver": 4,
+            "seq": 699,
+            "val": {
+              "surfaceTokens": 60726,
+              "contextWindow": 1048576,
+              "pressureTokens": 0,
+              "sampledSurfaceTokens": 60425
+            }
+          },
+          "contextBreakdown": {
+            "ver": 2,
+            "seq": 699,
+            "val": {
+              "systemTokens": 4467,
+              "toolsTokens": 8346,
+              "messageTokens": 60726
+            }
+          },
+          "subagentTiming": {
+            "ver": 2,
+            "seq": 699,
+            "val": {
+              "descriptorSeen": false,
+              "settledMs": 0
+            }
+          },
+          "subagent": {
+            "ver": 2,
+            "seq": 699,
+            "val": {}
+          },
+          "permissions": {
+            "ver": 1,
+            "seq": 699,
+            "val": {
+              "preset": "workspace-write",
+              "sandbox": "workspace-write",
+              "approval": "ask"
+            }
+          },
+          "sessionListMetadata": {
+            "ver": 1,
+            "seq": 699,
+            "val": {
+              "blank": false,
+              "lastPromptAt": 1788353874653
+            }
+          },
+          "imageLimits": {
+            "ver": 1,
+            "seq": 699,
+            "val": null
+          },
+          "todos": {
+            "ver": 2,
+            "seq": 699,
+            "val": null
+          },
+          "plan": {
+            "ver": 2,
+            "seq": 699,
+            "val": {
+              "active": false,
+              "wanted": null,
+              "running": null
+            }
+          }
+        }
+      }
+    }
+  }
+}
