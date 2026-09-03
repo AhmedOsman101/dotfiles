@@ -53,10 +53,8 @@ fi
 
 # ---- 9Router & Omniroute ---- #
 if bun update -g 9router omniroute --latest || true; then
-  {
-    9router --tray --skip-update
-    omniroute --tray --no-open --port 8082
-  } &
+  9router --tray --skip-update &
+  omniroute --tray --no-open --port 8082 &
 fi
 
 # ---- Start Spotify listener ---- #
