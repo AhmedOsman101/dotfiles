@@ -1,110 +1,137 @@
 # Zsh Configuration
 
-A modular, XDG-compliant Zsh setup managed via [Tuckr](https://github.com/RaphGL/Tuckr) dotfiles and powered by [Zinit](https://github.com/zdharma-continuum/zinit) plugin manager.
+A modular, XDG-compliant Zsh setup managed via [Tuckr](https://github.com/RaphGL/Tuckr) and powered by [Zinit](https://github.com/zdharma-continuum/zinit). Fast startup, strict ordering, and per-app shims.
 
-## Architecture
+## How It Flows
 
 ```
-~/.config/zsh/
-├── .zshenv          # Environment variables, PATH, XDG dirs (loaded always)
-├── .zprofile        # Login shell placeholder (SSH/TTY only)
-├── .zshrc           # Main entry point: interactive guard, bootstrap, module loading
-├── .shellcheckrc    # ShellCheck linter configuration
-│
-├── variables.sh     # Env vars, PATH construction, tool configs (loaded 1st)
-├── options.sh       # setopt / unsetopt (loaded 2nd)
-├── functions.sh     # Custom shell functions (loaded 3rd)
-├── plugins.sh       # Zinit + OMZ snippets (loaded 4th)
-├── keybinds.sh      # ZLE widget key bindings (loaded 5th)
-├── completion.sh    # compinit, zstyle, fzf-tab (loaded 6th)
-├── history.sh       # History options & dedup (loaded 7th)
-├── hooks.sh         # precmd/preexec/chpwd hooks (loaded 8th)
-├── aliases.sh       # Aliases, suffix/global aliases (loaded 9th)
-├── secrets.sh       # API keys from pass (loaded last)
-│
-├── apps/            # Per-application configs loaded after modules
-├── functions/       # FPATH directories for autoloadable functions
-└── completions/     # Custom completion definitions (e.g. _mise)
+Shell start
+  │
+  ├─ .zshenv  (always: every zsh, even non-interactive)
+  │     ├─ Exports XDG dirs (CONFIG/CACHE/DATA/STATE)
+  │     ├─ ZINIT_HOME, ZDOTDIR, ZSHRC, SCRIPTS_DIR
+  │     ├─ TUCKR vars (TUCKR_HOME/DIR/TARGET)
+  │     ├─ DEVICE via hostnamectl, EDITOR/BROWSER auto-detect
+  │     ├─ GPG_TTY, HISTDB_FILE, CHROME/PUPPETEER paths
+  │     ├─ XONSH_HOME, PATH += SCRIPTS_DIR:.local/bin:xonsh/xbin
+  │     └─ FPATH += ZDOTDIR/functions
+  │
+  ├─ .zprofile  (login shells only — SSH/TTY)
+  │     └─ Placeholder; no logic by design (interactive config lives in .zshrc)
+  │
+  └─ .zshrc  (interactive shells only: [[ -o interactive ]] || return)
+        ├─ Concurrency guard: source lock.sh → _zshrc_lock_acquire (flock → zsystem → mkdir)
+        │     └─ Held ONLY for .zshrc sourcing; released before tmux autostart
+        ├─ Bootstrap Zinit (clone if missing, source zinit.zsh, autoload _zinit)
+        ├─ Load modules IN ORDER (strict dependencies):
+        │     1. variables.sh  — env, XDG, PATH, FZF/GUM/LS_COLORS (must be first)
+        │     2. options.sh    — setopt extendedglob, AUTO_CD, unsetopt nomatch
+        │     3. functions.sh  — reusable shell functions (yy, ls, bat, tgpt, …)
+        │     4. plugins.sh    — starship, zinit lights, annexes, OMZ snippets, hooks
+        │     5. keybinds.sh   — ZLE bindings (emacs keymap, ctrl_l/copybuffer/…)
+        │     6. completion.sh — compinit, zstyle, fzf-tab, ftc, region-highlight
+        │     7. history.sh    — HISTSIZE/SAVEHIST/HISTFILE + dedup options
+        │     8. hooks.sh      — precmd rehash, chpwd python-venv, path hook
+        │     9. aliases.sh    — aliases + suffix (-s) + global (-g) (must be late)
+        │    10. secrets.sh    — GPG `pass` → API keys (must be last)
+        │
+        ├─ Load apps/*.sh loop (per-tool completions & env; see apps.md)
+        │     Active: atuin, bun, cargo, curlie, delta, deno, fzf, micromamba,
+        │             mise, omp, opencode, php-cs-fixer, pnpm, podman,
+        │             transient-prompt, uv, zoxide
+        │     Disabled: fuck.sh.disabled, helix-zsh.sh.disabled
+        │
+        ├─ Release lock: _zshrc_lock_release (before tmux so next queued shell proceeds)
+        ├─ Cleanup (unset MODULES/module/app)
+        └─ Auto-start tmux if not already running (tmux ls || tmux)
+              └─ Separate: autostart.sh (X11/DBus, copyq/ollama/sxhkd/9router/omniroute)
 ```
-
-### Loading Order
-
-`.zshrc` sources modules in strict order — dependencies are respected:
-
-1. **variables.sh** — must be first (defines `$PATH`, `$XDG_*`, all tool env vars)
-2. **options.sh** — zsh options
-3. **functions.sh** — reusable shell functions (may use env vars)
-4. **plugins.sh** — zinit init, OMZ snippets, autoloads (may define aliases)
-5. **keybinds.sh** — key bindings (some depend on ZLE widgets from plugins)
-6. **completion.sh** — compinit, zstyle, fzf-tab (after plugins since they register completions)
-7. **history.sh** — history settings
-8. **hooks.sh** — precmd/preexec/chpwd hooks
-9. **aliases.sh** — **must be late** to override OMZ defaults
-10. **secrets.sh** — last, since it depends on env vars and `pass`
-11. **apps/\*.sh** — per-app configs loaded last
 
 ### Entry Points
 
-| File | When Loaded | Purpose |
-|------|-------------|---------|
-| `.zshenv` | Every shell invocation | XDG dirs, `$ZDOTDIR`, `$PATH`, `$FPATH`, editor/browser detection, GPG |
-| `.zprofile` | Login shells only | Placeholder for SSH/TTY sessions |
-| `.zshrc` | Interactive shells only | Main entry point with interactive guard |
+| File | When | Purpose |
+|------|------|---------|
+| `.zshenv` | Every invocation | XDG dirs, `ZDOTDIR`, `PATH`/`FPATH`, editor/browser probe, `GPG_TTY`, `HISTDB_FILE`, Chrome/Xonsh paths |
+| `.zprofile` | Login shells only | Intentionally empty — SSH/TTY sessions; interactive setup stays in `.zshrc` |
+| `.zshrc` | Interactive only | Interactive guard → concurrency lock → zinit bootstrap → ordered modules → `apps/*.sh` → release lock → `tmux` |
+| `lock.sh` | Sourced at top of `.zshrc` | Serializes parallel restores (tmux-resurrect/continuum) via `flock` → `zsystem` → `mkdir` |
+| `autostart.sh` | Manual / WM autostart | Kills stale daemons, disables DPMS, starts copyq/ollama/sxhkd/dbus/9router/omniroute |
+
+### Filesystem Layout
+
+```
+~/.config/zsh/
+├── .zshenv              # Always-loaded env
+├── .zprofile            # Login placeholder
+├── .zshrc               # Interactive entry point + loader
+├── lock.sh              # Concurrency guard (flock/zsystem/mkdir)
+├── .shellcheckrc        # ShellCheck rules
+│
+├── variables.sh         # Env vars, PATH, FZF/GUM/LS_COLORS (1st)
+├── options.sh           # setopt/unsetopt (2nd)
+├── functions.sh         # Shell functions (3rd)
+├── plugins.sh           # Zinit + annexes + OMZ snippets (4th)
+├── keybinds.sh          # ZLE (emacs) bindings (5th)
+├── completion.sh        # compinit + fzf-tab (6th)
+├── history.sh           # History opts + dedup (7th)
+├── hooks.sh             # precmd/chpwd hooks (8th)
+├── aliases.sh           # Aliases -s/-g (9th, late to override OMZ)
+├── secrets.sh           # pass → keys (10th, last)
+│
+├── autostart.sh         # Desktop session daemons (standalone)
+├── apps/                # Per-app shims loaded after modules
+│   ├── *.sh             # Active (see apps.md)
+│   └── *.sh.disabled    # Disabled: fuck, helix-zsh
+├── functions/           # FPATH autoloads (edit-command-line-sh)
+├── completions/         # Custom completions (_mise)
+└── docs/                # This documentation
+```
 
 ## Key Design Decisions
 
-- **XDG Base Directory** — All config, cache, data, and state dirs follow the standard
-- **Zinit plugin manager** — Lazy-loading, turbo mode, annexes for Rust/npm/gem builds
-- **Starship prompt** — Fast, customizable cross-shell prompt
-- **Transient prompt** — Prompt collapses to a single `❯`/`✗` after command execution
-- **fzf-tab** — fzf-powered tab completion with file previews via `eza`
-- **vi mode** — Native `bindkey -v` vi keymaps (vicmd/viins)
-- **pass** — GPG-encrypted password store for API keys (never plaintext in config)
-- **No Oh My Zsh** — Uses individual OMZ snippets instead (lighter weight)
-- **ShellCheck validated** — `.shellcheckrc` enforces strict linting
+- **XDG Base Directory** — Every tool forced XDG-compliant via env vars in `variables.sh` (Cargo, Go, NVM, Docker, Android SDK, asdf, …).
+- **Zinit plugin manager** — Lazy lights + 4 annexes (as-monitor, bin-gem-node, patch-dl, rust); Starship installed via zinit fallback if not on system.
+- **Concurrency guard** — `lock.sh` serializes parallel `.zshrc` sourcing (tmux continuum restores N panes → N races). Uses `flock` (external, per-FD, kernel-queued) → `zsystem flock` (fallback) → `mkdir` spin with TTL. Held only for `.zshrc` duration, released before `tmux ls`. Idempotent, re-entrant (`reload` safe), stale-safe, `ZSHRC_LOCK_TIMEOUT=60` override, `ZSHRC_LOCK_DEBUG=1` verbose.
+- **No Oh My Zsh framework** — Individual OMZ snippets via `zinit snippet OMZP::…` (lighter, 11 active + 2 commented).
+- **Starship + transient-prompt** — Full 2-line Starship while typing; collapses to `❯` (green) / `✗` (red) after execution via `transient-prompt.sh` in `apps/`.
+- **fzf-tab** — Replaces zsh completion menu; previews via `eza`.
+- **Emacs keymap** — `bindkey -e` (not vi). ZVM disabled (`jeffreytse/zsh-vi-mode` commented in `plugins.sh`; `zvm_config()` defined then `unset -f`). Previous ZVM config preserved in `keybinds.sh.bak` and `apps/helix-zsh.sh.disabled`.
+- **pass** — GPG-encrypted secret store; `secrets.sh` short-circuits if all vars already set.
+- **tmux autostart** — Every interactive shell runs `tmux ls || tmux` at end of `.zshrc` (after lock release so next queued shell can proceed immediately).
+- **ShellCheck validated** — `.shellcheckrc` enforces linting.
 
 ## Tool Replacements
 
-| Original | Replacement | Description |
-|----------|-------------|-------------|
-| `cat` | `bat` | Syntax-highlighted pager |
-| `cd` | `zoxide` (via `z`) | Frecency-based directory jumper |
-| `ls` | `eza` | Icons, colors, git-aware listing |
-| `grep` | `ripgrep` | Blazingly fast recursive search |
-| `rm` | `trash-cli` | Safe deletion (trash bin) |
-| `rmdir` | `trash-cli` | Safe directory deletion |
-| `cp` | `advcp` | Progress bar on copy |
-| `mv` | `advmv` | Progress bar on move |
-| `nano` | `micro` | Modern terminal editor |
-| `diff` | diff with `--color=auto` | Colorized diff output |
+| Original | Replacement | Notes |
+|----------|-------------|-------|
+| `cat` | `bat --paging=never --style=plain` | Via alias + smart `bat()` wrapper |
+| `cd` | `zoxide` (`z`) | `alias cd=z` + `zoxide init zsh` |
+| `ls` | `eza` | Wrappers: `ls`/`lsu`/`lst`/`lstu` with `--total-size` timeout fallback |
+| `grep` / `rg` | `rg -iNL` | `alias grep="command rg -iNL"` |
+| `rm` / `rmdir` | `trash-cli` | `rmtrash` / `rmdirtrash` |
+| `cp` / `mv` | `advcp` / `advmv` | `alias cp='advcp -ivg'` |
+| `nano` | `micro` | `alias nano=micro` |
+| `diff` | `diff -u --color=auto` | Colorized unified diff |
+| `man` | `bat --language=man` | `MANPAGER="col -bx | bat …"` |
+| `which` | `which()` function | Merges `alias`+`declare -f` → `shellfmt` |
+| `touch` | `touch()` function | Auto `mkdir -p` parents |
 
 ## Quick Reference
 
 ```bash
-# Reload config
-reload
-
-# Edit config
-zshrc
-
-# Copy current directory path
-pwdcp
-
-# List directory tree (excluding noise dirs)
-lst
-
-# Fuzzy file finder
-Ctrl+T
-
-# Directory history navigation
-Alt+Left / Alt+Right
-
-# Undo / Redo
-Ctrl+Z / Ctrl+Y
-
-# Copy current buffer
-Ctrl+O
-
-# Edit command in $EDITOR
-Ctrl+X Ctrl+E
+reload              # source "$ZSHRC" (re-loads all modules + apps)
+zshrc               # $EDITOR "$ZSHRC"
+pwdcp               # collapseTilde "$PWD" | clipcopy
+paths               # printenv PATH | tr : \\n | collapseTilde | no-dups | sort
+lst / lstu          # tree view (lstu via sudo -A)
+yy [dir]            # yazi with cwd tracking
+dotfiles [filter]   # browse dotfiles via yazi
+Ctrl+T              # fzf file finder (fd-backed)
+Alt+Left / Alt+Right# dirhistory (OMZ) — prev/next dir
+Ctrl+Z / Ctrl+Y     # undo / redo
+Ctrl+O              # copybuffer → clipcopy
+Ctrl+X Ctrl+E       # edit-command-line-sh → $EDITOR (vim byte-offset / emacs line)
+Shift+Tab           # magic-space (history expansion)
+Ctrl+L              # ctrl_l — clear without scrollback + reset-prompt
+ZSHRC_LOCK_DEBUG=1 zsh -i -c 'echo hi'  # debug lock acquisition
 ```

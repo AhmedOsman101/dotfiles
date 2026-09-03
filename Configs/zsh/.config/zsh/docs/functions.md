@@ -1,10 +1,14 @@
-# Custom Functions Reference
+# Functions Reference
+
+Source: `functions.sh` (loaded 3rd, after `variables.sh`). Helpers from `${SCRIPTS_DIR}/lib/helpers.sh` are sourced first (`log-info`, `collapseTilde`, `clipcopy`, `eraseLine`, `printBold`, …).
+
+---
 
 ## File Navigation
 
-### `yy` — Yazi file manager with directory tracking
+### `yy [args…]` — Yazi with cwd tracking
 
-Opens [Yazi](https://yazi-rs.github.io) and changes shell directory to wherever Yazi navigated to.
+Opens [Yazi](https://yazi-rs.github.io) and `cd`s to its final directory.
 
 ```zsh
 yy() {
@@ -18,9 +22,7 @@ yy() {
 }
 ```
 
-### `dotfiles` — Browse dotfiles via Yazi
-
-Opens dotfiles directory in Yazi with an interactive selector.
+### `dotfiles [filter]` — Browse dotfiles via Yazi
 
 ```zsh
 dotfiles() {
@@ -31,158 +33,197 @@ dotfiles() {
 }
 ```
 
+Uses `dotfiles.sh` selector; opens result in `yy`.
+
 ### `ls` / `lsu` / `lst` / `lstu` — Eza wrappers
 
-Enhanced `ls` using `eza` with icons, colors, long format. Falls back gracefully when `--total-size` times out.
+Shared flags:
 
-| Function | Description |
-|----------|-------------|
-| `ls` | Standard listing with total-size (3s timeout) |
-| `lsu` | Root listing via `sudo -A` (5s timeout) |
-| `lst` | Tree view (excludes `node_modules`, `.turbo`, `dist`, etc.) |
-| `lstu` | Root tree view via `sudo -A` |
+```zsh
+_eza_common_flags=(--all --color=auto --long --icons --no-time --no-user --sort=name --group-directories-first)
+_tree_common_flags=("${_eza_common_flags[@]}" --ignore-glob='node_modules|.turbo|dist|build|.next|.nuxt|.git|vendor' --no-permissions --tree)
+```
 
-Common flags: `--all`, `--color=auto`, `--long`, `--icons`, `--no-time`, `--no-user`, `--sort=name`, `--group-directories-first`
+| Function | Command | Timeout |
+|----------|---------|---------|
+| `ls [args]` | `eza "${_eza_common_flags[@]}" --total-size` → fallback without `--total-size` | 3s |
+| `lsu [args]` | `sudo -A eza … --total-size` → fallback | 5s |
+| `lst [args]` | `eza "${_tree_common_flags[@]}" --total-size` → fallback | 3s |
+| `lstu [args]` | `sudo -A eza … --total-size` → fallback | 5s |
+
+Timeout via `timeout 3/5`; avoids hanging on large trees.
+
+---
 
 ## Git
 
-### `gcm` — Clone from personal GitHub
-
-Resolves to `git clone git@github.com:AhmedOsman101/`
+### `gcm <repo> [args…]` — Clone from personal GitHub
 
 ```zsh
-gcm "repo-name"  # clones git@github.com:AhmedOsman101/repo-name
+gcm "my-repo"  # → git clone "me:my-repo" (git@github.com:AhmedOsman101/my-repo via git config url.<>.insteadOf)
 ```
 
-### `gcg` — Clone any GitHub repo
-
-Resolves to `git clone git@github.com:`
+### `gcg <user/repo> [args…]` — Clone any GitHub repo
 
 ```zsh
-gcg "user/repo"  # clones git@github.com:user/repo
+gcg "user/repo"  # → git clone "gh:user/repo" (gh: → git@github.com:)
 ```
 
-### `glg` — Pretty git log
+### `glg` — Pretty log
 
-Alias defined in aliases.sh showing colorful graph with author, relative time, and refs.
+Alias in `aliases.sh`: `git log --all --graph --pretty=format:'%C(magenta)%h …'`.
+
+### `getVersion <repo> [all]`
+
+```zsh
+getVersion "owner/repo"        # → latest tag via GitHub API + jq .tag_name
+getVersion "owner/repo" all    # → gh release list -R owner/repo --limit 100
+```
+
+Uses `curl -fsSL https://api.github.com/repos/$repo/releases/latest` or `gh`.
+
+---
 
 ## Development
 
-### `cr` / `ccr` — Cargo run shortcuts
+### `cr [args]` / `ccr [args]` — Cargo run quiet
 
 ```zsh
-cr       # cargo run --quiet
-ccr      # clear + cargo run --quiet
+cr    # cargo run --quiet "$@" || true
+ccr   # clear; cargo run --quiet "$@" || true
 ```
 
-### `vite` — Vite dev server with cleanup
+### `vite [dir]` — Vite dev server with cleanup
 
-Runs Vite with custom config path. On interrupt, offers to clean up `.vite` cache directories.
+Runs `vite --config "$XDG_CONFIG_HOME/vite/vite.config.js"`; traps `INT` to log, then offers to remove `dir/.vite` via `gum confirm`.
+
+### `bashc [cmd]` — Execute bash from input
 
 ```zsh
-vite                  # Runs with ~/.config/vite/vite.config.js
-vite my-project       # Cleans up my-project/.vite on exit
+bashc "echo hi"   # uses $* as input
+bashc             # prompts via gum write
+# copies input to clipboard, then bash -c "$input"
 ```
 
-### `bashc` — Execute bash from input
+### `fd [args]` — fd wrapper
 
-Takes inline input or prompts via `gum write`, copies to clipboard, then executes.
+Prefers `fd.sh` alternative if present:
 
-## AI Assistant (tgpt wrappers)
+```zsh
+fd() { command -v fd.sh &>/dev/null && command fd.sh "$@" || command fd "$@"; }
+```
 
-Five modes wrapping [tgpt](https://github.com/aandrew-me/tgpt):
+---
 
-| Function | Mode | Provider | Description |
+## AI — tgpt wrappers
+
+Underlying `tgpt()` prompts via `gum write` if no args: `command tgpt "$(gum write …)"`.
+
+| Function | Call | Provider | Description |
 |----------|------|----------|-------------|
-| `t-sh` | Shell `(-s)` | Default | Generate & execute shell commands |
-| `t-code` | Code `(-c)` | phind | Generate code/scripts |
-| `t-img` | Image `(-img)` | pollinations | Generate images |
-| `t-search` | Search | isou | Web search / research |
-| `t-chat` | Interactive `(-m)` | phind | Persistent chat session |
+| `t-sh` | `tgpt --shell` | default | Describe → generate & execute shell command |
+| `t-code` | `tgpt --code` | phind | Describe → generate code/script |
+| `t-img` | `tgpt --image --out <file>` | pollinations | Describe → image (asks filename via `gum input`, default `output.jpg`) |
+| `t-search` | `tgpt --provider isou` | isou | Web search / research |
+| `t-chat` | `tgpt --multiline` | phind | Persistent interactive chat |
 
-### `ai` — Unified AI launcher
+### `ai` — Unified launcher
 
-Interactive menu using `gum choose` to select one of the five modes above.
+```zsh
+ai  # gum choose → Shell / Code / Search / Chat / Image / Exit
+```
+
+---
 
 ## Utilities
 
-### `help` — Help with bat pager
+### `help [topic]`
 
 ```zsh
-help() { bash -c "help $*" | bathelp --pager=none -- }
+help() { bash -c "help $*" | bathelp --pager=none --; }
 ```
 
-### `which` — Enhanced which
+Bash builtin help → `bat`.
 
-Shows alias definitions, function source, and pipes through `shellfmt`:
+### `which [cmd…]` — Enhanced which
+
+Merges aliases + functions into GNU `which`:
 
 ```zsh
 which() {
-  (alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions \
-    --show-tilde --show-dot "$@" | shellfmt 2>/dev/null
+  (alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot "$@" | shellfmt
 }
 ```
 
-### `calc` / `qalc` — Qalculate calculator
+### `calc [expr]` / `qalc [expr]`
 
 ```zsh
-calc "2 + 2"    # Terse mode
-qalc "2 + 2"    # Verbose mode
+calc "2 + 2"   # qalc --base 10 --color --terse
+qalc "2 + 2"   # qalc --base 10 --color
+# no arg → prompts via gum input
 ```
 
-Accepts argument or prompts via `gum input`.
-
-### `ffprobe` — Quick media info
-
-Shows codec, resolution, framerate, bitrate for video streams. Suppresses all ffprobe noise.
-
-### `touch` — mkdir + touch
-
-Creates parent directories automatically when touching nested paths.
-
-### `bat` — Smart bat pager
-
-Auto-switches between paging modes based on file size vs terminal width. Uses `builtin cd` to avoid triggering chpwd hooks.
-
-### `bathelp` — Help text with bat
-
-Renders help text using bat with the `help` language definition.
-
-### `rename` — Perl rename wrapper
-
-Prefers `/usr/bin/vendor_perl/rename` or `perl-rename` (perl-based regex renaming) over basic `rename`.
-
-### `copypath` — Copy file path to clipboard
-
-Resolves absolute path (via `realpath`, `readlink`, or fallback), collapses tilde, copies via `clipcopy`, and echoes confirmation.
-
-### `du` / `du-dir` — Disk usage with sudo
+### `ffprobe [file]`
 
 ```zsh
-du-dir /var    # du -h -d1 /var | sort -hr
-du /var/log    # du -h /var/log | sort -hr
+ffprobe video.mp4  # ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height,avg_frame_rate,bit_rate
 ```
 
-### `pdf2png` — PDF to PNG conversion
+### `touch <path…>` — mkdir + touch
+
+Creates parent dirs via `mkdir -p "$(dirname "$file")"` before `command touch`.
+
+### `bat [file…]` — Smart bat pager
+
+Heuristic: if `sum(lines) *100 > (COLUMNS/2)*100` → adds `--pager=builtin` to `bat --paging=auto --style=plain --color=auto`.
+
+### `bathelp [args]` — Help language
 
 ```zsh
-pdf2png document.pdf  # Creates document-1.png, document-2.png, etc.
+bathelp() { command bat --language=help --style=plain --color=auto "$@"; }
 ```
 
-### `gif` — Display image in kitty terminal
+### `rename [args]` — Perl rename
+
+Prefers `/usr/bin/vendor_perl/rename` or `perl-rename`:
 
 ```zsh
-gif image.png  # Shows image via kitty +kitten icat
+rename 's/foo/bar/' *.txt
 ```
 
-### `advrm` — Advanced rm with progress
+### `copypath [path=. ]`
+
+Resolves absolute path (`realpath` → `readlink -f` → `cd+pwd -P` fallback), `collapseTilde`, `clipcopy`, echoes confirmation.
+
+### `du-dir <dir>` / `du <path>` — Disk usage sorted
 
 ```zsh
-advrm /path/to/dir  # Counts files/dirs, shows progress bar via pv, then removes
+du-dir /var   # sudo sh -c "du -h -d1 /var" | sort -hr
+du /var/log   # sudo sh -c "du -h /var/log" | sort -hr
 ```
 
-## File Operations
+### `pdf2png <file.pdf>`
 
-### `fd` — fd wrapper
+```zsh
+pdf2png doc.pdf  # pdftocairo -png -r 300 doc.pdf doc
+```
 
-Prefer `fd.sh` (fd alternative) if available, otherwise use standard `fd`.
+### `gif <image>` — Kitty image display
+
+```zsh
+gif image.png  # kitty +kitten icat
+```
+
+### `advrm <dir>` — Progress rm
+
+```zsh
+advrm ./big-dir  # counts files/dirs, pv -0 -l -s $total_files | xargs -0 rm -f, rm -rf dir
+```
+
+---
+
+## Autoloadable
+
+### `functions/edit-command-line-sh`
+
+ZLE widget (see `keybindings.md`): edits `$BUFFER`/`$PREBUFFER`/visual/line selection in `$VISUAL`/`$EDITOR`, placing cursor correctly for vim (`byteoffset`) vs emacs (`+line:col`), handling multi-line PS2 buffers and bracketed paste. Bound to `Ctrl+X Ctrl+E`.
