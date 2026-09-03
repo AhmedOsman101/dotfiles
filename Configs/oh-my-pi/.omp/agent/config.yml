@@ -8,7 +8,7 @@ providers:
   imageOrder:
     - openrouter
 modelRoles:
-  default: opencode-zen/muse-spark-1.2-contributor-free:high
+  default: omniroute/bai/glm-5.3-flash:high
 symbolPreset: unicode
 composer:
   shape: box
