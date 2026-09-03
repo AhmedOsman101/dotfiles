@@ -1,0 +1,24 @@
+providers:
+  omniroute:
+    baseUrl: http://127.0.0.1:8082/v1
+    api: openai-completions
+    apiKey: OMNIROUTE_API_KEY
+    models:
+      - id: bai/glm-5.3-flash
+        name: bai/glm-5.3-flash
+        reasoning: true
+        input: [text, image]
+        contextWindow: 1000000
+        maxTokens: 131072
+      - id: bai/qwen3.8-flash
+        name: bai/qwen3.8-flash
+        reasoning: true
+        input: [text]
+        contextWindow: 128000
+        maxTokens: 8192
+      - id: bai/mimo-v2.5
+        name: bai/mimo-v2.5
+        reasoning: true
+        input: [text]
+        contextWindow: 1048576
+        maxTokens: 131072

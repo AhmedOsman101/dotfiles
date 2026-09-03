@@ -1,0 +1,96 @@
+providers:
+  webSearchOrder:
+    - public
+    - exa
+    - duckduckgo
+    - firecrawl
+  memoryModel: online
+  imageOrder:
+    - openrouter
+modelRoles:
+  default: opencode-zen/muse-spark-1.2-contributor-free:high
+symbolPreset: unicode
+composer:
+  shape: box
+theme:
+  dark: basalt
+setupVersion: 2
+statusLine:
+  transparent: true
+  separator: powerline
+  preset: default
+  contextLine: embedded
+tui:
+  textSizing: true
+  tight: false
+terminal:
+  showProgress: true
+display:
+  shimmer: classic
+  showTokenUsage: true
+task:
+  showResolvedModelBadge: true
+  eager: preferred
+  enableEffort: true
+  maxConcurrency: 8
+  isolation:
+    mode: none
+proseOnlyThinking: false
+images:
+  describeForTextModels: false
+  urls:
+    enabled: false
+steeringMode: one-at-a-time
+interruptMode: immediate
+loop:
+  mode: prompt
+doubleEscapeAction: tree
+emojiAutocomplete: false
+tools:
+  approvalMode: yolo
+error:
+  notify: "on"
+features:
+  unexpectedStopDetection: mechanical
+branchSummary:
+  enabled: false
+compaction:
+  methodOrder:
+    - remote
+    - shake
+    - handoff
+    - soft
+  thresholdPercent: 80
+  handoffSaveToDisk: true
+memory:
+  backend: local
+mnemopi:
+  proactiveLinking: true
+readLineNumbers: true
+read:
+  renderMarkdown: true
+  toolResultPreview: true
+lsp:
+  diagnosticsOnEdit: true
+shellMinimizer:
+  sourceOutlineLevel: default
+  enabled: true
+astGrep:
+  enabled: true
+checkpoint:
+  enabled: true
+github:
+  enabled: true
+grep:
+  contextBefore: 2
+browser:
+  cmux: false
+  headless: false
+  screenshotDir: ~/Pictures/Screenshots/omp
+commands:
+  enableClaudeProject: false
+  enableClaudeUser: false
+secrets:
+  enabled: true
+defaultThinkingLevel: auto
+hideThinkingBlock: false
