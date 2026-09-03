@@ -3,6 +3,15 @@
 # ---- Interactive shell guard ---- #
 [[ -o interactive ]] || return
 
+# ---- Concurrency guard: serialize parallel .zshrc sourcing ---- #
+# tmux continuum plugin restores N panes at once -> N shells race on compinit/zinit/file writes.
+# This lock is held ONLY for the duration of .zshrc sourcing, not the shell lifetime.
+# Acquired here, released at EOF before tmux autostart. Falls back: flock -> zsystem -> mkdir.
+if [[ -s "${ZDOTDIR:-${HOME}/.config/zsh}/lock.sh" ]]; then
+  ZSHRC_LOCK_TIMEOUT=30 # seconds to wait before giving up
+  source "${ZDOTDIR:-${HOME}/.config/zsh}/lock.sh"
+fi
+
 # ---- Zinit bootstrap ---- #
 : "${ZINIT_HOME:=${XDG_DATA_HOME:-${HOME}/.local/share}/zinit}"
 
@@ -40,6 +49,10 @@ done
 for app in "${ZSH_CONF}/apps"/*.sh; do
   [[ -s "${app}" ]] && source "${app}"
 done
+
+# ---- Release concurrency lock (held since top of file) ---- #
+# Must run before tmux autostart so next queued shell can proceed immediately.
+(( $+functions[_zshrc_lock_release] )) && _zshrc_lock_release 2>/dev/null || true
 
 # Cleanup
 unset MODULES module app
