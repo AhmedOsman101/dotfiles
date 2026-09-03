@@ -16,10 +16,11 @@
         "path": "/home/othman/test",
         "title": "test",
         "sessionIds": [
+          "session-67df89b2-a56c-41f1-8d39-0e857edec04c",
           "session-8c2eb4ba-0698-4be9-846c-7ede0016016e"
         ],
         "createdAt": "2026-09-02T12:50:22.765Z",
-        "updatedAt": "2026-09-02T12:50:23.152Z"
+        "updatedAt": "2026-09-02T13:56:29.418Z"
       }
     }
   }

@@ -14,48 +14,48 @@
         "rows": {
           "sessionStats": {
             "ver": 1,
-            "seq": 967,
+            "seq": 5698,
             "val": {
-              "turns": 6,
-              "steps": 38,
-              "llmMs": 643304,
-              "toolMs": 45454,
-              "ttftMs": 532457,
-              "ttftSteps": 36,
-              "decodeMs": 110847,
-              "decodeTokens": 0,
-              "lastTurn": 6,
+              "turns": 8,
+              "steps": 41,
+              "llmMs": 855444,
+              "toolMs": 45473,
+              "ttftMs": 583616,
+              "ttftSteps": 39,
+              "decodeMs": 177154,
+              "decodeTokens": 1988,
+              "lastTurn": 8,
               "openStep": null,
               "pendingCalls": {}
             }
           },
           "title": {
             "ver": 1,
-            "seq": 967,
+            "seq": 5698,
             "val": "I want to make the"
           },
           "goal": {
             "ver": 4,
-            "seq": 967,
+            "seq": 5698,
             "val": null
           },
           "tokenUsage": {
             "ver": 1,
-            "seq": 967,
+            "seq": 5698,
             "val": {
               "totals": {
-                "uncachedInputTokens": 0,
-                "outputTokens": 0,
-                "cacheReadTokens": 0,
+                "uncachedInputTokens": 95733,
+                "outputTokens": 1988,
+                "cacheReadTokens": 95552,
                 "cacheWriteTokens": 0
               },
               "last": {
-                "turn": 6,
-                "step": 4,
+                "turn": 8,
+                "step": 1,
                 "buckets": {
-                  "uncachedInputTokens": 0,
-                  "outputTokens": 0,
-                  "cacheReadTokens": 0,
+                  "uncachedInputTokens": 164,
+                  "outputTokens": 1811,
+                  "cacheReadTokens": 95552,
                   "cacheWriteTokens": 0
                 }
               }
@@ -63,26 +63,26 @@
           },
           "contextPressure": {
             "ver": 4,
-            "seq": 967,
+            "seq": 5698,
             "val": {
-              "surfaceTokens": 79172,
-              "contextWindow": 1048576,
-              "pressureTokens": 0,
-              "sampledSurfaceTokens": 78932
+              "surfaceTokens": 87986,
+              "contextWindow": 1000000,
+              "pressureTokens": 95716,
+              "sampledSurfaceTokens": 79396
             }
           },
           "contextBreakdown": {
             "ver": 2,
-            "seq": 967,
+            "seq": 5698,
             "val": {
-              "systemTokens": 4467,
+              "systemTokens": 4468,
               "toolsTokens": 8346,
-              "messageTokens": 79172
+              "messageTokens": 87986
             }
           },
           "subagentTiming": {
             "ver": 2,
-            "seq": 967,
+            "seq": 5698,
             "val": {
               "descriptorSeen": false,
               "settledMs": 0
@@ -90,12 +90,12 @@
           },
           "subagent": {
             "ver": 2,
-            "seq": 967,
+            "seq": 5698,
             "val": {}
           },
           "permissions": {
             "ver": 1,
-            "seq": 967,
+            "seq": 5698,
             "val": {
               "preset": "workspace-write",
               "sandbox": "workspace-write",
@@ -104,25 +104,150 @@
           },
           "sessionListMetadata": {
             "ver": 1,
-            "seq": 967,
+            "seq": 5698,
             "val": {
               "blank": false,
-              "lastPromptAt": 1788353874653
+              "lastPromptAt": 1788355946161
             }
           },
           "imageLimits": {
             "ver": 1,
-            "seq": 967,
+            "seq": 5698,
             "val": null
           },
           "todos": {
             "ver": 2,
-            "seq": 967,
+            "seq": 5698,
             "val": null
           },
           "plan": {
             "ver": 2,
-            "seq": 967,
+            "seq": 5698,
+            "val": {
+              "active": false,
+              "wanted": null,
+              "running": null
+            }
+          }
+        }
+      },
+      "session-67df89b2-a56c-41f1-8d39-0e857edec04c": {
+        "identity": {
+          "createdAt": 1788357389406,
+          "cwd": "/home/othman/test"
+        },
+        "rows": {
+          "sessionStats": {
+            "ver": 1,
+            "seq": 881,
+            "val": {
+              "turns": 1,
+              "steps": 1,
+              "llmMs": 27246,
+              "toolMs": 0,
+              "ttftMs": 2554,
+              "ttftSteps": 1,
+              "decodeMs": 24692,
+              "decodeTokens": 869,
+              "lastTurn": 1,
+              "openStep": null,
+              "pendingCalls": {}
+            }
+          },
+          "title": {
+            "ver": 1,
+            "seq": 881,
+            "val": "```bash \"${isQuiet}\" || log-info \"The"
+          },
+          "goal": {
+            "ver": 4,
+            "seq": 881,
+            "val": null
+          },
+          "tokenUsage": {
+            "ver": 1,
+            "seq": 881,
+            "val": {
+              "totals": {
+                "uncachedInputTokens": 7339,
+                "outputTokens": 869,
+                "cacheReadTokens": 0,
+                "cacheWriteTokens": 0
+              },
+              "last": {
+                "turn": 1,
+                "step": 1,
+                "buckets": {
+                  "uncachedInputTokens": 7339,
+                  "outputTokens": 869,
+                  "cacheReadTokens": 0,
+                  "cacheWriteTokens": 0
+                }
+              }
+            }
+          },
+          "contextPressure": {
+            "ver": 4,
+            "seq": 881,
+            "val": {
+              "surfaceTokens": 1187,
+              "contextWindow": 1000000,
+              "pressureTokens": 7339,
+              "sampledSurfaceTokens": 213
+            }
+          },
+          "contextBreakdown": {
+            "ver": 2,
+            "seq": 881,
+            "val": {
+              "systemTokens": 1577,
+              "toolsTokens": 6475,
+              "messageTokens": 1187
+            }
+          },
+          "subagentTiming": {
+            "ver": 2,
+            "seq": 881,
+            "val": {
+              "descriptorSeen": false,
+              "settledMs": 0
+            }
+          },
+          "subagent": {
+            "ver": 2,
+            "seq": 881,
+            "val": {}
+          },
+          "permissions": {
+            "ver": 1,
+            "seq": 881,
+            "val": {
+              "preset": "workspace-write",
+              "sandbox": "workspace-write",
+              "approval": "ask"
+            }
+          },
+          "sessionListMetadata": {
+            "ver": 1,
+            "seq": 881,
+            "val": {
+              "blank": false,
+              "lastPromptAt": 1788357424314
+            }
+          },
+          "imageLimits": {
+            "ver": 1,
+            "seq": 881,
+            "val": null
+          },
+          "todos": {
+            "ver": 2,
+            "seq": 881,
+            "val": null
+          },
+          "plan": {
+            "ver": 2,
+            "seq": 881,
             "val": {
               "active": false,
               "wanted": null,

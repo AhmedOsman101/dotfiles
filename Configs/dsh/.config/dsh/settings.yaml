@@ -7291,4 +7291,4 @@ web-search-deepseek:
   baseURL: https://html.duckduckgo.com/html
 agent-default-model:
   provider: omniroute
-  model: auto/best-free
+  model: bai/glm-5.3-flash
