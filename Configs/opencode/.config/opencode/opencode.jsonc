@@ -146,6 +146,16 @@
         "apiKey": "{env:OMNIROUTE_API_KEY}"
       },
       "models": {
+        "cl/z-ai/glm-5.3-flash": {
+          "name": "cl/z-ai/glm-5.3-flash",
+          "reasoning": true,
+          "tool_call": true,
+          "limit": {
+            "context": 1000000,
+            "output": 131072,
+            "input": 1000000
+          }
+        },
         "bai/glm-5.3-flash": {
           "name": "bai/glm-5.3-flash",
           "reasoning": true,
