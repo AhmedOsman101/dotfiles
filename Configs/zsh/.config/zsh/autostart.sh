@@ -51,11 +51,13 @@ if [[ -z "${DBUS_SESSION_BUS_ADDRESS}" ]]; then
   export DBUS_SESSION_BUS_PID
 fi
 
-# ---- 9Router ---- #
-bun update -g 9router omniroute --latest && {
-  9router --tray --skip-update
-  omniroute --tray --no-open --port 8082
-} &
+# ---- 9Router & Omniroute ---- #
+if bun update -g 9router omniroute --latest || true; then
+  {
+    9router --tray --skip-update
+    omniroute --tray --no-open --port 8082
+  } &
+fi
 
 # ---- Start Spotify listener ---- #
 # systemctl --user start spotify-listener &
