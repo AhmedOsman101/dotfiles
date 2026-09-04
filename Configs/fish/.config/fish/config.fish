@@ -5,4 +5,7 @@ end
 starship init fish | source
 enable_transience
 
-set -gx PATH $PATH /home/othman/.lmstudio/bin
+set -gx SCRIPTS_DIR /home/othman/scripts
+set -gx PATH $PATH $SCRIPTS_DIR
+
+test -s "$SCRIPTS_DIR/hooks/path.fish"; and source "$SCRIPTS_DIR/hooks/path.fish"
