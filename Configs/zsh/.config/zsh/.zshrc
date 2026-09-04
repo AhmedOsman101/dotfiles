@@ -3,10 +3,13 @@
 # ---- Interactive shell guard ---- #
 [[ -o interactive ]] || return
 
+# EPOCHSECONDS needs zsh/datetime (not loaded by default)
+zmodload zsh/datetime 2>/dev/null || true
+
 # ---- Concurrency guard: serialize parallel .zshrc sourcing ---- #
 # tmux continuum plugin restores N panes at once -> N shells race on compinit/zinit/file writes.
 # This lock is held ONLY for the duration of .zshrc sourcing, not the shell lifetime.
-# Acquired here, released at EOF before tmux autostart. Falls back: flock -> zsystem -> mkdir.
+# Acquired here, released at EOF before tmux autostart. Single backend by availability; fails open past timeout.
 if [[ -s "${ZDOTDIR:-${HOME}/.config/zsh}/lock.sh" ]]; then
   ZSHRC_LOCK_TIMEOUT=30 # seconds to wait before giving up
   source "${ZDOTDIR:-${HOME}/.config/zsh}/lock.sh"

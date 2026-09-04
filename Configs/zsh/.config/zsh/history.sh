@@ -24,7 +24,7 @@ if command -v no-dups &>/dev/null; then
   if [[ ! -s "${_zhist_stamp}" ]] || (( EPOCHSECONDS - $(<"${_zhist_stamp}") > 86400 )); then
     no-dups -f -q "${HISTFILE}"
     mkdir -p "${_zhist_stamp:h}"
-    date +%s >|"${_zhist_stamp}"
+    print -r -- "${EPOCHSECONDS}" >|"${_zhist_stamp}"
   fi
 fi
 unset _zhist_stamp
