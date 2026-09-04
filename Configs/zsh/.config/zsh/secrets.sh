@@ -2,29 +2,31 @@
 # shellcheck disable=2034
 
 _allChecked=true
-_vars=(
+# Only the vars this script actually assigns gate the short-circuit and get exported.
+# Add a name here when you uncomment its pass show line below.
+_active_vars=(
   # ADVENT_OF_CODE_SESSION
   # AI_GATEWAY_API_KEY
   # ANILIST_TOKEN
   # ANTHROPIC_API_KEY
   # CONTEXT7_API_KEY
-  EXA_API_KEY
   # FEATHERLESS_API_KEY
+  # KIRO_PROXY_API_KEY
+  # OBSIDIAN_API_KEY
+  # OPENAI_API_KEY
+  # ZAI_API_KEY
+  EXA_API_KEY
   GEMINI_API_KEY
   GITHUB_TOKEN
   GOOGLE_GENERATIVE_AI_API_KEY
   HF_TOKEN
-  # KIRO_PROXY_API_KEY
   NVIDIA_API_KEY
-  # OBSIDIAN_API_KEY
-  # OPENAI_API_KEY
   OPENROUTER_API_KEY
-  # ZAI_API_KEY
   N9ROUTER_API_KEY
   OMNIROUTE_API_KEY
 )
 
-for _var in "${_vars[@]}"; do
+for _var in "${_active_vars[@]}"; do
   # shellcheck disable=2296
   if [[ -z "${(P)_var}" ]]; then # zsh style variable variables
     _allChecked=false
@@ -33,30 +35,30 @@ for _var in "${_vars[@]}"; do
 done
 
 if ${_allChecked}; then
-  unset _vars _allChecked _var
+  unset _active_vars _allChecked _var
   return 0
 fi
 
 # ADVENT_OF_CODE_SESSION="$(pass show advent-of-code)"
 # AI_GATEWAY_API_KEY="$(pass show vercel/ai-gateway)"
 # ANILIST_TOKEN="$(pass show anilist/access-token)"
+# ANTHROPIC_API_KEY="${N9ROUTER_API_KEY}"
 # CONTEXT7_API_KEY="$(pass show context7)"
-EXA_API_KEY="$(pass show exa-search)"
 # FEATHERLESS_API_KEY="$(pass show featherless | head -1)"
+# KIRO_PROXY_API_KEY="$(pass show kiro)"
+# OBSIDIAN_API_KEY="$(pass show obsidian/api-key)"
+# OPENAI_API_KEY="$(pass show openai | head -1)"
+# ZAI_API_KEY="$(pass show z.ai)"
+EXA_API_KEY="$(pass show exa-search)"
 GEMINI_API_KEY="$(pass show gemini)"
 GITHUB_TOKEN="$(pass show github/tokens/main | head -1)"
 GOOGLE_GENERATIVE_AI_API_KEY="${GEMINI_API_KEY}"
 HF_TOKEN="$(pass show hugging-face)"
-# KIRO_PROXY_API_KEY="$(pass show kiro)"
 NVIDIA_API_KEY="$(pass show nvidia/api-key)"
-# OBSIDIAN_API_KEY="$(pass show obsidian/api-key)"
-# OPENAI_API_KEY="$(pass show openai | head -1)"
 OPENROUTER_API_KEY="$(pass show openrouter)"
-# ZAI_API_KEY="$(pass show z.ai)"
 N9ROUTER_API_KEY="$(pass show 9router)"
-# ANTHROPIC_API_KEY="${N9ROUTER_API_KEY}"
 OMNIROUTE_API_KEY="$(pass show omniroute)"
 
-export "${_vars[@]}"
+export "${_active_vars[@]}"
 
-unset _vars _allChecked _var
+unset _active_vars _allChecked _var

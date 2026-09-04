@@ -11,6 +11,7 @@ export ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 # --- Zsh config --- #
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 export ZSHRC="${ZDOTDIR}/.zshrc"
+export ZSH_CACHE_DIR="${ZSH_CACHE_DIR:-${XDG_CACHE_HOME}/zsh}"
 
 # --- Scripts --- #
 export SCRIPTS_DIR="${HOME}/scripts"
