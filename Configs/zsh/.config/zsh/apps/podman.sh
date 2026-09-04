@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 # --- Podman --- #
-command -v podman &>/dev/null && podman completion zsh 2>/dev/null >"${ZSH_CACHE_DIR}/completions/_podman"
+# NOTE: cache-completion sources cached file directly, so _podman lives in cache dir (not FPATH)
+command -v podman &>/dev/null && cache-completion _podman podman completion zsh

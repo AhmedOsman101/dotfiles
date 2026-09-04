@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 
 # --- Oh-My-Pi --- #
-if command -v omp &>/dev/null; then
-  eval "$(omp completions zsh)"
-fi
+command -v omp &>/dev/null && cache-completion omp omp completions zsh

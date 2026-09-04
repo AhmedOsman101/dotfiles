@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 
 # ---  PHP-CS-Fixer --- #
-if command -v php-cs-fixer &>/dev/null; then
-  eval "$(php-cs-fixer completion zsh)"
-fi
+command -v php-cs-fixer &>/dev/null && cache-completion php-cs-fixer php-cs-fixer completion zsh

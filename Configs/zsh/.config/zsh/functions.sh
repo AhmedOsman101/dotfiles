@@ -395,3 +395,30 @@ getVersion() {
     echo "${json}" | jq -r '.tag_name' || return 1
   fi
 }
+
+# ---- Cached tool completions ---- #
+# Usage: cache-completion <cache-name> <tool> [tool args...]
+# Caches the tool's generated completion under ${XDG_CACHE_HOME}/zsh/completions/
+# and sources it. Regenerates only when the cache is missing/empty or the tool
+# binary is newer than the cache (so upgrades pick up new completions on next start).
+cache-completion() {
+  emulate -L zsh
+  local name="$1"
+  shift
+  local tool="$1"
+  local cache="${XDG_CACHE_HOME}/zsh/completions/${name}.zsh"
+
+  if [[ -n "${commands[${tool}]:-}" ]] && { [[ ! -s "${cache}" ]] || [[ "${commands[${tool}]}" -nt "${cache}" ]]; }; then
+    mkdir -p "${cache:h}"
+    # atomic: generate to tmp, then mv — an interrupted run can't poison the cache
+    local tmp="${cache}.tmp.$$"
+    "${@}" >|"${tmp}" 2>/dev/null
+    if [[ -s "${tmp}" ]]; then
+      mv -f "${tmp}" "${cache}"
+    else
+      rm -f "${tmp}" # generation failed: keep the previous good cache, if any
+    fi
+  fi
+
+  [[ -s "${cache}" ]] && source "${cache}"
+}

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# --- uv --- #
+# --- uv / uvx --- #
 if command -v uv &>/dev/null; then
-  eval "$(uv generate-shell-completion zsh)"
-  eval "$(uvx --generate-shell-completion zsh)"
+  cache-completion uv uv generate-shell-completion zsh
+  command -v uvx &>/dev/null && cache-completion uvx uvx --generate-shell-completion zsh
 fi

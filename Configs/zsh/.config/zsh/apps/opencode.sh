@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 
 # --- OpenCode --- #
-if command -v opencode &>/dev/null; then
-  eval "$(opencode completion zsh)"
-fi
+command -v opencode &>/dev/null && cache-completion opencode opencode completion zsh

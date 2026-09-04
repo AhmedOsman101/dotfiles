@@ -18,5 +18,13 @@ setopt hist_find_no_dups    # Skip duplicates when searching history
 setopt extended_history     # Enable timestamps in history
 setopt inc_append_history   # Add commands to history immediately
 
-# ---- Remove duplicate history entries ---- #
-command -v no-dups &>/dev/null && no-dups -f -q "${HISTFILE}"
+# ---- Remove duplicate history entries (once a day) ---- #
+_zhist_stamp="${XDG_CACHE_HOME}/zsh/.last-dedup"
+if command -v no-dups &>/dev/null; then
+  if [[ ! -s "${_zhist_stamp}" ]] || (( EPOCHSECONDS - $(<"${_zhist_stamp}") > 86400 )); then
+    no-dups -f -q "${HISTFILE}"
+    mkdir -p "${_zhist_stamp:h}"
+    date +%s >|"${_zhist_stamp}"
+  fi
+fi
+unset _zhist_stamp

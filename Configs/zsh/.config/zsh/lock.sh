@@ -63,15 +63,23 @@ _zshrc_lock_acquire() {
 
   # Ensure parent dir exists
   mkdir -p "${lock_file:h}" 2>/dev/null || mkdir -p "${HOME}/.cache/zsh" 2>/dev/null
-  # Ensure file exists (zsystem flock requires it)
-  : > "${lock_file}" 2>/dev/null || true
+  # Ensure file exists (zsystem flock requires it); skip when already there
+  [[ -f "${lock_file}" ]] || : > "${lock_file}" 2>/dev/null || true
 
   # ---- 1) Try external flock (util-linux) — preferred, most robust ----
   if command -v flock &>/dev/null; then
     # Open FD (zsh `exec {var}>file` allocates a free FD)
     exec {__ZSHRC_LOCK_FD}> "${lock_file}" 2>/dev/null
     if [[ -n "${__ZSHRC_LOCK_FD:-}" ]]; then
-      (( debug )) && print -P "%F{yellow}[zshrc-lock]%f waiting for flock (timeout ${timeout}s) on ${lock_file} (fd ${__ZSHRC_LOCK_FD})" >&2
+      # Fast path: uncontended start (the common case) → instant acquire, no wait syscall
+      if flock -n "${__ZSHRC_LOCK_FD}" 2>/dev/null; then
+        __ZSHRC_LOCK_MODE="flock"
+        __ZSHRC_LOCK_HELD=1
+        (( debug )) && print -P "%F{green}[zshrc-lock]%f acquired (flock -n, fd ${__ZSHRC_LOCK_FD})" >&2
+        return 0
+      fi
+      # Contended (tmux restore herd) → block with timeout
+      (( debug )) && print -P "%F{yellow}[zshrc-lock]%f contended; waiting for flock (timeout ${timeout}s) on ${lock_file} (fd ${__ZSHRC_LOCK_FD})" >&2
       if [[ "${timeout}" == "0" ]]; then
         flock "${__ZSHRC_LOCK_FD}" 2>/dev/null
       else
