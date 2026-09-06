@@ -10,7 +10,7 @@ if command -v mise &>/dev/null; then
   if [[ ! -s "${_mise_bash}" ]] || [[ "${commands[mise]}" -nt "${_mise_bash}" ]]; then
     mkdir -p "${_mise_bash:h}"
     mise completion bash --include-bash-completion-lib >|"${_mise_bash}" 2>/dev/null
-    [[ -s "${_mise_bash}" ]] || rm -f "${_mise_bash}" # don't keep a broken/empty file
+    [[ -s "${_mise_bash}" ]] || command rm -f "${_mise_bash}" # don't keep a broken/empty file
   fi
   unset _mise_bash
 fi

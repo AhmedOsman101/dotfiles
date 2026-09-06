@@ -12,16 +12,17 @@
 #   populate pipes `pass` output straight into `gpg --encrypt`; no temp plaintext.
 # - Populate runs only on cache miss, under the already-held global .zshrc lock,
 #   so a startup herd converges on identical content (and any race is benign).
-# - Rotation: `rm ${XDG_CACHE_HOME}/zsh/secrets.env.gpg`; the next shell repopulates.
+# - Rotation: `command rm ${XDG_CACHE_HOME}/zsh/secrets.env.gpg`; the next shell repopulates.
 # - Fail-closed populate (a partial set is never cached or exported), fail-open
 #   shell (one warning, login proceeds).
 #
-# NOTE: only the 9 vars below gate anything. Add a name AND its pass line together.
+# NOTE: only the vars below gate anything. Add a name AND its pass line together.
 #
 # Threat-model note: while gpg-agent is unlocked, any same-uid process can ask it
 # to decrypt. This stops accidental access, not targeted same-user extraction.
 
 emulate -L zsh
+setopt local_options nullglob
 
 _secrets_cache="${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/secrets.env.gpg"
 
@@ -39,7 +40,7 @@ if [[ -s "${_secrets_cache}" ]]; then
   fi
   # Present but unreadable: warn once and stop. Do NOT fall through to pass —
   # that would hammer pinentry once per secret.
-  print -r -- "secrets.sh: cannot decrypt ${_secrets_cache} (rm it to repopulate) — starting without secrets" >&2
+  print -r -- "secrets.sh: cannot decrypt ${_secrets_cache} (delete it to repopulate) — starting without secrets" >&2
   unset _secrets_cache _secrets_plain
   return 0
 fi
@@ -50,6 +51,10 @@ if (( ! $+commands[pass] )) || (( ! $+commands[gpg] )); then
   unset _secrets_cache
   return 0
 fi
+
+# Sweep stillborn populates (PID-suffixed tmps left by killed shells).
+# Note: this runs under the global .zshrc lock, so no concurrent populate can own one.
+command rm -f -- "${_secrets_cache}".[0-9]* 2>/dev/null
 
 read -r _secrets_rcpt < "${HOME}/.password-store/.gpg-id" 2>/dev/null
 if [[ -z "${_secrets_rcpt:-}" ]]; then
@@ -119,10 +124,15 @@ if ${_secrets_ok}; then
   : >| "${_secrets_tmp}" 2>/dev/null && chmod 600 "${_secrets_tmp}" 2>/dev/null
   if print -r -- "${_secrets_plain}" | gpg --batch --quiet --trust-model always --encrypt --recipient "${_secrets_rcpt}" -o "${_secrets_tmp}" 2>/dev/null \
       && [[ -s "${_secrets_tmp}" ]]; then
-    mv -f "${_secrets_tmp}" "${_secrets_cache}" 2>/dev/null
-    chmod 600 "${_secrets_cache}" 2>/dev/null
+    # The mv exit code is checked — a silent failure here once cost us the entire cache.
+    if command mv -f "${_secrets_tmp}" "${_secrets_cache}" 2>/dev/null; then
+      chmod 600 "${_secrets_cache}" 2>/dev/null
+    else
+      print -r -- "secrets.sh: failed to install ${_secrets_cache} — in-memory secrets only, no cache" >&2
+      command rm -f "${_secrets_tmp}" 2>/dev/null
+    fi
   else
-    rm -f "${_secrets_tmp}" 2>/dev/null
+    command rm -f "${_secrets_tmp}" 2>/dev/null
   fi
   export "${_vars[@]}"
 else

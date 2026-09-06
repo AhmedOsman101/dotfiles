@@ -13,7 +13,7 @@ yy() {
   if cwd="$(command cat -- "${tmp}")" && [[ -n "${cwd}" ]] && [[ "${cwd}" != "${PWD}" ]]; then
     builtin cd -- "${cwd}" || exit
   fi
-  rm -f -- "${tmp}"
+  command rm -f -- "${tmp}"
 }
 
 # ---- quickly navigate to my dotfiles ---- #
@@ -414,9 +414,9 @@ cache-completion() {
     local tmp="${cache}.tmp.$$"
     "${@}" >|"${tmp}" 2>/dev/null
     if [[ -s "${tmp}" ]]; then
-      mv -f "${tmp}" "${cache}"
+      command mv -f "${tmp}" "${cache}"
     else
-      rm -f "${tmp}" # generation failed: keep the previous good cache, if any
+      command rm -f "${tmp}" # generation failed: keep the previous good cache, if any
     fi
   fi
 
