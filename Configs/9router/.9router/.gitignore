@@ -11,6 +11,10 @@ db/*.db
 db/*.db-shm
 db/*.db-wal
 
+# Auto-generated files
+model-catalog-raw.json
+model-catalog.json
+
 # Logs
 logs/
 
