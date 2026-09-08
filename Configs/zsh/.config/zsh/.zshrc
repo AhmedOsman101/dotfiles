@@ -55,7 +55,7 @@ done
 
 # ---- Release concurrency lock (held since top of file) ---- #
 # Must run before tmux autostart so next queued shell can proceed immediately.
-(( $+functions[_zshrc_lock_release] )) && _zshrc_lock_release 2>/dev/null || true
+(( $+functions[_zshrc_lock_release] )) && _zshrc_lock_release || true
 
 # Cleanup
 unset MODULES module app

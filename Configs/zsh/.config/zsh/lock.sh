@@ -26,7 +26,7 @@
 
 # Only for Zsh (sourcing from bash during tests is a no-op)
 if [[ -z "${ZSH_VERSION:-}" ]]; then
-  return 0 2>/dev/null || exit 0
+  return 0 || exit 0
 fi
 
 # --- Config (idempotent: preserve existing state on re-source) ---
@@ -87,11 +87,14 @@ _zshrc_lock_acquire() {
   # exclude holders of the primary. Atomic cache writes make the race benign.
   case "${__ZSHRC_LOCK_BACKEND:-flock}" in
     flock)
-      # Open FD (zsh `exec {var}>file` allocates a free FD)
-      exec {__ZSHRC_LOCK_FD}> "${lock_file}" 2>/dev/null
+      # Open FD (zsh `exec {var}>file` allocates a free FD).
+      # WARNING: never put a redirect directly on a bare `exec` line — with no
+      # command, exec's redirects apply to THIS SHELL permanently (that's how
+      # every shell once lost stderr). Silence via a brace group (contained).
+      exec {__ZSHRC_LOCK_FD}> "${lock_file}"
       if [[ -n "${__ZSHRC_LOCK_FD:-}" ]]; then
         # Fast path: uncontended start (the common case) → instant acquire, no wait syscall
-        if flock -n "${__ZSHRC_LOCK_FD}" 2>/dev/null; then
+        if flock -n "${__ZSHRC_LOCK_FD}"; then
           __ZSHRC_LOCK_MODE="flock"
           __ZSHRC_LOCK_HELD=1
           (( debug )) && print -P "%F{green}[zshrc-lock]%f acquired (flock -n, fd ${__ZSHRC_LOCK_FD})" >&2
@@ -100,9 +103,9 @@ _zshrc_lock_acquire() {
         # Contended (tmux restore herd) → block with timeout
         (( debug )) && print -P "%F{yellow}[zshrc-lock]%f contended; waiting for flock (timeout ${timeout}s) on ${lock_file} (fd ${__ZSHRC_LOCK_FD})" >&2
         if [[ "${timeout}" == "0" ]]; then
-          flock "${__ZSHRC_LOCK_FD}" 2>/dev/null
+          flock "${__ZSHRC_LOCK_FD}"
         else
-          flock -w "${timeout}" "${__ZSHRC_LOCK_FD}" 2>/dev/null
+          flock -w "${timeout}" "${__ZSHRC_LOCK_FD}"
         fi
         local rc=$?
         if (( rc == 0 )); then
@@ -113,7 +116,7 @@ _zshrc_lock_acquire() {
         fi
         (( debug )) && print -P "%F{red}[zshrc-lock]%f flock timeout/fail (rc=${rc})" >&2
         # Close the FD we opened (failed to lock)
-        exec {__ZSHRC_LOCK_FD}>&- 2>/dev/null
+        exec {__ZSHRC_LOCK_FD}>&-
         unset __ZSHRC_LOCK_FD
       fi
       print -P "%F{red}[zshrc-lock]%f cannot acquire flock after ${timeout}s — proceeding anyway (race risk)" >&2
@@ -127,9 +130,9 @@ _zshrc_lock_acquire() {
       (( debug )) && print -P "%F{yellow}[zshrc-lock]%f waiting for zsystem flock (timeout ${timeout}s) on ${lock_file}" >&2
       local zfd
       if [[ "${timeout}" == "0" ]]; then
-        zsystem flock -f zfd "${lock_file}" 2>/dev/null
+        zsystem flock -f zfd "${lock_file}"
       else
-        zsystem flock -t "${timeout}" -f zfd "${lock_file}" 2>/dev/null
+        zsystem flock -t "${timeout}" -f zfd "${lock_file}"
       fi
       local rc=$?
       if (( rc == 0 )); then
@@ -142,7 +145,7 @@ _zshrc_lock_acquire() {
       (( debug )) && print -P "%F{red}[zshrc-lock]%f zsystem flock fail (rc=${rc})" >&2
       # zsystem may have left fd open on timeout==2; try to close if set
       if [[ -n "${zfd:-}" ]]; then
-        zsystem flock -u "${zfd}" 2>/dev/null || exec {zfd}>&- 2>/dev/null || true
+        zsystem flock -u "${zfd}" || exec {zfd}>&- || true
       fi
       print -P "%F{red}[zshrc-lock]%f cannot acquire zsystem flock after ${timeout}s — proceeding anyway (race risk)" >&2
       __ZSHRC_LOCK_MODE="none"
@@ -203,11 +206,11 @@ _zshrc_lock_release() {
     flock)
       (( debug )) && print -P "%F{green}[zshrc-lock]%f releasing flock (fd ${__ZSHRC_LOCK_FD})" >&2
       # flock is released automatically on FD close
-      exec {__ZSHRC_LOCK_FD}>&- 2>/dev/null || true
+      exec {__ZSHRC_LOCK_FD}>&- || true
       ;;
     zsystem)
       (( debug )) && print -P "%F{green}[zshrc-lock]%f releasing zsystem flock (fd ${__ZSHRC_LOCK_FD})" >&2
-      zsystem flock -u "${__ZSHRC_LOCK_FD}" 2>/dev/null || exec {__ZSHRC_LOCK_FD}>&- 2>/dev/null || true
+      zsystem flock -u "${__ZSHRC_LOCK_FD}" || exec {__ZSHRC_LOCK_FD}>&- || true
       ;;
     mkdir)
       (( debug )) && print -P "%F{green}[zshrc-lock]%f releasing mkdir lock (${__ZSHRC_LOCK_DIR})" >&2
@@ -235,17 +238,17 @@ if (( __ZSHRC_LOCK_HELD )); then
   # Prefer add-zsh-hook if available (loaded later in plugins.sh, so may not exist yet).
   # Fall back to TRAPEXIT which zsh will call on shell exit.
   if (( $+functions[add-zsh-hook] )); then
-    add-zsh-hook -Uz zshexit _zshrc_lock_release 2>/dev/null || true
+    add-zsh-hook -Uz zshexit _zshrc_lock_release || true
   else
     # TRAPEXIT is a special function; defining it here will run on exit.
     # Wrap to avoid clobbering an existing TRAPEXIT.
     if (( ! $+functions[TRAPEXIT] )); then
-      TRAPEXIT() { _zshrc_lock_release 2>/dev/null || true; }
+      TRAPEXIT() { _zshrc_lock_release || true; }
     else
       # Chain: save old, wrap
       functions[_zshrc_lock_old_TRAPEXIT]="${functions[TRAPEXIT]}"
       TRAPEXIT() {
-        _zshrc_lock_release 2>/dev/null || true
+        _zshrc_lock_release || true
         _zshrc_lock_old_TRAPEXIT "$@"
       }
     fi
