@@ -74,6 +74,7 @@ _vars=(
   # OPENAI_API_KEY
   # ZAI_API_KEY
   ANTHROPIC_API_KEY
+  BW_SESSION # Bitwarden CLI
   EXA_API_KEY
   GEMINI_API_KEY
   GITHUB_TOKEN
@@ -94,6 +95,7 @@ _vars=(
 # OBSIDIAN_API_KEY="$(pass show obsidian/api-key 2>/dev/null)"
 # OPENAI_API_KEY="$(pass show openai 2>/dev/null | head -1)"
 # ZAI_API_KEY="$(pass show z.ai 2>/dev/null)"
+BW_SESSION="$(pass show bitwarden/session 2>/dev/null)"
 EXA_API_KEY="$(pass show exa-search 2>/dev/null)"
 GEMINI_API_KEY="$(pass show gemini 2>/dev/null)"
 GITHUB_TOKEN="$(pass show github/tokens/main 2>/dev/null | head -1)"
