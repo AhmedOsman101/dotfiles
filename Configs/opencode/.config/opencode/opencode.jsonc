@@ -61,7 +61,7 @@
     "cc-safety-net@latest",
     "@tarquinen/opencode-dcp@latest",
     "opencode-handoff@latest",
-    "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
+    // "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
     // "@tarquinen/opencode-smart-title@latest", // TODO: restore after PR #13 merges
     // "@tarquinen/opencode-smart-title@git+https://github.com/AhmedOsman101/opencode-smart-title.git#run/fork-build", // replaced by local clone in plugins/opencode-smart-title/ (auto-loaded, avoids DEP0169)
     "@dietrichgebert/ponytail@latest"

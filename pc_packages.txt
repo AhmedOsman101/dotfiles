@@ -326,6 +326,7 @@ plasma-meta
 plasma-workspace
 plasma-x11-session
 plocate
+pnpm
 podman
 podman-compose
 podman-docker
@@ -479,6 +480,7 @@ xorg-xkill
 xsel
 xterm
 yad
+yaml-language-server
 yamlfmt
 yapf
 yay
