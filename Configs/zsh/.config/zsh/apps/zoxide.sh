@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
 # --- Zoxide --- #
-command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
+if command -v zoxide &>/dev/null; then
+  eval "$(zoxide init zsh)"
+  alias cd="z"
+fi

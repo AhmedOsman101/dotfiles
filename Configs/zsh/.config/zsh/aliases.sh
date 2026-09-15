@@ -17,8 +17,7 @@ alias paths='printenv PATH | tr ":" "\n" | collapseTilde | no-dups | sort'
 alias cat="command bat --paging=never --style=plain --color=auto"
 alias catwhich="batwhich"
 
-# ---- Zoxide (better cd) ----- #
-alias cd="z"
+# ---- cd ----- #
 alias cdroot='cd "$(git-root)"'
 
 # ---- Micro (better nano) ----- #
