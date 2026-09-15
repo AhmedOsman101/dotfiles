@@ -44,9 +44,6 @@ alias svn='svn --config-dir "${XDG_CONFIG_HOME}/subversion"'
 # --- Laravel Sail --- #
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
-# ---- Wget ---- #
-alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
-
 # ---- Copy and move with progress bars! ---- #
 alias cp='advcp -ivg'
 alias mv='advmv -ivg'
