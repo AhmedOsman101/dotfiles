@@ -21,8 +21,10 @@
 # Threat-model note: while gpg-agent is unlocked, any same-uid process can ask it
 # to decrypt. This stops accidental access, not targeted same-user extraction.
 
-emulate -L zsh
-setopt local_options nullglob
+# WARNING: never put `emulate -L zsh` or `setopt localoptions` at top level here.
+# This file is sourced into the live interactive shell: -L resets ALL options
+# to defaults (that silently killed AUTO_CD + nomatch for every shell) with no
+# function scope to restore them. Keep option changes inside functions.
 
 _secrets_cache="${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/secrets.env.gpg"
 
@@ -54,7 +56,8 @@ fi
 
 # Sweep stillborn populates (PID-suffixed tmps left by killed shells).
 # Note: this runs under the global .zshrc lock, so no concurrent populate can own one.
-command rm -f -- "${_secrets_cache}".[0-9]* 2>/dev/null
+# (N) makes the glob self-contained — no global nullglob needed.
+command rm -f -- "${_secrets_cache}".[0-9]*(N) 2>/dev/null
 
 read -r _secrets_rcpt < "${HOME}/.password-store/.gpg-id" 2>/dev/null
 if [[ -z "${_secrets_rcpt:-}" ]]; then
