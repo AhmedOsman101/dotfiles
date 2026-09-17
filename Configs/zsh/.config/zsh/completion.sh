@@ -50,7 +50,7 @@ if [[ -s "${_zcompdump}" ]] && zstat -A _zcompdump_mtime +mtime -- "${_zcompdump
 fi
 if (( _zcompdump_stale )); then
   compinit -d "${_zcompdump}" # stale (>24h) or missing: full scan (once a day)
-  touch -c "${_zcompdump}"    # reset the 24h clock (compinit may not rewrite the file)
+  command touch -c "${_zcompdump}"  # reset the 24h clock (compinit may not rewrite the file); command bypasses the touch() helper from ~/scripts/lib/helpers.sh
 else
   compinit -C -d "${_zcompdump}" # fresh: reuse dump (typical start)
 fi

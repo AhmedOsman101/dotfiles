@@ -120,7 +120,7 @@ ffprobe() {
     "$@"
 }
 
-touch() {
+__touch() {
   local dir
   for file in "$@"; do
     if [[ ! -f "${file}" ]]; then

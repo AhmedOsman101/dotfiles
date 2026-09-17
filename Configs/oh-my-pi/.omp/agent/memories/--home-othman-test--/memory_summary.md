@@ -1,0 +1,1 @@
+For string encoding tasks with escaping: resolve escaping rules (digits -> '#d', '#' -> '##') before or within the encoding loop to avoid ambiguity between escaped literals and appended run-length counts. Clarify rule interactions with the user prior to implementation.

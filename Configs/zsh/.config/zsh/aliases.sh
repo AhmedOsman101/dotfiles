@@ -162,6 +162,13 @@ alias open='xdg-open'
 # --- mkdir --- #
 alias mkdir='mkdir -pv'
 
+# --- touch --- #
+if command -v __touch &>/dev/null; then
+  alias touch='__touch'
+else
+  unalias touch &>/dev/null
+fi
+
 # --- DeepSeek Harness --- #
 alias dsh='bunx @deepseek-ai/dsh'
 
