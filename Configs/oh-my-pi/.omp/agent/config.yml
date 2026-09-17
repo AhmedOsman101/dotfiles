@@ -8,7 +8,7 @@ providers:
   imageOrder:
     - openrouter
 modelRoles:
-  default: omniroute/bai/glm-5.3-flash:high
+  default: omniroute/cl/z-ai/glm-5.3-flash:xhigh
 symbolPreset: unicode
 composer:
   shape: box
@@ -94,3 +94,5 @@ secrets:
   enabled: true
 defaultThinkingLevel: auto
 hideThinkingBlock: false
+dev:
+  autoqaConsent: granted

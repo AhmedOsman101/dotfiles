@@ -4,6 +4,12 @@ providers:
     api: openai-completions
     apiKey: OMNIROUTE_API_KEY
     models:
+      - id: cl/z-ai/glm-5.3-flash
+        name: cl/z-ai/glm-5.3-flash
+        reasoning: true
+        input: [text, image]
+        contextWindow: 1000000
+        maxTokens: 131072
       - id: bai/glm-5.3-flash
         name: bai/glm-5.3-flash
         reasoning: true
