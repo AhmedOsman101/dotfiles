@@ -1,12 +1,5 @@
 {
   "$schema": "https://raw.githubusercontent.com/AhmedOsman101/commit-sage-cli/refs/heads/main/config.schema.json",
-  "general": {
-    "maxRetries": 3,
-    "initialRetryDelayMs": 1000,
-    "temperature": 0.3,
-    "maxInputChars": 100000,
-    "diffStrategy": "staged"
-  },
   "commit": {
     "autoCommit": false,
     "autoPush": false,
@@ -14,18 +7,27 @@
     "onlyStagedChanges": true,
     "commitLanguage": "english",
     "promptForRefs": false,
-    "maxSubjectLength": 80,
-    "bodyStyle": "subject-body"
+    "bodyStyle": "subject-body",
+    "maxLength": 80
   },
-  "openai": {
-    "baseUrl": "https://api.featherless.ai/v1",
-    "apiKeyEnvVar": "FEATHERLESS_API_KEY",
-    "useChatCompletions": true
+  "generation": {
+    "maxRetries": 3,
+    "retryDelay": 1000,
+    "temperature": 0.3,
+    "maxPromptTokens": 100000,
+    "diffStrategy": "staged"
   },
-  "provider": {
-    "type": "gemini",
-    "model": "gemini-3.1-flash-lite",
-    "timeoutMs": 60000,
-    "reasoning": "off"
+  "model": "gemini/gemini-3.1-flash-lite",
+  "providers": {
+    "defaults": {
+      "timeoutMs": 60000,
+      "reasoning": "off",
+      "apiType": "openai-chat"
+    },
+    "openai": {
+      "baseUrl": "https://api.featherless.ai/v1",
+      "apiKey": "$FEATHERLESS_API_KEY",
+      "apiType": "openai-chat"
+    }
   }
 }
