@@ -30,5 +30,6 @@ Configs/9router/.9router/9router-backup*.json  filter=git-crypt diff=git-crypt
 Configs/pi/.pi/agent/sessions/**  filter=git-crypt diff=git-crypt
 Configs/pi/.pi/agent/auth.json    filter=git-crypt diff=git-crypt
 
-# Oh My PI sessions
+# Oh My PI sessions and memories
 Configs/oh-my-pi/.omp/agent/sessions/**  filter=git-crypt diff=git-crypt
+Configs/oh-my-pi/.omp/agent/memories/**  filter=git-crypt diff=git-crypt

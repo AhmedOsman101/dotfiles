@@ -184,6 +184,222 @@
             "output": 131072,
             "input": 1048576
           }
+        },
+        "kc/qwen/qwen3.8-27b:free": {
+          "name": "Qwen: Qwen3.8 27B (free)",
+          "limit": {
+            "context": 262144,
+            "output": 235929
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image", "video"],
+            "output": ["text"]
+          }
+        },
+        "baseten/zai-org/GLM-5.3-Flash": {
+          "name": "GLM 5.3 Flash",
+          "limit": {
+            "context": 1048576,
+            "output": 131072
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "auto/best-free": {
+          "name": "auto/best-free",
+          "limit": {
+            "context": 1048576,
+            "output": 131072
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true
+        },
+        "auto/coding:free": {
+          "name": "auto/coding:free",
+          "limit": {
+            "context": 1048576,
+            "output": 131072
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true
+        },
+        "kc/kilo-auto/free": {
+          "name": "Kilo Auto Free",
+          "limit": {
+            "context": 1048576,
+            "output": 131072
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true,
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
+        },
+        "kc/poolside/laguna-s-2.1:free": {
+          "name": "kc/poolside/laguna-s-2.1:free",
+          "limit": {
+            "context": 262144,
+            "output": 32768
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true,
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
+        },
+        "kc/nvidia/nemotron-3-ultra-550b-a55b:free": {
+          "name": "kc/nvidia/nemotron-3-ultra-550b-a55b:free",
+          "limit": {
+            "context": 1000000,
+            "output": 65536
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true,
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
+        },
+        "kc/nex-agi/nex-n2.5-pro:free": {
+          "name": "kc/nex-agi/nex-n2.5-pro:free",
+          "limit": {
+            "context": 262144,
+            "output": 235929
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kc/inclusionai/ling-3.0-flash-vl:free": {
+          "name": "kc/inclusionai/ling-3.0-flash-vl:free",
+          "limit": {
+            "context": 262144,
+            "output": 32768
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image", "video"],
+            "output": ["text"]
+          }
+        },
+        "kc/deepseek/deepseek-v4-flash-0731:free": {
+          "name": "kc/deepseek/deepseek-v4-flash-0731:free",
+          "limit": {
+            "context": 1048576,
+            "output": 393216
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true,
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
+        },
+        "kc/thinkingmachines/inkling-small:free": {
+          "name": "kc/thinkingmachines/inkling-small:free",
+          "limit": {
+            "context": 1048576,
+            "output": 262144
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image", "audio"],
+            "output": ["text"]
+          }
+        },
+        "kc/openrouter/free": {
+          "name": "kc/Free Models Router",
+          "limit": {
+            "context": 200000,
+            "output": 32768
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "kc/stepfun/step-3.7-flash:free": {
+          "name": "kc/stepfun/step-3.7-flash:free",
+          "limit": {
+            "context": 262144,
+            "output": 262144
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+
+        "kiro/auto": {
+          "name": "kiro/auto",
+          "reasoning": true,
+          "tool_call": true
+        },
+        "ollamacloud/glm-5.2": {
+          "name": "ollama-cloud/GLM 5.2",
+          "limit": {
+            "context": 1000000,
+            "output": 131072
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true,
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
+        },
+        "ollamacloud/minimax-m3": {
+          "name": "ollamacloud/MiniMax M3",
+          "limit": {
+            "context": 512000,
+            "output": 131072
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "temperature": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         }
       }
     }
