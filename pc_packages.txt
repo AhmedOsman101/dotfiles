@@ -390,6 +390,7 @@ sqls
 sshfs
 stacer-bin
 starship
+stow
 sublime-text-4
 swtpm
 sxhkd

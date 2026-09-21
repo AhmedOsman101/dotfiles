@@ -1173,5 +1173,14 @@
   "kilo-code.new.autocomplete.enableChatAutocomplete": true,
   "omnicopilot.baseUrl": "http://localhost:8082",
   "omnicopilot.defaultContextLength": 200000,
-  "omnicopilot.maxOutputTokens": 32000
+  "omnicopilot.maxOutputTokens": 32000,
+  "Lua.codeLens.enable": true,
+  "Lua.diagnostics.workspaceEvent": "OnChange",
+  "Lua.hint.awaitPropagate": true,
+  "Lua.hint.enable": true,
+  "Lua.runtime.version": "Lua 5.5",
+  "Lua.type.checkTableShape": true,
+  "Lua.type.inferParamType": true,
+  "Lua.hint.arrayIndex": "Disable",
+  "Lua.hint.paramName": "Literal"
 }
