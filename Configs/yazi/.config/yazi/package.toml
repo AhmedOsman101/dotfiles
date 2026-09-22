@@ -1,7 +1,7 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "38efe09"
-hash = "12126fca34f9f1802bb57b88292f57af"
+rev = "f703392"
+hash = "d1e0499cae5f3aeb628c267616d4b682"
 
 [[flavor.deps]]
 use = "dangooddd/kanagawa"

@@ -151,48 +151,48 @@ _zshrc_lock_acquire() {
       __ZSHRC_LOCK_MODE="none"
       return 1
       ;;
-		*)
-			# ---- mkdir spin lock (atomic, with TTL) ---- #
-			# Reached ONLY when mkdir was selected above (neither flock(1) nor zsh/system
-			# available). The flock/zsystem branches always return from the case.
-			# Use a directory as mutex; stale dirs older than 2*timeout are reaped.
-			local lock_dir="${lock_file}.dir"
-			__ZSHRC_LOCK_DIR="${lock_dir}"
-			local ttl=$(( timeout == 0 ? 120 : timeout * 2 ))
-			(( ttl < 30 )) && ttl=30
-			start=${EPOCHSECONDS:-$(date +%s)}
-			(( debug )) && print -P "%F{yellow}[zshrc-lock]%f waiting for mkdir lock on ${lock_dir} (ttl ${ttl}s)" >&2
-			while true; do
-				if mkdir "${lock_dir}" 2>/dev/null; then
-					__ZSHRC_LOCK_MODE="mkdir"
-					__ZSHRC_LOCK_HELD=1
-					(( debug )) && print -P "%F{green}[zshrc-lock]%f acquired (mkdir ${lock_dir})" >&2
-					return 0
-				fi
-				# Stale check: if dir mtime is older than ttl, reap it (crashed holder)
-				if [[ -d "${lock_dir}" ]]; then
-					local mtime
-					mtime=$(stat -c %Y "${lock_dir}" 2>/dev/null || stat -f %m "${lock_dir}" 2>/dev/null || echo "${start}")
-					now=${EPOCHSECONDS:-$(date +%s)}
-					elapsed=$(( now - mtime ))
-					if (( elapsed > ttl )); then
-						(( debug )) && print -P "%F{red}[zshrc-lock]%f reaping stale mkdir lock (age ${elapsed}s > ${ttl}s)" >&2
-						rm -rf "${lock_dir}" 2>/dev/null
-						continue
-					fi
-					# Global timeout
-					if [[ "${timeout}" != "0" ]]; then
-						elapsed=$(( now - start ))
-						if (( elapsed > timeout )); then
-							print -P "%F{red}[zshrc-lock]%f timeout waiting for mkdir lock after ${elapsed}s — proceeding anyway (race risk)" >&2
-							__ZSHRC_LOCK_MODE="none"
-							return 1
-						fi
-					fi
-				fi
-				sleep 0.05
-			done
-		;;
+    *)
+      # ---- mkdir spin lock (atomic, with TTL) ---- #
+      # Reached ONLY when mkdir was selected above (neither flock(1) nor zsh/system
+      # available). The flock/zsystem branches always return from the case.
+      # Use a directory as mutex; stale dirs older than 2*timeout are reaped.
+      local lock_dir="${lock_file}.dir"
+      __ZSHRC_LOCK_DIR="${lock_dir}"
+      local ttl=$(( timeout == 0 ? 120 : timeout * 2 ))
+      (( ttl < 30 )) && ttl=30
+      start=${EPOCHSECONDS:-$(date +%s)}
+      (( debug )) && print -P "%F{yellow}[zshrc-lock]%f waiting for mkdir lock on ${lock_dir} (ttl ${ttl}s)" >&2
+      while true; do
+        if mkdir "${lock_dir}" 2>/dev/null; then
+          __ZSHRC_LOCK_MODE="mkdir"
+          __ZSHRC_LOCK_HELD=1
+          (( debug )) && print -P "%F{green}[zshrc-lock]%f acquired (mkdir ${lock_dir})" >&2
+          return 0
+        fi
+        # Stale check: if dir mtime is older than ttl, reap it (crashed holder)
+        if [[ -d "${lock_dir}" ]]; then
+          local mtime
+          mtime=$(stat -c %Y "${lock_dir}" 2>/dev/null || stat -f %m "${lock_dir}" 2>/dev/null || echo "${start}")
+          now=${EPOCHSECONDS:-$(date +%s)}
+          elapsed=$(( now - mtime ))
+          if (( elapsed > ttl )); then
+            (( debug )) && print -P "%F{red}[zshrc-lock]%f reaping stale mkdir lock (age ${elapsed}s > ${ttl}s)" >&2
+            rm -rf "${lock_dir}" 2>/dev/null
+            continue
+          fi
+          # Global timeout
+          if [[ "${timeout}" != "0" ]]; then
+            elapsed=$(( now - start ))
+            if (( elapsed > timeout )); then
+              print -P "%F{red}[zshrc-lock]%f timeout waiting for mkdir lock after ${elapsed}s — proceeding anyway (race risk)" >&2
+              __ZSHRC_LOCK_MODE="none"
+              return 1
+            fi
+          fi
+        fi
+        sleep 0.05
+      done
+    ;;
   esac
 }
 

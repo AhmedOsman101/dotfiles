@@ -1182,5 +1182,5 @@
   "Lua.type.checkTableShape": true,
   "Lua.type.inferParamType": true,
   "Lua.hint.arrayIndex": "Disable",
-  "Lua.hint.paramName": "Literal"
+  "Lua.hint.paramName": "Disable"
 }
