@@ -1,14 +1,13 @@
-# show diffs nicely without accidental plaintext commits
+# Show diffs nicely without accidental plaintext commits
 *.gpg diff=gpg
 Secrets/**/*.gpg diff=gpg
 
-# Secrets
+# --- Secrets --- #
 Configs/zsh/.config/zsh/secrets.zsh filter=git-crypt diff=git-crypt
 Configs/git/.config/git/credentials filter=git-crypt diff=git-crypt 
 Configs/npm/.config/npm/*           filter=git-crypt diff=git-crypt 
 
-# SSH
-
+# --- SSH --- #
 # Encrypt all private keys in .ssh, while excluding public keys
 Configs/ssh/.ssh/*     filter=git-crypt diff=git-crypt
 Configs/ssh/.ssh/*.pub !filter !diff
@@ -18,18 +17,19 @@ Configs/ssh/.ssh/config !filter !diff
 Configs/gnupg/.gnupg/private-keys-v1.d/** filter=git-crypt diff=git-crypt
 Configs/gnupg/.gnupg/openpgp-revocs.d/**  filter=git-crypt diff=git-crypt
 
-# Atuin
+# --- Atuin --- #
 Configs/atuin/.local/share/atuin/key     filter=git-crypt diff=git-crypt 
 Configs/atuin/.local/share/atuin/session filter=git-crypt diff=git-crypt
 Configs/atuin/.local/share/atuin/host_id filter=git-crypt diff=git-crypt
 
+# --- Agentic sercrets --- #
 # 9Router
 Configs/9router/.9router/9router-backup*.json  filter=git-crypt diff=git-crypt
-
-# PI sessions and auth
-Configs/pi/.pi/agent/sessions/**  filter=git-crypt diff=git-crypt
-Configs/pi/.pi/agent/auth.json    filter=git-crypt diff=git-crypt
-
-# Oh My PI sessions and memories
-Configs/oh-my-pi/.omp/agent/sessions/**  filter=git-crypt diff=git-crypt
-Configs/oh-my-pi/.omp/agent/memories/**  filter=git-crypt diff=git-crypt
+# PI
+Configs/pi/.pi/agent/sessions/**               filter=git-crypt diff=git-crypt
+Configs/pi/.pi/agent/auth.json                 filter=git-crypt diff=git-crypt
+# Oh-My-PI
+Configs/oh-my-pi/.omp/agent/sessions/**        filter=git-crypt diff=git-crypt
+Configs/oh-my-pi/.omp/agent/memories/**        filter=git-crypt diff=git-crypt
+# Opencode
+Configs/opencode/.config/opencode/service.json filter=git-crypt diff=git-crypt
