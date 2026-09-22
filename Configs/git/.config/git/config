@@ -97,6 +97,7 @@
     context = 3                        # Shows 3 lines of context around diff changes
     renames = copies                   # Detects both renames and copies in diffs
     interHunkContext = 10              # Shows 10 lines of context between diff hunks
+    algorithm = histogram
 
 [credential "https://github.com"]
     helper = !/usr/bin/gh auth git-credential # Uses GitHub CLI as the credential helper for GitHub
