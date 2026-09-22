@@ -90,7 +90,7 @@
     plus-empty-line-marker-style = normal "#245632" # Background for the marker showing an empty line was added
 
 [merge]
-    conflictstyle = diff3              # Uses the diff3 style to display merge conflicts (shows base, local, and remote)
+    conflictstyle = zdiff3             # Uses the zdiff3 style to display merge conflicts (shows base, local, and remote)
 
 [diff]
     colorMoved = default               # Highlights moved lines in diffs with default colors
@@ -98,6 +98,7 @@
     renames = copies                   # Detects both renames and copies in diffs
     interHunkContext = 10              # Shows 10 lines of context between diff hunks
     algorithm = histogram
+    mnemonicPrefix = true
 
 [credential "https://github.com"]
     helper = !/usr/bin/gh auth git-credential # Uses GitHub CLI as the credential helper for GitHub
@@ -119,4 +120,6 @@
     connecttimeout = 999999            # Sets the connection timeout for curl to 999,999 seconds
     speedtime = 999999                 # Measures speed over 999,999 seconds for slow transfer detection
     speedlimit = 1                     # Sets the minimum speed limit to 1 byte per second
-    buffer-size = 1048576000            # Sets the curl buffer size to ~1GB
+    buffer-size = 1048576000           # Sets the curl buffer size to ~1GB
+[rerere]
+    enabled = true                     # Reuse your answers on rebase
