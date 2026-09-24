@@ -1,6 +1,6 @@
 indent = { tab-width = 2, unit = "  " }
 
-# ---- C ---- #
+# --- C --- #
 [[language]]
 name = "c"
 language-servers = ["clangd", "scls"]
@@ -21,7 +21,7 @@ indent = { tab-width = 2, unit = "  " }
 name = "xml"
 formatter = { command = "xmllint", args = ["--format", "-"] }
 
-# ---- C++ ---- #
+# --- C++ --- #
 [[language]]
 name = "cpp"
 language-servers = ["clangd", "scls"]
@@ -39,13 +39,13 @@ indent = { tab-width = 2, unit = "  " }
 name = "java"
 formatter = { command = "astyle" }
 
-# ---- Bash ---- #
+# --- Bash --- #
 [[language]]
 name = "bash"
 language-servers = ["bash-language-server", "scls"]
 formatter = { command = "shellfmt" }
 
-# ---- HTML ---- #
+# --- HTML --- #
 [[language]]
 name = "html"
 roots = [".git"]
@@ -58,18 +58,19 @@ formatter = { command = "biome", args = [
   "--stdin-file-path=file.html",
 ] }
 
-# ---- PHP ---- #
+# --- PHP --- #
 [[language]]
 name = "php"
 language-servers = [
-  "intelephense",
+  # "intelephense",
+  { name = "phpantom", except-features = ["format"] },
   "scls",
   # "php-lsp",
 ]
 indent = { tab-width = 2, unit = "  " }
 formatter = { command = "phpfmt" }
 
-# ---- Json ---- #
+# --- Json --- #
 [[language]]
 name = "json"
 formatter = { command = "biome", args = [
@@ -125,7 +126,7 @@ file-types = [
   "code-snippets",
 ]
 
-# ---- Typescript ---- #
+# --- Typescript --- #
 [[language]]
 name = "typescript"
 roots = ["deno.json", "deno.jsonc", "package.json"]
@@ -144,7 +145,7 @@ language-servers = [
   # "tsgo"
 ]
 
-# ---- Javascript ---- #
+# --- Javascript --- #
 [[language]]
 name = "javascript"
 roots = ["deno.json", "deno.jsonc", "package.json"]
@@ -163,7 +164,7 @@ language-servers = [
   # "tsgo"
 ]
 
-# ---- Jsx ---- #
+# --- Jsx --- #
 [[language]]
 name = "jsx"
 roots = ["deno.json", "deno.jsonc"]
@@ -184,7 +185,7 @@ language-servers = [
   # "tsgo"
 ]
 
-# ---- Tsx ---- #
+# --- Tsx --- #
 [[language]]
 name = "tsx"
 roots = ["deno.json", "deno.jsonc"]
@@ -205,7 +206,7 @@ language-servers = [
   # "tsgo"
 ]
 
-# ---- Rust---- #
+# --- Rust--- #
 [[language]]
 name = "rust"
 auto-format = true
@@ -217,7 +218,7 @@ language-servers = ["rust-analyzer", "scls"]
 persistent-diagnostic-sources = ["rustc", "clippy"]
 indent = { tab-width = 2, unit = "  " }
 
-# ---- JSON ---- #
+# --- JSON --- #
 [[language]]
 name = "json"
 language-servers = [
@@ -228,7 +229,7 @@ language-servers = [
   "scls",
 ]
 
-# ---- Markdown ---- #
+# --- Markdown --- #
 [[language]]
 name = "markdown"
 formatter = { command = "prettier", args = [
@@ -240,7 +241,7 @@ formatter = { command = "prettier", args = [
 ] }
 language-servers = ["marksman", "scls"]
 
-# ---- Svelte ---- #
+# --- Svelte --- #
 [[language]]
 name = "svelte"
 language-servers = [
@@ -331,12 +332,12 @@ name = "toml"
 language-servers = ["taplo", "tombi", "scls"]
 formatter = { command = "taplo", args = ["fmt", "-"] }
 
-# ---- Biome LSP ---- #
+# --- Biome LSP --- #
 [language-server.biome]
 command = "biome"
 args = ["lsp-proxy"]
 
-# ---- Typescript 7 LSP ---- #
+# --- Typescript 7 LSP --- #
 [language-server.tsgo]
 command = "tsc"
 args = ["--lsp", "--stdio"]
@@ -350,7 +351,7 @@ args = ["server"]
 includeAllWorkspaceSymbols = true
 backgroundAnalysisMaxFiles = 1000
 
-# ---- Deno LSP ---- #
+# --- Deno LSP --- #
 [language-server.deno-lsp]
 command = "deno"
 args = ["lsp"]
@@ -359,7 +360,7 @@ config.deno.enable = true
 [language-server.rust-analyzer]
 config = { checkOnSave = true, check = { command = "clippy" } }
 
-# ---- simple completion language server ---- #
+# --- simple completion language server --- #
 [language-server.scls]
 command = "simple-completion-language-server"
 
@@ -377,7 +378,7 @@ feature_citations = false           # enable citation completion (only on `citat
 RUST_LOG = "info,simple-completion-language-server=info"
 LOG_FILE = "/tmp/completion.log"
 
-# ---- Emmet LSP ---- #
+# --- Emmet LSP --- #
 [language-server.emmet-lsp]
 command = "emmet-language-server"
 args = ["--stdio"]
@@ -391,6 +392,11 @@ args = ["--stdio"]
 command = "kotlin-lsp"
 args = ["--stdio"]
 
-# ---- SQL LSP ---- #
+# --- SQL LSP --- #
 [language-server.sqls]
 command = "sqls"
+
+# --- PHPantom --- #
+[language-server.phpantom]
+command = "phpantom_lsp"
+args = ["--stdio"]
