@@ -17,7 +17,7 @@
     "maxPromptTokens": 100000,
     "diffStrategy": "staged"
   },
-  "model": "gemini/gemini-3.1-flash-lite",
+  "model": "openai/poolside/poolside/laguna-s-2.1",
   "providers": {
     "defaults": {
       "timeoutMs": 60000,
@@ -25,8 +25,8 @@
       "apiType": "openai-chat"
     },
     "openai": {
-      "baseUrl": "https://api.featherless.ai/v1",
-      "apiKey": "$FEATHERLESS_API_KEY",
+      "baseUrl": "http://localhost:8082/v1",
+      "apiKey": "$OMNIROUTE_API_KEY",
       "apiType": "openai-chat"
     }
   }
