@@ -347,7 +347,7 @@
     "pascal": "cd $dir ; fpc $fileName ; $dir$fileNameWithoutExt",
     "perl": "perl",
     "perl6": "perl6",
-    "php": "cd $dir; clear; php $fileName",
+    "php": "cd $dir; clear; /usr/bin/php $fileName",
     "powershell": "powershell -ExecutionPolicy ByPass -File",
     "python": "cd $dirWithoutTrailingSlash; clear; python3 -u $fileName",
     "r": "Rscript",
@@ -816,7 +816,6 @@
   "iridium.npm.runAudit": true,
   "iridium.npm.showResultDescription": true,
   "iridium.npm.showSupportIcon": false,
-  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.parameterNames.enabled": "literals",
   "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
   "javascript.inlayHints.parameterTypes.enabled": true,
@@ -1182,5 +1181,7 @@
   "Lua.type.checkTableShape": true,
   "Lua.type.inferParamType": true,
   "Lua.hint.arrayIndex": "Disable",
-  "Lua.hint.paramName": "Disable"
+  "Lua.hint.paramName": "Disable",
+  "js/ts.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
+  "js/ts.inlayHints.variableTypes.suppressWhenTypeMatchesName": false
 }
