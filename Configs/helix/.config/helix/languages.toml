@@ -84,7 +84,7 @@ language-servers = [
   { name = "vscode-json-language-server", except-features = [
     "format",
   ] },
-  "biome",
+  "biome-lsp-proxy",
   "scls",
 ]
 file-types = [
@@ -139,8 +139,8 @@ formatter = { command = "biome", args = [
   "--stdin-file-path=file.ts",
 ] }
 language-servers = [
-  "deno-lsp",
-  "biome",
+  "deno",
+  "biome-lsp-proxy",
   "scls",
   # "tsgo"
 ]
@@ -158,8 +158,8 @@ formatter = { command = "biome", args = [
   "--stdin-file-path=file.js",
 ] }
 language-servers = [
-  "deno-lsp",
-  "biome",
+  "deno",
+  "biome-lsp-proxy",
   "scls",
   # "tsgo"
 ]
@@ -177,8 +177,8 @@ formatter = { command = "biome", args = [
   "--stdin-file-path=file.jsx",
 ] }
 language-servers = [
-  "deno-lsp",
-  "biome",
+  "deno",
+  "biome-lsp-proxy",
   "scls",
   "vscode-html-language-server",
   "superhtml",
@@ -198,8 +198,8 @@ formatter = { command = "biome", args = [
   "--stdin-file-path=file.tsx",
 ] }
 language-servers = [
-  "deno-lsp",
-  "biome",
+  "deno",
+  "biome-lsp-proxy",
   "scls",
   "vscode-html-language-server",
   "superhtml",
@@ -225,7 +225,7 @@ language-servers = [
   { name = "vscode-json-language-server", except-features = [
     "format",
   ] },
-  "biome",
+  "biome-lsp-proxy",
   "scls",
 ]
 
@@ -245,7 +245,7 @@ language-servers = ["marksman", "scls"]
 [[language]]
 name = "svelte"
 language-servers = [
-  "biome",
+  "biome-lsp-proxy",
   { name = "svelteserver", except-features = [
     "format",
   ] },
@@ -280,7 +280,7 @@ language-servers = ["scls"]
 # --- Python --- #
 [[language]]
 name = "python"
-language-servers = ["ty", "scls", "pylsp"]
+language-servers = ["ty", "ruff", "jedi", "pylsp", "zuban", "scls"]
 indent = { tab-width = 2, unit = "  " }
 formatter = { command = "yapf" }
 
@@ -332,11 +332,6 @@ name = "toml"
 language-servers = ["taplo", "tombi", "scls"]
 formatter = { command = "taplo", args = ["fmt", "-"] }
 
-# --- Biome LSP --- #
-[language-server.biome]
-command = "biome"
-args = ["lsp-proxy"]
-
 # --- Typescript 7 LSP --- #
 [language-server.tsgo]
 command = "tsc"
@@ -350,12 +345,6 @@ args = ["server"]
 [language-server.bash-language-server.config]
 includeAllWorkspaceSymbols = true
 backgroundAnalysisMaxFiles = 1000
-
-# --- Deno LSP --- #
-[language-server.deno-lsp]
-command = "deno"
-args = ["lsp"]
-config.deno.enable = true
 
 [language-server.rust-analyzer]
 config = { checkOnSave = true, check = { command = "clippy" } }
@@ -400,3 +389,22 @@ command = "sqls"
 [language-server.phpantom]
 command = "phpantom_lsp"
 args = ["--stdio"]
+
+# --- Arduino --- #
+[language-server.arduino]
+command = "arduino-language-server"
+args = [
+  "-clangd", "/usr/bin/clangd",
+  "-cli", "/usr/bin/arduino-cli",
+  "-cli-config", "/home/othman/.arduino15/arduino-cli.yaml",
+  "-fqbn", "arduino:avr:uno",
+]
+
+[[language]]
+name = "arduino"
+scope = "source.cpp"
+injection-regex = "arduino"
+file-types = ["ino", "pde"]
+language-servers = ["arduino"]
+comment-token = "//"
+indent = { tab-width = 2, unit = "  " }
