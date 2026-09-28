@@ -43,7 +43,7 @@ git-ignore = false
 [editor.auto-save]
 focus-lost = true
 after-delay.enable = true
-after-delay.timeout = 10
+after-delay.timeout = 1000
 
 [editor.whitespace.render]
 space = "none"
