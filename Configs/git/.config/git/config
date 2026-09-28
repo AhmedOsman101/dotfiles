@@ -123,3 +123,5 @@
     buffer-size = 1048576000           # Sets the curl buffer size to ~1GB
 [rerere]
     enabled = true                     # Reuse your answers on rebase
+[safe]
+	directory = /etc/skel/.vim_runtime
