@@ -119,7 +119,7 @@ keymap = [
   { on = [
     "c",
     "d",
-  ], run = "copy dirname", desc = "Copy the directory path" },
+  ], run = "copy dirpath", desc = "Copy the directory path" },
   { on = [
     "c",
     "f",

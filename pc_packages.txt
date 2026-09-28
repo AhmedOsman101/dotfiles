@@ -96,6 +96,7 @@ dunst
 dxvk-bin
 dysk
 ed
+emacs
 emmet-language-server
 entr
 evince
@@ -192,7 +193,6 @@ lib32-freetype2
 lib32-gamemode
 lib32-giflib
 lib32-gnutls
-lib32-libcanberra
 lib32-libpng
 lib32-mpg123
 lib32-nvidia-470xx-utils
@@ -292,7 +292,7 @@ os-prober-btrfs
 otf-font-awesome
 packettracer
 pacman-contrib
-pacui
+pacui-git
 pandoc-bin
 pandoc-crossref
 partitionmanager
@@ -309,6 +309,7 @@ php-codesniffer
 php-embed
 php-fpm
 php-gd
+php-imagick
 php-legacy-apache
 php-mongodb
 php-pear
@@ -351,8 +352,8 @@ qalculate-gtk
 qalculate-qt
 qemu-full
 qmmp
-qmmp-plugin-pack
 qt5-tools
+qt5-virtualkeyboard
 qt5-wayland
 qt5ct
 qt6ct

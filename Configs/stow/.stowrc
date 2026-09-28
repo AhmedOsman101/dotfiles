@@ -1,0 +1,3 @@
+--dir=$HOME/dotfiles/Configs
+--target=$HOME
+--verbose=1
