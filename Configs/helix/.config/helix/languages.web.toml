@@ -1,0 +1,31 @@
+# --- Typescript --- #
+[[language]]
+name = "typescript"
+language-servers = ["tsgo", "biome-lsp-proxy", "scls"]
+
+# --- Javascript --- #
+[[language]]
+name = "javascript"
+language-servers = ["tsgo", "biome-lsp-proxy", "scls"]
+
+# --- JSX --- #
+[[language]]
+name = "jsx"
+language-servers = [
+  "tsgo",
+  "biome-lsp-proxy",
+  "scls",
+  "vscode-html-language-server",
+  "superhtml",
+]
+
+# --- TSX --- #
+[[language]]
+name = "tsx"
+language-servers = [
+  "tsgo",
+  "biome-lsp-proxy",
+  "scls",
+  "vscode-html-language-server",
+  "superhtml",
+]
