@@ -62,8 +62,8 @@ formatter = { command = "biome", args = [
 [[language]]
 name = "php"
 language-servers = [
-  # "intelephense",
-  { name = "phpantom", except-features = ["format"] },
+  "intelephense",
+  # { name = "phpantom", except-features = ["format"] },
   "scls",
   # "php-lsp",
 ]

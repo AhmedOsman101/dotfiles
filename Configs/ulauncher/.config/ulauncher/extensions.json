@@ -2,16 +2,9 @@
     "com.github.ulauncher.ulauncher-emoji": {
         "id": "com.github.ulauncher.ulauncher-emoji",
         "url": "https://github.com/Ulauncher/ulauncher-emoji",
-        "updated_at": "2025-11-05T11:47:43.272492",
-        "last_commit": "195d167ea0cfdbb2169906b5acaac8097db84767",
-        "last_commit_time": "2025-10-05T04:07:23"
-    },
-    "com.github.pywkm.ulauncher-spotify": {
-        "id": "com.github.pywkm.ulauncher-spotify",
-        "url": "https://github.com/pywkm/ulauncher-spotify",
-        "updated_at": "2025-05-26T13:09:46.355071",
-        "last_commit": "89d9b02316aaccea0d70b458bb97b3976287f03e",
-        "last_commit_time": "2020-02-17T16:20:21"
+        "updated_at": "2026-09-28T14:33:33.350630",
+        "last_commit": "3ea26a6c07195c9e954ca254133aa56b608e6e53",
+        "last_commit_time": "2026-08-30T13:33:47"
     },
     "com.github.zensoup.ulauncher-unicode": {
         "id": "com.github.zensoup.ulauncher-unicode",
