@@ -130,7 +130,7 @@ file-types = [
 [[language]]
 name = "typescript"
 roots = ["deno.json", "deno.jsonc", "package.json"]
-auto-format = false
+language-servers = ["deno", "biome-lsp-proxy", "scls"]
 formatter = { command = "biome", args = [
   "check",
   "--fix",
@@ -138,18 +138,12 @@ formatter = { command = "biome", args = [
   "/home/othman/.config/biome/biome.json",
   "--stdin-file-path=file.ts",
 ] }
-language-servers = [
-  "deno",
-  "biome-lsp-proxy",
-  "scls",
-  # "tsgo"
-]
 
 # --- Javascript --- #
 [[language]]
 name = "javascript"
 roots = ["deno.json", "deno.jsonc", "package.json"]
-auto-format = false
+language-servers = ["deno", "biome-lsp-proxy", "scls"]
 formatter = { command = "biome", args = [
   "check",
   "--fix",
@@ -157,18 +151,18 @@ formatter = { command = "biome", args = [
   "/home/othman/.config/biome/biome.json",
   "--stdin-file-path=file.js",
 ] }
-language-servers = [
-  "deno",
-  "biome-lsp-proxy",
-  "scls",
-  # "tsgo"
-]
 
 # --- Jsx --- #
 [[language]]
 name = "jsx"
-roots = ["deno.json", "deno.jsonc"]
-auto-format = false
+roots = ["deno.json", "deno.jsonc", "package.json"]
+language-servers = [
+  "deno",
+  "biome-lsp-proxy",
+  "scls",
+  "vscode-html-language-server",
+  "superhtml",
+]
 formatter = { command = "biome", args = [
   "check",
   "--fix",
@@ -176,20 +170,18 @@ formatter = { command = "biome", args = [
   "/home/othman/.config/biome/biome.json",
   "--stdin-file-path=file.jsx",
 ] }
+
+# --- Tsx --- #
+[[language]]
+name = "tsx"
+roots = ["deno.json", "deno.jsonc", "package.json"]
 language-servers = [
   "deno",
   "biome-lsp-proxy",
   "scls",
   "vscode-html-language-server",
   "superhtml",
-  # "tsgo"
 ]
-
-# --- Tsx --- #
-[[language]]
-name = "tsx"
-roots = ["deno.json", "deno.jsonc"]
-auto-format = false
 formatter = { command = "biome", args = [
   "check",
   "--fix",
@@ -197,14 +189,6 @@ formatter = { command = "biome", args = [
   "/home/othman/.config/biome/biome.json",
   "--stdin-file-path=file.tsx",
 ] }
-language-servers = [
-  "deno",
-  "biome-lsp-proxy",
-  "scls",
-  "vscode-html-language-server",
-  "superhtml",
-  # "tsgo"
-]
 
 # --- Rust--- #
 [[language]]
@@ -217,17 +201,6 @@ formatter = { command = "rustfmt", args = [
 language-servers = ["rust-analyzer", "scls"]
 persistent-diagnostic-sources = ["rustc", "clippy"]
 indent = { tab-width = 2, unit = "  " }
-
-# --- JSON --- #
-[[language]]
-name = "json"
-language-servers = [
-  { name = "vscode-json-language-server", except-features = [
-    "format",
-  ] },
-  "biome-lsp-proxy",
-  "scls",
-]
 
 # --- Markdown --- #
 [[language]]
@@ -280,9 +253,16 @@ language-servers = ["scls"]
 # --- Python --- #
 [[language]]
 name = "python"
-language-servers = ["ty", "ruff", "jedi", "pylsp", "zuban", "scls"]
+language-servers = ["basedpyright", "ruff", "scls"]
 indent = { tab-width = 2, unit = "  " }
-formatter = { command = "yapf" }
+formatter = { command = "ruff", args = [
+  "format",
+  "--config",
+  "/home/othman/.config/ruff/ruff.toml",
+  "--stdin-filename",
+  "file.py",
+  "-",
+] }
 
 # --- INI --- #
 [[language]]
@@ -352,9 +332,16 @@ args = ["--lsp", "--stdio"]
 command = "ty"
 args = ["server"]
 
+# --- bash-language-server --- #
 [language-server.bash-language-server.config]
 includeAllWorkspaceSymbols = true
 backgroundAnalysisMaxFiles = 1000
+
+[language-server.bash-language-server.environment]
+GLOB_PATTERN = "**/*"
+INCLUDE_ALL_WORKSPACE_SYMBOLS = "true"
+BACKGROUND_ANALYSIS_MAX_FILES = "1000"
+SHELLCHECK_ARGUMENTS = "--external-sources"
 
 [language-server.rust-analyzer]
 config = { checkOnSave = true, check = { command = "clippy" } }
@@ -414,3 +401,10 @@ args = [
   "arduino:avr:uno",
 ]
 
+# --- basedpyright --- #
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio"]
+
+[language-server.basedpyright.config.basedpyright.analysis]
+typeCheckingMode = "standard"
