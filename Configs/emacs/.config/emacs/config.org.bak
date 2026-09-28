@@ -1,0 +1,198 @@
+#+title: Emacs Config
+#+property: header-args:emacs-lisp :tangle yes :comments link
+
+* Why this file is Org, not Markdown
+  You're reading the answer. This file is both notes /and/ code/.
+
+  Markdown describes how text /looks/ (rendering). Org describes what text
+  /means and does/:
+  - Headings (~*~ like here) fold, move (~M-up/down~), and archive like an outliner.
+  - Any heading becomes a TODO with ~S-M-RET~ / ~C-c C-t~; ~C-c C-c~ cycles states.
+  - Tables compute (~C-c C-c~ on formula), clocks track time, agendas collect
+    TODOs across files. Markdown does none of this natively.
+  - Source blocks like the ones below are /executable/: ~C-c C-c~ runs one,
+    and Emacs tangles them into ~config.el~ on startup. Markdown code fences
+    are dead text by comparison.
+
+  Concrete demo: put point on the block under "Basics", press ~C-c C-c~,
+  and the theme reloads live. Try that in Markdown.
+
+* Package management
+  MELPA is the community package repo. ~use-package~ (built-in since Emacs 29)
+  declares each package in one stanza.
+
+  #+begin_src emacs-lisp :comments no
+    ;;; config.el --- Tangled from config.org -*- lexical-binding: t; -*-
+    (require 'package)
+    (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+    (package-initialize)
+
+    ;; Bootstrap use-package on fresh installs.
+    (unless (package-installed-p 'use-package)
+      (package-refresh-contents)
+      (package-install 'use-package))
+    (require 'use-package)
+    (setq use-package-always-ensure t)
+  #+end_src
+
+* Basics (dark, quiet, Helix-friendly)
+  #+begin_src emacs-lisp
+    (load-theme 'modus-vivendi t)
+    (setq inhibit-startup-message t
+          ring-bell-function 'ignore)
+    (column-number-mode 1)
+    (global-display-line-numbers-mode 1)
+
+    ;; Fonts: GUI frame font + explicit symbol fallback.
+    ;; Root cause of the tofu: two system fonts cover ⛔ (U+26D4) -- Noto Color
+    ;; Emoji and Noto Sans Symbols 2 -- but Emacs cannot render color-emoji
+    ;; bitmaps, so the emoji font is useless to it and it shows boxes instead
+    ;; of falling back to Symbols 2 on its own. Tell it explicitly.
+    (add-to-list 'default-frame-alist '(font . "JetBrainsMono Nerd Font-11"))
+    (set-fontset-font t 'symbol "Noto Sans Symbols 2" nil 'append)
+
+    ;; Helix habit #1: typing with an active selection replaces it.
+    ;; Without this, Emacs inserts next to the region instead.
+    (delete-selection-mode 1)
+
+    ;; Show key hints after a short pause (makes SPC discoverable).
+    (use-package which-key
+      :config (which-key-mode 1)
+      :custom (which-key-idle-delay 0.4))
+  #+end_src
+
+* Meow: Helix-like modal editing
+  Meow is selection-first (noun-verb) like Helix/Kakoune, not verb-noun like
+  Evil/Vim. Workflow is identical to what you know: extend selection, then act.
+  ~SPC~ is the leader in MOTION/NORMAL states; KEYPAD state shows SPC chords.
+
+  Helix -> Meow cheat table (verified against Meow's KEYBINDING_QWERTY;
+  these bindings come from the ~meow-setup~ function below, not built in):
+  | Helix         | Meow              | Note                        |
+  |---------------+-------------------+-----------------------------|
+  | ~v~ / extend  | ~e~ then ~d~      | ~e~ expands to word, ~d~ acts |
+  | ~w~ select word | ~w~ mark-word   | selects word at point       |
+  | ~x~ line      | ~x~ (~meow-line~) | select line                 |
+  | ~d~ delete    | ~d~ after select  | select-then-act, same order |
+  | ~c~ change    | ~c~ after select  | deletes + enters INSERT     |
+  | ~y~ yank      | ~y~ after select  | saves to kill-ring          |
+  | ~p~ paste     | ~p~               | yanks back                  |
+  | ~f~ find char | ~f~ (~meow-find~) | jump to char, like Helix    |
+  | ~i~ / ~a~     | ~i~ / ~a~         | INSERT before/after         |
+  | ~u~ undo      | ~u~               |                             |
+  | ~<esc>~       | ~<escape>~        | back to NORMAL, ~g~ cancels selection |
+  | ~<space>~     | ~SPC~ leader      | defined just below          |
+
+  Survival keys (work even if Meow confuses you): ~C-g~ cancel,
+  ~C-x C-s~ save, ~C-x C-c~ quit, ~C-h k <key>~ ask Emacs what a key does.
+
+  #+begin_src emacs-lisp
+    (use-package meow
+      :config
+      ;; NOTE: Meow ships NO normal-state bindings. The QWERTY layout below is
+      ;; the official example from Meow's KEYBINDING_QWERTY.org -- you define
+      ;; `meow-setup' yourself and call it before `meow-global-mode'.
+      ;; Without this, NORMAL state is empty and e/w/d/x do nothing.
+      (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
+      (defun meow-setup ()
+        (meow-motion-define-key
+         '("j" . meow-next)
+         '("k" . meow-prev)
+         '("<escape>" . ignore))
+        (meow-leader-define-key
+         '("1" . meow-digit-argument)
+         '("2" . meow-digit-argument)
+         '("3" . meow-digit-argument)
+         '("4" . meow-digit-argument)
+         '("5" . meow-digit-argument)
+         '("6" . meow-digit-argument)
+         '("7" . meow-digit-argument)
+         '("8" . meow-digit-argument)
+         '("9" . meow-digit-argument)
+         '("0" . meow-digit-argument)
+         '("/" . meow-keypad-describe-key)
+         '("?" . meow-cheatsheet))
+        (meow-normal-define-key
+         '("0" . meow-expand-0)
+         '("9" . meow-expand-9)
+         '("8" . meow-expand-8)
+         '("7" . meow-expand-7)
+         '("6" . meow-expand-6)
+         '("5" . meow-expand-5)
+         '("4" . meow-expand-4)
+         '("3" . meow-expand-3)
+         '("2" . meow-expand-2)
+         '("1" . meow-expand-1)
+         '("-" . negative-argument)
+         '(";" . meow-reverse)
+         '("," . meow-inner-of-thing)
+         '("." . meow-bounds-of-thing)
+         '("[" . meow-beginning-of-thing)
+         '("]" . meow-end-of-thing)
+         '("a" . meow-append)
+         '("A" . meow-open-below)
+         '("b" . meow-back-word)
+         '("B" . meow-back-symbol)
+         '("c" . meow-change)
+         '("d" . meow-delete)
+         '("D" . meow-backward-delete)
+         '("e" . meow-next-word)
+         '("E" . meow-next-symbol)
+         '("f" . meow-find)
+         '("g" . meow-cancel-selection)
+         '("G" . meow-grab)
+         '("h" . meow-left)
+         '("H" . meow-left-expand)
+         '("i" . meow-insert)
+         '("I" . meow-open-above)
+         '("j" . meow-next)
+         '("J" . meow-next-expand)
+         '("k" . meow-prev)
+         '("K" . meow-prev-expand)
+         '("l" . meow-right)
+         '("L" . meow-right-expand)
+         '("m" . meow-join)
+         '("n" . meow-search)
+         '("o" . meow-block)
+         '("O" . meow-to-block)
+         '("p" . meow-yank)
+         '("q" . meow-quit)
+         '("Q" . meow-goto-line)
+         '("r" . meow-replace)
+         '("R" . meow-swap-grab)
+         '("s" . meow-kill)
+         '("t" . meow-till)
+         '("u" . meow-undo)
+         '("U" . meow-undo-in-selection)
+         '("v" . meow-visit)
+         '("w" . meow-mark-word)
+         '("W" . meow-mark-symbol)
+         '("x" . meow-line)
+         '("X" . meow-goto-line)
+         '("y" . meow-save)
+         '("Y" . meow-sync-grab)
+         '("z" . meow-pop-selection)
+         '("'" . repeat)
+         '("<escape>" . ignore)))
+      (meow-setup)
+      (meow-global-mode 1)
+
+      ;; SPC chords: mnemonic, Helix-flavoured (f)ile, (b)uffer, (w)rite.
+      (meow-leader-define-key
+       '("f" . find-file)
+       '("b" . switch-to-buffer)
+       '("w" . save-buffer)
+       '("q" . save-buffers-kill-terminal)
+       '("p" . project-find-file)
+       '("/" . consult-line)))   ; needs consult below; delete if unused
+
+    ;; Optional but recommended: fuzzy SPC-p file finding + SPC-/ search.
+    ;; Delete both stanzas if you want zero extras.
+    (use-package vertico :config (vertico-mode 1))
+    (use-package consult)
+  #+end_src
+
+* Next steps
+  - Start Emacs normally: packages auto-install once, ~config.el~ is generated.
+  - ~SPC f~ opens a file, ~SPC b~ switches buffer, ~SPC w~ saves.
+  - Step 2 (when ready): Org notes/agenda + Magit. Say the word.

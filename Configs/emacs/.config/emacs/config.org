@@ -1,0 +1,67 @@
+#+title: Emacs Config
+#+property: header-args:emacs-lisp :tangle yes :comments link
+
+* Why this file is Org, not Markdown
+  You're reading the answer. This file is both notes /and/ code/.
+
+  Markdown describes how text /looks/ (rendering). Org describes what text
+  /means and does/:
+  - Headings (~*~ like here) fold, move (~M-up/down~), and archive like an outliner.
+  - Any heading becomes a TODO with ~S-M-RET~ / ~C-c C-t~; ~C-c C-c~ cycles states.
+  - Tables compute (~C-c C-c~ on formula), clocks track time, agendas collect
+    TODOs across files. Markdown does none of this natively.
+  - Source blocks like the ones below are /executable/: ~C-c C-c~ runs one,
+    and Emacs tangles them into ~config.el~ on startup. Markdown code fences
+    are dead text by comparison.
+
+  Concrete demo: put point on the block under "Basics", press ~C-c C-c~,
+  and the theme reloads live. Try that in Markdown.
+
+* Package management
+  MELPA is the community package repo. ~use-package~ (built-in since Emacs 29)
+  declares each package in one stanza.
+
+  #+begin_src emacs-lisp :comments no
+    ;;; config.el --- Tangled from config.org -*- lexical-binding: t; -*-
+    (require 'package)
+    (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+    (package-initialize)
+
+    ;; Bootstrap use-package on fresh installs.
+    (unless (package-installed-p 'use-package)
+      (package-refresh-contents)
+      (package-install 'use-package))
+    (require 'use-package)
+    (setq use-package-always-ensure t)
+  #+end_src
+
+* Basics (dark, quiet, Helix-friendly)
+  #+begin_src emacs-lisp
+    (load-theme 'modus-vivendi t)
+    (setq inhibit-startup-message t
+          ring-bell-function 'ignore)
+    (column-number-mode 1)
+    (global-display-line-numbers-mode 1)
+
+    ;; Fonts: GUI frame font + explicit symbol fallback.
+    ;; Root cause of the tofu: two system fonts cover ⛔ (U+26D4) -- Noto Color
+    ;; Emoji and Noto Sans Symbols 2 -- but Emacs cannot render color-emoji
+    ;; bitmaps, so the emoji font is useless to it and it shows boxes instead
+    ;; of falling back to Symbols 2 on its own. Tell it explicitly.
+    (add-to-list 'default-frame-alist '(font . "JetBrainsMono Nerd Font-11"))
+    (set-fontset-font t 'symbol "Noto Sans Symbols 2" nil 'append)
+
+    ;; Helix habit #1: typing with an active selection replaces it.
+    ;; Without this, Emacs inserts next to the region instead.
+    (delete-selection-mode 1)
+
+    ;; Show key hints after a short pause (makes SPC discoverable).
+    (use-package which-key
+      :config (which-key-mode 1)
+      :custom (which-key-idle-delay 0.4))
+  #+end_src
+
+* Next steps
+  - Start Emacs normally: packages auto-install once, ~config.el~ is generated.
+  - ~SPC f~ opens a file, ~SPC b~ switches buffer, ~SPC w~ saves.
+  - Step 2 (when ready): Org notes/agenda + Magit. Say the word.
