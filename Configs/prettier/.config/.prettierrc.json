@@ -25,6 +25,13 @@
     {
       "files": "*.md",
       "options": { "parser": "markdown" }
+    },
+    {
+      "files": ["*.jsonc"],
+      "options": {
+        "parser": "json",
+        "trailingComma": "none"
+      }
     }
   ]
 }

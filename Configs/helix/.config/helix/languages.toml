@@ -332,6 +332,16 @@ name = "toml"
 language-servers = ["taplo", "tombi", "scls"]
 formatter = { command = "taplo", args = ["fmt", "-"] }
 
+# --- Arduino --- #
+[[language]]
+name = "arduino"
+scope = "source.cpp"
+injection-regex = "arduino"
+file-types = ["ino", "pde"]
+language-servers = ["arduino"]
+comment-token = "//"
+indent = { tab-width = 2, unit = "  " }
+
 # --- Typescript 7 LSP --- #
 [language-server.tsgo]
 command = "tsc"
@@ -394,17 +404,13 @@ args = ["--stdio"]
 [language-server.arduino]
 command = "arduino-language-server"
 args = [
-  "-clangd", "/usr/bin/clangd",
-  "-cli", "/usr/bin/arduino-cli",
-  "-cli-config", "/home/othman/.arduino15/arduino-cli.yaml",
-  "-fqbn", "arduino:avr:uno",
+  "-clangd",
+  "/usr/bin/clangd",
+  "-cli",
+  "/usr/bin/arduino-cli",
+  "-cli-config",
+  "/home/othman/.arduino15/arduino-cli.yaml",
+  "-fqbn",
+  "arduino:avr:uno",
 ]
 
-[[language]]
-name = "arduino"
-scope = "source.cpp"
-injection-regex = "arduino"
-file-types = ["ino", "pde"]
-language-servers = ["arduino"]
-comment-token = "//"
-indent = { tab-width = 2, unit = "  " }
