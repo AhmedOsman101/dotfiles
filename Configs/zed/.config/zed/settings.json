@@ -7,148 +7,134 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "inline_code_actions": true,
   "agent": {
-    "sidebar_side": "right",
     "favorite_models": [],
-    "model_parameters": []
-  },
-  "proxy": "",
-  "disable_ai": true,
-  "git": {
-    "inline_blame": {
-      "show_commit_summary": true,
-      "location": "status_bar"
-    }
-  },
-  "window_title_separator": " — ",
-  "window_title_format": "${projectName}${separator}${fileName}",
-  "tabs": {
-    "show_diagnostics": "all",
-    "file_icons": true,
-    "git_status": true
-  },
-  "title_bar": {
-    "show_branch_status_icon": true
-  },
-  "status_bar": {
-    "show_active_file": true
-  },
-  "debugger": {
-    "button": false
-  },
-  "use_smartcase_search": true,
-  "diagnostics": {
-    "inline": {
-      "enabled": true
-    }
-  },
-  "prettier": {
-    "allowed": true
-  },
-  "semantic_tokens": "combined",
-  "colorize_brackets": true,
-  "code_lens": "on",
-  "inlay_hints": {
-    "show_other_hints": true,
-    "show_type_hints": false,
-    "show_value_hints": true,
-    "enabled": true
-  },
-  "line_ending": "enforce_lf",
-  "indent_guides": {
-    "background_coloring": "indent_aware",
-    "coloring": "indent_aware"
-  },
-  "vim": {
-    "cursor_shape": {
-      "insert": "bar"
-    },
-    "use_smartcase_find": true,
-    "toggle_relative_line_numbers": true
-  },
-  "toolbar": {
-    "code_actions": true,
-    "breadcrumbs": false
-  },
-  "autoscroll_on_clicks": true,
-  "which_key": {
-    "enabled": true
-  },
-  "helix_mode": true,
-  "cursor_animation": {
-    "enabled": true
+    "model_parameters": [],
+    "sidebar_side": "right"
   },
   "agent_buffer_font_size": 18.0,
-  "ui_font_family": "Inter Variable",
-  "reveal_if_open": true,
-  "cli_default_open_behavior": "new_window",
-  "use_system_prompts": false,
-  "use_system_path_prompts": false,
-  "on_last_window_closed": "quit_app",
-  "when_closing_with_no_tabs": "keep_window_open",
-  "session": {
-    "trust_all_worktrees": true
-  },
-  "terminal": {
-    "font_size": 17.0,
-    "line_height": {
-      "custom": 1.5
-    },
-    "blinking": "on",
-    "copy_on_select": true
-  },
-  "node": {
-    "npm_path": "pnpm"
-  },
-  "project_panel": {
-    "dock": "left",
-    "auto_reveal_entries": false
-  },
-  "git_panel": {
-    "fallback_branch_name": "main"
-  },
-  "search": {
-    "include_ignored": false
-  },
-  "relative_line_numbers": "enabled",
-  "sticky_scroll": {
-    "enabled": false
-  },
-  "mouse_wheel_zoom": true,
-  "gutter": {
-    "line_numbers": true
-  },
-  "minimap": {
-    "show": "never",
-    "max_width_columns": 250
-  },
-  "cursor_shape": "block",
-  "cursor_blink": true,
   "autosave": {
     "after_delay": {
       "milliseconds": 500
     }
   },
-  "buffer_font_family": "JetBrainsMonoNF Nerd Font",
-  "file_types": {
-    "ini": ["*.desktop", "*.service", "*.target", "*.timer", "dunstrc"],
-    "markdown": ["*.mdc"],
-    "shellscript": ["mkconf", "mkconfig"],
-    "css": ["*.css"],
-    "php": [".php_cs", ".php_cs.dist"]
-  },
-  "use_on_type_format": false,
-  "ensure_final_newline_on_save": true,
-  "format_on_save": "on",
-  "preferred_line_length": 120,
-  "soft_wrap": "none",
-  "tab_size": 2,
+  "autoscroll_on_clicks": true,
   "base_keymap": "VSCode",
-  "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
-  "ui_font_size": 16.0,
+  "buffer_font_family": "JetBrainsMonoNF Nerd Font",
   "buffer_font_size": 20.0,
-  "theme": "GitHub Dark",
+  "cli_default_open_behavior": "new_window",
+  "code_lens": "on",
+  "colorize_brackets": true,
+  "context_servers": {
+    "chrome-devtools-mcp-zed": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "accept_insecure_certs": null,
+        "auto_connect": null,
+        "browser_url": null,
+        "category_emulation": null,
+        "category_network": null,
+        "category_performance": null,
+        "channel": "stable",
+        "chrome_arg": [],
+        "executable_path": "/usr/bin/thorium-browser-avx2",
+        "extra_args": [
+          "--no-usage-statistics"
+        ],
+        "headless": false,
+        "isolated": null,
+        "log_file": null,
+        "proxy_server": null,
+        "user_data_dir": null,
+        "viewport": null,
+        "ws_endpoint": null,
+        "ws_headers": null
+      }
+    },
+    "mcp-server-context7": {
+      "enabled": false,
+      "remote": false,
+      "settings": {}
+    },
+    "mcp-server-exa-search": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "exa_api_key": null,
+        "tools": null
+      }
+    },
+    "mcp-server-github": {
+      "enabled": false,
+      "remote": false,
+      "settings": {}
+    }
+  },
+  "cursor_animation": {
+    "enabled": true
+  },
+  "cursor_blink": true,
+  "cursor_shape": "block",
+  "debugger": {
+    "button": false
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "disable_ai": true,
+  "ensure_final_newline_on_save": true,
+  "file_types": {
+    "css": [
+      "*.css"
+    ],
+    "ini": [
+      "*.desktop",
+      "*.service",
+      "*.target",
+      "*.timer",
+      "dunstrc"
+    ],
+    "markdown": [
+      "*.mdc"
+    ],
+    "php": [
+      ".php_cs",
+      ".php_cs.dist"
+    ],
+    "shellscript": [
+      "mkconf",
+      "mkconfig"
+    ]
+  },
+  "format_on_save": "on",
+  "git": {
+    "inline_blame": {
+      "location": "status_bar",
+      "show_commit_summary": true
+    }
+  },
+  "git_panel": {
+    "fallback_branch_name": "main"
+  },
+  "gutter": {
+    "line_numbers": true
+  },
+  "helix_mode": true,
+  "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
+  "indent_guides": {
+    "background_coloring": "indent_aware",
+    "coloring": "indent_aware"
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_other_hints": true,
+    "show_type_hints": false,
+    "show_value_hints": true
+  },
+  "inline_code_actions": true,
   "languages": {
     "C": {
       "formatter": {
@@ -165,10 +151,10 @@
       }
     }
   },
+  "line_ending": "enforce_lf",
   "lsp": {
     "arduino-language-server": {
       "binary": {
-        "path": "/usr/bin/arduino-language-server",
         "arguments": [
           "-clangd",
           "/usr/bin/clangd",
@@ -178,7 +164,8 @@
           "/home/othman/.arduino15/arduino-cli.yaml",
           "-fqbn",
           "arduino:avr:uno"
-        ]
+        ],
+        "path": "/usr/bin/arduino-language-server"
       }
     },
     "bash-language-server": {
@@ -198,11 +185,16 @@
         "json": {
           "schemas": [
             {
-              "fileMatch": ["deno.json", "deno.jsonc"],
+              "fileMatch": [
+                "deno.json",
+                "deno.jsonc"
+              ],
               "url": "https://raw.githubusercontent.com/denoland/deno/refs/heads/main/cli/schemas/config-file.v1.json"
             },
             {
-              "fileMatch": ["package.json"],
+              "fileMatch": [
+                "package.json"
+              ],
               "url": "https://www.schemastore.org/package"
             }
           ]
@@ -211,56 +203,94 @@
     },
     "tailwindcss-language-server": {
       "settings": {
-        "classAttributes": ["class", "ui", "className"],
+        "classAttributes": [
+          "class",
+          "ui",
+          "className"
+        ],
         "emmetCompletions": true,
         "experimental": {
-          "classRegex": ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+          "classRegex": [
+            "ui:\\s*{([^)]*)\\s*}",
+            "(?:'|\"|`)([^']*)(?:'|\"|`)"
+          ]
         }
       }
     }
   },
-  "context_servers": {
-    "chrome-devtools-mcp-zed": {
-      "enabled": true,
-      "remote": false,
-      "settings": {
-        "browser_url": null,
-        "ws_endpoint": null,
-        "ws_headers": null,
-        "auto_connect": null,
-        "channel": "stable",
-        "headless": false,
-        "isolated": null,
-        "user_data_dir": null,
-        "viewport": null,
-        "executable_path": "/usr/bin/thorium-browser-avx2",
-        "chrome_arg": [],
-        "proxy_server": null,
-        "accept_insecure_certs": null,
-        "category_emulation": null,
-        "category_performance": null,
-        "category_network": null,
-        "log_file": null,
-        "extra_args": ["--no-usage-statistics"]
-      }
-    },
-    "mcp-server-exa-search": {
-      "enabled": true,
-      "remote": false,
-      "settings": {
-        "exa_api_key": null,
-        "tools": null
-      }
-    },
-    "mcp-server-github": {
-      "enabled": false,
-      "remote": false,
-      "settings": { }
-    },
-    "mcp-server-context7": {
-      "enabled": false,
-      "remote": false,
-      "settings": { }
+  "minimap": {
+    "max_width_columns": 250,
+    "show": "never"
+  },
+  "mouse_wheel_zoom": true,
+  "node": {
+    "npm_path": "pnpm"
+  },
+  "on_last_window_closed": "quit_app",
+  "preferred_line_length": 120,
+  "prettier": {
+    "allowed": true
+  },
+  "project_panel": {
+    "auto_reveal_entries": false,
+    "dock": "left"
+  },
+  "proxy": "",
+  "relative_line_numbers": "enabled",
+  "reveal_if_open": true,
+  "search": {
+    "include_ignored": false
+  },
+  "semantic_tokens": "combined",
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "soft_wrap": "none",
+  "status_bar": {
+    "show_active_file": true
+  },
+  "sticky_scroll": {
+    "enabled": false
+  },
+  "tab_size": 2,
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "all"
+  },
+  "terminal": {
+    "blinking": "on",
+    "copy_on_select": true,
+    "font_size": 17.0,
+    "line_height": {
+      "custom": 1.5
     }
-  }
+  },
+  "theme": "GitHub Dark",
+  "title_bar": {
+    "show_branch_status_icon": true
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "code_actions": true
+  },
+  "ui_font_family": "Inter Variable",
+  "ui_font_size": 16.0,
+  "use_on_type_format": false,
+  "use_smartcase_search": true,
+  "use_system_path_prompts": false,
+  "use_system_prompts": false,
+  "vim": {
+    "cursor_shape": {
+      "insert": "bar"
+    },
+    "toggle_relative_line_numbers": true,
+    "use_smartcase_find": true
+  },
+  "when_closing_with_no_tabs": "keep_window_open",
+  "which_key": {
+    "enabled": true
+  },
+  "window_title_format": "${projectName}${separator}${fileName}",
+  "window_title_separator": " — "
 }
