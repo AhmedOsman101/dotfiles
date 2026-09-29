@@ -335,52 +335,52 @@ args = ["server"]
 # --- bash-language-server --- #
 [language-server.bash-language-server.config.bashIde]
 # Glob patterns excluded from background file discovery. Sourced/open files remain available on demand.
-backgroundAnalysisIgnore = [
-  "**/bin/**",
-  "**/build/**",
-  "**/*.c",
-  "**/c/**",
-  "**/*.cpp",
-  "**/cpp/**",
-  "**/*.css",
-  "**/.cursor/**",
-  "**/*.cxx",
-  "**/dist/**",
-  "**/docs/**",
-  "**/external/**",
-  "**/*.fish",
-  "**/.git/**",
-  "**/*.h",
-  "**/hooks/**",
-  "**/*.html",
-  "**/*.js",
-  "**/*.jsx",
-  "**/*.lua",
-  "**/lua/**",
-  "**/*.md",
-  "**/*.mdx",
-  "**/*.mjs",
-  "**/*.mts",
-  "**/.next/**",
-  "**/node_modules/**",
-  "**/.nuxt/**",
-  "**/prisma/**",
-  "**/*.py",
-  "**/python/**",
-  "**/*.rasi",
-  "**/rofi/**",
-  "**/*.so",
-  "**/*.so.*",
-  "**/.svelte-kit/**",
-  "**/target/**",
-  "**/*.ts",
-  "**/*.tsx",
-  "**/typescript/**",
-  "**/vendor/**",
-  "**/.venv/**",
-  "**/venv/**",
-  "**/wiki/**",
-]
+# backgroundAnalysisIgnore = [
+#   "**/bin/**",
+#   "**/build/**",
+#   "**/*.c",
+#   "**/c/**",
+#   "**/*.cpp",
+#   "**/cpp/**",
+#   "**/*.css",
+#   "**/.cursor/**",
+#   "**/*.cxx",
+#   "**/dist/**",
+#   "**/docs/**",
+#   "**/external/**",
+#   "**/*.fish",
+#   "**/.git/**",
+#   "**/*.h",
+#   "**/hooks/**",
+#   "**/*.html",
+#   "**/*.js",
+#   "**/*.jsx",
+#   "**/*.lua",
+#   "**/lua/**",
+#   "**/*.md",
+#   "**/*.mdx",
+#   "**/*.mjs",
+#   "**/*.mts",
+#   "**/.next/**",
+#   "**/node_modules/**",
+#   "**/.nuxt/**",
+#   "**/prisma/**",
+#   "**/*.py",
+#   "**/python/**",
+#   "**/*.rasi",
+#   "**/rofi/**",
+#   "**/*.so",
+#   "**/*.so.*",
+#   "**/.svelte-kit/**",
+#   "**/target/**",
+#   "**/*.ts",
+#   "**/*.tsx",
+#   "**/typescript/**",
+#   "**/vendor/**",
+#   "**/.venv/**",
+#   "**/venv/**",
+#   "**/wiki/**",
+# ]
 
 # Maximum number of files to analyze in the background. Set to 0 to disable background analysis.
 backgroundAnalysisMaxFiles = 500
@@ -389,17 +389,17 @@ enableSourceErrorDiagnostics = true
 # Configure explainshell server endpoint in order to get hover documentation on flags and options.
 explainshellEndpoint = "" # An empty string will disable the feature.
 # Glob pattern for finding and parsing shell script files in the workspace. Used by the background analysis features across files.
-globPattern = "**/*"
+# globPattern = "**/*"
 # Controls how symbols (e.g. variables and functions) are included and used for completion, documentation, and renaming.
 # If false, then we only include symbols from sourced files (i.e. using non dynamic statements like 'source file.sh' or '. file.sh' or following ShellCheck directives).
 # If true, then all symbols from the workspace are included.
-includeAllWorkspaceSymbols = true
+includeAllWorkspaceSymbols = false
 # Controls whether ShellCheck is invoked with --external-sources. When enabled (default),
 # ShellCheck follows source directives to lint referenced files. On projects with many
 # cross-sourcing scripts this can cause unbounded memory growth. Set to false to disable
 shellcheckExternalSources = true
 # Additional ShellCheck arguments. Note that we already add the following arguments: --shell, --format, and --external-sources (if shellcheckExternalSources is true).
-shellcheckArguments = []
+# shellcheckArguments = []
 
 [language-server.bash-language-server.config.bashIde.shfmt]
 # Allow boolean operators (like && and ||) to start a line

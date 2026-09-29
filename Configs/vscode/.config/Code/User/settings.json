@@ -178,10 +178,15 @@
     "python"
   ],
   "autopep8.showNotifications": "always",
+  "bashIde.backgroundAnalysisMaxFiles": 500,
   "bashIde.enableSourceErrorDiagnostics": true,
-  "bashIde.includeAllWorkspaceSymbols": true,
+  "bashIde.explainshellEndpoint": "",
+  "bashIde.shellcheckExternalSources": true,
+  "bashIde.shfmt.binaryNextLine": true,
   "bashIde.shfmt.caseIndent": false,
+  "bashIde.shfmt.funcNextLine": false,
   "bashIde.shfmt.ignoreEditorconfig": false,
+  "bashIde.shfmt.languageDialect": "auto",
   "bashIde.shfmt.simplifyCode": true,
   "bashIde.shfmt.spaceRedirects": false,
   "better-comments.tags": [
