@@ -28,3 +28,69 @@ providers:
         input: [text]
         contextWindow: 1048576
         maxTokens: 131072
+      - id: auto/best-free
+        name: auto/best-free
+        reasoning: true
+        input: [text]
+        contextWindow: 1048576
+        maxTokens: 131072
+      - id: "auto/coding:free"
+        name: "auto/coding:free"
+        reasoning: true
+        input: [text]
+        contextWindow: 1048576
+        maxTokens: 131072
+      - id: kc/kilo-auto/free
+        name: Kilo Auto Free
+        reasoning: true
+        input: [text]
+        contextWindow: 1048576
+        maxTokens: 131072
+      - id: "kc/poolside/laguna-s-2.1:free"
+        name: "kc/poolside/laguna-s-2.1"
+        reasoning: true
+        input: [text]
+        contextWindow: 262144
+        maxTokens: 32768
+      - id: "kc/nvidia/nemotron-3-ultra-550b-a55b:free"
+        name: "kc/nvidia/nemotron-3-ultra"
+        reasoning: true
+        input: [text]
+        contextWindow: 1000000
+        maxTokens: 65536
+      - id: "kc/nex-agi/nex-n2.5-pro:free"
+        name: "kc/nex-agi/nex-n2.5-pro"
+        reasoning: true
+        input: [text, image]
+        contextWindow: 262144
+        maxTokens: 235929
+      - id: "kc/inclusionai/ling-3.0-flash-vl:free"
+        name: "kc/inclusionai/ling-3.0-flash-vl"
+        reasoning: true
+        input: [text, image]
+        contextWindow: 262144
+        maxTokens: 32768
+      - id: "kc/deepseek/deepseek-v4-flash-0731:free"
+        name: "kc/deepseek/deepseek-v4-flash-0731"
+        reasoning: true
+        input: [text]
+        contextWindow: 1048576
+        maxTokens: 393216
+      - id: "kc/thinkingmachines/inkling-small:free"
+        name: "kc/thinkingmachines/inkling-small"
+        reasoning: true
+        input: [text, image]
+        contextWindow: 1048576
+        maxTokens: 262144
+      - id: kc/openrouter/free
+        name: kc/openrouter/free
+        reasoning: true
+        input: [text, image]
+        contextWindow: 200000
+        maxTokens: 32768
+      - id: "kc/stepfun/step-3.7-flash:free"
+        name: "kc/stepfun/step-3.7-flash"
+        reasoning: true
+        input: [text, image]
+        contextWindow: 262144
+        maxTokens: 262144
