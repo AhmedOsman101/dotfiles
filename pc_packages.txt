@@ -490,6 +490,7 @@ yazi
 yelp
 yq
 yt-dlp
+zed
 zen-browser-bin
 zenity
 zoxide

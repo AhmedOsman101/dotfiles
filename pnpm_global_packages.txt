@@ -18,3 +18,5 @@ yaml-language-server
 strip-json-comments-cli
 @th0rgal/ralph-wiggum
 release-please
+@vtsls/language-server
+chrome-devtools-mcp
