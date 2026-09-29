@@ -1174,7 +1174,7 @@
   "kilo-code.new.showTokenThroughput": true,
   "kilo-code.new.languageCommitMessage": "en",
   "kilo-code.new.showTaskTimeline": false,
-  "kilo-code.new.autocomplete.enableChatAutocomplete": true,
+  "kilo-code.new.autocomplete.enableAutoTrigger": false,
   "omnicopilot.baseUrl": "http://localhost:8082",
   "omnicopilot.defaultContextLength": 200000,
   "omnicopilot.maxOutputTokens": 32000,

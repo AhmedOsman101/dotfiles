@@ -462,6 +462,12 @@ command = "phpantom_lsp"
 args = ["--stdio"]
 
 # --- Arduino --- #
+# arduino-language-server segfaults if the LSP `initialize` request has an empty
+# rootUri (ls/ls.go dereferences a nil path). Helix never sends one; Arduino IDE
+# 2 always does, which is why upstream never hit it. The wrapper injects it from
+# $ARDUINO_SKETCH, falling back to the most recently modified sketch in ~/Arduino.
+#
+#   ARDUINO_SKETCH=~/Arduino/MySketch hx MySketch/MySketch.ino
 [language-server.arduino]
 command = "arduino-language-server"
 args = [
@@ -474,6 +480,22 @@ args = [
   "-fqbn",
   "arduino:avr:uno",
 ]
+
+# --- Arduino --- #
+# A separate entry so your C++ setup above stays untouched.
+# "grammar" points the parser at cpp.so; the highlight/indent queries live in
+# ~/.config/helix/runtime/queries/arduino/ and are just "; inherits: cpp",
+# so .ino files get identical C++ colouring.
+[[language]]
+name = "arduino"
+scope = "source.cpp"
+injection-regex = "arduino"
+grammar = "cpp"
+file-types = ["ino"]
+language-servers = ["arduino"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+indent = { tab-width = 2, unit = "  " }
 
 # --- basedpyright --- #
 [language-server.basedpyright]
