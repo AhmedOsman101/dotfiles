@@ -18,6 +18,7 @@
 [tools]
 node = ["lts", "latest"]
 php = ["latest", "8.4"]
+pnpm = ["latest"]
 
 # ─────────────────────────────────────────────────────────────────────────────
 # ENVIRONMENT VARIABLES
@@ -47,7 +48,7 @@ auto_install = true
 
 # Number of concurrent jobs for downloads/installs.
 # Values: 1-32 (default: 8)
-jobs = 4
+jobs = 1
 
 # Use color in terminal output.
 # Values: true | false
