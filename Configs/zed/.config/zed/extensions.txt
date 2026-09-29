@@ -1,0 +1,14 @@
+arduino
+biome
+catppuccin
+deno
+editorconfig
+git-firefly
+github-theme
+html
+vscode-icons
+rasi
+react-snippets-es7
+lua
+fish
+toml

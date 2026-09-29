@@ -25,7 +25,7 @@
   "cli_default_open_behavior": "new_window",
   "code_lens": "on",
   "colorize_brackets": true,
-  "context_servers": {
+  /* "context_servers": {
     "chrome-devtools-mcp-zed": {
       "enabled": true,
       "remote": false,
@@ -39,9 +39,7 @@
         "channel": "stable",
         "chrome_arg": [],
         "executable_path": "/usr/bin/thorium-browser-avx2",
-        "extra_args": [
-          "--no-usage-statistics"
-        ],
+        "extra_args": ["--no-usage-statistics"],
         "headless": false,
         "isolated": null,
         "log_file": null,
@@ -71,47 +69,19 @@
       "settings": {}
     }
   },
-  "cursor_animation": {
-    "enabled": true
-  },
+  */
+  "cursor_animation": { "enabled": true },
   "cursor_blink": true,
   "cursor_shape": "block",
-  "debugger": {
-    "button": false
-  },
-  "diagnostics": {
-    "inline": {
-      "enabled": true
-    }
-  },
+  "debugger": { "button": false },
+  "diagnostics": { "inline": { "enabled": true } },
   "disable_ai": true,
   "ensure_final_newline_on_save": true,
-  "file_types": {
-    "css": [
-      "*.css"
-    ],
-    "ini": [
-      "*.desktop",
-      "*.service",
-      "*.target",
-      "*.timer",
-      "dunstrc"
-    ],
-    "markdown": [
-      "*.mdc"
-    ],
-    "php": [
-      ".php_cs",
-      ".php_cs.dist"
-    ],
-    "shellscript": [
-      "mkconf",
-      "mkconfig"
-    ]
-  },
+  "file_types": {},
   "format_on_save": "on",
   "git": {
     "inline_blame": {
+      "enabled": true,
       "location": "status_bar",
       "show_commit_summary": true
     }
@@ -120,7 +90,9 @@
     "fallback_branch_name": "main"
   },
   "gutter": {
-    "line_numbers": true
+    "line_numbers": true,
+    "runnables": true,
+    "folds": true
   },
   "helix_mode": true,
   "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
@@ -136,17 +108,150 @@
   },
   "inline_code_actions": true,
   "languages": {
+    "Shell Script": {
+      "formatter": {
+        "external": { "command": "shellfmt" }
+      },
+      "document_folding_ranges": "on",
+      "code_actions_on_format": {
+        "source.fixAll.shellcheck": true
+      }
+    },
     "C": {
       "formatter": {
-        "external": {
-          "command": "astyle"
-        }
+        "external": { "command": "astyle" }
       }
     },
     "Fish": {
       "formatter": {
-        "external": {
-          "command": "fish_indent"
+        "external": { "command": "fish_indent" }
+      }
+    },
+    "HTML": {
+      "prettier": { "allowed": true },
+      "code_actions_on_format": { "source.fixAll.biome": true },
+      "formatter": {
+        "custom": {
+          "command": "biome",
+          "arguments": [
+            "check",
+            "--fix",
+            "--config-path",
+            "/home/othman/.config/biome/biome.json",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "CSS": {
+      "prettier": { "allowed": false },
+      "code_actions_on_format": { "source.fixAll.biome": true },
+      "formatter": {
+        "custom": {
+          "command": "biome",
+          "arguments": [
+            "check",
+            "--fix",
+            "--config-path",
+            "/home/othman/.config/biome/biome.json",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "JSON": {
+      "prettier": { "allowed": false },
+      "code_actions_on_format": { "source.fixAll.biome": true },
+      "formatter": {
+        "custom": {
+          "command": "biome",
+          "arguments": [
+            "check",
+            "--fix",
+            "--config-path",
+            "/home/othman/.config/biome/biome.json",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "JSONC": {
+      "prettier": { "allowed": false },
+      "code_actions_on_format": { "source.fixAll.biome": true },
+      "formatter": {
+        "custom": {
+          "command": "biome",
+          "arguments": [
+            "check",
+            "--fix",
+            "--config-path",
+            "/home/othman/.config/biome/biome.json",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "JavaScript": {
+      "prettier": { "allowed": false },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      },
+      "formatter": {
+        "custom": {
+          "command": "biome",
+          "arguments": [
+            "check",
+            "--fix",
+            "--config-path",
+            "/home/othman/.config/biome/biome.json",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "TypeScript": {
+      "prettier": { "allowed": false },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      },
+      "formatter": {
+        "custom": {
+          "command": "biome",
+          "arguments": [
+            "check",
+            "--fix",
+            "--config-path",
+            "/home/othman/.config/biome/biome.json",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "TSX": {
+      "prettier": { "allowed": false },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      },
+      "formatter": {
+        "custom": {
+          "command": "biome",
+          "arguments": [
+            "check",
+            "--fix",
+            "--config-path",
+            "/home/othman/.config/biome/biome.json",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
         }
       }
     }
@@ -155,6 +260,7 @@
   "lsp": {
     "arduino-language-server": {
       "binary": {
+        "path": "/usr/bin/arduino-language-server",
         "arguments": [
           "-clangd",
           "/usr/bin/clangd",
@@ -164,55 +270,83 @@
           "/home/othman/.arduino15/arduino-cli.yaml",
           "-fqbn",
           "arduino:avr:uno"
-        ],
-        "path": "/usr/bin/arduino-language-server"
+        ]
       }
     },
     "bash-language-server": {
       "settings": {
-        "enableSourceErrorDiagnostics": true,
-        "includeAllWorkspaceSymbols": true,
-        "shfmt": {
-          "caseIndent": false,
-          "ignoreEditorconfig": false,
-          "simplifyCode": true,
-          "spaceRedirects": false
+        "bashIde": {
+          "backgroundAnalysisMaxFiles": 500,
+          "enableSourceErrorDiagnostics": true,
+          "explainshellEndpoint": "",
+          "includeAllWorkspaceSymbols": false,
+          "shellcheckPath": "/usr/bin/shellcheck",
+          "shellcheckExternalSources": true,
+          "shfmt": {
+            "path": "/usr/bin/shfmt",
+            "binaryNextLine": true,
+            "caseIndent": false,
+            "funcNextLine": false,
+            "ignoreEditorconfig": false,
+            "languageDialect": "auto",
+            "simplifyCode": true,
+            "spaceRedirects": false
+          }
         }
       }
     },
+    "biome": {
+      "enable_lsp_tasks": true,
+      "settings": {
+        "require_config_file": true
+      }
+    },
     "json-language-server": {
+      "initialization_options": {
+        "provideFormatter": false
+      },
       "settings": {
         "json": {
+          "validate": { "enable": true },
+          "format": { "enable": false },
           "schemas": [
             {
-              "fileMatch": [
-                "deno.json",
-                "deno.jsonc"
-              ],
+              "fileMatch": ["deno.json", "deno.jsonc"],
               "url": "https://raw.githubusercontent.com/denoland/deno/refs/heads/main/cli/schemas/config-file.v1.json"
             },
             {
-              "fileMatch": [
-                "package.json"
-              ],
+              "fileMatch": ["package.json"],
               "url": "https://www.schemastore.org/package"
+            },
+            {
+              "fileMatch": ["tsconfig.json", "tsconfig.*.json"],
+              "url": "https://json.schemastore.org/tsconfig.json"
             }
           ]
+        },
+        "jsonc": {
+          "validate": { "enable": true },
+          "format": { "enable": false }
         }
       }
     },
     "tailwindcss-language-server": {
       "settings": {
-        "classAttributes": [
-          "class",
-          "ui",
-          "className"
-        ],
+        "classAttributes": ["class", "ui", "className"],
         "emmetCompletions": true,
         "experimental": {
           "classRegex": [
             "ui:\\s*{([^)]*)\\s*}",
-            "(?:'|\"|`)([^']*)(?:'|\"|`)"
+            "(?:'|\"|`)([^']*)(?:'|\"|`)",
+            "\\.className\\s*[+]?=\\s*['\"]([^'\"]*)['\"]",
+            "\\.setAttributeNS\\(.*,\\s*['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
+            "\\.setAttribute\\(['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
+            "\\.classList\\.add\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.remove\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.toggle\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.contains\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.replace\\(\\s*['\"]([^'\"]*)['\"]",
+            "\\.classList\\.replace\\([^,)]+,\\s*['\"]([^'\"]*)['\"]"
           ]
         }
       }
