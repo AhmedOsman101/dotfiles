@@ -1,0 +1,266 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "inline_code_actions": true,
+  "agent": {
+    "sidebar_side": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "proxy": "",
+  "disable_ai": true,
+  "git": {
+    "inline_blame": {
+      "show_commit_summary": true,
+      "location": "status_bar"
+    }
+  },
+  "window_title_separator": " — ",
+  "window_title_format": "${projectName}${separator}${fileName}",
+  "tabs": {
+    "show_diagnostics": "all",
+    "file_icons": true,
+    "git_status": true
+  },
+  "title_bar": {
+    "show_branch_status_icon": true
+  },
+  "status_bar": {
+    "show_active_file": true
+  },
+  "debugger": {
+    "button": false
+  },
+  "use_smartcase_search": true,
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "prettier": {
+    "allowed": true
+  },
+  "semantic_tokens": "combined",
+  "colorize_brackets": true,
+  "code_lens": "on",
+  "inlay_hints": {
+    "show_other_hints": true,
+    "show_type_hints": false,
+    "show_value_hints": true,
+    "enabled": true
+  },
+  "line_ending": "enforce_lf",
+  "indent_guides": {
+    "background_coloring": "indent_aware",
+    "coloring": "indent_aware"
+  },
+  "vim": {
+    "cursor_shape": {
+      "insert": "bar"
+    },
+    "use_smartcase_find": true,
+    "toggle_relative_line_numbers": true
+  },
+  "toolbar": {
+    "code_actions": true,
+    "breadcrumbs": false
+  },
+  "autoscroll_on_clicks": true,
+  "which_key": {
+    "enabled": true
+  },
+  "helix_mode": true,
+  "cursor_animation": {
+    "enabled": true
+  },
+  "agent_buffer_font_size": 18.0,
+  "ui_font_family": "Inter Variable",
+  "reveal_if_open": true,
+  "cli_default_open_behavior": "new_window",
+  "use_system_prompts": false,
+  "use_system_path_prompts": false,
+  "on_last_window_closed": "quit_app",
+  "when_closing_with_no_tabs": "keep_window_open",
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "terminal": {
+    "font_size": 17.0,
+    "line_height": {
+      "custom": 1.5
+    },
+    "blinking": "on",
+    "copy_on_select": true
+  },
+  "node": {
+    "npm_path": "pnpm"
+  },
+  "project_panel": {
+    "dock": "left",
+    "auto_reveal_entries": false
+  },
+  "git_panel": {
+    "fallback_branch_name": "main"
+  },
+  "search": {
+    "include_ignored": false
+  },
+  "relative_line_numbers": "enabled",
+  "sticky_scroll": {
+    "enabled": false
+  },
+  "mouse_wheel_zoom": true,
+  "gutter": {
+    "line_numbers": true
+  },
+  "minimap": {
+    "show": "never",
+    "max_width_columns": 250
+  },
+  "cursor_shape": "block",
+  "cursor_blink": true,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 500
+    }
+  },
+  "buffer_font_family": "JetBrainsMonoNF Nerd Font",
+  "file_types": {
+    "ini": ["*.desktop", "*.service", "*.target", "*.timer", "dunstrc"],
+    "markdown": ["*.mdc"],
+    "shellscript": ["mkconf", "mkconfig"],
+    "css": ["*.css"],
+    "php": [".php_cs", ".php_cs.dist"]
+  },
+  "use_on_type_format": false,
+  "ensure_final_newline_on_save": true,
+  "format_on_save": "on",
+  "preferred_line_length": 120,
+  "soft_wrap": "none",
+  "tab_size": 2,
+  "base_keymap": "VSCode",
+  "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
+  "ui_font_size": 16.0,
+  "buffer_font_size": 20.0,
+  "theme": "GitHub Dark",
+  "languages": {
+    "C": {
+      "formatter": {
+        "external": {
+          "command": "astyle"
+        }
+      }
+    },
+    "Fish": {
+      "formatter": {
+        "external": {
+          "command": "fish_indent"
+        }
+      }
+    }
+  },
+  "lsp": {
+    "arduino-language-server": {
+      "binary": {
+        "path": "/usr/bin/arduino-language-server",
+        "arguments": [
+          "-clangd",
+          "/usr/bin/clangd",
+          "-cli",
+          "/usr/bin/arduino-cli",
+          "-cli-config",
+          "/home/othman/.arduino15/arduino-cli.yaml",
+          "-fqbn",
+          "arduino:avr:uno"
+        ]
+      }
+    },
+    "bash-language-server": {
+      "settings": {
+        "enableSourceErrorDiagnostics": true,
+        "includeAllWorkspaceSymbols": true,
+        "shfmt": {
+          "caseIndent": false,
+          "ignoreEditorconfig": false,
+          "simplifyCode": true,
+          "spaceRedirects": false
+        }
+      }
+    },
+    "json-language-server": {
+      "settings": {
+        "json": {
+          "schemas": [
+            {
+              "fileMatch": ["deno.json", "deno.jsonc"],
+              "url": "https://raw.githubusercontent.com/denoland/deno/refs/heads/main/cli/schemas/config-file.v1.json"
+            },
+            {
+              "fileMatch": ["package.json"],
+              "url": "https://www.schemastore.org/package"
+            }
+          ]
+        }
+      }
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "classAttributes": ["class", "ui", "className"],
+        "emmetCompletions": true,
+        "experimental": {
+          "classRegex": ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+        }
+      }
+    }
+  },
+  "context_servers": {
+    "chrome-devtools-mcp-zed": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "browser_url": null,
+        "ws_endpoint": null,
+        "ws_headers": null,
+        "auto_connect": null,
+        "channel": "stable",
+        "headless": false,
+        "isolated": null,
+        "user_data_dir": null,
+        "viewport": null,
+        "executable_path": "/usr/bin/thorium-browser-avx2",
+        "chrome_arg": [],
+        "proxy_server": null,
+        "accept_insecure_certs": null,
+        "category_emulation": null,
+        "category_performance": null,
+        "category_network": null,
+        "log_file": null,
+        "extra_args": ["--no-usage-statistics"]
+      }
+    },
+    "mcp-server-exa-search": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "exa_api_key": null,
+        "tools": null
+      }
+    },
+    "mcp-server-github": {
+      "enabled": false,
+      "remote": false,
+      "settings": { }
+    },
+    "mcp-server-context7": {
+      "enabled": false,
+      "remote": false,
+      "settings": { }
+    }
+  }
+}
