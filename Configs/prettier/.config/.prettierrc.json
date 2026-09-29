@@ -9,7 +9,7 @@
   "singleQuote": false,
   "quoteProps": "as-needed",
   "jsxSingleQuote": false,
-  "trailingComma": "es5",
+  "trailingComma": "none",
   "bracketSpacing": true,
   "objectWrap": "preserve",
   "bracketSameLine": false,
@@ -27,7 +27,7 @@
       "options": { "parser": "markdown" }
     },
     {
-      "files": ["*.jsonc"],
+      "files": ["*.jsonc", "*.json"],
       "options": {
         "parser": "json",
         "trailingComma": "none"

@@ -41,7 +41,6 @@ export ASDF_DIR="${ASDF_DATA_DIR}"
 
 # --- Astyle --- #
 export ARTISTIC_STYLE_OPTIONS="${XDG_CONFIG_HOME}/.astylerc"
-export ARTISTIC_STYLE_PROJECT_OPTIONS="${XDG_CONFIG_HOME}/.astylerc"
 
 # --- Bat --- #
 export BATDIFF_USE_DELTA=true

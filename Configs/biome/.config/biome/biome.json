@@ -363,5 +363,13 @@
     "linter": {
       "enabled": true
     }
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.jsonc"],
+      "json": {
+        "formatter": { "trailingCommas": "none" }
+      }
+    }
+  ]
 }

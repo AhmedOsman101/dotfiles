@@ -190,7 +190,7 @@ formatter = { command = "biome", args = [
   "--stdin-file-path=file.tsx",
 ] }
 
-# --- Rust--- #
+# --- Rust --- #
 [[language]]
 name = "rust"
 auto-format = true
@@ -312,14 +312,21 @@ name = "toml"
 language-servers = ["taplo", "tombi", "scls"]
 formatter = { command = "taplo", args = ["fmt", "-"] }
 
+
 # --- Arduino --- #
+# A separate entry so your C++ setup above stays untouched.
+# "grammar" points the parser at cpp.so; the highlight/indent queries live in
+# ~/.config/helix/runtime/queries/arduino/ and are just "; inherits: cpp",
+# so .ino files get identical C++ colouring.
 [[language]]
 name = "arduino"
 scope = "source.cpp"
 injection-regex = "arduino"
+grammar = "cpp"
 file-types = ["ino", "pde"]
 language-servers = ["arduino"]
 comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
 indent = { tab-width = 2, unit = "  " }
 
 # --- Typescript 7 LSP --- #
@@ -481,22 +488,6 @@ args = [
   "arduino:avr:uno",
 ]
 
-# --- Arduino --- #
-# A separate entry so your C++ setup above stays untouched.
-# "grammar" points the parser at cpp.so; the highlight/indent queries live in
-# ~/.config/helix/runtime/queries/arduino/ and are just "; inherits: cpp",
-# so .ino files get identical C++ colouring.
-[[language]]
-name = "arduino"
-scope = "source.cpp"
-injection-regex = "arduino"
-grammar = "cpp"
-file-types = ["ino"]
-language-servers = ["arduino"]
-comment-token = "//"
-block-comment-tokens = { start = "/*", end = "*/" }
-indent = { tab-width = 2, unit = "  " }
-
 # --- basedpyright --- #
 [language-server.basedpyright]
 command = "basedpyright-langserver"
@@ -504,3 +495,16 @@ args = ["--stdio"]
 
 [language-server.basedpyright.config.basedpyright.analysis]
 typeCheckingMode = "standard"
+
+# --- Json --- #
+[[language-server.vscode-json-language-server.config.json.schemas]]
+fileMatch = ["tsconfig.json", "tsconfig.*.json"]
+url = "https://json.schemastore.org/tsconfig.json"
+
+[[language-server.vscode-json-language-server.config.json.schemas]]
+fileMatch = ["package.json"]
+url = "https://json.schemastore.org/package.json"
+
+[[language-server.vscode-json-language-server.config.json.schemas]]
+fileMatch = ["deno.json", "deno.jsonc"]
+url = "https://github.com/denoland/deno/blob/main/cli/schemas/config-file.v1.json"

@@ -1111,11 +1111,6 @@
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.settings.showAISearchToggle": true,
   "workbench.startupEditor": "none",
-  "yaml.schemas": {
-    "/home/othman/.vscode/extensions/continue.continue-1.1.34-linux-x64/config-yaml-schema.json": [
-      ".continue/**/*.yaml"
-    ]
-  },
   "json.schemaDownload.trustedDomains": {
     "https://app.kilo.ai": true,
     "https://biomejs.dev": true,
