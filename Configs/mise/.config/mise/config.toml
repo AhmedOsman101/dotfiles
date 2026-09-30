@@ -18,7 +18,8 @@
 [tools]
 node = ["lts", "latest"]
 php = ["latest", "8.4"]
-pnpm = ["latest"]
+pnpm = "latest"
+"github:LalitMaganti/syntaqlite" = "latest"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # ENVIRONMENT VARIABLES

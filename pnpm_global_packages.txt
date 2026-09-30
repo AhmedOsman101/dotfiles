@@ -20,3 +20,5 @@ typescript
 vite
 @vtsls/language-server
 yaml-language-server
+devsense-php-ls
+prettier
