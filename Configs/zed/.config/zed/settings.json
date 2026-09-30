@@ -584,8 +584,8 @@
     }
   },
   "minimap": {
-    "max_width_columns": 250,
-    "show": "never"
+    "max_width_columns": 100,
+    "show": "auto"
   },
   "mouse_wheel_zoom": true,
   "node": {
