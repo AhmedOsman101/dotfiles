@@ -341,17 +341,11 @@
       }
     },
     "Python": {
+      "language_servers": ["basedpyright", "!ruff-lsp"],
       "formatter": {
         "external": {
           "command": "ruff",
-          "arguments": [
-            "format",
-            "--config",
-            "/home/othman/.config/ruff/ruff.toml",
-            "--stdin-filename",
-            "file.py",
-            "-"
-          ]
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
         }
       }
     },
