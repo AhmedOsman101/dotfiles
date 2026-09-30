@@ -1,29 +1,8 @@
 // Place your key bindings in this file to override the defaults
 [
-  // {
-  //   "key": "ctrl+n",
-  //   "command": "workbench.action.files.newUntitledFile"
-  // },
-  {
-    "key": "ctrl+n",
-    "command": "extension.advancedNewFile"
-  },
-  {
-    "key": "ctrl+g",
-    "command": "-workbench.action.gotoLine"
-  },
   {
     "key": "ctrl+r",
     "command": "code-runner.run"
-  },
-  {
-    "key": "ctrl+shift+j",
-    "command": "-workbench.action.search.toggleQueryDetails",
-    "when": "inSearchEditor || searchViewletFocus"
-  },
-  {
-    "key": "ctrl+shift+j",
-    "command": "fuzzySearch.activeTextEditor"
   },
   {
     "key": "shift+alt+up",
@@ -39,28 +18,8 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+down",
-    "command": "-editor.action.insertCursorBelow",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "ctrl+up",
     "command": "editor.action.insertCursorAbove",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+up",
-    "command": "-editor.action.insertCursorAbove",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "shift+alt+up",
-    "command": "-editor.action.insertCursorAbove",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "shift+alt+down",
-    "command": "-editor.action.insertCursorBelow",
     "when": "editorTextFocus"
   },
   {
@@ -72,83 +31,124 @@
     "key": "ctrl+shift+k",
     "command": "-editor.action.deleteLines",
     "when": "textInputFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+a",
-    "command": "-continue.applyCodeFromChat"
-  },
-  {
-    "key": "alt+a",
-    "command": "-editor.action.accessibilityHelpConfigureAssignedKeybindings",
-    "when": "accessibilityHelpIsShown && accessibleViewHasAssignedKeybindings"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "-workbench.action.chat.newChat",
-    "when": "chatIsEnabled && inChat && chatLocation != 'editing-session'"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "-workbench.action.chat.newEditSession",
-    "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat && chatLocation == 'editing-session'"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "-continue.focusContinueInput"
-  },
-  {
-    "key": "ctrl+shift+l",
-    "command": "-continue.focusContinueInputWithoutClear"
-  },
-  {
-    "key": "ctrl+'",
-    "command": "-locateThisDocument.locateActiveDocument"
-  },
-  {
-    "key": "ctrl+shift+'",
-    "command": "-locateThisDocument.openActiveDocumentInFileExplorer"
-  },
-  {
-    "key": "ctrl+shift+alt+'",
-    "command": "-locateThisDocument.openWorkspaceRootFolderInFileExplorer",
-    "when": "workspaceFolderCount == '1'"
-  },
-  {
-    "key": "ctrl+y",
-    "command": "-editor.action.inlineDiffs.acceptPartialEdit",
-    "when": "editorHasPromptBar && editorPromptBarFocused"
-  },
-  {
-    "key": "ctrl+y",
-    "command": "-editor.action.inlineDiffs.acceptPartialEdit",
-    "when": "editorTextFocus && @inlineDiffs.acceptPartialEdit.isActiveEditorWithDiffs"
-  },
-  {
-    "key": "ctrl+y",
-    "command": "-aichat.newfollowupaction"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "-composer.showBackgroundAgentHistory",
-    "when": "backgroundComposerEnabled || showBackgroundAgentHistoryAction"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "-workbench.action.quickOpen"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "-editor.action.toggleScreenReaderAccessibilityMode",
-    "when": "accessibilityHelpIsShown"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
-    "when": "inFilesPicker && inQuickOpen"
-  },
-  {
-    "key": "ctrl+b",
-    "command": "-extension.helixKeymap.scrollUpPage",
-    "when": "editorTextFocus && extension.helixKeymap.normalMode || editorTextFocus && extension.helixKeymap.visualMode"
   }
+  // {
+  //   "key": "ctrl+n",
+  //   "command": "workbench.action.files.newUntitledFile"
+  // },
+  // {
+  //   "key": "ctrl+n",
+  //   "command": "extension.advancedNewFile"
+  // },
+  // {
+  //   "key": "ctrl+g",
+  //   "command": "-workbench.action.gotoLine"
+  // },
+  // {
+  //   "key": "ctrl+shift+j",
+  //   "command": "-workbench.action.search.toggleQueryDetails",
+  //   "when": "inSearchEditor || searchViewletFocus"
+  // },
+  // {
+  //   "key": "ctrl+shift+j",
+  //   "command": "fuzzySearch.activeTextEditor"
+  // },
+  // {
+  //   "key": "ctrl+shift+down",
+  //   "command": "-editor.action.insertCursorBelow",
+  //   "when": "editorTextFocus"
+  // },
+  // {
+  //   "key": "ctrl+shift+up",
+  //   "command": "-editor.action.insertCursorAbove",
+  //   "when": "editorTextFocus"
+  // },
+  // {
+  //   "key": "shift+alt+up",
+  //   "command": "-editor.action.insertCursorAbove",
+  //   "when": "editorTextFocus"
+  // },
+  // {
+  //   "key": "shift+alt+down",
+  //   "command": "-editor.action.insertCursorBelow",
+  //   "when": "editorTextFocus"
+  // },
+  // {
+  //   "key": "alt+a",
+  //   "command": "-continue.applyCodeFromChat"
+  // },
+  // {
+  //   "key": "alt+a",
+  //   "command": "-editor.action.accessibilityHelpConfigureAssignedKeybindings",
+  //   "when": "accessibilityHelpIsShown && accessibleViewHasAssignedKeybindings"
+  // },
+  // {
+  //   "key": "ctrl+l",
+  //   "command": "-workbench.action.chat.newChat",
+  //   "when": "chatIsEnabled && inChat && chatLocation != 'editing-session'"
+  // },
+  // {
+  //   "key": "ctrl+l",
+  //   "command": "-workbench.action.chat.newEditSession",
+  //   "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat && chatLocation == 'editing-session'"
+  // },
+  // {
+  //   "key": "ctrl+l",
+  //   "command": "-continue.focusContinueInput"
+  // },
+  // {
+  //   "key": "ctrl+shift+l",
+  //   "command": "-continue.focusContinueInputWithoutClear"
+  // },
+  // {
+  //   "key": "ctrl+'",
+  //   "command": "-locateThisDocument.locateActiveDocument"
+  // },
+  // {
+  //   "key": "ctrl+shift+'",
+  //   "command": "-locateThisDocument.openActiveDocumentInFileExplorer"
+  // },
+  // {
+  //   "key": "ctrl+shift+alt+'",
+  //   "command": "-locateThisDocument.openWorkspaceRootFolderInFileExplorer",
+  //   "when": "workspaceFolderCount == '1'"
+  // },
+  // {
+  //   "key": "ctrl+y",
+  //   "command": "-editor.action.inlineDiffs.acceptPartialEdit",
+  //   "when": "editorHasPromptBar && editorPromptBarFocused"
+  // },
+  // {
+  //   "key": "ctrl+y",
+  //   "command": "-editor.action.inlineDiffs.acceptPartialEdit",
+  //   "when": "editorTextFocus && @inlineDiffs.acceptPartialEdit.isActiveEditorWithDiffs"
+  // },
+  // {
+  //   "key": "ctrl+y",
+  //   "command": "-aichat.newfollowupaction"
+  // },
+  // {
+  //   "key": "ctrl+e",
+  //   "command": "-composer.showBackgroundAgentHistory",
+  //   "when": "backgroundComposerEnabled || showBackgroundAgentHistoryAction"
+  // },
+  // {
+  //   "key": "ctrl+e",
+  //   "command": "-workbench.action.quickOpen"
+  // },
+  // {
+  //   "key": "ctrl+e",
+  //   "command": "-editor.action.toggleScreenReaderAccessibilityMode",
+  //   "when": "accessibilityHelpIsShown"
+  // },
+  // {
+  //   "key": "ctrl+e",
+  //   "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+  //   "when": "inFilesPicker && inQuickOpen"
+  // },
+  // {
+  //   "key": "ctrl+b",
+  //   "command": "-extension.helixKeymap.scrollUpPage",
+  //   "when": "editorTextFocus && extension.helixKeymap.normalMode || editorTextFocus && extension.helixKeymap.visualMode"
+  // }
 ]
