@@ -20,7 +20,7 @@
   "embeddedLanguageFormatting": "auto",
   "proseWrap": "preserve",
   "singleAttributePerLine": false,
-  "plugins": ["prettier-plugin-sql"],
+  "plugins": [],
 
   "overrides": [
     {
@@ -28,9 +28,16 @@
       "options": { "parser": "markdown" }
     },
     {
-      "files": ["*.jsonc", "*.json"],
+      "files": ["*.json"],
       "options": {
         "parser": "json",
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": ["*.jsonc"],
+      "options": {
+        "parser": "jsonc",
         "trailingComma": "none"
       }
     }

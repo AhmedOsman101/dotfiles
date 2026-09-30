@@ -25,7 +25,7 @@
   "cli_default_open_behavior": "new_window",
   "code_lens": "on",
   "colorize_brackets": true,
-  /* "context_servers": {
+  "context_servers": {
     "chrome-devtools-mcp-zed": {
       "enabled": true,
       "remote": false,
@@ -50,11 +50,6 @@
         "ws_headers": null
       }
     },
-    "mcp-server-context7": {
-      "enabled": false,
-      "remote": false,
-      "settings": {}
-    },
     "mcp-server-exa-search": {
       "enabled": true,
       "remote": false,
@@ -62,14 +57,8 @@
         "exa_api_key": null,
         "tools": null
       }
-    },
-    "mcp-server-github": {
-      "enabled": false,
-      "remote": false,
-      "settings": {}
     }
   },
-  */
   "cursor_animation": { "enabled": true },
   "cursor_blink": true,
   "cursor_shape": "block",
@@ -208,7 +197,15 @@
     },
     "JavaScript": {
       "prettier": { "allowed": false },
-      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "!deno", "!eslint"],
+      "format_on_save": "on",
+      "language_servers": [
+        "tsgo",
+        "!vtsls",
+        "!typescript-language-server",
+        "!deno",
+        "!eslint",
+        "..."
+      ],
       "code_actions_on_format": {
         "source.fixAll.biome": true,
         "source.organizeImports.biome": true
@@ -229,7 +226,15 @@
     },
     "TypeScript": {
       "prettier": { "allowed": false },
-      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "!deno", "!eslint"],
+      "format_on_save": "on",
+      "language_servers": [
+        "tsgo",
+        "!vtsls",
+        "!typescript-language-server",
+        "!deno",
+        "!eslint",
+        "..."
+      ],
       "code_actions_on_format": {
         "source.fixAll.biome": true,
         "source.organizeImports.biome": true
@@ -250,28 +255,15 @@
     },
     "TSX": {
       "prettier": { "allowed": false },
-      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "!deno", "!eslint"],
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      },
-      "formatter": {
-        "custom": {
-          "command": "biome",
-          "arguments": [
-            "check",
-            "--fix",
-            "--config-path",
-            "/home/othman/.config/biome/biome.json",
-            "--stdin-file-path",
-            "{buffer_path}"
-          ]
-        }
-      }
-    },
-    "JSX": {
-      "prettier": { "allowed": false },
-      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "!deno", "!eslint"],
+      "format_on_save": "on",
+      "language_servers": [
+        "tsgo",
+        "!vtsls",
+        "!typescript-language-server",
+        "!deno",
+        "!eslint",
+        "..."
+      ],
       "code_actions_on_format": {
         "source.fixAll.biome": true,
         "source.organizeImports.biome": true
@@ -299,12 +291,18 @@
         "..."
       ]
     },
-    "Vue": {
+    "Vue.js": {
       "prettier": { "allowed": true },
       "formatter": {
         "external": {
           "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
+          "arguments": [
+            "--ignore-path=/dev/null",
+            "--ignore-unknown=false",
+            "--config=/home/othman/.config/.prettierrc.json",
+            "--stdin-filepath",
+            "{buffer_path}"
+          ]
         }
       }
     },
@@ -313,7 +311,13 @@
       "formatter": {
         "external": {
           "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
+          "arguments": [
+            "--ignore-path=/dev/null",
+            "--ignore-unknown=false",
+            "--config=/home/othman/.config/.prettierrc.json",
+            "--stdin-filepath",
+            "{buffer_path}"
+          ]
         }
       },
       "format_on_save": "on"
@@ -323,7 +327,13 @@
       "formatter": {
         "external": {
           "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
+          "arguments": [
+            "--ignore-path=/dev/null",
+            "--ignore-unknown=false",
+            "--config=/home/othman/.config/.prettierrc.json",
+            "--stdin-filepath",
+            "{buffer_path}"
+          ]
         }
       }
     },
@@ -353,10 +363,7 @@
       "formatter": {
         "external": {
           "command": "rustfmt",
-          "arguments": [
-            "--config-path",
-            "/home/othman/.config/rustfmt.toml"
-          ]
+          "arguments": ["--config-path", "/home/othman/.config/rustfmt.toml"]
         }
       }
     }
@@ -439,19 +446,28 @@
       "settings": {
         "classAttributes": ["class", "ui", "className"],
         "emmetCompletions": true,
+        "includeLanguages": {
+          "php": "html",
+          "blade": "html",
+          "vue": "html"
+        },
         "experimental": {
           "classRegex": [
-            "ui:\\s*{([^)]*)\\s*}",
             "(?:'|\"|`)([^']*)(?:'|\"|`)",
-            "\\.className\\s*[+]?=\\s*['\"]([^'\"]*)['\"]",
-            "\\.setAttributeNS\\(.*,\\s*['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
-            "\\.setAttribute\\(['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
+            "@class\\(\\[([^\\]]*)\\]\\)",
+            "class='([^']*)'",
+            "class=\"([^\"]*)\"",
+            "class=\\\"([^\\\"]*)\\\"",
             "\\.classList\\.add\\(['\"]([^'\"]*)['\"]",
-            "\\.classList\\.remove\\(['\"]([^'\"]*)['\"]",
-            "\\.classList\\.toggle\\(['\"]([^'\"]*)['\"]",
             "\\.classList\\.contains\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.remove\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.replace\\([^,)]+,\\s*['\"]([^'\"]*)['\"]",
             "\\.classList\\.replace\\(\\s*['\"]([^'\"]*)['\"]",
-            "\\.classList\\.replace\\([^,)]+,\\s*['\"]([^'\"]*)['\"]"
+            "\\.classList\\.toggle\\(['\"]([^'\"]*)['\"]",
+            "\\.className\\s*[+]?=\\s*['\"]([^'\"]*)['\"]",
+            "\\.setAttribute\\(['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
+            "\\.setAttributeNS\\(.*,\\s*['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
+            "ui:\\s*{([^)]*)\\s*}"
           ]
         }
       }

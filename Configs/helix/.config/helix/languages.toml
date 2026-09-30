@@ -126,6 +126,24 @@ file-types = [
   "code-snippets",
 ]
 
+# --- Jsonc --- #
+[[language]]
+name = "jsonc"
+formatter = { command = "biome", args = [
+  "check",
+  "--fix",
+  "--config-path",
+  "/home/othman/.config/biome/biome.json",
+  "--stdin-file-path=file.jsonc",
+] }
+language-servers = [
+  { name = "vscode-json-language-server", except-features = [
+    "format",
+  ] },
+  "biome-lsp-proxy",
+  "scls",
+]
+
 # --- Typescript --- #
 [[language]]
 name = "typescript"
@@ -206,9 +224,9 @@ indent = { tab-width = 2, unit = "  " }
 [[language]]
 name = "markdown"
 formatter = { command = "prettier", args = [
-  "--write",
-  "--config",
-  "/home/othman/.config/.prettierrc.json",
+  "--ignore-path=/dev/null",
+  "--ignore-unknown=false",
+  "--config=/home/othman/.config/.prettierrc.json",
   "--stdin-filepath",
   "file.md",
 ] }
