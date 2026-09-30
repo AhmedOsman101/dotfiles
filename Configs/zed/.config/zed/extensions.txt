@@ -1,14 +1,15 @@
+# jq -r .extensions.[].manifest.id $XDG_DATA_HOME/zed/extensions/index.json
 arduino
 biome
 catppuccin
 deno
 editorconfig
+fish
 git-firefly
 github-theme
 html
-vscode-icons
+lua
 rasi
 react-snippets-es7
-lua
-fish
 toml
+vscode-icons
