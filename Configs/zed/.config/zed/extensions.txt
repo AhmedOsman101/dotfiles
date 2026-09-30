@@ -57,7 +57,6 @@ nu
 php
 php-snippets
 phpcs
-powershell
 px-to-rem
 python-snippets
 qml

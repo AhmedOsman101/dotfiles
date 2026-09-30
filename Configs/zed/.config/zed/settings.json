@@ -420,7 +420,7 @@
       "custom": 1.5
     }
   },
-  "theme": "Catppuccin Mocha",
+  "theme": "GitHub Dark",
   "title_bar": {
     "show_branch_status_icon": true
   },
