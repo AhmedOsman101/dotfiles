@@ -41,7 +41,6 @@ axel
 base
 base-devel
 bash-completion
-bash-language-server
 bat
 bat-extras
 bc
@@ -327,7 +326,6 @@ plasma-meta
 plasma-workspace
 plasma-x11-session
 plocate
-pnpm
 podman
 podman-compose
 podman-docker
