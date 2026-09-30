@@ -131,7 +131,7 @@
       "prettier": { "allowed": true },
       "code_actions_on_format": { "source.fixAll.biome": true },
       "formatter": {
-        "custom": {
+        "external": {
           "command": "biome",
           "arguments": [
             "check",
@@ -148,7 +148,7 @@
       "prettier": { "allowed": false },
       "code_actions_on_format": { "source.fixAll.biome": true },
       "formatter": {
-        "custom": {
+        "external": {
           "command": "biome",
           "arguments": [
             "check",
@@ -165,7 +165,7 @@
       "prettier": { "allowed": false },
       "code_actions_on_format": { "source.fixAll.biome": true },
       "formatter": {
-        "custom": {
+        "external": {
           "command": "biome",
           "arguments": [
             "check",
@@ -182,7 +182,7 @@
       "prettier": { "allowed": false },
       "code_actions_on_format": { "source.fixAll.biome": true },
       "formatter": {
-        "custom": {
+        "external": {
           "command": "biome",
           "arguments": [
             "check",
@@ -211,7 +211,7 @@
         "source.organizeImports.biome": true
       },
       "formatter": {
-        "custom": {
+        "external": {
           "command": "biome",
           "arguments": [
             "check",
@@ -240,7 +240,7 @@
         "source.organizeImports.biome": true
       },
       "formatter": {
-        "custom": {
+        "external": {
           "command": "biome",
           "arguments": [
             "check",
@@ -269,7 +269,7 @@
         "source.organizeImports.biome": true
       },
       "formatter": {
-        "custom": {
+        "external": {
           "command": "biome",
           "arguments": [
             "check",
