@@ -293,37 +293,26 @@
     },
     "Vue.js": {
       "prettier": { "allowed": true },
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": [
-            "--ignore-path=/dev/null",
-            "--ignore-unknown=false",
-            "--config=/home/othman/.config/.prettierrc.json",
-            "--stdin-filepath",
-            "{buffer_path}"
-          ]
-        }
-      }
+      "format_on_save": "on"
+      // ,"formatter": {
+      //   "external": {
+      //     "command": "prettier",
+      //     "arguments": [
+      //       "--ignore-path=/dev/null",
+      //       "--ignore-unknown=false",
+      //       "--config=/home/othman/.config/.prettierrc.json",
+      //       "--stdin-filepath",
+      //       "{buffer_path}"
+      //     ]
+      //   }
+      // }
     },
     "Markdown": {
-      "prettier": { "allowed": true },
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": [
-            "--ignore-path=/dev/null",
-            "--ignore-unknown=false",
-            "--config=/home/othman/.config/.prettierrc.json",
-            "--stdin-filepath",
-            "{buffer_path}"
-          ]
-        }
-      },
-      "format_on_save": "on"
-    },
-    "SQL": {
-      "prettier": { "allowed": true },
+      "prettier": { "allowed": false },
+      "format_on_save": "on",
+      "extend_list_on_newline": true,
+      "indent_list_on_tab": true,
+      "remove_trailing_whitespace_on_save": true,
       "formatter": {
         "external": {
           "command": "prettier",
@@ -337,8 +326,19 @@
         }
       }
     },
-    "Lua": {
+    "SQL": {
+      "prettier": { "allowed": false },
       "formatter": "language_server"
+    },
+    "Lua": {
+      "format_on_save": "on",
+      "formatter": "language_server",
+      "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_parameter_hints": false,
+        "show_other_hints": true
+      }
     },
     "TOML": {
       "formatter": {
@@ -431,8 +431,16 @@
               "url": "https://www.schemastore.org/package"
             },
             {
+              "fileMatch": [".prettierrc.json"],
+              "url": "https://json.schemastore.org/prettierrc"
+            },
+            {
               "fileMatch": ["tsconfig.json", "tsconfig.*.json"],
               "url": "https://json.schemastore.org/tsconfig.json"
+            },
+            {
+              "fileMatch": [".luarc.json", "*.luarc.json"],
+              "url": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json"
             }
           ]
         },
@@ -483,6 +491,12 @@
         "basedpyright": {
           "analysis": { "typeCheckingMode": "standard" }
         }
+      }
+    },
+    "syntaqlite-lsp": {
+      "binary": {
+        "path": "syntaqlite",
+        "ignore_system_version": false
       }
     },
     "intelephense": {
@@ -576,7 +590,7 @@
           "problems": { "excludeGitIgnore": true },
           "suggest": { "basic": false },
           "validate": { "enable": false },
-          "version": "8.4"
+          "version": "8.5"
         }
       }
     }
