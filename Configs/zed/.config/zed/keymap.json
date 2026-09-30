@@ -199,9 +199,26 @@
     }
   },
   {
-    "context": "BufferSearchBar && !in_replace",
-    "unbind": {
-      "escape": "buffer_search::Dismiss"
+    "context": "Editor",
+    "bindings": {
+      "shift-alt-up": "editor::DuplicateLineUp",
+      "shift-alt-down": "editor::DuplicateLineDown",
+      "ctrl-up": "editor::AddSelectionAbove",
+      "ctrl-down": "editor::AddSelectionBelow",
+      "ctrl-d": "editor::SelectNext",
+      "escape": "editor::Cancel"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "space f": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space f": "file_finder::Toggle"
     }
   }
 ]
