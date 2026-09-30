@@ -85,6 +85,7 @@ _vars=(
   HF_TOKEN
   NVIDIA_API_KEY
   OPENROUTER_API_KEY
+  OPENCODE_API_KEY
   N9ROUTER_API_KEY
   OMNIROUTE_API_KEY
 )
@@ -106,6 +107,7 @@ GOOGLE_GENERATIVE_AI_API_KEY="${GEMINI_API_KEY}"
 HF_TOKEN="$(pass show hugging-face 2>/dev/null)"
 NVIDIA_API_KEY="$(pass show nvidia/api-key 2>/dev/null)"
 OPENROUTER_API_KEY="$(pass show openrouter 2>/dev/null)"
+OPENCODE_API_KEY="$(pass show opencode-zen 2>/dev/null)"
 N9ROUTER_API_KEY="$(pass show 9router 2>/dev/null)"
 OMNIROUTE_API_KEY="$(pass show omniroute 2>/dev/null)"
 ANTHROPIC_API_KEY="${OMNIROUTE_API_KEY}"
