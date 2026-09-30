@@ -24,7 +24,7 @@ Configs/atuin/.local/share/atuin/host_id filter=git-crypt diff=git-crypt
 
 # --- Agentic sercrets --- #
 # 9Router
-Configs/9router/.9router/9router-backup*.json  filter=git-crypt diff=git-crypt
+Configs/9router/.9router/*                     filter=git-crypt diff=git-crypt
 # PI
 Configs/pi/.pi/agent/sessions/**               filter=git-crypt diff=git-crypt
 Configs/pi/.pi/agent/auth.json                 filter=git-crypt diff=git-crypt
