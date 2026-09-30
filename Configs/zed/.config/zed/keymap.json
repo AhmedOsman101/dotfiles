@@ -185,5 +185,23 @@
     "unbind": {
       "ctrl-s": "editor::SaveLocation"
     }
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "escape": [
+        "vim::Literal",
+        [
+          "escape",
+          "\u001b"
+        ]
+      ]
+    }
+  },
+  {
+    "context": "BufferSearchBar && !in_replace",
+    "unbind": {
+      "escape": "buffer_search::Dismiss"
+    }
   }
 ]

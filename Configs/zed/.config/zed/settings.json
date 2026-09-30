@@ -90,6 +90,7 @@
   },
   "git_panel": { "fallback_branch_name": "main" },
   "gutter": {
+    "min_line_number_digits": 3,
     "line_numbers": true,
     "runnables": true,
     "folds": true
@@ -264,6 +265,15 @@
           ]
         }
       }
+    },
+    "PHP": {
+      "language_servers": [
+        "phptools",
+        "!phpantom",
+        "!intelephense",
+        "!phpactor",
+        "..."
+      ]
     }
   },
   "line_ending": "enforce_lf",
@@ -410,7 +420,7 @@
       "custom": 1.5
     }
   },
-  "theme": "GitHub Dark",
+  "theme": "Catppuccin Mocha",
   "title_bar": {
     "show_branch_status_icon": true
   },
