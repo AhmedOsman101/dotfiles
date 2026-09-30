@@ -1,15 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/AhmedOsman101/commit-sage-cli/refs/heads/main/config.schema.json",
-  "commit": {
-    "autoCommit": false,
-    "autoPush": false,
-    "commitFormat": "conventional",
-    "onlyStagedChanges": true,
-    "commitLanguage": "english",
-    "promptForRefs": false,
-    "bodyStyle": "subject-body",
-    "maxLength": 80
-  },
+  "model": "gemini/gemini-3.1-flash-lite",
   "generation": {
     "maxRetries": 3,
     "retryDelay": 1000,
@@ -17,7 +8,6 @@
     "maxPromptTokens": 100000,
     "diffStrategy": "staged"
   },
-  "model": "openai/poolside/poolside/laguna-s-2.1",
   "providers": {
     "defaults": {
       "timeoutMs": 60000,
@@ -29,5 +19,15 @@
       "apiKey": "$OMNIROUTE_API_KEY",
       "apiType": "openai-chat"
     }
+  },
+  "commit": {
+    "autoCommit": false,
+    "autoPush": false,
+    "onlyStagedChanges": true,
+    "commitFormat": "conventional",
+    "commitLanguage": "english",
+    "promptForRefs": false,
+    "maxLength": 80,
+    "bodyStyle": "subject-body"
   }
 }
