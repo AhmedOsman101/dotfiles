@@ -1,0 +1,17 @@
+[
+  {
+    "label": "run current file",
+    "command": "sh",
+    "args": [
+      "-c",
+      "case \"$ZED_FILENAME\" in *.py) python3 -u \"$ZED_FILE\";; *.sh|*.bash|*.zsh) bash \"$ZED_FILE\";; *.php) php \"$ZED_FILE\";; *.js|*.jsx|*.ts|*.tsx) deno run -A \"$ZED_FILE\";; *.lua) lua \"$ZED_FILE\";; *) echo \"run-current-file: no runner for $ZED_FILENAME\"; exit 1;; esac"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "save": "current",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": true,
+    "reveal": "always",
+    "show_summary": true,
+    "show_command": true
+  }
+]
