@@ -1,0 +1,88 @@
+{
+  "bash skeleton": {
+    "prefix": "init",
+    "body": [
+      "#!/usr/bin/env bash",
+      "",
+      "set -eo pipefail",
+      "",
+      "trap 'exit 1' SIGUSR1",
+      "",
+      "# ----  Main script logic ---- #",
+      "",
+      "$0"
+    ]
+  },
+  "cmdarg": {
+    "prefix": "cmdarg",
+    "body": "source cmdarg.sh",
+    "description": "source cmdarg library"
+  },
+  "Required Argument": {
+    "prefix": "required_arg",
+    "body": [
+      "cmdarg \"${1:short}:\" \"${2:long}\" \"${0:description}\""
+    ]
+  },
+  "Optional Argument": {
+    "prefix": "optional_arg",
+    "body": [
+      "cmdarg \"${1:short}?\" \"${2:long}\" \"${3:description}\" \"${0:default}\""
+    ]
+  },
+  "Boolean Argument": {
+    "prefix": "boolean_arg",
+    "body": [
+      "cmdarg \"${1:short}\" \"${2:long}\" \"${0:description}\""
+    ]
+  },
+  "Argument": {
+    "prefix": "argument",
+    "body": [
+      "cmdarg \"${1:short}\" \"${2:long}\" \"${3:description}\" \"${0:default}\""
+    ]
+  },
+  "Access Arg": {
+    "prefix": "getarg",
+    "body": "\\$\\{cmdarg_cfg[\"${0:key}\"]\\}"
+  },
+  "info": {
+    "prefix": "cmdarg_info",
+    "body": [
+      "cmdarg_info \"header\" \"${1:Some script that needed argument parsing}\"",
+      "cmdarg_info \"author\" \"${2:Some Poor Bastard <somepoorbastard@hell.com>}\"",
+      "cmdarg_info \"copyright\" \"${3:(C) 2013}\""
+    ]
+  },
+  "header": {
+    "prefix": "cmdarg_info",
+    "body": [
+      "cmdarg_info \"header\" \"${1:Some script that needed argument parsing}\""
+    ]
+  },
+  "parseargs": {
+    "prefix": "cmdarg_parse",
+    "body": "cmdarg_parse \"\\$@\"",
+    "description": "parse the args"
+  },
+  "full cmdarg": {
+    "prefix": "fcmdarg",
+    "body": [
+      "# ---- Source the cmdarg script ---- #",
+      "source cmdarg.sh",
+      "",
+      "# ----  Main script logic ---- #",
+      "",
+      "cmdarg_info \"header\" \"${1:description}\"",
+      "",
+      "# ----  Define arguments ---- #",
+      "cmdarg \"${2:short}\" \"${3:long}\" \"${4:description}\" \"${5:default}\"",
+      "",
+      "# ----  Parse the arguments ---- #",
+      "cmdarg_parse \"\\$@\"",
+      "",
+      "\\${cmdarg_cfg[\"${3:key}\"]\\}",
+      "$0"
+    ]
+  }
+}

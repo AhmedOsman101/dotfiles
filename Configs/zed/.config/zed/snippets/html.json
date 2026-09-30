@@ -1,0 +1,39 @@
+{
+  "watercss cdn": {
+    "prefix": "water",
+    "body": [
+      "<link",
+      "\trel=\"stylesheet\"",
+      "\thref=\"https://cdn.jsdelivr.net/npm/water.css@2/out/${1|dark,light,water|}.css\"",
+      "/>"
+    ],
+    "description": "watercss cdn, options water, dark, light"
+  },
+  "pico css cdn": {
+    "prefix": "pico",
+    "body": [
+      "<meta name=\"color-scheme\" content=\"light dark\">",
+      "<link",
+      "\trel=\"stylesheet\"",
+      "\thref=\"https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css\"",
+      "/>"
+    ],
+    "description": "pico css cdn"
+  },
+  "pphp": {
+    "prefix": "pphp",
+    "body": [
+      "<?= $1 ?>"
+    ],
+    "description": "php echo shorthand"
+  },
+  "PHP Skeleton": {
+    "prefix": "ps",
+    "body": [
+      "<?php declare(strict_types=1);",
+      "",
+      "$0"
+    ],
+    "description": "php file with strict_types skeleton"
+  }
+}

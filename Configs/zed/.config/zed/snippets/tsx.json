@@ -1,0 +1,304 @@
+{
+  "Array": {
+    "prefix": "arr",
+    "body": [
+      "[ ${1:value}, ${2:value}, $3 ];"
+    ],
+    "description": "Array []"
+  },
+  "Array ... value": {
+    "prefix": "va",
+    "body": [
+      "${1:value}, "
+    ],
+    "description": "Array value statement"
+  },
+  "If block": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "If  block"
+  },
+  "If single line": {
+    "prefix": "sif",
+    "body": [
+      "if (${1:condition}) ${2:code}"
+    ],
+    "description": "If single line"
+  },
+  "If ... else": {
+    "prefix": "ifel",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${2:// code...}",
+      "} else {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "If else block"
+  },
+  "If ... else single line": {
+    "prefix": "sifel",
+    "body": [
+      "if (${1:condition}) ${2:code}",
+      "else (${3:condition}) ${4:code}"
+    ],
+    "description": "If ... else single line"
+  },
+  "If ... elseif ... else": {
+    "prefix": "ifelif",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${2:// code...}",
+      "} else if (${3:condition}) {",
+      "\t${4:// code...}",
+      "} else {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "If elseif else block"
+  },
+  "If ... elseif ... else single line": {
+    "prefix": "sifelif",
+    "body": [
+      "if (${1:condition}) ${2:code}",
+      "else if (${3:condition}) ${4:code}",
+      "else (${5:condition}) ${6:code}"
+    ],
+    "description": "If ... elseif ... else single line"
+  },
+  "Switch block": {
+    "prefix": "sw",
+    "body": [
+      "switch (${1:variable}) {",
+      "\tcase ${2:label}:",
+      "\t\t${3:// code...}",
+      "\t\tbreak;",
+      "\tdefault:",
+      "\t\t${0:// code...}",
+      "\t\tbreak;",
+      "}"
+    ],
+    "description": "Switch block"
+  },
+  "Case statement": {
+    "prefix": "cs",
+    "body": [
+      "case ${1:label}:",
+      "\t${2:// code...}",
+      "\t${3|break,return|};"
+    ],
+    "description": "Case addon block"
+  },
+  "Ternary operator": {
+    "prefix": "tern",
+    "body": [
+      "${1:condition} ? ${2:if_true} : ${3:if_false};"
+    ],
+    "description": "Ternary statement"
+  },
+  "Try ... catch": {
+    "prefix": "tryc",
+    "body": [
+      "try {",
+      "\t${1:// code...}",
+      "} catch (${2:e}) {",
+      "\t${3:// code...}",
+      "}"
+    ],
+    "description": "Try catch block"
+  },
+  "Try ... catch ... finally": {
+    "prefix": "tryf",
+    "body": [
+      "try {",
+      "\t${1:// code...}",
+      "} catch (${2:e}) {",
+      "\t${3:// code...}",
+      "}$5 finally {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "Try catch finally block"
+  },
+  "Catch": {
+    "prefix": "cat",
+    "body": [
+      "catch (${2:e}) {",
+      "\t${3:// code...}",
+      "}"
+    ],
+    "description": "Catch block"
+  },
+  "Finally": {
+    "prefix": "fy",
+    "body": [
+      "finally {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "Finally block"
+  },
+  "Throw new Exception": {
+    "prefix": "thr",
+    "body": [
+      "throw new ${1:Exception}(\"${2:Error statement}\");"
+    ],
+    "description": "Throw new exception statement"
+  },
+  "arrow function": {
+    "prefix": "arrow",
+    "body": [
+      "(${1:param}) => {",
+      "\t${0://body}",
+      "}"
+    ]
+  },
+  "const arrow function": {
+    "prefix": "carrow",
+    "body": [
+      "const ${1:method} = (${2:param}) => {",
+      "\t${0://body}",
+      "}"
+    ]
+  },
+  "const async arrow function": {
+    "prefix": "csarrow",
+    "body": [
+      "const ${1:method} = async (${2:param}) => {",
+      "\t${0://body}",
+      "}"
+    ]
+  },
+  "export const arrow function": {
+    "prefix": "xarrow",
+    "body": [
+      "export const ${1:method} = (${2:param}) => {",
+      "\t${0://body}",
+      "}"
+    ]
+  },
+  "export deafult const arrow function": {
+    "prefix": "darrow",
+    "body": [
+      "const ${1:method} = (${2:param}) => {",
+      "\t${0://body}",
+      "}",
+      "",
+      "export default ${1:method};",
+      ""
+    ]
+  },
+  "export deafult const async arrow function": {
+    "prefix": "dsarrow",
+    "body": [
+      "const ${1:method} = async (${2:param}) => {",
+      "\t${0://body}",
+      "}",
+      "",
+      "export default ${1:method};",
+      ""
+    ]
+  },
+  "export const async arrow function": {
+    "prefix": "xsarrow",
+    "body": [
+      "export const ${1:method} = async (${2:param}) => {",
+      "\t${0://body}",
+      "}",
+      "",
+      "export default ${1:method};",
+      ""
+    ]
+  },
+  "export deafult constant": {
+    "prefix": "dcon",
+    "body": [
+      "const ${1:var} = $2;",
+      "",
+      "export default ${1:var};",
+      ""
+    ]
+  },
+  "export constant": {
+    "prefix": "xcon",
+    "body": [
+      "export const $1 = $2;",
+      ""
+    ]
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for (let ${1:i} = ${2:0}; ${3:condition}; ${1:i}${4:++}) {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "For loop"
+  },
+  "While loop": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition}) {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "While loop"
+  },
+  "Do ... while": {
+    "prefix": "dowhile",
+    "body": [
+      "do {",
+      "\t${0:// code...}",
+      "} while (${1:condition})"
+    ],
+    "description": "Do while loop"
+  },
+  "Object key ... value": {
+    "prefix": "obj",
+    "body": [
+      "{",
+      "\t\"${1:key}\": ${2:value},",
+      "}"
+    ],
+    "description": "Object key: value block"
+  },
+  "Key ... value": {
+    "prefix": "kv",
+    "body": [
+      "\"${1:key}\": ${2:value},"
+    ],
+    "description": "key => value statement"
+  },
+  "rfc": {
+    "prefix": "rfc",
+    "body": [
+      "export default function ${1:${TM_FILENAME_BASE}} () {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t<div>${1:${TM_FILENAME_BASE}}</div>",
+      "\t\t</>",
+      "\t);",
+      "}",
+      "$0"
+    ]
+  },
+  "rafc": {
+    "prefix": "rafc",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t<div>${1:${TM_FILENAME_BASE}}</div>",
+      "\t\t</>",
+      "\t);",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};",
+      "$0"
+    ]
+  }
+}

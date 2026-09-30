@@ -1,0 +1,521 @@
+{
+  "Array": {
+    "prefix": "arr",
+    "body": [
+      "[ ${1:value}, ${2:value}, $3 ];"
+    ],
+    "description": "Array []"
+  },
+  "Array ... value": {
+    "prefix": "va",
+    "body": [
+      "${1:value}, "
+    ],
+    "description": "Array value statement"
+  },
+  "If block": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "If  block"
+  },
+  "If single line": {
+    "prefix": "sif",
+    "body": [
+      "if (${1:condition}) ${2:code}"
+    ],
+    "description": "If single line"
+  },
+  "If ... else": {
+    "prefix": "ifel",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${2:// code...}",
+      "} else {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "If else block"
+  },
+  "If ... else single line": {
+    "prefix": "sifel",
+    "body": [
+      "if (${1:condition}) ${2:code}",
+      "else (${3:condition}) ${4:code}"
+    ],
+    "description": "If ... else single line"
+  },
+  "If ... elseif ... else": {
+    "prefix": "ifelif",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${2:// code...}",
+      "} else if (${3:condition}) {",
+      "\t${4:// code...}",
+      "} else {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "If elseif else block"
+  },
+  "If ... elseif ... else single line": {
+    "prefix": "sifelif",
+    "body": [
+      "if (${1:condition}) ${2:code}",
+      "else if (${3:condition}) ${4:code}",
+      "else (${5:condition}) ${6:code}"
+    ],
+    "description": "If ... elseif ... else single line"
+  },
+  "Switch block": {
+    "prefix": "sw",
+    "body": [
+      "switch (${1:variable}) {",
+      "\tcase ${2:label}:",
+      "\t\t${3:// code...}",
+      "\t\tbreak;",
+      "\tdefault:",
+      "\t\t${0:// code...}",
+      "\t\tbreak;",
+      "}"
+    ],
+    "description": "Switch block"
+  },
+  "Case statement": {
+    "prefix": "cs",
+    "body": [
+      "case ${1:label}:",
+      "\t${2:// code...}",
+      "\t${3|break,return|};"
+    ],
+    "description": "Case addon block"
+  },
+  "Ternary operator": {
+    "prefix": "tern",
+    "body": [
+      "${1:condition} ? ${2:if_true} : ${3:if_false};"
+    ],
+    "description": "Ternary statement"
+  },
+  "Try ... catch": {
+    "prefix": "tryc",
+    "body": [
+      "try {",
+      "\t${1:// code...}",
+      "} catch (${2:e}) {",
+      "\t${3:// code...}",
+      "}"
+    ],
+    "description": "Try catch block"
+  },
+  "Try ... catch ... finally": {
+    "prefix": "tryf",
+    "body": [
+      "try {",
+      "\t${1:// code...}",
+      "} catch (${2:e}) {",
+      "\t${3:// code...}",
+      "}$5 finally {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "Try catch finally block"
+  },
+  "Catch": {
+    "prefix": "cat",
+    "body": [
+      "catch (${2:e}) {",
+      "\t${3:// code...}",
+      "}"
+    ],
+    "description": "Catch block"
+  },
+  "Finally": {
+    "prefix": "fy",
+    "body": [
+      "finally {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "Finally block"
+  },
+  "Throw new Exception": {
+    "prefix": "thr",
+    "body": [
+      "throw new ${1:Exception}(\"${2:Error statement}\");"
+    ],
+    "description": "Throw new exception statement"
+  },
+  "arrow function": {
+    "prefix": "arrow",
+    "body": [
+      "(${1:param}) => {",
+      "\t${0://body}",
+      "}"
+    ]
+  },
+  "const arrow function": {
+    "prefix": "carrow",
+    "body": [
+      "const ${1:method} = (${2:param}) => {",
+      "\t${0://body}",
+      "}"
+    ]
+  },
+  "const async arrow function": {
+    "prefix": "csarrow",
+    "body": [
+      "const ${1:method} = async (${2:param}) => {",
+      "\t${0://body}",
+      "}"
+    ]
+  },
+  "export const arrow function": {
+    "prefix": "xarrow",
+    "body": [
+      "export const ${1:method} = (${2:param}) => {",
+      "\t${0://body}",
+      "}"
+    ]
+  },
+  "export deafult const arrow function": {
+    "prefix": "darrow",
+    "body": [
+      "const ${1:method} = (${2:param}) => {",
+      "\t${0://body}",
+      "}",
+      "",
+      "export default ${1:method};",
+      ""
+    ]
+  },
+  "export deafult const async arrow function": {
+    "prefix": "dsarrow",
+    "body": [
+      "const ${1:method} = async (${2:param}) => {",
+      "\t${0://body}",
+      "}",
+      "",
+      "export default ${1:method};",
+      ""
+    ]
+  },
+  "export const async arrow function": {
+    "prefix": "xsarrow",
+    "body": [
+      "export const ${1:method} = async (${2:param}) => {",
+      "\t${0://body}",
+      "}",
+      "",
+      "export default ${1:method};",
+      ""
+    ]
+  },
+  "export deafult constant": {
+    "prefix": "dcon",
+    "body": [
+      "const ${1:var} = $2;",
+      "",
+      "export default ${1:var};",
+      ""
+    ]
+  },
+  "export constant": {
+    "prefix": "xcon",
+    "body": [
+      "export const $1 = $2;",
+      ""
+    ]
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for (let ${1:i} = ${2:0}; ${3:condition}; ${1:i}${4:++}) {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "For loop"
+  },
+  "While loop": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition}) {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "While loop"
+  },
+  "Do ... while": {
+    "prefix": "dowhile",
+    "body": [
+      "do {",
+      "\t${0:// code...}",
+      "} while (${1:condition})"
+    ],
+    "description": "Do while loop"
+  },
+  "Object key ... value": {
+    "prefix": "obj",
+    "body": [
+      "{",
+      "\t\"${1:key}\": ${2:value},",
+      "}"
+    ],
+    "description": "Object key: value block"
+  },
+  "Key ... value": {
+    "prefix": "kv",
+    "body": [
+      "\"${1:key}\": ${2:value},"
+    ],
+    "description": "key => value statement"
+  },
+  "Class-Inherit": {
+    "prefix": "class_inherit",
+    "body": [
+      "class Shape {",
+      "  constructor(protected x: number, protected y: number) {}",
+      "}",
+      "",
+      "class Movable extends Shape {",
+      "  constructor(x: number, y: number) {",
+      "    super(x, y);",
+      "}",
+      "",
+      "  move(dx: number, dy: number) {",
+      "    this.x += dx;",
+      "    this.y += dy;",
+      "  }",
+      "}"
+    ],
+    "description": "this will create two classes, one class `Movable` inherits from `Shape`"
+  },
+  "Class": {
+    "prefix": "class",
+    "body": [
+      "enum CharacterType { Warrior, Mage, Healer };",
+      "",
+      "class Character {",
+      "  constructor(",
+      "    private name: string,",
+      "    private age: number,",
+      "    private type: CharacterType",
+      "  ) {}",
+      "}"
+    ],
+    "description": "this will create a class with a constructor and backing fields"
+  },
+  "Class-Constructor": {
+    "prefix": "class_constructor",
+    "body": [
+      "constructor(",
+      "  private $1: string,",
+      "  private $2: number,",
+      "  private $3: CharacterType",
+      ") {}"
+    ],
+    "description": "this will create a constructor and backing fields"
+  },
+  "Class-Getter": {
+    "prefix": "class_getter",
+    "body": [
+      "private _$1:string",
+      "get $1(): string {",
+      "  return this._$1;",
+      "}"
+    ],
+    "description": "this will create a getter"
+  },
+  "Class-Setter": {
+    "prefix": "class_setter",
+    "body": [
+      "private _$1:string",
+      "set $1(value): string {",
+      "  this._$1= value;",
+      "}"
+    ],
+    "description": "this will create a getter"
+  },
+  "Class-Setter-Getter": {
+    "prefix": "class_setter_getter",
+    "body": [
+      "private _${1:var}: ${2:type};",
+      "get ${1:var}(): ${2:type} {",
+      "\treturn this._${1:var};",
+      "}",
+      "set ${1:var}(value): ${2:type} {",
+      "\tthis._${1:var} = value;",
+      "}"
+    ],
+    "description": "this will create a getter"
+  },
+  "Interface": {
+    "prefix": "interface",
+    "body": [
+      "interface $1 {",
+      " ${2:property}: ${3:string};",
+      "};"
+    ],
+    "description": "this will create an interface"
+  },
+  "Interface impl": {
+    "prefix": "interface_impl",
+    "body": [
+      "interface Movable {",
+      " move(x: number, y: number): void",
+      "};",
+      "class Hero implements Movable {",
+      "  move(x:number, y: number) { /* FIXME: implement me */  }"
+    ],
+    "description": "this will create an interface and a class implementing the interface"
+  },
+  "Enum": {
+    "prefix": "enum",
+    "body": [
+      "enum ${1:Colors} {",
+      "${2:Red}, ${3:Green}, ${4:Blue}",
+      "}"
+    ],
+    "description": "this will create an Enum"
+  },
+  "Generic class constraint": {
+    "prefix": "generic_class_constraint",
+    "body": [
+      "function factory<T>(classType: { new(): T }) {",
+      "  return new classType();",
+      "}"
+    ],
+    "description": "Creates a function with a parameter that can be instantiated"
+  },
+  "Union type": {
+    "prefix": "union",
+    "body": [
+      "type StringOrInt = string | number;"
+    ],
+    "description": "Creates a union type and an example usage"
+  },
+  "Intersect type": {
+    "prefix": "intersect",
+    "body": [
+      "function extend<T, U>(first: T, second: U): T & U {",
+      "  let result = <T & U>{};",
+      "  for (let id in first) {",
+      "    (<any>result)[id] = (<any>first)[id];",
+      "  }",
+      "  for (let id in second) {",
+      "      if (!result.hasOwnProperty(id)) {",
+      "          (<any>result)[id] = (<any>second)[id];",
+      "      }",
+      "  }",
+      "  return result;",
+      "}",
+      "",
+      "class Warrior {",
+      "  constructor(public name: string) { }",
+      "}",
+      "interface Magic {",
+      "  castSpell(): void;",
+      "}",
+      "class Wizard implements Magic {",
+      "  castSpell() {",
+      "    console.log('wizard throws a Fireball')",
+      "  }",
+      "}",
+      "var warrior = extend(new Warrior('Aragorn'), new Wizard());",
+      "var warriorName = warrior.name;",
+      "warrior.castSpell();"
+    ],
+    "description": "Creates an intersection type and a mixin function"
+  },
+  "Decorator": {
+    "prefix": "decorator",
+    "body": [
+      "function color(value: string) {",
+      "  return function (target) {",
+      "      target.color = value;",
+      "  }",
+      "}",
+      "",
+      "@color('yellow')",
+      "class Cube {",
+      "  side = 3",
+      "}",
+      "",
+      "const cube = new Cube();",
+      "console.log( Cube['color'] );"
+    ],
+    "description": "Creates a decorator"
+  },
+  "Pinia Options Store Boilerplate": {
+    "prefix": "pinia-options",
+    "body": [
+      "import { defineStore, acceptHMRUpdate } from 'pinia'",
+      "",
+      "export const use${TM_FILENAME_BASE/^(.*)$/${1:/pascalcase}/}Store = defineStore('$TM_FILENAME_BASE', {",
+      " state: () => ({",
+      "   $0",
+      " }),",
+      " getters: {},",
+      " actions: {},",
+      "})",
+      "",
+      "if (import.meta.hot) {",
+      " import.meta.hot.accept(acceptHMRUpdate(use${TM_FILENAME_BASE/^(.*)$/${1:/pascalcase}/}Store, import.meta.hot))",
+      "}",
+      ""
+    ],
+    "description": "Bootstrap the code needed for a Vue.js Pinia Options Store file"
+  },
+  "Pinia Setup Store Boilerplate": {
+    "prefix": "pinia-setup",
+    "body": [
+      "import { defineStore, acceptHMRUpdate } from 'pinia'",
+      "",
+      "export const use${TM_FILENAME_BASE/^(.*)$/${1:/pascalcase}/}Store = defineStore('$TM_FILENAME_BASE', () => {",
+      " $0",
+      " return {}",
+      "})",
+      "",
+      "if (import.meta.hot) {",
+      " import.meta.hot.accept(acceptHMRUpdate(use${TM_FILENAME_BASE/^(.*)$/${1:/pascalcase}/}Store, import.meta.hot))",
+      "}",
+      ""
+    ],
+    "description": "Bootstrap the code needed for a Vue.js Pinia Setup Store file"
+  },
+  "Define props in typescript": {
+    "prefix": "v-props",
+    "body": [
+      "const props = defineProps<{",
+      "  $1: $2;",
+      "$3",
+      "}>();"
+    ],
+    "description": "Defines a prop with typescript"
+  },
+  "Define props with defaults in typescript": {
+    "prefix": "v-dprops",
+    "body": [
+      "const props = withDefaults(",
+      "   defineProps<{",
+      "\t\t$1: $2;",
+      "   }>(),",
+      "   { $1: $3 }",
+      ");"
+    ],
+    "description": "Defines a prop with typescript"
+  },
+  "Define pageProps Interface in typescript": {
+    "prefix": "iprops",
+    "body": [
+      "interface IProps {",
+      "\t${1:key}: ${2:type};",
+      "}",
+      ""
+    ],
+    "description": "Defines the props interface"
+  }
+}

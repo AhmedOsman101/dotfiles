@@ -1,0 +1,153 @@
+{
+  "array": {
+    "prefix": "arr",
+    "body": [
+      "{ ${1:value}, ${2:value}, $3 };"
+    ],
+    "description": "Array {}"
+  },
+  "Array ... value": {
+    "prefix": "va",
+    "body": [
+      "${1:value}, "
+    ],
+    "description": "Array value statement"
+  },
+  "If block": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "If  block"
+  },
+  "If single line": {
+    "prefix": "sif",
+    "body": [
+      "if (${1:condition}) ${2:code}"
+    ],
+    "description": "If single line"
+  },
+  "If ... else": {
+    "prefix": "ifel",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${2:// code...}",
+      "} else {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "If else block"
+  },
+  "If ... else single line": {
+    "prefix": "sifel",
+    "body": [
+      "if (${1:condition}) ${2:code}",
+      "else (${3:condition}) ${4:code}"
+    ],
+    "description": "If ... else single line"
+  },
+  "If ... elseif ... else": {
+    "prefix": "ifelif",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${2:// code...}",
+      "} else if (${3:condition}) {",
+      "\t${4:// code...}",
+      "} else {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "If elseif else block"
+  },
+  "If ... elseif ... else single line": {
+    "prefix": "sifelif",
+    "body": [
+      "if (${1:condition}) ${2:code}",
+      "else if (${3:condition}) ${4:code}",
+      "else (${5:condition}) ${6:code}"
+    ],
+    "description": "If ... elseif ... else single line"
+  },
+  "Switch block": {
+    "prefix": "sw",
+    "body": [
+      "switch (${1:variable}) {",
+      "\tcase ${2:label}:",
+      "\t\t${3:// code...}",
+      "\t\tbreak;",
+      "\tdefault:",
+      "\t\t${0:// code...}",
+      "\t\tbreak;",
+      "}"
+    ],
+    "description": "Switch block"
+  },
+  "Case statement": {
+    "prefix": "cs",
+    "body": [
+      "case ${1:label}:",
+      "\t${2:// code...}",
+      "\t${3|break,return|};"
+    ],
+    "description": "Case addon block"
+  },
+  "Ternary operator": {
+    "prefix": "tern",
+    "body": [
+      "${1:condition} ? ${2:if_true} : ${3:if_false};"
+    ],
+    "description": "Ternary statement"
+  },
+  "init": {
+    "prefix": "init",
+    "body": [
+      "#include <iostream>",
+      "",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "\t$1",
+      "",
+      "  return 0;",
+      "}"
+    ]
+  },
+  "function": {
+    "prefix": "function",
+    "body": [
+      "",
+      "${1:void} ${2:functionName}($3) {",
+      "\t${0://body}",
+      "}"
+    ]
+  },
+  "For loop": {
+    "prefix": "for",
+    "body": [
+      "for (${1:int} ${2:i} = ${3:0}; ${2:i} < ${4:n}; ${2:i}++) {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "For loop"
+  },
+  "While loop": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition}) {",
+      "\t${0:// code...}",
+      "}"
+    ],
+    "description": "While loop"
+  },
+  "Do ... while": {
+    "prefix": "dowhile",
+    "body": [
+      "do {",
+      "\t${0:// code...}",
+      "} while (${1:condition})"
+    ],
+    "description": "Do while loop"
+  }
+}

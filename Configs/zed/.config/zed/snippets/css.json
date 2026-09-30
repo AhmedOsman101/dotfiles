@@ -1,0 +1,9 @@
+{
+  "Apply rule for tailwind": {
+    "prefix": "apply",
+    "body": [
+      "@apply $1;"
+    ],
+    "description": "The @apply rule for tailwind"
+  }
+}
