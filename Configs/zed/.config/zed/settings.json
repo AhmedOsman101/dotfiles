@@ -77,7 +77,9 @@
   "diagnostics": { "inline": { "enabled": true } },
   "disable_ai": true,
   "ensure_final_newline_on_save": true,
-  "file_types": {},
+  "file_types": {
+    "Shell Script": ["*.inc", "*.sh", "*.bash", "*.zsh"]
+  },
   "format_on_save": "on",
   "git": {
     "inline_blame": {
@@ -86,9 +88,7 @@
       "show_commit_summary": true
     }
   },
-  "git_panel": {
-    "fallback_branch_name": "main"
-  },
+  "git_panel": { "fallback_branch_name": "main" },
   "gutter": {
     "line_numbers": true,
     "runnables": true,
@@ -118,6 +118,16 @@
       }
     },
     "C": {
+      "formatter": {
+        "external": { "command": "astyle" }
+      }
+    },
+    "C++": {
+      "formatter": {
+        "external": { "command": "astyle" }
+      }
+    },
+    "Java": {
       "formatter": {
         "external": { "command": "astyle" }
       }
