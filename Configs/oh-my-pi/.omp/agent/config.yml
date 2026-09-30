@@ -1,14 +1,7 @@
-providers:
-  webSearchOrder:
-    - public
-    - exa
-    - duckduckgo
-    - firecrawl
-  memoryModel: online
-  imageOrder:
-    - openrouter
 modelRoles:
-  default: omniroute/kc/nvidia/nemotron-3-ultra-550b-a55b:free
+  default: omniroute/auto/best-free
+  web: web/public
+  image: openrouter/google/gemini-3-pro-image
 symbolPreset: unicode
 composer:
   shape: box
@@ -34,7 +27,7 @@ task:
   enableEffort: true
   maxConcurrency: 8
   isolation:
-    mode: none
+    enabled: false
 proseOnlyThinking: false
 images:
   describeForTextModels: false
@@ -96,3 +89,24 @@ defaultThinkingLevel: auto
 hideThinkingBlock: false
 dev:
   autoqaConsent: granted
+retry:
+  fallbackChains:
+    web:
+      - web/exa
+      - web/duckduckgo
+      - web/firecrawl
+      - web/parallel
+      - web/hosted
+      - web/searxng
+      - web/startpage
+      - web/ecosia
+      - web/google
+      - web/mojeek
+    image:
+      - openai/gpt-image-2
+      - openai-codex/gpt-image-2
+      - google-antigravity/gemini-3-pro-image
+      - xai/grok-imagine-image
+      - xai-oauth/grok-imagine-image
+      - google/gemini-3-pro-image
+      - deepinfra/black-forest-labs/FLUX-2-pro
