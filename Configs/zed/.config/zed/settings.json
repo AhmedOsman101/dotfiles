@@ -15,7 +15,7 @@
   "agent_buffer_font_size": 18.0,
   "autosave": {
     "after_delay": {
-      "milliseconds": 500
+      "milliseconds": 1000
     }
   },
   "autoscroll_on_clicks": true,
@@ -208,6 +208,7 @@
     },
     "JavaScript": {
       "prettier": { "allowed": false },
+      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "!deno", "!eslint"],
       "code_actions_on_format": {
         "source.fixAll.biome": true,
         "source.organizeImports.biome": true
@@ -228,6 +229,7 @@
     },
     "TypeScript": {
       "prettier": { "allowed": false },
+      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "!deno", "!eslint"],
       "code_actions_on_format": {
         "source.fixAll.biome": true,
         "source.organizeImports.biome": true
@@ -248,6 +250,28 @@
     },
     "TSX": {
       "prettier": { "allowed": false },
+      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "!deno", "!eslint"],
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      },
+      "formatter": {
+        "custom": {
+          "command": "biome",
+          "arguments": [
+            "check",
+            "--fix",
+            "--config-path",
+            "/home/othman/.config/biome/biome.json",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "JSX": {
+      "prettier": { "allowed": false },
+      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "!deno", "!eslint"],
       "code_actions_on_format": {
         "source.fixAll.biome": true,
         "source.organizeImports.biome": true
@@ -274,6 +298,73 @@
         "!phpactor",
         "..."
       ]
+    },
+    "Vue": {
+      "prettier": { "allowed": true },
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
+    },
+    "Markdown": {
+      "prettier": { "allowed": true },
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "format_on_save": "on"
+    },
+    "SQL": {
+      "prettier": { "allowed": true },
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
+    },
+    "Lua": {
+      "formatter": "language_server"
+    },
+    "TOML": {
+      "formatter": {
+        "external": { "command": "taplo", "arguments": ["fmt", "-"] }
+      }
+    },
+    "XML": {
+      "formatter": {
+        "external": { "command": "xmllint", "arguments": ["--format", "-"] }
+      }
+    },
+    "Python": {
+      "formatter": {
+        "external": {
+          "command": "ruff",
+          "arguments": [
+            "format",
+            "--config",
+            "/home/othman/.config/ruff/ruff.toml",
+            "--stdin-filename",
+            "file.py",
+            "-"
+          ]
+        }
+      }
+    },
+    "Rust": {
+      "formatter": {
+        "external": {
+          "command": "rustfmt",
+          "arguments": [
+            "--config-path",
+            "/home/othman/.config/rustfmt.toml"
+          ]
+        }
+      }
     }
   },
   "line_ending": "enforce_lf",
@@ -370,6 +461,114 @@
           ]
         }
       }
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": { "command": "clippy" },
+        "checkOnSave": true
+      }
+    },
+    "basedpyright": {
+      "settings": {
+        "basedpyright": {
+          "analysis": { "typeCheckingMode": "standard" }
+        }
+      }
+    },
+    "intelephense": {
+      "settings": {
+        "intelephense": {
+          "codeLens": {
+            "implementations": { "enable": true },
+            "overrides": { "enable": true },
+            "parent": { "enable": true },
+            "references": { "enable": true },
+            "usages": { "enable": true }
+          },
+          "completion": { "fullyQualifyGlobalConstantsAndFunctions": true },
+          "diagnostics": { "argumentCount": false },
+          "maxMemory": 512,
+          "phpdoc": { "useFullyQualifiedNames": true },
+          "references": { "exclude": [] },
+          "rename": { "namespaceMode": "all" },
+          "trace": { "server": "messages" }
+        }
+      }
+    },
+    "phptools": {
+      "initialization_options": {
+        "php": {
+          "completion": {
+            "autoimport-docblock": "auto-import",
+            "showParameters": true
+          },
+          "docblock": { "colorMode": "simple" },
+          "format": {
+            "codeStyle": "K&R",
+            "rules": {
+              "addCommaAfterLastArrayElement": true,
+              "addCommaAfterLastCallParameter": false,
+              "addCommaAfterLastDeclParameter": true,
+              "alignConsecutiveAssignments": false,
+              "alignConstants": true,
+              "alignEnumCases": true,
+              "alignMatchArmBodies": true,
+              "arrayInitializersAlignKeyValuePairs": true,
+              "arrayInitializersNewLineAfterLastElement": true,
+              "arrayInitializersNewLineBeforeFirstElement": true,
+              "arrayInitializersWrap": "onEveryItem",
+              "blankLinesAfterClass": 1,
+              "booleanConstantCasing": "lowercase",
+              "callParametersNewLineAfterLeftParen": true,
+              "callParametersNewLineBeforeRightParen": true,
+              "callParametersWrap": "onEveryItem",
+              "catchOnNewLine": false,
+              "declParametersNewLineAfterLeftParen": true,
+              "declParametersNewLineBeforeRightParen": true,
+              "elseOnNewLine": false,
+              "endWithNewLine": true,
+              "finallyOnNewLine": false,
+              "forStatementNewLineAfterLeftParen": true,
+              "groupUseNewLineBeforeFirstDeclaration": true,
+              "ifStatementNewLineAfterLeftParen": true,
+              "ifStatementNewLineBeforeRightParen": true,
+              "indentBraces": false,
+              "keepControlStatementsOnOneLine": true,
+              "keepFunctionsOnOneLine": true,
+              "newLineAfterImplements": true,
+              "nullConstantCasing": "lowercase",
+              "openBraceOnNewLineForAnonymousClasses": true,
+              "openBraceOnNewLineForBlocks": false,
+              "openBraceOnNewLineForFunctions": false,
+              "openBraceOnNewLineForLambdas": false,
+              "openBraceOnNewLineForNamespaces": false,
+              "openBraceOnNewLineForTypes": false,
+              "spaceAfterCast": true,
+              "spaceAroundConcatenation": true,
+              "spaceBeforeColonInControlStatements": false,
+              "spaceBeforeParenthesesInControlStatements": true,
+              "spaceWithinArrayInitilizersParens": false,
+              "switchStatementNewLineAfterLeftParen": true,
+              "switchStatementNewLineBeforeRightParen": true,
+              "whileStatementNewLineAfterLeftParen": true,
+              "whileStatementNewLineBeforeRightParen": true
+            }
+          },
+          "hover": { "parametersFullName": true },
+          "inlayHints": {
+            "insertOnDoubleClick": true,
+            "parameters": {
+              "enabled": false,
+              "suppressNameMatchingValue": true
+            },
+            "types": { "return": "named" }
+          },
+          "problems": { "excludeGitIgnore": true },
+          "suggest": { "basic": false },
+          "validate": { "enable": false },
+          "version": "8.4"
+        }
+      }
     }
   },
   "minimap": {
@@ -436,10 +635,14 @@
   "use_system_prompts": false,
   "vim": {
     "cursor_shape": {
-      "insert": "bar"
+      "normal": "block",
+      "insert": "bar",
+      "visual": "underline",
+      "replace": "underline"
     },
     "toggle_relative_line_numbers": true,
-    "use_smartcase_find": true
+    "use_smartcase_find": true,
+    "use_system_clipboard": "never"
   },
   "when_closing_with_no_tabs": "keep_window_open",
   "which_key": {
