@@ -27,13 +27,6 @@ name = "cpp"
 language-servers = ["clangd", "scls"]
 formatter = { command = "astyle" }
 
-# --- Kotlin --- #
-[[language]]
-name = "kotlin"
-language-servers = ["kotlin-lsp"]
-roots = ["settings.gradle", "settings.gradle.kts", "build.gradle.kts"]
-indent = { tab-width = 2, unit = "  " }
-
 # --- Java --- #
 [[language]]
 name = "java"
@@ -471,10 +464,6 @@ args = ["--stdio"]
 # --- Vim script --- #
 [language-server.vim-language-server]
 command = "vim-language-server"
-args = ["--stdio"]
-
-[language-server.kotlin-lsp]
-command = "kotlin-lsp"
 args = ["--stdio"]
 
 # --- SQL LSP --- #

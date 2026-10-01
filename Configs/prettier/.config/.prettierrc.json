@@ -1,45 +1,53 @@
 {
   "$schema": "https://json.schemastore.org/prettierrc",
-  "experimentalTernaries": true,
-  "experimentalOperatorPosition": "end",
-  "printWidth": 80,
-  "tabWidth": 2,
-  "useTabs": false,
-  "semi": true,
-  "singleQuote": false,
-  "quoteProps": "as-needed",
-  "jsxSingleQuote": false,
-  "trailingComma": "es5",
-  "bracketSpacing": true,
-  "objectWrap": "preserve",
-  "bracketSameLine": false,
   "arrowParens": "avoid",
-  "htmlWhitespaceSensitivity": "css",
-  "vueIndentScriptAndStyle": false,
-  "endOfLine": "lf",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
   "embeddedLanguageFormatting": "auto",
-  "proseWrap": "preserve",
-  "singleAttributePerLine": false,
-  "plugins": [],
-
+  "useEditorConfig": true,
+  "withNodeModules": true,
+  "endOfLine": "lf",
+  "experimentalOperatorPosition": "end",
+  "experimentalTernaries": true,
+  "htmlWhitespaceSensitivity": "css",
+  "jsxSingleQuote": false,
+  "objectWrap": "preserve",
   "overrides": [
     {
       "files": "*.md",
-      "options": { "parser": "markdown" }
+      "options": {
+        "parser": "markdown"
+      }
     },
     {
-      "files": ["*.json"],
+      "files": [
+        "*.json"
+      ],
       "options": {
         "parser": "json",
         "trailingComma": "none"
       }
     },
     {
-      "files": ["*.jsonc"],
+      "files": [
+        "*.jsonc"
+      ],
       "options": {
         "parser": "jsonc",
         "trailingComma": "none"
       }
     }
-  ]
+  ],
+  "plugins": [],
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "resolveGlobalModules": true,
+  "semi": true,
+  "singleAttributePerLine": false,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false
 }

@@ -954,13 +954,6 @@
   "phpParameterHint.saveDelay": 20,
   "phpParameterHint.textEditorChangeDelay": 20,
   "phpParameterHint.verticalPadding": 2,
-  "prettier.bracketSameLine": true,
-  "prettier.endOfLine": "lf",
-  "prettier.experimentalTernaries": true,
-  "prettier.resolveGlobalModules": true,
-  "prettier.singleAttributePerLine": true,
-  "prettier.useEditorConfig": false,
-  "prettier.withNodeModules": true,
   "prettify-ts.enabled": false,
   "prettify-ts.hidePrivateProperties": false,
   "prettify-ts.maxDepth": 2,
@@ -1183,5 +1176,6 @@
   "Lua.hint.arrayIndex": "Disable",
   "Lua.hint.paramName": "Disable",
   "js/ts.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
-  "js/ts.inlayHints.variableTypes.suppressWhenTypeMatchesName": false
+  "js/ts.inlayHints.variableTypes.suppressWhenTypeMatchesName": false,
+  "prettier.configPath": "/home/othman/.config/.prettierrc.json"
 }
