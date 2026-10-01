@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "minimum_split_diff_width": 0.0,
   "diff_view_style": "split",
   "telemetry": {
     "diagnostics": true,
@@ -27,15 +28,7 @@
           "default": "allow"
         },
         "terminal": {
-          "default": "allow",
-          "always_allow": [
-            {
-              "pattern": "^find\\s+src(\\s|$)"
-            },
-            {
-              "pattern": "^wc\\b"
-            }
-          ]
+          "default": "allow"
         }
       }
     },
