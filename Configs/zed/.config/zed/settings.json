@@ -14,6 +14,7 @@
     "anthropic_retention": false
   },
   "agent": {
+    "thinking_display": "always_expanded",
     "tool_permissions": {
       "tools": {
         "fetch": {
