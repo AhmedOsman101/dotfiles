@@ -38,7 +38,7 @@ if [[ ":${FPATH}:" != *":${ZSH_CONF}/completions:"* ]]; then
   FPATH="${ZSH_CONF}/completions:${FPATH}"
 fi
 
-export FPATH="${FPATH}:/usr/share/zsh/functions:/usr/share/zsh/functions/Zle"
+export FPATH="${FPATH}:/usr/share/zsh/functions:/usr/share/zsh/functions/Zle:${XDG_DATA_HOME}/zsh/site-functions"
 
 autoload -Uz compinit
 # Fast path: skip the full fpath scan while the dump is fresh (< 24h old).
