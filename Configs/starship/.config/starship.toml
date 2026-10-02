@@ -4,8 +4,8 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
-scan_timeout = 360
-command_timeout = 3600
+scan_timeout = 30
+command_timeout = 600
 
 format = """$directory$git_branch$git_status
 $os$character"""
@@ -55,7 +55,7 @@ disabled = false
 command = "which-cpp"
 style = 'bold blue'
 symbol = "  "
-detect_extensions = ["cpp", "cc", "cxx", "hpp", "hxx", "hh", "ipp"]
+detect_extensions = ["cpp", "cc", "cxx", "hpp", "hxx", "hh", "ipp", "ino"]
 format = '[$symbol($output )]($style)'
 
 [conda]
@@ -110,7 +110,7 @@ format = " [$symbol($version )]($style)"
 symbol = ""
 
 [git_branch]
-symbol = " "
+symbol = "  "
 format = "[$symbol$branch(:$remote_branch)]($style) "
 
 [git_commit]
@@ -152,6 +152,7 @@ symbol = " "
 [hostname]
 ssh_symbol = " "
 format = " [$ssh_symbol$hostname]($style) in "
+ssh_only = true
 
 [java]
 symbol = " "
@@ -168,7 +169,8 @@ format = " [$symbol($version )]($style)"
 [lua]
 symbol = " "
 format = " [$symbol($version )]($style)"
-detect_folders = []
+detect_folders = ["lua"]
+detect_files = [".lua-version", ".luarc.json"]
 
 [memory_usage]
 symbol = " "
