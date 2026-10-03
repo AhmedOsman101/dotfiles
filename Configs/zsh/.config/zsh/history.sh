@@ -16,6 +16,7 @@ setopt hist_save_no_dups    # Don't save duplicates to history file
 setopt hist_find_no_dups    # Skip duplicates when searching history
 setopt extended_history     # Enable timestamps in history
 setopt inc_append_history   # Add commands to history immediately
+setopt histreduceblanks     # Collapses runs of whitespace in history entries. Makes history cleaner.
 
 # ---- Remove duplicate history entries (once a day) ---- #
 _zhist_stamp="${XDG_CACHE_HOME}/zsh/.last-dedup"
