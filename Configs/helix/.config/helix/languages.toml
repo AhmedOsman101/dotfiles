@@ -32,6 +32,11 @@ formatter = { command = "astyle" }
 name = "java"
 formatter = { command = "astyle" }
 
+[[language]]
+name = "kotlin"
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["kotlin-lsp", "kotlin-language-server"]
+
 # --- Bash --- #
 [[language]]
 name = "bash"
@@ -316,7 +321,16 @@ indent = { tab-width = 2, unit = "  " }
 # --- SQL --- #
 [[language]]
 name = "sql"
-language-servers = ["sqls", "scls"]
+language-servers = ["syntaqlite", "scls"]
+formatter = { command = "syntaqlite", args = [
+  "fmt",
+  "--indent-width",
+  "2",
+  "--keyword-case",
+  "upper",
+  "--semicolons",
+  "true",
+] }
 
 # --- TOML --- #
 [[language]]
@@ -501,7 +515,10 @@ namespaceMode = "all"
 command = "devsense-php-ls"
 
 [language-server.phptools.config]
-"php.completion.autoimport-docblock" = "auto-import"
+provideFormatter = true
+"php.completion.autoimport" = "auto-import-grouped"
+"php.completion.autoimport-docblock" = "auto-import-grouped"
+"php.completion.parameters" = "parameters"
 "php.completion.showParameters" = true
 "php.docblock.colorMode" = "simple"
 "php.format.codeStyle" = "K&R"
@@ -531,6 +548,7 @@ command = "devsense-php-ls"
 "php.format.rules.groupUseNewLineBeforeFirstDeclaration" = true
 "php.format.rules.ifStatementNewLineAfterLeftParen" = true
 "php.format.rules.ifStatementNewLineBeforeRightParen" = true
+"php.format.rules.importSorting" = "alphabetic"
 "php.format.rules.indentBraces" = false
 "php.format.rules.keepControlStatementsOnOneLine" = true
 "php.format.rules.keepFunctionsOnOneLine" = true
@@ -551,15 +569,15 @@ command = "devsense-php-ls"
 "php.format.rules.switchStatementNewLineBeforeRightParen" = true
 "php.format.rules.whileStatementNewLineAfterLeftParen" = true
 "php.format.rules.whileStatementNewLineBeforeRightParen" = true
+"php.hover.fullname" = true
 "php.hover.parametersFullName" = true
 "php.inlayHints.insertOnDoubleClick" = true
 "php.inlayHints.parameters.enabled" = false
 "php.inlayHints.parameters.suppressNameMatchingValue" = true
 "php.inlayHints.types.return" = "named"
 "php.problems.excludeGitIgnore" = true
-"php.suggest.basic" = false
-"php.validate.enable" = false
-"php.version" = "8.5"
+"php.problems.scope" = "all"
+"php.sortUses.caseSensitive" = false
 
 # --- Arduino --- #
 # arduino-language-server segfaults if the LSP `initialize` request has an empty
@@ -601,3 +619,8 @@ url = "https://json.schemastore.org/package.json"
 [[language-server.vscode-json-language-server.config.json.schemas]]
 fileMatch = ["deno.json", "deno.jsonc"]
 url = "https://github.com/denoland/deno/blob/main/cli/schemas/config-file.v1.json"
+
+# --- Syntaqlite LSP --- #
+[language-server.syntaqlite]
+command = "syntaqlite"
+args = ["lsp"]

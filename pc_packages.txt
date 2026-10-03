@@ -132,6 +132,7 @@ gnome-calendar
 gnome-clocks
 gnome-keyring
 go
+golangci-lint-langserver-bin
 gopls
 gpart
 gparted
@@ -181,7 +182,6 @@ kitty
 kmag
 kolourpaint
 kotlin
-kotlin-language-server-bin
 kotlin-lsp-bin
 ktlint
 kvantum
@@ -302,7 +302,6 @@ pass-otp
 pavucontrol
 perl-graph-easy
 perl-rename
-photocrea
 php-apache
 php-codesniffer
 php-embed
@@ -392,6 +391,7 @@ stow
 sublime-text-4
 swtpm
 sxhkd
+syntaqlite
 tableplus
 taplo-cli
 tcpdump

@@ -20,21 +20,23 @@
       }
     },
     {
-      "files": [
-        "*.json"
-      ],
+      "files": ["*.json"],
       "options": {
         "parser": "json",
         "trailingComma": "none"
       }
     },
     {
-      "files": [
-        "*.jsonc"
-      ],
+      "files": ["*.jsonc"],
       "options": {
         "parser": "jsonc",
         "trailingComma": "none"
+      }
+    },
+    {
+      "files": ["*.yaml", "*.yml"],
+      "options": {
+        "singleQuote": false
       }
     }
   ],
