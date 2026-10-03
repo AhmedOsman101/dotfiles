@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ -f "${SCRIPTS_DIR}/lib/helpers.sh" ]]; then
-  # shellcheck disable=1091
+  # shellcheck source=/home/othman/scripts/lib/helpers.sh
   source "${SCRIPTS_DIR}/lib/helpers.sh" || echo "Failed to source lib/helpers.sh"
 fi
 
@@ -419,6 +419,19 @@ cache-completion() {
       command rm -f "${tmp}" # generation failed: keep the previous good cache, if any
     fi
   fi
+  if [[ -s "${cache}" ]]; then
+    # shellcheck source=/dev/null
+    source "${cache}"
+  fi
+}
 
-  [[ -s "${cache}" ]] && source "${cache}"
+pacls() {
+  if (($# == 1)); then
+    pacman -Ql "$1" | cut --delimiter=' ' --fields=2-
+  else
+    for pkg in "$@"; do
+      printf '\n# --- %s --- #\n' "${pkg}"
+      pacman -Ql "${pkg}" | cut --delimiter=' ' --fields=2-
+    done
+  fi
 }

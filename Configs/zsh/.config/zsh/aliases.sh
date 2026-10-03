@@ -176,6 +176,7 @@ alias dsh='bunx @deepseek-ai/dsh'
 unalias g &>/dev/null || true
 unalias gcm &>/dev/null || true
 unalias zi &>/dev/null || true
+unalias pacls &>/dev/null || true
 
 # --- Suffix aliases --- #
 alias -s json='jless'

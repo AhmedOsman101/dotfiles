@@ -52,4 +52,7 @@ add-zsh-hook -Uz chpwd python-hook
 # Runs after any command
 # preexec() { :; }
 
-[[ -s "${SCRIPTS_DIR}/hooks/path.sh" ]] && source "${SCRIPTS_DIR}/hooks/path.sh"
+if [[ -s "${SCRIPTS_DIR}/hooks/path.sh" ]]; then
+  # shellcheck source=/home/othman/scripts/hooks/path.sh
+  source "${SCRIPTS_DIR}/hooks/path.sh"
+fi

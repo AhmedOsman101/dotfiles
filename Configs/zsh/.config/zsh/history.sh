@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC2034
 
 # ---- History ---- #
-HISTSIZE=999999
-SAVEHIST=${HISTSIZE}
-HISTFILE="${HOME}/.zsh_history"
-HISTDUP=erase
-HISTTIMEFORMAT="%F %T "
-HISTCONTROL="ignoreboth"
+export HISTSIZE=999999
+export SAVEHIST=${HISTSIZE}
+export HISTFILE="${HOME}/.zsh_history"
+export HISTDUP=erase
+export HISTTIMEFORMAT="%F %T "
+export HISTCONTROL="ignoreboth"
 setopt appendhistory        # Append command to history instead of overwriting
 setopt share_history        # Share history across shells
 setopt hist_ignore_space    # Ignore commands starting with space
