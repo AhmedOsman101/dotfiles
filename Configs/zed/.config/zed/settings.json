@@ -8,6 +8,9 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "agent": {
+    "threads_sidebar": {
+      "position": "right"
+    },
     "default_model": {
       "effort": "max",
       "enable_thinking": true,
@@ -17,7 +20,6 @@
     "dock": "right",
     "favorite_models": [],
     "model_parameters": [],
-    "sidebar_side": "right",
     "thinking_display": "always_expanded",
     "tool_permissions": {
       "tools": {
@@ -1171,54 +1173,6 @@
       "initialization_options": {
         "check": { "command": "clippy" },
         "checkOnSave": true
-      },
-      "inlayHints": {
-        "closureReturnTypeHints": { "enable": "always" },
-        "lifetimeElisionHints": {
-          "enable": "skip_trivial",
-          "useParameterNames": true
-        },
-        "maxLength": null
-      },
-      "completion": {
-        "snippets": {
-          "custom": {
-            "Arc::new": {
-              "postfix": "arc",
-              "body": ["Arc::new(${receiver})"],
-              "requires": "std::sync::Arc",
-              "scope": "expr"
-            },
-            "Some": {
-              "postfix": "some",
-              "body": ["Some(${receiver})"],
-              "scope": "expr"
-            },
-            "Ok": {
-              "postfix": "ok",
-              "body": ["Ok(${receiver})"],
-              "scope": "expr"
-            },
-            "Rc::new": {
-              "postfix": "rc",
-              "body": ["Rc::new(${receiver})"],
-              "requires": "std::rc::Rc",
-              "scope": "expr"
-            },
-            "Box::pin": {
-              "postfix": "boxpin",
-              "body": ["Box::pin(${receiver})"],
-              "requires": "std::boxed::Box",
-              "scope": "expr"
-            },
-            "vec!": {
-              "postfix": "vec",
-              "body": ["vec![${receiver}]"],
-              "description": "vec![]",
-              "scope": "expr"
-            }
-          }
-        }
       }
     },
     "syntaqlite-lsp": {
@@ -1262,7 +1216,7 @@
         }
       }
     },
-    "vue": {
+    "vue-language-server": {
       "settings": {
         // Display inlay hints for the `$event` parameter in inline event handlers.
         "vue.inlayHints.inlineHandlerLeading": true,
