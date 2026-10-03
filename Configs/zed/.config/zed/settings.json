@@ -7,14 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "minimum_split_diff_width": 0.0,
-  "diff_view_style": "split",
-  "telemetry": {
-    "diagnostics": true,
-    "metrics": false,
-    "anthropic_retention": false
-  },
   "agent": {
+    "default_model": {
+      "effort": "max",
+      "enable_thinking": true,
+      "model": "stealth/space-bunny-alpha",
+      "provider": "openrouter"
+    },
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+    "sidebar_side": "right",
     "thinking_display": "always_expanded",
     "tool_permissions": {
       "tools": {
@@ -31,17 +34,7 @@
           "default": "allow"
         }
       }
-    },
-    "default_model": {
-      "provider": "openrouter",
-      "model": "stealth/space-bunny-alpha",
-      "enable_thinking": true,
-      "effort": "max"
-    },
-    "dock": "right",
-    "favorite_models": [],
-    "model_parameters": [],
-    "sidebar_side": "right"
+    }
   },
   "agent_buffer_font_size": 18.0,
   "autosave": {
@@ -57,30 +50,6 @@
   "code_lens": "on",
   "colorize_brackets": true,
   "context_servers": {
-    "chrome-devtools-mcp-zed": {
-      "enabled": true,
-      "remote": false,
-      "settings": {
-        "accept_insecure_certs": null,
-        "auto_connect": null,
-        "browser_url": null,
-        "category_emulation": null,
-        "category_network": null,
-        "category_performance": null,
-        "channel": "stable",
-        "chrome_arg": [],
-        "executable_path": "/usr/bin/thorium-browser-avx2",
-        "extra_args": ["--no-usage-statistics"],
-        "headless": false,
-        "isolated": null,
-        "log_file": null,
-        "proxy_server": null,
-        "user_data_dir": null,
-        "viewport": null,
-        "ws_endpoint": null,
-        "ws_headers": null
-      }
-    },
     "mcp-server-exa-search": {
       "enabled": true,
       "remote": false,
@@ -90,11 +59,20 @@
       }
     }
   },
-  "cursor_animation": { "enabled": true },
+  "cursor_animation": {
+    "enabled": true
+  },
   "cursor_blink": true,
   "cursor_shape": "block",
-  "debugger": { "button": false },
-  "diagnostics": { "inline": { "enabled": true } },
+  "debugger": {
+    "button": false
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "diff_view_style": "split",
   "disable_ai": false,
   "ensure_final_newline_on_save": true,
   "file_types": {
@@ -116,7 +94,7 @@
       "bin/activate",
       "*.cshrc",
       "*.dash",
-      "direnvrc", // ~/.config/direnv/direnvrc
+      "direnvrc",
       "*.ebuild",
       "*.eclass",
       ".hushlogin",
@@ -132,11 +110,11 @@
       "*.tcshrc",
       ".tmux.conf",
       "tmux.conf",
-      "xinitrc", // /etc/X11/xinit/xinitrc
-      ".xinitrc", // ~/.xinitrc
+      "xinitrc",
+      ".xinitrc",
       ".xprofile",
-      "xserverrc", // /etc/X11/xinit/xserverrc
-      ".xserverrc", // ~/.xserverrc
+      "xserverrc",
+      ".xserverrc",
       ".xsession",
       ".xsessionrc",
       ".yash_profile",
@@ -165,12 +143,14 @@
       "show_commit_summary": true
     }
   },
-  "git_panel": { "fallback_branch_name": "main" },
+  "git_panel": {
+    "fallback_branch_name": "main"
+  },
   "gutter": {
-    "min_line_number_digits": 3,
+    "folds": true,
     "line_numbers": true,
-    "runnables": true,
-    "folds": true
+    "min_line_number_digits": 3,
+    "runnables": true
   },
   "helix_mode": true,
   "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
@@ -185,42 +165,531 @@
     "show_value_hints": true
   },
   "inline_code_actions": true,
-  "languages": {
-    "Shell Script": {
-      "formatter": {
-        "external": { "command": "shellfmt" }
-      },
-      "document_folding_ranges": "on",
-      "code_actions_on_format": {
-        "source.fixAll.shellcheck": true
+  "language_models": {
+    "openai_compatible": {
+      "OmniRoute": {
+        "api_url": "http://localhost:8082/v1",
+        "available_models": [
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1048576,
+            "max_output_tokens": 131072,
+            "max_tokens": 1048576,
+            "name": "baseten/zai-org/GLM-5.3-Flash",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": false,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 2000000,
+            "max_output_tokens": 524288,
+            "max_tokens": 2000000,
+            "name": "auto/best-free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": false,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 2000000,
+            "max_output_tokens": 524288,
+            "max_tokens": 2000000,
+            "name": "auto/coding:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": false,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1000000,
+            "max_output_tokens": 384000,
+            "max_tokens": 1000000,
+            "name": "cl/deepseek/deepseek-v4-flash",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": false,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 204800,
+            "max_output_tokens": 131072,
+            "max_tokens": 204800,
+            "name": "cl/minimax-m2.7:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1048576,
+            "max_output_tokens": 512000,
+            "max_tokens": 1048576,
+            "name": "cl/minimax-m3:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": false,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1000000,
+            "max_output_tokens": 65536,
+            "max_tokens": 1000000,
+            "name": "cl/nvidia/nemotron-3-ultra-550b-a55b:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 256000,
+            "max_output_tokens": 256000,
+            "max_tokens": 256000,
+            "name": "cl/stepfun/step-3.7-flash",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": false,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 256000,
+            "max_output_tokens": 32768,
+            "max_tokens": 256000,
+            "name": "kc/kilo-auto/free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": false,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1000000,
+            "max_output_tokens": 65536,
+            "max_tokens": 1000000,
+            "name": "kc/nvidia/nemotron-3-ultra-550b-a55b:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": false,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 262144,
+            "max_output_tokens": 32768,
+            "max_tokens": 262144,
+            "name": "kc/poolside/laguna-s-2.1:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": false,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 128000,
+            "max_tokens": 128000,
+            "name": "kc/qwen3.8-27b:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1048576,
+            "max_output_tokens": 262144,
+            "max_tokens": 1048576,
+            "name": "kc/thinkingmachines/inkling-small:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1048576,
+            "max_output_tokens": 262144,
+            "max_tokens": 1048576,
+            "name": "kc/thinkingmachines/inkling:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": false,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 262144,
+            "max_output_tokens": 32768,
+            "max_tokens": 262144,
+            "name": "opencode-zen/ling-3.0-flash-fin-free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1000000,
+            "max_output_tokens": 131072,
+            "max_tokens": 1000000,
+            "name": "opencode-zen/longcat-2.5-preview-free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_tokens": 200000,
+            "name": "opencode-zen/mimo-v2.6-flash-free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1048576,
+            "max_output_tokens": 131072,
+            "max_tokens": 1048576,
+            "name": "opencode-zen/muse-spark-1.2-contributor-free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1048576,
+            "max_output_tokens": 131072,
+            "max_tokens": 1048576,
+            "name": "opencode-zen/muse-spark-1.3-contributor-free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": false,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "max_tokens": 1000000,
+            "name": "opencode-zen/nemotron-3-ultra-free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1048576,
+            "max_output_tokens": 524288,
+            "max_tokens": 1048576,
+            "name": "opencode-zen/space-bunny-free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 512000,
+            "max_output_tokens": 460800,
+            "max_tokens": 512000,
+            "name": "openrouter/dots-studio/dots-3-note-preview:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 200000,
+            "max_tokens": 200000,
+            "name": "openrouter/free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": false,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1000000,
+            "max_output_tokens": 65536,
+            "max_tokens": 1000000,
+            "name": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": false,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 262144,
+            "max_output_tokens": 32768,
+            "max_tokens": 262144,
+            "name": "openrouter/poolside/laguna-s-2.1:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 262144,
+            "max_output_tokens": 235929,
+            "max_tokens": 262144,
+            "name": "openrouter/qwen/qwen3.8-27b:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1000000,
+            "max_output_tokens": 524288,
+            "max_tokens": 1000000,
+            "name": "openrouter/stealth/space-bunny-alpha",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1048576,
+            "max_output_tokens": 262144,
+            "max_tokens": 1048576,
+            "name": "openrouter/thinkingmachines/inkling-small:free",
+            "reasoning_effort": "medium"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "tools": true
+            },
+            "max_completion_tokens": 1048576,
+            "max_output_tokens": 262144,
+            "max_tokens": 1048576,
+            "name": "openrouter/thinkingmachines/inkling:free",
+            "reasoning_effort": "medium"
+          }
+        ]
       }
-    },
+    }
+  },
+  "languages": {
     "C": {
+      "format_on_save": "on",
       "formatter": {
-        "external": { "command": "astyle" }
+        "external": {
+          "command": "astyle"
+        }
       }
     },
     "C++": {
+      "format_on_save": "on",
       "formatter": {
-        "external": { "command": "astyle" }
+        "external": {
+          "command": "astyle"
+        }
       }
     },
-    "Java": {
+    "CSS": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true
+      },
+      "format_on_save": "on",
       "formatter": {
-        "external": { "command": "astyle" }
-      }
+        "external": {
+          "command": "biome",
+          "arguments": [
+            "check",
+            "--fix",
+            "--config-path",
+            "/home/othman/.config/biome/biome.json",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
+        }
+      },
+      "language_servers": [
+        "tailwindcss-intellisense-css",
+        "css-variable-lsp",
+        "!vscode-css-language-server",
+        "..."
+      ],
+      "prettier": { "allowed": false }
     },
     "Fish": {
+      "format_on_save": "on",
       "formatter": {
         "external": { "command": "fish_indent" }
       }
     },
     "HTML": {
-      "prettier": { "allowed": true },
       "code_actions_on_format": { "source.fixAll.biome": true },
+      "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "biome",
           "arguments": [
             "check",
             "--fix",
@@ -228,33 +697,17 @@
             "/home/othman/.config/biome/biome.json",
             "--stdin-file-path",
             "{buffer_path}"
-          ]
+          ],
+          "command": "biome"
         }
-      }
-    },
-    "CSS": {
-      "prettier": { "allowed": false },
-      "code_actions_on_format": { "source.fixAll.biome": true },
-      "formatter": {
-        "external": {
-          "command": "biome",
-          "arguments": [
-            "check",
-            "--fix",
-            "--config-path",
-            "/home/othman/.config/biome/biome.json",
-            "--stdin-file-path",
-            "{buffer_path}"
-          ]
-        }
-      }
+      },
+      "prettier": { "allowed": true }
     },
     "JSON": {
-      "prettier": { "allowed": false },
       "code_actions_on_format": { "source.fixAll.biome": true },
+      "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "biome",
           "arguments": [
             "check",
             "--fix",
@@ -262,16 +715,17 @@
             "/home/othman/.config/biome/biome.json",
             "--stdin-file-path",
             "{buffer_path}"
-          ]
+          ],
+          "command": "biome"
         }
-      }
+      },
+      "prettier": { "allowed": false }
     },
     "JSONC": {
-      "prettier": { "allowed": false },
       "code_actions_on_format": { "source.fixAll.biome": true },
+      "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "biome",
           "arguments": [
             "check",
             "--fix",
@@ -279,28 +733,26 @@
             "/home/othman/.config/biome/biome.json",
             "--stdin-file-path",
             "{buffer_path}"
-          ]
+          ],
+          "command": "biome"
         }
+      },
+      "prettier": { "allowed": false }
+    },
+    "Java": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": { "command": "astyle" }
       }
     },
     "JavaScript": {
-      "prettier": { "allowed": false },
-      "format_on_save": "on",
-      "language_servers": [
-        "tsgo",
-        "!vtsls",
-        "!typescript-language-server",
-        "!deno",
-        "!eslint",
-        "..."
-      ],
       "code_actions_on_format": {
         "source.fixAll.biome": true,
         "source.organizeImports.biome": true
       },
+      "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "biome",
           "arguments": [
             "check",
             "--fix",
@@ -308,150 +760,206 @@
             "/home/othman/.config/biome/biome.json",
             "--stdin-file-path",
             "{buffer_path}"
-          ]
+          ],
+          "command": "biome"
         }
-      }
-    },
-    "TypeScript": {
-      "prettier": { "allowed": false },
-      "format_on_save": "on",
+      },
       "language_servers": [
-        "tsgo",
-        "!vtsls",
+        "typescript-ls",
+        "vtsls",
         "!typescript-language-server",
         "!deno",
         "!eslint",
+        "!emmet-language-server",
         "..."
       ],
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      },
-      "formatter": {
-        "external": {
-          "command": "biome",
-          "arguments": [
-            "check",
-            "--fix",
-            "--config-path",
-            "/home/othman/.config/biome/biome.json",
-            "--stdin-file-path",
-            "{buffer_path}"
-          ]
-        }
-      }
-    },
-    "TSX": {
-      "prettier": { "allowed": false },
-      "format_on_save": "on",
-      "language_servers": [
-        "tsgo",
-        "!vtsls",
-        "!typescript-language-server",
-        "!deno",
-        "!eslint",
-        "..."
-      ],
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      },
-      "formatter": {
-        "external": {
-          "command": "biome",
-          "arguments": [
-            "check",
-            "--fix",
-            "--config-path",
-            "/home/othman/.config/biome/biome.json",
-            "--stdin-file-path",
-            "{buffer_path}"
-          ]
-        }
-      }
-    },
-    "PHP": {
-      "language_servers": [
-        "phptools",
-        "!phpantom",
-        "!intelephense",
-        "!phpactor",
-        "..."
-      ]
-    },
-    "Vue.js": {
-      "prettier": { "allowed": true },
-      "format_on_save": "on"
-      // ,"formatter": {
-      //   "external": {
-      //     "command": "prettier",
-      //     "arguments": [
-      //       "--ignore-path=/dev/null",
-      //       "--ignore-unknown=false",
-      //       "--config=/home/othman/.config/.prettierrc.json",
-      //       "--stdin-filepath",
-      //       "{buffer_path}"
-      //     ]
-      //   }
-      // }
-    },
-    "Markdown": {
-      "prettier": { "allowed": false },
-      "format_on_save": "on",
-      "extend_list_on_newline": true,
-      "indent_list_on_tab": true,
-      "remove_trailing_whitespace_on_save": true,
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": [
-            "--ignore-path=/dev/null",
-            "--ignore-unknown=false",
-            "--config=/home/othman/.config/.prettierrc.json",
-            "--stdin-filepath",
-            "{buffer_path}"
-          ]
-        }
-      }
-    },
-    "SQL": {
-      "prettier": { "allowed": false },
-      "formatter": "language_server"
+      "prettier": { "allowed": false }
     },
     "Lua": {
       "format_on_save": "on",
       "formatter": "language_server",
       "inlay_hints": {
         "enabled": true,
-        "show_type_hints": true,
+        "show_other_hints": true,
         "show_parameter_hints": false,
-        "show_other_hints": true
+        "show_type_hints": true
       }
     },
-    "TOML": {
-      "formatter": {
-        "external": { "command": "taplo", "arguments": ["fmt", "-"] }
-      }
-    },
-    "XML": {
-      "formatter": {
-        "external": { "command": "xmllint", "arguments": ["--format", "-"] }
-      }
-    },
-    "Python": {
-      "language_servers": ["basedpyright", "!ruff-lsp"],
+    "Markdown": {
+      "extend_list_on_newline": true,
+      "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "ruff",
-          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
+          "arguments": [
+            "--ignore-path=/dev/null",
+            "--ignore-unknown=false",
+            "--config=/home/othman/.config/.prettierrc.json",
+            "--stdin-filepath",
+            "{buffer_path}"
+          ],
+          "command": "prettier"
+        }
+      },
+      "indent_list_on_tab": true,
+      "prettier": { "allowed": false },
+      "remove_trailing_whitespace_on_save": true
+    },
+    "PHP": {
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": { "name": "phptools" }
+      },
+      "language_servers": [
+        "phptools",
+        "!phpantom",
+        "!intelephense",
+        "!phpactor",
+        "!emmet-language-server",
+        "..."
+      ]
+    },
+    "Python": {
+      "code_actions_on_format": { "source.organizeImports.ruff": true },
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": { "name": "ruff" }
+      },
+      "language_servers": [
+        "basedpyright",
+        "ruff",
+        "!ty",
+        "!pylsp",
+        "!pyright",
+        "..."
+      ]
+    },
+    "Rust": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "arguments": ["--config-path", "/home/othman/.config/rustfmt.toml"],
+          "command": "rustfmt"
         }
       }
     },
-    "Rust": {
+    "SQL": {
+      "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "rustfmt",
-          "arguments": ["--config-path", "/home/othman/.config/rustfmt.toml"]
+          "command": "syntaqlite",
+          "arguments": [
+            "fmt",
+            "--indent-width",
+            "2",
+            "--keyword-case",
+            "upper",
+            "--semicolons",
+            "true",
+            "{buffer_path}"
+          ]
+        }
+      },
+      "prettier": { "allowed": false }
+    },
+    "Shell Script": {
+      "code_actions_on_format": { "source.fixAll.shellcheck": true },
+      "document_folding_ranges": "on",
+      "format_on_save": "on",
+      "formatter": { "external": { "command": "shellfmt" } },
+      "hard_tabs": false,
+      "tab_size": 2
+    },
+    "TOML": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "taplo",
+          "arguments": ["fmt", "-"]
+        }
+      }
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      },
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "arguments": [
+            "check",
+            "--fix",
+            "--config-path",
+            "/home/othman/.config/biome/biome.json",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ],
+          "command": "biome"
+        }
+      },
+      "language_servers": [
+        "typescript-ls",
+        "emmet-language-server",
+        "vtsls",
+        "!typescript-language-server",
+        "!deno",
+        "!eslint",
+        "..."
+      ],
+      "prettier": { "allowed": false }
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      },
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "arguments": [
+            "check",
+            "--fix",
+            "--config-path",
+            "/home/othman/.config/biome/biome.json",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ],
+          "command": "biome"
+        }
+      },
+      "language_servers": [
+        "typescript-ls",
+        "!emmet-language-server",
+        "vtsls",
+        "!typescript-language-server",
+        "!deno",
+        "!eslint",
+        "..."
+      ],
+      "prettier": { "allowed": false }
+    },
+    "Vue.js": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "arguments": [
+            "--ignore-path=/dev/null",
+            "--ignore-unknown=false",
+            "--config=/home/othman/.config/.prettierrc.json",
+            "--stdin-filepath",
+            "{buffer_path}"
+          ],
+          "command": "prettier"
+        }
+      },
+      "prettier": { "allowed": false }
+    },
+    "XML": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "xmllint",
+          "arguments": ["--format", "-"]
         }
       }
     }
@@ -460,7 +968,6 @@
   "lsp": {
     "arduino-language-server": {
       "binary": {
-        "path": "/usr/bin/arduino-language-server",
         "arguments": [
           "-clangd",
           "/usr/bin/clangd",
@@ -470,7 +977,15 @@
           "/home/othman/.arduino15/arduino-cli.yaml",
           "-fqbn",
           "arduino:avr:uno"
-        ]
+        ],
+        "path": "/usr/bin/arduino-language-server"
+      }
+    },
+    "basedpyright": {
+      "settings": {
+        "basedpyright": {
+          "analysis": { "typeCheckingMode": "standard" }
+        }
       }
     },
     "bash-language-server": {
@@ -480,15 +995,15 @@
           "enableSourceErrorDiagnostics": true,
           "explainshellEndpoint": "",
           "includeAllWorkspaceSymbols": false,
-          "shellcheckPath": "/usr/bin/shellcheck",
           "shellcheckExternalSources": true,
+          "shellcheckPath": "/usr/bin/shellcheck",
           "shfmt": {
-            "path": "/usr/bin/shfmt",
             "binaryNextLine": true,
             "caseIndent": false,
             "funcNextLine": false,
             "ignoreEditorconfig": false,
             "languageDialect": "auto",
+            "path": "/usr/bin/shfmt",
             "simplifyCode": true,
             "spaceRedirects": false
           }
@@ -497,18 +1012,51 @@
     },
     "biome": {
       "enable_lsp_tasks": true,
+      "settings": { "require_config_file": true }
+    },
+    "emmet-language-server": {
+      "enable_lsp_tasks": true
+    },
+    "gopls": {
+      "initialization_options": {
+        "codelenses": {
+          "test": true,
+          "generate": true,
+          "regenerate_cgo": true,
+          "tidy": true,
+          "upgrade_dependency": true,
+          "vendor": true
+        }
+      }
+    },
+    "intelephense": {
       "settings": {
-        "require_config_file": true
+        "intelephense": {
+          "codeLens": {
+            "implementations": { "enable": true },
+            "overrides": { "enable": true },
+            "parent": { "enable": true },
+            "references": { "enable": true },
+            "usages": { "enable": true }
+          },
+          "completion": {
+            "fullyQualifyGlobalConstantsAndFunctions": true
+          },
+          "diagnostics": { "argumentCount": false },
+          "maxMemory": 512,
+          "phpdoc": { "useFullyQualifiedNames": true },
+          "references": { "exclude": [] },
+          "rename": { "namespaceMode": "all" },
+          "trace": { "server": "messages" }
+        }
       }
     },
     "json-language-server": {
-      "initialization_options": {
-        "provideFormatter": false
-      },
+      "initialization_options": { "provideFormatter": false },
       "settings": {
         "json": {
-          "validate": { "enable": true },
           "format": { "enable": false },
+          "validate": { "enable": true },
           "schemas": [
             {
               "fileMatch": ["deno.json", "deno.jsonc"],
@@ -533,83 +1081,30 @@
           ]
         },
         "jsonc": {
-          "validate": { "enable": true },
-          "format": { "enable": false }
+          "format": { "enable": false },
+          "validate": { "enable": true }
         }
       }
     },
-    "tailwindcss-language-server": {
-      "settings": {
-        "classAttributes": ["class", "ui", "className"],
-        "emmetCompletions": true,
-        "includeLanguages": {
-          "php": "html",
-          "blade": "html",
-          "vue": "html"
-        },
-        "experimental": {
-          "classRegex": [
-            "(?:'|\"|`)([^']*)(?:'|\"|`)",
-            "@class\\(\\[([^\\]]*)\\]\\)",
-            "class='([^']*)'",
-            "class=\"([^\"]*)\"",
-            "class=\\\"([^\\\"]*)\\\"",
-            "\\.classList\\.add\\(['\"]([^'\"]*)['\"]",
-            "\\.classList\\.contains\\(['\"]([^'\"]*)['\"]",
-            "\\.classList\\.remove\\(['\"]([^'\"]*)['\"]",
-            "\\.classList\\.replace\\([^,)]+,\\s*['\"]([^'\"]*)['\"]",
-            "\\.classList\\.replace\\(\\s*['\"]([^'\"]*)['\"]",
-            "\\.classList\\.toggle\\(['\"]([^'\"]*)['\"]",
-            "\\.className\\s*[+]?=\\s*['\"]([^'\"]*)['\"]",
-            "\\.setAttribute\\(['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
-            "\\.setAttributeNS\\(.*,\\s*['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
-            "ui:\\s*{([^)]*)\\s*}"
-          ]
-        }
-      }
-    },
-    "rust-analyzer": {
-      "initialization_options": {
-        "check": { "command": "clippy" },
-        "checkOnSave": true
-      }
-    },
-    "basedpyright": {
-      "settings": {
-        "basedpyright": {
-          "analysis": { "typeCheckingMode": "standard" }
-        }
-      }
-    },
-    "syntaqlite-lsp": {
+    "kotlin-lsp": {
       "binary": {
-        "path": "syntaqlite",
-        "ignore_system_version": false
+        "path": "/usr/bin/kotlin-lsp",
+        "arguments": ["--stdio"]
       }
     },
-    "intelephense": {
-      "settings": {
-        "intelephense": {
-          "codeLens": {
-            "implementations": { "enable": true },
-            "overrides": { "enable": true },
-            "parent": { "enable": true },
-            "references": { "enable": true },
-            "usages": { "enable": true }
-          },
-          "completion": { "fullyQualifyGlobalConstantsAndFunctions": true },
-          "diagnostics": { "argumentCount": false },
-          "maxMemory": 512,
-          "phpdoc": { "useFullyQualifiedNames": true },
-          "references": { "exclude": [] },
-          "rename": { "namespaceMode": "all" },
-          "trace": { "server": "messages" }
-        }
-      }
+    "npm-package-json-checker-lsp": {
+      "settings": { "show_loading_hints": true }
     },
     "phptools": {
+      "binary": {
+        "arguments": ["-vscode", "-lsp-log", "/tmp/zed-test/php/file.log"],
+        "ignore_system_version": false,
+        "path": "/home/othman/.local/share/pnpm/bin/devsense-php-ls"
+      },
       "initialization_options": {
-        "php.completion.autoimport-docblock": "auto-import",
+        "php.completion.autoimport": "auto-import-grouped",
+        "php.completion.autoimport-docblock": "auto-import-grouped",
+        "php.completion.parameters": "parameters",
         "php.completion.showParameters": true,
         "php.docblock.colorMode": "simple",
         "php.format.codeStyle": "K&R",
@@ -639,6 +1134,7 @@
         "php.format.rules.groupUseNewLineBeforeFirstDeclaration": true,
         "php.format.rules.ifStatementNewLineAfterLeftParen": true,
         "php.format.rules.ifStatementNewLineBeforeRightParen": true,
+        "php.format.rules.importSorting": "alphabetic",
         "php.format.rules.indentBraces": false,
         "php.format.rules.keepControlStatementsOnOneLine": true,
         "php.format.rules.keepFunctionsOnOneLine": true,
@@ -659,22 +1155,136 @@
         "php.format.rules.switchStatementNewLineBeforeRightParen": true,
         "php.format.rules.whileStatementNewLineAfterLeftParen": true,
         "php.format.rules.whileStatementNewLineBeforeRightParen": true,
+        "php.hover.fullname": true,
         "php.hover.parametersFullName": true,
         "php.inlayHints.insertOnDoubleClick": true,
         "php.inlayHints.parameters.enabled": false,
         "php.inlayHints.parameters.suppressNameMatchingValue": true,
         "php.inlayHints.types.return": "named",
         "php.problems.excludeGitIgnore": true,
-        "php.suggest.basic": false,
-        "php.validate.enable": false,
-        "php.version": "8.5"
+        "php.problems.scope": "all",
+        "php.sortUses.caseSensitive": true
+      }
+    },
+    "rust-analyzer": {
+      "enable_lsp_tasks": true,
+      "initialization_options": {
+        "check": { "command": "clippy" },
+        "checkOnSave": true
+      },
+      "inlayHints": {
+        "closureReturnTypeHints": { "enable": "always" },
+        "lifetimeElisionHints": {
+          "enable": "skip_trivial",
+          "useParameterNames": true
+        },
+        "maxLength": null
+      },
+      "completion": {
+        "snippets": {
+          "custom": {
+            "Arc::new": {
+              "postfix": "arc",
+              "body": ["Arc::new(${receiver})"],
+              "requires": "std::sync::Arc",
+              "scope": "expr"
+            },
+            "Some": {
+              "postfix": "some",
+              "body": ["Some(${receiver})"],
+              "scope": "expr"
+            },
+            "Ok": {
+              "postfix": "ok",
+              "body": ["Ok(${receiver})"],
+              "scope": "expr"
+            },
+            "Rc::new": {
+              "postfix": "rc",
+              "body": ["Rc::new(${receiver})"],
+              "requires": "std::rc::Rc",
+              "scope": "expr"
+            },
+            "Box::pin": {
+              "postfix": "boxpin",
+              "body": ["Box::pin(${receiver})"],
+              "requires": "std::boxed::Box",
+              "scope": "expr"
+            },
+            "vec!": {
+              "postfix": "vec",
+              "body": ["vec![${receiver}]"],
+              "description": "vec![]",
+              "scope": "expr"
+            }
+          }
+        }
+      }
+    },
+    "syntaqlite-lsp": {
+      "binary": {
+        "ignore_system_version": false,
+        "path": "syntaqlite",
+        "arguments": ["lsp"]
+      }
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "classAttributes": ["class", "ui", "className"],
+        "classFunctions": ["cva", "cx"],
+        "emmetCompletions": true,
+        "experimental": {
+          "classRegex": [
+            "(?:'|\"|`)([^']*)(?:'|\"|`)",
+            ":class='([^']*)'",
+            ":class=\"([^\"]*)\"",
+            "@class\\(\\[([^\\]]*)\\]\\)",
+            "class='([^']*)'",
+            "class=\"([^\"]*)\"",
+            "class=\\\"([^\\\"]*)\\\"",
+            "\\.classList\\.add\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.contains\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.remove\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.replace\\([^,)]+,\\s*['\"]([^'\"]*)['\"]",
+            "\\.classList\\.replace\\(\\s*['\"]([^'\"]*)['\"]",
+            "\\.classList\\.toggle\\(['\"]([^'\"]*)['\"]",
+            "\\.className\\s*[+]?=\\s*['\"]([^'\"]*)['\"]",
+            "[cls|className]\\s\\:\\=\\s\"([^\"]*)",
+            "\\.setAttribute\\(['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
+            "\\.setAttributeNS\\(.*,\\s*['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
+            "ui:\\s*{([^)]*)\\s*}"
+          ]
+        },
+        "includeLanguages": {
+          "blade": "html",
+          "php": "html",
+          "vue": "html"
+        }
+      }
+    },
+    "vue": {
+      "settings": {
+        // Display inlay hints for the `$event` parameter in inline event handlers.
+        "vue.inlayHints.inlineHandlerLeading": true,
+        // Display hints when required component props are missing in templates.
+        "vue.inlayHints.missingProps": true,
+        // Display inlay hints for patterns that wrap component options.
+        "vue.inlayHints.optionsWrapper": true,
+        // Display inlay hints related to `v-bind` shorthand (`:`).
+        "vue.inlayHints.vBindShorthand": true
+      }
+    },
+    "yaml-language-server": {
+      "settings": {
+        "yaml": { "schemaStore": { "enable": true } }
       }
     }
   },
   "minimap": {
     "max_width_columns": 100,
-    "show": "auto"
+    "show": "never"
   },
+  "minimum_split_diff_width": 0.0,
   "mouse_wheel_zoom": true,
   "node": {
     "npm_path": "pnpm"
@@ -711,6 +1321,11 @@
     "git_status": true,
     "show_diagnostics": "all"
   },
+  "telemetry": {
+    "anthropic_retention": false,
+    "diagnostics": true,
+    "metrics": false
+  },
   "terminal": {
     "blinking": "on",
     "copy_on_select": true,
@@ -719,7 +1334,11 @@
       "custom": 1.5
     }
   },
-  "theme": "GitHub Dark",
+  "theme": {
+    "dark": "GitHub Dark",
+    "light": "One Light",
+    "mode": "dark"
+  },
   "title_bar": {
     "show_branch_status_icon": true
   },
@@ -735,10 +1354,10 @@
   "use_system_prompts": false,
   "vim": {
     "cursor_shape": {
-      "normal": "block",
       "insert": "bar",
-      "visual": "underline",
-      "replace": "underline"
+      "normal": "block",
+      "replace": "underline",
+      "visual": "underline"
     },
     "toggle_relative_line_numbers": true,
     "use_smartcase_find": true,
@@ -749,476 +1368,5 @@
     "enabled": true
   },
   "window_title_format": "${projectName}${separator}${fileName}",
-  "window_title_separator": " — ",
-  "language_models": {
-    "openai_compatible": {
-      "OmniRoute": {
-        "api_url": "http://localhost:8082/v1",
-        "available_models": [
-          {
-            "name": "baseten/zai-org/GLM-5.3-Flash",
-            "max_tokens": 1048576,
-            "max_completion_tokens": 1048576,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 131072,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "auto/best-free",
-            "max_tokens": 2000000,
-            "max_completion_tokens": 2000000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 524288,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "auto/coding:free",
-            "max_tokens": 2000000,
-            "max_completion_tokens": 2000000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 524288,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "cl/deepseek/deepseek-v4-flash",
-            "max_tokens": 1000000,
-            "max_completion_tokens": 1000000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 384000,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "cl/minimax-m2.7:free",
-            "max_tokens": 204800,
-            "max_completion_tokens": 204800,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 131072,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "cl/minimax-m3:free",
-            "max_tokens": 1048576,
-            "max_completion_tokens": 1048576,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 512000,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "cl/nvidia/nemotron-3-ultra-550b-a55b:free",
-            "max_tokens": 1000000,
-            "max_completion_tokens": 1000000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 65536,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "cl/stepfun/step-3.7-flash",
-            "max_tokens": 256000,
-            "max_completion_tokens": 256000,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 256000,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "kc/kilo-auto/free",
-            "max_tokens": 256000,
-            "max_completion_tokens": 256000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 32768,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "kc/nvidia/nemotron-3-ultra-550b-a55b:free",
-            "max_tokens": 1000000,
-            "max_completion_tokens": 1000000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 65536,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "kc/poolside/laguna-s-2.1:free",
-            "max_tokens": 262144,
-            "max_completion_tokens": 262144,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 32768,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "kc/qwen3.8-27b:free",
-            "max_tokens": 128000,
-            "max_completion_tokens": 128000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "kc/thinkingmachines/inkling-small:free",
-            "max_tokens": 1048576,
-            "max_completion_tokens": 1048576,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 262144,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "kc/thinkingmachines/inkling:free",
-            "max_tokens": 1048576,
-            "max_completion_tokens": 1048576,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 262144,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "opencode-zen/ling-3.0-flash-fin-free",
-            "max_tokens": 262144,
-            "max_completion_tokens": 262144,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 32768,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "opencode-zen/longcat-2.5-preview-free",
-            "max_tokens": 1000000,
-            "max_completion_tokens": 1000000,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 131072,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "opencode-zen/mimo-v2.6-flash-free",
-            "max_tokens": 200000,
-            "max_completion_tokens": 200000,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 32000,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "opencode-zen/muse-spark-1.2-contributor-free",
-            "max_tokens": 1048576,
-            "max_completion_tokens": 1048576,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 131072,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "opencode-zen/muse-spark-1.3-contributor-free",
-            "max_tokens": 1048576,
-            "max_completion_tokens": 1048576,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 131072,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "opencode-zen/nemotron-3-ultra-free",
-            "max_tokens": 1000000,
-            "max_completion_tokens": 1000000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 128000,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "opencode-zen/space-bunny-free",
-            "max_tokens": 1048576,
-            "max_completion_tokens": 1048576,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 524288,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "openrouter/dots-studio/dots-3-note-preview:free",
-            "max_tokens": 512000,
-            "max_completion_tokens": 512000,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 460800,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "openrouter/free",
-            "max_tokens": 200000,
-            "max_completion_tokens": 200000,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
-            "max_tokens": 1000000,
-            "max_completion_tokens": 1000000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 65536,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "openrouter/poolside/laguna-s-2.1:free",
-            "max_tokens": 262144,
-            "max_completion_tokens": 262144,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 32768,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "openrouter/qwen/qwen3.8-27b:free",
-            "max_tokens": 262144,
-            "max_completion_tokens": 262144,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 235929,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "openrouter/stealth/space-bunny-alpha",
-            "max_tokens": 1000000,
-            "max_completion_tokens": 1000000,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 524288,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "openrouter/thinkingmachines/inkling-small:free",
-            "max_tokens": 1048576,
-            "max_completion_tokens": 1048576,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 262144,
-            "reasoning_effort": "medium"
-          },
-          {
-            "name": "openrouter/thinkingmachines/inkling:free",
-            "max_tokens": 1048576,
-            "max_completion_tokens": 1048576,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": false,
-              "max_tokens_parameter": true
-            },
-            "max_output_tokens": 262144,
-            "reasoning_effort": "medium"
-          }
-        ]
-      }
-    }
-  }
+  "window_title_separator": " — "
 }

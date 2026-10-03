@@ -1,10 +1,10 @@
 // Zed settings override — Deno variant (template, not live).
 //
-// Live settings.json uses tsgo for JS/TS/JSX/TSX (web work).
+// Live settings.json uses typescript-ls for JS/TS/JSX/TSX (web work).
 // For Deno playground projects (Helix uses deno for the same reason),
 // merge this over settings.json or copy the blocks in.
-// Mirrors Helix languages.toml (deno live) vs languages.web.toml (tsgo template),
-// inverted: Zed live = tsgo, template = deno.
+// Mirrors Helix languages.toml (deno live) vs languages.web.toml (typescript-ls template),
+// inverted: Zed live = typescript-ls, template = deno.
 {
   "lsp": {
     "deno": {
@@ -19,7 +19,7 @@
         "deno",
         "!typescript-language-server",
         "!vtsls",
-        "!tsgo",
+        "!typescript-ls",
         "!eslint",
         "..."
       ]
@@ -29,7 +29,7 @@
         "deno",
         "!typescript-language-server",
         "!vtsls",
-        "!tsgo",
+        "!typescript-ls",
         "!eslint",
         "..."
       ]
@@ -39,17 +39,7 @@
         "deno",
         "!typescript-language-server",
         "!vtsls",
-        "!tsgo",
-        "!eslint",
-        "..."
-      ]
-    },
-    "JSX": {
-      "language_servers": [
-        "deno",
-        "!typescript-language-server",
-        "!vtsls",
-        "!tsgo",
+        "!typescript-ls",
         "!eslint",
         "..."
       ]
