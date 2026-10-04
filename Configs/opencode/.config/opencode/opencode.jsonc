@@ -1,14 +1,10 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "lsp": true,
-  "model": "opencode/deepseek-v4-flash-free",
   "permission": {
-    "websearch": "deny"
-  },
-  "server": {
-    "port": 8081,
-    "hostname": "0.0.0.0",
-    "cors": ["localhost:8081", "opencode.dev"]
+    "websearch": "allow",
+    "webfetch": "allow",
+    "external_directory": "allow"
   },
   "mcp": {
     "mgrep": {

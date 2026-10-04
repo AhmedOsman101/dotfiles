@@ -12,8 +12,8 @@ programs=(
   'copyq'
   'ollama'
   'sxhkd'
-  '9router'
   'omniroute'
+  # '9router'
   # 'thunar'
   # 'dunst'
   # 'fcitx5'
@@ -53,7 +53,7 @@ fi
 
 # ---- 9Router & Omniroute ---- #
 if timeout 30 bun update -g 9router omniroute --latest || true; then
-  9router --tray --skip-update &
+  # 9router --tray --skip-update &
   omniroute --tray --no-open --port 8082 &
 fi
 
