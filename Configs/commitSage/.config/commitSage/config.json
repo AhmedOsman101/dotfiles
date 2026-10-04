@@ -20,7 +20,7 @@
       "apiType": "openai-chat",
       "models": {
         "poolside/poolside/laguna-s-2.1": {
-          "reasoning": "medium",
+          "reasoning": "max",
           "contextWindow": 262144,
           "maxInputTokens": 262144,
           "maxOutputTokens": 32768
