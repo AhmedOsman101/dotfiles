@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/AhmedOsman101/commit-sage-cli/refs/heads/main/config.schema.json",
-  "model": "gemini/gemini-3.1-flash-lite",
+  "model": "openai/poolside/poolside/laguna-s-2.1",
   "generation": {
     "maxRetries": 3,
     "retryDelay": 1000,
@@ -17,7 +17,15 @@
     "openai": {
       "baseUrl": "http://localhost:8082/v1",
       "apiKey": "$OMNIROUTE_API_KEY",
-      "apiType": "openai-chat"
+      "apiType": "openai-chat",
+      "models": {
+        "poolside/poolside/laguna-s-2.1": {
+          "reasoning": "medium",
+          "contextWindow": 262144,
+          "maxInputTokens": 262144,
+          "maxOutputTokens": 32768
+        }
+      }
     }
   },
   "commit": {
