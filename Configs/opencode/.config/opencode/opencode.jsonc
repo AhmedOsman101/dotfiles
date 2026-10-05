@@ -1,6 +1,12 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "lsp": true,
+  "server": {
+    "hostname": "0.0.0.0",
+    "port": 8081,
+    "password": "",
+    "cors": ["https://opencode.dev"]
+  },
   "permission": {
     "websearch": "allow",
     "webfetch": "allow",

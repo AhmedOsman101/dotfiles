@@ -337,6 +337,16 @@ name = "toml"
 language-servers = ["taplo", "tombi", "scls"]
 formatter = { command = "taplo", args = ["fmt", "-"] }
 
+# --- Teal --- #
+[[language]]
+name = "teal"
+formatter = { command = "ceru", args = [
+  "--indent",
+  "2",
+  "--line-length",
+  "100",
+  "-",
+] }
 
 # --- Arduino --- #
 # A separate entry so your C++ setup above stays untouched.
@@ -514,7 +524,6 @@ namespaceMode = "all"
 command = "devsense-php-ls"
 
 [language-server.phptools.config]
-provideFormatter = true
 "php.completion.autoimport" = "auto-import-grouped"
 "php.completion.autoimport-docblock" = "auto-import-grouped"
 "php.completion.parameters" = "parameters"

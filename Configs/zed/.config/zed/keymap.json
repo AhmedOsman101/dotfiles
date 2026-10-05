@@ -7,12 +7,6 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
-    "bindings": {
-      // "shift shift": "file_finder::Toggle"
-    }
-  },
-  {
     "context": "Editor && vim_mode == insert",
     "bindings": {
       "j k": "vim::SwitchToNormalMode"
@@ -189,13 +183,7 @@
   {
     "context": "vim_mode == literal",
     "unbind": {
-      "escape": [
-        "vim::Literal",
-        [
-          "escape",
-          "\u001b"
-        ]
-      ]
+      "escape": ["vim::Literal", ["escape", "\u001b"]]
     }
   },
   {
@@ -210,13 +198,14 @@
     }
   },
   {
-    "context": "VimControl && !menu",
+    "context": "Editor && (vim_mode == helix_normal || vim_mode == helix_select) && !menu",
     "bindings": {
-      "space f": "file_finder::Toggle"
+      "space f": "file_finder::Toggle",
+      "space r": "editor::Rename"
     }
   },
   {
-    "context": "Workspace",
+    "context": "EmptyPane",
     "bindings": {
       "space f": "file_finder::Toggle"
     }

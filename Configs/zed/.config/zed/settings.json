@@ -1016,9 +1016,22 @@
       "enable_lsp_tasks": true,
       "settings": { "require_config_file": true }
     },
-    "emmet-language-server": {
-      "enable_lsp_tasks": true
+    "deno": {
+      "enable_lsp_tasks": true,
+      "settings": {
+        "deno": {
+          "codeLens": {
+            "implementations": true,
+            "references": true,
+            "test": true
+          },
+          "suggests": {
+            "imports": { "autoDiscover": true }
+          }
+        }
+      }
     },
+    "emmet-language-server": { "enable_lsp_tasks": true },
     "gopls": {
       "initialization_options": {
         "codelenses": {
