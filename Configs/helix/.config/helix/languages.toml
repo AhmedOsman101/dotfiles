@@ -66,8 +66,7 @@ language-servers = [
   # { name = "phpantom", except-features = ["format"] }
 ]
 indent = { tab-width = 2, unit = "  " }
-# NOTE: no `formatter` here on purpose — :format goes through phptools (LSP).
-# To restore the old phpfmt script: formatter = { command = "phpfmt" }
+formatter = { command = "phpfmt", args = ["--quiet"] }
 
 # --- Json --- #
 [[language]]

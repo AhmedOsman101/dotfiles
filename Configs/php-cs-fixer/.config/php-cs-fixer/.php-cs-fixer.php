@@ -24,8 +24,6 @@ return new Config()
      */
 
     "@PSR12" => true,
-    "@auto" => true,
-    "@auto:risky" => true,
     "@PhpCsFixer" => true,
     "@PhpCsFixer:risky" => true,
 
