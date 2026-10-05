@@ -51,8 +51,8 @@ if [[ -z "${DBUS_SESSION_BUS_ADDRESS}" ]]; then
   export DBUS_SESSION_BUS_PID
 fi
 
-# ---- 9Router & Omniroute ---- #
-if timeout 30 bun update -g 9router omniroute --latest || true; then
+# ---- Omniroute ---- #
+if timeout 30 bun update -g omniroute --latest || true; then
   # 9router --tray --skip-update &
   omniroute --tray --no-open --port 8082 &
 fi

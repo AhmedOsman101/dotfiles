@@ -222,6 +222,7 @@ linux-lts-headers
 llvm
 localsend
 love
+lowdown
 lsp-plugins-lv2
 lttng-ust2.12
 lua-language-server
@@ -256,6 +257,7 @@ moreutils
 mpv
 musl
 mypy
+namcap
 nano
 ncdu
 ncurses5-compat-libs
