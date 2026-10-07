@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/AhmedOsman101/commit-sage-cli/refs/heads/main/config.schema.json",
-  "model": "openai/poolside/poolside/laguna-s-2.1",
+  "model": "openai/openrouter/apodex/apodex-1.1-mini:free",
   "generation": {
     "maxRetries": 3,
     "retryDelay": 1000,
@@ -24,6 +24,12 @@
           "contextWindow": 262144,
           "maxInputTokens": 262144,
           "maxOutputTokens": 32768
+        },
+        "openrouter/apodex/apodex-1.1-mini:free": {
+          "reasoning": "low",
+          "contextWindow": 262144,
+          "maxOutputTokens": 235929,
+          "maxInputTokens": 262144
         }
       }
     }

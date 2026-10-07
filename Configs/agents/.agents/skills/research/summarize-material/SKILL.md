@@ -65,7 +65,7 @@ Never cut testable content to stay under one. If the source is short, the summar
 - Start immediately with the first `##` heading. No title, no preamble, no introduction.
 - `##` for main topics, `###` for subtopics. No "Introduction" or "Overview" headings.
 - End with the read time footer (see step 4). Nothing after it.
-- Incorporate the `stop-slop` skill when writing.
+- Incorporate the `/unslop` skill when writing.
 
 **Active recall structure:**
 

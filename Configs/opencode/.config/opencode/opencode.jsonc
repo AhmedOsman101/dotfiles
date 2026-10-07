@@ -4,7 +4,7 @@
   "server": {
     "hostname": "0.0.0.0",
     "port": 8081,
-    "password": "",
+    "password": "123",
     "cors": ["https://opencode.dev"]
   },
   "permission": {
