@@ -75,7 +75,7 @@
     }
   },
   "diff_view_style": "split",
-  "disable_ai": false,
+  "disable_ai": true,
   "ensure_final_newline_on_save": true,
   "file_types": {
     "Shell Script": [

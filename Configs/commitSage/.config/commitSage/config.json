@@ -6,7 +6,8 @@
     "retryDelay": 1000,
     "temperature": 0.3,
     "maxPromptTokens": 100000,
-    "diffStrategy": "staged"
+    "diffStrategy": "staged",
+    "maxOutputTokens": 4096
   },
   "providers": {
     "defaults": {
@@ -48,5 +49,8 @@
       "count": 5,
       "scope": "all"
     }
+  },
+  "git": {
+    "timeoutMs": 30000
   }
 }
