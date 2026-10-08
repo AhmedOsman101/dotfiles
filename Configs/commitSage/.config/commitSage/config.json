@@ -42,6 +42,11 @@
     "commitLanguage": "english",
     "promptForRefs": false,
     "maxLength": 80,
-    "bodyStyle": "subject-body"
+    "bodyStyle": "subject-body",
+    "recentCommits": {
+      "enabled": false,
+      "count": 5,
+      "scope": "all"
+    }
   }
 }
