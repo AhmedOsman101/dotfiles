@@ -231,7 +231,6 @@ lua-lgi
 luarocks
 lxappearance
 lzip
-mailspring
 maim
 man-db
 man-pages
@@ -269,7 +268,6 @@ nextdns
 nginx
 nm-connection-editor
 nomacs
-nsis
 ntfs-3g
 nushell
 nvidia-470xx-dkms
