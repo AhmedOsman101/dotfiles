@@ -290,7 +290,7 @@
     "parser": {
       "unsafeParameterDecoratorsEnabled": true
     },
-    "globals": ["Deno"]
+    "globals": ["Deno", "Bun"]
   },
   "json": {
     "formatter": {
