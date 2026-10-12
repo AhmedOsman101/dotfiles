@@ -48,6 +48,14 @@
       "enabled": false,
       "count": 5,
       "scope": "all"
+    },
+    "customInstructions": "",
+    "refs": {
+      "enabled": false,
+      "source": "prompt",
+      "value": "",
+      "placement": "end",
+      "branchPattern": "[A-Z][A-Z0-9]*-[0-9]+"
     }
   },
   "git": {
