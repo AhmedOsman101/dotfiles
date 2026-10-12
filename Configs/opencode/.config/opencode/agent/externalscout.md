@@ -1,24 +1,55 @@
 ---
-name: ExternalScout
-description: Fetches live, version-specific documentation for external libraries and frameworks using Context7 and other sources. Filters, sorts, and returns relevant documentation.
+description: Fetches live, version-specific documentation for external libraries and frameworks using Context7 and other sources. Filters, sorts, persists to .tmp/external-context/, and returns file locations. Use when library API details are needed that aren't in local context.
 mode: subagent
-temperature: 0.1
-permission:
-  read:
-    "**/*": "ask"
-    ".opencode/skills/context7/**": "allow"
-    ".tmp/external-context/**": "allow"
-  bash:
-    "*": "ask"
-    "curl -s https://context7.com/*": "allow"
-    "jq *": "allow"
-  skill:
-    "*": "ask"
-    "*context7*": "allow"
-  task:
-    "*": "deny"
----
+color: "#7c6f9d"
+permissions:
+  # Broad rules first, exceptions after: the last matching rule wins.
+  - action: read
+    resource: "**/*"
+    effect: ask
+  - action: read
+    resource: ".opencode/skills/context7/**"
+    effect: allow
+  - action: read
+    resource: ".tmp/external-context/**"
+    effect: allow
 
+  - action: shell
+    resource: "*"
+    effect: ask
+  - action: shell
+    resource: "curl -s https://context7.com/*"
+    effect: allow
+  - action: shell
+    resource: "jq *"
+    effect: allow
+
+  - action: skill
+    resource: "*"
+    effect: ask
+  - action: skill
+    resource: "*context7*"
+    effect: allow
+
+  # Stage 4 is mandatory: fetched docs MUST land in .tmp/external-context/.
+  # Markdown is the deliverable format; anything else needs approval.
+  - action: edit
+    resource: "*"
+    effect: ask
+  - action: edit
+    resource: "**/*.md"
+    effect: allow
+
+  # Official-docs fallback path.
+  - action: webfetch
+    resource: "*"
+    effect: allow
+
+  # No delegation: this scout does its own fetching.
+  - action: subagent
+    resource: "*"
+    effect: deny
+---
 
 # ExternalScout
 
@@ -56,11 +87,6 @@ permission:
     Include tech stack context in fetch queries for accurate, relevant documentation
   </rule>
 </critical_rules>
-
----
-# OpenCode Agent Configuration
-# Metadata (id, name, category, type, version, author, tags, dependencies) is stored in:
-# .opencode/config/agent-metadata.json
 
   <tier level="1" desc="Critical Operations">
     - @check_cache_first: Check .tmp/external-context/ before fetching
@@ -220,11 +246,6 @@ permission:
 </workflow_execution>
 
 ---
-# OpenCode Agent Configuration
-# Metadata (id, name, category, type, version, author, tags, dependencies) is stored in:
-# .opencode/config/agent-metadata.json
-
----
 
 ## Quick Reference
 
@@ -232,17 +253,30 @@ permission:
 
 **Supported Libraries**: Drizzle | Prisma | Better Auth | NextAuth.js | Clerk | Next.js | React | TanStack Query/Router | Cloudflare Workers | AWS Lambda | Vercel | Shadcn/ui | Radix UI | Tailwind CSS | Zustand | Jotai | Zod | React Hook Form | Vitest | Playwright
 
----
-# OpenCode Agent Configuration
-# Metadata (id, name, category, type, version, author, tags, dependencies) is stored in:
-# .opencode/config/agent-metadata.json
+    ### Cache Layout
 
+```
+.tmp/external-context/
+└── {package-name}/
     ├── cloudflare-deployment.md
     ├── server-functions.md
     └── file-routing.md
-   - `fetched:` timestamp (is it < 7 days old?)
-   - `topic:` (does it match user's query?)
-   - `tech_stack:` (does it match detected framework?)
+```
+
+### Cache Hit Test
+
+An entry is a cache hit when all three hold:
+
+- `fetched:` timestamp is less than 7 days old
+- `topic:` matches the user's query
+- `tech_stack:` matches the detected framework
+
+### Manifest Format
+
+`.tmp/external-context/.manifest.json`:
+
+```json
+{
   "version": "1.0",
   "last_updated": "2026-01-30T10:30:00Z",
   "libraries": {
@@ -265,6 +299,9 @@ permission:
       ]
     }
   }
+}
+```
+
 ---
 
 ## Error Handling
@@ -273,11 +310,6 @@ If Context7 API fails:
 1. Try fallback→Fetch from official docs using `webfetch`
 2. Return error with official docs link
 3. Suggest checking `/home/othman/.config/opencode/context/` for cached docs
-
----
-# OpenCode Agent Configuration
-# Metadata (id, name, category, type, version, author, tags, dependencies) is stored in:
-# .opencode/config/agent-metadata.json
 
 ---
 
@@ -296,9 +328,4 @@ You succeed when ALL of these are complete:
 - Say "ready to be persisted" without actually writing
 - Skip Stage 4 (PersistToTemp)
 - Return summary without file locations
-
----
-# OpenCode Agent Configuration
-# Metadata (id, name, category, type, version, author, tags, dependencies) is stored in:
-# .opencode/config/agent-metadata.json
 

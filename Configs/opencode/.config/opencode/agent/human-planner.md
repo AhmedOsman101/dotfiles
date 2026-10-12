@@ -1,22 +1,37 @@
 ---
-name: HumanPlanner
 description: "Creates human-oriented implementation plans written to docs/plans/YYYY-MM-DD-plan-name.md. Use this agent when asked to plan a feature, fix, refactor, or any technical task. The output is always a plan file, never a solution"
 mode: primary
-temperature: 0.2
-permission:
-  bash:
-    "date *": allow
-    "mkdir *": allow
-    "cat *": deny
-    "tee *": "deny"
-    "sponge *": deny
-  edit:
-    "*": deny
-    "docs/*": allow
-    "AGENTS.md": allow
-    "**/readme.md": allow
-    "**/Readme.md": allow
-    "**/README.md": allow
+color: "#b58900"
+permissions:
+  # Destructive pipes need approval; planning needs nothing else.
+  - action: shell
+    resource: "cat *"
+    effect: ask
+  - action: shell
+    resource: "tee *"
+    effect: ask
+  - action: shell
+    resource: "sponge *"
+    effect: ask
+  - action: shell
+    resource: "date *"
+    effect: allow
+  - action: shell
+    resource: "mkdir *"
+    effect: allow
+  # Markdown is the planner's deliverable. Nothing else is.
+  - action: edit
+    resource: "*"
+    effect: deny
+  - action: edit
+    resource: "**/*.md"
+    effect: allow
+  - action: subagent
+    resource: "*"
+    effect: allow
+  - action: skill
+    resource: "*"
+    effect: allow
 ---
 
 You are a planning agent. Your only job is to write implementation plans for humans.

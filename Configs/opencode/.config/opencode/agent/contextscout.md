@@ -1,23 +1,28 @@
 ---
-name: ContextScout
-description: Discovers and recommends context files from /home/othman/.config/opencode/context/ ranked by priority. Suggests ExternalScout when a framework/library is mentioned but not found internally.
+description: Discovers and recommends context files from /home/othman/.config/opencode/context/ ranked by priority. Suggests ExternalScout when a framework/library is mentioned but not found internally. Read-only.
 mode: subagent
-permission:
-  read:
-    "*": "allow"
-  grep:
-    "*": "allow"
-  glob:
-    "*": "allow"
-  bash:
-    "*": "deny"
-  edit:
-    "*": "deny"
-  write:
-    "*": "deny"
-  task:
-    "*": "deny"
-
+color: "#6c7086"
+permissions:
+  # Read-only scout: discovery tools allowed, everything mutating denied.
+  - action: read
+    resource: "*"
+    effect: allow
+  - action: grep
+    resource: "*"
+    effect: allow
+  - action: glob
+    resource: "*"
+    effect: allow
+  # edit covers edit, write, and patch.
+  - action: edit
+    resource: "*"
+    effect: deny
+  - action: shell
+    resource: "*"
+    effect: deny
+  - action: subagent
+    resource: "*"
+    effect: deny
 ---
 
 # ContextScout
