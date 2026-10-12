@@ -1,0 +1,174 @@
+/* Shared course stylesheet — every lesson and reference links this. Dark theme.
+ * Promoted from the lua workspace (lesson.css); the radio-quiz block at the
+ * end is the one keeper from the previous skill stylesheet, so quiz.js stays
+ * styled. Dark-only: no data-theme light tokens (see README). */
+
+:root {
+  --ink: #e2e0dd;
+  --paper: #16181d;
+  --panel: #1e2128;
+  --accent: #7aa5d8;
+  --accent-soft: #242b36;
+  --muted: #9a978f;
+  --line: #34383f;
+  --code-bg: #2d2d2d; /* match Prism tomorrow theme background */
+  --good: #7fbf7f;
+  --bad: #d97b6c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--paper);
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem;
+  line-height: 1.65;
+  font-size: 1.05rem;
+}
+
+h1, h2, h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 1.9rem;
+  margin: 0 0 0.25rem;
+  color: #f0eee9;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 2.2rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.3rem;
+}
+
+h3 { font-size: 1.1rem; }
+
+.lesson-kicker {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.lesson-lede {
+  font-size: 1.12rem;
+  color: #b8b5ae;
+  font-style: italic;
+  margin-top: 0;
+}
+
+a { color: var(--accent); }
+a:hover { text-decoration-thickness: 2px; }
+
+code, pre {
+  font-family: "JetBrainsMonoNF Nerd Font", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+}
+
+/* inline code only — code inside <pre> must stay flush */
+:not(pre) > code {
+  background: var(--code-bg);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+/* Prism governs code blocks; we add the rounded-frame look */
+pre[class*="language-"] {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.callout {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 0.7rem 1rem;
+  margin: 1.2rem 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.97rem;
+}
+.callout.warn { border-left-color: var(--bad); background: #2b2020; }
+
+.task {
+  border: 1.5px solid var(--accent);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+}
+.task > :first-child { margin-top: 0; }
+.task > :last-child { margin-bottom: 0; }
+
+.sidenote {
+  font-size: 0.85rem;
+  color: var(--muted);
+  float: right;
+  clear: right;
+  width: 12rem;
+  margin: 0 -14rem 0.5rem 1rem;
+  line-height: 1.45;
+}
+@media (max-width: 70rem) {
+  .sidenote {
+    float: none;
+    width: auto;
+    margin: 0.6rem 0;
+    padding-left: 0.8rem;
+    border-left: 3px solid var(--line);
+  }
+}
+
+.lesson-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+}
+th, td {
+  text-align: left;
+  padding: 0.45rem 0.7rem;
+  border-bottom: 1px solid var(--line);
+}
+th {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+dt { font-family: "JetBrainsMonoNF Nerd Font", monospace; color: #f0eee9; }
+dd { margin-inline-start: 1.4rem; margin-bottom: 0.6rem; }
+
+@media print {
+  body { max-width: none; font-size: 10.5pt; }
+  .no-print { display: none; }
+  pre, .callout, .task { break-inside: avoid; }
+}
+
+/* Radio quiz widget (quiz.js). Markup contract in README.
+ * Kept from the previous skill stylesheet, recolored to this theme.
+ * (quiz-buttons.js styles itself inline and needs nothing here.) */
+.quiz { border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem; margin: 1.5rem 0; background: var(--panel); }
+.quiz fieldset { border: 0; margin: 0; padding: 0; }
+.quiz legend { font-weight: 700; padding: 0; margin-bottom: .5rem; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.quiz label { display: flex; gap: .6rem; align-items: flex-start; padding: .45rem .5rem; border-radius: 8px; cursor: pointer; }
+.quiz label:hover { background: var(--accent-soft); }
+.quiz input[type="radio"] { accent-color: var(--accent); margin-top: .35rem; }
+.quiz .feedback { font-weight: 700; min-height: 1.6em; margin-top: .5rem; }
+.quiz .feedback.ok { color: var(--good); }
+.quiz .feedback.no { color: var(--bad); }
+.quiz button { font: inherit; font-size: .95rem; padding: .4rem .9rem; border-radius: 8px; border: 1px solid var(--ink); background: var(--ink); color: var(--paper); cursor: pointer; margin-top: .5rem; }
+.quiz button.ghost { background: transparent; color: var(--ink); }
