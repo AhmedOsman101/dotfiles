@@ -105,11 +105,11 @@ qalc() {
 }
 
 du-dir() {
-  sudo sh -c "du -h -d1 $1" | sort -hr
+  sudo sh -c "du -h -d1 $*" | sort -hr
 }
 
 du() {
-  sudo sh -c "du -h $1" | sort -hr
+  sudo sh -c "du -h $*" | sort -hr
 }
 
 ffprobe() {

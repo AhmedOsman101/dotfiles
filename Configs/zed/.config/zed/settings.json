@@ -980,7 +980,8 @@
           "-fqbn",
           "arduino:avr:uno"
         ],
-        "path": "/usr/bin/arduino-language-server"
+        "path": "/usr/bin/arduino-language-server",
+        "ignore_system_version": false
       }
     },
     "basedpyright": {
@@ -1010,11 +1011,13 @@
             "spaceRedirects": false
           }
         }
-      }
+      },
+      "binary": { "ignore_system_version": false }
     },
     "biome": {
       "enable_lsp_tasks": true,
-      "settings": { "require_config_file": true }
+      "settings": { "require_config_file": true },
+      "binary": { "ignore_system_version": false }
     },
     "deno": {
       "enable_lsp_tasks": true,
@@ -1029,9 +1032,13 @@
             "imports": { "autoDiscover": true }
           }
         }
-      }
+      },
+      "binary": { "ignore_system_version": false }
     },
-    "emmet-language-server": { "enable_lsp_tasks": true },
+    "emmet-language-server": {
+      "enable_lsp_tasks": true,
+      "binary": { "ignore_system_version": false }
+    },
     "gopls": {
       "initialization_options": {
         "codelenses": {
@@ -1042,7 +1049,8 @@
           "upgrade_dependency": true,
           "vendor": true
         }
-      }
+      },
+      "binary": { "ignore_system_version": false }
     },
     "intelephense": {
       "settings": {
@@ -1064,7 +1072,8 @@
           "rename": { "namespaceMode": "all" },
           "trace": { "server": "messages" }
         }
-      }
+      },
+      "binary": { "ignore_system_version": false }
     },
     "json-language-server": {
       "initialization_options": { "provideFormatter": false },
@@ -1104,7 +1113,8 @@
     "kotlin-lsp": {
       "binary": {
         "path": "/usr/bin/kotlin-lsp",
-        "arguments": ["--stdio"]
+        "arguments": ["--stdio"],
+        "ignore_system_version": false
       }
     },
     "npm-package-json-checker-lsp": {
@@ -1186,7 +1196,8 @@
       "initialization_options": {
         "check": { "command": "clippy" },
         "checkOnSave": true
-      }
+      },
+      "binary": { "ignore_system_version": false }
     },
     "syntaqlite-lsp": {
       "binary": {
@@ -1239,12 +1250,14 @@
         "vue.inlayHints.optionsWrapper": true,
         // Display inlay hints related to `v-bind` shorthand (`:`).
         "vue.inlayHints.vBindShorthand": true
-      }
+      },
+      "binary": { "ignore_system_version": false }
     },
     "yaml-language-server": {
       "settings": {
         "yaml": { "schemaStore": { "enable": true } }
-      }
+      },
+      "binary": { "ignore_system_version": false }
     }
   },
   "minimap": {
@@ -1335,5 +1348,39 @@
     "enabled": true
   },
   "window_title_format": "${projectName}${separator}${fileName}",
-  "window_title_separator": " — "
+  "window_title_separator": " — ",
+
+  // zed-comment extension uses Tree-sitter injection — no LSP config needed.
+  // With semantic_tokens: "combined" in global settings, LSP comment tokens
+  // would override Tree-sitter highlighting without this rule.
+  "global_lsp_settings": {
+    "semantic_token_rules": [{ "token_type": "comment" }]
+  },
+
+  // Map better-comments tag colors to zed-comment's four syntax categories.
+  // zed-comment groups tags: TODO/? → constant, NOTE → string,
+  // FIXME/! → property, WARN/HACK → keyword.
+  // Tags within the same category share a color; per-tag overrides aren't possible.
+  "theme_overrides": {
+    "GitHub Dark": {
+      "syntax": {
+        "constant.comment.todo": {
+          "color": "#FF8C00",
+          "font_style": "italic"
+        },
+        "string.comment.info": {
+          "color": "#3498DB",
+          "font_style": "italic"
+        },
+        "property.comment.error": {
+          "color": "#FF757F",
+          "font_style": "italic"
+        },
+        "keyword.comment.warn": {
+          "color": "#FF8C00",
+          "font_style": "italic"
+        }
+      }
+    }
+  }
 }

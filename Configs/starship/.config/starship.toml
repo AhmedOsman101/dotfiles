@@ -253,6 +253,7 @@ Windows = " "
 [package]
 symbol = "󰏗 "
 format = " [$symbol$version]($style) "
+display_private = true
 disabled = false
 
 [perl]
