@@ -216,6 +216,7 @@ export NU_CONFIG="${XDG_CONFIG_HOME}/nushell/config.nu"
 
 # --- OpenCode --- #
 export OPENCODE_ENABLE_EXA=1
+export OPENCODE_EXPERIMENTAL_LSP_TOOL=true
 
 # --- Parallel --- #
 export PARALLEL_HOME="${XDG_CONFIG_HOME}/parallel"

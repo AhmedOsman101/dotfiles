@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
 # --- OpenCode --- #
-command -v opencode &>/dev/null && cache-completion opencode opencode --completions zsh
+if command -v opencode &>/dev/null; then
+  cache-completion opencode opencode --completions zsh
+fi
