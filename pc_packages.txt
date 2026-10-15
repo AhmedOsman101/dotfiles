@@ -380,6 +380,7 @@ shfmt
 shlorem
 slides
 smartmontools
+smassh-bin
 sof-firmware
 sox
 speedtest-cli
@@ -418,7 +419,6 @@ tree
 ttf-amiri
 ttf-ms-aptos-core
 tuckr
-typioca-bin
 ufw
 ulauncher
 unarchiver
@@ -470,6 +470,7 @@ xdg-user-dirs-gtk
 xdg-utils
 xdotool
 xf86-video-dummy
+xkcdpass
 xorg-fonts-misc
 xorg-mkfontscale
 xorg-xev
