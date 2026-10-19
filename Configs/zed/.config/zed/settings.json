@@ -1017,7 +1017,11 @@
     "biome": {
       "enable_lsp_tasks": true,
       "settings": { "require_config_file": true },
-      "binary": { "ignore_system_version": false }
+      "binary": {
+        "ignore_system_version": false,
+        "path": "/usr/bin/biome",
+        "arguments": ["lsp-proxy"]
+      }
     },
     "deno": {
       "enable_lsp_tasks": true,
@@ -1122,7 +1126,7 @@
     },
     "phptools": {
       "binary": {
-        "arguments": ["-vscode", "-lsp-log", "/tmp/zed-test/php/file.log"],
+        "arguments": ["-vscode"],
         "ignore_system_version": false,
         "path": "/home/othman/.local/share/pnpm/bin/devsense-php-ls"
       },
