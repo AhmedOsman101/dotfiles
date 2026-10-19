@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/AhmedOsman101/commit-sage-cli/refs/heads/main/config.schema.json",
-  "model": "omniroute/poolside/poolside/laguna-s-2.1",
+  "model": "omniroute/kc/kilo-auto/free",
   "generation": {
     "maxRetries": 3,
     "retryDelay": 1000,
@@ -26,11 +26,16 @@
           "maxInputTokens": 262144,
           "maxOutputTokens": 32768
         },
-        "openrouter/apodex/apodex-1.1-mini:free": {
-          "reasoning": "low",
-          "contextWindow": 262144,
-          "maxOutputTokens": 235929,
-          "maxInputTokens": 262144
+        "auto/best-free": {
+          "reasoning": "high",
+          "contextWindow": 2000000,
+          "maxInputTokens": 2000000,
+          "maxOutputTokens": 524288
+        },
+        "kc/kilo-auto/free": {
+          "contextWindow": 256000,
+          "maxOutputTokens": 32768,
+          "maxInputTokens": 256000
         }
       }
     }

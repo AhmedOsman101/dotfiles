@@ -1,18 +1,25 @@
+# --- Deno variant (template, not live) --- #
+# Live languages.toml uses tsgo for JS/TS/JSX/TSX (web work).
+# For Deno projects, replace the matching blocks in languages.toml with these.
+
 # --- Typescript --- #
 [[language]]
 name = "typescript"
-language-servers = ["tsgo", "biome-lsp-proxy", "scls"]
+roots = ["deno.json", "deno.jsonc", "package.json"]
+language-servers = ["deno", "biome-lsp-proxy", "scls"]
 
 # --- Javascript --- #
 [[language]]
 name = "javascript"
-language-servers = ["tsgo", "biome-lsp-proxy", "scls"]
+roots = ["deno.json", "deno.jsonc", "package.json"]
+language-servers = ["deno", "biome-lsp-proxy", "scls"]
 
 # --- JSX --- #
 [[language]]
 name = "jsx"
+roots = ["deno.json", "deno.jsonc", "package.json"]
 language-servers = [
-  "tsgo",
+  "deno",
   "biome-lsp-proxy",
   "scls",
   "vscode-html-language-server",
@@ -22,8 +29,9 @@ language-servers = [
 # --- TSX --- #
 [[language]]
 name = "tsx"
+roots = ["deno.json", "deno.jsonc", "package.json"]
 language-servers = [
-  "tsgo",
+  "deno",
   "biome-lsp-proxy",
   "scls",
   "vscode-html-language-server",

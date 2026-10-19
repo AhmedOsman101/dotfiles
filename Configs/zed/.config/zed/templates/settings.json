@@ -3,8 +3,8 @@
 // Live settings.json uses typescript-ls for JS/TS/JSX/TSX (web work).
 // For Deno playground projects (Helix uses deno for the same reason),
 // merge this over settings.json or copy the blocks in.
-// Mirrors Helix languages.toml (deno live) vs languages.web.toml (typescript-ls template),
-// inverted: Zed live = typescript-ls, template = deno.
+// Mirrors Helix languages.toml (tsgo live) vs languages.web.toml (deno template),
+// same split: live = web tooling, template = deno.
 {
   "lsp": {
     "deno": {

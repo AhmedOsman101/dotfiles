@@ -146,7 +146,7 @@ language-servers = [
 [[language]]
 name = "typescript"
 roots = ["deno.json", "deno.jsonc", "package.json"]
-language-servers = ["deno", "biome-lsp-proxy", "scls"]
+language-servers = ["tsgo", "biome-lsp-proxy", "scls"]
 formatter = { command = "biome", args = [
   "check",
   "--fix",
@@ -159,7 +159,7 @@ formatter = { command = "biome", args = [
 [[language]]
 name = "javascript"
 roots = ["deno.json", "deno.jsonc", "package.json"]
-language-servers = ["deno", "biome-lsp-proxy", "scls"]
+language-servers = ["tsgo", "biome-lsp-proxy", "scls"]
 formatter = { command = "biome", args = [
   "check",
   "--fix",
@@ -173,7 +173,7 @@ formatter = { command = "biome", args = [
 name = "jsx"
 roots = ["deno.json", "deno.jsonc", "package.json"]
 language-servers = [
-  "deno",
+  "tsgo",
   "biome-lsp-proxy",
   "scls",
   "vscode-html-language-server",
@@ -192,7 +192,7 @@ formatter = { command = "biome", args = [
 name = "tsx"
 roots = ["deno.json", "deno.jsonc", "package.json"]
 language-servers = [
-  "deno",
+  "tsgo",
   "biome-lsp-proxy",
   "scls",
   "vscode-html-language-server",
