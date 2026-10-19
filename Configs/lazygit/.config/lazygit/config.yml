@@ -3,11 +3,12 @@ gui:
   customIcons:
     filenames: {}
     extensions: {}
+  nerdFontsVersion: "3"
   scrollHeight: 2
   scrollPastBottom: true
   scrollOffMargin: 2
   scrollOffBehavior: margin
-  tabWidth: 4
+  tabWidth: 2
   mouseEvents: true
   skipDiscardChangeWarning: true
   skipStashWarning: false
@@ -60,8 +61,7 @@ gui:
   showCommandLog: true
   showBottomLine: true
   showPanelJumps: true
-  showIcons: false
-  nerdFontsVersion: ""
+  showIcons: true
   showFileIcons: true
   commitAuthorShortLength: 2
   commitAuthorLongLength: 17
