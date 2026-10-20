@@ -1114,6 +1114,20 @@
         }
       }
     },
+    "jdtls": {
+      "enable_lsp_tasks": true,
+      "settings": {
+        // Use the distro packages instead of anything the extension downloads.
+        // "java_home": "/usr/lib/jvm/java-25-openjdk",
+        "jdtls_launcher": "/usr/bin/jdtls"
+        // "lombok_support": true,
+        // "lombok_jar": "/usr/share/java/lombok/lombok.jar"
+      },
+      "binary": {
+        "path": "/usr/bin/jdtls",
+        "ignore_system_version": false
+      }
+    },
     "kotlin-lsp": {
       "binary": {
         "path": "/usr/bin/kotlin-lsp",
