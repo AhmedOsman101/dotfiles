@@ -10,15 +10,15 @@ CLI task runner driven by a `maskfile.md` — headings are commands, code blocks
 
 ## maskfile Structure
 
-```
+```markdown
 
 ## build
 
 > Builds the project
 
-```sh
+~~~sh
 cargo build --release
-```
+~~~
 ```
 
 H2 = command, blockquote = description, code block = script. No code block = ignored docs.
@@ -27,22 +27,22 @@ H2 = command, blockquote = description, code block = script. No code block = ign
 
 Required in `(parens)`, optional in `[brackets]`. Injected as env vars.
 
-```
+```markdown 
 
 ## greet (name) [title]
 
 > Say hello
 
-```bash
+~~~bash
 echo "Hello, $name!"
-```
+~~~
 ```
 
 ## Named Flags
 
 Define an `**OPTIONS**` list before the code block.
 
-```
+```markdown 
 
 ## serve
 
@@ -54,10 +54,10 @@ Define an `**OPTIONS**` list before the code block.
     * type: string
     * desc: Which port to use
 
-```sh
+~~~sh
 PORT=${port:-8080}
 python -m SimpleHTTPServer $PORT
-```
+~~~
 ```
 
 Types: `boolean` (default), `string`, `number`. Add `required` to make it mandatory, `choices: A, B` to constrain values.
@@ -68,7 +68,7 @@ The `verbose` flag (`-v`/`--verbose`) is auto-injected into every command.
 
 H3+ headings nest under parents. Prefixing with the ancestor name is optional.
 
-```
+```markdown
 
 ## services
 
@@ -78,17 +78,17 @@ H3+ headings nest under parents. Prefixing with the ancestor name is optional.
 
 > Start a service
 
-```bash
+~~~bash
 echo "Starting $name"
-```
+~~~
 
 ### stop (name)
 
 > Stop a service
 
-```bash
+~~~bash
 echo "Stopping $name"
-```
+~~~
 ```
 
 ## Script Runtimes
