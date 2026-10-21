@@ -43,6 +43,10 @@ base-devel
 bash-completion
 bat
 bat-extras
+bats
+bats-assert
+bats-file
+bats-support
 bc
 betterbird-bin
 bind

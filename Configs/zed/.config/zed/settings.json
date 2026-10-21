@@ -646,6 +646,7 @@
           "command": "astyle"
         }
       }
+      // , "language_servers": ["clangd"]
     },
     "C++": {
       "format_on_save": "on",
@@ -654,6 +655,7 @@
           "command": "astyle"
         }
       }
+      // , "language_servers": ["clangd"]
     },
     "CSS": {
       "code_actions_on_format": {
@@ -674,8 +676,10 @@
         }
       },
       "language_servers": [
-        "tailwindcss-intellisense-css",
         "css-variable-lsp",
+        "px-to-rem-lsp",
+        "tailwindcss-intellisense-css",
+        "tailwindcss-language-server",
         "!vscode-css-language-server",
         "..."
       ],
@@ -767,12 +771,20 @@
         }
       },
       "language_servers": [
+        "biome",
+        "import-cost-lsp",
+        "package-version-server",
         "typescript-ls",
-        "vtsls",
-        "!typescript-language-server",
+        "!css-variables",
         "!deno",
-        "!eslint",
         "!emmet-language-server",
+        "!eslint",
+        "!graphql",
+        "!px-to-rem-lsp",
+        "!tailwindcss-intellisense-css",
+        "!tailwindcss-language-server",
+        "!typescript-language-server",
+        "!vtsls",
         "..."
       ],
       "prettier": { "allowed": false }
@@ -813,10 +825,13 @@
       },
       "language_servers": [
         "phptools",
+        "laravel",
         "!phpantom",
         "!intelephense",
         "!phpactor",
         "!emmet-language-server",
+        "!tailwindcss-intellisense-css",
+        "!tailwindcss-language-server",
         "..."
       ]
     },
@@ -900,12 +915,20 @@
         }
       },
       "language_servers": [
+        "biome",
+        "import-cost-lsp",
+        "package-version-server",
         "typescript-ls",
-        "emmet-language-server",
-        "vtsls",
-        "!typescript-language-server",
+        "!css-variables",
         "!deno",
+        "!emmet-language-server",
         "!eslint",
+        "!graphql",
+        "!px-to-rem-lsp",
+        "!tailwindcss-intellisense-css",
+        "!tailwindcss-language-server",
+        "!typescript-language-server",
+        "!vtsls",
         "..."
       ],
       "prettier": { "allowed": false }
@@ -930,12 +953,20 @@
         }
       },
       "language_servers": [
+        "biome",
+        "import-cost-lsp",
+        "package-version-server",
         "typescript-ls",
-        "!emmet-language-server",
-        "vtsls",
-        "!typescript-language-server",
+        "!css-variables",
         "!deno",
+        "!emmet-language-server",
         "!eslint",
+        "!graphql",
+        "!px-to-rem-lsp",
+        "!tailwindcss-intellisense-css",
+        "!tailwindcss-language-server",
+        "!typescript-language-server",
+        "!vtsls",
         "..."
       ],
       "prettier": { "allowed": false }
@@ -1226,8 +1257,20 @@
     },
     "tailwindcss-language-server": {
       "settings": {
-        "classAttributes": ["class", "ui", "className"],
-        "classFunctions": ["cva", "cx"],
+        "classAttributes": [
+          "class",
+          "ui",
+          "className",
+          "ngClass",
+          "class:list"
+        ],
+        "classFunctions": ["cva", "cx", "tw", "clsx", "tw\\.[a-z-]+"],
+        "colorDecorators": true,
+        "showPixelEquivalents": true,
+        "hovers": true,
+        "suggestions": true,
+        "codeActions": true,
+        "validate": "warning",
         "emmetCompletions": true,
         "experimental": {
           "classRegex": [
@@ -1250,12 +1293,11 @@
             "\\.setAttributeNS\\(.*,\\s*['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
             "ui:\\s*{([^)]*)\\s*}"
           ]
-        },
-        "includeLanguages": {
-          "blade": "html",
-          "php": "html",
-          "vue": "html"
         }
+        // , "includeLanguages": {
+        //   "blade": "html",
+        //   "vue": "html"
+        // }
       }
     },
     "vue-language-server": {
@@ -1400,5 +1442,24 @@
         }
       }
     }
-  }
+  },
+  "use_podman": true,
+  "use_autoclose": true,
+  "use_auto_surround": true,
+  "snippet_sort_order": "inline",
+  "show_signature_help_after_edits": true,
+  "show_completion_documentation": true,
+  "show_completions_on_input": true,
+  "selection_highlight": true,
+  "search_wrap": true,
+  "linked_edits": true,
+  "language_servers": [
+    "!css-variables",
+    "!emmet-language-server",
+    "!graphql",
+    "!px-to-rem-lsp",
+    "!tailwindcss-intellisense-css",
+    "!tailwindcss-language-server",
+    "..."
+  ]
 }
