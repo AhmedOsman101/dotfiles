@@ -1,1 +1,0 @@
-/home/othman/.config/opencode/plugins/opencode-smart-title/index.ts
