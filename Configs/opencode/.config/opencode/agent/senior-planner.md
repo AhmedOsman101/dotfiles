@@ -22,7 +22,7 @@ permissions:
   # Markdown is the planner's deliverable. Nothing else is.
   - action: edit
     resource: "*"
-    effect: deny
+    effect: ask
   - action: edit
     resource: "**/*.md"
     effect: allow
