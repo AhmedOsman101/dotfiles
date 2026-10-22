@@ -1,0 +1,51 @@
+logLevel = "warn" # "debug" | "warn" | "error"
+telemetry = false
+
+[console]
+depth = 3
+
+[install]
+optional = true
+dev = true
+peer = true
+ignoreScripts = false
+concurrentScripts = 4
+auto = "fallback"
+globalDir = "~/.local/share/bun/install/global"
+globalBinDir = "~/.local/share/bun/bin"
+dir = "~/.local/share/bun/install/cache"
+globalStore = true
+logLevel = "debug"
+minimumReleaseAge = 259200
+# These packages will bypass the 3-day minimum age requirement
+minimumReleaseAgeExcludes = ["@types/bun", "typescript"]
+
+[fmt]
+arrowParens = "avoid"
+bracketSameLine = false
+bracketSpacing = true
+embeddedLanguageFormatting = "auto"
+endOfLine = "lf"
+experimentalOperatorPosition = "end"
+experimentalTernaries = true
+htmlWhitespaceSensitivity = "css"
+jsxSingleQuote = false
+objectWrap = "preserve"
+printWidth = 80
+proseWrap = "preserve"
+quoteProps = "as-needed"
+semi = true
+singleAttributePerLine = false
+singleQuote = false
+tabWidth = 2
+trailingComma = "es5"
+useTabs = false
+vueIndentScriptAndStyle = false
+
+[[fmt.overrides]]
+files = ["*.json", "*.jsonc"]
+options = { trailingComma = "none" }
+
+[[fmt.overrides]]
+files = ["*.yaml", "*.yml"]
+options = { singleQuote = false }

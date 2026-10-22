@@ -221,14 +221,15 @@ indent = { tab-width = 2, unit = "  " }
 # --- Markdown --- #
 [[language]]
 name = "markdown"
-formatter = { command = "prettier", args = [
+formatter = { command = "bun", args = [
+  "fmt",
   "--ignore-path=/dev/null",
   "--ignore-unknown=false",
   "--config=/home/othman/.config/.prettierrc.json",
   "--stdin-filepath",
   "file.md",
 ] }
-language-servers = ["marksman", "scls"]
+language-servers = ["markdown-oxide", "scls"]
 
 # --- Svelte --- #
 [[language]]
