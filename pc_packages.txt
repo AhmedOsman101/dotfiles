@@ -239,7 +239,7 @@ maim
 man-db
 man-pages
 mariadb
-marksman
+markdown-oxide
 marp-bin
 marp-bin-debug
 maven
