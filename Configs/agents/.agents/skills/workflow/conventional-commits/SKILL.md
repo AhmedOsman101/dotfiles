@@ -13,12 +13,11 @@ keywords:
     "release",
     "git",
   ]
-related: [jj-core, sem]
 ---
 
 # Conventional Commits (v1.0.0)
 
-Produce consistent commit messages that parse into changelogs and drive semantic versioning.
+Produce consistent commit messages that parse into changelogs and drive semantic versioning. Follows the [v1.0.0 spec](./references/spec.md).
 
 ## Format
 
@@ -30,7 +29,7 @@ type(scope): description
 [optional footers]
 ```
 
-Rules: header on one line, scope is always included, separate sections with blank lines. Add `!` before `:` for breaking changes (e.g., `feat(api)!: remove v1`).
+Rules: header on one line, separate sections with blank lines. Add `!` before `:` for breaking changes (e.g., `feat(api)!: remove v1`). Scope is optional: a short noun naming the affected module or area (e.g., `auth`, `api`, `deps`), omitted for cross-cutting changes.
 
 ## Choosing the Type
 
@@ -48,17 +47,17 @@ Rules: header on one line, scope is always included, separate sections with blan
 - `test`: test-only changes — `.test.ts`, `.spec.ts` files
 - `build`: build system — package.json, Cargo.toml, bundler config
 - `ci`: CI/CD pipelines — GitHub Actions, deployment scripts
-- `docs`: documentation files only — `.md`, `.txt`. Code comments use the type matching the actual code change.
+- `docs`: documentation of the project or code — README, guides, manpages, CHANGELOG, code comments — any file type counts
 
 **Reverts:**
 
-- `revert`: undo a previous commit — `revert: <original-message>`
+- `revert`: undo a previous commit — `revert: <original headline>`, optionally with a `Refs:` footer naming the reverted SHAs
 
 When unsure: new user behavior -> `feat`, corrected behavior -> `fix`, otherwise -> `chore` or a more specific maintenance type.
 
 ## Writing the Description
 
-Use imperative mood, be specific, avoid generic words like "stuff" or "changes".
+Use imperative mood, prefer a lowercase start (proper nouns, acronyms, and code identifiers may be capitalized), be specific, avoid generic words like "stuff" or "changes".
 
 ```
 ✅ feat(auth): add passwordless login
@@ -66,6 +65,12 @@ Use imperative mood, be specific, avoid generic words like "stuff" or "changes".
 ❌ docs(agent): add behavioral guidelines and core principles  (too vague)
 ✅ docs(agent): add rules for dead code removal, build verification, security  (specific)
 ```
+
+## Body and Footers
+
+- Small changes: first line only.
+- Complex changes: bullet body, lines starting with `- `, max 5 bullets, present tense, active voice — focus on **what** and **why**, not how.
+- Footers go one blank line after the body. Reference issues or PRs (e.g., `Closes #123`, `Refs: <commit shas>`), or describe the breaking change (`BREAKING CHANGE: ...`).
 
 ## Breaking Changes
 
@@ -93,8 +98,7 @@ BREAKING CHANGE: /v1/* endpoints are removed; migrate to /v2/*.
 
 - Subject line must be imperative mood ("add" not "added" or "adds")
 - No period at end of subject line
-- Keep subject under 72 characters
-- Use `BREAKING CHANGE:` footer for breaking changes
+- Use `BREAKING CHANGE:` footer or `!` for breaking changes
 - Map types to semver: fix->patch, feat->minor, breaking->major
 
 ## When Asked to Write a Commit Message
