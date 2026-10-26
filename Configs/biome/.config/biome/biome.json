@@ -251,15 +251,12 @@
         "noShadow": "on"
       },
       "nursery": {
-        "useSortedClasses": {
-          "fix": "safe",
-          "level": "warn",
-          "options": {
-            "attributes": ["classList", "class", "className"]
-          }
-        },
         "noFloatingPromises": "warn",
-        "useExhaustiveSwitchCases": "on"
+        "useExhaustiveSwitchCases": "on",
+        "useTailwindSortedClasses": {
+          "fix": "safe",
+          "level": "warn"
+        }
       },
       "security": {
         "noBlankTarget": {
@@ -371,5 +368,6 @@
         "formatter": { "trailingCommas": "none" }
       }
     }
-  ]
+  ],
+  "tailwind": { "attributes": ["class", "className", "classList"] }
 }
