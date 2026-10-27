@@ -18,7 +18,7 @@ globalStore = true
 logLevel = "debug"
 minimumReleaseAge = 259200
 # These packages will bypass the 3-day minimum age requirement
-minimumReleaseAgeExcludes = ["@types/bun", "typescript"]
+minimumReleaseAgeExcludes = ["@types/bun", "typescript", "lib-result"]
 
 [fmt]
 arrowParens = "avoid"

@@ -221,9 +221,9 @@ libreoffice-fresh-ar
 libusb-compat
 libva-intel-driver
 libva-nvidia-driver
+linux
 linux-firmware
-linux-lts
-linux-lts-headers
+linux-headers
 llvm
 localsend
 love
