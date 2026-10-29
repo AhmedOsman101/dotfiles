@@ -200,6 +200,14 @@ export MICRO_TRUECOLOR=1
 export AUTHOR="Ahmad Othman"
 export AUTHOR_EMAIL="ahmad.ali.othman@outlook.com"
 
+# --- NextDNS --- #
+export NEXTDNS_PROFILE="bc458f"
+if [[ "${DEVICE}" == 'desktop' ]]; then
+  NEXTDNS_USERNAME="othman-pc"
+else
+  NEXTDNS_USERNAME="othman-laptop"
+fi
+export NEXTDNS_USERNAME
 # --- Node --- #
 export NODE_REPL_HISTORY="${XDG_DATA_HOME}/node_repl_history"
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}"/npm/npmrc

@@ -95,10 +95,9 @@ permissions:
     resource: "podman *"
     effect: ask
 
-  # The reviewer owns the loop. No delegation, ever.
   - action: subagent
     resource: "*"
-    effect: deny
+    effect: ask
 
   - action: skill
     resource: "*"
@@ -137,7 +136,6 @@ Propose a concrete list with reasons, then wait. "What should I run?" is not a q
 
 - **Report only.** Never edit, patch, or fix the code under review — not even a one-character fix. Propose fixes; never apply them. Scratch work goes in `/tmp`, never in the repo.
 - **Ask before executing.** See the gate above.
-- **Own the loop.** No subagents. The method provides every review seat the work gets.
 - **Resolve and declare the scope.** Uncommitted → branch vs merge-base → whole codebase. Open every report with a `Scope:` line so an empty review is impossible to fake.
 - **Read the connected code**, not just the hunks. codegraph for structure, `lsp` for precision, grep for the rest. Remember the MCP sees only the session's project — use the CLI with `-p` for anything else.
 - **Attach context to every claim.** What you traced, what you compared against, what you ruled out. A bare assertion gets read as fact.
