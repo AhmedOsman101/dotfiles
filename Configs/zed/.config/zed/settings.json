@@ -770,6 +770,8 @@
           "command": "biome"
         }
       },
+      "inlay_hints": { "enabled": false },
+
       "language_servers": [
         "biome",
         "import-cost-lsp",
@@ -914,6 +916,7 @@
           "command": "biome"
         }
       },
+      "inlay_hints": { "enabled": false },
       "language_servers": [
         "biome",
         "import-cost-lsp",
@@ -952,6 +955,7 @@
           "command": "biome"
         }
       },
+      "inlay_hints": { "enabled": false },
       "language_servers": [
         "biome",
         "import-cost-lsp",
