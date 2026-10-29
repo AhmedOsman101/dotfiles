@@ -806,14 +806,15 @@
       "format_on_save": "on",
       "formatter": {
         "external": {
+          "command": "bun",
           "arguments": [
+            "fmt",
             "--ignore-path=/dev/null",
             "--ignore-unknown=false",
-            "--config=/home/othman/.config/.prettierrc.json",
+            "--config=/home/othman/.config/.bunfig.toml",
             "--stdin-filepath",
             "{buffer_path}"
-          ],
-          "command": "prettier"
+          ]
         }
       },
       "indent_list_on_tab": true,

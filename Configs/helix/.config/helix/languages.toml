@@ -225,7 +225,7 @@ formatter = { command = "bun", args = [
   "fmt",
   "--ignore-path=/dev/null",
   "--ignore-unknown=false",
-  "--config=/home/othman/.config/.prettierrc.json",
+  "--config=/home/othman/.config/.bunfig.toml",
   "--stdin-filepath",
   "file.md",
 ] }
