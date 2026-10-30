@@ -22,6 +22,9 @@ Configs/atuin/.local/share/atuin/key     filter=git-crypt diff=git-crypt
 Configs/atuin/.local/share/atuin/session filter=git-crypt diff=git-crypt
 Configs/atuin/.local/share/atuin/host_id filter=git-crypt diff=git-crypt
 
+# --- Rclone --- #
+Configs/rclone/.config/rclone/* filter=git-crypt diff=git-crypt
+
 # --- Agentic sercrets --- #
 # 9Router
 Configs/9router/.9router/*                     filter=git-crypt diff=git-crypt
