@@ -454,6 +454,7 @@ vulkan-nouveau
 watchexec
 wavemon
 wget
+whisper-cpp
 wild
 wireless-regdb
 wireless_tools

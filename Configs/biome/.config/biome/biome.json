@@ -1,6 +1,6 @@
 {
   "root": true,
-  "$schema": "https://biomejs.dev/schemas/2.5.11/schema.json/",
+  "$schema": "https://biomejs.dev/schemas/2.6.3/schema.json/",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -30,6 +30,10 @@
       "!**/build",
       "!**/.git",
       "!**/*.vue",
+      "!**/*.md",
+      "!**/*.mdx",
+      "!**/*.yaml",
+      "!**/*.yml",
       "!**/*.svelte",
       "!**/fresh.gen.ts",
       "!**/routeTree.gen.ts",
