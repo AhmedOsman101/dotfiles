@@ -1,9 +1,9 @@
 {
   "providers": {
-    "9router": {
-      "baseUrl": "http://127.0.0.1:20128/v1",
+    "omniroute": {
+      "baseUrl": "http://127.0.0.1:8082/v1",
       "api": "openai-completions",
-      "apiKey": "$N9ROUTER_API_KEY",
+      "apiKey": "$OMNIROUTE_API_KEY",
       "models": [
         {
           "id": "cx/gpt-5.6-luna",
