@@ -78,7 +78,6 @@
   "disable_ai": true,
   "ensure_final_newline_on_save": true,
   "file_types": {
-    "C++": ["*.ino"],
     "Shell Script": [
       "APKBUILD",
       "*.ash",
@@ -657,6 +656,16 @@
         }
       }
       // , "language_servers": ["clangd"]
+    },
+    "Arduino": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "astyle"
+        }
+      },
+      "inlay_hints": { "enabled": true },
+      "language_servers": ["arduino-language-server"]
     },
     "CSS": {
       "code_actions_on_format": {

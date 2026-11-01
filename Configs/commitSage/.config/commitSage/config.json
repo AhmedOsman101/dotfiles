@@ -1,13 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/AhmedOsman101/commit-sage-cli/refs/heads/main/config.schema.json",
-  "model": "omniroute/poolside/poolside/laguna-s-2.1",
+  "model": "gemini/gemini-3.1-flash-lite",
   "generation": {
     "maxRetries": 3,
     "retryDelay": 1000,
     "temperature": 0.3,
     "maxPromptTokens": 100000,
-    "diffStrategy": "staged",
-    "maxOutputTokens": 4096
+    "maxOutputTokens": 4096,
+    "diffStrategy": "staged"
   },
   "providers": {
     "defaults": {
@@ -34,8 +34,8 @@
         },
         "kc/kilo-auto/free": {
           "contextWindow": 256000,
-          "maxOutputTokens": 32768,
-          "maxInputTokens": 256000
+          "maxInputTokens": 256000,
+          "maxOutputTokens": 32768
         }
       }
     }
@@ -47,13 +47,6 @@
     "commitFormat": "conventional",
     "commitLanguage": "english",
     "promptForRefs": false,
-    "maxLength": 80,
-    "bodyStyle": "subject-body",
-    "recentCommits": {
-      "enabled": false,
-      "count": 5,
-      "scope": "all"
-    },
     "customInstructions": "",
     "refs": {
       "enabled": false,
@@ -61,6 +54,13 @@
       "value": "",
       "placement": "end",
       "branchPattern": "[A-Z][A-Z0-9]*-[0-9]+"
+    },
+    "maxLength": 80,
+    "bodyStyle": "subject-body",
+    "recentCommits": {
+      "enabled": false,
+      "count": 5,
+      "scope": "all"
     }
   },
   "git": {

@@ -4,32 +4,26 @@ arduino-lsp - a thin LSP proxy for arduino-language-server.
 
 Why this exists
 ---------------
-arduino-language-server crashes on startup unless the LSP `initialize` request
-carries a `rootUri` pointing at the sketch folder:
+Two upstream bugs in arduino-language-server 0.7.7 cause crashes with modern
+editors:
 
-    ls/ls.go:184    ls.sketchRoot = ideParams.RootURI.AsPath()
+1. ls/ls.go:184  ls.sketchRoot = ideParams.RootURI.AsPath()
+   AsPath() on an empty DocumentURI returns nil and the next call segfaults.
+   Arduino IDE 2 always sends rootUri; Helix/Zed do not always send one.
+   Fix: inject rootUri from $ARDUINO_SKETCH into the initialize request.
 
-With an empty RootURI, AsPath() returns nil and the next call segfaults.
-Arduino IDE 2 always sends rootUri, so upstream never noticed. Helix does not
-send it, and the bug is still present on the current main branch.
-
-Editors send rootUri once, at initialize time, and never change it. So the value
-has to match the sketch you actually have open. This proxy fills it in from the
-ARDUINO_SKETCH environment variable, which means you pick the sketch with an
-environment variable instead of editing a language-server config block.
+2. client.go:199  panic: unimplemented request: workspace/semanticTokens/refresh
+   clangd 22+ sends workspace/semanticTokens/refresh after indexing.
+   The arduino-language-server has no handler for it and panics.
+   Fix: strip workspace.semanticTokens.refreshSupport from the client
+   capabilities in initialize so clangd never advertises the feature.
 
 Usage
 -----
     ARDUINO_SKETCH=~/Arduino/MySketch hx MySketch/MySketch.ino
 
-or rely on the default (~/Arduino/Blink), or set it in Helix's config:
-
-    [language-server.arduino]
-    command = "arduino-lsp"
-
-Everything else is proxied through untouched.
+or rely on the default (most recently modified sketch in ~/Arduino).
 """
-
 import json
 import os
 import subprocess
@@ -138,12 +132,20 @@ def main():
 
         if msg.get("method") == "initialize":
           params = msg.setdefault("params", {})
-          # Only fill it in if the editor did not provide one.
+          # Bug 1: inject rootUri if the editor did not provide one.
           if not params.get("rootUri"):
             params["rootUri"] = root_uri
             log(f"injected rootUri -> {root_uri}")
           else:
             log("editor supplied its own rootUri, leaving it alone")
+          # Bug 2: strip workspace/semanticTokens/refreshSupport so clangd 22+
+          # never sends workspace/semanticTokens/refresh, which arduino-language-server
+          # has no handler for and panics on.
+          caps = params.get("capabilities", {})
+          ws = caps.get("workspace", {})
+          if ws.pop("semanticTokens", None) is not None:
+            log("stripped workspace.semanticTokens.refreshSupport")
+          params["capabilities"] = caps
 
         write_message(proc.stdin, json.dumps(msg).encode("utf-8"))
     except (BrokenPipeError, OSError):
