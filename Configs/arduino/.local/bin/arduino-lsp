@@ -1,0 +1,179 @@
+#!/usr/bin/env python3
+"""
+arduino-lsp - a thin LSP proxy for arduino-language-server.
+
+Why this exists
+---------------
+arduino-language-server crashes on startup unless the LSP `initialize` request
+carries a `rootUri` pointing at the sketch folder:
+
+    ls/ls.go:184    ls.sketchRoot = ideParams.RootURI.AsPath()
+
+With an empty RootURI, AsPath() returns nil and the next call segfaults.
+Arduino IDE 2 always sends rootUri, so upstream never noticed. Helix does not
+send it, and the bug is still present on the current main branch.
+
+Editors send rootUri once, at initialize time, and never change it. So the value
+has to match the sketch you actually have open. This proxy fills it in from the
+ARDUINO_SKETCH environment variable, which means you pick the sketch with an
+environment variable instead of editing a language-server config block.
+
+Usage
+-----
+    ARDUINO_SKETCH=~/Arduino/MySketch hx MySketch/MySketch.ino
+
+or rely on the default (~/Arduino/Blink), or set it in Helix's config:
+
+    [language-server.arduino]
+    command = "arduino-lsp"
+
+Everything else is proxied through untouched.
+"""
+
+import json
+import os
+import subprocess
+import sys
+import threading
+from pathlib import Path
+
+SERVER = "arduino-language-server"
+CLANGD = "/usr/bin/clangd"
+CLI = "/usr/bin/arduino-cli"
+CLI_CONFIG = str(Path.home() / ".arduino15" / "arduino-cli.yaml")
+FQBN = "arduino:avr:uno"
+
+
+def log(msg):
+  print(f"arduino-lsp: {msg}", file=sys.stderr)
+
+
+def default_sketch():
+  """Pick a sensible default so the proxy is never useless."""
+  env = os.environ.get("ARDUINO_SKETCH")
+  if env:
+    return Path(env).expanduser()
+
+  # Otherwise use the most recently modified sketch folder in the sketchbook.
+  sketchbook = Path.home() / "Arduino"
+  candidates = []
+  if sketchbook.is_dir():
+    for child in sketchbook.iterdir():
+      ino = child / f"{child.name}.ino"
+      if ino.is_file():
+        candidates.append((ino.stat().st_mtime, child))
+  if not candidates:
+    log("no sketches found in ~/Arduino - defaulting to ~/Arduino/Blink")
+    return sketchbook / "Blink"
+  newest = max(candidates)[1]
+  log(f"no ARDUINO_SKETCH set, using most recent sketch: {newest}")
+  return newest
+
+
+def read_message(stream):
+  """Read one Content-Length framed LSP message. Returns (headers, body)."""
+  content_length = None
+  while True:
+    line = stream.readline()
+    if not line:
+      return None, None
+    line = line.decode("utf-8", "replace")
+    if line in ("\r\n", "\n"):
+      break
+    if line.lower().startswith("content-length:"):
+      content_length = int(line.split(":", 1)[1].strip())
+  if content_length is None:
+    return None, None
+  return True, stream.read(content_length)
+
+
+def write_message(stream, body: bytes):
+  stream.write(f"Content-Length: {len(body)}\r\n\r\n".encode("ascii"))
+  stream.write(body)
+  stream.flush()
+
+
+def main():
+  root = default_sketch().resolve()
+  if not root.is_dir():
+    log(f"ERROR: sketch folder does not exist: {root}")
+    log("       set ARDUINO_SKETCH=/path/to/your/sketch")
+    return 1
+
+  root_uri = root.as_uri()
+
+  proc = subprocess.Popen(
+    [
+      SERVER,
+      "-clangd",
+      CLANGD,
+      "-cli",
+      CLI,
+      "-cli-config",
+      CLI_CONFIG,
+      "-fqbn",
+      FQBN,
+    ],
+    stdin=subprocess.PIPE,
+    stdout=subprocess.PIPE,
+    stderr=None,  # let the server's own logging reach Helix's log
+  )
+
+  log(f"sketch root: {root}")
+
+  # stderr of the child is inherited, so Helix's log shows its output as usual.
+
+  def editor_to_server():
+    stdin = sys.stdin.buffer
+    try:
+      while True:
+        _, body = read_message(stdin)
+        if body is None:
+          break
+        try:
+          msg = json.loads(body)
+        except ValueError:
+          write_message(proc.stdin, body)
+          continue
+
+        if msg.get("method") == "initialize":
+          params = msg.setdefault("params", {})
+          # Only fill it in if the editor did not provide one.
+          if not params.get("rootUri"):
+            params["rootUri"] = root_uri
+            log(f"injected rootUri -> {root_uri}")
+          else:
+            log("editor supplied its own rootUri, leaving it alone")
+
+        write_message(proc.stdin, json.dumps(msg).encode("utf-8"))
+    except (BrokenPipeError, OSError):
+      pass
+    finally:
+      try:
+        proc.stdin.close()  # pyright: ignore[reportOptionalMemberAccess]
+      except OSError:
+        pass
+
+  def server_to_editor():
+    try:
+      while True:
+        _, body = read_message(proc.stdout)
+        if body is None:
+          break
+        write_message(sys.stdout.buffer, body)
+    except (BrokenPipeError, OSError):
+      pass
+
+  t_out = threading.Thread(target=server_to_editor, daemon=True)
+  t_out.start()
+  editor_to_server()
+  t_out.join(timeout=30)
+  proc.terminate()
+  return 0
+
+
+if __name__ == "__main__":
+  try:
+    sys.exit(main())
+  except KeyboardInterrupt:
+    sys.exit(130)

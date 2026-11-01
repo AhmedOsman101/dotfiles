@@ -596,17 +596,7 @@ command = "devsense-php-ls"
 #
 #   ARDUINO_SKETCH=~/Arduino/MySketch hx MySketch/MySketch.ino
 [language-server.arduino]
-command = "arduino-language-server"
-args = [
-  "-clangd",
-  "/usr/bin/clangd",
-  "-cli",
-  "/usr/bin/arduino-cli",
-  "-cli-config",
-  "/home/othman/.arduino15/arduino-cli.yaml",
-  "-fqbn",
-  "arduino:avr:uno",
-]
+command = "arduino-lsp"
 
 # --- basedpyright --- #
 [language-server.basedpyright]

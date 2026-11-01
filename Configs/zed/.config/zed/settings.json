@@ -78,6 +78,7 @@
   "disable_ai": true,
   "ensure_final_newline_on_save": true,
   "file_types": {
+    "C++": ["*.ino"],
     "Shell Script": [
       "APKBUILD",
       "*.ash",
@@ -1006,17 +1007,7 @@
   "lsp": {
     "arduino-language-server": {
       "binary": {
-        "arguments": [
-          "-clangd",
-          "/usr/bin/clangd",
-          "-cli",
-          "/usr/bin/arduino-cli",
-          "-cli-config",
-          "/home/othman/.arduino15/arduino-cli.yaml",
-          "-fqbn",
-          "arduino:avr:uno"
-        ],
-        "path": "/usr/bin/arduino-language-server",
+        "path": "/home/othman/.local/bin/arduino-lsp",
         "ignore_system_version": false
       }
     },

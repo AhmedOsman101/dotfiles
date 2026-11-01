@@ -1,5 +1,5 @@
 modelRoles:
-  default: omniroute/auto/best-free
+  default: omniroute/kc/reflection/beam-free
   web: web/public
   image: openrouter/google/gemini-3-pro-image
 symbolPreset: unicode

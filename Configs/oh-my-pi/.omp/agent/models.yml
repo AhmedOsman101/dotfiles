@@ -4,6 +4,12 @@ providers:
     api: openai-completions
     apiKey: OMNIROUTE_API_KEY
     models:
+      - id: kc/reflection/beam-free
+        name: kc/reflection/beam-free
+        reasoning: true
+        input: [text]
+        contextWindow: 1048576
+        maxTokens: 131072
       - id: cl/z-ai/glm-5.3-flash
         name: cl/z-ai/glm-5.3-flash
         reasoning: true
