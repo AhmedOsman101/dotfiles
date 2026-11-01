@@ -362,6 +362,8 @@ qtpass
 quickemu-git
 quickgui
 rar
+rclone
+rclone-browser-qt6
 re2c
 rebuild-detector
 reflector

@@ -52,10 +52,7 @@ if [[ -z "${DBUS_SESSION_BUS_ADDRESS}" ]]; then
 fi
 
 # ---- Omniroute ---- #
-if timeout 30 bun update -g omniroute --latest || true; then
-  # 9router --tray --skip-update &
-  omniroute --tray --no-open --port 8082 &
-fi
+omniroute --tray --no-open --port 8082
 
 # ---- Start Spotify listener ---- #
 # systemctl --user start spotify-listener &
