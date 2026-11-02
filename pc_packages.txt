@@ -27,6 +27,7 @@ archcraft-mirrorlist
 archcraft-neofetch
 archcraft-sddm-theme
 archcraft-vim
+arduino-language-server
 aria2
 ark
 ascii
