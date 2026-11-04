@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/AhmedOsman101/commit-sage-cli/refs/heads/main/config.schema.json",
-  "model": "gemini/gemini-3.1-flash-lite",
+  "model": "omniroute/agnes/agnes-3.0-flash",
   "generation": {
     "maxRetries": 3,
     "retryDelay": 1000,
@@ -20,11 +20,11 @@
       "apiKey": "$OMNIROUTE_API_KEY",
       "apiType": "openai-chat",
       "models": {
-        "poolside/poolside/laguna-s-2.1": {
+        "agnes/agnes-3.0-flash": {
           "reasoning": "max",
-          "contextWindow": 262144,
-          "maxInputTokens": 262144,
-          "maxOutputTokens": 32768
+          "contextWindow": 512000,
+          "maxOutputTokens": 65536,
+          "maxInputTokens": 512000
         },
         "auto/best-free": {
           "reasoning": "high",
