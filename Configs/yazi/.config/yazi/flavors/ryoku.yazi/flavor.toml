@@ -1,4 +1,7 @@
-# Ryoku Color palette
+# Ryoku palette for yazi. Rendered by the theme daemon; do not edit.
+#
+# yazi reads theme.toml beside yazi.toml. Ryoku ships only yazi.toml, so this
+# file is the daemon's alone and clobbers nothing you wrote.
 
 [mgr]
 cwd = { fg = "#c3c5dd" }
@@ -78,11 +81,11 @@ title_error = { fg = "#ffb4ab" }
 # so the "*" fallback stays last.
 [filetype]
 rules = [
-  { mime = "image/*", fg = "#e5bad8" },
-  { mime = "{audio,video}/*", fg = "#bac3ff" },
-  { mime = "application/{zip,gzip,x-tar,x-bzip2,x-7z-compressed,x-rar,vnd.rar,x-xz,zstd}", fg = "#bac3ff" },
-  { url = "*", is = "orphan", fg = "#ffb4ab" },
-  { url = "*", is = "exec", fg = "#e5bad8" },
-  { url = "*/", fg = "#c3c5dd", bold = true },
-  { url = "*", fg = "#e3e1e9" },
+	{ mime = "image/*", fg = "#e5bad8" },
+	{ mime = "{audio,video}/*", fg = "#bac3ff" },
+	{ mime = "application/{zip,gzip,x-tar,x-bzip2,x-7z-compressed,x-rar,vnd.rar,x-xz,zstd}", fg = "#bac3ff" },
+	{ url = "*", is = "orphan", fg = "#ffb4ab" },
+	{ url = "*", is = "exec", fg = "#e5bad8" },
+	{ url = "*/", fg = "#c3c5dd", bold = true },
+	{ url = "*", fg = "#e3e1e9" },
 ]
