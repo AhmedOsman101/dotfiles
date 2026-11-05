@@ -1,27 +1,67 @@
-[colors.bright]
-black = "#50545B"
-blue = "#7AA2F7"
-cyan = "#7DCFFF"
-green = "#73DACA"
-magenta = "#BB9AF7"
-red = "#F7768E"
-white = "#B5BCC9"
-yellow = "#EFCA84"
-
-[colors.normal]
-black = "#14141E"
-blue = "#4CA6E8"
-cyan = "#7DCFFF"
-green = "#35BF88"
-magenta = "#BB9AF7"
-red = "#F7768E"
-white = "#E6E6E8"
-yellow = "#DBAC66"
+# Ryoku palette -> Alacritty. Rendered by matugen; do not edit.
 
 [colors.primary]
-background = "#0D1117"
-foreground = "#ABB2BF"
+background = '#131313'
+foreground = '#e3e3e3'
 
 [colors.cursor]
-cursor = "#ABB2BF"
-text = "#14141E"
+text = '#131313'
+cursor = '#e3e3e3'
+
+[colors.vi_mode_cursor]
+text = '#131313'
+cursor = '#c6c6c6'
+
+[colors.selection]
+text = '#131313'
+background = '#c6c6c6'
+
+[colors.search.matches]
+foreground = '#131313'
+background = '#c7c7c7'
+
+[colors.search.focused_match]
+foreground = '#131313'
+background = '#c6c6c6'
+
+[colors.footer_bar]
+foreground = '#e3e3e3'
+background = '#1f1f1f'
+
+[colors.hints.start]
+foreground = '#131313'
+background = '#c7c7c7'
+
+[colors.hints.end]
+foreground = '#131313'
+background = '#c7c7c7'
+
+[colors.normal]
+black = '#131313'
+red = '#c7c7c7'
+green = '#c6c6c6'
+yellow = '#c7c7c7'
+blue = '#c6c6c6'
+magenta = '#c6c6c6'
+cyan = '#c7c7c7'
+white = '#e3e3e3'
+
+[colors.bright]
+black = '#909090'
+red = '#c7c7c7'
+green = '#c6c6c6'
+yellow = '#c7c7c7'
+blue = '#c6c6c6'
+magenta = '#c6c6c6'
+cyan = '#909090'
+white = '#e2e2e2'
+
+[colors.dim]
+black = '#131313'
+red = '#c7c7c7'
+green = '#c6c6c6'
+yellow = '#c7c7c7'
+blue = '#c6c6c6'
+magenta = '#c6c6c6'
+cyan = '#c7c7c7'
+white = '#e3e3e3'

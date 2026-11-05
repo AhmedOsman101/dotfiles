@@ -7,11 +7,7 @@
       "name": "Matugen Dark",
       "appearance": "dark",
       "style": {
-        "accents": [
-          "#c6c6c6",
-          "#c6c6c6",
-          "#c7c7c7"
-        ],
+        "accents": ["#c6c6c6", "#c6c6c6", "#c7c7c7"],
         "background.appearance": "opaque",
         "border": "#474747",
         "border.variant": "#909090",
@@ -299,11 +295,7 @@
       "name": "Matugen Light",
       "appearance": "light",
       "style": {
-        "accents": [
-          "#c6c6c6",
-          "#c6c6c6",
-          "#c7c7c7"
-        ],
+        "accents": ["#c6c6c6", "#c6c6c6", "#c7c7c7"],
         "background.appearance": "opaque",
         "border": "#474747",
         "border.variant": "#909090",

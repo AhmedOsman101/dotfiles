@@ -1,0 +1,79 @@
+# Ryoku Color palette
+
+[mgr]
+cwd = { fg = "#c6c6c6" }
+
+find_keyword = { fg = "#c7c7c7", bold = true }
+find_position = { fg = "#c6c6c6", bold = true }
+
+marker_copied = { fg = "#c7c7c7", bg = "#c7c7c7" }
+marker_cut = { fg = "#c7c7c7", bg = "#c7c7c7" }
+marker_marked = { fg = "#c6c6c6", bg = "#c6c6c6" }
+marker_selected = { fg = "#c6c6c6", bg = "#c6c6c6" }
+
+border_symbol = "│"
+border_style = { fg = "#474747" }
+
+[mode]
+normal_main = { fg = "#303030", bg = "#c6c6c6", bold = true }
+normal_alt = { fg = "#c6c6c6", bg = "#1f1f1f" }
+select_main = { fg = "#303030", bg = "#c7c7c7", bold = true }
+select_alt = { fg = "#c7c7c7", bg = "#1f1f1f" }
+unset_main = { fg = "#313131", bg = "#c7c7c7", bold = true }
+unset_alt = { fg = "#c7c7c7", bg = "#1f1f1f" }
+
+[status]
+progress_label = { fg = "#e3e3e3", bold = true }
+progress_normal = { fg = "#c6c6c6", bg = "#1f1f1f" }
+progress_error = { fg = "#c7c7c7", bg = "#1f1f1f" }
+
+[input]
+border = { fg = "#c6c6c6" }
+title = {}
+value = {}
+selected = { reversed = true }
+
+[pick]
+border = { fg = "#c6c6c6" }
+active = { fg = "#c7c7c7", bold = true }
+inactive = {}
+
+[cmp]
+border = { fg = "#c6c6c6" }
+active = { fg = "#c7c7c7", bold = true }
+inactive = {}
+
+[tasks]
+border = { fg = "#c6c6c6" }
+title = {}
+hovered = { fg = "#c7c7c7", underline = true }
+
+[which]
+mask = { bg = "#1f1f1f" }
+cand = { fg = "#c6c6c6" }
+rest = { fg = "#c6c6c6" }
+desc = { fg = "#c7c7c7" }
+separator = "  "
+separator_style = { fg = "#909090" }
+
+[help]
+hovered = { reversed = true, bold = true }
+
+[notify]
+title_info = { fg = "#c6c6c6" }
+title_warn = { fg = "#c7c7c7" }
+title_error = { fg = "#c7c7c7" }
+
+# the file list itself: dirs and file kinds carry the palette so yazi matches
+# kitty's ANSI colours (base16), not yazi's built-in defaults. First match wins,
+# so the "*" fallback stays last.
+[filetype]
+rules = [
+  { mime = "image/*", fg = "#c7c7c7" },
+  { mime = "{audio,video}/*", fg = "#c6c6c6" },
+  { mime = "application/{zip,gzip,x-tar,x-bzip2,x-7z-compressed,x-rar,vnd.rar,x-xz,zstd}", fg = "#c6c6c6" },
+  { url = "*", is = "orphan", fg = "#c7c7c7" },
+  { url = "*", is = "exec", fg = "#c7c7c7" },
+  { url = "*/", fg = "#c6c6c6", bold = true },
+  { url = "*", fg = "#e3e3e3" },
+]
