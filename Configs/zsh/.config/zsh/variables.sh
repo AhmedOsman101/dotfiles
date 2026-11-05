@@ -265,7 +265,7 @@ SUDO_ASKPASS="$(get-askpass)"
 export SUDO_ASKPASS
 
 # --- Starship --- #
-export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship.toml"
+export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/config.toml"
 
 # --- Sqlite --- #
 export SQLITE_HISTORY="${XDG_CACHE_HOME}/sqlite_history"
