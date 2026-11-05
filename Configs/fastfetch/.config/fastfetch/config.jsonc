@@ -37,8 +37,10 @@
       "format": "{#1;title}{user-name}{#}{#separator}@{#}{#1;title}{host-name}{#}"
     },
     {
-      "format": "\u001b[38;2;226;52;42m■\u001b[0m \u001b[38;2;143;135;112m{#keys}■{#} {#separator}RYOKU · 力 · a hand-built CachyOS desktop{#}\u001b[0m",
-      "type": "custom"
+      "key": " ",
+      "type": "command",
+      "text": "ryoku-base-os",
+      "format": "\u001b[38;2;226;52;42m■\u001b[0m \u001b[38;2;143;135;112m{#keys}■{#} {#separator}RYOKU · 力 · a hand-built {result} desktop{#}\u001b[0m"
     },
     "break",
     {
