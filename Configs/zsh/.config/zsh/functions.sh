@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-if [[ -f "${SCRIPTS_DIR}/lib/helpers.sh" ]]; then
-  # shellcheck source=/home/othman/scripts/lib/helpers.sh
-  source "${SCRIPTS_DIR}/lib/helpers.sh" || echo "Failed to source lib/helpers.sh"
-fi
-
 # ---- Yazi ---- #
 yy() {
   local tmp cwd
@@ -264,12 +259,12 @@ ai() {
     "Exit")
 
   case "${mode}" in
-  "Shell (Execute Commands)") t-sh ;;
-  "Code (Write Scripts)") t-code ;;
-  "Search (Web/Research)") t-search ;;
-  "Chat (Interactive)") t-chat ;;
-  "Image (Generation)") t-img ;;
-  "Exit" | *) return 0 ;;
+    "Shell (Execute Commands)") t-sh ;;
+    "Code (Write Scripts)") t-code ;;
+    "Search (Web/Research)") t-search ;;
+    "Chat (Interactive)") t-chat ;;
+    "Image (Generation)") t-img ;;
+    "Exit" | *) return 0 ;;
   esac
 }
 
