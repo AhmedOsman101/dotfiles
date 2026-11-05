@@ -1,67 +1,67 @@
 # Ryoku palette -> Alacritty. Rendered by matugen; do not edit.
 
 [colors.primary]
-background = '#131313'
-foreground = '#e3e3e3'
+background = '#121318'
+foreground = '#e3e1e9'
 
 [colors.cursor]
-text = '#131313'
-cursor = '#e3e3e3'
+text = '#121318'
+cursor = '#e3e1e9'
 
 [colors.vi_mode_cursor]
-text = '#131313'
-cursor = '#c6c6c6'
+text = '#121318'
+cursor = '#bac3ff'
 
 [colors.selection]
-text = '#131313'
-background = '#c6c6c6'
+text = '#121318'
+background = '#bac3ff'
 
 [colors.search.matches]
-foreground = '#131313'
-background = '#c7c7c7'
+foreground = '#121318'
+background = '#e5bad8'
 
 [colors.search.focused_match]
-foreground = '#131313'
-background = '#c6c6c6'
+foreground = '#121318'
+background = '#bac3ff'
 
 [colors.footer_bar]
-foreground = '#e3e3e3'
-background = '#1f1f1f'
+foreground = '#e3e1e9'
+background = '#1f1f25'
 
 [colors.hints.start]
-foreground = '#131313'
-background = '#c7c7c7'
+foreground = '#121318'
+background = '#e5bad8'
 
 [colors.hints.end]
-foreground = '#131313'
-background = '#c7c7c7'
+foreground = '#121318'
+background = '#e5bad8'
 
 [colors.normal]
-black = '#131313'
-red = '#c7c7c7'
-green = '#c6c6c6'
-yellow = '#c7c7c7'
-blue = '#c6c6c6'
-magenta = '#c6c6c6'
-cyan = '#c7c7c7'
-white = '#e3e3e3'
+black = '#121318'
+red = '#ffb4ab'
+green = '#bac3ff'
+yellow = '#e5bad8'
+blue = '#c3c5dd'
+magenta = '#bac3ff'
+cyan = '#e5bad8'
+white = '#e3e1e9'
 
 [colors.bright]
-black = '#909090'
-red = '#c7c7c7'
-green = '#c6c6c6'
-yellow = '#c7c7c7'
-blue = '#c6c6c6'
-magenta = '#c6c6c6'
-cyan = '#909090'
-white = '#e2e2e2'
+black = '#90909a'
+red = '#ffb4ab'
+green = '#bac3ff'
+yellow = '#e5bad8'
+blue = '#c3c5dd'
+magenta = '#bac3ff'
+cyan = '#90909a'
+white = '#dee1ff'
 
 [colors.dim]
-black = '#131313'
-red = '#c7c7c7'
-green = '#c6c6c6'
-yellow = '#c7c7c7'
-blue = '#c6c6c6'
-magenta = '#c6c6c6'
-cyan = '#c7c7c7'
-white = '#e3e3e3'
+black = '#121318'
+red = '#ffb4ab'
+green = '#bac3ff'
+yellow = '#e5bad8'
+blue = '#c3c5dd'
+magenta = '#bac3ff'
+cyan = '#e5bad8'
+white = '#e3e1e9'
