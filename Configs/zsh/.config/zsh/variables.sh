@@ -24,11 +24,12 @@ export AUTO_NOTIFY_IGNORE=(
   "sudoedit" "distrobox" "db" "repeat-it"
   "composer" "mask view" "uv run" "fish"
   "opencode" "gemini" "claude" "tmux"
-  "opentmux"
 )
 export AUTO_NOTIFY_THRESHOLD=30
-export AUTO_NOTIFY_ICON_SUCCESS="${XDG_DATA_HOME}/icons/success-failure-icons/success.svg"
-export AUTO_NOTIFY_ICON_FAILURE="${XDG_DATA_HOME}/icons/success-failure-icons/gnome-warning.svg"
+export AUTO_NOTIFY_ENABLE_TRANSIENT=1
+export AUTO_NOTIFY_EXPIRE_TIME=5000
+# export AUTO_NOTIFY_ICON_SUCCESS="${XDG_DATA_HOME}/icons/success-failure-icons/success.svg"
+# export AUTO_NOTIFY_ICON_FAILURE="${XDG_DATA_HOME}/icons/success-failure-icons/gnome-warning.svg"
 
 # --- Android --- #
 export ANDROID_USER_HOME="${XDG_DATA_HOME}/android"
