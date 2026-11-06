@@ -5,12 +5,12 @@ command -v fzf &>/dev/null && source <(fzf --zsh)
 
 # Use fd for listing path candidates.
 _fzf_compgen_path() {
-  fd --hidden --exclude .git . "$1"
+  fd --hidden --follow --exclude .git . "$1"
 }
 
 # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
-  fd --type=d --hidden --exclude .git . "$1"
+  fd --type=d --follow --hidden --exclude .git . "$1"
 }
 
 # Advanced customization of fzf options via _fzf_comprun function
