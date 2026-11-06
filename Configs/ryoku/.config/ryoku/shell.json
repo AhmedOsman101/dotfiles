@@ -147,7 +147,7 @@
   },
   "fontFamily": "JetBrainsMono Nerd Font Mono",
   "fontScale": 1.2,
-  "fontSize": 18,
+  "fontSize": 14,
   "frameBars": {
     "dock": {
       "pinned": []
@@ -2944,20 +2944,21 @@
         "cpu",
         "cputemp",
         "memory",
-        "storage",
         "ai",
+        "removable-drives",
+        "storage",
         "gpu"
       ],
       "right": [
         "media",
-        "quick",
-        "power",
         "volume",
         "brightness",
         "network",
         "bluetooth",
         "layout",
-        "battery"
+        "battery",
+        "quick",
+        "power"
       ],
       "version": 1
     },
@@ -2969,7 +2970,7 @@
       "battery": true,
       "bluetooth": true,
       "brightness": true,
-      "claude": false,
+      "claude": true,
       "cpu": true,
       "cpuTemperature": true,
       "gpu": false,

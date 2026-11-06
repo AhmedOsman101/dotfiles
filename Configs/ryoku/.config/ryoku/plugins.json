@@ -1,1 +1,30 @@
-{}
+{
+  "emoji": {
+    "enabled": true,
+    "host": "framePopout",
+    "settings": {
+      "action": "insert",
+      "closeAfterPick": true,
+      "resetOnOpen": true,
+      "columns": 8,
+      "rows": 5,
+      "cellSize": 44,
+      "showGroupChips": true,
+      "showHint": true
+    },
+    "framePopout": {
+      "edge": "center",
+      "align": "center",
+      "hoverW": 320,
+      "hoverH": 16
+    }
+  },
+  "removable-drives": {
+    "enabled": true,
+    "host": "topbarGlyph",
+    "settings": {
+      "pollSeconds": 10,
+      "showBadge": true
+    }
+  }
+}
