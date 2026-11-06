@@ -27,9 +27,9 @@ layout {
     center-focused-column "always"
     always-center-single-column
     preset-column-widths {
-        proportion 0.33333
+        proportion 0.25
         proportion 0.5
-        proportion 0.66667
+        proportion 0.75
     }
     preset-window-heights {
         proportion 0.33333
@@ -37,8 +37,7 @@ layout {
         proportion 0.66667
     }
     border {
-        on
-        width 4
+        off
         active-color "#c3c5dd"
         inactive-color "#121318"
         urgent-color "#9b0000"
@@ -70,13 +69,7 @@ hotkey-overlay {
     skip-at-startup
 }
 
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-
-gestures {
-    hot-corners {
-        off
-    }
-}
+screenshot-path "~/Pictures/Screenshots/Screenshot_%Y-%m-%d@%I-%M-%S%p.png"
 
 overview {
     zoom 0.5

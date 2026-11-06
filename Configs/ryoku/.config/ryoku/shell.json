@@ -232,9 +232,9 @@
     "version": 1
   },
   "frameCorner": 8,
-  "frameEnabled": false,
-  "frameOpacity": 0,
-  "frameThickness": 0,
+  "frameEnabled": true,
+  "frameOpacity": 1,
+  "frameThickness": 1,
   "general": {
     "clock_format_24_h": false,
     "temperature_unit": "Metric",
