@@ -1,0 +1,83 @@
+{
+  "components": {
+    "wallpaperSelector": {
+      "displayMode": "slices",
+      "flipEffect": "Ash",
+      "lastAppliedKey": "wallhaven-yqv2wx",
+      "sliceEdgeTilt": 0,
+      "sliceParallax": false,
+      "sliceShadows": true,
+      "sliceSpacing": 15,
+      "sliceWobble": true,
+      "tagCloudRows": "3"
+    }
+  },
+  "display": {
+    "fillModes": {
+      "eDP-1": "fill"
+    }
+  },
+  "effects": {
+    "autoRecolor": false
+  },
+  "general": {
+    "weatherMatch": true
+  },
+  "launch": {
+    "animation": "rise"
+  },
+  "matugen": {
+    "mode": "dark"
+  },
+  "motion": {
+    "filterSwapSpeed": "fast"
+  },
+  "overviewBackdrop": {
+    "blur": 45,
+    "blurEnabled": true,
+    "dim": 0,
+    "enabled": true,
+    "followWallpaper": true
+  },
+  "performance": {
+    "autoDeleteImageTrash": true,
+    "imageOptimizeResolution": "4k"
+  },
+  "shell": {
+    "hoverPreview": true
+  },
+  "sources": {
+    "pexels": {
+      "apiKey": "",
+      "enabled": true
+    }
+  },
+  "steam": {
+    "defaults": {
+      "nsfw": true
+    }
+  },
+  "theme": {
+    "policy": "wallpaper",
+    "staticTheme": "Catppuccin Mocha"
+  },
+  "transition": {
+    "durationMs": 900,
+    "enabled": true,
+    "family": "random",
+    "preview": true,
+    "previewFps": 60,
+    "shader": "crazy-parametric"
+  },
+  "wallhaven": {
+    "defaults": {
+      "atleast": "1920x1080",
+      "nsfw": true,
+      "sketchy": true
+    }
+  },
+  "wallpaperMute": true,
+  "weRender": {
+    "fps": 30
+  }
+}

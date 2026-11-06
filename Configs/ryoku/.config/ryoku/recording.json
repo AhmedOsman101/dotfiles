@@ -1,0 +1,17 @@
+{
+  "audioBitrate": 0,
+  "audioCodec": "opus",
+  "bitrate": 20000,
+  "bitrateMode": "quality",
+  "codec": "h264",
+  "colorRange": "limited",
+  "container": "mp4",
+  "cursor": true,
+  "directory": "/home/othman/Videos/Recordings",
+  "encoder": "gpu",
+  "fps": 60,
+  "framerateMode": "cfr",
+  "keyint": 2,
+  "maxResolution": "native",
+  "quality": "high"
+}

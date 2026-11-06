@@ -1,0 +1,26 @@
+{
+    "bgBlur": 8,
+    "columns": 8,
+    "heroImage": "file:///home/othman/Pictures/ryodecors/moon.png",
+    "heroPosX": 0.5,
+    "heroPosY": 0.5,
+    "heroStrength": 0.377,
+    "hiddenApps": [
+    ],
+    "hiddenSections": [
+    ],
+    "horizonColor": "#ffc777",
+    "horizonMode": "auto",
+    "matWidth": 144,
+    "overlayOpacity": 0.94,
+    "pinnedApps": [
+    ],
+    "radius": 16,
+    "resultSettleMs": 360,
+    "sectionOrder": [
+    ],
+    "showGreeting": true,
+    "showWeather": true,
+    "variant": "main",
+    "weatherUnit": "C"
+}

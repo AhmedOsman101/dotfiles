@@ -1,0 +1,9 @@
+{
+  "idle": {
+    "ac": {
+      "dimSec": 0,
+      "lockSec": 0,
+      "screenOffSec": 0
+    }
+  }
+}

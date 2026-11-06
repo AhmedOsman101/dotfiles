@@ -1,0 +1,12 @@
+{
+  "desktop": {
+    "apps": {
+      "files": "nautilus"
+    },
+    "input": {
+      "kbLayout": "us",
+      "kbOptions": "caps:escape",
+      "kbVariant": ""
+    }
+  }
+}
