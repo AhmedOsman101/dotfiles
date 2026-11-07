@@ -5,8 +5,9 @@ Hardware
 --------
 Host: Gigabyte H410M H V2 (-CF)
 CPU: Intel Core i3-10105F (4C/8T) @ up to 4.40 GHz
-GPU: NVIDIA GeForce GTX 660 2GB (Discrete)
-Memory: 16 GB
+GPU: NVIDIA GeForce GTX 660 2GB (Discrete) — nvidia 470.256.02 (EOL)
+PSU: Cooler Master RS-500-PCAR-N1 450W (1x 6-pin PCIe)
+Memory: 16 GB (2x8GB Crucial DDR4)
 Swap: 8 GB (Zram)
 
 Display:
@@ -16,17 +17,18 @@ Display:
   Density: 89.65 PPI
 
 Storage:
-  Root (/): 500GB (btrfs) — [Primary Lexar Sata SSD]
-  Disk (/dev/sda): 120GB (NTFS, Windows 10) — [Patriot Sata SSD]
+  Disk (/dev/sda): 120GB (NTFS, Windows 10) — [Patriot Burst Elite Sata SSD]
+  Root (/dev/sdb): 512GB (btrfs, Main Linux system) — [Lexar NS100 Sata SSD]
   Disk (/dev/sdc): 1TB (NTFS, Games storage for Windows) — [WD10EVVS Sata HDD]
 
 Software
 --------
 OS: Arch Linux x86_64
-Kernel: Linux 7.2.9
+Kernel: Linux 7.2.9-arch1-1
 
 Environment:
-  DE: KDE Plasma 6.6.2
+  Session: X11
+  DE: KDE Plasma 6.7.5
   WM: KWin (X11)
-  Shell: zsh 5.9
-  Terminal: tmux 3.6a
+  Shell: zsh 5.9.2
+  Terminal: tmux 3.8
