@@ -75,6 +75,12 @@ overview {
     zoom 0.5
 }
 
+environment {
+    EDITOR "/usr/bin/hx"
+}
+
+spawn-sh-at-startup "bash /home/othman/.config/zsh/autostart.sh\n"
+
 window-rule {
     geometry-corner-radius 8
     clip-to-geometry true

@@ -134,24 +134,36 @@
     "magnify": true,
     "media": true,
     "pinned": [
-      "dev.zed.Zed",
+      "dev.zed.zed",
       "zen",
       "kitty",
       "ryoku-hub",
-      "ryotunes"
+      "ryotunes",
+      "org.kde.dolphin"
     ],
     "pinnedConfigured": true,
+    "python": {
+      "autohideTimeout": 1000,
+      "cascadeScale": false,
+      "enableScrolling": false,
+      "exclusive": false,
+      "floating": false,
+      "hoverScale": 120,
+      "onTop": true,
+      "opacity": 100,
+      "overrideBoundsCorrection": false,
+      "smartAutohide": true,
+      "visibleElements": 7
+    },
     "revealOnEmpty": true,
     "shadow": true,
+    "size": 44,
     "style": "rail"
   },
   "fontFamily": "JetBrainsMono Nerd Font Mono",
   "fontScale": 1.2,
   "fontSize": 14,
   "frameBars": {
-    "dock": {
-      "pinned": []
-    },
     "menus": {
       "theme": {
         "anchor": "right",
@@ -1312,9 +1324,7 @@
         "enable": false,
         "threshold": 80
       },
-      "critical": 5,
       "full": 100,
-      "low": 20,
       "suspend": 3
     },
     "calendar": {
@@ -2851,25 +2861,6 @@
     "bar": {
       "workspacesStyle": "pacman"
     },
-    "dock": {
-      "apps": [],
-      "autohide": false,
-      "autohideTimeout": 1000,
-      "cascadeScale": false,
-      "editing": false,
-      "elementSize": 44,
-      "enableScrolling": false,
-      "enabled": true,
-      "exclusive": false,
-      "floating": false,
-      "hoverScale": 120,
-      "onTop": true,
-      "opacity": 100,
-      "overrideBoundsCorrection": false,
-      "position": "bottom",
-      "smartAutohide": true,
-      "visibleElements": 7
-    },
     "general": {
       "language": "en",
       "location": {
@@ -3003,11 +2994,11 @@
         "file": ""
       },
       "device-added": {
-        "enabled": false,
+        "enabled": true,
         "file": ""
       },
       "device-removed": {
-        "enabled": false,
+        "enabled": true,
         "file": ""
       },
       "notification": {

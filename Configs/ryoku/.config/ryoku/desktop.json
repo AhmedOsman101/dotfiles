@@ -32,14 +32,23 @@
     "apps": {
       "files": "nautilus"
     },
-    "autostart": [],
+    "autostart": [
+      {
+        "command": "bash /home/othman/.config/zsh/autostart.sh\n"
+      }
+    ],
     "cursor": {
       "hideOnKeyPress": true,
       "inactiveTimeout": 0,
       "size": 24,
       "theme": "Bibata-Modern-Ice"
     },
-    "env": [],
+    "env": [
+      {
+        "key": "EDITOR",
+        "value": "/usr/bin/hx"
+      }
+    ],
     "input": {
       "accelProfile": "",
       "clickfinger": true,
