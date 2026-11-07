@@ -34,7 +34,10 @@
     },
     "autostart": [
       {
-        "command": "bash /home/othman/.config/zsh/autostart.sh\n"
+        "command": "bash /home/othman/.config/zsh/autostart.sh"
+      },
+      {
+        "command": "bash /home/othman/scripts/daily.sh"
       }
     ],
     "cursor": {
