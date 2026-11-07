@@ -59,6 +59,12 @@
         "exa_api_key": null,
         "tools": null
       }
+    },
+    "browse": {
+      "command": "/home/othman/.local/bin/browse",
+      "args": [
+        "mcp"
+      ]
     }
   },
   "cursor_animation": {

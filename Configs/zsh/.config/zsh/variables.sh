@@ -37,11 +37,11 @@ export ANDROID_HOME="${ANDROID_SDK_ROOT}"
 
 # --- Anthropic --- #
 export ANTHROPIC_BASE_URL="http://localhost:8082"
-export ANTHROPIC_DEFAULT_FABLE_MODEL="omniroute/baseten/zai-org/GLM-5.3-Flash"
-export ANTHROPIC_DEFAULT_OPUS_MODEL="opencode/space-bunny-free"
-export ANTHROPIC_DEFAULT_SONNET_MODEL="omniroute/kc/qwen/qwen3.8-27b:free"
+export ANTHROPIC_DEFAULT_FABLE_MODEL="auto/coding:free"
+export ANTHROPIC_DEFAULT_OPUS_MODEL="auto/best-free"
+export ANTHROPIC_DEFAULT_SONNET_MODEL="kc/qwen/qwen3.8-27b:free"
 export ANTHROPIC_DEFAULT_HAIKU_MODEL="opencode/mimo-v2.6-flash-free"
-export ANTHROPIC_MODEL="opencode/space-bunny-free"
+export ANTHROPIC_MODEL="kc/kilo-auto/free"
 export CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1
 
 # --- Asdf --- #

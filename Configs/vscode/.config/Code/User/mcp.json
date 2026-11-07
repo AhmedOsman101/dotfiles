@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "browse": {
+      "type": "stdio",
+      "command": "/home/othman/.local/bin/browse",
+      "args": [
+        "mcp"
+      ]
+    }
+  }
+}

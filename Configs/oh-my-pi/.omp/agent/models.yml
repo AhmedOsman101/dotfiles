@@ -52,12 +52,6 @@ providers:
         input: [text]
         contextWindow: 1048576
         maxTokens: 131072
-      - id: "kc/poolside/laguna-s-2.1:free"
-        name: "kc/poolside/laguna-s-2.1"
-        reasoning: true
-        input: [text]
-        contextWindow: 262144
-        maxTokens: 32768
       - id: "kc/nvidia/nemotron-3-ultra-550b-a55b:free"
         name: "kc/nvidia/nemotron-3-ultra"
         reasoning: true
