@@ -16,6 +16,16 @@ export ZSH_CACHE_DIR="${ZSH_CACHE_DIR:-${XDG_CACHE_HOME}/zsh}"
 # --- Scripts --- #
 export SCRIPTS_DIR="${HOME}/scripts"
 
+__libs__=(helpers.sh random.sh)
+for __lib__ in "${__libs__[@]}"; do
+  if [[ -f "${SCRIPTS_DIR}/lib/${__lib__}" ]]; then
+    # shellcheck source=/dev/null
+    source "${SCRIPTS_DIR}/lib/${__lib__}" || echo "Failed to source lib/${__lib__}"
+  fi
+done
+
+unset __lib__ __libs__ &>/dev/null || true
+
 # --- Tuckr --- #
 export TUCKR_HOME="${HOME}"                       # The parent directory of your dotfiles directory (default: $HOME/.config)
 export TUCKR_TARGET="${HOME}"                     # The directory from which all dotfiles are symlinked (default: $HOME)

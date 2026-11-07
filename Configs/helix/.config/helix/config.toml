@@ -10,7 +10,7 @@ completion-replace = false
 true-color = true
 bufferline = "always"
 end-of-line-diagnostics = "hint"
-clipboard-provider = "x-clip"
+clipboard-provider = "wayland"
 insert-final-newline = true
 indent-heuristic = "tree-sitter"
 

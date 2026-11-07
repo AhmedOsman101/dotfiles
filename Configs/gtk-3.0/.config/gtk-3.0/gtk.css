@@ -1,31 +1,76 @@
-@import 'colors.css';
+/* Ryoku palette -> classic GTK 3. Rendered by matugen; do not hand-edit.
+   GTK 3 has no CSS custom properties, so @define-color is the whole story here:
+   the :root { --* } form the GTK 4 template leads with would not parse. The
+   theme this pairs with must derive its widget colours from these named colours,
+   which adw-gtk3 does; stock Adwaita hardcodes literals and mostly ignores them.
+   Values match the GTK 4 template's @define-color block exactly. Roles are
+   Material 3 names, the same ones the shell paints with. */
 
-VteTerminal,
-vte-terminal {
-	padding: 12px;
-}
+@define-color accent_bg_color #bac3ff;
+@define-color accent_fg_color #222c61;
+@define-color accent_color #bac3ff;
+@define-color destructive_bg_color #ffb4ab;
+@define-color destructive_fg_color #690005;
+@define-color destructive_color #ffb4ab;
+@define-color success_bg_color #c3c5dd;
+@define-color success_fg_color #2c2f42;
+@define-color success_color #c3c5dd;
+@define-color warning_bg_color #e5bad8;
+@define-color warning_fg_color #44263e;
+@define-color warning_color #e5bad8;
+@define-color error_bg_color #ffb4ab;
+@define-color error_fg_color #690005;
+@define-color error_color #ffb4ab;
+@define-color window_bg_color #121318;
+@define-color window_fg_color #e3e1e9;
+@define-color view_bg_color #121318;
+@define-color view_fg_color #e3e1e9;
+@define-color headerbar_bg_color #1f1f25;
+@define-color headerbar_fg_color #e3e1e9;
+@define-color headerbar_border_color #46464f;
+@define-color headerbar_backdrop_color #121318;
+@define-color sidebar_bg_color #1b1b21;
+@define-color sidebar_fg_color #e3e1e9;
+@define-color sidebar_backdrop_color #121318;
+@define-color secondary_sidebar_bg_color #0d0e13;
+@define-color secondary_sidebar_fg_color #e3e1e9;
+@define-color secondary_sidebar_backdrop_color #121318;
+@define-color card_bg_color #1b1b21;
+@define-color card_fg_color #e3e1e9;
+@define-color dialog_bg_color #292a2f;
+@define-color dialog_fg_color #e3e1e9;
+@define-color popover_bg_color #1f1f25;
+@define-color popover_fg_color #e3e1e9;
+@define-color thumbnail_bg_color #292a2f;
+@define-color thumbnail_fg_color #e3e1e9;
+@define-color scrollbar_outline_color #46464f;
 
-.window-frame,
-.window-frame:backdrop {
-	box-shadow: 0 0 0 black;
-	border-style: none;
-	margin: 0;
-	border-radius: 0;
-}
+/* Shades are the palette scrim at a fixed alpha, not a flat role, because the
+   toolkit paints them as translucent overlays for edges and elevation and they
+   must read through whatever surface happens to sit beneath them. */
+@define-color shade_color alpha(#000000, 0.16);
+@define-color headerbar_shade_color alpha(#000000, 0.36);
+@define-color headerbar_darker_shade_color alpha(#000000, 0.36);
+@define-color sidebar_shade_color alpha(#000000, 0.16);
+@define-color secondary_sidebar_shade_color alpha(#000000, 0.16);
+@define-color card_shade_color alpha(#000000, 0.16);
+@define-color popover_shade_color alpha(#000000, 0.16);
 
-.titlebar {
-	border-radius: 0;
-}
-
-undershoot.top,
-undershoot.right,
-undershoot.bottom,
-undershoot.left {
-	background-image: none;
-}
-
-.xfce4-notifyd-notification {
-	/* Adjust width */
-	min-width: 300px;
-	padding: 10px;
-}
+/* Classic GTK 3 named palette that stock Adwaita and older apps still read. */
+@define-color theme_bg_color #121318;
+@define-color theme_fg_color #e3e1e9;
+@define-color theme_base_color #121318;
+@define-color theme_text_color #e3e1e9;
+@define-color theme_selected_bg_color #bac3ff;
+@define-color theme_selected_fg_color #222c61;
+@define-color theme_unfocused_bg_color #121318;
+@define-color theme_unfocused_fg_color #e3e1e9;
+@define-color theme_unfocused_base_color #121318;
+@define-color theme_unfocused_text_color #e3e1e9;
+@define-color theme_unfocused_selected_bg_color #bac3ff;
+@define-color theme_unfocused_selected_fg_color #222c61;
+@define-color insensitive_bg_color #1f1f25;
+@define-color insensitive_fg_color #c6c5d0;
+@define-color insensitive_base_color #121318;
+@define-color borders #46464f;
+@define-color unfocused_borders #46464f;

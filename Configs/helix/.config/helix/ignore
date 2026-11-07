@@ -12,5 +12,6 @@
 **/.venv/**
 **/.husky/_/**
 **/target/**
+**/*snippets*/**
 
 project.inlang

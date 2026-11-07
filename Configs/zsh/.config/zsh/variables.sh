@@ -24,11 +24,12 @@ export AUTO_NOTIFY_IGNORE=(
   "sudoedit" "distrobox" "db" "repeat-it"
   "composer" "mask view" "uv run" "fish"
   "opencode" "gemini" "claude" "tmux"
-  "opentmux"
 )
 export AUTO_NOTIFY_THRESHOLD=30
-export AUTO_NOTIFY_ICON_SUCCESS="${XDG_DATA_HOME}/icons/success-failure-icons/success.svg"
-export AUTO_NOTIFY_ICON_FAILURE="${XDG_DATA_HOME}/icons/success-failure-icons/gnome-warning.svg"
+export AUTO_NOTIFY_ENABLE_TRANSIENT=1
+export AUTO_NOTIFY_EXPIRE_TIME=5000
+# export AUTO_NOTIFY_ICON_SUCCESS="${XDG_DATA_HOME}/icons/success-failure-icons/success.svg"
+# export AUTO_NOTIFY_ICON_FAILURE="${XDG_DATA_HOME}/icons/success-failure-icons/gnome-warning.svg"
 
 # --- Android --- #
 export ANDROID_USER_HOME="${XDG_DATA_HOME}/android"
@@ -68,6 +69,10 @@ fi
 export BUNDLE_USER_CONFIG="${XDG_CONFIG_HOME}/bundle"
 export BUNDLE_USER_CACHE="${XDG_CACHE_HOME}/bundle"
 export BUNDLE_USER_PLUGIN="${XDG_DATA_HOME}/bundle"
+
+# --- Ryoku --- #
+RYOKU_BASE_OS="$(ryoku-base-os 2>/dev/null)"
+export RYOKU_BASE_OS
 
 # --- Cargo --- #
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
@@ -112,7 +117,7 @@ export DSH_HOME="${XDG_CONFIG_HOME}/dsh"
 
 # --- FZF ---- #
 # Use fd instead of fzf
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_DEFAULT_COMMAND="fd --hidden --follow --strip-cwd-prefix --exclude .git"
 export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
@@ -261,7 +266,7 @@ SUDO_ASKPASS="$(get-askpass)"
 export SUDO_ASKPASS
 
 # --- Starship --- #
-export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship.toml"
+export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/config.toml"
 
 # --- Sqlite --- #
 export SQLITE_HISTORY="${XDG_CACHE_HOME}/sqlite_history"
