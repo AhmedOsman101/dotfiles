@@ -1,0 +1,105 @@
+[config]
+
+# Ryoku Arch Matugen App Templates
+# Configured and toggled via Ryoku Settings (Hub) -> Appearance -> Matugen
+
+[templates.gtk3]
+input_path = "~/.config/matugen/templates/gtk3-colors.css"
+output_path = "~/.config/gtk-3.0/gtk.css"
+
+# GTK 4 and GTK 3 read separate inputs: libadwaita 1.6+ recolours its widgets
+# from CSS custom properties (:root) that GTK 3 cannot parse, so the GTK 4
+# template leads with those and GTK 3 keeps the @define-color form it can read.
+[templates.gtk4]
+input_path = "~/.config/matugen/templates/gtk4-colors.css"
+output_path = "~/.config/gtk-4.0/gtk.css"
+
+[templates.vesktop]
+input_path = "~/.config/matugen/templates/discord.css"
+output_path = "~/.config/vesktop/themes/matugen.css"
+
+[templates.equibop]
+input_path = "~/.config/matugen/templates/discord.css"
+output_path = "~/.config/equibop/themes/matugen.css"
+
+[templates.obs]
+input_path = "~/.config/matugen/templates/obs.theme"
+output_path = "~/.config/obs-studio/themes/matugen.theme"
+
+[templates.zed]
+input_path = "~/.config/matugen/templates/zed.json"
+output_path = "~/.config/zed/themes/matugen.json"
+
+[templates.heroic]
+input_path = "~/.config/matugen/templates/heroic.css"
+output_path = "~/.config/heroic/store/styles/matugen.css"
+
+[templates.telegram]
+input_path = "~/.config/matugen/templates/telegram.tdesktop-theme"
+output_path = "~/.local/share/TelegramDesktop/tdata/matugen.tdesktop-theme"
+
+[templates.steam]
+input_path = "~/.config/matugen/templates/steam.css"
+output_path = "~/.steam/steam/steamui/skins/Material-Theme/css/main/colors/matugen.css"
+
+[templates.cava]
+input_path = "~/.config/matugen/templates/cava.ini"
+output_path = "~/.config/cava/config"
+
+# ghostty/config is the user's own file; matugen writes only the palette to a
+# sibling the config includes (`config-file = ryoku-colors`), so a retint never
+# clobbers it -- the same split kitty uses with current-theme.conf.
+[templates.ghostty]
+input_path = "~/.config/matugen/templates/ghostty.conf"
+output_path = "~/.config/ghostty/ryoku-colors"
+
+[templates.micro]
+input_path = "~/.config/matugen/templates/micro.micro"
+output_path = "~/.config/micro/colorschemes/matugen.micro"
+
+[templates.papirus]
+input_path = "~/.config/matugen/templates/papirus-color"
+output_path = "~/.cache/matugen/papirus-color"
+post_hook = "which papirus-folders >/dev/null 2>&1 && papirus-folders -c $(cat ~/.cache/matugen/papirus-color) || true"
+
+[templates.fish]
+input_path = "~/.config/matugen/templates/colors.fish"
+output_path = "~/.config/fish/conf.d/ryoku-colors.fish"
+
+[templates.yazi]
+input_path = "~/.config/matugen/templates/yazi.toml"
+output_path = "~/.config/yazi/flavors/ryoku.yazi/flavor.toml"
+
+[templates.obsidian]
+input_path = "~/.config/matugen/templates/obsidian.css"
+output_path = "~/.cache/matugen/generated/obsidian.css"
+
+[templates.zathura]
+input_path = "~/.config/matugen/templates/zathura"
+output_path = "~/.config/zathura/zathurarc"
+
+[templates.alacritty]
+input_path = "~/.config/matugen/templates/alacritty.toml"
+output_path = "~/.config/alacritty/colorschemes/ryoku.toml"
+
+[templates.tmux]
+input_path = "~/.config/matugen/templates/tmux.conf"
+output_path = "~/.config/tmux/ryoku-colors.conf"
+
+[templates.sidra]
+input_path = "~/.config/matugen/templates/sidra.css"
+output_path = "~/.config/Sidra/custom.css"
+
+# Ryotunes (the native music client) reads its palette as a Ryoku skin: matugen
+# renders the skin manifest into the user skins dir, where the client's Skin
+# singleton picks it up as the "matugen" skin (the Settings "System" source).
+[templates.ryotunes]
+input_path = "~/.config/matugen/templates/ryotunes.json"
+output_path = "~/.config/ryotunes/skins/matugen/skin.json"
+
+# The active Starship layout remains user-selected. Matugen owns only this
+# palette sibling, then asks the Hub backend to refresh the composed config.
+[templates.starship]
+input_path = "~/.config/matugen/templates/starship-colors.toml"
+output_path = "~/.config/starship/ryoku-colors.toml"
+post_hook = "ryoku-hub starship refresh"

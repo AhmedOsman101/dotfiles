@@ -1,0 +1,8 @@
+[palettes.wallpaper]
+dir_bg = "#1f1f25"
+git_bg = "#434659"
+time_bg = "#5d3c55"
+dir_fg = "#bac3ff"
+git_fg = "#dfe1f9"
+time_fg = "#ffd7f2"
+crimson = "#ffb4ab"

@@ -26,6 +26,7 @@ zinit light 'zsh-users/zsh-autosuggestions'              # History-based suggest
 # --- ZVM Start --- #
 # zvm_config is called by ZVM at init time (before plugin loads)
 # Must be defined BEFORE zinit light jeffreytse/zsh-vi-mode
+# shellcheck disable=SC2329
 function zvm_config() {
   ZVM_LINE_INIT_MODE="${ZVM_MODE_INSERT}"          # Start in insert mode
   ZVM_VI_INSERT_ESCAPE_BINDKEY='jk'                # `jk` like helix
