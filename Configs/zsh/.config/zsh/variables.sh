@@ -124,6 +124,9 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 export FZF_CTRL_T_OPTS="--preview 'fzf-preview {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
+# --- Gitpick --- #
+export GITPICK_FAST=1
+
 # --- Gnupg --- #
 export GNUPGHOME="${HOME}/.gnupg"
 
