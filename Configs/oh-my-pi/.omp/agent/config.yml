@@ -1,5 +1,5 @@
 modelRoles:
-  default: omniroute/kc/reflection/beam-free
+  default: omniroute/kc/kilo-auto/free:xhigh
   web: web/public
   image: openrouter/google/gemini-3-pro-image
 symbolPreset: unicode
@@ -27,7 +27,7 @@ task:
   enableEffort: true
   maxConcurrency: 8
   isolation:
-    enabled: false
+    mode: none
 proseOnlyThinking: false
 images:
   describeForTextModels: false

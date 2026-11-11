@@ -4,3 +4,11 @@ type=libvirt
 uri=qemu+unix:///session
 save-on-quit=true
 
+[display 2055ebe2-f8ea-4cc2-ba2c-faf5d332aa53]
+last-seen-name=VoidLinux
+uuid=2055ebe2-f8ea-4cc2-ba2c-faf5d332aa53
+acceleration-3d=false
+run-in-bg=false
+access-last-time=1793638225314569
+access-ntimes=17
+
