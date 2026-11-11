@@ -13,6 +13,7 @@ programs=(
   'ollama'
   'sxhkd'
   'omniroute'
+  'opencode'
   # '9router'
   # 'thunar'
   # 'dunst'
@@ -53,6 +54,9 @@ fi
 
 # ---- Omniroute ---- #
 omniroute --tray --no-open --port 8082
+
+# ---- OpenCode ---- #
+opencode service restart
 
 # ---- Start Spotify listener ---- #
 # systemctl --user start spotify-listener &

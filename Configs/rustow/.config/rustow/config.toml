@@ -1,0 +1,5 @@
+source = "~/dotfiles/Configs"
+target = "~"
+verbose = false
+fold = true
+
