@@ -214,14 +214,16 @@
     "servers": {
       "browse": {
         "type": "local",
-        "command": [
-          "/home/othman/.local/bin/browse",
-          "mcp"
-        ],
+        "command": ["/home/othman/.local/bin/browse", "mcp"],
         "environment": {
           "OPENCODE_BROWSER_RUNTIME": "auto-update"
         }
       }
+    },
+    "headroom": {
+      "type": "local",
+      "command": ["/home/othman/.local/bin/headroom", "mcp", "serve"],
+      "enabled": true
     }
   },
   "plugin": [
