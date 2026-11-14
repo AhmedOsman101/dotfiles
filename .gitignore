@@ -5,3 +5,6 @@ Configs/zsh/.config/zsh/.zcompdump
 Configs/nushell/.config/nushell/history.txt
 Configs/nvim_1
 Configs/gnupg/.gnupg/random_seed
+
+# Helix tree-sitter grammars built by `hx --grammar build` or manually
+Configs/helix/.config/helix/runtime/grammars/

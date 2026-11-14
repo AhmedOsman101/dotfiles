@@ -318,6 +318,31 @@ injection-regex = "ini"
 comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
 
+# --- Kitty --- #
+# kitty terminal configuration (kitty.conf and include files). Grammar and
+# highlighting queries come from github.com/Elcaten/zed-kitty, the same grammar
+# the Zed extension uses. It is shape-only (comments, directive names, values,
+# continuations) and does not enumerate the option catalog, so no parser
+# regeneration is needed for new kitty options. Completion, hover and
+# formatting come from kitty-lsp on PATH (release binary), not from this repo.
+#
+# After editing or on a fresh machine, rebuild the parser with:
+#   hx --grammar fetch && hx --grammar build
+[[language]]
+name = "kitty"
+scope = "source.kitty"
+injection-regex = "^kitty$"
+file-types = [
+  { glob = "kitty.conf" },
+  { glob = "kitty*.conf" },
+  { glob = "**/kitty/*.conf" },
+  { glob = "**/kitty/**/*.conf" },
+]
+comment-token = "#"
+language-servers = ["kitty-lsp", "scls"]
+grammar = "kitty"
+indent = { tab-width = 2, unit = "  " }
+
 # --- SQL --- #
 [[language]]
 name = "sql"
@@ -623,3 +648,16 @@ url = "https://github.com/denoland/deno/blob/main/cli/schemas/config-file.v1.jso
 [language-server.syntaqlite]
 command = "syntaqlite"
 args = ["lsp"]
+
+# --- Kitty LSP --- #
+# Formatting via textDocument/formatting (one space after the directive name;
+# everything else preserved), completion and hover for option names from an
+# embedded kitty 0.48.2 catalog. No diagnostics, value completion or on-type
+# formatting. Mixed LF/CRLF documents are refused with no edits.
+[language-server.kitty-lsp]
+command = "kitty-lsp"
+args = ["--stdio"]
+
+[[grammar]]
+name = "kitty"
+source = { git = "https://github.com/Elcaten/zed-kitty", rev = "9257f32a63e671488ba44cd5ba1e8523daf23166", subdirectory = "grammar" }
