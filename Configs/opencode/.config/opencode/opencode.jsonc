@@ -230,7 +230,8 @@
     "cc-safety-net@latest",
     "opencode-handoff@latest",
     "@dietrichgebert/ponytail@latest",
-    "git+ssh://git@github.com/goldfix/opencode-headroom-plugin.git#main"
+    "git+ssh://git@github.com/goldfix/opencode-headroom-plugin.git#main",
+    "@nandoblanco/opencode-local-memory@latest"
     // "@tarquinen/opencode-dcp@latest",
     // "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
     // "@tarquinen/opencode-smart-title@latest", // TODO: restore after PR #13 merges
