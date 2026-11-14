@@ -1,6 +1,6 @@
 {
   "root": true,
-  "$schema": "https://biomejs.dev/schemas/2.6.3/schema.json/",
+  "$schema": "https://raw.githubusercontent.com/biomejs/biome/@biomejs/biome@2.6.7/packages/@biomejs/biome/configuration_schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
