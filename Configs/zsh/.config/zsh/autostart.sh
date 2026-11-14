@@ -55,6 +55,9 @@ fi
 # ---- Omniroute ---- #
 omniroute --tray --no-open --port 8082
 
+# ---- Headroom ---- #
+headroom proxy &
+
 # ---- OpenCode ---- #
 opencode service restart
 
