@@ -24,14 +24,19 @@
   project: obsidian
   fact: VitePress renders Obsidian `> [!note]`-style callouts natively as GFM alerts (dist output: <div class="warning custom-block github-alert">); no plugin needed — an earlier claim in the migration report that they render as raw blockquotes was wrong and retracted 2026-11-16.
 
-- id: decisions-005
-  date: 2026-11-16
-  tags: [summarize-material,skill,viz,phase1]
-  project: obsidian
-  fact: Phase 1 visualizer work done 2026-11-16: @viz alias + SSR-safe Stepper/PipelineViz in .vitepress/theme/components/viz/; pilots in YearThree/FirstTerm (ComputerArchitecture L5, DataCommunication S4); AGENTS.md pattern docs; summarize-material SKILL.md updated with opt-in whitelisted <Stepper>/<PipelineViz> clause (script setup after frontmatter, @viz alias only, prose self-sufficient); cytoscape + @vercel/speed-insights removed; builid green ~55s; uncommitted.
-
 - id: decisions-006
   date: 2026-11-16
   tags: [pipelineviz,summarize-material,phase1]
   project: obsidian
   fact: 2026-11-16 (later): user found PipelineViz 'just a fancy table'; redesigned into interactive k+n-1 vs k+2n-1 simulator (n slider 1-12, slow-stage picker, discrete-event sim, bubbles rendered); Lecture-5 updated to <PipelineViz :initial-n=10>. summarize-material SKILL.md weaknesses 1,3,5,6,7 fixed (mandatory 4-check verification pass incl. exam probe, toolchain/-layout/RTL notes, vault frontmatter rule, worked example); weaknesses 2 (readtime fragility) and 4 (unslop dep) deliberately left. Build green 61s.
+
+- id: decisions-005
+  date: 2026-11-16
+  tags: [viz,skill,policy]
+  project: obsidian
+  fact: Phase 1 visualizer work done 2026-11-16: @viz alias + SSR-safe Stepper/PipelineViz in .vitepress/theme/components/viz/; pilots in YearThree/FirstTerm; AGENTS.md pattern docs; cytoscape + @vercel/speed-insights removed; build green. Viz policy relaxed same day: NO per-note cap, NO whitelist — add visualizers freely if they add value; components live only in .vitepress/theme/components/viz/ (@viz namespace); markdown carries only wiring (script setup import + tag), never component code.
+
+- id: decisions-007
+  date: 2026-11-16
+  tags: [readtime,skill,tolerance]
+  fact: readtime cannot exclude Vue wiring (script setup + tags count as words). summarize-material rule 2026-11-16: notes with component blocks may exceed source read time by up to 10%; measure prose with wiring stripped for precision; zero tolerance otherwise.

@@ -231,9 +231,9 @@
     "opencode-handoff@latest",
     "@dietrichgebert/ponytail@latest",
     "git+ssh://git@github.com/goldfix/opencode-headroom-plugin.git#main",
+    "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
     "@nandoblanco/opencode-local-memory@latest"
     // "@tarquinen/opencode-dcp@latest",
-    // "envsitter-guard@latest", // prevents agents/tools from reading or editing sensitive .env* files
     // "@tarquinen/opencode-smart-title@latest", // TODO: restore after PR #13 merges
     // "@tarquinen/opencode-smart-title@git+https://github.com/AhmedOsman101/opencode-smart-title.git#run/fork-build", // replaced by local clone in plugins/opencode-smart-title/ (auto-loaded, avoids DEP0169)
     // "opencode-system-prompt-logger",
@@ -361,17 +361,18 @@
             "output": ["text"]
           }
         },
-        "kc/poolside/laguna-s-2.1:free": {
-          "name": "kc/poolside/laguna-s-2.1:free",
+        "kc/tencent/hy4": {
+          "name": "kc/tencent/hy4",
           "limit": {
-            "context": 262144,
-            "output": 32768
+            "context": 1048576,
+            "output": 65536
           },
           "reasoning": true,
           "tool_call": true,
           "temperature": true,
+          "attachment": true,
           "modalities": {
-            "input": ["text"],
+            "input": ["text", "image"],
             "output": ["text"]
           }
         },
@@ -391,6 +392,5 @@
         }
       }
     }
-  },
-  "shell": "/usr/bin/zsh"
+  }
 }
