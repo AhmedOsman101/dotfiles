@@ -1,0 +1,55 @@
+# rustow — default configuration
+# Docs: https://github.com/othman-moussa/rustow
+# Precedence: CLI flags > env vars (DOTFILES_DIR, DOTFILES_TARGET) > this file.
+
+# Stow directory; its direct subdirectories are the packages.
+# REQUIRED — rustow refuses to run until it is set (no built-in default).
+source = "~/dotfiles/Configs"
+
+# Link destination root. Default: $HOME.
+target = "~"
+
+# Print what would happen and what is happening. Default: true.
+verbose = true
+
+# Fold package directories into single symlinks where possible
+# (GNU stow's "folding"; false = always link individual files). Default: true.
+fold = true
+
+# Packages that must not be folded (default: empty). Use when a single app
+# needs per-file links but you don't want to disable fold globally.
+# fold_ignore = ["my-special-app"]
+
+# Extra glob patterns ignored on top of the built-in GNU Stow 2.4.1 default list.
+# Matched against package-relative paths with globset, e.g. "**/node_modules/**".
+ignore = [
+    "RCS",
+    ".+,v",
+    "CVS",
+    "\\.\\#.+",
+    "\\.cvsignore",
+    "\\.svn",
+    "_darcs",
+    "\\.hg",
+    ".git",
+    ".gitignore",
+    ".gitmodules",
+    ".+~",
+    "\\#.*\\#",
+    "^/README.*",
+    "^/LICENSE.*",
+    "^/COPYING",
+]
+
+# Command template for the merge diff tool. Placeholders {left} and {right}
+# are required. Wins over the built-in registry and $EDITOR.
+# Examples: "meld {left} {right}", "nvim -d {left} {right}", "hx --new {left} {right}"
+diff_tool = "meld {left} {right}"
+
+# What to do when a real file already occupies a target path:
+#   prompt    — ask on a TTY (merge/overwrite/skip), abort otherwise [default]
+#   abort     — never change anything; report and exit non-zero
+#   skip      — leave the existing file in place
+#   overwrite — target is deleted; symlink to the package's version
+#   adopt     — target's content is moved into the package; symlink
+on_conflict = "prompt"
