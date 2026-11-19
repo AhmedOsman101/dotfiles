@@ -1,0 +1,8 @@
+- insert:
+    - id: browse
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: browse
+        transport: stdio
+        command: /home/othman/.local/bin/browse
+        args: [mcp]

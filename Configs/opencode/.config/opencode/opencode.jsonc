@@ -217,7 +217,9 @@
         "command": ["/home/othman/.local/bin/browse", "mcp"],
         "environment": {
           "OPENCODE_BROWSER_RUNTIME": "auto-update"
-        }
+        },
+        "cwd": "/home/othman",
+        "pool": true
       }
     },
     "headroom": {

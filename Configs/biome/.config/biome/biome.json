@@ -2,9 +2,9 @@
   "root": true,
   "$schema": "https://raw.githubusercontent.com/biomejs/biome/@biomejs/biome@2.6.7/packages/@biomejs/biome/configuration_schema.json",
   "vcs": {
-    "enabled": true,
+    "enabled": false,
     "clientKind": "git",
-    "useIgnoreFile": true
+    "useIgnoreFile": false
   },
   "files": {
     "ignoreUnknown": true,

@@ -26,16 +26,15 @@ done
 
 unset __lib__ __libs__ &>/dev/null || true
 
-# --- Tuckr --- #
-export TUCKR_HOME="${HOME}"                       # The parent directory of your dotfiles directory (default: $HOME/.config)
-export TUCKR_TARGET="${HOME}"                     # The directory from which all dotfiles are symlinked (default: $HOME)
-export TUCKR_DIR="${TUCKR_HOME}/dotfiles/Configs" # Custom variable for my use
+# --- Rustow --- #
+export DOTFILES_TARGET="${HOME}"                          # Link destination root. Default: $HOME.
+export DOTFILES_DIR="${DOTFILES_TARGET}/dotfiles/Configs" # Link source, where packages live.
 
 # --- Chassis --- #
 DEVICE="$(hostnamectl chassis)"
 
 # --- Editor --- #
-for editor in hx helix nvim vim vi micro nano emacs; do
+for editor in hx helix nvim vim micro vi nano emacs; do
   if command -v "${editor}" &>/dev/null; then
     EDITOR="${editor}"
     break
@@ -44,7 +43,7 @@ done
 export VISUAL="${EDITOR}" # VISUAL takes precedence over EDITOR
 
 # --- Browser --- #
-for browser in zen-browser thorium-browser firefox; do
+for browser in zen-browser zen-browser-bin thorium-browser thorium-browser-avx2 firefox chrome google-chrome google-chrome-stable; do
   if command -v "${browser}" &>/dev/null; then
     BROWSER="${browser}"
     break
