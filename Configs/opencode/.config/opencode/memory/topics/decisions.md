@@ -40,3 +40,9 @@
   date: 2026-11-16
   tags: [readtime,skill,tolerance]
   fact: readtime cannot exclude Vue wiring (script setup + tags count as words). summarize-material rule 2026-11-16: notes with component blocks may exceed source read time by up to 10%; measure prose with wiring stripped for precision; zero tolerance otherwise.
+
+- id: decisions-008
+  date: 2026-11-16
+  tags: [course-work, computer-graphics, figures]
+  project: obsidian
+  fact: ComputerGraphics assignment figures: drawing grid must be locked to 1 unit = 1 cm = 2 grid cells and 1 cell = 0.5 cm; no cell-size slider; proportions map to paper for hand-copying.
