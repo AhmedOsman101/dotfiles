@@ -26,3 +26,24 @@
   date: 2026-11-18
   tags: [virt-manager, win11-vm, spice, webdav, shared-folder]
   fact: virt-manager VM 'win11': q35/OVMF + Secure Boot, 4 vCPU, 8GB RAM, SATA disk /var/lib/libvirt/images/win11.qcow2, e1000e NIC, SPICE graphics, existing spicevmc channel com.redhat.spice.0, swtpm 2.0. Installed successfully from ~/Downloads/OSimages/lean11/lean11.iso (trimmed Win11 26H2, Defender+WU disabled, ~2GB RAM/125 processes). Folder sharing: add spicevmc channel org.spice-space.webdav.0 via 'virt-xml win11 --add-device --channel spicevmc,name=org.spice-space.webdav.0'; guest needs virtio-serial driver (virtio-win-0.1.240.iso) + spice-webdavd-x64-2.4.msi; host connects with 'spicy --spice-shared-dir=/home/othman/Public --uri=<virsh domdisplay win11>'. virt-viewer/remote-viewer not installed; spicy is.
+
+- id: environment-006
+  date: 2026-11-19
+  tags: [pnpm, mask, path, pass-gui, typecheck, format]
+  fact: In this agent shell PATH, `pnpm` is missing, so `mask typecheck`/`mask format` fail with `pnpm: command not found`. A working pnpm 12.14.0 binary exists at /home/othman/.local/share/pnpm/package-manager-store/v11/links/@/pnpm/12.14.0/a9c2e4d2f066285cbeab841072cb8c0c5e4bd148a2f983cd9062f6ec5b4ca487/bin — prepend that directory to PATH when invoking mask (do not run pnpm directly; AGENTS.md forbids it).
+
+- id: environment-007
+  date: 2026-11-19
+  tags: [opencode,subagent,senior-review,agent-id]
+  fact: In this OpenCode setup the subagent tool rejects agent ids `senior-review` and `senior_review` (error: 'Unknown agent'); the working id for the senior-review role is `senior-reviewer`.
+
+- id: environment-008
+  date: 2026-11-19
+  tags: [neutralino fork,pnpm update,dependency version,pass-gui]
+  project: pass-gui
+  fact: pass-gui pins @neutralinojs/lib to the GitHub fork github:AhmedOsman101/neutralino.js#pnpm (see root package.json + pnpm-lock.yaml codeload tarball). The fork's package.json version is 6.9.0 — identical to stock npm 6.9.0 — so the version number alone cannot tell fork from npm; do not flag a fork->npm swap based on version alone. 'pnpm update' bumps many resolved versions in node_modules but package.json uses caret ranges, so the fork spec stays; if the lockfile is reverted, node_modules drift is local-only.
+
+- id: environment-009
+  date: 2026-11-19
+  tags: [libvirt, gnome-boxes, void-linux, samba, vm-network, runit]
+  fact: Both VMs live on qemu:///system: win11 and voidlinux (disk /var/lib/libvirt/images/voidlinux). Boxes source uri=qemu+unix:///system; session connection empty. Boxes needed its own lowercase 'gnome-boxes' dir pool (stale capitalized 'Gnome Boxes' pool caused 'Storage source conflict'; fixed by destroy+undefine). voidlinux NIC switched from SLIRP to libvirt 'default' NAT network; IP 192.168.122.187. Host Samba shares /home/othman/Public as \\192.168.122.1\vm bound to virbr0+loopback, user othman (password user-managed). Void uses runit NOT systemd: x-systemd.automount is ignored and boot skips _netdev mounts, so auto-mount is via /etc/NetworkManager/dispatcher.d/99-vm-share (mounts on eth0 up) with creds /etc/samba-vm.creds. win11 maps the same share as Y: (Z: is WebDAV). QEMU guest agent works in voidlinux via virsh guest-exec. othman is in libvirt group; sudo -A works.

@@ -46,3 +46,21 @@
   tags: [course-work, computer-graphics, figures]
   project: obsidian
   fact: ComputerGraphics assignment figures: drawing grid must be locked to 1 unit = 1 cm = 2 grid cells and 1 cell = 0.5 cm; no cell-size slider; proportions map to paper for hand-copying.
+
+- id: decisions-009
+  date: 2026-11-19
+  tags: [onboarding,issue-26,config,ask-first,ensure]
+  project: pass-gui
+  fact: #26 (missing-config step): Config.ensure() becomes directory-only; Config.load() returns in-memory defaults when no file; Config.createDefault() is the only explicit creator; imports validate schema then write raw TOML verbatim; useConfigStatus composable owns real ConfigStatus. Ask-first is non-negotiable; no silent overwrite.
+
+- id: decisions-010
+  date: 2026-11-19
+  tags: [onboarding,issue-27,config-validator,gnupg-home,warnings]
+  project: pass-gui
+  fact: #27: dedicated ConfigValidator service owns all config validation (composes Zod schema + content checks); per-store gnupg_home only (no global one exists); active store invalid -> blocking error, inactive store invalid -> warning; useConfigStatus returns status/errors/warnings; read-only error UI, editor stays #28. Standing review gate temporarily delegated to a clean senior-reviewer for this ticket.
+
+- id: decisions-011
+  date: 2026-11-19
+  tags: [onboarding,issue-28,config-editor,editor-allowlist,debounce]
+  project: pass-gui
+  fact: #28: ConfigValidator.validateText + Config.replaceText write raw TOML verbatim; Save only when valid and dirty; $EDITOR honored only for a conservative GUI-editor allowlist (flags ignored), else system association via new Neu.openPath; file manager opens parent dir; refDebounced 300ms; delegate commit/push/close to zero-findings senior-reviewer (as #27).
